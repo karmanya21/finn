@@ -1,0 +1,435 @@
+{
+ "symbol": "BHARTIARTL",
+ "name": "Bharti Airtel Ltd",
+ "sector": "Telecom - Cellular & Fixed line services",
+ "size": null,
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 58539.0,
+    "qoq": 5.698499539569912,
+    "yoy": 18.349069001071516
+   },
+   {
+    "label": "EBITDA",
+    "value": 33303.0,
+    "qoq": 5.750666836021856,
+    "yoy": 19.62714177951794
+   },
+   {
+    "label": "PBT",
+    "value": 13773.0,
+    "qoq": 37.11299153807865,
+    "yoy": 31.121477532368623
+   },
+   {
+    "label": "PAT",
+    "value": 10012.0,
+    "qoq": 8.272953390288752,
+    "yoy": 34.89625437887363
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=75c7f6b8-2b0d-4c5f-9404-f1778e5acab2.pdf",
+   "promises": 6
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e7bdada9-733e-41a6-bdd9-f61d71d30335.pdf",
+   "promises": 2
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8f70dc5-c46b-481a-961c-ecbd39a6f45d.pdf",
+   "promises": 0
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1fbe1f35-07ac-4458-9799-d075511bcd53.pdf",
+   "promises": 2
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e76d0ca2-740a-4e0f-986a-2ad0ad39d515.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ca87613b-39c3-4571-8ea9-8f77df1b6428.pdf",
+   "promises": 1
+  }
+ ],
+ "record": {
+  "kept": 0,
+  "missed": 0,
+  "resolved": 0,
+  "moved": 0,
+  "quiet": 0,
+  "open": 1,
+  "by_status": {
+   "open": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "BHARTIARTL-0",
+   "title": "Capex trend",
+   "kind": "directional",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "What I can tell you is that it will certainly trend downwards and the reason I say this is that the rural rollout will substantially slow down.",
+     "speaker": "Gopal Vittal",
+     "page": 1,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "rural rollout will substantially slow down",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=75c7f6b8-2b0d-4c5f-9404-f1778e5acab2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-1",
+   "title": "Business performance",
+   "kind": "directional",
+   "metric": "revenue",
+   "scope": "B2B",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Our business, we believe, will perform better now, this year, than compared to last year.",
+     "speaker": "Gopal Vittal",
+     "page": 1,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "if you strip out the low margin business that we have to shed",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=75c7f6b8-2b0d-4c5f-9404-f1778e5acab2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-2",
+   "title": "EBITDAaL margin for Bharti Hexacom Limited",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "Bharti Hexacom Limited",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "increasingly, we will target to improve our EBITDAaL margins.",
+     "speaker": "Bharti Hexacom Limited",
+     "page": 16,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=75c7f6b8-2b0d-4c5f-9404-f1778e5acab2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-3",
+   "title": "Submarine cable capacity",
+   "kind": "directional",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Not mentioned since Aug 2025",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "On the submarine cables and capacities, we have invested over 2000 Crores over the last five years and we expect a further light up from 45 Tbps capacity to 180 Tbps capacity.",
+     "speaker": "Rohit Krishan Puri",
+     "page": 1,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e7bdada9-733e-41a6-bdd9-f61d71d30335.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-4",
+   "title": "Dividend",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "FY2026 dividends increased by 50% over previous year",
+   "evidence": {
+    "quote": "This has enabled us to sustain a progressive dividend policy with our dividends in FY2026 increasing by 50% over the previous year.",
+    "call": "May 2026, p1",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "As you know, this year, the dividend has been increased and there would be a directional increase in dividend.",
+     "speaker": "Limited",
+     "page": 14,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e7bdada9-733e-41a6-bdd9-f61d71d30335.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-5",
+   "title": "Data center capacity",
+   "kind": "soft",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "1 GW",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "1 GW",
+     "to": "1 GW",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "our sense is that, in the next three to four years, we will have about a gigawatt capacity, which will give us about 25% share, so we are committed to stepping up investments in Data Centers.",
+     "speaker": "Gopal Vittal",
+     "page": 7,
+     "target": "1 GW",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1fbe1f35-07ac-4458-9799-d075511bcd53.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "our ambition is to get to a gigawatt as we mentioned in a few years’ time but that game will not end there, we will continue to build out",
+     "speaker": "Sunil Bharti Mittal",
+     "page": 6,
+     "target": "1 GW",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e76d0ca2-740a-4e0f-986a-2ad0ad39d515.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-6",
+   "title": "Data Center capex",
+   "kind": "directional",
+   "metric": "capex",
+   "scope": "Data Centers",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Steady progress on 1GW data center capacity ambition",
+   "evidence": {
+    "quote": "In data centers, we continue to make steady progress against our ambition of building 1 gigawatt capacity over the next few years.",
+    "call": "May 2026, p1",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "and the third area, which I did talk about, but I will again underscore, is that in the next two to three years, we will see a stepped up investment in Data Centers.",
+     "speaker": "Gopal Vittal",
+     "page": 8,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1fbe1f35-07ac-4458-9799-d075511bcd53.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-7",
+   "title": "Capex",
+   "kind": "directional",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "our sense is that we will be in the ballpark of this year, give or take a little bit.",
+     "speaker": "Gopal Vittal",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e76d0ca2-740a-4e0f-986a-2ad0ad39d515.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-8",
+   "title": "Customer count",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "800 million",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "getting to 500 million here and 300 million in Africa is a dream which is visible.",
+     "speaker": "Sunil Bharti Mittal",
+     "page": 12,
+     "target": "800 million",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e76d0ca2-740a-4e0f-986a-2ad0ad39d515.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-9",
+   "title": "Digital tools rollout and ramp up",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2026)",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "That has actually been triggered in the month of April and that will play out over the course of the next couple of months before we sort of really ramp this up in a very big way.",
+     "speaker": "Shashwat Sharma",
+     "page": 10,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e76d0ca2-740a-4e0f-986a-2ad0ad39d515.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BHARTIARTL-10",
+   "title": "Airtel Money London listing",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Airtel Money",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Given this growth trajectory and the large addressable opportunity, Airtel Money is now preparing for a London listing in the second half of 2026.",
+     "speaker": "Rohit Krishan Puri",
+     "page": 3,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": "H2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ca87613b-39c3-4571-8ea9-8f77df1b6428.pdf"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1748 @@
+{
+ "symbol": "M&M",
+ "name": "Mahindra & Mahindra",
+ "sector": "Autos",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 58188.0,
+    "qoq": 5.830999236113632,
+    "yoy": 27.80425662764392
+   },
+   {
+    "label": "EBITDA",
+    "value": 10827.0,
+    "qoq": 6.912214871136557,
+    "yoy": 28.708987161198294
+   },
+   {
+    "label": "PBT",
+    "value": 7628.0,
+    "qoq": 10.326873011281457,
+    "yoy": 35.152374202693125
+   },
+   {
+    "label": "PAT",
+    "value": 5998.0,
+    "qoq": 14.030418250950571,
+    "yoy": 37.03449851496459
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": null,
+   "promises": 13
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf",
+   "promises": 6
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": null,
+   "promises": 8
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": null,
+   "promises": 16
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": null,
+   "promises": 8
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf",
+   "promises": 14
+  }
+ ],
+ "record": {
+  "kept": 3,
+  "missed": 0,
+  "resolved": 3,
+  "moved": 4,
+  "quiet": 4,
+  "open": 25,
+  "by_status": {
+   "on_track": 4,
+   "beat": 3,
+   "open": 21,
+   "gone_quiet": 4
+  }
+ },
+ "threads": [
+  {
+   "id": "M&M-0",
+   "title": "Mahindra Finance GS3/GNPA",
+   "kind": "soft",
+   "metric": "asset_quality",
+   "scope": "Mahindra Finance",
+   "basis": null,
+   "period": "FY26",
+   "target": "≤4.5%",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "our target is to be less than 4.5% in normal times",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "≤4.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "in normal times",
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-1",
+   "title": "Scalable growth gems valuation",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Scalable growth gems",
+   "basis": "management",
+   "period": "FY30",
+   "target": "2–3 USD bn",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Growth Gems valuation 56,000 crores as of Nov 2025",
+   "evidence": {
+    "quote": "And as we shared at Investor day, the valuation of our Growth Gems as of 3 months ago was 56,000 crores.",
+    "call": "Feb 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "now have a target of $2 to $3 billion of valuation each by F30, in the next five years.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "2–3 USD bn",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-2",
+   "title": "Hospitality room inventory",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Hospitality",
+   "basis": "management",
+   "period": "FY30",
+   "target": "2–3 x",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "Hospitality room inventory up 5X",
+   "evidence": {
+    "quote": "hospitality room inventory up 5X, logistics revenue up 4X, residential pre- sales is a key number for residential up 14X in this time period as that business has grown very well and very significantly.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "the business is working on a plan to be 2 to 3x in the next 5 years.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "2–3 x",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-3",
+   "title": "Last Mile Mobility business scale",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Last Mile Mobility",
+   "basis": null,
+   "period": "FY35",
+   "target": "10–15 x",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "the plans to get to another 2x to 3x from there, which will be at 10x to 15x overall increase in targets or increase in this business over a decade",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "10–15 x",
+     "period": "FY35",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-4",
+   "title": "Auto product launches",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Auto",
+   "basis": "management",
+   "period": "Q3FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Management confirms product pipeline is on track",
+   "evidence": {
+    "quote": "Yeah, on the product pipeline, Pramod, we are on track with the product pipeline that we had shared by way of numbers.",
+    "call": "Aug 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "In the calendar year 2026, we expect 3 ICE products, two born electric products, and two LCV's in calendar year 2026.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 7,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-5",
+   "title": "Thar and 3XO production capacity",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "Thar and 3XO",
+   "basis": null,
+   "period": "FY26",
+   "target": "10,500–11,000",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "the Thar capacity will move from 9,000 to 10,500, that's 1500 addition or 9,500 to 11,000. The 3XO capacity moves up by 1500 to about 11,000",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 7,
+     "target": "10,500–11,000",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-6",
+   "title": "Chakan plant capacity",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "Chakan plant",
+   "basis": null,
+   "period": "FY27",
+   "target": "7,000–8,000",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "120,000",
+     "to": "7,000–8,000",
+     "type": "lowered"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since Feb 2026",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we are going to create 1.2 lakhs of new capacity in Chakan plant for the platform that I just spoke about.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 7,
+     "target": "120,000",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "FY27 we would add in ICE another 7,000 to 8,000 at least. That will come from Chakan in calendar 2027, that’s for the new IQ platform.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 8,
+     "target": "7,000–8,000",
+     "period": "FY27",
+     "deadline": "CY2027",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-7",
+   "title": "Company cash generation",
+   "kind": "directional",
+   "metric": "cash_flow",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "FY26 net cash generation was 16,000 crores",
+   "evidence": {
+    "quote": "So, you can see here, during the year, the overall net cash generation from the business was 16,000 crores, has added to our cash balance.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we hope to deliver much more cash in the coming year as well in F26 as well.",
+     "speaker": "Mr. Amarjyoti Barua",
+     "page": 12,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-8",
+   "title": "Company revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we feel that the product portfolio and its strength will help us grow faster than market in F26 as well.",
+     "speaker": "Dr. Anish Shah",
+     "page": 18,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "faster than market",
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-9",
+   "title": "Mahindra Finance growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "Mahindra Finance",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Mahindra Finance AUM up 15% and strong profit growth",
+   "evidence": {
+    "quote": "Assets Under Management are up 15%. And while disbursement was a little slower, even the environment that we've been in, this is exactly the path that we want to be on and the business has shown very strong performance.",
+    "call": "Aug 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We will continue to focus on controls and then start pivoting back to growth as we go forward",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-10",
+   "title": "Greenfield plant commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we are planning a Greenfield plant, which we have not decided the site of yet, which will prepare us for a whole new lot of products and debottlenecking the capacity that we have on some of our current products that will be F28 and beyond.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 7,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-11",
+   "title": "Company ROE",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "18%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "FY26 ROE at 20% vs 18% target",
+   "evidence": {
+    "quote": "And therefore, as we look at the chart that you've been very used to seeing, ROE is at 20%. Not for the first time, I think we hit that in one of the quarters in between, but this time it's for the full year, we're at 20%.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "our target for ROE is 18%.",
+     "speaker": "Anish Shah",
+     "page": 3,
+     "target": "18%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-12",
+   "title": "Tech Mahindra EBIT margin",
+   "kind": "hard",
+   "metric": "operating_margin",
+   "scope": "Tech Mahindra",
+   "basis": null,
+   "period": "FY27",
+   "target": "15%",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Tech Mahindra has its EBIT margin recovery on track at 11.1% this quarter with an F27 target of 15 %.",
+     "speaker": "Anish Shah",
+     "page": 3,
+     "target": "15%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Tech Mahindra on track with what it's outlined in terms of its path for FY27. And deal wins, margin expansion, all of that playing into that track that Tech Mahindra has outlined.",
+     "speaker": "Anish Shah",
+     "page": 3,
+     "target": "15%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "the promise has been to get to 15% by the end of this fiscal year.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "15%",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-13",
+   "title": "Mahindra Lifespaces pre-sales growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Mahindra Lifespaces",
+   "basis": null,
+   "period": "multi-year",
+   "target": "14 x",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we are going on plan for a 14X growth in pre-sales this decade.",
+     "speaker": "Anish Shah",
+     "page": 3,
+     "target": "14 x",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-14",
+   "title": "Auto revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Auto",
+   "basis": "management",
+   "period": "FY26",
+   "target": "15–19%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "Auto revenue grew 25% vs 15-19% guidance",
+   "evidence": {
+    "quote": "Auto, little more details on the auto business, revenue up 25%.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "So, we’ll stay with the mid to high teens as a growth percentage.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 10,
+     "target": "15–19%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-15",
+   "title": "BE 6 PLI application and compliance",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "BE 6",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since Nov 2025",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "The BE 6 PLI is something that we will hope to apply for in Q4 of the year and accrue it subsequent to the application which takes roughly 3 months.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 10,
+     "target": "",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We do have a BE 6 which will hopefully by April’2026 meet PLI as well.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 15,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "2026-04-01",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-16",
+   "title": "Company production ramp up",
+   "kind": "directional",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Production ramp up constrained by engine and parts availability",
+   "evidence": {
+    "quote": "So, when I said we are constrained by engines, there are multiple sub-elements of parts which we are not fully ramped up for both pickups and Boleros to take off at the same time.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "As we get into festival, we would ramp up to the level of 5 to 6 that we spoke about. And then the further ramp up beyond that we expect to happen after January when we launch the additional 2 products which we have spoken about.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 11,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-17",
+   "title": "LCV industry growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "LCV industry",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "I would expect to see low double digit growth for the category.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 11,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "if this momentum continues",
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-18",
+   "title": "Tractor industry growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Tractor industry",
+   "basis": null,
+   "period": "FY26",
+   "target": "10–12%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, we are upping the Tractor industry outlook from 5%- 7% to maybe like 10%- 12% kind of thing. So, low double digits.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 13,
+     "target": "10–12%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-19",
+   "title": "Racing season start",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We do want to leverage this as we start the new racing season in December in Sao Paulo.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 5,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "December 2025",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-20",
+   "title": "Customer analytics release",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We will put out this analytics, we were thinking whether we should do it today, but then we said we will reserve that for 26th November, which is the first anniversary and we will put out a more comprehensive customer understanding with numbers",
+     "speaker": "Rajesh Jejurikar",
+     "page": 5,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "26th November 2025",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-21",
+   "title": "Farm market mix",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "farm",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "I would expect that this mix is not changing too much for the balance part of the year.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 12,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-22",
+   "title": "Company supply chain situation",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Supply chain challenges persisted through Q4",
+   "evidence": {
+    "quote": "And even this quarter, where despite multiple challenges, despite supply chain problems, we managed to deliver a 42% profit growth year-over-year.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We believe that the situation will ease out by Q4.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 12,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-23",
+   "title": "Nashik and Chakan capacity de-bottlenecking",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Nashik and Chakan plants",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "In the calendar 2026, we will work around de-bottlenecking some of the current capacity products where product capacity is running out. More specifically, 3XO and Bolero in Nashik plant, some of Scorpio-N in Chakan plant.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 4,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-24",
+   "title": "Additional capacity",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "6,000–7,000",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "6,000 to 7,000 additional capacities on these products get added in FY27, on top of what we have in FY26.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 4,
+     "target": "6,000–7,000",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-25",
+   "title": "Financial services ROA",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "Mahindra Finance",
+   "basis": null,
+   "period": "multi-year",
+   "target": "2.2–2.5%",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "2.4–2.5%",
+     "to": "2.2–2.5%",
+     "type": "lowered"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "as we cross-sell more, as we sell more insurance and other fee-based products, that is starting to come up and we will get that back to 2.4 to 2.5 after that as well",
+     "speaker": "Anish Shah",
+     "page": 11,
+     "target": "2.4–2.5%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": "cross-sell more",
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "On ROA, first goal is to be between 2.2%-2.5%.",
+     "speaker": "Mr. Raul Rebello",
+     "page": 18,
+     "target": "2.2–2.5%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-26",
+   "title": "Last Mile Mobility IPO",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Last Mile Mobility",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Yes, on Last Mile we did talk in Davos that we would look at an IPO next year",
+     "speaker": "Anish Shah",
+     "page": 13,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-27",
+   "title": "Farm subsidiary performance",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "Farm subsidiaries",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Next year towards the second half, you should see the change in trajectory.",
+     "speaker": "Amarjyoti Barua",
+     "page": 17,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-28",
+   "title": "New LCV product launches",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "LCVs, we had said two. We've just done Bolero Camper and Bolero Pik-Up, and two more will happen in this calendar year.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 4,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-29",
+   "title": "Nagpur plant commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Nagpur plant",
+   "basis": null,
+   "period": "H1CY29",
+   "target": "20,000",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "Q3FY29",
+     "to": "Q4FY29",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "20,000",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The Nagpur facility, which will come up in calendar 2028, will have primarily the new IQ platform on the SUV side.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 4,
+     "target": "",
+     "period": "Q3FY29",
+     "deadline": "Q3FY29",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The Nagpur plant is on track to get started in 2028 to middle.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 9,
+     "target": "",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The first phase of Nagpur should be ready first half of calendar 2029.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 6,
+     "target": "20,000",
+     "period": "H1CY29",
+     "deadline": "H1CY29",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-30",
+   "title": "Farm segment international performance",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "farm segment",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "International farm business drag addressed via exits and capital allocation",
+   "evidence": {
+    "quote": "So, 3 businesses which were, in a way, dragging the international business of farm, we've kind of taken the capital allocation calls and, you know, set in motion a process. And that, we believe, over the next 2 years, will again improve international business profitability.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We do foresee international not to be such a big drag next year, right, and I think that is something when you think about farm at a consolidated level, there is also that constructive view that you should take because you know there is some really tough decisions that the team has taken.",
+     "speaker": "Amarjyoti Barua",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-31",
+   "title": "New product launch",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "BO7 will come in, in some part of calendar 2027.",
+     "speaker": "Rajesh Jejurikar",
+     "page": 14,
+     "target": "",
+     "period": "Q3FY28",
+     "deadline": "Q3FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-32",
+   "title": "Company revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹4,100 cr",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "For F27, what we are tracking is a delivery of 4,100 crores in terms of revenue, 2 to 3% points in terms of customer satisfaction, which is off a high base already, and 10% reduction in time for a new product development.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "₹4,100 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-33",
+   "title": "Company customer satisfaction",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "2–3%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "For F27, what we are tracking is a delivery of 4,100 crores in terms of revenue, 2 to 3% points in terms of customer satisfaction, which is off a high base already, and 10% reduction in time for a new product development.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "2–3%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-34",
+   "title": "Tractor revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "tractor",
+   "basis": null,
+   "period": "FY27",
+   "target": "5%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "F27 Outlook, we are expecting tractor to be mid-single digit, around 5%.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 9,
+     "target": "5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-35",
+   "title": "SUV revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "SUV",
+   "basis": "management",
+   "period": "FY27",
+   "target": "15–19%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "SUV volume growth of 15% achieved",
+   "evidence": {
+    "quote": "We had a 15% growth in SUVs in spite of some production issues, especially in April and May and a 20% growth in LCV, which also had some production issues.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On the SUV side, we are expecting mid-to-high teens.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 9,
+     "target": "15–19%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-36",
+   "title": "Company EPS growth",
+   "kind": "hard",
+   "metric": "pat_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "15–20%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "EPS growth at 34% vs 15%-20% target",
+   "evidence": {
+    "quote": "On growth, we continue to grow faster, we are at 34% growth in EPS, at this point in time.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "if I were to look at the next 5 years again, we'd be very comfortable in saying that we will grow 15%-20% a year for the next 5 years.",
+     "speaker": "Dr. Anish Shah",
+     "page": 14,
+     "target": "15–20%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "M&M-37",
+   "title": "SUV capacity",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "ICE SUV",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "60,000",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "60",
+     "to": "60,000",
+     "type": "raised"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "As we get to H1 exit, which is by September, October, 56,500 would have gone up to 60.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 9,
+     "target": "60",
+     "period": "H1FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We had said by September we'll be at 60,000 per month, which we should be ready with by September, which is the end of first half.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 6,
+     "target": "60,000",
+     "period": "H1FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-38",
+   "title": "Real Estate sell white space",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Real Estate",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "And that also we should be able to sell it by September.",
+     "speaker": "Mr. Hemant Sikka",
+     "page": 10,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-39",
+   "title": "Real Estate pre-sales",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "Real Estate",
+   "basis": null,
+   "period": "FY30",
+   "target": "₹10,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "And we codified that we want to be a 10,000 crores company pre-sales by FY30.",
+     "speaker": "Mr. Amit Sinha",
+     "page": 16,
+     "target": "₹10,000 cr",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-40",
+   "title": "Auto operating profit margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "Auto",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we think we should be able to maintain/slightly improve the Operating Profit margin between Q1 and Q2.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 17,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": "if there is no further dramatic change in commodities",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-41",
+   "title": "Mahindra Finance AUM",
+   "kind": "hard",
+   "metric": "order_book",
+   "scope": "Mahindra Finance",
+   "basis": null,
+   "period": "FY31",
+   "target": "₹300,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We are targeting a ₹3 lakh crore book by 2031.",
+     "speaker": "Mr. Raul Rebello",
+     "page": 18,
+     "target": "₹300,000 cr",
+     "period": "FY31",
+     "deadline": "FY31",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-42",
+   "title": "Tech Mahindra business commitments",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "Tech Mahindra",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Tech Mahindra up 28%, again a very strong quarter on track for all the commitments that the business has made.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-43",
+   "title": "EV capacity",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "EV",
+   "basis": null,
+   "period": "H1FY27",
+   "target": "8,000",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We'd said we'd be operationally ready for 8,000 EVs, which we should be ready by 8,000 EVs, for 8,000 EVs.",
+     "speaker": "Mr. Rajesh Jejurikar",
+     "page": 6,
+     "target": "8,000",
+     "period": "H1FY27",
+     "deadline": "September 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  },
+  {
+   "id": "M&M-44",
+   "title": "Company operating margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "I think we should be able to ideally maintain margins, potentially improve them.",
+     "speaker": "Dr. Anish Shah",
+     "page": 18,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 22.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 22% a year over 5 years, 18% over 3 (slowing); last 12 months 26%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 51.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 51% a year over 5 years, 23% over 3; last 12 months 38%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 19.0,
+    "unit": "%",
+    "reading": "Operating margin expanded from 16% (FY22) to 19% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 16.0
+     },
+     {
+      "x": "FY23",
+      "y": 17.0
+     },
+     {
+      "x": "FY24",
+      "y": 18.0
+     },
+     {
+      "x": "FY25",
+      "y": 19.0
+     },
+     {
+      "x": "FY26",
+      "y": 19.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 18,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 18% of net profit (weak).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 1.47,
+    "unit": "x equity",
+    "reading": "Borrowings ₹136,936 cr, 1.47× equity; up from ₹77,605 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 77605.0
+     },
+     {
+      "x": "FY23",
+      "y": 92647.0
+     },
+     {
+      "x": "FY24",
+      "y": 108647.0
+     },
+     {
+      "x": "FY25",
+      "y": 129025.0
+     },
+     {
+      "x": "FY26",
+      "y": 136936.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 15.0,
+    "unit": "%",
+    "reading": "ROCE 15% in FY26 (from 11% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 11.0
+     },
+     {
+      "x": "FY23",
+      "y": 13.0
+     },
+     {
+      "x": "FY24",
+      "y": 14.0
+     },
+     {
+      "x": "FY25",
+      "y": 14.0
+     },
+     {
+      "x": "FY26",
+      "y": 15.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Management exceeded financial targets, delivering a 20% ROE against an 18% goal and 25% auto revenue growth versus 15-19% guidance.",
+    "refs": [
+     "M&M-11",
+     "M&M-14"
+    ]
+   },
+   {
+    "point": "The company is outperforming on operational promises, including a 5X increase in hospitality room inventory and 34% EPS growth exceeding the 15-20% target.",
+    "refs": [
+     "M&M-2",
+     "M&M-36"
+    ]
+   },
+   {
+    "point": "Operating margins have shown consistent improvement, expanding from 16% in FY22 to 19% by FY26.",
+    "refs": [
+     "margin"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Production ramp-up and supply chain targets were missed in FY26, with several capacity expansion promises going quiet or being significantly lowered.",
+    "refs": [
+     "M&M-6",
+     "M&M-16",
+     "M&M-22"
+    ]
+   },
+   {
+    "point": "Debt levels have risen sharply to 136,936 crores, representing 1.47x equity, while cash conversion remains weak at 18% of net profit.",
+    "refs": [
+     "debt",
+     "cash_conversion"
+    ]
+   },
+   {
+    "point": "Multiple growth and industry targets, including revenue growth and tractor industry performance, have lapsed without updates after their respective periods ended.",
+    "refs": [
+     "M&M-8",
+     "M&M-17",
+     "M&M-18"
+    ]
+   }
+  ]
+ }
+}

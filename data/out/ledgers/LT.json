@@ -1,0 +1,1498 @@
+{
+ "symbol": "LT",
+ "name": "Larsen & Toubro",
+ "sector": "Capital goods",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Jul 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 78750.0,
+    "qoq": 15.90768596744281,
+    "yoy": 15.836079077429988
+   },
+   {
+    "label": "EBITDA",
+    "value": 8814.0,
+    "qoq": 8.160510492084928,
+    "yoy": 3.5357688241512975
+   },
+   {
+    "label": "PBT",
+    "value": 7641.0,
+    "qoq": 10.387171337763657,
+    "yoy": 20.596590909090917
+   },
+   {
+    "label": "PAT",
+    "value": 5949.0,
+    "qoq": 19.2662389735365,
+    "yoy": 27.16973065412569
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf",
+   "promises": 7
+  },
+  {
+   "call": "Jul 2025",
+   "quarter": "Q1FY26",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf",
+   "promises": 8
+  },
+  {
+   "call": "Oct 2025",
+   "quarter": "Q2FY26",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf",
+   "promises": 10
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf",
+   "promises": 8
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf",
+   "promises": 16
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf",
+   "promises": 8
+  }
+ ],
+ "record": {
+  "kept": 2,
+  "missed": 2,
+  "resolved": 4,
+  "moved": 3,
+  "quiet": 1,
+  "open": 12,
+  "by_status": {
+   "missed": 2,
+   "gone_quiet": 1,
+   "beat": 1,
+   "delivered": 1,
+   "open": 9,
+   "on_track": 1,
+   "tracking": 2
+  }
+ },
+ "threads": [
+  {
+   "id": "LT-0",
+   "title": "FY26 Group order inflow growth",
+   "kind": "directional",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2025",
+     "from": "10%",
+     "to": "10%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "10%",
+     "to": "≥10%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "≥10%",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "beat",
+   "detail": "FY26 order inflow 20% CAGR vs 10% guidance",
+   "evidence": {
+    "quote": "I am pleased to share that we have significantly surpassed this guidance, driven by strong order wins across multiple sectors.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect our group order inflows and group revenues to grow at 10% and 15% respectively for a FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our guidance for FY26 remains unchanged. We expect our group order inflows and group revenues to grow at 10% and 15% respectively for FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We are confident of exceeding our full year FY '26 guidance of 10% growth in group order inflows for the current year.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "≥10%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Basis the 9-month performance and the healthy prospects pipeline for the near term, we will be exceeding the 10% order inflow guidance for FY '26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "Basis the 9-month performance and the healthy prospects pipeline for the near term",
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-1",
+   "title": "FY26 Group revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "15%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2025",
+     "from": "15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "missed",
+   "detail": "Reported revenue growth 11.8% for FY26",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect our group order inflows and group revenues to grow at 10% and 15% respectively for a FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our guidance for FY26 remains unchanged. We expect our group order inflows and group revenues to grow at 10% and 15% respectively for FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Accordingly, we maintain our full year revenue growth guidance at 15%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "We expect the customary ramp-up in project execution during Q4 and are reasonably confident of achieving our full year revenue growth guidance of 15%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-2",
+   "title": "FY26 Projects and Manufacturing margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "Projects & Manufacturing",
+   "basis": null,
+   "period": "FY26",
+   "target": "8.5%",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2025",
+     "from": "8.5%",
+     "to": "8.3–8.5%",
+     "type": "lowered"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "8.3–8.5%",
+     "to": "8.5%",
+     "type": "raised"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "8.5%",
+     "to": "8.5%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "With respect to the margins in the Projects and Manufacturing portfolio, we are targeting 8.5% for the year of FY26",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "8.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "With respect to the margin in the Projects and Manufacturing portfolio, we continue to target the 8.3% to 8.5% range for the full year FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "8.3–8.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "With the execution momentum expected to pick up in H2, we are reasonably confident to achieve our full year EBITDA margin target of 8.5%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "8.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our Projects & Manufacturing EBITDA at 7.9% for 9 months of the current year is in line with the target that we have set ourselves at 8.5% for the full year FY '26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "8.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-3",
+   "title": "FY26 Net Working Capital to Revenue",
+   "kind": "hard",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "10%",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2025",
+     "from": "12%",
+     "to": "12%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "12%",
+     "to": "12%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "12%",
+     "to": "10%",
+     "type": "lowered"
+    }
+   ],
+   "status": "beat",
+   "detail": "FY26 NWC to revenue closed at 4.1% vs 10% target",
+   "evidence": {
+    "quote": "Our NWC to Sales ratio has improved from 11% in March '25 to 4.1% in March '26, mainly supported by higher customer advances and increased vendor credit.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "our Net Working Capital to Revenue guidance for March '26 is at 12%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "12%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our Net Working Capital-to-Revenue guidance for March ‘26 remains at 12%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "12%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "On Working Capital, our guidance for working capital for FY '26 remains unchanged at around 12% by March 2026.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "12%",
+     "period": "FY26",
+     "deadline": "March 2026",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "However, with stronger collection intensity and improved contractual terms, our Net Working Capital to Revenue has improved sharply to 8.2% as of December '25, and we expect to close the year with a revised target of around 10%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-4",
+   "title": "L&T Finance Gold loan transaction close",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "L&T Finance",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Completed gold loan business acquisition in June 2025",
+   "evidence": {
+    "quote": "The business also completed the acquisition of the Gold Loan business from Paul Merchants Finance Pvt. Ltd. by way of a slump sale on the 9th of June.",
+    "call": "Jul 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "This transaction is expected to get consummated in Q2 of the current financial year, FY '26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": "Q2FY26",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-5",
+   "title": "H2FY26 revenue and margin visibility",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "missed",
+   "detail": "H2 growth +10.9% vs H1 +12.8%",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The revenues and the margin targets that we have set ourselves for FY26 will be more visible in the second half of FY26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "As highlighted during the Q4 FY '25 earnings call, we expect a stronger revenue visibility in the second half of the fiscal year, driven by a ramp-up in the execution.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-6",
+   "title": "FY27 Hydrocarbon margin realization",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "Hydrocarbon business",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So my sense is that you will not see a significant spike in FY'26, but you will see the benefits of all of this rolling out of FY'27 financials.",
+     "speaker": "R. Shankar Raman",
+     "page": 15,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-7",
+   "title": "L&T Hyderabad Metro debt levels and breakeven",
+   "kind": "directional",
+   "metric": "debt",
+   "scope": "L&T Hyderabad Metro",
+   "basis": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "Now coming back to overall PBT breakeven I guess this has been also communicated last time that the ridership should be going around 700,000 ridership per day and the debt levels which is today around Rs.12,000-odd crores has to be brought down to Rs.8,000 crores.",
+     "speaker": "P. Ramakrishnan",
+     "page": 13,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-8",
+   "title": "FY26 share of government order inflows",
+   "kind": "directional",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "75%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jul 2025)",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "In the near term, if you take a domestic order inflow as X, I think even for the current year, we can expect the share of government, State, Centre, plus Public Sector Corporations to be in the range of 75% and Private to be 25%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 16,
+     "target": "75%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Earnings%20Call%20Transcript%20Q1FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-9",
+   "title": "Hyderabad Metro / stake divestment completion",
+   "kind": "milestone",
+   "metric": "asset_quality",
+   "scope": "L&T Metro Rail Hyderabad Limited",
+   "basis": null,
+   "period": "H1FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "Q4FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "The contours of the final agreement are being finalized, and we expect this transaction to get consummated by the end of the current fiscal FY '26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Both these transactions are expected to achieve closure in Q1 FY27.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "The estimated completion date for this transaction has been revised to 30th September 2026.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "2026-09-30",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-10",
+   "title": "AMCA program RFP issuance",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Basis the shortlist, we expect the customer to issue the Request for Proposal, that is RFP sometime in Q4 of the current financial year.",
+     "speaker": "P. Ramakrishnan",
+     "page": 17,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-11",
+   "title": "AMCA prototype winner announcement",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "And the announcement of the winner to build the prototype most likely is going to happen Q4 of the next financial year after the bidding process.",
+     "speaker": "P. Ramakrishnan",
+     "page": 17,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-12",
+   "title": "FY26 Infrastructure segment EBITDA margin",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "Infrastructure",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Oct 2025)",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We do believe that infra margins will be a little northward.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-13",
+   "title": "FY27 Energy segment margin",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "Energy",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, we do also expect that margins in the subsequent periods to improve.",
+     "speaker": "P. Ramakrishnan",
+     "page": 21,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-14",
+   "title": "Data Center capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Data Center business",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Commissioned 12 MW at Kanchipuram, bringing total capacity to 30 MW",
+   "evidence": {
+    "quote": "The Data Center business rebranded as Larsen & Toubro Vyoma advanced its growth agenda by commissioning the 12 MW capacity at Kanchipuram, with an additional 6 MW at an advanced stage of commissioning, bringing the total capacity available to 30 MWs, positioning the platform to drive L&T's hyperscale data center expansion, catering to high-performance computing and advanced data storage requirements.",
+    "call": "May 2026, p2",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Okay. So as of now, we have almost 32 megawatts of capacity of Data Center, out of which 14 megawatts is up and running, another 18 megawatts will get commissioned by the end of this fiscal year.",
+     "speaker": "P. Ramakrishnan",
+     "page": 16,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-15",
+   "title": "FY27 Projects & Manufacturing margin uptick",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "Projects & Manufacturing",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "hopefully, the margin uptick would be seen sometime maybe after 2 or 3 quarters into the next year.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Transcript%20Q3FY26.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-16",
+   "title": "LTM multi-year revenue doubling target",
+   "kind": "soft",
+   "metric": "revenue",
+   "scope": "LTM",
+   "basis": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Under Lakshya 31, LTM aspires to double revenues over five years driven largely by organic growth and select inorganic moves, while sustaining competitive mid-teen operating margin and a more balanced, resilient portfolio.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-17",
+   "title": "LTTS multi-year revenue CAGR",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "LTTS",
+   "basis": null,
+   "period": "multi-year",
+   "target": "13–15%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The Lakshya L31 targets 13% to 15% revenue CAGR growth for over five years with EBIT margins of 16% to 17%, reflecting a structurally stronger and higher-quality growth profile.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "13–15%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-18",
+   "title": "LTTS multi-year EBIT margin",
+   "kind": "hard",
+   "metric": "operating_margin",
+   "scope": "LTTS",
+   "basis": null,
+   "period": "multi-year",
+   "target": "16–17%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The Lakshya L31 targets 13% to 15% revenue CAGR growth for over five years with EBIT margins of 16% to 17%, reflecting a structurally stronger and higher-quality growth profile.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "16–17%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-19",
+   "title": "L&T Finance multi-year ROE target",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "L&T Finance",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "16–18%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Trailing 12-month ROE for Q1 FY '27 stood at 16.1%",
+   "evidence": {
+    "quote": "Finally, the trailing 12-month ROE for Q1 FY '27 stood at 16.1% vis-a-vis 17% in Q1 FY '26.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The financial outcomes under the plan are calibrated to deliver a 3% to 3.2% ROA and a 16% to 18% ROE, reinforcing sustainability of returns while scaling the franchise.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "16–18%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-20",
+   "title": "FY27 order inflow growth",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "10–12%",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "10–12%",
+     "to": "10–12%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Based on this visibility and the opportunities we are pursuing, we expect the group order inflows to grow in the range of 10% to 12% in FY27.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "10–12%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Given the strength of our opportunity pipeline and the underlying market dynamics, we remain confident of achieving our order inflow growth guidance of 10% to 12% band for the current year.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10–12%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-21",
+   "title": "FY27 revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "10–12%",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "10–12%",
+     "to": "10–12%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "tracking",
+   "pace": {
+    "so_far": 11.41474825881228,
+    "so_far_label": "H1 FY27",
+    "needs": 8.79211734495371,
+    "needs_label": "H2 FY27",
+    "needs_for": 10,
+    "status": "on_pace",
+    "measure": "revenue growth"
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On Revenue, we expect growth to be in the range of 10% to 12% for FY27.",
+     "speaker": "P. Ramakrishnan",
+     "page": 11,
+     "target": "10–12%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "For now, we remain committed to our FY '27 growth guidance of 10% to 12% revenue growth guidance.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10–12%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-22",
+   "title": "FY27 PPM margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "Projects, Products, and Manufacturing portfolio",
+   "basis": null,
+   "period": "FY27",
+   "target": "7.8%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "7.8%",
+     "to": "7.8%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On this reclassified basis, the FY26 margins for Projects, Products and Manufacturing was 7.8%, and we expect the same to be stable as well in FY27 as well.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "7.8%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "In line with our Revenue growth guidance, we continue to target the margin of around 7.8% for FY '27 with respect to the PPM portfolio.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "7.8%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-23",
+   "title": "FY27 working capital to sales ratio",
+   "kind": "hard",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "10%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "10%",
+     "to": "10%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Accordingly, we are guiding the working capital to be around 10% in FY27, which remains well within our targeted range.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "10%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Factoring in the expected utilization of customer advances and increased vendor payments as the execution accelerates in H2, we are maintaining our FY '27 working capital guidance of around 10%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "10%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-24",
+   "title": "Lakshya multi-year order inflow CAGR",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "10–12%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Concluding with the Lakshya guidance, over the next five years, we are targeting order inflow growth at a CAGR return of 10% to 12%, revenue growth of 12% to 15%, and a Return on Equity in the range of 16% to 17%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "10–12%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-25",
+   "title": "Lakshya multi-year revenue CAGR",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "multi-year",
+   "target": "12–15%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "tracking",
+   "pace": {
+    "so_far": 11.41474825881228,
+    "so_far_label": "H1 FY27",
+    "status": "behind",
+    "measure": "revenue growth",
+    "note": "against the plan's annual growth rate"
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Concluding with the Lakshya guidance, over the next five years, we are targeting order inflow growth at a CAGR return of 10% to 12%, revenue growth of 12% to 15%, and a Return on Equity in the range of 16% to 17%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "12–15%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-26",
+   "title": "Lakshya multi-year Return on Equity",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "16–17%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Concluding with the Lakshya guidance, over the next five years, we are targeting order inflow growth at a CAGR return of 10% to 12%, revenue growth of 12% to 15%, and a Return on Equity in the range of 16% to 17%.",
+     "speaker": "P. Ramakrishnan",
+     "page": 12,
+     "target": "16–17%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-27",
+   "title": "H2FY27 revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We do anticipate a softer first half primarily due to the current supply chain disruptions, with a pickup happening in the second half as these constraints ease.",
+     "speaker": "P. Ramakrishnan",
+     "page": 10,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-28",
+   "title": "Q2FY27 project awards pickup",
+   "kind": "directional",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "While the awarding activity in the Middle East witnessed some temporary slowdown, tendering and bidding momentum continues to remain robust, and we expect project awards to pick up from Q2.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-29",
+   "title": "Offshore megaprojects dispatch readiness",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Offshore",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "the large megaprojects in Offshore, they will be ready for dispatch from our Oman yard sometime in first quarter of next calendar year. So, January…",
+     "speaker": "Subramanian Sarma",
+     "page": 16,
+     "target": "",
+     "period": "Q4FY27",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 16.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 16% a year over 5 years, 16% over 3 (steady); last 12 months 11%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 3.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 3% a year over 5 years, 17% over 3; last 12 months 18%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 13.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 16% (FY22) to 13% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 16.0
+     },
+     {
+      "x": "FY23",
+      "y": 15.0
+     },
+     {
+      "x": "FY24",
+      "y": 13.0
+     },
+     {
+      "x": "FY25",
+      "y": 14.0
+     },
+     {
+      "x": "FY26",
+      "y": 13.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 115,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 115% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 1.15,
+    "unit": "x equity",
+    "reading": "Borrowings ₹125,497 cr, 1.15× equity; flat from ₹125,508 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 125508.0
+     },
+     {
+      "x": "FY23",
+      "y": 120650.0
+     },
+     {
+      "x": "FY24",
+      "y": 116322.0
+     },
+     {
+      "x": "FY25",
+      "y": 132409.0
+     },
+     {
+      "x": "FY26",
+      "y": 125497.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 15.0,
+    "unit": "%",
+    "reading": "ROCE 15% in FY26 (from 10% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 10.0
+     },
+     {
+      "x": "FY23",
+      "y": 12.0
+     },
+     {
+      "x": "FY24",
+      "y": 13.0
+     },
+     {
+      "x": "FY25",
+      "y": 15.0
+     },
+     {
+      "x": "FY26",
+      "y": 15.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "The company significantly outperformed its FY26 order inflow guidance, achieving a 20% CAGR compared to the 10% target.",
+    "refs": [
+     "LT-0"
+    ]
+   },
+   {
+    "point": "Management demonstrated strong capital efficiency by beating the FY26 Net Working Capital to revenue target with a result of 4.1% versus 10%.",
+    "refs": [
+     "LT-3"
+    ]
+   },
+   {
+    "point": "Operating cash flow has been strong, representing 115% of net profit over the last five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Revenue growth missed the FY26 target of 15%, with the company reporting only 11.8% growth for the period.",
+    "refs": [
+     "LT-1"
+    ]
+   },
+   {
+    "point": "Operating margins have faced compression, declining from 16% in FY22 to 13% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "The company missed its H2FY26 growth visibility target, with H2 growth slowing to 10.9% from 12.8% in H1.",
+    "refs": [
+     "LT-5"
+    ]
+   }
+  ]
+ }
+}

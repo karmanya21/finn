@@ -80,14 +80,14 @@
   "missed": 1,
   "resolved": 3,
   "moved": 6,
-  "quiet": 3,
-  "open": 11,
+  "quiet": 2,
+  "open": 12,
   "by_status": {
    "delivered": 2,
    "missed": 1,
    "delayed": 2,
-   "gone_quiet": 3,
-   "open": 8,
+   "gone_quiet": 2,
+   "open": 9,
    "tracking": 1
   }
  },
@@ -289,7 +289,7 @@
     }
    ],
    "status": "gone_quiet",
-   "detail": "Not mentioned since Nov 2025",
+   "detail": "Said 3 times, then not mentioned since Nov 2025",
    "statements": [
     {
      "call": "May 2025",
@@ -790,8 +790,7 @@
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "gone_quiet",
-   "detail": "Not mentioned since Nov 2025",
+   "status": "open",
    "statements": [
     {
      "call": "Nov 2025",
@@ -1314,5 +1313,164 @@
     }
    ]
   }
- ]
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 13.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 13% a year over 5 years, 8% over 3 (slowing); last 12 months 27%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": -5.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded -5% a year over 5 years, -9% over 3; last 12 months 122%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 14.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 28% (FY22) to 14% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 28.0
+     },
+     {
+      "x": "FY23",
+      "y": 16.0
+     },
+     {
+      "x": "FY24",
+      "y": 15.0
+     },
+     {
+      "x": "FY25",
+      "y": 14.0
+     },
+     {
+      "x": "FY26",
+      "y": 14.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 175,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 175% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.83,
+    "unit": "x equity",
+    "reading": "Borrowings ₹4,966 cr, 0.83× equity; up from ₹2,587 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 2587.0
+     },
+     {
+      "x": "FY23",
+      "y": 2907.0
+     },
+     {
+      "x": "FY24",
+      "y": 3623.0
+     },
+     {
+      "x": "FY25",
+      "y": 3848.0
+     },
+     {
+      "x": "FY26",
+      "y": 4966.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 7.0,
+    "unit": "%",
+    "reading": "ROCE 7% in FY26 (from 22% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 22.0
+     },
+     {
+      "x": "FY23",
+      "y": 10.0
+     },
+     {
+      "x": "FY24",
+      "y": 7.0
+     },
+     {
+      "x": "FY25",
+      "y": 6.0
+     },
+     {
+      "x": "FY26",
+      "y": 7.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Management successfully delivered on the FY26 capex target by investing ₹1,125 crore.",
+    "refs": [
+     "AARTIIND-0"
+    ]
+   },
+   {
+    "point": "The company completed its key MMA capacity expansion to 360 KTPA.",
+    "refs": [
+     "AARTIIND-11"
+    ]
+   },
+   {
+    "point": "The FY27 tax rate is currently tracking on pace at 14.0% against the target of ≤15%.",
+    "refs": [
+     "AARTIIND-9"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Borrowings increased by ₹1,118 crore, failing the FY26 net debt reduction target of ₹200–300 crore.",
+    "refs": [
+     "AARTIIND-1"
+    ]
+   },
+   {
+    "point": "Operating margins have compressed significantly from 28% in FY22 to 14% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "Multiple projects including Zone 4 and Aarti Circularity have faced repeated commissioning delays.",
+    "refs": [
+     "AARTIIND-4",
+     "AARTIIND-6"
+    ]
+   }
+  ]
+ }
 }

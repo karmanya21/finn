@@ -1,0 +1,883 @@
+{
+ "symbol": "HINDUNILVR",
+ "name": "Hindustan Unilever",
+ "sector": "FMCG",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 18226.0,
+    "qoq": 5.103511908194447,
+    "yoy": 14.49211633896601
+   },
+   {
+    "label": "EBITDA",
+    "value": 4089.0,
+    "qoq": 3.597669115784141,
+    "yoy": 8.117398202009518
+   },
+   {
+    "label": "PBT",
+    "value": 3814.0,
+    "qoq": 5.011013215859039,
+    "yoy": 5.797503467406373
+   },
+   {
+    "label": "PAT",
+    "value": 2796.0,
+    "qoq": 4.32835820895523,
+    "yoy": 3.786191536748329
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "Apr 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57aad284-8283-4c21-8035-99627387a92d.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf",
+   "promises": 6
+  },
+  {
+   "call": "Oct 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf",
+   "promises": 6
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf",
+   "promises": 7
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f8bf7fdd-0f7d-4440-a443-08ea9a8e6d04.pdf",
+   "promises": 2
+  }
+ ],
+ "record": {
+  "kept": 0,
+  "missed": 0,
+  "resolved": 0,
+  "moved": 1,
+  "quiet": 1,
+  "open": 3,
+  "by_status": {
+   "on_track": 1,
+   "gone_quiet": 1,
+   "tracking": 1,
+   "open": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "HINDUNILVR-0",
+   "title": "Ice cream business demerger",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "KWIL",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Ice Cream demerger completed",
+   "evidence": {
+    "quote": "Strategic actions such as the demerger of Ice Cream, along with the investments at OZiva and Minimalist, are already enhancing the growth mix of the portfolio.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Apr 2025",
+     "quarter": "Q4FY25",
+     "quote": "the demerger of Ice cream business Is progressing on track with regulatory requirements, and we expect It to be completed by the end of financial year 2026.",
+     "speaker": "Modarcdor",
+     "page": 3,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": "regulatory requirements",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57aad284-8283-4c21-8035-99627387a92d.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We are on track to complete the demerger process by Q4 of Financial Year'26 subject to necessary approvals.",
+     "speaker": "Ritesh Tiwari",
+     "page": 11,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": "subject to necessary approvals",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We expect to complete the demerger by December, with the listing anticipated in Quarter 4 of Financial Year 2026, subject to necessary regulatory approvals",
+     "speaker": "Ritesh Tiwari",
+     "page": 8,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": "subject to necessary regulatory approvals",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The KWIL listing, as you would have seen from the BSE notice will be listed on 16th of February.",
+     "speaker": "Niranjan Gupta",
+     "page": 16,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "16th February 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-1",
+   "title": "Price growth",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "1–3%",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "1–3%",
+     "to": "1–3%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "1–3%",
+     "to": "1–3%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "1–3%",
+     "to": "1–3%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "Apr 2025",
+     "quarter": "Q4FY25",
+     "quote": "If commodities remain where they are, we expect price growth to be In Low- single digit range.",
+     "speaker": "RlluhTlwart",
+     "page": 11,
+     "target": "1–3%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "If commodities remain where they are",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57aad284-8283-4c21-8035-99627387a92d.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "If commodity prices stay within the current range, we anticipate low single-digit price growth.",
+     "speaker": "Ritesh Tiwari",
+     "page": 11,
+     "target": "1–3%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "If commodity prices stay within the current range",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "If commodity prices remain where they are, we expect a low-single digit price growth.",
+     "speaker": "Ritesh Tiwari",
+     "page": 8,
+     "target": "1–3%",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": "If commodity prices remain where they are",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we do expect a low single-digit price increases over the year.",
+     "speaker": "Niranjan Gupta",
+     "page": 21,
+     "target": "1–3%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-2",
+   "title": "Operating margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Apr 2025)",
+   "statements": [
+    {
+     "call": "Apr 2025",
+     "quarter": "Q4FY25",
+     "quote": "everything else being equal, If commodity prices are In the same domain space that they are now, we should start seeing margins to improve from this band in the Later half of the fiscal",
+     "speaker": "Modarcdor",
+     "page": 27,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": "If commodity prices are In the same domain space that they are now",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57aad284-8283-4c21-8035-99627387a92d.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-3",
+   "title": "Revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "lapsed",
+   "detail": "Said 4 times, then not mentioned since Feb 2026",
+   "statements": [
+    {
+     "call": "Apr 2025",
+     "quarter": "Q4FY25",
+     "quote": "we believe that June quarter - September quarter should be better than what the last couple of quarters have been.",
+     "speaker": "Moderoton",
+     "page": 21,
+     "target": "",
+     "period": "Q1FY26-Q2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57aad284-8283-4c21-8035-99627387a92d.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect the first half of this financial year to be better than second half of last financial year.",
+     "speaker": "Ritesh Tiwari",
+     "page": 11,
+     "target": "",
+     "period": "H1FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Overall, we expect growth of second half of this financial year to be better than the first half.",
+     "speaker": "Ritesh Tiwari",
+     "page": 8,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we expect growth in financial year'27 to be better than financial year'26.",
+     "speaker": "Niranjan Gupta",
+     "page": 16,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-4",
+   "title": "EBITDA margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "23%",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "22–23%",
+     "to": "22.5–23.6%",
+     "type": "raised"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "22.5–23.6%",
+     "to": "22.5–23.5%",
+     "type": "lowered"
+    },
+    {
+     "call": "May 2026",
+     "from": "22.5–23.5%",
+     "to": "22.5–23.5%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "22.5–23.5%",
+     "to": "23%",
+     "type": "narrowed"
+    }
+   ],
+   "status": "tracking",
+   "pace": {
+    "so_far": 22.593977563471757,
+    "so_far_label": "H1 FY27",
+    "status": "behind",
+    "measure": "EBITDA margin"
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Consequently, we expect EBITDA to be in the range of 22%-23%.",
+     "speaker": "Ritesh Tiwari",
+     "page": 11,
+     "target": "22–23%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Our current near to mid-term guidance is 22-23%, hence everything else being equal, Ice Cream demerger adds 50-60 bps to this guidance.",
+     "speaker": "Ritesh Tiwari",
+     "page": 8,
+     "target": "22.5–23.6%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "Ice Cream demerger",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "So basically, we remain with this guidance that we have provided.",
+     "speaker": "Niranjan Gupta",
+     "page": 23,
+     "target": "22.5–23.5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "excluding Ice Cream",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "as far as margins are concerned, our approach remains consistent and disciplined, and we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+     "speaker": "Niranjan Gupta",
+     "page": 9,
+     "target": "22.5–23.5%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "it's feasible for us to maintain the EBITDA Margins.",
+     "speaker": "Niranjan Gupta",
+     "page": 22,
+     "target": "23%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "crude oil prices between $75 and $100 per barrel",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f8bf7fdd-0f7d-4440-a443-08ea9a8e6d04.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-5",
+   "title": "Gross Margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Gross margin improved 130 bps sequentially in Q2FY26",
+   "evidence": {
+    "quote": "On a sequential basis, our gross margin has seen a 130 bps improvement as this transitory price versus cost gap has moderated.",
+    "call": "Oct 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Now going forward we believe that from next quarter onwards we should start seeing improvement in Gross Margin levels compared to where we are now",
+     "speaker": "Ritesh Tiwari",
+     "page": 43,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a09d1d2b-2f6b-4b73-a607-6f61164694af.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-6",
+   "title": "Volume growth",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Oct 2025)",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "we do expect to see volume growth to be better in second half of the financial year compared to first half.",
+     "speaker": "Ritesh Tiwari",
+     "page": 33,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-7",
+   "title": "Market recovery",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "H2 growth +6.7% vs H1 +0.1%",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We anticipate normal trading conditions starting early November, once prices stabilise, paving the way for a gradual and sustained market recovery",
+     "speaker": "Ritesh Tiwari",
+     "page": 8,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": "once prices stabilise",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2eb875fe-ef79-4b40-88b8-228ccc8be17e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-8",
+   "title": "Pricing in Home Care",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "Home Care",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "detail": "Home Care pricing actions ongoing to balance volume and price",
+   "evidence": {
+    "quote": "I mean, there's a negative UPG is anniversarizing as we speak on Home Care, and because of the cost inflation, there's a pricing which is coming in.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we will continue to price in Home Care gradually, staying competitive.",
+     "speaker": "Priya Nair",
+     "page": 20,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-9",
+   "title": "Lifestyle Nutrition volume growth",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "Lifestyle Nutrition",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We will continue to stay the course on these actions and increase consumption in this category.",
+     "speaker": "Priya Nair",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-10",
+   "title": "Personal Care revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "Personal Care",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "By prioritizing evolving consumer needs for skin- related benefits in soap and broadening consumer reach through access packs, we are committed to achieving sustained growth and strengthening our leadership within this category.",
+     "speaker": "Niranjan Gupta",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-11",
+   "title": "Premium formats capex",
+   "kind": "milestone",
+   "metric": "capex",
+   "scope": "premium formats",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "In parallel, we have also signed off a Rs. 2,000 crores planned capex investment to expand capacity in the premium formats.",
+     "speaker": "Niranjan Gupta",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-12",
+   "title": "Competitive navigation",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we remain confident given our Home Care portfolio. We will calibrate between price, savings, procurement benefits to ensure that we navigate competitively as we have done in this quarter.",
+     "speaker": "Priya Nair",
+     "page": 25,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "Home Care portfolio",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f8bf7fdd-0f7d-4440-a443-08ea9a8e6d04.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 7.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 7% a year over 5 years, 2% over 3 (slowing); last 12 months 10%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 13.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 13% a year over 5 years, 14% over 3; last 12 months 5%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 23.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 25% (FY22) to 23% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 25.0
+     },
+     {
+      "x": "FY23",
+      "y": 23.0
+     },
+     {
+      "x": "FY24",
+      "y": 24.0
+     },
+     {
+      "x": "FY25",
+      "y": 24.0
+     },
+     {
+      "x": "FY26",
+      "y": 23.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 104,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 104% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.03,
+    "unit": "x equity",
+    "reading": "Borrowings ₹1,478 cr, 0.03× equity; up from ₹1,043 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 1043.0
+     },
+     {
+      "x": "FY23",
+      "y": 1219.0
+     },
+     {
+      "x": "FY24",
+      "y": 1484.0
+     },
+     {
+      "x": "FY25",
+      "y": 1648.0
+     },
+     {
+      "x": "FY26",
+      "y": 1478.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 28.0,
+    "unit": "%",
+    "reading": "ROCE 28% in FY26 (from 25% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 25.0
+     },
+     {
+      "x": "FY23",
+      "y": 27.0
+     },
+     {
+      "x": "FY24",
+      "y": 27.0
+     },
+     {
+      "x": "FY25",
+      "y": 28.0
+     },
+     {
+      "x": "FY26",
+      "y": 28.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "The company successfully delivered a 130 bps sequential gross margin improvement in Q2FY26.",
+    "refs": [
+     "HINDUNILVR-5"
+    ]
+   },
+   {
+    "point": "Market recovery was achieved with H2 growth of 6.7% compared to 0.1% in H1.",
+    "refs": [
+     "HINDUNILVR-7"
+    ]
+   },
+   {
+    "point": "Operating cash flow remains strong at 104% of net profit over the last five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Operating margins have compressed from 25% in FY22 to 23% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "Revenue growth targets for FY27 have lapsed after being mentioned four times and then abandoned.",
+    "refs": [
+     "HINDUNILVR-3"
+    ]
+   },
+   {
+    "point": "The EBITDA margin target of 23% for FY27 is currently behind, with H1 FY27 performance at 22.6%.",
+    "refs": [
+     "HINDUNILVR-4"
+    ]
+   }
+  ]
+ }
+}

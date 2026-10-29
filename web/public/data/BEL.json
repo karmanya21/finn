@@ -1,0 +1,1712 @@
+{
+ "symbol": "BEL",
+ "name": "Bharat Electronics",
+ "sector": "Defence PSU",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Jul 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 5547.0,
+    "qoq": -45.74530516431925,
+    "yoy": 24.93243243243244
+   },
+   {
+    "label": "EBITDA",
+    "value": 1388.0,
+    "qoq": -53.45405767940979,
+    "yoy": 12.116316639741509
+   },
+   {
+    "label": "PBT",
+    "value": 1396.0,
+    "qoq": -52.142612272883106,
+    "yoy": 9.147771696638006
+   },
+   {
+    "label": "PAT",
+    "value": 1055.0,
+    "qoq": -52.60557053009883,
+    "yoy": 8.875128998968007
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf",
+   "promises": 9
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf",
+   "promises": 12
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf",
+   "promises": 14
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf",
+   "promises": 12
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf",
+   "promises": 8
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf",
+   "promises": 9
+  }
+ ],
+ "record": {
+  "kept": 2,
+  "missed": 1,
+  "resolved": 3,
+  "moved": 4,
+  "quiet": 4,
+  "open": 24,
+  "by_status": {
+   "gone_quiet": 4,
+   "beat": 1,
+   "delivered": 1,
+   "open": 18,
+   "on_track": 3,
+   "missed": 1,
+   "delayed": 1,
+   "tracking": 2
+  }
+ },
+ "threads": [
+  {
+   "id": "BEL-0",
+   "title": "FY26 revenue growth",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "₹1,000 cr",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "15%",
+     "to": "≥15%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "≥15%",
+     "to": "≥15%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "≥15%",
+     "to": "₹1,000 cr",
+     "type": "raised"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So our guidance for financial year '25, '26 is revenue growth around 15%, EBITDA margin around 27%, order inflow more than INR27,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Revenue growth more than 15%",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "revenue growth, we are going to have 15% plus",
+     "speaker": "Manoj Jain",
+     "page": 18,
+     "target": "≥15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "revenue growth more than 15%, EBITDA margin definitely more than 27%, order inflow INR 27,000 crores plus, R&D investment although we told INR 1,600 crore, but I am confident we may cross INR 1,700 but at least INR 1,600 plus definitely we are going to be there, CAPEX INR 1,000 crore and defense non-defense business of 90 to 10.",
+     "speaker": "Manoj Jain",
+     "page": 24,
+     "target": "₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-1",
+   "title": "FY26 EBITDA margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "27%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "27%",
+     "to": "≥27%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "≥27%",
+     "to": "≥27%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "≥27%",
+     "to": "27%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "beat",
+   "detail": "Reported EBITDA margin 29.2% for FY26",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So our guidance for financial year '25, '26 is revenue growth around 15%, EBITDA margin around 27%, order inflow more than INR27,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "27%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "EBITDA margin more than 27%",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥27%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "EBITDA margins will remain more or less similar. And what the guidance we have given more than 27% EBITDA, we are confident to achieve by the year-end.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "≥27%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Presently, we maintain the EBITDA margin of 27% for the current financial year.",
+     "speaker": "Damodar Bhattad",
+     "page": 5,
+     "target": "27%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-2",
+   "title": "FY26 order inflow",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "≥₹27,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "≥₹27,000 cr",
+     "to": "≥₹27,000 cr",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "≥₹27,000 cr",
+     "to": "≥₹27,000 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So our guidance for financial year '25, '26 is revenue growth around 15%, EBITDA margin around 27%, order inflow more than INR27,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "≥₹27,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "order inflow of INR27,000-plus crores excluding QRFM.",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥₹27,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "excluding QRFM",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So we are confident that we will definitely achieve more than INR27,000 crores order book -- order received in this financial year other than QRSAM.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "≥₹27,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "other than QRSAM",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-3",
+   "title": "FY26 R&D investment",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "≥₹1,000 cr",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "≥₹1,600 cr",
+     "to": "≥₹1,600 cr",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "≥₹1,600 cr",
+     "to": "≥₹1,000 cr",
+     "type": "lowered"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The R&D investment, definitely we want to increase, but it will be of the order of INR1,600 crores and beyond.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "≥₹1,600 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "R&D investment as it was committed, it will be INR1,600-plus crores only.",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥₹1,600 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "R&D investments more than INR1,600 crores, capex more than INR1,000 crores",
+     "speaker": "Manoj Jain",
+     "page": 18,
+     "target": "≥₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-4",
+   "title": "FY26 Capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "≥₹1,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "≥₹1,000 cr",
+     "to": "≥₹1,000 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "FY26 capex guidance of INR 1,000 crores reaffirmed",
+   "evidence": {
+    "quote": "CAPEX INR 1,000 crore and defense non-defense business of 90 to 10. So these are our guidance as future and we are hopeful to exceed that only.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "And capex, as I told, more than INR1,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "≥₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Capex, INR1,000- plus crores",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-5",
+   "title": "Multi-year revenue growth",
+   "kind": "soft",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "≥15%",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "15–17.5%",
+     "to": "≥15%",
+     "type": "lowered"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We are targeting around 17.5% -- 15% to 17.5% of growth in next 5 years, as I already indicated.",
+     "speaker": "Manoj Jain",
+     "page": 22,
+     "target": "15–17.5%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "So, we are confident that we will have steady growth of more than 15% in years to come.",
+     "speaker": "Manoj Jain",
+     "page": 7,
+     "target": "≥15%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-6",
+   "title": "QRSAM order acquisition",
+   "kind": "milestone",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "Q1FY27",
+     "to": "Q4FY26",
+     "type": "advanced"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "Q4FY26",
+     "to": "Q2FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Worst case, it will be Q1 of next year.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": "Worst case scenario",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We are confident we may get in the Q4 of this year itself QRSAM because the progress looks really good for us and DAC approval already has come.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": "progress looks really good for us and DAC approval already has come",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "QRSAM, we told we were highly optimistic to get it by March, but procedural delays we knew, that is why we told it may go to Q1/Q2, maximum by September we will get and I am still sticking to that.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q2FY27",
+     "condition": "CCS clearance",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-7",
+   "title": "Pipeline projects order acquisition",
+   "kind": "milestone",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Worst case, they may go to -- slip to next year Q1 or Q2.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q2FY27",
+     "condition": "Worst case scenario",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-8",
+   "title": "New factory operations",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY29",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "In next 2 to 3 years or maximum 4 years, you will see that we will start operations in those new locations also",
+     "speaker": "Manoj Jain",
+     "page": 14,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY29",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1cb598de-8408-4f90-81cf-76b3485986d7.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-9",
+   "title": "FY26 export revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "≥120 USD mn",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "export $120-plus million.",
+     "speaker": "Manoj Jain",
+     "page": 21,
+     "target": "≥120 USD mn",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-10",
+   "title": "FY27 employee count",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥10,000",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we are planning crossing definitely 10,000 plus.",
+     "speaker": "Manoj Jain",
+     "page": 9,
+     "target": "≥10,000",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-11",
+   "title": "Multi-year export share of turnover",
+   "kind": "soft",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "10%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "10%",
+     "to": "≥10%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "≥10%",
+     "to": "10%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we wanted to reach in next five years around 10% of our turnover through exports.",
+     "speaker": "Manoj Jain",
+     "page": 10,
+     "target": "10%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We are confident that we will be in the right path to increase percentage of our export turnover year-on-year, and finally, touch 10%.",
+     "speaker": "Manoj Jain",
+     "page": 14,
+     "target": "≥10%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "we want to finally aim at 10% of our revenues through export. So, we are working systematically to see that we reach that goal in next five years.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "10%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-12",
+   "title": "Multi-year services business contribution",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "13–15%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we are expecting 10%, 11% will become 13% to 15% over a period of time.",
+     "speaker": "Manoj Jain",
+     "page": 17,
+     "target": "13–15%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-13",
+   "title": "Q2FY26 revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Anyway, quarter two we will compensate for this, I am confident about that.",
+     "speaker": "Manoj Jain",
+     "page": 6,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad2b25e2-70db-49c7-8037-9c4517024829.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-14",
+   "title": "Project Kusha order inflow",
+   "kind": "milestone",
+   "metric": "order_inflow",
+   "scope": "Project Kusha",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So we are expecting order by December 2029, the first production order for us because right now, it is that way is the prototype developmental order which we have received.",
+     "speaker": "Manoj Jain",
+     "page": 5,
+     "target": "",
+     "period": "FY30",
+     "deadline": "2029-12-01",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-15",
+   "title": "FY28 export turnover",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY28",
+   "target": "≥5%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Export turnover target of 5% remains in near future plan",
+   "evidence": {
+    "quote": "Definitely, export opportunities are there in all the areas of BEL’s operation and we are doing a focused attempt to increase our export turnover from presently 3% to 4% to 5% in near future and overall 10% in a long-term.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "we are confident over a period of time in next 2 to 3 years, we are definitely going to have 5%.",
+     "speaker": "Manoj Jain",
+     "page": 14,
+     "target": "≥5%",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-16",
+   "title": "Q3FY26 emergency procurement orders",
+   "kind": "milestone",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Emergency procurement orders not received in Q3FY26",
+   "evidence": {
+    "quote": "And QRSAM, we told we were highly optimistic to get it by March, but procedural delays we knew, that is why we told it may go to Q1/Q2, maximum by September we will get and I am still sticking to that.",
+    "call": "Jul 2026",
+    "new_deadline": "Q2FY27"
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "And we are expecting it mostly by next 2 weeks, so we will get.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": "CMCs are concluded",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-17",
+   "title": "FY26 cost audit and other activities",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Cost audit completed as of January 2026",
+   "evidence": {
+    "quote": "Cost audit also is done.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "And we are confident of achieving that by March.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": "March 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-18",
+   "title": "FY26 qualification of RFI phase",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "RFI phase trials successfully concluded",
+   "evidence": {
+    "quote": "Let me tell you Shatrughat and Samaghat, both projects there were small delays because of the rigorous trials, et cetera. but that phase is over.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We are only hoping that another 3 months to 4 months by March -- February, March, we may expect this qualification of the RFI phase will be over.",
+     "speaker": "Manoj Jain",
+     "page": 11,
+     "target": "",
+     "period": "FY26",
+     "deadline": "March 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9086c7ac-ab01-42ac-887f-3d0e37ac0833.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-19",
+   "title": "FY26 NGC order inflow",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "20–25%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delayed",
+   "detail": "QRSAM order delayed to Q1/Q2, maximum by September",
+   "evidence": {
+    "quote": "And QRSAM, we told we were highly optimistic to get it by March, but procedural delays we knew, that is why we told it may go to Q1/Q2, maximum by September we will get and I am still sticking to that.",
+    "call": "Jul 2026",
+    "new_deadline": "September 2026"
+   },
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "So, that's why that is our final call right now that around 20% to 25% of the orders we may get before March and remaining orders in Q1 and Q2 of next year.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "20–25%",
+     "period": "FY26",
+     "deadline": "March 2026",
+     "condition": "NGC order",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-20",
+   "title": "FY27 on-time delivery",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "100%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "So, this year also we are targeting around 95% of our items, we will deliver on time. That is our internal target. And next year we wanted to make it 100%.",
+     "speaker": "Manoj Jain",
+     "page": 6,
+     "target": "100%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-21",
+   "title": "Multi-year non-defense revenue share",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "≥10%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Certainly, as you also told, right now our non-defense is around 6%, 7% type of thing only, which we want to definitely cross (+10%) in near future and long-term our aim is to make it 15% and beyond.",
+     "speaker": "Manoj Jain",
+     "page": 15,
+     "target": "≥10%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-22",
+   "title": "FY27 data center revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥₹1,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our aim is minimum INR (+1,000) crore next year onwards from data center type of business.",
+     "speaker": "Manoj Jain",
+     "page": 15,
+     "target": "≥₹1,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-23",
+   "title": "FY27 R&D expenditure",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥₹2,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "This year, our target is crossing INR 1,700 plus crores and next year, it will be more than INR 2,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥₹2,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-24",
+   "title": "Multi-year R&D expenditure growth",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "≥20%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "So overall, now, we wanted to have almost 20% plus increase year-on-year on our R&D expenses",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥20%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-25",
+   "title": "H1FY27 NGC order inflow",
+   "kind": "milestone",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "But definitely by next year Q2, we will get all the orders of NGC order, because it is split across multiple line items and a separate order we are expecting for those line items.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "Q2FY27",
+     "condition": "NGC order finalization",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-26",
+   "title": "FY27 business performance",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "And next year to follow, it will be much more better, definitely.",
+     "speaker": "Manoj Jain",
+     "page": 6,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=bb8b13a8-bf5d-410c-ac76-7a0f41a3cbdc.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-27",
+   "title": "FY29 indigenous content",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY29",
+   "target": "80–85%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "But next 2 to 3 years, between 80% to 85% on an average indigenous content will be there for our products.",
+     "speaker": "Manoj Jain",
+     "page": 15,
+     "target": "80–85%",
+     "period": "FY29",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-28",
+   "title": "FY28 non-defense revenue share",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "11–12%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We want to increase it to more than 10% of our turnover. But in near future of next 1, 1.5 years, the increase will be maybe 1% or 2%, not more.",
+     "speaker": "Manoj Jain",
+     "page": 16,
+     "target": "11–12%",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-29",
+   "title": "FY27 revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "15%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "≥15%",
+     "to": "15%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "tracking",
+   "pace": {
+    "so_far": 24.93243243243244,
+    "so_far_label": "Q1 FY27",
+    "needs": 13.096676737160106,
+    "needs_label": "Q2–Q4 FY27",
+    "needs_for": 15,
+    "status": "ahead",
+    "measure": "revenue growth"
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So definitely, we are going to have more than 15% as a revenue growth for '26-'27.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥15%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "our balanced plan is 15% and I am confident we will reach 15%.",
+     "speaker": "Manoj Jain",
+     "page": 19,
+     "target": "15%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-30",
+   "title": "FY27 EBITDA margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "28%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "≥28%",
+     "to": "28%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "tracking",
+   "pace": {
+    "so_far": 25.022534703443306,
+    "so_far_label": "Q1 FY27",
+    "status": "behind",
+    "measure": "EBITDA margin"
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "EBITDA margins will be more than 28%.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥28%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Overall on a yearly basis, we maintain the EBITDA margin of 28%, which we have given already.",
+     "speaker": "Damodar Bhattad",
+     "page": 5,
+     "target": "28%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-31",
+   "title": "FY27 order inflow",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥₹20,000 cr",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "≥₹55,000 cr",
+     "to": "≥₹20,000 cr",
+     "type": "lowered"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The order inflow we are expecting this year more than INR55,000 crores.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥₹55,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "We are definitely going to meet the guidance given about the order inflow for this year.",
+     "speaker": "Manoj Jain",
+     "page": 4,
+     "target": "≥₹20,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-32",
+   "title": "FY27 R&D investment",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥₹2,200 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "₹2,200 cr",
+     "to": "≥₹2,200 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So this year, we have targeted a value of around INR2,200 crores investment in R&D.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "₹2,200 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "more than INR2,200 crores R&D budget we have allocated for this year",
+     "speaker": "Manoj Jain",
+     "page": 13,
+     "target": "≥₹2,200 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-33",
+   "title": "FY27 Capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "≥₹1,200 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "≥₹1,200 cr",
+     "to": "≥₹1,200 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So, we are targeting more than INR1,200 crores as a capital investment for this year.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "≥₹1,200 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f32d2ed7-e599-42b4-ab37-d8e5e79ae0ca.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "INR1,200 plus crores we are investing under capex which will take care of our production and other type of investments.",
+     "speaker": "Manoj Jain",
+     "page": 13,
+     "target": "≥₹1,200 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-34",
+   "title": "FY28 employee cost to turnover ratio",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "12%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "we expect the employee cost to turnover to be in the range of around 12% even in the coming years also",
+     "speaker": "Damodar Bhattad",
+     "page": 12,
+     "target": "12%",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BEL-35",
+   "title": "FY27 export revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "300 USD million",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "this year we have given our internal guidance of around USD300 million we should definitely fetch out of the leads which we are having.",
+     "speaker": "Manoj Jain",
+     "page": 20,
+     "target": "300 USD million",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d2a747a3-664c-4c5d-9373-fcddc0d2a3ae.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 14.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 14% a year over 5 years, 16% over 3 (steady); last 12 months 20%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 24.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 24% a year over 5 years, 27% over 3; last 12 months 12%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 29.0,
+    "unit": "%",
+    "reading": "Operating margin expanded from 22% (FY22) to 29% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 22.0
+     },
+     {
+      "x": "FY23",
+      "y": 23.0
+     },
+     {
+      "x": "FY24",
+      "y": 25.0
+     },
+     {
+      "x": "FY25",
+      "y": 29.0
+     },
+     {
+      "x": "FY26",
+      "y": 29.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 59,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 59% of net profit (weak).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.0,
+    "unit": "x equity",
+    "reading": "Borrowings ₹65 cr, 0.00× equity; up from ₹53 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 53.0
+     },
+     {
+      "x": "FY23",
+      "y": 61.0
+     },
+     {
+      "x": "FY24",
+      "y": 63.0
+     },
+     {
+      "x": "FY25",
+      "y": 61.0
+     },
+     {
+      "x": "FY26",
+      "y": 65.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 36.0,
+    "unit": "%",
+    "reading": "ROCE 36% in FY26 (from 27% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 27.0
+     },
+     {
+      "x": "FY23",
+      "y": 30.0
+     },
+     {
+      "x": "FY24",
+      "y": 35.0
+     },
+     {
+      "x": "FY25",
+      "y": 39.0
+     },
+     {
+      "x": "FY26",
+      "y": 36.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Management exceeded the FY26 EBITDA margin target of 27% by delivering a 29.2% margin.",
+    "refs": [
+     "BEL-1"
+    ]
+   },
+   {
+    "point": "Operating margins have consistently expanded from 22% in FY22 to 29% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "The company achieved a strong 36% ROCE in FY26, up from 27% in FY22.",
+    "refs": [
+     "returns"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Management failed to secure emergency procurement orders in Q3FY26 as originally promised.",
+    "refs": [
+     "BEL-16"
+    ]
+   },
+   {
+    "point": "The FY27 order inflow target was significantly lowered from ₹55,000 crore to ₹20,000 crore.",
+    "refs": [
+     "BEL-31"
+    ]
+   },
+   {
+    "point": "Operating cash flow has been weak, representing only 59% of net profit over the last five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ]
+ }
+}

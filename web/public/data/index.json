@@ -50,6 +50,304 @@
   }
  },
  {
+  "symbol": "BAJFINANCE",
+  "name": "Bajaj Finance",
+  "sector": "NBFC",
+  "size": "large",
+  "latest_call": "Oct 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 3,
+   "missed": 1,
+   "resolved": 4,
+   "moved": 4,
+   "quiet": 7,
+   "open": 26,
+   "by_status": {
+    "gone_quiet": 7,
+    "delivered": 3,
+    "missed": 1,
+    "open": 20,
+    "on_track": 4,
+    "behind": 1,
+    "delayed": 1
+   }
+  }
+ },
+ {
+  "symbol": "HDFCBANK",
+  "name": "HDFC Bank",
+  "sector": "Private bank",
+  "size": "large",
+  "latest_call": "Oct 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 0,
+   "missed": 0,
+   "resolved": 0,
+   "moved": 0,
+   "quiet": 2,
+   "open": 1,
+   "by_status": {
+    "gone_quiet": 2,
+    "open": 1
+   }
+  }
+ },
+ {
+  "symbol": "ETERNAL",
+  "name": "Eternal",
+  "sector": "Consumer internet",
+  "size": "large",
+  "latest_call": "Oct 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 1,
+   "missed": 0,
+   "resolved": 1,
+   "moved": 0,
+   "quiet": 1,
+   "open": 6,
+   "by_status": {
+    "beat": 1,
+    "gone_quiet": 1,
+    "tracking": 1,
+    "open": 5
+   }
+  }
+ },
+ {
+  "symbol": "DIXON",
+  "name": "Dixon Technologies",
+  "sector": "Electronics manufacturing",
+  "size": "mid",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 2,
+   "missed": 0,
+   "resolved": 2,
+   "moved": 8,
+   "quiet": 12,
+   "open": 34,
+   "by_status": {
+    "open": 22,
+    "gone_quiet": 12,
+    "on_track": 7,
+    "delayed": 4,
+    "delivered": 1,
+    "beat": 1,
+    "tracking": 1
+   }
+  }
+ },
+ {
+  "symbol": "ULTRACEMCO",
+  "name": "UltraTech Cement",
+  "sector": "Cement",
+  "size": "large",
+  "latest_call": "Oct 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 1,
+   "missed": 0,
+   "resolved": 1,
+   "moved": 4,
+   "quiet": 2,
+   "open": 18,
+   "by_status": {
+    "behind": 1,
+    "on_track": 5,
+    "open": 11,
+    "gone_quiet": 2,
+    "delayed": 1,
+    "delivered": 1
+   }
+  }
+ },
+ {
+  "symbol": "M&M",
+  "name": "Mahindra & Mahindra",
+  "sector": "Autos",
+  "size": "large",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 3,
+   "missed": 0,
+   "resolved": 3,
+   "moved": 4,
+   "quiet": 4,
+   "open": 25,
+   "by_status": {
+    "on_track": 4,
+    "beat": 3,
+    "open": 21,
+    "gone_quiet": 4
+   }
+  }
+ },
+ {
+  "symbol": "CIPLA",
+  "name": "Cipla",
+  "sector": "Pharma",
+  "size": "large",
+  "latest_call": "Jul 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 3,
+   "missed": 0,
+   "resolved": 3,
+   "moved": 2,
+   "quiet": 3,
+   "open": 7,
+   "by_status": {
+    "delivered": 3,
+    "open": 4,
+    "delayed": 1,
+    "gone_quiet": 3,
+    "behind": 1,
+    "on_track": 1
+   }
+  }
+ },
+ {
+  "symbol": "HINDUNILVR",
+  "name": "Hindustan Unilever",
+  "sector": "FMCG",
+  "size": "large",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 0,
+   "missed": 0,
+   "resolved": 0,
+   "moved": 1,
+   "quiet": 1,
+   "open": 3,
+   "by_status": {
+    "on_track": 1,
+    "gone_quiet": 1,
+    "tracking": 1,
+    "open": 1
+   }
+  }
+ },
+ {
+  "symbol": "TATAPOWER",
+  "name": "Tata Power",
+  "sector": "Power & renewables",
+  "size": "large",
+  "latest_call": "Jul 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 2,
+   "missed": 2,
+   "resolved": 4,
+   "moved": 5,
+   "quiet": 0,
+   "open": 16,
+   "by_status": {
+    "on_track": 2,
+    "open": 12,
+    "beat": 2,
+    "missed": 2,
+    "delayed": 2
+   }
+  }
+ },
+ {
+  "symbol": "BEL",
+  "name": "Bharat Electronics",
+  "sector": "Defence PSU",
+  "size": "large",
+  "latest_call": "Jul 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 2,
+   "missed": 1,
+   "resolved": 3,
+   "moved": 4,
+   "quiet": 4,
+   "open": 24,
+   "by_status": {
+    "gone_quiet": 4,
+    "beat": 1,
+    "delivered": 1,
+    "open": 18,
+    "on_track": 3,
+    "missed": 1,
+    "delayed": 1,
+    "tracking": 2
+   }
+  }
+ },
+ {
+  "symbol": "MAXHEALTH",
+  "name": "Max Healthcare",
+  "sector": "Hospitals",
+  "size": "mid",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 1,
+   "missed": 1,
+   "resolved": 2,
+   "moved": 9,
+   "quiet": 1,
+   "open": 21,
+   "by_status": {
+    "delivered": 1,
+    "delayed": 1,
+    "open": 17,
+    "on_track": 3,
+    "gone_quiet": 1,
+    "missed": 1
+   }
+  }
+ },
+ {
+  "symbol": "TRENT",
+  "name": "Trent",
+  "sector": "Retail",
+  "size": "large",
+  "latest_call": null,
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 0,
+   "missed": 0,
+   "resolved": 0,
+   "moved": 0,
+   "quiet": 0,
+   "open": 0,
+   "by_status": {}
+  }
+ },
+ {
+  "symbol": "TATASTEEL",
+  "name": "Tata Steel",
+  "sector": "Metals",
+  "size": "large",
+  "latest_call": "May 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 2,
+   "missed": 4,
+   "resolved": 6,
+   "moved": 6,
+   "quiet": 5,
+   "open": 18,
+   "by_status": {
+    "on_track": 7,
+    "beat": 2,
+    "gone_quiet": 5,
+    "open": 10,
+    "missed": 4,
+    "delayed": 1
+   }
+  }
+ },
+ {
   "symbol": "AARTIIND",
   "name": "Aarti Industries",
   "sector": "Specialty chemicals",
@@ -61,15 +359,62 @@
    "missed": 1,
    "resolved": 3,
    "moved": 6,
-   "quiet": 3,
-   "open": 11,
+   "quiet": 2,
+   "open": 12,
    "by_status": {
     "delivered": 2,
     "missed": 1,
     "delayed": 2,
-    "gone_quiet": 3,
-    "open": 8,
+    "gone_quiet": 2,
+    "open": 9,
     "tracking": 1
+   }
+  }
+ },
+ {
+  "symbol": "KAYNES",
+  "name": "Kaynes Technology",
+  "sector": "Electronics manufacturing",
+  "size": "mid",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 3,
+   "missed": 6,
+   "resolved": 9,
+   "moved": 0,
+   "quiet": 4,
+   "open": 16,
+   "by_status": {
+    "delivered": 2,
+    "missed": 6,
+    "gone_quiet": 4,
+    "open": 13,
+    "beat": 1,
+    "on_track": 2,
+    "tracking": 1
+   }
+  }
+ },
+ {
+  "symbol": "PRAJIND",
+  "name": "Praj Industries",
+  "sector": "Engineering",
+  "size": "small",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 1,
+   "missed": 1,
+   "resolved": 2,
+   "moved": 0,
+   "quiet": 3,
+   "open": 3,
+   "by_status": {
+    "delivered": 1,
+    "open": 3,
+    "gone_quiet": 3,
+    "missed": 1
    }
   }
  }

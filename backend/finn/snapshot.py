@@ -1,0 +1,163 @@
+"""A quick numbers snapshot from screener's tables, and a bull/bear case built only from
+it and the promise record.
+
+The snapshot is arithmetic on reported numbers with a plain-English reading written by
+code. The case is the one place a model writes prose about a company, so it's fenced in:
+it sees only the record and these numbers, and every point must cite one of them or it
+is dropped.
+"""
+
+import re
+
+from finn import config
+from finn.llm.client import complete_json
+from finn.sources import screener
+
+LENDER_ROWS = ("Financing Profit", "Financing Margin %")
+
+
+def _ranges(page) -> dict[str, dict[str, float]]:
+    out = {}
+    for t in page.select("table.ranges-table"):
+        cells = [c.get_text(" ", strip=True) for c in t.select("th, td")]
+        if not cells:
+            continue
+        vals = {}
+        for k, v in zip(cells[1::2], cells[2::2]):
+            m = re.match(r"(-?\d+(?:\.\d+)?)%", v)
+            if m:
+                vals[k.rstrip(":")] = float(m.group(1))
+        out[cells[0]] = vals
+    return out
+
+
+def _years(row: dict[str, float | None], n: int = 5) -> list[tuple[str, float]]:
+    """Last n fiscal years (Mar columns), oldest first, as ('FY26', value)."""
+    pts = [(f"FY{c[-2:]}", v) for c, v in row.items() if c.startswith("Mar ") and v is not None]
+    return pts[-n:]
+
+
+def build(slug: str) -> dict:
+    page = screener.company_page(slug)
+    pl = screener.table(page, "profit-loss")
+    cf = screener.table(page, "cash-flow")
+    bs = screener.table(page, "balance-sheet")
+    ratios = screener.table(page, "ratios")
+    rng = _ranges(page)
+    lender = any(r in pl for r in LENDER_ROWS)
+    snap: dict = {"lender": lender, "metrics": []}
+
+    def add(key, label, value, unit, reading, series=None):
+        snap["metrics"].append({"key": key, "label": label, "value": value, "unit": unit,
+                                "reading": reading, "series": series or []})
+
+    # Trajectory
+    sales, profit = rng.get("Compounded Sales Growth", {}), rng.get("Compounded Profit Growth", {})
+    if sales.get("5 Years") is not None:
+        s5, s3, st = sales.get("5 Years"), sales.get("3 Years"), sales.get("TTM")
+        trend = "accelerating" if s3 is not None and s3 > s5 + 2 else "slowing" if s3 is not None and s3 < s5 - 2 else "steady"
+        add("sales_growth", "Revenue growth", s5, "% CAGR 5y",
+            f"Revenue compounded {s5:g}% a year over 5 years, {s3:g}% over 3 ({trend}); last 12 months {st:g}%.")
+    if profit.get("5 Years") is not None:
+        p5, p3, pt = profit.get("5 Years"), profit.get("3 Years"), profit.get("TTM")
+        add("profit_growth", "Profit growth", p5, "% CAGR 5y",
+            f"Profit compounded {p5:g}% a year over 5 years, {p3:g}% over 3; last 12 months {pt:g}%.")
+
+    # Margins. Screener's "Financing Margin %" for lenders is after provisions and swings
+    # negative; it isn't what an investor means by a bank's margin, so lenders skip this.
+    mrow = None if lender else pl.get("OPM %")
+    if mrow:
+        ys = _years(mrow)
+        if len(ys) >= 2:
+            first, last = ys[0][1], ys[-1][1]
+            move = last - first
+            word = "expanded" if move > 1 else "compressed" if move < -1 else "held"
+            name = "Financing margin" if lender else "Operating margin"
+            add("margin", name, last, "%", f"{name} {word} from {first:g}% ({ys[0][0]}) to {last:g}% ({ys[-1][0]}).",
+                [{"x": x, "y": y} for x, y in ys])
+
+    # Cash conversion: how much of reported profit arrived as operating cash (non-lenders)
+    cfo, np_ = cf.get("Cash from Operating Activity"), pl.get("Net Profit")
+    if not lender and cfo and np_:
+        c5, n5 = [v for _, v in _years(cfo)], [v for _, v in _years(np_)]
+        if len(c5) == len(n5) and n5 and sum(n5) > 0:
+            ratio = sum(c5) / sum(n5) * 100
+            word = "strong" if ratio >= 90 else "adequate" if ratio >= 70 else "weak"
+            add("cash_conversion", "Cash conversion", round(ratio), "% of profit, 5y",
+                f"Over 5 years, operating cash flow was {ratio:.0f}% of net profit ({word}).")
+
+    # Debt
+    eq, res, bor = bs.get("Equity Capital"), bs.get("Reserves"), bs.get("Borrowings")
+    if not lender and bor and res:
+        ys = _years(bor)
+        e_last = (_years(eq)[-1][1] if eq else 0) + _years(res)[-1][1]
+        if ys and e_last:
+            de = ys[-1][1] / e_last
+            prev = ys[0][1]
+            dir_ = "up" if ys[-1][1] > prev * 1.1 else "down" if ys[-1][1] < prev * 0.9 else "flat"
+            add("debt", "Debt", round(de, 2), "x equity",
+                f"Borrowings ₹{ys[-1][1]:,.0f} cr, {de:.2f}× equity; {dir_} from ₹{prev:,.0f} cr in {ys[0][0]}.",
+                [{"x": x, "y": y} for x, y in ys])
+    elif lender:
+        add("debt", "Debt", None, "", "A lender borrows to lend, so debt-to-equity isn't a risk signal here; see return on equity.")
+
+    # Returns
+    rrow = ratios.get("ROCE %") or ratios.get("ROE %")
+    if rrow:
+        ys = _years(rrow)
+        if ys:
+            name = "ROCE" if "ROCE %" in ratios else "ROE"
+            add("returns", name, ys[-1][1], "%",
+                f"{name} {ys[-1][1]:g}% in {ys[-1][0]} (from {ys[0][1]:g}% in {ys[0][0]}).",
+                [{"x": x, "y": y} for x, y in ys])
+    return snap
+
+
+# ---- bull / bear -------------------------------------------------------------------
+
+CASE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        side: {"type": "array", "items": {"type": "object", "properties": {
+            "point": {"type": "string", "description": "One sentence, at most 25 words, concrete, with the number"},
+            "refs": {"type": "array", "items": {"type": "string"}, "description": "Promise ids (e.g. LT-3) or metric keys used"},
+        }, "required": ["point", "refs"]}}
+        for side in ("bull", "bear")
+    },
+    "required": ["bull", "bear"],
+}
+
+CASE_SYSTEM = """Write a tight bull case and bear case for an investor, using ONLY the promise record and numbers given.
+- 2 or 3 points each side. Each point is one concrete sentence with the relevant number.
+- Every point must cite in refs the promise ids and/or metric keys it rests on. No outside knowledge, no news, no industry claims.
+- The promise record is evidence about management credibility: kept promises and raised guidance support the bull case; misses, cuts, delays and promises gone quiet support the bear case.
+- If the evidence for a side is thin, give fewer points rather than inventing."""
+
+
+def case(company: str, ledger: dict, snap: dict) -> dict:
+    threads = [t for t in ledger.get("threads", []) if t["kind"] != "soft"]
+    lines = []
+    for t in threads[:40]:
+        bits = [t["id"], t["title"], f"target {t['target']}" if t["target"] else "", t["period"], t["status"]]
+        if t.get("detail"):
+            bits.append(t["detail"])
+        if t.get("pace"):
+            p = t["pace"]
+            bits.append(f"{p['so_far_label']} at {p['so_far']:.1f} ({p['status']})")
+        moves = [f"{e['type']} {e['from']}→{e['to']}" for e in t["events"] if e["type"] != "reaffirmed"]
+        if moves:
+            bits.append("moves: " + ", ".join(moves))
+        lines.append(" | ".join(b for b in bits if b))
+    metrics = [f"{m['key']} | {m['label']}: {m['reading']}" for m in snap["metrics"]]
+    if not lines and not metrics:
+        return {"bull": [], "bear": []}
+    prompt = (f"Company: {company}\n\nPROMISE RECORD (id | promise | target | period | status | detail):\n"
+              + ("\n".join(lines) or "none (no earnings calls)")
+              + "\n\nNUMBERS (key | reading):\n" + "\n".join(metrics))
+    out = complete_json(CASE_SYSTEM, prompt, CASE_SCHEMA, model=config.MODEL_STRONG, fallback=config.MODEL_CHEAP)
+    valid = {t["id"] for t in threads} | {m["key"] for m in snap["metrics"]}
+    clean = {}
+    for side in ("bull", "bear"):
+        clean[side] = [{"point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
+                       for p in out.get(side, []) if any(r in valid for r in p["refs"])][:3]
+    return clean

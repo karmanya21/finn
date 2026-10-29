@@ -1,0 +1,1441 @@
+{
+ "symbol": "ULTRACEMCO",
+ "name": "UltraTech Cement",
+ "sector": "Cement",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Oct 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 23295.0,
+    "qoq": -5.489289191820834,
+    "yoy": 18.80960881317897
+   },
+   {
+    "label": "EBITDA",
+    "value": 3719.0,
+    "qoq": -25.84247258225324,
+    "yoy": 20.39494982194885
+   },
+   {
+    "label": "PBT",
+    "value": 2059.0,
+    "qoq": -40.833333333333336,
+    "yoy": 24.33574879227054
+   },
+   {
+    "label": "PAT",
+    "value": 1501.0,
+    "qoq": -42.357910906298,
+    "yoy": 21.243941841680126
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "Jul 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf",
+   "promises": 8
+  },
+  {
+   "call": "Oct 2025",
+   "quarter": "Q2FY26",
+   "url": null,
+   "promises": 17
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf",
+   "promises": 10
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf",
+   "promises": 8
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf",
+   "promises": 9
+  },
+  {
+   "call": "Oct 2026",
+   "quarter": "Q2FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf",
+   "promises": 7
+  }
+ ],
+ "record": {
+  "kept": 1,
+  "missed": 0,
+  "resolved": 1,
+  "moved": 4,
+  "quiet": 2,
+  "open": 18,
+  "by_status": {
+   "behind": 1,
+   "on_track": 5,
+   "open": 11,
+   "gone_quiet": 2,
+   "delayed": 1,
+   "delivered": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "ULTRACEMCO-0",
+   "title": "India Cements EBITDA per metric ton",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "India Cements",
+   "basis": "management",
+   "period": "FY28",
+   "target": "≥1,000 Rs per ton",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "≥₹1,000 cr",
+     "to": "1,000 Rs per ton",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "1,000 Rs per ton",
+     "to": "≥1,000 Rs per ton",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "behind",
+   "detail": "India Cements EBITDA per ton reached INR603 in Q1FY27",
+   "evidence": {
+    "quote": "The direction of travel is unmistakable and the destination is unchanged, and EBITDA of INR1,000 per ton for India Cements remains very much in sight with the full benefit of the capex program flowing through the P&L from Q4 fiscal '28.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "we are confident of reaching an EBITDA per metric ton in excess of INR1,000 by FY'28.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "≥₹1,000 cr",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "by the time the expansions are fully operational, the ICL assets will start generating EBITDA per ton of INR1,000 and a net debt EBITDA of around 0.5x.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "1,000 Rs per ton",
+     "period": "FY28",
+     "deadline": "2028-03-31",
+     "condition": "expansions fully operational",
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "this definitely is going to take us over INR1,000 per ton, as committed by the end of fiscal '28.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "≥1,000 Rs per ton",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-1",
+   "title": "Brand transition program",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "acquired assets",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Brand transition for ICL and Kesoram completed a quarter early",
+   "evidence": {
+    "quote": "We said we would complete brand transition for ICL and Kesoram, we did and a quarter early.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "we should be able to conclude the brand transition program before the end of fiscal '27 next year, we should be able to compete 100%.",
+     "speaker": "Atul Daga",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We are expecting to complete the brand transition for these acquired assets, not later than June '26.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "2026-06-30",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-2",
+   "title": "Revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "≥10%",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "≥10%",
+     "to": "≥10%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Revenue growth of 21% in Q1 FY27",
+   "evidence": {
+    "quote": "if you look at net of freight cost, since we have started reporting ex-factory sales from Q1 '27, knocking off the freight costs, the revenues were INR993 crores as compared to INR821 crores on a like-for- like basis, which is a 21% growth in revenues, backed by a 19% growth in their volumes.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "pace": {
+    "so_far": 17.271659899222147,
+    "so_far_label": "H1 FY27",
+    "needs": 3.758424489281742,
+    "needs_label": "H2 FY27",
+    "needs_for": 10,
+    "status": "on_pace",
+    "measure": "revenue growth"
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "But on the base of FY '25, we'll do a double-digit growth, definitely.",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "≥10%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Next financial year. We would target double-digit growth.",
+     "speaker": "Atul Daga",
+     "page": 16,
+     "target": "≥10%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-3",
+   "title": "Annual capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹10,000 cr",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "≤₹1,800 cr",
+     "to": "≥₹10,000 cr",
+     "type": "raised"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "≥₹10,000 cr",
+     "to": "₹9,500–10,000 cr",
+     "type": "lowered"
+    },
+    {
+     "call": "May 2026",
+     "from": "₹9,500–10,000 cr",
+     "to": "₹8,000–10,000 cr",
+     "type": "lowered"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "₹8,000–10,000 cr",
+     "to": "₹10,000 cr",
+     "type": "raised"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "We'll remain within our capex plan of INR1,800 crores, we might have some savings only on that capex plan.",
+     "speaker": "Atul Daga",
+     "page": 12,
+     "target": "≤₹1,800 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "I will have about INR10,000 crores minimum per year, outgo.",
+     "speaker": "Atul Daga",
+     "page": 13,
+     "target": "≥₹10,000 cr",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "INR7,000 crores to INR7,200 crores is 9 months and yes INR2,000 crores to INR2,500 crores will get spent in this quarter. So anywhere around INR9,500 crores, INR10,000 crores.",
+     "speaker": "Atul Daga",
+     "page": 15,
+     "target": "₹9,500–10,000 cr",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We see a plan of investing around INR8,000 crores to INR10,000 crores every year for the foreseeable future.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "₹8,000–10,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "I will still stick to INR10,000, but it will be better to look at a full year number after the Q3 results. Plus minus INR10,000 crores.",
+     "speaker": "Atul Daga",
+     "page": 8,
+     "target": "₹10,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-4",
+   "title": "Next phase of organic growth announcement",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jul 2025)",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "before the end of this calendar or worst case, before the end of this financial year, we will come back with the next phase of organic growth.",
+     "speaker": "Atul Daga",
+     "page": 7,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-5",
+   "title": "Average cost of borrowing",
+   "kind": "directional",
+   "metric": "debt",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Borrowings ₹24,102 cr → ₹23,755 cr",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "My average cost of borrowing would be 7%. For the previous quarter was 7%. This 7% will come down with the rate cut",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "rate cut",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-6",
+   "title": "ICL P&L benefits from capex",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "India Cements",
+   "basis": "management",
+   "period": "Q1FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delayed",
+   "detail": "Full benefit of capex flowing through P&L from Q4 fiscal '28",
+   "evidence": {
+    "quote": "The direction of travel is unmistakable and the destination is unchanged, and EBITDA of INR1,000 per ton for India Cements remains very much in sight with the full benefit of the capex program flowing through the P&L from Q4 fiscal '28.",
+    "call": "Jul 2026",
+    "new_deadline": "Q4FY28"
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "first quarter of '28, April, June '27, you will start seeing the benefits in the P&L of ICL.",
+     "speaker": "Atul Daga",
+     "page": 14,
+     "target": "",
+     "period": "Q1FY28",
+     "deadline": "Q1FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=562742ca-eb96-4dfb-83eb-ea414a04f1bf.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-7",
+   "title": "Cement capacity",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "240 MTPA",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "200 MTPA",
+     "to": "242 MTPA",
+     "type": "raised"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "242 MTPA",
+     "to": "213 MTPA",
+     "type": "lowered"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "213 MTPA",
+     "to": "240 MTPA",
+     "type": "raised"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "we will complete or exit this financial year with 200 million tons of capacity under our belt.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "200 MTPA",
+     "period": "FY26",
+     "deadline": "2026-03-31",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We have committed to add a further 37 million tons, which will take us over 242.5 million tons in a phased manner by fiscal '28.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "242 MTPA",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "We'll take our consolidated capacity beyond 242 million tons with grey cement capacity to reach 212.7 million tons by the end of fiscal '27",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "213 MTPA",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "We are on track to reach 240 million tons of capacity as planned without any surprises.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "240 MTPA",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-8",
+   "title": "Clinker capacity",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "148 MTPA",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "At the end of this expansion, we will be reaching 148 million tons of clinker capacity with a clinker conversion factor reaching close to 1.6x.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "148 MTPA",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-9",
+   "title": "Net debt to EBITDA",
+   "kind": "hard",
+   "metric": "debt",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "≤1 x",
+   "direction": "down",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "≤0.7 x",
+     "to": "0.8–0.9 x",
+     "type": "raised"
+    },
+    {
+     "call": "May 2026",
+     "from": "0.8–0.9 x",
+     "to": "≤1 x",
+     "type": "raised"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "≤1 x",
+     "to": "≤1 x",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "by the time we complete our expansion, we will be again less than 0.7x net debt EBITDA.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "≤0.7 x",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": "completion of expansion",
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "I believe and I'm very confident that we'll reach the mark of 1x and be in 0.8, 0.9x net debt EBITDA by the end of this fiscal year.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "0.8–0.9 x",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We'll maintain our leverage below 1x year after year after meeting our growth capex.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "≤1 x",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "But by the end of March, I will be below 1x net debt to EBITDA.",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "≤1 x",
+     "period": "FY27",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-10",
+   "title": "Cables and wires production launch",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q3FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Wires and Cables business launched September 2026",
+   "evidence": {
+    "quote": "On 3rd September this year, we launched our Wires and Cables business under the brand Ultravolt.",
+    "call": "Oct 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "The business is on track to launch production in Q3 CY '26.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "2026-12-31",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "we are on schedule to see the launch of our product in the October-December '26 quarter as was committed earlier.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "We reaffirm commissioning and product launch in Q3 fiscal '27, October - December '26 quarter, precisely as committed to you when we announced this investment.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-11",
+   "title": "Cost reduction per ton",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "100 Rs per ton",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "100 Rs per ton",
+     "to": "100 Rs per ton",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "At least ballpark INR100 will come down.",
+     "speaker": "Atul Daga",
+     "page": 6,
+     "target": "100 Rs per ton",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "My guess is we should be crossing INR100 mark on those efficiency improvement programs in this financial year.",
+     "speaker": "Atul Daga",
+     "page": 7,
+     "target": "100 Rs per ton",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-12",
+   "title": "Capacity market share",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "32–33%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We are confident that our capacity share, which today stands at 28% will go up to 32%-33%",
+     "speaker": "Atul Daga",
+     "page": 8,
+     "target": "32–33%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-13",
+   "title": "Green power mix",
+   "kind": "soft",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "2.5–3 GW",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "65%",
+     "to": "60%",
+     "type": "lowered"
+    },
+    {
+     "call": "May 2026",
+     "from": "60%",
+     "to": "85%",
+     "type": "raised"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "85%",
+     "to": "2.5–3 GW",
+     "type": "lowered"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We will reach about 65% of green power by the end of our current phase of growth.",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "65%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "our renewal energy has gone to almost 41% kind of thing, and it is further likely to go to 60% going forward actually.",
+     "speaker": "K.C. Jhanwar",
+     "page": 7,
+     "target": "60%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We have committed to reach about 85% of our power requirements from green energy by the end of fiscal 2030",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "85%",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "We believe we will reach anywhere between 2.5 to 3 gigawatts very shortly.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "2.5–3 GW",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-14",
+   "title": "EBITDA per ton (Kesoram)",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "Kesoram assets",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "1,000–1,200 Rs per ton",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Kesoram operating at INR1,000-plus EBITDA per ton by Q4 FY26",
+   "evidence": {
+    "quote": "So Kesoram, if I look at January, March quarter, it was already operating at INR1,000-plus EBITDA per ton.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "once we are completing our brand transition in Kesoram, it should be operating at -- because again, the Kesoram asset while it's in South, but services Mumbai market. The 9-million-ton plant, Sedam plant is closer to the Maharashtra market, so it should enjoy the profitability of the Western markets. Once WHRS and everything is implemented, we will be crossing INR1,000, INR1,100, INR1,200 mark by the end of June '26.",
+     "speaker": "Atul Daga",
+     "page": 10,
+     "target": "1,000–1,200 Rs per ton",
+     "period": "Q1FY27",
+     "deadline": "2026-06-30",
+     "condition": "WHRS implementation and brand transition completion",
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-15",
+   "title": "Market share",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Growth of 13.8% in quarter ahead of industry",
+   "evidence": {
+    "quote": "Our growth of 13.8% this quarter is comfortably ahead, which means that our presence in the market is continuously increasing.",
+    "call": "Oct 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "UltraTech will continue to gain market share.",
+     "speaker": "Atul Daga",
+     "page": 8,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-16",
+   "title": "All-India cement demand growth",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "9–10%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Industry estimates put cement demand to grow closer to 10%",
+   "evidence": {
+    "quote": "Industry estimates put cement demand to grow closer to 10% year-on-year.",
+    "call": "Oct 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Don't hold me to it, but we would expect anywhere between 9% to 10% all-India demand.",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "9–10%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-17",
+   "title": "Asset divestment proceeds",
+   "kind": "hard",
+   "metric": "cash_flow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹500 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "I would expect further generation of up to INR500 crores minimum, which we should be able to get.",
+     "speaker": "Atul Daga",
+     "page": 9,
+     "target": "₹500 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-18",
+   "title": "Long-term demand growth",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "7–8%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "And for next 4, 5 years, normally what we guided in corporate 7% to 8%. So that number remains intact.",
+     "speaker": "Atul Daga",
+     "page": 15,
+     "target": "7–8%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-19",
+   "title": "Volume growth",
+   "kind": "hard",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "≥10%",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "7–8%",
+     "to": "≥10%",
+     "type": "raised"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Volume growth of 13.8% vs double-digit target",
+   "evidence": {
+    "quote": "Our growth of 13.8% this quarter is comfortably ahead, which means that our presence in the market is continuously increasing.",
+    "call": "Oct 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect a sustainable volume growth of 7% to 8% per annum.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "7–8%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Yes, we are targeting double-digit volume growth this year.",
+     "speaker": "Atul Daga",
+     "page": 16,
+     "target": "≥10%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-20",
+   "title": "Clinker factor",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "1.54 x",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "1.54x is our target to reach by fiscal '28.",
+     "speaker": "Atul Daga",
+     "page": 14,
+     "target": "1.54 x",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-21",
+   "title": "Non-core asset disposal",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "There are some non-core assets in terms of land, which we need to dispose of. So Q4 '28 or maybe a quarter earlier, we expect to complete our journey.",
+     "speaker": "Atul Daga",
+     "page": 7,
+     "target": "",
+     "period": "Q4FY28",
+     "deadline": "Q4FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-22",
+   "title": "Cost environment",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Once the war is out of the way, things should stabilize and H2 hopefully, God willing, should be a better place in terms of cost.",
+     "speaker": "Atul Daga",
+     "page": 16,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": "Once the war is out of the way",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-23",
+   "title": "Ultravolt capex",
+   "kind": "milestone",
+   "metric": "capex",
+   "scope": "Ultravolt",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "₹700 cr",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "The investment of INR1,800 crores, which has been planned, we have spent around INR1,100 crores till date and the balance will get spent in the next maybe 2 quarters.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "₹700 cr",
+     "period": "Q4FY27",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-24",
+   "title": "India Cements performance",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "India Cements",
+   "basis": null,
+   "period": "Q4FY28",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "which will result into, as promised and committed into the fiscal '28 January-March '28 quarter to be a fabulous quarter for India Cements.",
+     "speaker": "Atul Daga",
+     "page": 14,
+     "target": "",
+     "period": "Q4FY28",
+     "deadline": "Q4FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-25",
+   "title": "Store network",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY29",
+   "target": "10,000",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "We will not stop before 10,000 stores, which should happen in the next 3 years which is 28-29, we should be reaching about 10,000 stores.",
+     "speaker": "Atul Daga",
+     "page": 16,
+     "target": "10,000",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 15.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 15% a year over 5 years, 12% over 3 (slowing); last 12 months 17%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 8.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 8% a year over 5 years, 17% over 3; last 12 months 21%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 19.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 22% (FY22) to 19% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 22.0
+     },
+     {
+      "x": "FY23",
+      "y": 17.0
+     },
+     {
+      "x": "FY24",
+      "y": 18.0
+     },
+     {
+      "x": "FY25",
+      "y": 17.0
+     },
+     {
+      "x": "FY26",
+      "y": 19.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 164,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 164% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.31,
+    "unit": "x equity",
+    "reading": "Borrowings ₹23,755 cr, 0.31× equity; up from ₹11,299 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 11299.0
+     },
+     {
+      "x": "FY23",
+      "y": 11058.0
+     },
+     {
+      "x": "FY24",
+      "y": 11403.0
+     },
+     {
+      "x": "FY25",
+      "y": 24102.0
+     },
+     {
+      "x": "FY26",
+      "y": 23755.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 13.0,
+    "unit": "%",
+    "reading": "ROCE 13% in FY26 (from 14% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 14.0
+     },
+     {
+      "x": "FY23",
+      "y": 13.0
+     },
+     {
+      "x": "FY24",
+      "y": 15.0
+     },
+     {
+      "x": "FY25",
+      "y": 11.0
+     },
+     {
+      "x": "FY26",
+      "y": 13.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Revenue growth is currently tracking at 21% for Q1 FY27, exceeding the annual target of 10%.",
+    "refs": [
+     "ULTRACEMCO-2",
+     "sales_growth"
+    ]
+   },
+   {
+    "point": "Volume growth of 13.8% is outpacing the company's own double-digit target for FY27.",
+    "refs": [
+     "ULTRACEMCO-19",
+     "ULTRACEMCO-15"
+    ]
+   },
+   {
+    "point": "Management successfully delivered on the Wires and Cables business launch and reduced total borrowings to ₹23,755 cr.",
+    "refs": [
+     "ULTRACEMCO-10",
+     "ULTRACEMCO-5"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "India Cements EBITDA per ton is currently at INR603, significantly trailing the FY28 target of ≥1,000 Rs.",
+    "refs": [
+     "ULTRACEMCO-0"
+    ]
+   },
+   {
+    "point": "Management has gone quiet on the organic growth announcement and the 100 Rs per ton cost reduction target.",
+    "refs": [
+     "ULTRACEMCO-4",
+     "ULTRACEMCO-11"
+    ]
+   },
+   {
+    "point": "Operating margins have compressed from 22% in FY22 to 19% in FY26, while ROCE declined to 13%.",
+    "refs": [
+     "margin",
+     "returns"
+    ]
+   }
+  ]
+ }
+}

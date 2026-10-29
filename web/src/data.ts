@@ -82,9 +82,17 @@ export interface Headline {
   rows: { label: string; value: number; qoq: number | null; yoy: number | null }[];
 }
 
+export interface Metric {
+  key: string; label: string; value: number | null; unit: string; reading: string;
+  series: { x: string; y: number }[];
+}
+export interface CasePoint { point: string; refs: string[] }
+
 export interface Ledger extends CompanySummary {
   built: string;
   headline: Headline | null;
+  snapshot?: { lender: boolean; metrics: Metric[] };
+  case?: { bull: CasePoint[]; bear: CasePoint[] };
   calls: { call: string; quarter: string; url: string | null; promises: number }[];
   threads: Thread[];
 }
@@ -232,4 +240,86 @@ export function feed(ledgers: Ledger[]): FeedItem[] {
     if (!prev || i.weight > prev.weight) best.set(i.thread.id, i);
   }
   return [...best.values()].sort((a, b) => b.weight - a.weight);
+}
+
+// ---- push: filings digest ---------------------------------------------------------
+
+export interface Person {
+  name: string; role: string;
+  change: "appointed" | "resigned" | "retired" | "ceased" | "redesignated";
+  effective: string | null; profile: string | null;
+  promises: string[]; // thread ids this person stated, when they're leaving
+}
+
+export interface Filing {
+  id: string; symbol: string; name: string; at: string;
+  type: string; label: string; subject: string; headline: string; pdf: string | null;
+  summary: string | null; people: Person[]; promises: string[];
+  numbers: Headline | null; importance: number; routine: boolean;
+  also?: { label: string; pdf: string }[]; // other documents filed with the same results
+}
+
+export interface Digest { built: string; days: number; items: Filing[] }
+export const loadDigest = () => get<Digest>("/data/filings.json");
+
+// ---- push: prices and alerts --------------------------------------------------------
+
+export interface Prices { built: string; source: string; series: { [sym: string]: [string, number, number][] } }
+export const loadPrices = () => get<Prices>("/data/prices.json");
+
+export interface AlertSettings {
+  volume: number;   // alert when volume >= this multiple of its 20-day average
+  move: number;     // alert when |daily move| >= this %
+  types: string[];  // filing categories that alert
+}
+export const DEFAULT_SETTINGS: AlertSettings = {
+  volume: 2, move: 5, types: ["results", "M&A", "management_change", "litigation", "fund_raise", "credit_rating"],
+};
+export const ALERT_TYPES: [string, string][] = [
+  ["results", "Results"], ["M&A", "M&A"], ["management_change", "Management change"],
+  ["litigation", "Litigation"], ["fund_raise", "Fund raise"], ["credit_rating", "Credit rating"],
+  ["capex", "Capex"], ["pledging", "Pledging"], ["insider_trading", "Insider trades"], ["dividend", "Dividend"],
+];
+
+const SETTINGS_KEY = "finn.alerts.v1";
+export function readSettings(): AlertSettings {
+  try { return { ...DEFAULT_SETTINGS, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}") }; }
+  catch { return DEFAULT_SETTINGS; }
+}
+export function saveSettings(s: AlertSettings) {
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); } catch { /* private mode */ }
+}
+
+export interface MoveAlert {
+  kind: "move"; symbol: string; date: string; close: number;
+  pct: number; volRatio: number; byPrice: boolean; byVolume: boolean;
+  reason?: Filing; // a material filing that day or the day before
+}
+
+/** End-of-day alerts over the last `days` trading days, judged against the user's thresholds. */
+export function moveAlerts(p: Prices, s: AlertSettings, days: number, filings: Filing[]): MoveAlert[] {
+  const out: MoveAlert[] = [];
+  for (const [sym, rows] of Object.entries(p.series)) {
+    for (let i = Math.max(21, rows.length - days); i < rows.length; i++) {
+      const [date, close, vol] = rows[i];
+      const prev = rows[i - 1][1];
+      const avg = rows.slice(i - 20, i).reduce((a, r) => a + r[2], 0) / 20;
+      const pct = (close / prev - 1) * 100;
+      const volRatio = avg ? vol / avg : 0;
+      const byPrice = Math.abs(pct) >= s.move, byVolume = volRatio >= s.volume;
+      if (!byPrice && !byVolume) continue;
+      const prevDate = rows[i - 1][0];
+      const reason = filings
+        .filter((f) => f.symbol === sym && !f.routine && f.at.slice(0, 10) <= date && f.at.slice(0, 10) >= prevDate)
+        .sort((a, b) => b.importance - a.importance)[0];
+      out.push({ kind: "move", symbol: sym, date, close, pct, volRatio, byPrice, byVolume, reason });
+    }
+  }
+  return out.sort((a, b) => b.date.localeCompare(a.date) || Math.abs(b.pct) - Math.abs(a.pct));
+}
+
+/** Filings within the last `hours` of the digest's build time. */
+export function inWindow(d: Digest, hours: number): Filing[] {
+  const end = new Date(d.built).getTime();
+  return d.items.filter((f) => end - new Date(f.at).getTime() <= hours * 3600_000);
 }

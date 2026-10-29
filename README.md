@@ -39,3 +39,5 @@ Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction a
 Verdicts say where they come from: **reported financials** (screener consolidated) or **per management** (their own later words, not independently verified). Constant-currency guidance is never checked against rupee numbers.
 
 Every model response is cached by prompt hash, so re-runs are free.
+
+**Free-tier budget.** Gemini's free allowance is counted per model per day (in Oct 2026: 500 requests for 3.5 Flash-Lite, 20 for 3.5 Flash). The client walks a chain (preferred model → fallback → cheap pool), skips a model for 10 minutes when it's overloaded or hanging, and skips it until Google's reset when its daily allowance is used up (remembered in `data/cache/exhausted.json`, shared by the pipeline and the API server). Building all 22 companies plus a 30-day filings digest takes roughly 600 requests, so it spans two Flash-Lite models.

@@ -335,6 +335,9 @@ def verdict(stmts: list[dict], events: list[dict], fin: Financials, n_calls: int
     if ended and silent_calls >= 1:
         return {"status": quiet, "basis": None,
                 "detail": f"Period ended; no update in later calls (last said {p['call']})"}
-    if silent_calls >= 2:
-        return {"status": quiet, "basis": None, "detail": f"Not mentioned since {p['call']}"}
+    # Dropped: repeated, then dropped. A one-off remark that hasn't come due yet stays open;
+    # it may simply be restated in other words, and silence isn't a verdict until it's due.
+    if silent_calls >= 2 and len(stmts) >= 2:
+        return {"status": quiet, "basis": None,
+                "detail": f"Said {len(stmts)} times, then not mentioned since {p['call']}"}
     return {"status": "open", "basis": None}

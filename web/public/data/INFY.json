@@ -452,7 +452,7 @@
     }
    ],
    "status": "lapsed",
-   "detail": "Not mentioned since Apr 2026",
+   "detail": "Said 2 times, then not mentioned since Apr 2026",
    "statements": [
     {
      "call": "Feb 2026",
@@ -492,8 +492,7 @@
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since Feb 2026",
+   "status": "open",
    "statements": [
     {
      "call": "Feb 2026",
@@ -932,5 +931,167 @@
     }
    ]
   }
- ]
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 12.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 12% a year over 5 years, 7% over 3 (slowing); last 12 months 12%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 9.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 9% a year over 5 years, 8% over 3; last 12 months 12%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 24.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 26% (FY22) to 24% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 26.0
+     },
+     {
+      "x": "FY23",
+      "y": 24.0
+     },
+     {
+      "x": "FY24",
+      "y": 24.0
+     },
+     {
+      "x": "FY25",
+      "y": 24.0
+     },
+     {
+      "x": "FY26",
+      "y": 24.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 110,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 110% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.1,
+    "unit": "x equity",
+    "reading": "Borrowings ₹9,176 cr, 0.10× equity; up from ₹5,474 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 5474.0
+     },
+     {
+      "x": "FY23",
+      "y": 8299.0
+     },
+     {
+      "x": "FY24",
+      "y": 8359.0
+     },
+     {
+      "x": "FY25",
+      "y": 8227.0
+     },
+     {
+      "x": "FY26",
+      "y": 9176.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 40.0,
+    "unit": "%",
+    "reading": "ROCE 40% in FY26 (from 37% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 37.0
+     },
+     {
+      "x": "FY23",
+      "y": 40.0
+     },
+     {
+      "x": "FY24",
+      "y": 40.0
+     },
+     {
+      "x": "FY25",
+      "y": 38.0
+     },
+     {
+      "x": "FY26",
+      "y": 40.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Management successfully delivered on FY26 operating margin targets of 20-22% and completed the planned buyback.",
+    "refs": [
+     "INFY-1",
+     "INFY-3"
+    ]
+   },
+   {
+    "point": "The company maintains strong capital efficiency with a 40% ROCE in FY26 and cash flow at 110% of net profit over five years.",
+    "refs": [
+     "returns",
+     "cash_conversion"
+    ]
+   },
+   {
+    "point": "Operational execution remains on track with H1 FY27 operating margins at 21.0% and onsite mix reduction progressing at 0.7%.",
+    "refs": [
+     "INFY-11",
+     "INFY-15"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Revenue growth guidance has been repeatedly lowered from 1.5-3.5% down to 1-2% for FY27.",
+    "refs": [
+     "INFY-10"
+    ]
+   },
+   {
+    "point": "Operating margins have compressed significantly from 26% in FY22 to 24% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "Management failed to provide updates on the 20,000 fresh hiring target and the Telstra JV transaction remains delayed.",
+    "refs": [
+     "INFY-2",
+     "INFY-4"
+    ]
+   }
+  ]
+ }
 }

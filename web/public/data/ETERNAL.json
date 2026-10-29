@@ -1,0 +1,655 @@
+{
+ "symbol": "ETERNAL",
+ "name": "Eternal",
+ "sector": "Consumer internet",
+ "size": "large",
+ "built": "2026-10-29",
+ "latest_call": "Oct 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 24138.0,
+    "qoq": 19.430013359061892,
+    "yoy": 77.6158940397351
+   },
+   {
+    "label": "EBITDA",
+    "value": 752.0,
+    "qoq": 26.599326599326602,
+    "yoy": 214.64435146443518
+   },
+   {
+    "label": "PBT",
+    "value": 323.0,
+    "qoq": 18.75,
+    "yoy": 150.3875968992248
+   },
+   {
+    "label": "PAT",
+    "value": 125.0,
+    "qoq": 35.86956521739131,
+    "yoy": 92.3076923076923
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "Jul 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a528517-1eca-4556-8423-87220bf57373.pdf",
+   "promises": 0
+  },
+  {
+   "call": "Oct 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf",
+   "promises": 7
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://b.zmtcdn.com/investor-relations/Q3FY26-earnings-call-transcript.pdf",
+   "promises": 3
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=60af607c-5f1b-4d5d-8425-4929efa6aad1.pdf",
+   "promises": 1
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=faa4f0f7-06e4-4066-9d68-3da95dfe02d9.pdf",
+   "promises": 1
+  },
+  {
+   "call": "Oct 2026",
+   "quarter": "Q2FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=64f36e3b-87e9-426e-be3e-515dca4525d2.pdf",
+   "promises": 3
+  }
+ ],
+ "record": {
+  "kept": 1,
+  "missed": 0,
+  "resolved": 1,
+  "moved": 0,
+  "quiet": 1,
+  "open": 6,
+  "by_status": {
+   "beat": 1,
+   "gone_quiet": 1,
+   "tracking": 1,
+   "open": 5
+  }
+ },
+ "threads": [
+  {
+   "id": "ETERNAL-0",
+   "title": "Marketing investments",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q3FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Marketing spends maintained high due to low acquisition costs",
+   "evidence": {
+    "quote": "We feel a lot of our competitors in the market have pulled back on this so we're seeing extremely low cost of customer acquisition and we, therefore, continue to see value in keeping marketing spends high at this point.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, you should expect this to continue in the next quarter as well.",
+     "speaker": "Albinder Singh Dhindsa",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-1",
+   "title": "Revenue growth YoY",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "Q3FY26",
+   "target": "30%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "Reported revenue growth 201.9% for Q3 FY26",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, Aditya, we should expect growth to be around the current level of ~30% year-on- year. That is what we are expecting right now and profitability in percentage terms should improve.",
+     "speaker": "Akshant Goyal",
+     "page": 8,
+     "target": "30%",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-2",
+   "title": "Profitability percentage",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Oct 2025)",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, Aditya, we should expect growth to be around the current level of ~30% year-on- year. That is what we are expecting right now and profitability in percentage terms should improve.",
+     "speaker": "Akshant Goyal",
+     "page": 8,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-3",
+   "title": "Food Delivery revenue growth YoY",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Food Delivery",
+   "basis": null,
+   "period": "FY26",
+   "target": "15%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Oct 2025)",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "In the last letter we did say that for this financial year, we're unlikely to be at 20%, and we're expecting a 15% sort of year-on-year growth.",
+     "speaker": "Akshant Goyal",
+     "page": 9,
+     "target": "15%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-4",
+   "title": "NOV growth YoY",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "≥100%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "tracking",
+   "pace": {
+    "so_far": 113.65804306980776,
+    "so_far_label": "H1 FY27",
+    "needs": 91.56425744636533,
+    "needs_label": "H2 FY27",
+    "needs_for": 100,
+    "status": "on_pace",
+    "measure": "revenue growth"
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So I do expect the year-on-year growth to remain above 100% for the next one or two years at least.",
+     "speaker": "Akshant Goyal",
+     "page": 10,
+     "target": "≥100%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-5",
+   "title": "Bistro business losses",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "Bistro business",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, Swapnil, FY27 should be better than FY26, in terms of losses in the business.",
+     "speaker": "Akshant Goyal",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-6",
+   "title": "Company losses",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "FY27 should be better than FY26, in terms of losses in the business.",
+     "speaker": "Akshant Goyal",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=69f3f58b-c856-4abf-9548-ab8c8f1a398e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-7",
+   "title": "Going-out NOV guidance",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "going-out business",
+   "basis": null,
+   "period": "FY30",
+   "target": "3 USD bn",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "You've maintained your $3 billion NOV guidance for going-out in FY30",
+     "speaker": "Manish Adukia",
+     "page": 5,
+     "target": "3 USD bn",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": "https://b.zmtcdn.com/investor-relations/Q3FY26-earnings-call-transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-8",
+   "title": "ROCE outcome",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "≥40%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "ROCE outcome should still be north of 40%. That's what we're solving for.",
+     "speaker": "Akshant Goyal",
+     "page": 6,
+     "target": "≥40%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://b.zmtcdn.com/investor-relations/Q3FY26-earnings-call-transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-9",
+   "title": "Year-on-year growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "As of now, as we have mentioned, we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on the market is.",
+     "speaker": "Akshant Goyal",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://b.zmtcdn.com/investor-relations/Q3FY26-earnings-call-transcript.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-10",
+   "title": "Dark store count",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Blinkit",
+   "basis": null,
+   "period": "FY27",
+   "target": "3,000",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On store addition, we're on track on our guidance for March of 3,000 stores.",
+     "speaker": "Akshant Goyal",
+     "page": 3,
+     "target": "3,000",
+     "period": "FY27",
+     "deadline": "March 2027",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=60af607c-5f1b-4d5d-8425-4929efa6aad1.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-11",
+   "title": "Capex per store",
+   "kind": "soft",
+   "metric": "capex",
+   "scope": "Blinkit",
+   "basis": null,
+   "period": "multi-year",
+   "target": "≤₹2.5 cr",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "If you therefore look at our capex over the last six months, nine months or a longer period, and the capex per store for that period, you will find it is lower than INR 2.5 crore. We expect that to continue going forward.",
+     "speaker": "Akshant Goyal",
+     "page": 8,
+     "target": "≤₹2.5 cr",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=faa4f0f7-06e4-4066-9d68-3da95dfe02d9.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-12",
+   "title": "Adjusted EBITDA",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "company",
+   "basis": null,
+   "period": "FY29",
+   "target": "1 USD bn",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "Does that better read on competition also give you more comfort around your $1 billion Adjusted EBITDA guidance that you have for FY29?",
+     "speaker": "Manish Adukia",
+     "page": 7,
+     "target": "1 USD bn",
+     "period": "FY29",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=64f36e3b-87e9-426e-be3e-515dca4525d2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ETERNAL-13",
+   "title": "NOV per day per store",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "dark store",
+   "basis": null,
+   "period": "multi-year",
+   "target": "11 lakh",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "We gave guidance last time that in steady state it could get to about INR 11 lakh per day per store.",
+     "speaker": "Akshant Goyal",
+     "page": 12,
+     "target": "11 lakh",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=64f36e3b-87e9-426e-be3e-515dca4525d2.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 94.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 94% a year over 5 years, 97% over 3 (accelerating); last 12 months 144%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 17.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 17% a year over 5 years, 28% over 3; last 12 months 162%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 2.2,
+    "unit": "%",
+    "reading": "Operating margin expanded from -44% (FY22) to 2.2% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": -44.0
+     },
+     {
+      "x": "FY23",
+      "y": -17.0
+     },
+     {
+      "x": "FY24",
+      "y": 0.3
+     },
+     {
+      "x": "FY25",
+      "y": 3.1
+     },
+     {
+      "x": "FY26",
+      "y": 2.2
+     }
+    ]
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.15,
+    "unit": "x equity",
+    "reading": "Borrowings ₹4,592 cr, 0.15× equity; up from ₹70 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 70.0
+     },
+     {
+      "x": "FY23",
+      "y": 507.0
+     },
+     {
+      "x": "FY24",
+      "y": 749.0
+     },
+     {
+      "x": "FY25",
+      "y": 2045.0
+     },
+     {
+      "x": "FY26",
+      "y": 4592.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 2.0,
+    "unit": "%",
+    "reading": "ROCE 2% in FY26 (from -13% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": -13.0
+     },
+     {
+      "x": "FY23",
+      "y": -6.0
+     },
+     {
+      "x": "FY24",
+      "y": 1.0
+     },
+     {
+      "x": "FY25",
+      "y": 3.0
+     },
+     {
+      "x": "FY26",
+      "y": 2.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Revenue growth significantly outperformed expectations with a 201.9% YoY increase in Q3 FY26.",
+    "refs": [
+     "ETERNAL-1"
+    ]
+   },
+   {
+    "point": "Operating margins improved substantially, moving from -44% in FY22 to 2.2% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "The company is currently on track to meet its FY27 NOV growth target of 113.7%.",
+    "refs": [
+     "ETERNAL-4"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Management failed to provide updates on profitability percentage targets after the Q3 FY26 period lapsed.",
+    "refs": [
+     "ETERNAL-2"
+    ]
+   },
+   {
+    "point": "The 15% YoY growth target for Food Delivery revenue has gone quiet following the end of FY26.",
+    "refs": [
+     "ETERNAL-3"
+    ]
+   },
+   {
+    "point": "Current ROCE remains low at 2% in FY26, significantly trailing the long-term target of 40%.",
+    "refs": [
+     "ETERNAL-8",
+     "returns"
+    ]
+   }
+  ]
+ }
+}

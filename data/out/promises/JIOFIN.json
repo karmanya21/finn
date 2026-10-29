@@ -1,0 +1,100 @@
+[
+ {
+  "call": "Jul 2025",
+  "quarter": "Q1FY26",
+  "file": "JIOFIN_Jul2025_979d1b0c1af0.txt",
+  "promises": [
+   {
+    "quote": "These developments underscore strong execution momentum across all our business verticals; and we will build on this momentum over the remainder of the financial year.",
+    "speaker": "UNKNOWN",
+    "page": 1,
+    "kind": "directional",
+    "metric": "other",
+    "metric_label": "Execution momentum",
+    "scope": "company",
+    "basis": "unclear",
+    "low": null,
+    "high": null,
+    "unit": null,
+    "direction": "up",
+    "period": "FY26",
+    "deadline": null,
+    "condition": null,
+    "change": "new"
+   }
+  ],
+  "rejected": 1
+ },
+ {
+  "call": "Nov 2025",
+  "quarter": "Q2FY26",
+  "file": "JIOFIN_Nov2025_36fdff6404c4.txt",
+  "promises": [],
+  "rejected": 0
+ },
+ {
+  "call": "Jan 2026",
+  "quarter": "Q3FY26",
+  "file": "JIOFIN_Jan2026_732a9113b678.txt",
+  "promises": [],
+  "rejected": 0
+ },
+ {
+  "call": "Apr 2026",
+  "quarter": "Q4FY26",
+  "file": "JIOFIN_Apr2026_1d50bb4b4137.txt",
+  "promises": [],
+  "rejected": 0
+ },
+ {
+  "call": "Jul 2026",
+  "quarter": "Q1FY27",
+  "file": "JIOFIN_Jul2026_38d00d645d36.txt",
+  "promises": [
+   {
+    "quote": "Looking ahead, our Wealth Management vertical is moving fast, and we are now well-positioned for the beta launch of our Securities Broking platform in Q2 FY27.",
+    "speaker": "MOHANA",
+    "page": 1,
+    "kind": "milestone",
+    "metric": "deal_wins",
+    "metric_label": "Beta launch of Securities Broking platform",
+    "scope": "Securities Broking platform",
+    "basis": "unclear",
+    "low": null,
+    "high": null,
+    "unit": null,
+    "direction": null,
+    "period": "Q2FY27",
+    "deadline": "Q2FY27",
+    "condition": null,
+    "change": "new"
+   },
+   {
+    "quote": "Looking ahead, our Wealth Management vertical is moving fast, and we are now well-positioned for the beta launch of our Securities Broking platform in Q2 FY27.",
+    "speaker": "MOHANA",
+    "page": 1,
+    "kind": "milestone",
+    "metric": "other",
+    "metric_label": "Beta launch of Securities Broking platform",
+    "scope": "Wealth Management",
+    "basis": "unclear",
+    "low": null,
+    "high": null,
+    "unit": null,
+    "direction": null,
+    "period": "Q2FY27",
+    "deadline": "Q2FY27",
+    "condition": null,
+    "change": "new"
+   }
+  ],
+  "rejected": 0
+ },
+ {
+  "call": "Oct 2026",
+  "quarter": "Q2FY27",
+  "file": "JIOFIN_Oct2026_71e8dfee3333.txt",
+  "promises": [],
+  "rejected": 0
+ }
+]

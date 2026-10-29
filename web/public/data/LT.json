@@ -533,8 +533,7 @@
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since May 2025",
+   "status": "open",
    "statements": [
     {
      "call": "May 2025",
@@ -562,8 +561,7 @@
    "direction": "down",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since Jul 2025",
+   "status": "open",
    "statements": [
     {
      "call": "Jul 2025",
@@ -770,8 +768,7 @@
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since Oct 2025",
+   "status": "open",
    "statements": [
     {
      "call": "Oct 2025",
@@ -833,8 +830,7 @@
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since Jan 2026",
+   "status": "open",
    "statements": [
     {
      "call": "Jan 2026",
@@ -1340,5 +1336,163 @@
     }
    ]
   }
- ]
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 16.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 16% a year over 5 years, 16% over 3 (steady); last 12 months 11%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 3.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 3% a year over 5 years, 17% over 3; last 12 months 18%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 13.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 16% (FY22) to 13% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 16.0
+     },
+     {
+      "x": "FY23",
+      "y": 15.0
+     },
+     {
+      "x": "FY24",
+      "y": 13.0
+     },
+     {
+      "x": "FY25",
+      "y": 14.0
+     },
+     {
+      "x": "FY26",
+      "y": 13.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 115,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 115% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 1.15,
+    "unit": "x equity",
+    "reading": "Borrowings ₹125,497 cr, 1.15× equity; flat from ₹125,508 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 125508.0
+     },
+     {
+      "x": "FY23",
+      "y": 120650.0
+     },
+     {
+      "x": "FY24",
+      "y": 116322.0
+     },
+     {
+      "x": "FY25",
+      "y": 132409.0
+     },
+     {
+      "x": "FY26",
+      "y": 125497.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 15.0,
+    "unit": "%",
+    "reading": "ROCE 15% in FY26 (from 10% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 10.0
+     },
+     {
+      "x": "FY23",
+      "y": 12.0
+     },
+     {
+      "x": "FY24",
+      "y": 13.0
+     },
+     {
+      "x": "FY25",
+      "y": 15.0
+     },
+     {
+      "x": "FY26",
+      "y": 15.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "The company significantly outperformed its FY26 order inflow guidance, achieving a 20% CAGR compared to the 10% target.",
+    "refs": [
+     "LT-0"
+    ]
+   },
+   {
+    "point": "Management demonstrated strong capital efficiency by beating the FY26 Net Working Capital to revenue target with a result of 4.1% versus 10%.",
+    "refs": [
+     "LT-3"
+    ]
+   },
+   {
+    "point": "Operating cash flow has been strong, representing 115% of net profit over the last five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Revenue growth missed the FY26 target of 15%, with the company reporting only 11.8% growth for the period.",
+    "refs": [
+     "LT-1"
+    ]
+   },
+   {
+    "point": "Operating margins have faced compression, declining from 16% in FY22 to 13% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "The company missed its H2FY26 growth visibility target, with H2 growth slowing to 10.9% from 12.8% in H1.",
+    "refs": [
+     "LT-5"
+    ]
+   }
+  ]
+ }
 }

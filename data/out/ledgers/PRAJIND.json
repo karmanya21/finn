@@ -1,0 +1,888 @@
+{
+ "symbol": "PRAJIND",
+ "name": "Praj Industries",
+ "sector": "Engineering",
+ "size": "small",
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 849.0,
+    "qoq": 18.57541899441342,
+    "yoy": 0.8313539192398967
+   },
+   {
+    "label": "EBITDA",
+    "value": 52.0,
+    "qoq": 73.33333333333334,
+    "yoy": -7.14285714285714
+   },
+   {
+    "label": "PBT",
+    "value": 36.0,
+    "qoq": 71.42857142857142,
+    "yoy": 19.999999999999996
+   },
+   {
+    "label": "PAT",
+    "value": 23.0,
+    "qoq": 91.66666666666667,
+    "yoy": 21.052631578947366
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8f4dfb36-f1b2-4d4a-9eb6-44aaaeb369f7.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Sep 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf",
+   "promises": 5
+  },
+  {
+   "call": "Dec 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf",
+   "promises": 5
+  },
+  {
+   "call": "Mar 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b281197f-cff6-4c85-abba-4743d8455903.pdf",
+   "promises": 3
+  },
+  {
+   "call": "Jun 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf",
+   "promises": 9
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf",
+   "promises": 6
+  }
+ ],
+ "record": {
+  "kept": 1,
+  "missed": 1,
+  "resolved": 2,
+  "moved": 0,
+  "quiet": 3,
+  "open": 3,
+  "by_status": {
+   "delivered": 1,
+   "open": 3,
+   "gone_quiet": 3,
+   "missed": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "PRAJIND-0",
+   "title": "Praj GenX break-even",
+   "kind": "soft",
+   "metric": "other",
+   "scope": "Praj GenX",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "₹400–450 cr",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The break-even point for GenX will be somewhere in the range of Rs. 400-450 crores.",
+     "speaker": "Sachin Raole",
+     "page": 23,
+     "target": "₹400–450 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8f4dfb36-f1b2-4d4a-9eb6-44aaaeb369f7.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "So hopefully by end of this year, we should be able to see that break-even because our volume for the order book for Praj GenX is looking better now.",
+     "speaker": "Ashish Gaikwad",
+     "page": 13,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q4FY27",
+     "condition": "volume for the order book for Praj GenX is looking better",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-1",
+   "title": "Company EBITDA margin",
+   "kind": "soft",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "5–9%",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Sep 2025",
+     "from": "≥10%",
+     "to": "5–9%",
+     "type": "lowered"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We always mention that our first target is to reach on a sustainable basis to a double-digit EBITDA margin.",
+     "speaker": "Sachin Raole",
+     "page": 23,
+     "target": "≥10%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8f4dfb36-f1b2-4d4a-9eb6-44aaaeb369f7.pdf"
+    },
+    {
+     "call": "Sep 2025",
+     "quarter": "Q1FY26",
+     "quote": "the new normal which you are expecting that can we be in a little larger single- digit EBITDA margin, I think that is what we will be looking at going forward.",
+     "speaker": "Sachin Raole",
+     "page": 8,
+     "target": "5–9%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-2",
+   "title": "GenX revenue",
+   "kind": "directional",
+   "metric": "revenue",
+   "scope": "GenX",
+   "basis": "management",
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "GenX revenue not generated in H2 FY26",
+   "evidence": {
+    "quote": "The fixed costs at GenX facilities coupled with limited revenue activity has negatively impacted our bottom line.",
+    "call": "Sep 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So, some revenue is happening, but meaningful revenue will start happening only in the H2 because the orders for execution will start coming up at that point of time.",
+     "speaker": "Sachin Raole",
+     "page": 20,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": "orders for execution will start coming up",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8f4dfb36-f1b2-4d4a-9eb6-44aaaeb369f7.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-3",
+   "title": "Vision 2030",
+   "kind": "soft",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Sep 2025",
+     "quarter": "Q1FY26",
+     "quote": "we still are very much committed to delivering that Vision 2030.",
+     "speaker": "Ashlsh Galkwad",
+     "page": 10,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-4",
+   "title": "GenX facility diversification",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "GenX facility",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "GenX facility audits completed and first breakthrough order received",
+   "evidence": {
+    "quote": "In the last few quarters, we worked with a new set of customers to get our GenX facility audited and certified and also entered into new framework agreements with some of the key customers. As a result of this, I am happy to share that we have received our first breakthrough order for the delivery of the CCUS skids from one of the global oil majors.",
+    "call": "Mar 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Sep 2025",
+     "quarter": "Q1FY26",
+     "quote": "Maybe it will take a quarter more time for finalization of the entire new regions or new industries for us, but that is the work which is going on.",
+     "speaker": "Sachin Raole",
+     "page": 12,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "Q2FY26",
+     "condition": "finalization of new regions or industries",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-5",
+   "title": "Company H2FY26 performance",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Dec 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Dec 2025)",
+   "statements": [
+    {
+     "call": "Sep 2025",
+     "quarter": "Q1FY26",
+     "quote": "Some pains might continue till quarter 2, but from quarter 3, from H2 onwards, we are not expecting this situation to continue.",
+     "speaker": "Sachin Raole",
+     "page": 8,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf"
+    },
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "Overall, despite the challenging business environment, we will continue to focus on controllable factors to deliver good performance in the second half of FY'26.",
+     "speaker": "Ashish Gaikwad",
+     "page": 3,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-6",
+   "title": "GenX capacity utilization",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "GenX",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "So instead of FY'27, we will see this full capacity utilization happening in FY28.",
+     "speaker": "Sachin Raole",
+     "page": 5,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-7",
+   "title": "Indian Oil 2G plant production",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Indian Oil 2G plant",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "we are very hopeful that by end of this fiscal, which is by March, we will be able to get to our target production.",
+     "speaker": "Ashish Gaikwad",
+     "page": 20,
+     "target": "",
+     "period": "FY26",
+     "deadline": "March 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-8",
+   "title": "Company FY27 revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, all of this portfolio that we have in Praj is going to help us in that recovery path for the next year.",
+     "speaker": "Ashish Gaikwad",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-9",
+   "title": "Dispatches of contracts in progress",
+   "kind": "milestone",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Dec 2025)",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "I think by December-January, most of our dispatches under that CIP will start moving out.",
+     "speaker": "Sachin Raole",
+     "page": 16,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-10",
+   "title": "Mangalore facility breakeven",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "Mangalore facility",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Mar 2026",
+     "quarter": "Q3FY26",
+     "quote": "We are still seeing that we will be able to do that in the FY27.",
+     "speaker": "Sachin Raole",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b281197f-cff6-4c85-abba-4743d8455903.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-11",
+   "title": "Mangalore facility order booking",
+   "kind": "hard",
+   "metric": "order_inflow",
+   "scope": "Mangalore facility",
+   "basis": "management",
+   "period": "FY27",
+   "target": "≥₹500 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "INR 500 crore order not booked completely by March 2026",
+   "evidence": {
+    "quote": "The INR 500 crore order is not booked by us completely.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Mar 2026",
+     "quarter": "Q3FY26",
+     "quote": "our target is at least we should be hitting a number on order booking of not less than Rs.500 crores.",
+     "speaker": "Sachin Raole",
+     "page": 12,
+     "target": "≥₹500 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b281197f-cff6-4c85-abba-4743d8455903.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-12",
+   "title": "Company multi-year revenue target",
+   "kind": "soft",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "₹10,000 cr",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Mar 2026",
+     "quarter": "Q3FY26",
+     "quote": "we as a company have to reach Rs.10,000 crores and the vision that is set by our chairman, we are working on that step.",
+     "speaker": "Ashish Gaikwad",
+     "page": 13,
+     "target": "₹10,000 cr",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": "depend on a few mandates",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b281197f-cff6-4c85-abba-4743d8455903.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-13",
+   "title": "Bio-IBA first order",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "company",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jun 2026)",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "We are expecting our first order in the current quarter of FY '27.",
+     "speaker": "Ashish Gaikwad",
+     "page": 3,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-14",
+   "title": "Company FY27 performance",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "However, our strong technology edge in bioenergy and advanced manufacturing capabilities in modularization will help us deliver improved performance in FY '27.",
+     "speaker": "Ashish Gaikwad",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-15",
+   "title": "Company FY27 order book",
+   "kind": "directional",
+   "metric": "order_book",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "we will be seeing the positive impact of that and the order books in the current year of FY '27.",
+     "speaker": "Ashish Gaikwad",
+     "page": 6,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-16",
+   "title": "Company FY27 profitability",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "we should start seeing some uptake from FY '27 onwards.",
+     "speaker": "Ashish Gaikwad",
+     "page": 6,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-17",
+   "title": "GenX orders",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "GenX",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jun 2026)",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "I have said that we have not booked that order in Quarter 4 of last year, but we expect some good news in the 1st Quarter of this year, FY '27.",
+     "speaker": "Ashish Gaikwad",
+     "page": 10,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-18",
+   "title": "Construction completion",
+   "kind": "milestone",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The construction will get done and completed by end of this year, by December of 2026.",
+     "speaker": "Ashish Gaikwad",
+     "page": 18,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-19",
+   "title": "Company H2FY27 top and bottom line",
+   "kind": "directional",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We believe that now going forward, they will start converging and starting giving us the top line and the bottom line. That's what we said that based on the order book which we have booked right now, we will see these colors of these results coming up in the latter part of this financial year.",
+     "speaker": "Sachin Raole",
+     "page": 15,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": "based on the order book which we have booked right now",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf"
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 19.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 19% a year over 5 years, -4% over 3 (slowing); last 12 months 2%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": -24.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded -24% a year over 5 years, -56% over 3; last 12 months -48%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 4.9,
+    "unit": "%",
+    "reading": "Operating margin compressed from 8% (FY22) to 4.9% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 8.0
+     },
+     {
+      "x": "FY23",
+      "y": 9.0
+     },
+     {
+      "x": "FY24",
+      "y": 11.0
+     },
+     {
+      "x": "FY25",
+      "y": 10.0
+     },
+     {
+      "x": "FY26",
+      "y": 4.9
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 86,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 86% of net profit (adequate).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.13,
+    "unit": "x equity",
+    "reading": "Borrowings ₹173 cr, 0.13× equity; up from ₹21 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 21.0
+     },
+     {
+      "x": "FY23",
+      "y": 42.0
+     },
+     {
+      "x": "FY24",
+      "y": 169.0
+     },
+     {
+      "x": "FY25",
+      "y": 195.0
+     },
+     {
+      "x": "FY26",
+      "y": 173.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 6.0,
+    "unit": "%",
+    "reading": "ROCE 6% in FY26 (from 23% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 23.0
+     },
+     {
+      "x": "FY23",
+      "y": 31.0
+     },
+     {
+      "x": "FY24",
+      "y": 29.0
+     },
+     {
+      "x": "FY25",
+      "y": 18.0
+     },
+     {
+      "x": "FY26",
+      "y": 6.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "The company successfully completed GenX facility audits and secured its first breakthrough order by Q2FY26.",
+    "refs": [
+     "PRAJIND-4"
+    ]
+   },
+   {
+    "point": "Operating cash flow remains adequate at 86% of net profit over the last five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Profitability has significantly declined with profit growth at -56% over three years and operating margins compressing to 4.9% in FY26.",
+    "refs": [
+     "profit_growth",
+     "margin"
+    ]
+   },
+   {
+    "point": "Management missed the FY27 Mangalore facility order booking target of ₹500 crore.",
+    "refs": [
+     "PRAJIND-11"
+    ]
+   },
+   {
+    "point": "Multiple growth initiatives including GenX revenue and Bio-IBA orders have either been missed or gone quiet.",
+    "refs": [
+     "PRAJIND-2",
+     "PRAJIND-13",
+     "PRAJIND-17"
+    ]
+   }
+  ]
+ }
+}

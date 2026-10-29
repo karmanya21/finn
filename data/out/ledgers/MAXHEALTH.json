@@ -1,0 +1,1958 @@
+{
+ "symbol": "MAXHEALTH",
+ "name": "Max Healthcare",
+ "sector": "Hospitals",
+ "size": "mid",
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 2366.0,
+    "qoq": 10.405972935137653,
+    "yoy": 16.666666666666675
+   },
+   {
+    "label": "EBITDA",
+    "value": 598.0,
+    "qoq": -1.320132013201325,
+    "yoy": 14.340344168260044
+   },
+   {
+    "label": "PBT",
+    "value": 436.0,
+    "qoq": -6.236559139784948,
+    "yoy": 9.000000000000007
+   },
+   {
+    "label": "PAT",
+    "value": 323.0,
+    "qoq": -5.555555555555558,
+    "yoy": 4.870129870129869
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": null,
+   "promises": 17
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": null,
+   "promises": 13
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": null,
+   "promises": 14
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": null,
+   "promises": 13
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": null,
+   "promises": 14
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": null,
+   "promises": 23
+  }
+ ],
+ "record": {
+  "kept": 1,
+  "missed": 1,
+  "resolved": 2,
+  "moved": 9,
+  "quiet": 1,
+  "open": 21,
+  "by_status": {
+   "delivered": 1,
+   "delayed": 1,
+   "open": 17,
+   "on_track": 3,
+   "gone_quiet": 1,
+   "missed": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "MAXHEALTH-0",
+   "title": "Capacity commissioning at Max Smart, Nanavati-Max and Max Mohali",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Mohali, Nanavati, Max Smart",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "Q1FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Max Smart, Nanavati and Mohali capacities operationalized",
+   "evidence": {
+    "quote": "So rather than Max Bhubaneswar, the large increase in indirect cost is due to the new capacities, which have been operationalised at Mohali, Nanavati and Smart.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we prepare to commission three new brownfield towers at Max Smart, Nanavati-Max and Max Mohali hospitals within the next three months",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q1FY26",
+     "deadline": "Q1FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "All the beds will be ready to be operationalized over the next 2 to 3 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-1",
+   "title": "Greenfield facility in Gurgaon capacity",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "1,500",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delayed",
+   "detail": "500-bed Gurgaon facility delayed to end of year",
+   "evidence": {
+    "quote": "500 beds at Sector 56 Gurgaon: Interior and facade works have started. We are targeting to commission this facility by the end of this year.",
+    "call": "May 2026",
+    "new_deadline": "FY27"
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "complete our greenfield facility in Gurgaon by the end of this year, adding approximately 1,500 beds in total.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "1,500",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-2",
+   "title": "Max Smart capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Smart",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to commission this facility latest by Q2 FY '26.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "Q2FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "400 beds of Max Smart at Saket Complex – Interior and MEP fit-out works are progressing as planned, with phased commissioning expected to start towards the end of Q2 FY '26.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "Q2FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "At Max Smart, infrastructure for around 200 beds, along with operation theaters and OPDs is ready for commissioning, and we are currently awaiting the occupancy certificate, which is expected by the end of February.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "February 2026",
+     "condition": "awaiting the occupancy certificate",
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The remaining 50% beds are expected to be handed over to operations during the course of the current quarter.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-3",
+   "title": "Max Lucknow capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Lucknow",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "520",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "520",
+     "to": "550",
+     "type": "raised"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "550",
+     "to": "500",
+     "type": "lowered"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q4FY26",
+     "to": "Q2FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q2FY27",
+     "to": "Q3FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to complete the onco block here by Q2 this year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "Q2FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Max Lucknow – The current capacity of the hospital stands at 413 beds, and we expect this to increase to 520 beds by end of the financial year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "520",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "The current capacity of the hospital stands at 413 beds, and we expect this to increase to 550 beds by end of this financial year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "550",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we expect this to increase to around 500 beds by the end of this financial year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "500",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "we expect this to increase to 570 beds over the next 2 quarters.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "570",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Additional 100 beds in the existing 468-bed facility will be commissioned over the next two quarters.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-4",
+   "title": "Sector 56 Gurgaon capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Sector 56 Gurgaon",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "Q3FY26",
+     "to": "Q4FY26",
+     "type": "deferred"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "Q4FY26",
+     "to": "Q2FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q2FY27",
+     "to": "Q4FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "500",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to commission the facility by end of this calendar year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect to commission the facility by the end of this financial year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We now expect to commission the first phase by end of H1 FY '27.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "H1FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We are targeting to commission this facility by the end of this year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "500",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We expect to start phased commissioning of this facility by end of this year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-5",
+   "title": "Dwarka capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Dwarka",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "Q3FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q1FY27",
+     "to": "Q4FY30",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The onco block is expected to be commissioned by Q3 this year.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "oncology center over there is in Dwarka yet to start, which is going to start by next month.",
+     "speaker": "Abhay Soi",
+     "page": 11,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "will be commissioned by FY30.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-6",
+   "title": "Max Nagpur capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Nagpur",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "100",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "100",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "100",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "100",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to complete this project within 24 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we expect to complete the project within 24 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "24 months",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We expect to complete the project within 24 months, post receipt of the CTE.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "100",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": "post receipt of the CTE",
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We expect to complete this project within 24 months, as communicated earlier.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "we expect commissioning by FY28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "100",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we expect commissioning by FY28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-7",
+   "title": "Max Vikrant capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Vikrant",
+   "basis": "management",
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Max Vikrant project expected to be completed by FY '28",
+   "evidence": {
+    "quote": "The project is expected to be completed by FY '28.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we expect to complete the project by 2028.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-8",
+   "title": "Zirakpur, Mohali capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Zirakpur, Mohali",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "400",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "Q3FY28",
+     "to": "Q4FY28",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "400",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "400",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The project is expected to be completed within the next 30 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "The project is expected to be completed within the next 24 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "24 months",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "Project is continuing faster than anticipated and is now expected to be completed by end of calendar year 2027.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "400",
+     "period": "FY28",
+     "deadline": "Q3FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Project work continues to be on track, and we are scheduled to commission the hospital in FY '28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "we are on schedule to commission the hospitals in FY28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "400",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we expect to commission it in FY28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-9",
+   "title": "Max Vaishali capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Vaishali",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "140",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "140",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q4FY28",
+     "to": "Q4FY30",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to complete this brownfield project in the next 30 months as well.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect to complete this project within the next 30 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "30 months",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We expect to complete this project in 24 months, post receipt of the requisite approvals.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "140",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": "post receipt of the requisite approvals",
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We expect to complete this project in 24 months post receipt of these approvals.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": "post receipt of these approvals",
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The project is expected to be commissioned before FY30.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-10",
+   "title": "Total bed capacity",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "8,000",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "9,000",
+     "to": "8,000",
+     "type": "lowered"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since Feb 2026",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "today, we are guiding you that by 2028, we may have 9,000 beds",
+     "speaker": "Abhay Soi",
+     "page": 13,
+     "target": "9,000",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "and by FY '28, we should be hitting 8,000.",
+     "speaker": "Abhay Soi",
+     "page": 23,
+     "target": "8,000",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-11",
+   "title": "EBITDA per bed",
+   "kind": "directional",
+   "metric": "ebitda",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "FY26 Network EBITDA per bed was INR 72 lakhs",
+   "evidence": {
+    "quote": "Overall Network operating EBITDA grew by 14% year-on-year to INR 2,638 crore, translating to a margin of 26.2% and EBITDA per bed of INR 72 lakhs.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The main thing is that we want EBITDA per bed to improve now, which means that we have to start medical programs that are higher-end.",
+     "speaker": "Yogesh Sareen",
+     "page": 6,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-12",
+   "title": "EBITDA",
+   "kind": "directional",
+   "metric": "ebitda",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "detail": "Network operating EBITDA grew by 23% year-on-year in H1 FY26",
+   "evidence": {
+    "quote": "For the second quarter, revenue grew by 21% year-on-year, while operating EBITDA increased by 23%, thereby extending our track record to 20 consecutive quarters of consistent growth.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "You will see the full strength of Dwarka coming into the current year. You will look at the momentum of both Lucknow and Jaypee sort of snowball in the current year.",
+     "speaker": "Abhay Soi",
+     "page": 11,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-13",
+   "title": "General capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "detail": "Phased commissioning of 20% additional brownfield capacity initiated during FY26",
+   "evidence": {
+    "quote": "During the year, we have initiated phased commissioning of nearly 20% additional brownfield capacity across the Network.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "But rest all will be onboard, I would say, in another 8-9 months' time.",
+     "speaker": "Yogesh Sareen",
+     "page": 17,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-14",
+   "title": "Max Dehradun new facility commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Dehradun new facility",
+   "basis": null,
+   "period": "FY29",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "The new facility is expected to be commissioned by the end of 2028",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY29",
+     "deadline": "2028",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-15",
+   "title": "Divestment of Chitta and Anoopshahr hospitals",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Chitta and Anoopshahr hospitals",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Divestment of Chitta and Anoopshahr hospitals completed in September 2025",
+   "evidence": {
+    "quote": "Divestment of hospitals in Chitta and Anoopshahr was completed in September 2025.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we have executed a binding term sheet to divest Chitta and Anoopshahr hospitals for Rs. 40 crores, with completion expected by September ‘25.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "September 2025",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-16",
+   "title": "Net debt addition",
+   "kind": "directional",
+   "metric": "debt",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "₹400–500 cr",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "By the end of FY '26, we may probably have addition in the net debt to the extent of around Rs. 400-500 crores.",
+     "speaker": "Yogesh Sareen",
+     "page": 6,
+     "target": "₹400–500 cr",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "this net debt will marginally go up if you asking at the end of the year.",
+     "speaker": "Yogesh Sareen",
+     "page": 19,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-17",
+   "title": "Nanavati Phase 1 commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Nanavati Max",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q4FY26",
+     "to": "Q2FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We are in the advanced stages of commissioning three basements, ground to third floors, along with the seventh floor, over the next few weeks.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "next few weeks",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The remaining beds at both hospitals are expected to be commissioned during the Q4 FY '26.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "At Nanavati Max, remaining 50 beds will also be operationalized in this quarter",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-18",
+   "title": "Patparganj capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Patparganj",
+   "basis": null,
+   "period": "FY29",
+   "target": "",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "Q4FY28",
+     "to": "Q4FY29",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "400",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "400",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "The project is expected to be completed by FY '28.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "397",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "New design for D-wall has been firmed up and the project is now expected to be completed by FY '29.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "we expect commissioning by FY29.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "400",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we expect commissioning by end of FY29.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-19",
+   "title": "Max Vikrant (Saket) capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Max Vikrant (Saket)",
+   "basis": null,
+   "period": "FY29",
+   "target": "550",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We expect to complete this project within 40 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "550",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": "upon commissioning of the 400 beds at Max Smart",
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-20",
+   "title": "Thane capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Thane",
+   "basis": null,
+   "period": "FY29",
+   "target": "500",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "The project is expected to be delivered in 42 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "500",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-21",
+   "title": "Pitampura, Delhi capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Pitampura",
+   "basis": null,
+   "period": "FY29",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "250",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "the project is expected to take 36 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "250",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": "post building plan approvals",
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we expect commissioning in FY29.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-22",
+   "title": "Cash flows",
+   "kind": "directional",
+   "metric": "cash_flow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "In the next quarter, you will probably see a large amount of cash flows coming through.",
+     "speaker": "Abhay Soi",
+     "page": 11,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-23",
+   "title": "Super speciality rate implementation",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Super specialty rates implementation delayed beyond November 2025 deadline",
+   "evidence": {
+    "quote": "Of this INR 30 crore, as I mentioned is super specialty rates, which has not flowed in yet.",
+    "call": "May 2026",
+    "new_deadline": "June 2026"
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "I think the expectation is that by the end of November, that rate should also be up and working.",
+     "speaker": "Yogesh Sareen",
+     "page": 21,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-24",
+   "title": "Revenue",
+   "kind": "directional",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "FY27 is the year where we can expect the total benefit to come in?",
+     "speaker": "Shaleen Kumar",
+     "page": 21,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-25",
+   "title": "Operating margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "But, yes, operating leverage should come in.",
+     "speaker": "Keshav Gupta",
+     "page": 22,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "once those brownfields start getting full up",
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "as we speak, and will be all through before end of March, so you should see us continue on this accretive journey.",
+     "speaker": "Abhay Soi",
+     "page": 10,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "as you open up the balance beds over the next couple of quarters, you will see the entire operating leverage as the balance beds get occupied",
+     "speaker": "Abhay Soi",
+     "page": 5,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-26",
+   "title": "Revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Q1 FY27 revenue grew 16% year-on-year",
+   "evidence": {
+    "quote": "Network gross revenue stood at INR 2,982 crore compared to INR 2,574 crore in Q1 last year and INR 2,664 crore in previous quarter. This reflects an increase of 16% year-on-year and 12% quarter-on-quarter.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Looking ahead, with cashless services now fully restored, upward revision in CGHS tariffs expected to fully kick in by April 2026 and margin accretive incremental capacity coming on stream, we believe the Network is well positioned to continue delivering sustained growth.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-27",
+   "title": "Oncology specialty share",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "21–22%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Oncology share at 22% in Q1 FY27",
+   "evidence": {
+    "quote": "Due to the discontinuation of select high-value chemotherapy drugs for institutional patients, share of oncology for in-patient revenues dropped to 22% from 26% in Q1 FY26.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "It will continue to hover around 21-22%, and we will then have the other specialties fill up that vacuum.",
+     "speaker": "Yogesh Sareen",
+     "page": 7,
+     "target": "21–22%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-28",
+   "title": "CGHS rate revision benefit",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "That will be phased out over this year.",
+     "speaker": "Yogesh Sareen",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-29",
+   "title": "Bhubaneswar facility renovation",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Bhubaneswar",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Renovation of existing facility should be completed within 12 months.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY28",
+     "deadline": "FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-30",
+   "title": "Nanavati Phase 2 capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Nanavati",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "will be commissioned in FY30.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-31",
+   "title": "Pune capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Pune",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "project is expected to be commissioned by FY30.",
+     "speaker": "Abhay Soi",
+     "page": 2,
+     "target": "",
+     "period": "FY30",
+     "deadline": "FY30",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "MAXHEALTH-32",
+   "title": "Oncology revenue normalization",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "oncology",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "oncology will start to normalize from Q3 onwards.",
+     "speaker": "Yogesh Sareen",
+     "page": 13,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 27.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 27% a year over 5 years, 22% over 3 (slowing); last 12 months 16%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 60.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 60% a year over 5 years, 10% over 3; last 12 months 25%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 27.0,
+    "unit": "%",
+    "reading": "Operating margin expanded from 24% (FY22) to 27% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 24.0
+     },
+     {
+      "x": "FY23",
+      "y": 27.0
+     },
+     {
+      "x": "FY24",
+      "y": 28.0
+     },
+     {
+      "x": "FY25",
+      "y": 26.0
+     },
+     {
+      "x": "FY26",
+      "y": 27.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 116,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 116% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.32,
+    "unit": "x equity",
+    "reading": "Borrowings ₹3,478 cr, 0.32× equity; up from ₹913 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 913.0
+     },
+     {
+      "x": "FY23",
+      "y": 689.0
+     },
+     {
+      "x": "FY24",
+      "y": 1299.0
+     },
+     {
+      "x": "FY25",
+      "y": 3010.0
+     },
+     {
+      "x": "FY26",
+      "y": 3478.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 15.0,
+    "unit": "%",
+    "reading": "ROCE 15% in FY26 (from 12% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 12.0
+     },
+     {
+      "x": "FY23",
+      "y": 15.0
+     },
+     {
+      "x": "FY24",
+      "y": 16.0
+     },
+     {
+      "x": "FY25",
+      "y": 15.0
+     },
+     {
+      "x": "FY26",
+      "y": 15.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "The company successfully delivered FY26 network EBITDA per bed of INR 72 lakhs.",
+    "refs": [
+     "MAXHEALTH-11"
+    ]
+   },
+   {
+    "point": "Operating margins expanded from 24% in FY22 to 27% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "point": "Revenue grew 16% year-on-year in Q1 FY27, keeping the growth target on track.",
+    "refs": [
+     "MAXHEALTH-26"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Multiple projects including Gurgaon, Lucknow, and Dwarka have faced repeated timeline deferrals.",
+    "refs": [
+     "MAXHEALTH-1",
+     "MAXHEALTH-3",
+     "MAXHEALTH-5"
+    ]
+   },
+   {
+    "point": "The company missed the Q3 FY26 deadline for super speciality rate implementation.",
+    "refs": [
+     "MAXHEALTH-23"
+    ]
+   },
+   {
+    "point": "The 8,000 bed capacity target has gone quiet after being lowered from 9,000.",
+    "refs": [
+     "MAXHEALTH-10"
+    ]
+   }
+  ]
+ }
+}

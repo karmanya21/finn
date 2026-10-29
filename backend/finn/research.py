@@ -11,7 +11,7 @@ from collections import Counter
 from datetime import date
 from typing import Callable
 
-from finn import financials, fiscal
+from finn import financials, fiscal, snapshot
 from finn.config import OUT
 from finn.portfolio import by_symbol
 from finn.promises import evidence, extract, link, resolve
@@ -62,10 +62,11 @@ def extract_calls(sym: str, slug: str, n: int = N_CALLS, progress: Progress = _q
 
 # ---- headline numbers -----------------------------------------------------------
 
-# Row names differ by business model (banks have no "Sales" or "Operating Profit").
+# Row names differ by business model. Lenders have no "Operating Profit"; screener's
+# "Financing Profit" is after provisions and often negative, so it's left out, not relabelled.
 HEADLINE = [
     ("Revenue", ["Sales", "Revenue"]),
-    ("EBITDA", ["Operating Profit", "Financing Profit"]),
+    ("EBITDA", ["Operating Profit"]),
     ("PBT", ["Profit before tax"]),
     ("PAT", ["Net Profit"]),
 ]
@@ -89,7 +90,7 @@ def headline(fin: financials.Financials) -> dict | None:
         if not name:
             continue
         v = fin.q(fy, q, name)
-        rows.append({"label": label if name != "Financing Profit" else "Operating profit",
+        rows.append({"label": label,
                      "value": v, "qoq": chg(v, fin.q(*prev, name)), "yoy": chg(v, fin.q(*year_ago, name))})
     return {"quarter": fiscal.label(fy, q), "rows": rows, "unit": "₹ cr",
             "source": "screener.in, consolidated where published"}
@@ -145,7 +146,7 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
     counted = [t for t in threads if t["kind"] in ("hard", "milestone")]
     status = Counter(t["status"] for t in counted)
     lq = fin.latest_quarter()
-    return {
+    ledger = {
         "symbol": sym, **meta,
         "built": date.today().isoformat(),
         "latest_call": calls[-1]["call"] if calls else None,
@@ -165,6 +166,16 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
         },
         "threads": threads,
     }
+    enrich(ledger, slug, progress)
+    return ledger
+
+
+def enrich(ledger: dict, slug: str, progress: Progress = _quiet) -> dict:
+    """Add the numbers snapshot and the bull/bear case (both read the finished record)."""
+    progress("verdicts", "Summing up the numbers and the case each way")
+    ledger["snapshot"] = snapshot.build(slug)
+    ledger["case"] = snapshot.case(ledger["name"], ledger, ledger["snapshot"])
+    return ledger
 
 
 def research(sym: str, progress: Progress = _quiet) -> dict:

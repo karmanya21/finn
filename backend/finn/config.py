@@ -25,3 +25,6 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MODEL_CHEAP = os.getenv("FINN_MODEL_CHEAP", "gemini-3.5-flash-lite")
 MODEL_STRONG = os.getenv("FINN_MODEL_STRONG", "gemini-3.5-flash")
+# Free allowances are per model per day (Oct 2026: 500 requests for 3.5 Flash-Lite, 20 for
+# 3.5 Flash), so cheap work rolls over to the next model when one runs out.
+MODEL_POOL = os.getenv("FINN_MODEL_POOL", f"{MODEL_CHEAP},gemini-3.1-flash-lite").split(",")

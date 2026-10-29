@@ -1,0 +1,154 @@
+{
+ "symbol": "JIOFIN",
+ "name": "Jio Financial Services Ltd",
+ "sector": "Investment Company",
+ "size": null,
+ "built": "2026-10-29",
+ "latest_call": "Oct 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 1699.0,
+    "qoq": -15.21956087824351,
+    "yoy": 73.19062181447502
+   },
+   {
+    "label": "EBITDA",
+    "value": 1078.0,
+    "qoq": -22.83464566929134,
+    "yoy": 56.68604651162789
+   },
+   {
+    "label": "PBT",
+    "value": 489.0,
+    "qoq": -49.58762886597938,
+    "yoy": -37.54789272030651
+   },
+   {
+    "label": "PAT",
+    "value": 340.0,
+    "qoq": -59.036144578313255,
+    "yoy": -51.07913669064747
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "Jul 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4616b44e-9537-4b8e-83d3-1145defe744b.pdf",
+   "promises": 1
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=534a6235-d2cf-4e2d-a36f-b2f432291b32.pdf",
+   "promises": 0
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4d7e4dcc-8aed-46e8-aa65-15d3eb5e94ee.pdf",
+   "promises": 0
+  },
+  {
+   "call": "Apr 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=acc63602-ca98-4278-945c-05825e6f7118.pdf",
+   "promises": 0
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c18cc26c-af73-4c98-bb2f-500c896112ce.pdf",
+   "promises": 2
+  },
+  {
+   "call": "Oct 2026",
+   "quarter": "Q2FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=07ce63e3-07d3-4b0b-988b-53f339356094.pdf",
+   "promises": 0
+  }
+ ],
+ "record": {
+  "kept": 0,
+  "missed": 0,
+  "resolved": 0,
+  "moved": 0,
+  "quiet": 1,
+  "open": 0,
+  "by_status": {
+   "gone_quiet": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "JIOFIN-0",
+   "title": "Execution momentum",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "detail": "Execution momentum building across verticals with strong metrics",
+   "evidence": {
+    "quote": "To summarise, we have reached a pivotal moment in our journey where a consistent rhythm of growth momentum is evident across our businesses.",
+    "call": "Jan 2026, p1",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "These developments underscore strong execution momentum across all our business verticals; and we will build on this momentum over the remainder of the financial year.",
+     "speaker": "UNKNOWN",
+     "page": 1,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4616b44e-9537-4b8e-83d3-1145defe744b.pdf"
+    }
+   ]
+  },
+  {
+   "id": "JIOFIN-1",
+   "title": "Beta launch of Securities Broking platform",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "Securities Broking platform",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jul 2026)",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Looking ahead, our Wealth Management vertical is moving fast, and we are now well-positioned for the beta launch of our Securities Broking platform in Q2 FY27.",
+     "speaker": "MOHANA",
+     "page": 1,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c18cc26c-af73-4c98-bb2f-500c896112ce.pdf"
+    }
+   ]
+  }
+ ]
+}

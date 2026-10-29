@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Alerts, FilingsView, SettingsSheet } from "./push";
+import { Shell, go } from "./shell";
 import {
-  CompanySummary, FeedItem, Headline, KIND_LABEL, Ledger, MOVE_VERB, ResearchStatus, SearchResult, Thread, Tone,
+  CompanySummary, FeedItem, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
   feed, loadIndex, loadLedger, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
@@ -16,7 +18,6 @@ function useRoute(): string[] {
   }, []);
   return r;
 }
-const go = (path: string) => { window.location.hash = path; };
 
 // On a wide screen the app sits in a phone-sized frame, so it looks and behaves the same
 // as on a phone. The frame is its own scroll container and, through a transform, the
@@ -60,23 +61,12 @@ function Routes({ route }: { route: string[] }) {
     const sym = decodeURIComponent(route[1]).toUpperCase();
     return <ResearchView symbol={sym} threadId={route[3]} portfolio={index.some((c) => c.symbol === sym)} />;
   }
+  if (route[0] === "filings") return <FilingsView index={index} />;
+  if (route[0] === "portfolio") return <Portfolio index={index} />;
   return <Home index={index} />;
 }
 
-function Shell({ children, back }: { children: React.ReactNode; back?: boolean }) {
-  return (
-    <div className="app">
-      <header className="top">
-        {back ? <button className="back" onClick={() => go("/")} aria-label="Back">‹</button> : null}
-        <a className="wordmark" href="#/">FINN</a>
-        <span className="tagline">promises, kept or not</span>
-      </header>
-      <main>{children}</main>
-    </div>
-  );
-}
-
-// ---- home ------------------------------------------------------------------------
+// ---- today (home) ------------------------------------------------------------------
 
 function Home({ index }: { index: CompanySummary[] }) {
   const [ledgers, setLedgers] = useState<Ledger[]>([]);
@@ -86,10 +76,13 @@ function Home({ index }: { index: CompanySummary[] }) {
   const shown = all ? items : items.slice(0, 6);
   const seen = useSeen(items);
   const fresh = items.filter((i) => !seen.has(feedKey(i))).length;
+  const [settings, setSettings] = useState(false);
 
   return (
-    <Shell>
+    <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
+      <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
       <SearchBar />
+      <Alerts index={index} onSettings={() => setSettings(true)} />
       <section>
         <h2 className="section-title">What moved</h2>
         <p className="section-sub">
@@ -106,8 +99,18 @@ function Home({ index }: { index: CompanySummary[] }) {
         )}
       </section>
 
+      {settings && <SettingsSheet onClose={() => setSettings(false)} />}
+    </Shell>
+  );
+}
+
+function Portfolio({ index }: { index: CompanySummary[] }) {
+  return (
+    <Shell tab="portfolio">
+      <SearchBar />
       <section>
         <h2 className="section-title">Track records</h2>
+        <p className="section-sub">{index.length} companies. Kept vs missed counts settled numbers and milestones only.</p>
         <div className="companies">
           {index.map((c) => <CompanyRow key={c.symbol} c={c} />)}
         </div>
@@ -336,6 +339,73 @@ function HeadlineStrip({ h }: { h: Headline }) {
   );
 }
 
+// ---- snapshot and the case each way ------------------------------------------------
+
+function CaseView({ l, base }: { l: Ledger; base: string }) {
+  const threads = new Map(l.threads.map((t) => [t.id, t]));
+  const metric = new Map((l.snapshot?.metrics ?? []).map((m) => [m.key, m.label]));
+  const side = (title: string, pts: { point: string; refs: string[] }[], tone: string) => (
+    <div className={`case-side case-${tone}`}>
+      <h3>{title}</h3>
+      <ul>
+        {pts.map((p, i) => (
+          <li key={i}>
+            {p.point}
+            <span className="refs">
+              {p.refs.map((r) => threads.has(r)
+                ? <button key={r} className="ref" onClick={() => go(`${base}/t/${r}`)}>{threads.get(r)!.title}</button>
+                : <span key={r} className="ref num">{metric.get(r) ?? r}</span>)}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+  return (
+    <section>
+      <h2 className="section-title">The case each way</h2>
+      <p className="section-sub">Built only from this promise record and the reported numbers below; every point cites its source.</p>
+      <div className="case">
+        {l.case!.bull.length > 0 && side("Bull", l.case!.bull, "bull")}
+        {l.case!.bear.length > 0 && side("Bear", l.case!.bear, "bear")}
+      </div>
+    </section>
+  );
+}
+
+function SnapshotView({ m, lender }: { m: Metric[]; lender: boolean }) {
+  return (
+    <section>
+      <h2 className="section-title">The numbers</h2>
+      <p className="section-sub">From reported annual results (screener.in){lender ? "; shown the way a lender should be read" : ""}.</p>
+      <div className="snapshot">
+        {m.map((x) => (
+          <div key={x.key} className="snap-row">
+            <div className="snap-top">
+              <span className="snap-label">{x.label}</span>
+              {x.value !== null && <span className="snap-val">{x.value}{x.unit.startsWith("%") ? "%" : x.unit.startsWith("x") ? "×" : ""}<span className="snap-unit">{x.unit.replace(/^%\s?|^x\s?/, " ")}</span></span>}
+              {x.series.length > 1 && <Spark s={x.series} />}
+            </div>
+            <p className="snap-reading">{x.reading}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Spark({ s }: { s: { x: string; y: number }[] }) {
+  const w = 64, h = 20, ys = s.map((p) => p.y);
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = hi - lo || 1;
+  const pts = s.map((p, i) => `${(i / (s.length - 1)) * w},${h - 2 - ((p.y - lo) / span) * (h - 4)}`).join(" ");
+  const up = ys[ys.length - 1] >= ys[0];
+  return (
+    <svg className={`spark ${up ? "up" : "down"}`} width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-label={`${s[0].x} to ${s[s.length - 1].x}`}>
+      <polyline points={pts} fill="none" />
+    </svg>
+  );
+}
+
 // ---- one company's promise record (push and pull share it) ----------------------
 
 function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base: string }) {
@@ -374,6 +444,9 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
           </>
         )}
       </section>
+
+      {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
+      {l.snapshot && l.snapshot.metrics.length > 0 && <SnapshotView m={l.snapshot.metrics} lender={l.snapshot.lender} />}
 
       {!noCalls && l.threads.length === 0 && (
         <div className="notice"><b>No forward-looking promises found.</b><p>Management didn't commit to numbers, directions or milestones in the calls read.</p></div>
