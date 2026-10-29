@@ -1,0 +1,32 @@
+{
+  "company": "AARTIIND",
+  "call": "May 2026",
+  "note": "Q4 FY26 call. Mostly milestones (Zone IV, JVs) and capex/debt promises; few hard P&L numbers.",
+  "promises": [
+    {"id": "capex_fy27", "match": ["capex for FY27 is expected to be in the range of INR700 crore to INR800 crore", "FY27 capex is what we are saying will be in the range of INR750 crore to INR800 crore"],
+     "kind": "hard", "metric": "capex", "period": "FY27", "low": 700, "high": 800, "alt_low": 750},
+    {"id": "zone4_fy27", "match": ["entire capex will get commissioned during FY27", "commission within the current financial year", "commissioned in a phased manner during the current financial year", "remaining 5 different blocks will get commissioned"],
+     "kind": "milestone", "metric": ["capacity", "capex", "other"], "period": "FY27"},
+    {"id": "mpp_q1", "match": ["within this quarter, we should be able to declare it sort of commissioned"],
+     "kind": "milestone", "metric": ["capacity", "other"], "period": "Q1FY27"},
+    {"id": "augene_h1", "match": ["on track for commissioning in H1FY27", "Augene to commission within hopefully, June, July"],
+     "kind": "milestone", "metric": ["capacity", "other"], "period": "H1FY27"},
+    {"id": "recycling_cy26", "match": ["commissioning on track for the CY26", "recycling JV is expected to commission within this calendar year"],
+     "kind": "milestone", "metric": ["capacity", "other"], "period": ["Q3FY27", "FY27"]},
+    {"id": "net_debt_down", "match": ["anticipate the net debt to decline in the current year", "reduce the net debt levels from the current levels in the current financial year", "debt for this year will start tapering off"],
+     "kind": "directional", "metric": "debt", "period": "FY27"},
+    {"id": "gross_block", "match": ["INR9,500 crore to INR10,000 crore"],
+     "kind": "hard", "metric": "other", "period": "FY27", "low": 9500, "high": 10000},
+
+    {"id": "nd_ebitda", "optional": true, "match": ["2.5x net debt to EBITDA"]},
+    {"id": "wc_days", "optional": true, "match": ["55 to 60 days"]},
+    {"id": "tax_rate", "optional": true, "match": ["9% to 14%", "10% to 15%"]},
+    {"id": "capex_ebitda", "optional": true, "match": ["INR350 crore to INR400 crore", "target as a management team still remains"]},
+    {"id": "ktpa_360", "optional": true, "match": ["360 KTPA"]},
+    {"id": "dyes_share", "optional": true, "match": ["10% to 11%"]},
+    {"id": "zone4_two_years", "optional": true, "match": ["over the course of 2 years"]},
+    {"id": "fcf_gt_capex", "optional": true, "match": ["cash flow should be more than the capex"]},
+    {"id": "price_passthrough", "optional": true, "match": ["next 3 to 6 months, we will be able to fully pass on"]},
+    {"id": "new_contract_capex", "optional": true, "match": ["INR200 crore to INR250 crore"]}
+  ]
+}

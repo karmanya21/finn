@@ -1,0 +1,181 @@
+{
+ "company": "LT",
+ "call": "May 2026",
+ "note": "Q4 FY26 call: FY27 guidance plus the five-year Lakshya 31 plan. Labelled from all management sentences with a forward-looking cue, not only the pre-filtered excerpts.",
+ "promises": [
+  {
+   "id": "oi_fy27",
+   "match": [
+    "group order inflows to grow in the range of 10% to 12%"
+   ],
+   "kind": "hard",
+   "metric": "order_inflow",
+   "period": "FY27",
+   "low": 10,
+   "high": 12
+  },
+  {
+   "id": "rev_fy27",
+   "match": [
+    "we expect growth to be in the range of 10% to 12% for FY27",
+    "revenue guidance of 10% to 12% for FY27"
+   ],
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "period": "FY27",
+   "low": 10,
+   "high": 12
+  },
+  {
+   "id": "ppm_margin_fy27",
+   "match": [
+    "expect the same to be stable as well in FY27",
+    "guidance for stable margins for FY",
+    "PPM margin guidance of 7.8"
+   ],
+   "kind": "hard",
+   "metric": [
+    "ebitda_margin",
+    "operating_margin"
+   ],
+   "period": "FY27",
+   "low": 7.8,
+   "high": 7.8
+  },
+  {
+   "id": "wc_fy27",
+   "match": [
+    "guiding the working capital to be around 10% in FY27"
+   ],
+   "kind": "hard",
+   "metric": "working_capital",
+   "period": "FY27",
+   "low": 10,
+   "high": 10
+  },
+  {
+   "id": "h2_pickup",
+   "match": [
+    "softer first half",
+    "second half of the FY27 will be a more, busier second half"
+   ],
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "period": "H2FY27"
+  },
+  {
+   "id": "concession_exit",
+   "match": [
+    "closure this quarter, that is Q1 FY",
+    "expected to achieve closure in Q1 FY27"
+   ],
+   "kind": "milestone",
+   "metric": "other",
+   "period": "Q1FY27"
+  },
+  {
+   "id": "l31_oi",
+   "match": [
+    "order inflow growth at a CAGR return of 10% to 12%",
+    "Concluding with the Lakshya guidance, over the next five years"
+   ],
+   "kind": "hard",
+   "metric": "order_inflow",
+   "period": "multi-year",
+   "low": 10,
+   "high": 12
+  },
+  {
+   "id": "l31_rev",
+   "match": [
+    "revenue growth of 12% to 15%",
+    "target of 12% to 15% Revenue CAGR",
+    "Concluding with the Lakshya guidance, over the next five years"
+   ],
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "period": "multi-year",
+   "low": 12,
+   "high": 15
+  },
+  {
+   "id": "l31_roe",
+   "match": [
+    "Return on Equity in the range of 16% to 17%",
+    "ROE targets of 16 to 17%",
+    "guidance of 16% to 17%",
+    "Concluding with the Lakshya guidance, over the next five years"
+   ],
+   "kind": "hard",
+   "metric": "roe",
+   "period": "multi-year",
+   "low": 16,
+   "high": 17
+  },
+  {
+   "id": "ltts_l31",
+   "optional": true,
+   "match": [
+    "13% to 15% revenue CAGR",
+    "EBIT margins of 16% to 17%"
+   ]
+  },
+  {
+   "id": "ltf_l31",
+   "optional": true,
+   "match": [
+    "20% plus loan book growth",
+    "credit costs below 2%",
+    "3% to 3.2% ROA",
+    "16% to 18% ROE"
+   ]
+  },
+  {
+   "id": "capex_plan",
+   "optional": true,
+   "match": [
+    "capital outlay of approximately Rs 50 billion",
+    "invest around Rs 50 billion for upgradation",
+    "Rs 50 billion or Rs 5,000 crores"
+   ]
+  },
+  {
+   "id": "energy_margin",
+   "optional": true,
+   "match": [
+    "expect the margin to improve in this segment",
+    "expect the segment margins to move this up",
+    "margin should be improving in that segment"
+   ]
+  },
+  {
+   "id": "dc_200mw",
+   "optional": true,
+   "match": [
+    "200 MW"
+   ]
+  },
+  {
+   "id": "ltm_double",
+   "optional": true,
+   "match": [
+    "aspires to double revenues"
+   ]
+  },
+  {
+   "id": "realty",
+   "optional": true,
+   "match": [
+    "30 million square feet",
+    "100 million square feet"
+   ]
+  },
+  {
+   "id": "existing_biz",
+   "optional": true,
+   "match": [
+    "mostly would be from the existing businesses"
+   ]
+  }
+ ]
+}

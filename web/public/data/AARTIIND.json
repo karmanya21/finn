@@ -1,0 +1,1318 @@
+{
+ "symbol": "AARTIIND",
+ "name": "Aarti Industries",
+ "sector": "Specialty chemicals",
+ "size": "mid",
+ "built": "2026-10-29",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 2387.0,
+    "qoq": 8.253968253968246,
+    "yoy": 42.50746268656715
+   },
+   {
+    "label": "EBITDA",
+    "value": 382.0,
+    "qoq": 12.023460410557174,
+    "yoy": 80.18867924528301
+   },
+   {
+    "label": "PBT",
+    "value": 180.0,
+    "qoq": 62.16216216216217,
+    "yoy": 328.57142857142856
+   },
+   {
+    "label": "PAT",
+    "value": 155.0,
+    "qoq": 13.138686131386867,
+    "yoy": 260.4651162790698
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf",
+   "promises": 5
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf",
+   "promises": 10
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf",
+   "promises": 11
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf",
+   "promises": 9
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf",
+   "promises": 22
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf",
+   "promises": 14
+  }
+ ],
+ "record": {
+  "kept": 2,
+  "missed": 1,
+  "resolved": 3,
+  "moved": 6,
+  "quiet": 3,
+  "open": 11,
+  "by_status": {
+   "delivered": 2,
+   "missed": 1,
+   "delayed": 2,
+   "gone_quiet": 3,
+   "open": 8,
+   "tracking": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "AARTIIND-0",
+   "title": "FY26 capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "₹1,100 cr",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "₹950–1,000 cr",
+     "to": "≤₹1,000 cr",
+     "type": "raised"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "≤₹1,000 cr",
+     "to": "₹1,000 cr",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "₹1,000 cr",
+     "to": "₹1,100 cr",
+     "type": "raised"
+    }
+   ],
+   "status": "delivered",
+   "detail": "FY26 capex at INR1,125 crore",
+   "evidence": {
+    "quote": "From a capital allocation perspective, as guided earlier, the capex for FY26 is at about INR1,125 crore.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Based on our current plan, we expect the capex in FY26 to be about 950-1000 crs.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "₹950–1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Capex for the quarter was at about Rs. 280 crore and is expected to be below Rs. 1,000 crore for the year FY26, as guided earlier.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "≤₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "CAPEX for the quarter was at Rs. 267 crore and is expected to be around Rs. 1,000 crore for the year FY26, as guided earlier, reflecting continued capital discipline",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "₹1,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "the CAPEX for the year is estimated to be about Rs. 1,100 crs, a tad more than our earlier guided CAPEX of about Rs. 1,000 crs.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "₹1,100 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-1",
+   "title": "FY26 net debt reduction",
+   "kind": "hard",
+   "metric": "debt",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "₹200–300 cr",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Borrowings ₹3,848 cr → ₹4,966 cr (up ₹1,118 cr). Gross borrowings, not net of cash.",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So, plus the CAPEX intensity is also going down. So directionally, I expect the number to be lower by maybe Rs. 200-300 crore kind of range.",
+     "speaker": "Chetan Gandhi",
+     "page": 11,
+     "target": "₹200–300 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-2",
+   "title": "Renewable power delivery - solar contract",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delayed",
+   "detail": "Renewable PPA delayed to April 2026",
+   "evidence": {
+    "quote": "A large chunk of it is expected to get commissioned only in April 2026.",
+    "call": "Nov 2025, p13",
+    "new_deadline": "April 2026"
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "These agreements are on track, with one of the contracts to start delivering within this calendar year, and the second one is expected to begin by end FY26 or early FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "One solar component of that is expected to get commissioned from November, December this year, versus the hybrid component of that is expected to get commissioned around April, May, and next year.",
+     "speaker": "Suyog Kotecha",
+     "page": 16,
+     "target": "",
+     "period": "FY26",
+     "deadline": "December 2025",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-3",
+   "title": "Renewable power delivery - hybrid contract",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Not mentioned since Nov 2025",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "These agreements are on track, with one of the contracts to start delivering within this calendar year, and the second one is expected to begin by end FY26 or early FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "versus the hybrid component of that is expected to get commissioned around April, May, and next year.",
+     "speaker": "Suyog Kotecha",
+     "page": 16,
+     "target": "",
+     "period": "FY27",
+     "deadline": "May 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "A large chunk of it is expected to get commissioned only in April 2026. So that is a significant benefit that will flow through in the next financial year.",
+     "speaker": "Suyog Kotecha",
+     "page": 13,
+     "target": "",
+     "period": "FY27",
+     "deadline": "April 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-4",
+   "title": "Zone 4 projects commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Zone 4 project",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "Q4FY26",
+     "to": "Q4FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "Q4FY27",
+     "to": "Q3FY27",
+     "type": "advanced"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q3FY27",
+     "to": "Q4FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "I think we will complete the Zone-4 CAPEX by and large within this financial year, a significant part of that number is sort of reserved for that.",
+     "speaker": "Suyog Kotecha",
+     "page": 8,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8662e3b4-11bc-43fe-acc3-5ec5e7072e51.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our Zone IV projects are progressing well and expected to commercialise in a phased manner from H2 FY26.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": "H2FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "Post that, there are 5 blocks, incremental blocks in Zone 4. I think each of the blocks will get sort of sequentially commissioned throughout the next financial year.",
+     "speaker": "Suyog Kotecha",
+     "page": 6,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "During the current calendar year, we expect the upcoming MPP, Chloro toluene and downstream process blocks to be commissioned in a phased manner.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On Zone IV projects, they are expected to be commissioned in a phased manner during the current financial year.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The project is being commissioned in a phased manner this year, FY27, with ramp-up expected over FY28 and FY29.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-5",
+   "title": "Augene Chemical (Superform JV) commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Augene Chemicals JV",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q1FY27",
+     "to": "Q2FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Project execution is progressing well, with commissioning expected in H1 CY26, and market development activities have been initiated to establish our presence",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "H1CY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The Joint Venture with Superform is progressing well, with commissioning expected in Q1FY27, focusing on agrochemical, paints and coatings applications",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Augene, the Superform joint venture is on track for commissioning in H1FY27 with an initial focus on agrochemicals and coating end markets.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "H1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "this joint venture remains firmly on track for commissioning in Q2FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-6",
+   "title": "Aarti Circularity (RESL / Re Aarti JV) commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Aarti Circularity",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "Q4FY27",
+     "to": "Q2FY27",
+     "type": "advanced"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q2FY27",
+     "to": "Q3FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q3FY27",
+     "to": "Q4FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect commercial operations to start in early FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "early FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The project is progressing well as planned and we anticipate the JV to be ready for commissioning in H1FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "H1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Our circularity initiatives also continue to gain momentum with commissioning on track for the CY26.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "our plastic recycling initiative with Re Sustainability through Aarti Circularity, that is slated for commissioning in the second half of FY27",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": "H2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-7",
+   "title": "Multipurpose plant, Calcium Chloride, and PEDA plants commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "PEDA project",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "Q3FY26",
+     "to": "Q4FY26",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q4FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "Q1FY27",
+     "to": "Q4FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "In the first phase, the multipurpose plant and a calcium chloride unit, we are expected to commission by the end of this year.",
+     "speaker": "Suyog Kotecha",
+     "page": 6,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": "December 2025",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "In parallel, the Calcium Chloride facility is expected to be commissioned in this ongoing quarter.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "In terms of ramp-up, we mentioned last time, the calcium chloride and the multipurpose plants are expected to be commissioned within this quarter. The remaining process blocks will get commissioned throughout this calendar year as we go towards the first 3 quarters of the next financial year.",
+     "speaker": "Suyog Kotecha",
+     "page": 10,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So within this quarter, we should be able to declare it sort of commissioned and commercialized.",
+     "speaker": "Suyog Kotecha",
+     "page": 6,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Our PEDA project is progressing through market seeding activities and expected to be commercialised soon.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-8",
+   "title": "FY26 business recovery",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We are confident of a strong recovery in the ensuing quarters, driven by ongoing demand revival.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": "driven by ongoing demand revival",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=894da67a-9c3b-43e2-a68b-f2f3d2c260a4.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-9",
+   "title": "FY27 tax rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "≤15%",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "tracking",
+   "pace": {
+    "so_far": 14.0,
+    "so_far_label": "Q1 FY27",
+    "status": "on_pace",
+    "measure": "tax rate"
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "On the tax rate, I anticipate FY '27, we should be somewhere at a number below 15%.",
+     "speaker": "Chetan Gandhi",
+     "page": 11,
+     "target": "≤15%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-10",
+   "title": "FY28 tax rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "15–20%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Not mentioned since Nov 2025",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "And FY '28, we should be between 15% to 20%.",
+     "speaker": "Chetan Gandhi",
+     "page": 11,
+     "target": "15–20%",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-11",
+   "title": "MMA capacity expansion to 360 KTPA",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q4FY26",
+     "to": "Q4FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Completed key capacity expansion to 360 KTPA",
+   "evidence": {
+    "quote": "We have completed our key fuel additives capacity expansion to 360 KTPA, from 290 KTPA, providing additional flexibility to serve newer markets with newer products as demand evolves.",
+    "call": "Aug 2026, p2",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "In addition to that, in the next quarter, which is Q4 of FY '26, we are also planning to commission a slightly increased capacity of MMA based on the debottlenecking effort and in addition to that, one specific molecule PEDA, again, which will become a form of MPP.",
+     "speaker": "Suyog Kotecha",
+     "page": 6,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "expect the same to be available by end of this fiscal i.e., Q4FY26.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6de2d23f-e730-4ed9-b1a5-32b0270a0ed3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Our expansion to 360 KTPA is on track and is expected to be commissioned soon in line with the market requirements.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-12",
+   "title": "FY27 capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹700–800 cr",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "₹700–800 cr",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "₹700–800 cr",
+     "to": "₹700–800 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So capex for next year will be substantially lower than INR1,000 crore.",
+     "speaker": "Chetan Gandhi",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=86d30b58-d7f1-4a46-8216-b281fc11e8ec.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Our capex for FY27 is expected to be in the range of INR700 crore to INR800 crore as we continue our journey to optimize capex and maximize the returns.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "₹700–800 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "In line with our earlier guidance, FY27 CAPEX remains on track within the Rs. 700 to 800 crore range, with about Rs 180 crores already deployed in Q1FY27.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "₹700–800 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-13",
+   "title": "FY27 net debt reduction",
+   "kind": "directional",
+   "metric": "debt",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "However, given the capex intensity is lower, we still anticipate the net debt to decline in the current year.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-14",
+   "title": "FY27 share of business in dyes, pigments and printing",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "10–11%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So overall, if you look at our share of business in dyes, pigments and printing mix, we classify these 3 end markets together, it remains in the range of 10% to 11% and it will remain broadly around that.",
+     "speaker": "Suyog Kotecha",
+     "page": 9,
+     "target": "10–11%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-15",
+   "title": "FY27 gross block",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "₹9,500–10,000 cr",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delayed",
+   "detail": "Delay and slower ramp-up for FY27 chemistry blocks",
+   "evidence": {
+    "quote": "The other blocks, there are 5 different chemistry blocks in Zone IV, is where we are seeing the delay and which might lead to a bit slower ramp-up compared to our original anticipation that we had given in our target aspirations for FY27, '28.",
+    "call": "Aug 2026, p5",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "End of FY27, we should be in the range of around INR9,500 crore to INR10,000 crore.",
+     "speaker": "Chetan Gandhi",
+     "page": 18,
+     "target": "₹9,500–10,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-16",
+   "title": "Q1FY27 debt portfolio liquidation",
+   "kind": "milestone",
+   "metric": "debt",
+   "scope": "company",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2026)",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "And as we speak, bulk of that cash has already been used to liquidate the debt portfolio immediately in the first week of April.",
+     "speaker": "Chetan Gandhi",
+     "page": 9,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-17",
+   "title": "FY27 cost and operating efficiencies",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Most of the initiatives on the costs that are implemented, they will start accruing fully in the current year.",
+     "speaker": "Suyog Kotecha",
+     "page": 12,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-18",
+   "title": "FY27 asset utilization",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "asset",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So it will definitely lead to a better utilization of that asset in the coming financial year.",
+     "speaker": "Suyog Kotecha",
+     "page": 18,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-19",
+   "title": "FY27 partnership and JV conversations",
+   "kind": "directional",
+   "metric": "deal_wins",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "And we expect many such conversations to proceed and conclude in the coming financial year as well.",
+     "speaker": "Suyog Kotecha",
+     "page": 20,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5a23d262-8f44-44db-b093-8c277e6c9b3a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-20",
+   "title": "Q2FY27 volume growth",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Volume recovery is expected in Q2 supported by underlying stable demand.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": "supported by underlying stable demand",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-21",
+   "title": "FY27 new products launch count",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "5–10",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Within this year, we are looking at anywhere between 5 to 10 products.",
+     "speaker": "Suyog Kotecha",
+     "page": 11,
+     "target": "5–10",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-22",
+   "title": "Q2FY27 polymers demand recovery",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "Polymers",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Polymers demand remained soft during Q1, primarily due to weak demand for downstream products in US & China, with recovery expected in Q2.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-23",
+   "title": "FY27 sustained volume growth",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "While short-term export headwinds may persist due to the West Asia conflict, we expect sustained volume growth supported by capacity expansion and deeper market penetration.",
+     "speaker": "Suyog Kotecha",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-24",
+   "title": "Q2FY27 export volumes",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "exports",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The volumes are expected to go up in Q2.",
+     "speaker": "Suyog Kotecha",
+     "page": 7,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  },
+  {
+   "id": "AARTIIND-25",
+   "title": "FY28 project commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The commissioning of that project is expected around September to October 2027 time frame.",
+     "speaker": "Suyog Kotecha",
+     "page": 18,
+     "target": "",
+     "period": "FY28",
+     "deadline": "October 2027",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f9fc9623-37a9-4f18-bda2-5392dc4df538.pdf"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,615 @@
+[
+  {
+    "symbol": "INFY",
+    "transcripts": 38,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "Apr 2026",
+      "Feb 2026",
+      "Jan 2026",
+      "Oct 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "LT",
+    "transcripts": 35,
+    "latest": [
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Oct 2025",
+      "Jul 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "transcripts": 39,
+    "latest": [
+      "Oct 2026",
+      "Aug 2026",
+      "May 2026",
+      "Apr 2026",
+      "Feb 2026",
+      "Dec 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Revenue",
+      "Interest",
+      "Expenses",
+      "Financing Profit",
+      "Financing Margin %",
+      "Other Income",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Gross NPA %",
+      "Net NPA %",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "HDFCBANK",
+    "transcripts": 21,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "Apr 2026",
+      "Mar 2026",
+      "Jan 2026",
+      "Oct 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Revenue",
+      "Interest",
+      "Expenses",
+      "Financing Profit",
+      "Financing Margin %",
+      "Other Income",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Gross NPA %",
+      "Net NPA %",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "ETERNAL",
+    "transcripts": 21,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Jan 2026",
+      "Oct 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "DIXON",
+    "transcripts": 36,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Oct 2025",
+      "Jul 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "transcripts": 22,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Oct 2025",
+      "Jul 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "M&M",
+    "transcripts": 33,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "CIPLA",
+    "transcripts": 49,
+    "latest": [
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Nov 2025",
+      "Jul 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "transcripts": 21,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Oct 2025",
+      "Aug 2025",
+      "Apr 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "TATAPOWER",
+    "transcripts": 41,
+    "latest": [
+      "Jul 2026",
+      "May 2026",
+      "Feb 2026",
+      "Dec 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "BEL",
+    "transcripts": 17,
+    "latest": [
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "transcripts": 22,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "TRENT",
+    "transcripts": 0,
+    "latest": [],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "TATASTEEL",
+    "transcripts": 14,
+    "latest": [
+      "May 2026",
+      "Feb 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025",
+      "Feb 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "AARTIIND",
+    "transcripts": 42,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "KAYNES",
+    "transcripts": 18,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Dec 2025",
+      "Nov 2025",
+      "Aug 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "PRAJIND",
+    "transcripts": 33,
+    "latest": [
+      "Aug 2026",
+      "Jun 2026",
+      "Mar 2026",
+      "Dec 2025",
+      "Sep 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "HCLTECH",
+    "transcripts": 46,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "Apr 2026",
+      "Jan 2026",
+      "Oct 2025",
+      "Jul 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "POLYCAB",
+    "transcripts": 35,
+    "latest": [
+      "Oct 2026",
+      "Jul 2026",
+      "May 2026",
+      "Jan 2026",
+      "Jan 2026",
+      "Oct 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Sep 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "PIIND",
+    "transcripts": 44,
+    "latest": [
+      "Aug 2026",
+      "May 2026",
+      "Feb 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  },
+  {
+    "symbol": "INDIGO",
+    "transcripts": 44,
+    "latest": [
+      "Jul 2026",
+      "Jun 2026",
+      "Jan 2026",
+      "Nov 2025",
+      "Aug 2025",
+      "May 2025"
+    ],
+    "quarters": 13,
+    "last_quarter": "Jun 2026",
+    "rows": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "OPM %",
+      "Other Income",
+      "Interest",
+      "Depreciation",
+      "Profit before tax",
+      "Tax %",
+      "Net Profit",
+      "EPS in Rs",
+      "Raw PDF"
+    ]
+  }
+]

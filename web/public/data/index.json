@@ -1,0 +1,76 @@
+[
+ {
+  "symbol": "INFY",
+  "name": "Infosys",
+  "sector": "IT services",
+  "size": "large",
+  "latest_call": "Oct 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 3,
+   "missed": 0,
+   "resolved": 3,
+   "moved": 2,
+   "quiet": 1,
+   "open": 10,
+   "by_status": {
+    "cant_verify": 2,
+    "delivered": 3,
+    "gone_quiet": 1,
+    "delayed": 1,
+    "open": 3,
+    "tracking": 2,
+    "on_track": 2
+   }
+  }
+ },
+ {
+  "symbol": "LT",
+  "name": "Larsen & Toubro",
+  "sector": "Capital goods",
+  "size": "large",
+  "latest_call": "Jul 2026",
+  "latest_results": "Q2FY27",
+  "record": {
+   "kept": 2,
+   "missed": 2,
+   "resolved": 4,
+   "moved": 3,
+   "quiet": 1,
+   "open": 12,
+   "by_status": {
+    "missed": 2,
+    "gone_quiet": 1,
+    "beat": 1,
+    "delivered": 1,
+    "open": 9,
+    "on_track": 1,
+    "tracking": 2
+   }
+  }
+ },
+ {
+  "symbol": "AARTIIND",
+  "name": "Aarti Industries",
+  "sector": "Specialty chemicals",
+  "size": "mid",
+  "latest_call": "Aug 2026",
+  "latest_results": "Q1FY27",
+  "record": {
+   "kept": 2,
+   "missed": 1,
+   "resolved": 3,
+   "moved": 6,
+   "quiet": 3,
+   "open": 11,
+   "by_status": {
+    "delivered": 2,
+    "missed": 1,
+    "delayed": 2,
+    "gone_quiet": 3,
+    "open": 8,
+    "tracking": 1
+   }
+  }
+ }
+]

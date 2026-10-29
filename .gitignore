@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+.next/
+
+# fetched and derived data; regenerate with the scripts
+data/raw/
+data/text/
+data/cache/
+
+# challenge brief (not ours to republish)
+*ENAM_AI_Engineer_Build_Challenge*.pdf
