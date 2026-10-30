@@ -147,30 +147,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.37,
+    "label": "Net debt",
+    "value": 0.33,
     "unit": "x equity",
-    "reading": "Borrowings ₹2,561 cr, 0.37× equity; down from ₹4,725 cr in FY22.",
+    "reading": "Net debt ₹2,278 cr in FY26, 0.33× equity; down from ₹4,639 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 4725.0
+      "y": 4639.0
      },
      {
       "x": "FY23",
-      "y": 4464.0
+      "y": 4378.0
      },
      {
       "x": "FY24",
-      "y": 1753.0
+      "y": 1455.0
      },
      {
       "x": "FY25",
-      "y": 2237.0
+      "y": 1897.0
      },
      {
       "x": "FY26",
-      "y": 2561.0
+      "y": 2278.0
      }
     ]
    },
@@ -463,25 +463,26 @@
    3017.3
   ]
  ],
+ "price_asof": 1793354296,
  "case": {
   "bull": [
    {
-    "figure": "13% → 19%",
-    "point": "Operating margins have expanded significantly over the last four years, demonstrating strong operational efficiency.",
+    "figure": "Operating margin 19%",
+    "point": "Operating margin expanded from 13% in FY22 to 19% in FY26, showing improved operational efficiency.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "123%",
-    "point": "The company maintains high capital quality with operating cash flow consistently exceeding net profit over five years.",
+    "figure": "Net debt ₹2,278 cr",
+    "point": "Net debt decreased to ₹2,278 cr in FY26 from ₹4,639 cr in FY22, strengthening the balance sheet.",
     "refs": [
-     "cash_conversion"
+     "debt"
     ]
    },
    {
-    "figure": "7% → 28%",
-    "point": "Return on capital employed has quadrupled since FY22, indicating highly effective capital allocation.",
+    "figure": "ROCE 28%",
+    "point": "ROCE rose significantly to 28% in FY26 compared to just 7% in FY22.",
     "refs": [
      "returns"
     ]
@@ -489,15 +490,15 @@
   ],
   "bear": [
    {
-    "figure": "51% → 18%",
-    "point": "Revenue growth has decelerated sharply from a five-year average of 51% to 18% over the last twelve months.",
+    "figure": "Revenue growth 18%",
+    "point": "Revenue growth over the last 12 months slowed down to 18% compared to a 51% five-year compound rate.",
     "refs": [
      "sales_growth"
     ]
    },
    {
-    "figure": "71% → 18%",
-    "point": "Profit growth has experienced a significant slowdown compared to the three-year compounded annual growth rate.",
+    "figure": "Profit growth 18%",
+    "point": "Profit growth in the last 12 months dropped to 18% from a 69% five-year compound rate.",
     "refs": [
      "profit_growth"
     ]

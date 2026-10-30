@@ -1130,30 +1130,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.02,
+    "label": "Net cash",
+    "value": -0.05,
     "unit": "x equity",
-    "reading": "Borrowings ₹236 cr, 0.02× equity; up from ₹118 cr in FY22.",
+    "reading": "₹646 cr net cash in FY26; down from ₹289 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 118.0
+      "y": -289.0
      },
      {
       "x": "FY23",
-      "y": 191.0
+      "y": -504.0
      },
      {
       "x": "FY24",
-      "y": 161.0
+      "y": -241.0
      },
      {
       "x": "FY25",
-      "y": 202.0
+      "y": -569.0
      },
      {
       "x": "FY26",
-      "y": 236.0
+      "y": -646.0
      }
     ]
    },
@@ -1446,52 +1446,51 @@
    7787.0
   ]
  ],
+ "price_asof": 1793354296,
  "case": {
   "bull": [
    {
-    "figure": "41%",
-    "point": "Revenue growth over the last 12 months significantly outpaced the historical three-year compound growth rate of 27%.",
+    "figure": "Revenue growth 41% LTM",
+    "point": "The company has demonstrated strong recent momentum with revenue growth significantly outpacing its historical three-year average.",
     "refs": [
      "sales_growth"
     ]
    },
    {
-    "figure": "33%",
-    "point": "Return on Capital Employed has improved substantially from 21% in FY22, demonstrating strong capital efficiency.",
+    "figure": "ROCE 33% in FY26",
+    "point": "Capital efficiency has improved substantially, rising from 21% in FY22 to 33% in the most recent fiscal year.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "+35.1%",
-    "point": "International business and company revenue growth accelerated in H2FY26 compared to the first half of the year.",
+    "figure": "H2FY26 revenue growth 35.1%",
+    "point": "Management successfully delivered on their H2 growth targets, showing an acceleration compared to the first half of the year.",
     "refs": [
-     "POLYCAB-10",
      "POLYCAB-11"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "1.5%",
-    "point": "Actual advertising and promotion spending is significantly below the stated target range of 3–5% for FY26.",
+    "figure": "A&P spend 1.5% vs 3–5% target",
+    "point": "Management missed their advertising and promotion spending commitment, falling well below the stated target range for FY26.",
     "refs": [
      "POLYCAB-1"
     ]
    },
    {
-    "figure": "6.7%",
-    "point": "BharatNet segment profitability is currently trailing the company's long-term margin target of 12–14%.",
+    "figure": "BharatNet margin 6.7% vs 12–14% target",
+    "point": "Profitability in the BharatNet segment is significantly lagging behind the company's stated margin guidance.",
     "refs": [
      "POLYCAB-6"
     ]
    },
    {
-    "figure": "Gone quiet",
-    "point": "Management has ceased providing updates on critical Project Spring capex guidance and BharatNet execution timelines.",
+    "figure": "Project Spring capex gone quiet",
+    "point": "Management stopped providing updates on annual capex guidance after multiple revisions, creating uncertainty regarding investment plans.",
     "refs": [
-     "POLYCAB-5",
-     "POLYCAB-7"
+     "POLYCAB-5"
     ]
    }
   ]

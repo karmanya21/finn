@@ -89,18 +89,30 @@ def build(slug: str) -> dict:
             add("cash_conversion", "Cash conversion", round(ratio), "% of profit, 5y",
                 f"Over 5 years, operating cash flow was {ratio:.0f}% of net profit ({word}).")
 
-    # Debt
+    # Debt: net of cash, the way investors and managements talk about leverage
     eq, res, bor = bs.get("Equity Capital"), bs.get("Reserves"), bs.get("Borrowings")
+    cash = {}
+    try:
+        cash = screener.schedule(page, "Other Assets").get("Cash Equivalents", {})
+    except Exception:
+        pass
     if not lender and bor and res:
         ys = _years(bor)
+        cs = dict(_years(cash, 10)) if cash else {}
+        net = [(x, y - cs[x]) for x, y in ys if x in cs]
         e_last = (_years(eq)[-1][1] if eq else 0) + _years(res)[-1][1]
-        if ys and e_last:
-            de = ys[-1][1] / e_last
-            prev = ys[0][1]
-            dir_ = "up" if ys[-1][1] > prev * 1.1 else "down" if ys[-1][1] < prev * 0.9 else "flat"
-            add("debt", "Debt", round(de, 2), "x equity",
-                f"Borrowings ₹{ys[-1][1]:,.0f} cr, {de:.2f}× equity; {dir_} from ₹{prev:,.0f} cr in {ys[0][0]}.",
-                [{"x": x, "y": y} for x, y in ys])
+        series, label = (net, "Net debt") if len(net) == len(ys) and net else (ys, "Gross borrowings")
+        if series and e_last:
+            last, first = series[-1][1], series[0][1]
+            ratio = last / e_last
+            dir_ = "up" if last > first + abs(first) * 0.1 else "down" if last < first - abs(first) * 0.1 else "flat"
+            def amt(v):
+                return f"₹{-v:,.0f} cr net cash" if v < 0 and label == "Net debt" else f"₹{v:,.0f} cr"
+            reading = (f"{amt(last)} in {series[-1][0]}" if last < 0 and label == "Net debt" else
+                       f"{label} {amt(last)} in {series[-1][0]}, {ratio:.2f}× equity") + \
+                      f"; {dir_} from {amt(first)} in {series[0][0]}."
+            add("debt", label if last >= 0 else "Net cash", round(ratio, 2), "x equity", reading,
+                [{"x": x, "y": y} for x, y in series])
     elif lender:
         add("debt", "Debt", None, "", "A lender borrows to lend, so debt-to-equity isn't a risk signal here; see return on equity.")
 
@@ -122,7 +134,7 @@ CASE_SCHEMA = {
     "type": "object",
     "properties": {
         side: {"type": "array", "items": {"type": "object", "properties": {
-            "figure": {"type": "string", "description": "The key number this point rests on, as short as possible: '+11.8%', '₹1,118 cr', '28% → 14%', '3 of 4'"},
+            "figure": {"type": "string", "description": "The key number with a short label saying what it measures: 'FY26 revenue growth 11.8%', 'Net debt ₹4,358 cr', 'Op. margin 28% → 14%', 'Kept 3 of 4'. Never a bare number."},
             "point": {"type": "string", "description": "One sentence, at most 22 words, saying what the figure means"},
             "refs": {"type": "array", "items": {"type": "string"}, "description": "Promise ids (e.g. LT-3) or metric keys used"},
         }, "required": ["figure", "point", "refs"]}}
@@ -132,7 +144,7 @@ CASE_SCHEMA = {
 }
 
 CASE_SYSTEM = """Write a tight bull case and bear case for an investor, using ONLY the promise record and numbers given.
-- 2 or 3 points each side. Each point leads with a figure (the number it rests on) and one sentence on what it means. No point without a number.
+- 2 or 3 points each side. Each point leads with a figure (the number it rests on, labelled so it reads on its own) and one sentence on what it means. No point without a number.
 - Every point must cite in refs the promise ids and/or metric keys it rests on. No outside knowledge, no news, no industry claims.
 - The promise record is evidence about management credibility: kept promises and raised guidance support the bull case; misses, cuts, delays and promises gone quiet support the bear case.
 - If the evidence for a side is thin, give fewer points rather than inventing."""
@@ -160,8 +172,18 @@ def case(company: str, ledger: dict, snap: dict) -> dict:
               + "\n\nNUMBERS (key | reading):\n" + "\n".join(metrics))
     out = complete_json(CASE_SYSTEM, prompt, CASE_SCHEMA, model=config.MODEL_STRONG, fallback=config.MODEL_CHEAP)
     valid = {t["id"] for t in threads} | {m["key"] for m in snap["metrics"]}
+    names = {t["id"]: t["title"] for t in threads} | {m["key"]: m["label"] for m in snap["metrics"]}
     clean = {}
     for side in ("bull", "bear"):
-        clean[side] = [{"figure": p.get("figure", ""), "point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
+        clean[side] = [{"figure": _labelled(p.get("figure", ""), [r for r in p["refs"] if r in valid], names),
+                        "point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
                        for p in out.get(side, []) if any(r in valid for r in p["refs"])][:3]
     return clean
+
+
+def _labelled(figure: str, refs: list[str], names: dict[str, str]) -> str:
+    """A bare "11.8%" means nothing on its own: attach what it cites ("11.8% · FY26 revenue
+    growth"). Attached, not prefixed: the figure may be a change in the thing, not its level."""
+    if not figure or re.search(r"[A-Za-z]{3,}", figure.replace("cr", "")) or not refs or not names.get(refs[0]):
+        return figure
+    return f"{figure} · {names[refs[0]]}"

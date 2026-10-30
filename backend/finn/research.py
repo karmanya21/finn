@@ -189,9 +189,10 @@ def enrich(ledger: dict, slug: str, progress: Progress = _quiet) -> dict:
         ledger["business"] = None
     ledger["snapshot"] = snapshot.build(slug)
     try:  # 3 months of closes for the header sparkline (portfolio prices also refresh daily)
-        ledger["price"] = [[d, c] for d, c, _ in push.eod(ledger["symbol"], "3mo")]
+        rows, asof = push.eod(ledger["symbol"], "3mo")
+        ledger["price"], ledger["price_asof"] = [[d, c] for d, c, _ in rows], asof
     except Exception:
-        ledger["price"] = None
+        ledger["price"], ledger["price_asof"] = None, None
     ledger["case"] = snapshot.case(ledger["name"], ledger, ledger["snapshot"])
     return ledger
 

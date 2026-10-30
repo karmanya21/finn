@@ -8,17 +8,21 @@ pre-baked alerts.
 import json
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+
+IST = timezone(timedelta(hours=5, minutes=30))
 
 import requests
 
-from finn import fiscal
+from finn import financials, fiscal, results_pdf
 from finn.filings import (LABEL, ROUTINE, WEIGHT, classify, related_promises, results_promises,
                           speaker_promises, summarise)
 from finn.portfolio import PORTFOLIO
 from finn.sources import bse
 
 # The roles that alert: who runs the company and who signs its numbers.
+DEBT_PAPER = re.compile(r"\bNCDs?\b|non[- ]convertible|debentures?|commercial paper|\bbonds?\b|"
+                        r"tier[- ]ii|perpetual|subordinated", re.I)
 SENIOR = re.compile(r"\b(CEO|CFO|MD|Managing Director|Chief Executive Officer|Chief Financial Officer|"
                     r"(?<!Vice )Chair(?:man|person|woman)?)\b", re.I)
 # "September 30, 2026", "30th September, 2026", "30.09.2026"
@@ -58,6 +62,7 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
                 item["numbers"] = h
             item["promises"] = results_promises(ledger)
             item["summary"] = f"{q} results" if q else None
+            item["quarter"] = q
         elif score >= summarise_min:
             s = summarise(c.name, a)
             if s:
@@ -80,6 +85,14 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
             if ledger:
                 item["promises"] = related_promises({**a, "summary": item["summary"]}, ledger)
 
+        # A lender raises debt every week; an NCD or CP allotment is funding, not news.
+        lender = bool(((ledger or {}).get("snapshot") or {}).get("lender"))
+        paper = DEBT_PAPER.search(f"{a['subject']} {a['headline']} {item['summary'] or ''}")
+        if kind == "fund_raise" and paper and (lender or re.search(r"commercial paper", paper.group(0), re.I)):
+            kind = item["type"] = "unclassified"
+            item["label"] = LABEL[kind]
+            score = WEIGHT[kind]
+
         if item["promises"] and kind != "results":
             score += 10  # touches something management promised
         if any(p["promises"] for p in item["people"]):
@@ -88,7 +101,15 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
         item["importance"] = min(score, 100)
         item["routine"] = item["importance"] < ROUTINE
         out.append(item)
-    return _fold_repeats(_fold_results(out))
+    folded = _fold_results(out)
+    for i in folded:  # screener can lag a new quarter by a day or two: read the filing itself
+        if i["type"] == "results" and not i["numbers"] and i.get("quarter"):
+            try:
+                pdfs = [x for x in [i["pdf"], *[d["pdf"] for d in i.get("also", [])]] if x]
+                i["numbers"] = results_pdf.from_filing(c.name, pdfs, i["quarter"], financials.load(c.symbol, c.slug))
+            except Exception as e:
+                print(f"  results {c.symbol}: couldn't read the filing ({type(e).__name__})", flush=True)
+    return _fold_repeats(folded)
 
 
 def _fold_repeats(items: list[dict]) -> list[dict]:
@@ -162,8 +183,9 @@ def build_digest(ledgers: dict[str, dict], days: int = 30) -> dict:
 YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/{}"
 
 
-def eod(symbol: str, days: str = "6mo") -> list[list]:
-    """[[YYYY-MM-DD, close, volume], ...] oldest first, from Yahoo's chart API (NSE)."""
+def eod(symbol: str, days: str = "6mo") -> tuple[list[list], int | None]:
+    """([[YYYY-MM-DD, close, volume], ...] oldest first, time of the last trade as a Unix
+    timestamp) from Yahoo's chart API (NSE). The last row is intraday if the market was open."""
     r = requests.get(YAHOO.format(requests.utils.quote(f"{symbol}.NS")),
                      params={"range": days, "interval": "1d"}, timeout=30,
                      headers={"User-Agent": "Mozilla/5.0"})
@@ -174,20 +196,20 @@ def eod(symbol: str, days: str = "6mo") -> list[list]:
     for ts, close, vol in zip(res["timestamp"], q["close"], q["volume"]):
         if close is None or vol is None:
             continue
-        rows.append([datetime.fromtimestamp(ts).strftime("%Y-%m-%d"), round(close, 2), int(vol)])
-    return rows
+        rows.append([datetime.fromtimestamp(ts, IST).strftime("%Y-%m-%d"), round(close, 2), int(vol)])
+    return rows, res.get("meta", {}).get("regularMarketTime")
 
 
 def build_prices() -> dict:
-    out = {}
+    out, asof = {}, {}
     for c in PORTFOLIO:
         try:
-            out[c.symbol] = eod(c.symbol)
+            out[c.symbol], asof[c.symbol] = eod(c.symbol)
         except Exception as e:
             print(f"  prices {c.symbol:<11} FAILED {e}", flush=True)
         time.sleep(0.3)
-    return {"built": datetime.now().isoformat(timespec="seconds"), "source": "Yahoo Finance (NSE, end of day)",
-            "series": out}
+    return {"built": datetime.now(IST).isoformat(timespec="seconds"), "source": "Yahoo Finance (NSE)",
+            "series": out, "asof": asof}
 
 
 def write(path, data) -> None:

@@ -1,5 +1,5 @@
 {
- "built": "2026-10-30T17:01:26",
+ "built": "2026-10-30T17:35:48",
  "days": 30,
  "items": [
   {
@@ -17,8 +17,49 @@
    "promises": [
     "DIXON-47"
    ],
-   "numbers": null,
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 21793.64,
+      "qoq": 40.173119298981334,
+      "yoy": 46.70872646589979,
+      "prev_yoy": null
+     },
+     {
+      "label": "EBITDA",
+      "value": 599.6300000000001,
+      "qoq": 27.10488383924028,
+      "yoy": 6.604679277485448,
+      "prev_yoy": null
+     },
+     {
+      "label": "PBT",
+      "value": 532.35,
+      "qoq": -38.738521024649586,
+      "yoy": -42.36078779545036,
+      "prev_yoy": null
+     },
+     {
+      "label": "PAT",
+      "value": 410.87,
+      "qoq": -42.76221389465472,
+      "yoy": -44.90143489338877,
+      "prev_yoy": null
+     }
+    ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 2.7513990320111743,
+     "year_ago": 3.786459006505536,
+     "prev": 3.0342829724858924
+    },
+    "unit": "₹ cr",
+    "source": "the company's results filing (consolidated); screener hasn't tabulated this quarter yet"
+   },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -126,8 +167,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-30T14:49:27",
-   "type": "fund_raise",
-   "label": "Fund raise",
+   "type": "unclassified",
+   "label": "Routine",
    "subject": "Announcement under Regulation 30 (LODR)-Allotment",
    "headline": "Allotment of Secured Redeemable Non-Convertible Debentures on Private Placement basis",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/20d73044-2322-4d46-883f-67bff54a3b50.pdf",
@@ -136,8 +177,8 @@
    "promises": [],
    "numbers": null,
    "senior": false,
-   "importance": 75,
-   "routine": false
+   "importance": 5,
+   "routine": true
   },
   {
    "id": "MAXHEALTH-353a1940-cfa2-43a9-bad9-7b61148b104f",
@@ -152,8 +193,49 @@
    "summary": "Max Healthcare reported Q2 revenue of ₹3,219 Cr up 20% YoY and PAT of ₹448 Cr up 10% YoY.",
    "people": [],
    "promises": [],
-   "numbers": null,
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 2569.21,
+      "qoq": 8.580955721693705,
+      "yoy": 20.311219544175273,
+      "prev_yoy": null
+     },
+     {
+      "label": "EBITDA",
+      "value": 711.49,
+      "qoq": 18.88879605647924,
+      "yoy": 23.705120403373027,
+      "prev_yoy": null
+     },
+     {
+      "label": "PBT",
+      "value": 540.92,
+      "qoq": 23.976072058857234,
+      "yoy": 21.274353743021756,
+      "prev_yoy": null
+     },
+     {
+      "label": "PAT",
+      "value": 414.45,
+      "qoq": 28.328585583353984,
+      "yoy": -15.642173824547124,
+      "prev_yoy": null
+     }
+    ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 27.69294841605007,
+     "year_ago": 26.933180985918792,
+     "prev": 25.291927460833328
+    },
+    "unit": "₹ cr",
+    "source": "the company's results filing (consolidated); screener hasn't tabulated this quarter yet"
+   },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -348,6 +430,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -538,6 +621,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -790,6 +874,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -952,6 +1037,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -1219,6 +1305,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -1491,6 +1578,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": []
@@ -1680,6 +1768,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -1989,6 +2078,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false
   },
@@ -2033,8 +2123,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-21T12:22:21",
-   "type": "fund_raise",
-   "label": "Fund raise",
+   "type": "unclassified",
+   "label": "Routine",
    "subject": "Announcement under Regulation 30 (LODR)-Allotment",
    "headline": "Allotment of Secured Redeemable Non-Convertible Debentures on Private Placement Basis.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5bb76cad-5a8c-42c8-8aa3-6d81edf31bf6.pdf",
@@ -2043,8 +2133,8 @@
    "promises": [],
    "numbers": null,
    "senior": false,
-   "importance": 75,
-   "routine": false
+   "importance": 5,
+   "routine": true
   },
   {
    "id": "HDFCBANK-dd194e0a-4c4d-4692-9778-4edd64a1a93e",
@@ -2314,6 +2404,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -2404,6 +2495,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": []
@@ -2564,6 +2656,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -2715,6 +2808,7 @@
     "source": "screener.in, consolidated where published"
    },
    "senior": false,
+   "quarter": "Q2FY27",
    "importance": 95,
    "routine": false,
    "also": [
@@ -3613,8 +3707,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-09T12:08:09",
-   "type": "fund_raise",
-   "label": "Fund raise",
+   "type": "unclassified",
+   "label": "Routine",
    "subject": "Announcement under Regulation 30 (LODR)-Allotment",
    "headline": "Allotment of Secured Redeemable Non-Convertible Debentures on Private Placement basis.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d19f2dd1-edd0-42c7-aebe-680558175811.pdf",
@@ -3623,8 +3717,8 @@
    "promises": [],
    "numbers": null,
    "senior": false,
-   "importance": 75,
-   "routine": false
+   "importance": 5,
+   "routine": true
   },
   {
    "id": "MAXHEALTH-c358253f-93da-4e00-8592-bdd99b6f1db7",

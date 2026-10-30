@@ -1043,9 +1043,9 @@
    "status": "tracking",
    "pace": {
     "so_far": 11.41474825881228,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "needs": 8.79211734495371,
-    "needs_label": "H2 FY27",
+    "needs_label": "H2FY27",
     "needs_for": 10,
     "status": "on_pace",
     "measure": "revenue growth"
@@ -1214,7 +1214,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 11.41474825881228,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "status": "behind",
     "measure": "revenue growth",
     "note": "against the plan's annual growth rate"
@@ -1462,30 +1462,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 1.15,
+    "label": "Net debt",
+    "value": 0.96,
     "unit": "x equity",
-    "reading": "Borrowings ₹125,497 cr, 1.15× equity; flat from ₹125,508 cr in FY22.",
+    "reading": "Net debt ₹104,649 cr in FY26, 0.96× equity; flat from ₹106,555 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 125508.0
+      "y": 106555.0
      },
      {
       "x": "FY23",
-      "y": 120650.0
+      "y": 98130.0
      },
      {
       "x": "FY24",
-      "y": 116322.0
+      "y": 100964.0
      },
      {
       "x": "FY25",
-      "y": 132409.0
+      "y": 109444.0
      },
      {
       "x": "FY26",
-      "y": 125497.0
+      "y": 104649.0
      }
     ]
    },
@@ -1778,50 +1778,51 @@
    3871.7
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "20% CAGR",
-    "point": "Group order inflow achieved a 20% CAGR in FY26, beating the 10% guidance.",
+    "figure": "FY26 order inflow 20% CAGR",
+    "point": "Management significantly outperformed initial expectations by delivering 20% CAGR order inflow growth compared to the 10% guidance.",
     "refs": [
      "LT-0"
     ]
    },
    {
-    "figure": "4.1%",
-    "point": "FY26 Net Working Capital to revenue closed at 4.1%, significantly beating the 10% target.",
+    "figure": "FY26 NWC to revenue 4.1%",
+    "point": "Working capital efficiency greatly exceeded the target of 10% by closing the period at a low 4.1%.",
     "refs": [
      "LT-3"
     ]
    },
    {
-    "figure": "115%",
-    "point": "Five-year operating cash flow reached 115% of net profit, demonstrating robust cash generation.",
+    "figure": "ROCE 15% in FY26",
+    "point": "Capital returns improved substantially over the period, rising from 10% in FY22 to 15% in FY26.",
     "refs": [
-     "cash_conversion"
+     "returns"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "11.8%",
-    "point": "FY26 reported revenue growth of 11.8% missed the target of 15%.",
+    "figure": "FY26 revenue growth 11.8%",
+    "point": "Management missed their stated FY26 revenue growth target of 15% by delivering only 11.8%.",
     "refs": [
      "LT-1"
     ]
    },
    {
-    "figure": "16% → 13%",
-    "point": "Operating margin continuously compressed from 16% in FY22 to 13% in FY26.",
+    "figure": "Data Center capacity 30 MW",
+    "point": "The company missed its FY26 Data Center capacity commissioning goal by delivering only 30 MW total capacity.",
     "refs": [
-     "margin"
+     "LT-14"
     ]
    },
    {
-    "figure": "8.5%",
-    "point": "Management provided no update on the FY26 Projects and Manufacturing margin target of 8.5% after period end.",
+    "figure": "Operating margin 13% in FY26",
+    "point": "Operating profitability deteriorated over the period, compressing from 16% in FY22 down to 13% in FY26.",
     "refs": [
-     "LT-2"
+     "margin"
     ]
    }
   ]

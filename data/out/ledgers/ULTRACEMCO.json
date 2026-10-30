@@ -422,7 +422,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Borrowings ₹24,102 cr → ₹23,755 cr",
+   "detail": "Net debt ₹22,429 cr → ₹22,371 cr",
    "statements": [
     {
      "call": "Jul 2025",
@@ -1337,30 +1337,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.31,
+    "label": "Net debt",
+    "value": 0.29,
     "unit": "x equity",
-    "reading": "Borrowings ₹23,755 cr, 0.31× equity; up from ₹11,299 cr in FY22.",
+    "reading": "Net debt ₹22,371 cr in FY26, 0.29× equity; up from ₹10,940 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 11299.0
+      "y": 10940.0
      },
      {
       "x": "FY23",
-      "y": 11058.0
+      "y": 9908.0
      },
      {
       "x": "FY24",
-      "y": 11403.0
+      "y": 10620.0
      },
      {
       "x": "FY25",
-      "y": 24102.0
+      "y": 22429.0
      },
      {
       "x": "FY26",
-      "y": 23755.0
+      "y": 22371.0
      }
     ]
    },
@@ -1653,51 +1653,51 @@
    11045.0
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "21%",
-    "point": "Management delivered strong results with a 21% revenue growth rate on a like-for-like basis.",
+    "figure": "FY27 revenue growth 21%",
+    "point": "Management delivered a strong beat on their revenue growth target for FY27.",
     "refs": [
      "ULTRACEMCO-2"
     ]
    },
    {
-    "figure": "164%",
-    "point": "Cash conversion remained robust as operating cash flow reached 164% of net profit over 5 years.",
+    "figure": "Operating cash flow 164%",
+    "point": "Cash conversion was exceptionally strong over a five year period.",
     "refs": [
      "cash_conversion"
     ]
    },
    {
-    "figure": "21%",
-    "point": "Profit growth accelerated to 21% in the last 12 months, supported by delivered borrowing cost reductions.",
+    "figure": "Net debt ₹22,371 cr",
+    "point": "Management successfully delivered on their average cost of borrowing target for FY26.",
     "refs": [
-     "profit_growth",
      "ULTRACEMCO-5"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "19%",
-    "point": "Operating margins compressed from 22% in FY22 down to 19% in FY26.",
+    "figure": "Operating margin 19%",
+    "point": "Operating margins have compressed down from 22% in FY22.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "603",
-    "point": "India Cements EBITDA per ton lagged behind the target, reaching only INR603 in Q1FY27.",
+    "figure": "India Cements EBITDA INR603",
+    "point": "The India Cements EBITDA per metric ton target is currently lagging behind expectations.",
     "refs": [
      "ULTRACEMCO-0"
     ]
    },
    {
-    "figure": "13%",
-    "point": "Return on capital employed declined to 13% in FY26 compared to 14% in FY22.",
+    "figure": "ICL P&L benefits Q4 FY28",
+    "point": "The full P&L benefits from ICL capex have been delayed into fiscal 2028.",
     "refs": [
-     "returns"
+     "ULTRACEMCO-6"
     ]
    }
   ]

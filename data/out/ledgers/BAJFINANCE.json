@@ -2055,54 +2055,51 @@
    939.1
   ]
  ],
+ "price_asof": 1793354299,
  "case": {
   "bull": [
    {
-    "figure": "17.5 million",
-    "point": "Management successfully exceeded the upper end of their raised FY26 new customer acquisition guidance.",
-    "refs": [
-     "BAJFINANCE-1"
-    ]
-   },
-   {
-    "figure": "22.4%",
-    "point": "The company delivered on its FY26 AUM growth target, demonstrating consistent execution of its core lending strategy.",
+    "figure": "FY26 AUM growth 22.4%",
+    "point": "Management successfully delivered on its AUM growth target for the full year.",
     "refs": [
      "BAJFINANCE-2"
     ]
    },
    {
-    "figure": "19–21%",
-    "point": "Long-term return on equity targets remain on track, supported by a steady improvement in ROE from 17% to 18%.",
+    "figure": "FY26 new customer additions 17.5 million",
+    "point": "The company surpassed its raised guidance for customer acquisitions during the period.",
     "refs": [
-     "BAJFINANCE-23",
-     "BAJFINANCE-38",
+     "BAJFINANCE-1"
+    ]
+   },
+   {
+    "figure": "ROE 18%",
+    "point": "Return on equity improved from prior years, reflecting steady fundamental delivery.",
+    "refs": [
      "returns"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "6%",
-    "point": "The company significantly missed its FY26 MSME business growth target of 10–12%.",
+    "figure": "FY26 MSME business growth 6%",
+    "point": "The company missed its full-year growth target for the MSME segment.",
     "refs": [
      "BAJFINANCE-5"
     ]
    },
    {
-    "figure": "4.1%",
-    "point": "The gold loan business is currently behind its 5% portfolio contribution target for FY27.",
+    "figure": "Gold loan portfolio 4.1%",
+    "point": "Current gold loan contribution remains behind the targeted share for the balance sheet.",
     "refs": [
      "BAJFINANCE-7"
     ]
    },
    {
-    "figure": "3",
-    "point": "Multiple strategic initiatives, including fee revenue and AI-related product transitions, have gone quiet or lapsed without updates.",
+    "figure": "B2C custom AI model launch delayed",
+    "point": "The anticipated B2C model launch has experienced delays and awaits further assessment.",
     "refs": [
-     "BAJFINANCE-8",
-     "BAJFINANCE-9",
-     "BAJFINANCE-14"
+     "BAJFINANCE-30"
     ]
    }
   ]

@@ -204,7 +204,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Borrowings ₹3,848 cr → ₹4,966 cr (up ₹1,118 cr). Gross borrowings, not net of cash.",
+   "detail": "Net debt ₹3,553 cr → ₹4,358 cr (up ₹805 cr)",
    "statements": [
     {
      "call": "May 2025",
@@ -769,7 +769,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 14.0,
-    "so_far_label": "Q1 FY27",
+    "so_far_label": "Q1FY27",
     "status": "on_pace",
     "measure": "tax rate"
    },
@@ -1453,30 +1453,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.83,
+    "label": "Net debt",
+    "value": 0.73,
     "unit": "x equity",
-    "reading": "Borrowings ₹4,966 cr, 0.83× equity; up from ₹2,587 cr in FY22.",
+    "reading": "Net debt ₹4,358 cr in FY26, 0.73× equity; up from ₹2,413 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 2587.0
+      "y": 2413.0
      },
      {
       "x": "FY23",
-      "y": 2907.0
+      "y": 2706.0
      },
      {
       "x": "FY24",
-      "y": 3623.0
+      "y": 3107.0
      },
      {
       "x": "FY25",
-      "y": 3848.0
+      "y": 3553.0
      },
      {
       "x": "FY26",
-      "y": 4966.0
+      "y": 4358.0
      }
     ]
    },
@@ -1769,25 +1769,26 @@
    435.75
   ]
  ],
+ "price_asof": 1793354402,
  "case": {
   "bull": [
    {
-    "figure": "14.0",
-    "point": "The FY27 tax rate is tracking well below the target at 14.0.",
+    "figure": "FY26 capex INR1,125 crore",
+    "point": "Management delivered and raised FY26 capex targets from INR1,000 crore to INR1,100 crore.",
     "refs": [
-     "AARTIIND-9"
+     "AARTIIND-0"
     ]
    },
    {
-    "figure": "360 KTPA",
-    "point": "Management successfully delivered on the MMA capacity expansion to 360 KTPA.",
+    "figure": "MMA capacity expansion 360 KTPA",
+    "point": "The company successfully completed its key capacity expansion to 360 KTPA.",
     "refs": [
      "AARTIIND-11"
     ]
    },
    {
-    "figure": "175%",
-    "point": "Cash conversion was strong over 5 years, with operating cash flow reaching 175% of net profit.",
+    "figure": "Cash conversion 175%",
+    "point": "Operating cash flow was robust at 175% of net profit over the five-year period.",
     "refs": [
      "cash_conversion"
     ]
@@ -1795,23 +1796,23 @@
   ],
   "bear": [
    {
-    "figure": "₹1,118 cr",
-    "point": "Net debt reduction was badly missed as borrowings jumped by ₹1,118 crore to ₹4,966 crore.",
+    "figure": "Net debt INR4,358 crore",
+    "point": "Management missed its FY26 net debt reduction target as debt rose significantly by INR805 crore.",
     "refs": [
      "AARTIIND-1",
      "debt"
     ]
    },
    {
-    "figure": "28% → 14%",
-    "point": "Operating margins compressed severely from 28% in FY22 down to 14% by FY26.",
+    "figure": "Operating margin 28% to 14%",
+    "point": "Operating margins experienced severe compression down to 14% in FY26 from 28% in FY22.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "22% → 7%",
-    "point": "ROCE degraded significantly from 22% in FY22 down to just 7% in FY26.",
+    "figure": "ROCE 7%",
+    "point": "Return on capital employed dropped sharply from 22% in FY22 down to 7% in FY26.",
     "refs": [
      "returns"
     ]

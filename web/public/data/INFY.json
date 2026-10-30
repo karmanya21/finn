@@ -544,7 +544,7 @@
     }
    ],
    "status": "cant_verify",
-   "detail": "Guided in constant currency; reported ₹ revenue grew +12.3% in H1 FY27, which includes currency moves, so it isn't comparable.",
+   "detail": "Guided in constant currency; reported ₹ revenue grew +12.3% in H1FY27, which includes currency moves, so it isn't comparable.",
    "statements": [
     {
      "call": "Apr 2026",
@@ -612,7 +612,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 21.028166846236722,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "status": "on_pace",
     "measure": "EBIT margin"
    },
@@ -746,7 +746,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 29.499207822190034,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "status": "on_pace",
     "measure": "tax rate"
    },
@@ -1095,30 +1095,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.1,
+    "label": "Net cash",
+    "value": -0.14,
     "unit": "x equity",
-    "reading": "Borrowings ₹9,176 cr, 0.10× equity; up from ₹5,474 cr in FY22.",
+    "reading": "₹13,025 cr net cash in FY26; flat from ₹11,998 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 5474.0
+      "y": -11998.0
      },
      {
       "x": "FY23",
-      "y": 8299.0
+      "y": -3874.0
      },
      {
       "x": "FY24",
-      "y": 8359.0
+      "y": -6427.0
      },
      {
       "x": "FY25",
-      "y": 8227.0
+      "y": -16228.0
      },
      {
       "x": "FY26",
-      "y": 9176.0
+      "y": -13025.0
      }
     ]
    },
@@ -1411,55 +1411,52 @@
    1185.0
   ]
  ],
+ "price_asof": 1793354296,
  "case": {
   "bull": [
    {
-    "figure": "+11.1%",
-    "point": "H2 FY26 revenue growth accelerated over H1's +8.1%, meeting seasonality expectations through large deal ramp-ups.",
+    "figure": "Delivered FY26 operating margin 20.9%",
+    "point": "Management successfully delivered on their operating margin target for the fiscal year.",
     "refs": [
-     "INFY-5",
-     "INFY-6"
+     "INFY-1"
     ]
    },
    {
-    "figure": "40%",
-    "point": "ROCE expanded in FY26 while five-year operating cash conversion remained strong at 110% of net profit.",
+    "figure": "ROCE 40% in FY26",
+    "point": "Capital returns improved from 37% in FY22, demonstrating strong operational efficiency.",
     "refs": [
-     "returns",
+     "returns"
+    ]
+   },
+   {
+    "figure": "Net cash ₹13,025 cr",
+    "point": "The company maintains a solid net cash position with high cash conversion of 110%.",
+    "refs": [
+     "debt",
      "cash_conversion"
-    ]
-   },
-   {
-    "figure": "20.9%",
-    "point": "Management delivered FY26 operating margins within target and remains on pace to hold 20–22% for FY27.",
-    "refs": [
-     "INFY-1",
-     "INFY-11"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "1.5–3.5% → 1–2%",
-    "point": "Management repeatedly cut FY27 revenue growth guidance from an initial 1.5–3.5% down to 1–2%.",
+    "figure": "Lowered FY27 revenue growth 1–2%",
+    "point": "Guidance was repeatedly lowered across periods, indicating deteriorating top-line momentum.",
     "refs": [
      "INFY-10"
     ]
    },
    {
-    "figure": "26% → 24%",
-    "point": "Operating margins compressed from FY22 to FY26 while total borrowings rose to ₹9,176 crore.",
+    "figure": "Delayed Telstra JV transaction close",
+    "point": "The JV closure was delayed awaiting regulatory approvals, missing its original FY26 timeline.",
     "refs": [
-     "margin",
-     "debt"
+     "INFY-4"
     ]
    },
    {
-    "figure": "20,000",
-    "point": "Management went quiet on its FY26 fresh hiring promise while the Telstra JV closure faced delays.",
+    "figure": "Operating margin compressed 26% → 24%",
+    "point": "Operating margins declined from FY22 levels over the multi-year period.",
     "refs": [
-     "INFY-2",
-     "INFY-4"
+     "margin"
     ]
    }
   ]

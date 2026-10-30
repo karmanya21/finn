@@ -78,6 +78,17 @@ def announcements(code: str, days: int = 30) -> list[dict]:
     return out
 
 
+def pdf_pages(url: str) -> list[str]:
+    """Every page's text (downloads once; same cache as pdf_text)."""
+    pdf_text(url)  # downloads and caches the PDF
+    key = hashlib.sha1(url.encode()).hexdigest()[:16]
+    try:
+        with pymupdf.open(RAW / "filings" / f"{key}.pdf") as doc:
+            return [p.get_text() for p in doc]
+    except Exception:
+        return []
+
+
 def pdf_text(url: str, max_pages: int = 6) -> str:
     """Text of a filing's attachment (first pages: profiles and summaries sit up front)."""
     key = hashlib.sha1(url.encode()).hexdigest()[:16]

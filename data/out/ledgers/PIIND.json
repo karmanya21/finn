@@ -1465,30 +1465,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.03,
+    "label": "Net cash",
+    "value": -0.16,
     "unit": "x equity",
-    "reading": "Borrowings ₹342 cr, 0.03× equity; flat from ₹316 cr in FY22.",
+    "reading": "₹1,840 cr net cash in FY26; down from ₹1,094 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 316.0
+      "y": -1094.0
      },
      {
       "x": "FY23",
-      "y": 46.0
+      "y": -2197.0
      },
      {
       "x": "FY24",
-      "y": 191.0
+      "y": -2513.0
      },
      {
       "x": "FY25",
-      "y": 184.0
+      "y": -2316.0
      },
      {
       "x": "FY26",
-      "y": 342.0
+      "y": -1840.0
      }
     ]
    },
@@ -1781,26 +1781,27 @@
    2100.0
   ]
  ],
+ "price_asof": 1793354297,
  "case": {
   "bull": [
    {
-    "figure": "25.3%",
-    "point": "The company successfully delivered on its FY26 EBITDA margin target of 25-26%.",
+    "figure": "FY26 EBITDA margin 25.3%",
+    "point": "Management successfully delivered on their multi-year EBITDA margin target of 25%.",
     "refs": [
-     "PIIND-6",
-     "PIIND-1"
+     "PIIND-1",
+     "PIIND-6"
     ]
    },
    {
-    "figure": "58%",
-    "point": "Gross margins significantly outperformed the multi-year target of 50-52%.",
+    "figure": "FY26 gross margin 58%",
+    "point": "The company significantly outperformed its multi-year gross margin target of 50-52%.",
     "refs": [
      "PIIND-14"
     ]
    },
    {
-    "figure": "0.03x",
-    "point": "The company maintains a very strong balance sheet with negligible debt relative to equity.",
+    "figure": "Net cash ₹1,840 cr",
+    "point": "The company maintains a strong balance sheet with a healthy net cash position.",
     "refs": [
      "debt"
     ]
@@ -1808,24 +1809,25 @@
   ],
   "bear": [
    {
-    "figure": "139 days",
-    "point": "Trade working capital significantly missed the FY26 target of 65-70 days.",
+    "figure": "FY26 trade working capital 139 days",
+    "point": "The company missed its working capital efficiency target of 65-70 days by a wide margin.",
     "refs": [
      "PIIND-10"
     ]
    },
    {
-    "figure": "4 of 8-10",
-    "point": "New molecule commercialization fell well short of the FY26 target despite raised expectations.",
+    "figure": "FY26 new molecule commercialization 4",
+    "point": "Management failed to meet their target of 8-10 new molecule launches for the fiscal year.",
     "refs": [
      "PIIND-11"
     ]
    },
    {
-    "figure": "-33%",
-    "point": "Profit growth has declined sharply over the last 12 months.",
+    "figure": "Last 12 months revenue growth -17%",
+    "point": "Revenue growth has decelerated significantly, reflecting a sharp decline in recent performance.",
     "refs": [
-     "profit_growth"
+     "sales_growth",
+     "PIIND-8"
     ]
    }
   ]

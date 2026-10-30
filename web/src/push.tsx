@@ -5,6 +5,7 @@ import {
   ALERT_TYPES, AlertSettings, CompanySummary, Digest, Filing, Headline, Ledger, Prices, Thread,
   feed, inWindow, loadDigest, loadLedger, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
 } from "./data";
+import { cleanSubject, filingText, fmtChange, fmtDate, normText, priceWhen, tone } from "./format";
 import { Shell, go } from "./shell";
 
 const SETTINGS_EVENT = "finn:settings";
@@ -46,8 +47,9 @@ function useThreads(index: CompanySummary[]): Map<string, Thread> {
 /** One thing that happened: a price/volume alert, a filing, or a move in a promise. */
 export interface Update {
   key: string; symbol: string; name: string; weight: number;
-  tag: string;        // what it is, in words ("Results", "Price", "Promise cut")
-  title: string;      // the one line that matters
+  tag: string;        // what it is, in words ("Results", "Price", "Missed")
+  date: string;       // when, in the app's one date format
+  title: string;      // the one line that matters, with its number
   line?: string;      // optional detail
   tone?: "up" | "down";
   open: () => void;
@@ -80,13 +82,13 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
 
     for (const m of moveAlerts(prices, s, 5, digest.items)) {
       const up = m.pct >= 0;
-      const what = [m.byPrice && `${up ? "+" : ""}${m.pct.toFixed(1)}% on ${fmtDate(m.date)}`,
-                    m.byVolume && `volume ${m.volRatio.toFixed(1)}× average`].filter(Boolean).join(" · ");
+      const what = [m.byPrice && `${fmtChange(m.pct, 1)} on the day`,
+                    m.byVolume && `volume ${m.volRatio.toFixed(1)}× its average`].filter(Boolean).join(" · ");
       add({ key: `m-${m.symbol}-${m.date}`, symbol: m.symbol, name: names.get(m.symbol) ?? m.symbol,
         weight: (m.byPrice ? 55 + Math.min(Math.abs(m.pct), 15) * 2 : 45) + (m.byVolume ? Math.min(m.volRatio, 6) * 3 : 0)
           + (m.reason ? 10 : 0) + recent(m.date),
-        tag: m.byPrice ? "Price" : "Volume", title: what, tone: m.byPrice ? (up ? "up" : "down") : undefined,
-        line: m.reason ? `Same day: ${m.reason.type === "results" ? resultsHeadline(m.reason) : (m.reason.summary ?? cleanSubject(m.reason.subject))}`
+        tag: m.byPrice ? "Price" : "Volume", date: fmtDate(m.date), title: what, tone: m.byPrice ? (up ? "up" : "down") : undefined,
+        line: m.reason ? `Same day: ${m.reason.type === "results" ? resultsHeadline(m.reason) : filingText(m.reason.summary, m.reason.subject)}`
           : `Closed ₹${m.close.toLocaleString("en-IN")}; no material filing that day`,
         open: () => go(`/c/${m.symbol}`) });
     }
@@ -97,23 +99,39 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
       // Results without figures yet say little; let a real move or a cut outrank them.
       const blank = f.type === "results" && !f.numbers ? 25 : 0;
       add({ key: `f-${f.id}`, symbol: f.symbol, name: f.name, weight: f.importance + recent(f.at.slice(0, 10)) - blank,
-        tag: f.label, title: f.type === "results" ? resultsHeadline(f) : (f.summary ?? cleanSubject(f.subject)),
+        tag: f.label, date: fmtDate(f.at), title: f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject),
         tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down") : undefined,
-        line: f.people.length ? peopleLine(f) : `Filed ${fmtDate(f.at)}`,
+        line: f.people.length ? peopleLine(f) : undefined,
         open: () => go(`/filings/${f.id}`) });
     }
-    const latestCall = new Map(ledgers.map((l) => [l.symbol, l.latest_call]));
+    const bySym = new Map(ledgers.map((l) => [l.symbol, l]));
+    const VERDICT = new Set(["Missed", "Kept", "Beat"]);
     for (const i of feed(ledgers)) {
-      const call = latestCall.get(i.symbol);
-      if (!call || daysBetween(call, lastSession) > RECENT_CALL_DAYS) continue;
+      const l = bySym.get(i.symbol);
+      if (!l?.latest_call || daysBetween(l.latest_call, lastSession) > RECENT_CALL_DAYS) continue;
+      // A verdict is news only if the latest results settled it (period ends this quarter).
+      if (VERDICT.has(i.tag) && !settledBy(i.thread.period, l.latest_results)) continue;
+      const lastEvent = i.thread.events[i.thread.events.length - 1];
+      const date = VERDICT.has(i.tag) || i.tag === "Behind pace" ? `${l.latest_results ?? ""} results`
+        : i.tag === "Gone quiet" ? `${l.latest_call} call` : `${lastEvent?.call ?? l.latest_call} call`;
       add({ key: `p-${i.thread.id}|${i.headline}`, symbol: i.symbol, name: i.name, weight: i.weight,
-        tag: i.tone === "missed" ? "Promise cut" : i.tone === "kept" ? "Promise kept" : i.tone === "quiet" ? "Gone quiet" : "Promise moved",
-        title: i.headline, line: i.line, tone: i.tone === "missed" ? "down" : i.tone === "kept" ? "up" : undefined,
+        tag: i.tag, date, title: normText(i.headline), line: i.line && normText(i.line),
+        tone: i.tone === "missed" ? "down" : i.tone === "kept" ? "up" : undefined,
         open: () => go(`/c/${i.symbol}/t/${i.thread.id}`) });
     }
     for (const list of out.values()) list.sort((a, b) => b.weight - a.weight);
     return out;
   }, [prices, digest, ledgers, s, index]);
+}
+
+/** Did results for `latest` (e.g. "Q4FY26") close this promise's period? */
+function settledBy(period: string, latest: string | null): boolean {
+  if (!latest) return false;
+  const m = latest.match(/Q([1-4])FY(\d{2})/);
+  if (!m) return false;
+  const [q, fy] = [Number(m[1]), m[2]];
+  return period === latest || (q === 4 && period === `FY${fy}`) || (q === 2 && period === `H1FY${fy}`)
+    || (q === 4 && period === `H2FY${fy}`);
 }
 
 function daysBetween(callLabel: string, isoDate: string): number {
@@ -133,7 +151,10 @@ export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSe
   const tiles = index.map((c) => {
     const us = updates.get(c.symbol) ?? [];
     const fresh = seen.size > 0 ? us.filter((u) => !seen.has(u.key)).length : 0;
-    return { c, us, fresh, score: us.length ? us[0].weight + Math.min(us.length, 5) * 2 : -1 };
+    // The tile leads with the top update that carries a number ("+5.4%", "Revenue +22%"),
+    // falling back to the top one only if none does.
+    const lead = us.find((u) => /\d/.test(u.title)) ?? us[0];
+    return { c, us, lead, fresh, score: us.length ? us[0].weight + Math.min(us.length, 5) * 2 : -1 };
   }).sort((a, b) => b.score - a.score);
   const active = tiles.filter((t) => t.us.length);
   const quiet = tiles.filter((t) => !t.us.length);
@@ -142,14 +163,14 @@ export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSe
     <section>
       <h2 className="section-title">Needs attention <span className="count">{active.length}</span></h2>
       <div className="tiles">
-        {active.map(({ c, us, fresh }) => (
+        {active.map(({ c, us, lead, fresh }) => (
           <button key={c.symbol} className="tile" onClick={() => go(`/u/${c.symbol}`)}>
             <span className="tile-top">
               <span className="tile-name">{c.name}</span>
               <span className="tile-count">{us.length}{fresh > 0 && <span className="new">{fresh} new</span>}</span>
             </span>
-            <span className="tile-tag">{us[0].tag}</span>
-            <span className={`tile-line ${us[0].tone ?? ""}`}>{us[0].title}</span>
+            <span className="tile-tag">{lead!.tag} · {lead!.date}</span>
+            <span className={`tile-line ${lead!.tone ?? ""}`}>{lead!.title}</span>
           </button>
         ))}
       </div>
@@ -201,7 +222,7 @@ function UpdateRow({ u }: { u: Update }) {
   return (
     <button className="feed-row" onClick={u.open}>
       <span className="feed-body">
-        <span className="feed-tag">{u.tag}</span>
+        <span className="feed-tag">{u.tag} · {u.date}</span>
         <span className={`feed-head ${u.tone ?? ""}`}>{u.title}</span>
         {u.line && <span className="feed-line">{u.line}</span>}
       </span>
@@ -221,6 +242,15 @@ function useSeenKeys(keys: string[]): Set<string> {
   return before;
 }
 
+/** A newer quarter read from the company's results filing, if screener hasn't caught up. */
+export function useNewerResults(symbol: string, current: Headline | null | undefined): Headline | null {
+  const digest = useData<Digest>(loadDigest);
+  const order = (q: string) => { const m = q.match(/Q([1-4])FY(\d{2})/); return m ? Number(m[2]) * 10 + Number(m[1]) : 0; };
+  const newer = digest?.items.find((f) => f.symbol === symbol && f.type === "results" && f.numbers &&
+    order(f.numbers.quarter) > order(current?.quarter ?? ""));
+  return newer?.numbers ?? null;
+}
+
 // ---- prices -------------------------------------------------------------------------
 
 /** Daily-refreshed portfolio prices; a searched company falls back to its record's series. */
@@ -235,18 +265,22 @@ export function priceStats(rows: [string, number][] | undefined | null) {
 }
 
 /** "₹3,017.30  +5.4%" with a 3-month sparkline. */
-export function PriceLine({ symbol, fallback }: { symbol: string; fallback?: [string, number][] | null }) {
+export function PriceLine({ symbol, fallback, fallbackAsof }: {
+  symbol: string; fallback?: [string, number][] | null; fallbackAsof?: number | null;
+}) {
   const prices = usePrices();
-  const series = prices?.series[symbol]?.map(([d, c]) => [d, c] as [string, number]) ?? fallback ?? null;
+  const own = prices?.series[symbol];
+  const series = own?.map(([d, c]) => [d, c] as [string, number]) ?? fallback ?? null;
+  const asof = own ? prices?.asof?.[symbol] : fallbackAsof;
   const st = priceStats(series);
   if (!series || !st) return null;
   const last3m = series.slice(-63);
   return (
     <div className="price-line">
       <span className="price">₹{st.close.toLocaleString("en-IN", { maximumFractionDigits: 2 })}</span>
-      <span className={st.change >= 0 ? "up" : "down"}>{st.change >= 0 ? "+" : ""}{st.change.toFixed(1)}%</span>
+      <span className={st.change >= 0 ? "up" : "down"}>{fmtChange(st.change, 1)}</span>
       <Sparkline ys={last3m.map(([, c]) => c)} />
-      <span className="price-date">{fmtDate(st.date)} close · 3 months</span>
+      <span className="price-date">{priceWhen(st.date, asof)} · chart: 3 months</span>
     </div>
   );
 }
@@ -270,7 +304,7 @@ export function Footnote({ children }: { children: React.ReactNode }) {
 /** "Q2FY27: Revenue +16% YoY · PAT +27%". The one format for results everywhere. */
 export function resultsLine(h: Headline): string {
   const row = (l: string) => h.rows.find((r) => r.label === l);
-  const pct = (v: number | null | undefined) => v == null ? null : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  const pct = (v: number | null | undefined) => v == null ? null : fmtChange(v);
   const rev = pct(row("Revenue")?.yoy), pat = pct(row("PAT")?.yoy);
   const bits = [rev && `Revenue ${rev} YoY`, pat && `PAT ${pat}`].filter(Boolean);
   return bits.length ? `${h.quarter}: ${bits.join(" · ")}` : `${h.quarter} results`;
@@ -385,8 +419,8 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
             {notable.map((f) => (
               <a key={f.id} id={`f-${f.id}`} className={`feed-row ${f.id === openId ? "focus" : ""}`} href={f.pdf ?? undefined} target="_blank" rel="noreferrer">
                 <span className="feed-body">
-                  <span className="feed-co">{f.name} · {f.label} · {ago(f.at, digest.built)}</span>
-                  <span className="feed-line strong">{f.summary ?? cleanSubject(f.subject)}</span>
+                  <span className="feed-co">{f.name} · {f.label} · {fmtDate(f.at)}</span>
+                  <span className="feed-line strong">{filingText(f.summary, f.subject)}</span>
                 </span>
               </a>
             ))}
@@ -407,7 +441,7 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
                 <a key={f.id} className="routine-row" href={f.pdf ?? undefined} target="_blank" rel="noreferrer">
                   <span className="rr-co">{f.name}</span>
                   <span className="rr-sub">{f.label} · {cleanSubject(f.subject)}</span>
-                  <span className="rr-time">{ago(f.at, digest.built)}</span>
+                  <span className="rr-time">{fmtDate(f.at)}</span>
                 </a>
               ))}
             </div>
@@ -428,14 +462,15 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
     <article id={`f-${f.id}`} className={`card filing ${open ? "focus" : ""}`}>
       <div className="card-top">
         <span className="filing-co">{f.name}</span>
-        <span className="filing-time">{ago(f.at, built)}</span>
+        <span className="filing-time">{fmtDate(f.at)}</span>
       </div>
       <div className="filing-head">
         <span className={`pill kind-${f.type.replace(/[^a-z]/gi, "")}`}>{f.label}</span>
-        <span className="filing-title">{f.type === "results" ? resultsHeadline(f) : (f.summary ?? cleanSubject(f.subject))}</span>
+        <span className="filing-title">{f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject)}</span>
       </div>
 
       {f.numbers && <Numbers h={f.numbers} />}
+      {f.numbers && /filing/.test(f.numbers.source) && <p className="footnote">Figures read from {f.numbers.source}.</p>}
 
       {f.people.map((p, i) => {  // one person can appear twice, once per role
         const leaving = ["resigned", "retired", "ceased"].includes(p.change);
@@ -482,7 +517,7 @@ function PromiseChips({ ts, detail }: { ts: Thread[]; detail?: boolean }) {
         return (
           <button key={t.id} className="pchip" onClick={() => go(`/c/${sym}/t/${t.id}`)}>
             <span className="pchip-title">{t.title}{t.target ? ` · ${t.target}` : ""}</span>
-            <span className={`pchip-status tone-text-${s.tone}`}>{s.label}{detail && t.pace ? `: ${t.pace.so_far_label} at ${t.pace.so_far.toFixed(1)}%` : ""}</span>
+            <span className={`pchip-status tone-text-${s.tone}`}>{s.label}{detail && t.pace ? `: ${normText(t.pace.so_far_label)} at ${t.pace.so_far.toFixed(1)}%` : ""}</span>
           </button>
         );
       })}
@@ -491,16 +526,16 @@ function PromiseChips({ ts, detail }: { ts: Thread[]; detail?: boolean }) {
 }
 
 function Numbers({ h }: { h: Headline }) {
-  const chg = (v: number | null) => v === null ? "–" : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  // Same order as the company page: YoY first and bold, QoQ muted; the title already names the quarter.
   return (
     <div className="numbers">
-      <div className="num-row num-head"><span>{h.quarter}</span><span>₹ cr</span><span>QoQ</span><span>YoY</span></div>
+      <div className="num-row num-head"><span /><span>₹ cr</span><span>YoY</span><span>QoQ</span></div>
       {h.rows.map((r) => (
         <div key={r.label} className="num-row">
           <span>{r.label}</span>
           <span className="num-v">{Math.round(r.value).toLocaleString("en-IN")}</span>
-          <span className={r.qoq === null ? "" : r.qoq >= 0 ? "up" : "down"}>{chg(r.qoq)}</span>
-          <span className={r.yoy === null ? "" : r.yoy >= 0 ? "up" : "down"}>{chg(r.yoy)}</span>
+          <span className={`num-yoy ${tone(r.yoy)}`}>{fmtChange(r.yoy)}</span>
+          <span className="num-qoq">{fmtChange(r.qoq)}</span>
         </div>
       ))}
     </div>
@@ -509,10 +544,6 @@ function Numbers({ h }: { h: Headline }) {
 
 // ---- text helpers ---------------------------------------------------------------------
 
-function cleanSubject(s: string): string {
-  return s.replace(/^Announcement under Regulation 30 \(LODR\)\s*-\s*/i, "")
-    .replace(/^Compliances?-\s*/i, "").replace(/_/g, " ");
-}
 
 function peopleLine(f: Filing): string {
   // Whoever made tracked promises first, then everyone else; two names is enough for a row.
@@ -532,18 +563,8 @@ function topKinds(fs: Filing[]): string {
   return [...c.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k]) => k).join(", ");
 }
 
-function ago(at: string, now: string): string {
-  const h = (new Date(now).getTime() - new Date(at).getTime()) / 3600_000;
-  if (h < 1) return "just now";
-  if (h < 24) return `${Math.floor(h)}h ago`;
-  const d = Math.floor(h / 24);
-  return d === 1 ? "yesterday" : `${d}d ago`;
-}
 
-function fmtDate(s: string): string {
-  return new Date(s.length > 10 ? s : `${s}T00:00:00`).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-}
 
 function fmtStamp(s: string): string {
-  return new Date(s).toLocaleString("en-IN", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+  return `${fmtDate(s)}, ${s.slice(11, 16)}`;
 }

@@ -147,7 +147,7 @@
    "moved": false,
    "events": [],
    "status": "beat",
-   "detail": "Reported revenue growth 201.9% for Q3 FY26",
+   "detail": "Reported revenue growth 201.9% for Q3FY26",
    "statements": [
     {
      "call": "Oct 2025",
@@ -236,9 +236,9 @@
    "status": "tracking",
    "pace": {
     "so_far": 113.65804306980776,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "needs": 91.56425744636533,
-    "needs_label": "H2 FY27",
+    "needs_label": "H2FY27",
     "needs_for": 100,
     "status": "on_pace",
     "measure": "revenue growth"
@@ -618,30 +618,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.15,
+    "label": "Net debt",
+    "value": 0.1,
     "unit": "x equity",
-    "reading": "Borrowings ₹4,592 cr, 0.15× equity; up from ₹70 cr in FY22.",
+    "reading": "Net debt ₹3,069 cr in FY26, 0.10× equity; up from ₹1,506 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 70.0
+      "y": -1506.0
      },
      {
       "x": "FY23",
-      "y": 507.0
+      "y": -510.0
      },
      {
       "x": "FY24",
-      "y": 749.0
+      "y": 18.0
      },
      {
       "x": "FY25",
-      "y": 2045.0
+      "y": -1569.0
      },
      {
       "x": "FY26",
-      "y": 4592.0
+      "y": 3069.0
      }
     ]
    },
@@ -934,25 +934,26 @@
    343.65
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "201.9%",
-    "point": "The company significantly outperformed its 30% revenue growth target for Q3 FY26.",
+    "figure": "Q3FY26 Revenue growth 201.9%",
+    "point": "Management delivered a massive beat on revenue growth targets for the quarter.",
     "refs": [
      "ETERNAL-1"
     ]
    },
    {
-    "figure": "144%",
-    "point": "Revenue growth has accelerated to 144% over the last twelve months, demonstrating strong momentum.",
+    "figure": "Operating margin 2.2%",
+    "point": "Operating margin expanded from -44% in FY22 to positive territory in FY26.",
     "refs": [
-     "sales_growth"
+     "margin"
     ]
    },
    {
-    "figure": "113.7",
-    "point": "The company is currently on pace to meet its target of 100% year-over-year NOV growth for FY27.",
+    "figure": "FY27 NOV growth 113.7",
+    "point": "NOV growth is currently tracking on pace to exceed its target.",
     "refs": [
      "ETERNAL-4"
     ]
@@ -960,26 +961,17 @@
   ],
   "bear": [
    {
-    "figure": "2 of 2",
-    "point": "Management has failed to provide updates on profitability and food delivery revenue growth targets after periods lapsed.",
+    "figure": "Q3FY26 Profitability lapsed",
+    "point": "The profitability percentage promise lapsed with no updates provided in later calls.",
     "refs": [
-     "ETERNAL-2",
+     "ETERNAL-2"
+    ]
+   },
+   {
+    "figure": "FY26 Food Delivery revenue growth gone quiet",
+    "point": "The target went quiet after the period ended without subsequent management updates.",
+    "refs": [
      "ETERNAL-3"
-    ]
-   },
-   {
-    "figure": "2%",
-    "point": "Current ROCE remains significantly below the long-term target of 40%, indicating inefficient capital utilization.",
-    "refs": [
-     "ETERNAL-8",
-     "returns"
-    ]
-   },
-   {
-    "figure": "₹4,592 cr",
-    "point": "Borrowings have increased substantially from ₹70 cr in FY22, raising the company's debt profile.",
-    "refs": [
-     "debt"
     ]
    }
   ]

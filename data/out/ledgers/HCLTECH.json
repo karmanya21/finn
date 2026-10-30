@@ -484,7 +484,7 @@
     }
    ],
    "status": "cant_verify",
-   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1 FY27, which includes currency moves, so it isn't comparable.",
+   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1FY27, which includes currency moves, so it isn't comparable.",
    "statements": [
     {
      "call": "Apr 2026",
@@ -552,7 +552,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 17.46178720494594,
-    "so_far_label": "H1 FY27",
+    "so_far_label": "H1FY27",
     "status": "on_pace",
     "measure": "EBIT margin"
    },
@@ -783,7 +783,7 @@
    "moved": false,
    "events": [],
    "status": "cant_verify",
-   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1 FY27, which includes currency moves, so it isn't comparable.",
+   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1FY27, which includes currency moves, so it isn't comparable.",
    "statements": [
     {
      "call": "Oct 2026",
@@ -946,30 +946,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.07,
+    "label": "Net cash",
+    "value": -0.24,
     "unit": "x equity",
-    "reading": "Borrowings ₹5,215 cr, 0.07× equity; down from ₹6,343 cr in FY22.",
+    "reading": "₹18,210 cr net cash in FY26; down from ₹6,293 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 6343.0
+      "y": -6293.0
      },
      {
       "x": "FY23",
-      "y": 4794.0
+      "y": -9930.0
      },
      {
       "x": "FY24",
-      "y": 5756.0
+      "y": -14394.0
      },
      {
       "x": "FY25",
-      "y": 6276.0
+      "y": -15013.0
      },
      {
       "x": "FY26",
-      "y": 5215.0
+      "y": -18210.0
      }
     ]
    },
@@ -1262,54 +1262,51 @@
    1428.1
   ]
  ],
+ "price_asof": 1793354297,
  "case": {
   "bull": [
    {
-    "figure": "4% to 4.5%",
-    "point": "Management successfully raised FY26 revenue growth guidance, demonstrating confidence in meeting their targets.",
+    "figure": "FY26 revenue growth 4% to 4.5%",
+    "point": "Management successfully raised and delivered on company-level revenue growth targets for the fiscal year.",
     "refs": [
      "HCLTECH-0"
     ]
    },
    {
-    "figure": "30%",
-    "point": "ROCE has improved significantly from 25% in FY22 to 30% in FY26, indicating efficient capital allocation.",
+    "figure": "ROCE 30% in FY26",
+    "point": "Capital efficiency has improved significantly, rising from 25% in FY22 to 30% in FY26.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "127%",
-    "point": "The company maintains strong financial discipline with operating cash flow averaging 127% of net profit over five years.",
+    "figure": "Services revenue growth 4.8%",
+    "point": "The company met its raised services revenue growth guidance, demonstrating strong operational execution.",
     "refs": [
-     "cash_conversion"
+     "HCLTECH-5"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "24% → 21%",
-    "point": "Operating margins have faced consistent compression over the last four years, dropping from 24% to 21%.",
+    "figure": "Operating margin 24% → 21%",
+    "point": "Operating margins have faced consistent compression over the last four fiscal years.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "3 of 8",
-    "point": "Multiple operational promises including TCV step-ups, margin moderation, and restructuring updates have lapsed or gone quiet.",
+    "figure": "GA launch of AI Force v2.0 delayed",
+    "point": "The company failed to meet its scheduled general availability launch timeline for its key AI product.",
     "refs": [
-     "HCLTECH-2",
-     "HCLTECH-3",
-     "HCLTECH-7",
-     "HCLTECH-8",
-     "HCLTECH-13"
+     "HCLTECH-6"
     ]
    },
    {
-    "figure": "Delayed",
-    "point": "The GA launch of AI Force v2.0 has missed its original Q4FY26 target, indicating potential execution friction.",
+    "figure": "Restructuring exercise gone quiet",
+    "point": "Management stopped providing updates on the status of the restructuring exercise after the target period lapsed.",
     "refs": [
-     "HCLTECH-6"
+     "HCLTECH-7"
     ]
    }
   ]

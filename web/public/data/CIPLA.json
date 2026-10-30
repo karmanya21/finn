@@ -1016,30 +1016,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.02,
+    "label": "Net cash",
+    "value": -0.02,
     "unit": "x equity",
-    "reading": "Borrowings ₹614 cr, 0.02× equity; down from ₹1,056 cr in FY22.",
+    "reading": "₹693 cr net cash in FY26; up from ₹872 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 1056.0
+      "y": -872.0
      },
      {
       "x": "FY23",
-      "y": 803.0
+      "y": -762.0
      },
      {
       "x": "FY24",
-      "y": 559.0
+      "y": -316.0
      },
      {
       "x": "FY25",
-      "y": 438.0
+      "y": -362.0
      },
      {
       "x": "FY26",
-      "y": 614.0
+      "y": -693.0
      }
     ]
    },
@@ -1332,52 +1332,49 @@
    1378.9
   ]
  ],
+ "price_asof": 1793354301,
  "case": {
   "bull": [
    {
-    "figure": "$226 mn",
-    "point": "The company successfully exceeded its Q1FY26 U.S. revenue guidance of $220 million.",
+    "figure": "Delivered promises 3",
+    "point": "Management successfully delivered on three key milestones including US revenue targets and biosimilar launches.",
     "refs": [
-     "CIPLA-3"
+     "CIPLA-0",
+     "CIPLA-3",
+     "CIPLA-5"
     ]
    },
    {
-    "figure": "105%",
-    "point": "Strong cash management is evidenced by operating cash flow averaging 105% of net profit over the last five years.",
+    "figure": "Operating margin 21%",
+    "point": "Operating margin held steady from FY22 to FY26 demonstrating consistent profitability.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "Cash conversion 105%",
+    "point": "Strong operating cash flow over five years reached 105 percent of net profit.",
     "refs": [
      "cash_conversion"
-    ]
-   },
-   {
-    "figure": "0.02x",
-    "point": "The balance sheet is robust with debt-to-equity reduced to a minimal 0.02x from ₹1,056 crore in FY22.",
-    "refs": [
-     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "23.5% → 21%",
-    "point": "Management repeatedly lowered EBITDA margin guidance for FY26 before finally delivering at the bottom end of expectations.",
-    "refs": [
-     "CIPLA-0"
-    ]
-   },
-   {
-    "figure": "3 of 17",
-    "point": "The company is significantly behind on its FY27 trade generics launch target, having only completed three launches in Q1.",
-    "refs": [
-     "CIPLA-16"
-    ]
-   },
-   {
-    "figure": "4",
-    "point": "Multiple key promises including generic Advair, Indore facility inspections, and Lanreotide resupply have gone quiet without updates.",
+    "figure": "Gone quiet promises 4",
+    "point": "Several tracked promises went quiet without updates in later calls after periods ended.",
     "refs": [
      "CIPLA-6",
      "CIPLA-7",
+     "CIPLA-9",
      "CIPLA-11"
+    ]
+   },
+   {
+    "figure": "Profit growth -43%",
+    "point": "Profit declined by 43 percent over the last 12 months.",
+    "refs": [
+     "profit_growth"
     ]
    }
   ]

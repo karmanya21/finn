@@ -216,14 +216,22 @@ def _pace_growth(fin: Financials, period: Period, low, high, done: list[int]) ->
 
 def _span_label(fy: int, qs: list[int]) -> str:
     if qs == [1, 2]:
-        return f"H1 FY{fy:02d}"
+        return f"H1FY{fy:02d}"
     if qs == [3, 4]:
-        return f"H2 FY{fy:02d}"
+        return f"H2FY{fy:02d}"
     if len(qs) == 1:
-        return f"Q{qs[0]} FY{fy:02d}"
+        return f"Q{qs[0]}FY{fy:02d}"
     if qs == [1, 2, 3, 4]:
         return f"FY{fy:02d}"
-    return f"Q{qs[0]}–Q{qs[-1]} FY{fy:02d}"
+    return f"Q{qs[0]}–Q{qs[-1]}FY{fy:02d}"
+
+
+def _debt_pair(fin: Financials, fy: int) -> tuple[float | None, float | None, str]:
+    """(this year, last year, label): net debt when cash is known, else gross borrowings."""
+    n1, n0 = fin.net_debt(fy), fin.net_debt(fy - 1)
+    if n1 is not None and n0 is not None:
+        return n1, n0, "Net debt"
+    return fin.borrowings(fy), fin.borrowings(fy - 1), "Gross borrowings"
 
 
 def financial_check(p: dict, fin: Financials) -> dict | None:
@@ -256,10 +264,10 @@ def financial_check(p: dict, fin: Financials) -> dict | None:
                 return {"verdict": "delivered" if h2 > h1 else "missed", "basis": "financials",
                         "actual": h2, "detail": f"H2 growth {h2:+.1f}% vs H1 {h1:+.1f}%"}
         if p.get("metric") == "debt" and p.get("direction") == "down" and latest >= (period.fy, 4):
-            b1, b0 = fin.borrowings(period.fy), fin.borrowings(period.fy - 1)
+            b1, b0, label = _debt_pair(fin, period.fy)
             if b1 is not None and b0 is not None:
                 return {"verdict": "delivered" if b1 < b0 else "missed", "basis": "financials",
-                        "detail": f"Borrowings ₹{b0:,.0f} cr → ₹{b1:,.0f} cr"}
+                        "detail": f"{label} ₹{b0:,.0f} cr → ₹{b1:,.0f} cr"}
         return None
 
     # "Reduce net debt by Rs 200-300 crore this year": borrowings at year end settle it.
@@ -267,16 +275,15 @@ def financial_check(p: dict, fin: Financials) -> dict | None:
             and "crore" in (p.get("unit") or "").lower() and len(period.quarters) == 4:
         if latest < (period.fy, 4):
             return None
-        b1, b0 = fin.borrowings(period.fy), fin.borrowings(period.fy - 1)
+        b1, b0, label = _debt_pair(fin, period.fy)
         if b1 is None or b0 is None:
             return None
         cut = b0 - b1
         low = p.get("low") if p.get("low") is not None else p.get("high")
         return {"verdict": "delivered" if low is not None and cut >= low else "missed",
                 "basis": "financials", "actual": cut,
-                "detail": f"Borrowings ₹{b0:,.0f} cr → ₹{b1:,.0f} cr "
-                          f"({'down' if cut >= 0 else 'up'} ₹{abs(cut):,.0f} cr). Gross borrowings, "
-                          "not net of cash."}
+                "detail": f"{label} ₹{b0:,.0f} cr → ₹{b1:,.0f} cr "
+                          f"({'down' if cut >= 0 else 'up'} ₹{abs(cut):,.0f} cr)"}
 
     if p["kind"] != "hard" or not meas:
         return None

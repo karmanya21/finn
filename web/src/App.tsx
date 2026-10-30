@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayGrid, priceStats, resultsLine, usePrices } from "./push";
+import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayGrid, priceStats, resultsLine, useNewerResults, usePrices } from "./push";
+import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, go } from "./shell";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
-  loadIndex, loadLedger, researchStatus, searchCompanies, startResearch, statusOf,
+  loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
 // ---- routing: #/  and  #/c/INFY  and  #/c/INFY/t/INFY-3 ------------------------
@@ -59,7 +60,7 @@ function Routes({ route }: { route: string[] }) {
   if (route[0] === "c" && route[1]) return <CompanyView symbol={route[1]} threadId={route[3]} />;
   if (route[0] === "r" && route[1]) {
     const sym = decodeURIComponent(route[1]).toUpperCase();
-    return <ResearchView symbol={sym} threadId={route[3]} portfolio={index.some((c) => c.symbol === sym)} />;
+    return <ResearchView symbol={sym} threadId={route[3]} portfolio={index.some((c) => c.symbol === sym)} index={index} />;
   }
   if (route[0] === "u" && route[1]) return <CompanyUpdates index={index} symbol={decodeURIComponent(route[1])} />;
   if (route[0] === "filings") return <FilingsView index={index} />;
@@ -74,7 +75,7 @@ function Home({ index }: { index: CompanySummary[] }) {
   return (
     <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
       <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
-      <SearchBar />
+      <SearchBar index={index} />
       <TodayGrid index={index} onSettings={() => setSettings(true)} />
       {settings && <SettingsSheet onClose={() => setSettings(false)} />}
     </Shell>
@@ -122,14 +123,19 @@ function Portfolio({ index }: { index: CompanySummary[] }) {
                 {st && (
                   <span className="prow-price">
                     <span>₹{st.close.toLocaleString("en-IN", { maximumFractionDigits: 0 })}</span>
-                    <span className={st.change >= 0 ? "up" : "down"}>{st.change >= 0 ? "+" : ""}{st.change.toFixed(1)}%</span>
+                    <span className={toneOf(st.change, 1)}>{fmtChange(st.change, 1)}</span>
                   </span>
                 )}
               </button>
             );
           })}
         </div>
-        <Footnote>Kept and missed count settled numbers and milestones only. Prices are end-of-day NSE closes (Yahoo Finance).</Footnote>
+        <Footnote>
+          Kept and missed count settled numbers and milestones only. Prices: NSE via Yahoo Finance
+          {(() => { const d = prices && Object.values(prices.series)[0]?.slice(-1)[0]?.[0];
+            const a = prices?.asof && Object.values(prices.asof)[0];
+            return d ? `, ${priceWhen(d, a)}` : ""; })()}.
+        </Footnote>
       </section>
     </Shell>
   );
@@ -193,11 +199,16 @@ const STEP_LABEL: { [s: string]: string } = {
   done: "Done",
 };
 
-function ResearchView({ symbol, threadId, portfolio }: { symbol: string; threadId?: string; portfolio: boolean }) {
+function ResearchView({ symbol, threadId, portfolio, index }: {
+  symbol: string; threadId?: string; portfolio: boolean; index: CompanySummary[];
+}) {
   const [s, setS] = useState<ResearchStatus | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [shipped, setShipped] = useState<Ledger | null | undefined>(undefined);
+  useEffect(() => { loadShipped(symbol).then(setShipped); }, [symbol]);
   useEffect(() => {
     if (portfolio) { go(`/c/${symbol}`); return; }
+    if (shipped !== null) return;  // still checking, or already have it: no API call
     let alive = true, timer = 0;
     const poll = async (first: boolean) => {
       try {
@@ -209,10 +220,12 @@ function ResearchView({ symbol, threadId, portfolio }: { symbol: string; threadI
     };
     poll(true);
     return () => { alive = false; clearTimeout(timer); };
-  }, [symbol, portfolio]);
+  }, [symbol, portfolio, shipped]);
 
+  if (shipped) return <LedgerView l={shipped} threadId={threadId} base={`/r/${symbol}`} />;
   if (s?.state === "done" && s.ledger) return <LedgerView l={s.ledger} threadId={threadId} base={`/r/${symbol}`} />;
-  const failed = err || (s?.state === "error" ? s.error : null);
+  if (err) return <Offline symbol={symbol} index={index} />;
+  const failed = s?.state === "error" ? s.error : null;
   const reached = new Set(s?.steps.map((x) => x.step));
   const current = s?.steps[s.steps.length - 1];
 
@@ -251,18 +264,54 @@ function ResearchView({ symbol, threadId, portfolio }: { symbol: string; threadI
   );
 }
 
-function SearchBar() {
+/** Live research needs the API; when it's down, say so and offer what's already built. */
+function Offline({ symbol, index }: { symbol: string; index: CompanySummary[] }) {
+  const ready = useShipped(index);
+  return (
+    <Shell back>
+      <section className="co-head">
+        <p className="eyebrow">Researching</p>
+        <h1 className="co-title">{symbol}</h1>
+        <div className="notice"><b>Live research is offline.</b>
+          <p>FINN can't reach its research service right now, so it can't build a new record. These companies are already built:</p></div>
+      </section>
+      <section><div className="plist">{ready.map((c) => (
+        <button key={c.symbol} className="prow" onClick={() => go(c.portfolio ? `/c/${c.symbol}` : `/r/${c.symbol}`)}>
+          <span className="prow-main"><span className="prow-name">{c.name}</span>
+            <span className="prow-rec"><span>{c.portfolio ? "Portfolio" : "Research set"}</span></span></span>
+        </button>))}</div></section>
+    </Shell>
+  );
+}
+
+type Shipped = { symbol: string; name: string; portfolio: boolean };
+function useShipped(index: CompanySummary[]): Shipped[] {
+  const [research, setResearch] = useState<{ symbol: string; name: string }[]>([]);
+  useEffect(() => { loadResearchIndex().then(setResearch); }, []);
+  return [...index.map((c) => ({ symbol: c.symbol, name: c.name, portfolio: true })),
+          ...research.map((c) => ({ ...c, portfolio: false }))];
+}
+
+function SearchBar({ index }: { index: CompanySummary[] }) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [busy, setBusy] = useState(false);
+  const [offline, setOffline] = useState(false);
+  const shipped = useShipped(index);
   useEffect(() => {
     if (q.trim().length < 2) { setResults([]); return; }
     setBusy(true);
     const id = setTimeout(() => {
-      searchCompanies(q.trim()).then(setResults).catch(() => setResults([])).finally(() => setBusy(false));
+      searchCompanies(q.trim()).then((r) => { setResults(r); setOffline(false); })
+        .catch(() => {  // API down: match what's already built
+          const k = q.trim().toLowerCase();
+          setOffline(true);
+          setResults(shipped.filter((c) => c.name.toLowerCase().includes(k) || c.symbol.toLowerCase().includes(k))
+            .map((c) => ({ symbol: c.symbol, name: c.name, ready: true })));
+        }).finally(() => setBusy(false));
     }, 250);
     return () => clearTimeout(id);
-  }, [q]);
+  }, [q, shipped.length]);
 
   return (
     <div className="search">
@@ -280,7 +329,8 @@ function SearchBar() {
               <span className="sr-meta">{r.symbol}{r.ready ? " · record ready" : ""}</span>
             </button>
           ))}
-          {!busy && !results.length && <p className="sr-empty">No listed company matches “{q.trim()}”.</p>}
+          {offline && <p className="sr-empty">Live research is offline; showing companies FINN has already built.</p>}
+          {!busy && !results.length && <p className="sr-empty">{offline ? `None of them match “${q.trim()}”.` : `No listed company matches “${q.trim()}”.`}</p>}
         </div>
       )}
     </div>
@@ -298,7 +348,7 @@ function CaseView({ l, base }: { l: Ledger; base: string }) {
       <ul>
         {pts.map((p, i) => (
           <li key={i}>
-            {p.figure && <b className="figure">{p.figure}</b>}{p.point}
+            {p.figure && <b className="figure">{normText(p.figure)}</b>}{normText(p.point)}
             <span className="refs">
               {p.refs.map((r) => threads.has(r)
                 ? <button key={r} className="ref" onClick={() => go(`${base}/t/${r}`)}>{threads.get(r)!.title}</button>
@@ -392,6 +442,8 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       : filter === "live" ? LIVE.includes(t.status) && t.kind !== "soft"
       : GROUPS.find((g) => g.key === filter)!.test(t, fy)));
   const noCalls = l.calls.length === 0;
+  const fromFiling = useNewerResults(l.symbol, l.headline);
+  const results = fromFiling ?? l.headline;
   const short_ = l.name.replace(/ (Ltd|Limited|India)\.?$/i, "");
 
   return (
@@ -399,10 +451,10 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       <section className="co-head">
         <h1 className="co-title">{l.name}</h1>
         {l.sector && <p className="co-sub">{l.sector}</p>}
-        <PriceLine symbol={l.symbol} fallback={l.price} />
+        <PriceLine symbol={l.symbol} fallback={l.price} fallbackAsof={l.price_asof} />
       </section>
 
-      {l.headline && l.headline.rows.length > 0 && <ResultsBlock h={l.headline} l={l} base={base} />}
+      {results && results.rows.length > 0 && <ResultsBlock h={results} l={l} base={base} />}
 
       <section>
         <h2 className="section-title">Record</h2>
@@ -489,7 +541,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
 /** One line from the numbers: what's going well, and where growth or margins are slipping. */
 function resultsSummary(h: Headline): string {
   const row = (k: string) => h.rows.find((r) => r.label === k);
-  const p = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  const p = (v: number) => fmtChange(v);
   const good: string[] = [], watch: string[] = [];
   const rev = row("Revenue"), pat = row("PAT");
   if (rev?.yoy != null) {
@@ -523,8 +575,9 @@ function guidance(l: Ledger): Thread[] {
 }
 
 function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) {
-  const chg = (v: number | null) => v === null ? "–" : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
-  const tone = (v: number | null) => v === null ? "" : v >= 0 ? "up" : "down";
+  const chg = (v: number | null) => fmtChange(v);
+  const tone = (v: number | null) => toneOf(v);
+  const pts = (v: number) => fmtChange(v, 1, " pts");
   const g = guidance(l);
   return (
     <section>
@@ -544,10 +597,10 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
           <div className="hl-row">
             <span className="hl-label">Margin</span>
             <span className="hl-val">{h.margin.now.toFixed(1)}%</span>
-            <span className={`hl-yoy ${h.margin.year_ago != null ? tone(h.margin.now - h.margin.year_ago) : ""}`}>
-              {h.margin.year_ago != null ? `${h.margin.now - h.margin.year_ago >= 0 ? "+" : ""}${(h.margin.now - h.margin.year_ago).toFixed(1)} pts` : "–"}
+            <span className={`hl-yoy ${h.margin.year_ago != null ? toneOf(h.margin.now - h.margin.year_ago, 1) : ""}`}>
+              {h.margin.year_ago != null ? pts(h.margin.now - h.margin.year_ago) : "–"}
             </span>
-            <span className="hl-qoq">{h.margin.prev != null ? `${h.margin.now - h.margin.prev >= 0 ? "+" : ""}${(h.margin.now - h.margin.prev).toFixed(1)} pts` : "–"}</span>
+            <span className="hl-qoq">{h.margin.prev != null ? pts(h.margin.now - h.margin.prev) : "–"}</span>
           </div>
         )}
       </div>
@@ -556,14 +609,17 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
           {g.map((t) => (
             <button key={t.id} className="guide-row" onClick={() => go(`${base}/t/${t.id}`)}>
               <span className="guide-label">Guidance</span>
-              <span className="guide-text">{t.title}: {t.target}{t.pace ? ` · ${paceLine(t)}` : ""}
+              <span className="guide-text">{normText(t.title)}: {t.target}{t.pace ? ` · ${paceLine(t)}` : ""}
                 {t.moved && !t.pace ? ` · ${MOVE_VERB[t.events[t.events.length - 1].type].toLowerCase()} on the ${t.events[t.events.length - 1].call} call` : ""}</span>
               <span className={`pill tone-${statusOf(t).tone}`}>{statusOf(t).label}</span>
             </button>
           ))}
         </div>
       )}
-      <Footnote>Consolidated results via screener.in. YoY compares with the same quarter last year; margin is EBITDA ÷ revenue.</Footnote>
+      <Footnote>
+        {/filing/.test(h.source) ? `Read from ${h.source}.` : "Consolidated results via screener.in."} YoY compares with the same
+        quarter last year; margin is EBITDA ÷ revenue.
+      </Footnote>
     </section>
   );
 }
@@ -676,7 +732,7 @@ function Sheet({ t, company, onClose }: { t: Thread; company: string; onClose: (
 
 // ---- text helpers ----------------------------------------------------------------
 
-const pct = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
+const pct = (v: number) => fmtChange(v, 1);
 
 function paceLine(t: Thread): string | null {
   const p = t.pace;
@@ -684,13 +740,13 @@ function paceLine(t: Thread): string | null {
   const sofar = p.measure === "revenue growth" ? pct(p.so_far) : `${p.so_far.toFixed(1)}% ${p.measure}`;
   let line = `${p.so_far_label} at ${sofar}`;
   if (p.needs !== undefined && p.needs_label) line += ` · ${p.needs_label} needs ${pct(p.needs)} to reach ${p.needs_for}%`;
-  return line;
+  return normText(line);
 }
 
 function oneLine(t: Thread): string {
   const pace = paceLine(t);
   if (pace) return pace;
-  if (t.detail) return t.detail;
+  if (t.detail) return normText(t.detail);
   if (t.status === "open") return `Due ${t.period}. Nothing to check yet.`;
   if (t.status === "said") return "An ambition, not scored.";
   return t.statements[t.statements.length - 1].quote;

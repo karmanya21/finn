@@ -807,51 +807,51 @@
    692.8
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "12%",
-    "point": "Management successfully delivered FY26 loan growth exceeding the system rate of 10.5%-11.5%.",
+    "figure": "Delivered FY26 loan growth 12%",
+    "point": "Management successfully delivered FY26 loan growth of 12% exceeding the system growth rate of 10.5% to 11.5%.",
     "refs": [
      "HDFCBANK-0"
     ]
    },
    {
-    "figure": "11.2%",
-    "point": "Retail loan growth momentum remains on track with annual growth recorded in September 2026.",
+    "figure": "Retail loan growth 11.2%",
+    "point": "Retail loan growth momentum remains on track with retail assets excluding agri showing an annual growth of 11.2%.",
     "refs": [
      "HDFCBANK-6"
     ]
    },
    {
-    "figure": "27%",
-    "point": "Profit growth compounded at 18% over 3 years and revenue compounded at 27% over 3 years.",
+    "figure": "Profit growth 11% last 12 months",
+    "point": "The company demonstrated solid profitability with profit growing 11% in the last 12 months and 18% over 3 years.",
     "refs": [
-     "sales_growth",
      "profit_growth"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "14%",
-    "point": "Return on equity declined to 14% in FY26 down from 17% in FY22.",
-    "refs": [
-     "returns"
-    ]
-   },
-   {
-    "figure": "2 times",
-    "point": "The FY27 loan growth target lapsed after being mentioned twice and then not mentioned since January 2026.",
+    "figure": "Lapsed FY27 loan growth target",
+    "point": "Management lapsed the FY27 loan growth target after mentioning it twice and then omitting it since January 2026.",
     "refs": [
      "HDFCBANK-1"
     ]
    },
    {
-    "figure": "4%",
-    "point": "Revenue growth over the last 12 months slowed down significantly compared to historical compounded rates.",
+    "figure": "Gone quiet FY26 Credit-Deposit Ratio",
+    "point": "The FY26 Credit-Deposit Ratio target went quiet after the period ended with no subsequent update provided.",
     "refs": [
-     "sales_growth"
+     "HDFCBANK-4"
+    ]
+   },
+   {
+    "figure": "ROE decline 17% to 14%",
+    "point": "Return on equity declined from 17% in FY22 to 14% in FY26, indicating lower profitability relative to shareholders equity.",
+    "refs": [
+     "returns"
     ]
    }
   ]

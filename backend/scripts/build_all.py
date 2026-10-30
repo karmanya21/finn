@@ -29,8 +29,9 @@ def build_one(c, portfolio: set[str]) -> None:
     except Exception as e:  # keep going; report at the end of the line
         print(f"{c.symbol:<11} FAILED  {type(e).__name__}: {str(e)[:120]}", flush=True)
         return
-    if c.symbol in portfolio:
-        (WEB_DATA / f"{c.symbol}.json").write_text(json.dumps(ledger, indent=1, ensure_ascii=False))
+    # Portfolio and research set both ship with the app, so the research set opens
+    # instantly and still works when the live research API is offline.
+    (WEB_DATA / f"{c.symbol}.json").write_text(json.dumps(ledger, indent=1, ensure_ascii=False))
     r = ledger["record"]
     print(f"{c.symbol:<11} {time.time() - t0:5.0f}s  calls={len(ledger['calls'])} "
           f"threads={len(ledger['threads'])} kept={r['kept']}/{r['resolved']} moved={r['moved']} "
@@ -56,7 +57,10 @@ def write_index() -> None:
             index.append({k: l.get(k) for k in ("symbol", "name", "sector", "size", "latest_call",
                                                  "latest_results", "record")})
     (WEB_DATA / "index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False))
-    print(f"index: {len(index)} companies")
+    ready = [{"symbol": c.symbol, "name": json.loads((WEB_DATA / f"{c.symbol}.json").read_text())["name"]}
+             for c in RESEARCH if (WEB_DATA / f"{c.symbol}.json").exists()]
+    (WEB_DATA / "research.json").write_text(json.dumps(ready, indent=1, ensure_ascii=False))
+    print(f"index: {len(index)} companies; pre-built research: {len(ready)}")
 
 
 if __name__ == "__main__":

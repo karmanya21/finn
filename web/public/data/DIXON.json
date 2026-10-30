@@ -1993,9 +1993,9 @@
    "status": "tracking",
    "pace": {
     "so_far": 21.128077282642565,
-    "so_far_label": "Q1 FY27",
+    "so_far_label": "Q1FY27",
     "needs": 12.817303956934346,
-    "needs_label": "Q2–Q4 FY27",
+    "needs_label": "Q2–Q4FY27",
     "needs_for": 15,
     "status": "ahead",
     "measure": "revenue growth"
@@ -2336,30 +2336,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.21,
+    "label": "Net debt",
+    "value": 0.01,
     "unit": "x equity",
-    "reading": "Borrowings ₹994 cr, 0.21× equity; up from ₹667 cr in FY22.",
+    "reading": "Net debt ₹53 cr in FY26, 0.01× equity; down from ₹485 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 667.0
+      "y": 485.0
      },
      {
       "x": "FY23",
-      "y": 453.0
+      "y": 224.0
      },
      {
       "x": "FY24",
-      "y": 489.0
+      "y": 280.0
      },
      {
       "x": "FY25",
-      "y": 671.0
+      "y": 407.0
      },
      {
       "x": "FY26",
-      "y": 994.0
+      "y": 53.0
      }
     ]
    },
@@ -2652,53 +2652,51 @@
    11000.0
   ]
  ],
+ "price_asof": 1793354296,
  "case": {
   "bull": [
    {
-    "figure": "119%",
-    "point": "Profit growth over the last 12 months demonstrates strong earnings momentum.",
+    "figure": "Profit growth 119% LTM",
+    "point": "Profit grew significantly over the last 12 months, showcasing strong recent earnings momentum.",
     "refs": [
      "profit_growth"
     ]
    },
    {
-    "figure": "29%",
-    "point": "ROCE has improved from 23% in FY22 to 29% in FY26, indicating efficient capital deployment.",
+    "figure": "ROCE 29% in FY26",
+    "point": "Return on capital employed improved from 23% in FY22, demonstrating increasing capital efficiency.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "122%",
-    "point": "Operating cash flow over five years has been 122% of net profit, reflecting high-quality earnings.",
+    "figure": "Net debt ₹53 cr",
+    "point": "Net debt dropped substantially from ₹485 cr in FY22 to nearly zero equity leverage.",
     "refs": [
-     "cash_conversion"
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "15%",
-    "point": "The company missed its Q2FY26 volume growth target of at least 15% due to a shipment decline.",
+    "figure": "DIXON-12 volume growth missed",
+    "point": "Total shipment volumes saw a modest decline, leading to a missed QoQ target.",
     "refs": [
      "DIXON-12"
     ]
    },
    {
-    "figure": "4 of 4",
-    "point": "Multiple operational milestones, including factory readiness and production starts, have been delayed or gone quiet.",
+    "figure": "DIXON-16 Inventec JV deferred",
+    "point": "Operations have been repeatedly pushed back across multiple quarters before reaching any final resolution.",
     "refs": [
-     "DIXON-8",
-     "DIXON-15",
-     "DIXON-30",
-     "DIXON-31"
+     "DIXON-16"
     ]
    },
    {
-    "figure": "14%",
-    "point": "Revenue growth has decelerated significantly to 14% over the last 12 months compared to historical averages.",
+    "figure": "DIXON-4 capital expenditure gone quiet",
+    "point": "Management stopped providing updates on capital expenditure after the period ended.",
     "refs": [
-     "sales_growth"
+     "DIXON-4"
     ]
    }
   ]

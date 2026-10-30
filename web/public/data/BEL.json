@@ -1276,9 +1276,9 @@
    "status": "tracking",
    "pace": {
     "so_far": 24.93243243243244,
-    "so_far_label": "Q1 FY27",
+    "so_far_label": "Q1FY27",
     "needs": 13.096676737160106,
-    "needs_label": "Q2–Q4 FY27",
+    "needs_label": "Q2–Q4FY27",
     "needs_for": 15,
     "status": "ahead",
     "measure": "revenue growth"
@@ -1332,7 +1332,7 @@
    "status": "tracking",
    "pace": {
     "so_far": 25.022534703443306,
-    "so_far_label": "Q1 FY27",
+    "so_far_label": "Q1FY27",
     "status": "behind",
     "measure": "EBITDA margin"
    },
@@ -1644,30 +1644,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.0,
+    "label": "Net cash",
+    "value": -0.35,
     "unit": "x equity",
-    "reading": "Borrowings ₹65 cr, 0.00× equity; up from ₹53 cr in FY22.",
+    "reading": "₹8,507 cr net cash in FY26; down from ₹7,511 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 53.0
+      "y": -7511.0
      },
      {
       "x": "FY23",
-      "y": 61.0
+      "y": -8051.0
      },
      {
       "x": "FY24",
-      "y": 63.0
+      "y": -10994.0
      },
      {
       "x": "FY25",
-      "y": 61.0
+      "y": -9484.0
      },
      {
       "x": "FY26",
-      "y": 65.0
+      "y": -8507.0
      }
     ]
    },
@@ -1960,18 +1960,26 @@
    369.9
   ]
  ],
+ "price_asof": 1793354298,
  "case": {
   "bull": [
    {
-    "figure": "29.2%",
-    "point": "Management beat the FY26 EBITDA margin target by delivering an actual 29.2% margin.",
+    "figure": "Operating margin expanded from 22% (FY22) to 29% (FY26)",
+    "point": "Operating margins showed strong expansion over the four-year period.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "FY26 EBITDA margin 29.2%",
+    "point": "Management successfully beat their initial EBITDA margin target for FY26.",
     "refs": [
      "BEL-1"
     ]
    },
    {
-    "figure": "36%",
-    "point": "The return on capital employed reached 36% in FY26, showing high capital efficiency.",
+    "figure": "ROCE 36% in FY26",
+    "point": "Return on capital employed improved significantly from 27% in FY22.",
     "refs": [
      "returns"
     ]
@@ -1979,20 +1987,24 @@
   ],
   "bear": [
    {
-    "figure": "59%",
-    "point": "Operating cash flow over five years was only 59% of net profit, indicating weak cash conversion.",
+    "figure": "Cash conversion 59% of net profit",
+    "point": "Operating cash flow conversion over five years remained relatively weak.",
     "refs": [
      "cash_conversion"
     ]
    },
    {
-    "figure": "4",
-    "point": "Multiple FY26 targets including revenue, order inflow, R&D, and exports went quiet after the period ended.",
+    "figure": "Q3FY26 emergency procurement orders missed",
+    "point": "Management failed to secure expected emergency procurement orders in the third quarter.",
     "refs": [
-     "BEL-0",
-     "BEL-2",
-     "BEL-3",
-     "BEL-9"
+     "BEL-16"
+    ]
+   },
+   {
+    "figure": "FY26 revenue growth gone quiet",
+    "point": "Targets for FY26 revenue growth went quiet with no updates provided after the period ended.",
+    "refs": [
+     "BEL-0"
     ]
    }
   ]

@@ -102,6 +102,7 @@ export interface Ledger extends CompanySummary {
   case?: { bull: CasePoint[]; bear: CasePoint[] };
   business?: Business | null;
   price?: [string, number][] | null; // 3 months of closes, for companies outside the daily price file
+  price_asof?: number | null;
   calls: { call: string; quarter: string; url: string | null; promises: number }[];
   threads: Thread[];
 }
@@ -159,6 +160,12 @@ export function statusOf(t: Thread): { label: string; tone: Tone } {
   return STATUS[t.status];
 }
 
+/** How a move reads as a tag on Today. */
+export const MOVE_TAG: { [k in ChangeEvent["type"]]: string } = {
+  reaffirmed: "Reaffirmed", raised: "Guidance raised", lowered: "Guidance cut",
+  narrowed: "Guidance revised", widened: "Guidance revised", deferred: "Delayed", advanced: "Pulled in",
+};
+
 export const MOVE_VERB: { [k in ChangeEvent["type"]]: string } = {
   reaffirmed: "Reaffirmed",
   raised: "Raised",
@@ -189,6 +196,20 @@ function get<T>(path: string): Promise<T> {
 export const loadIndex = () => get<CompanySummary[]>("/data/index.json");
 export const loadLedger = (sym: string) => get<Ledger>(`/data/${sym}.json`);
 
+/** Research-set companies that ship pre-built with the app (searchable offline). */
+export const loadResearchIndex = () =>
+  get<{ symbol: string; name: string }[]>("/data/research.json").catch(() => []);
+
+/** A pre-built record if the app ships one, else null (the dev server answers unknown
+ *  paths with the app's HTML, so anything that isn't JSON counts as "not shipped"). */
+export async function loadShipped(sym: string): Promise<Ledger | null> {
+  try {
+    const r = await fetch(`/data/${encodeURIComponent(sym)}.json`);
+    if (!r.ok || !(r.headers.get("content-type") ?? "").includes("json")) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
 // ---- what moved in the latest calls (the push side of the slice) -------------
 
 export interface FeedItem {
@@ -196,6 +217,7 @@ export interface FeedItem {
   name: string;
   thread: Thread;
   headline: string;
+  tag: string;   // what happened, in words: "Missed", "Guidance cut", "Delayed", "Kept"...
   line?: string; // overrides the thread's own one-liner
   tone: Tone;
   weight: number; // higher = more important
@@ -222,24 +244,25 @@ export function feed(ledgers: Ledger[]): FeedItem[] {
       const last = t.events[t.events.length - 1];
       if (last && last.call === l.latest_call && last.type !== "reaffirmed") {
         const cut = last.type === "lowered" || last.type === "deferred";
-        items.push({ ...base, tone: cut ? "missed" : "moved",
-          headline: `${MOVE_VERB[last.type]} ${t.title}: ${last.from} → ${last.to}`,
+        items.push({ ...base, tone: cut ? "missed" : "moved", tag: MOVE_TAG[last.type],
+          headline: `${t.title}: ${last.from} → ${last.to}`,
           line: moveHistory(t, last.type),
           weight: (cut ? 90 : 70) + (hardish ? 5 : 0) });
       }
+      const guided = t.target ? `: guided ${t.target}` : "";
       if (t.status === "missed" && hardish)
-        items.push({ ...base, tone: "missed", weight: 85,
-          headline: `Missed ${t.title}${t.target ? ` (guided ${t.target})` : ""}` });
+        items.push({ ...base, tone: "missed", tag: "Missed", weight: 85, headline: `${t.title}${guided}`, line: t.detail ?? undefined });
       if (t.status === "tracking" && t.pace?.status === "behind")
-        items.push({ ...base, tone: "missed", weight: 80, headline: `Behind pace on ${t.title}` });
+        items.push({ ...base, tone: "missed", tag: "Behind pace", weight: 80, headline: `${t.title}${guided}`,
+          line: `${t.pace.so_far_label} at ${t.pace.so_far.toFixed(1)}%` });
       if (t.status === "delayed" && hardish)
-        items.push({ ...base, tone: "moved", weight: 75, headline: `Delayed: ${t.title}` });
+        items.push({ ...base, tone: "moved", tag: "Delayed", weight: 75, headline: `${t.title}${guided}`, line: t.detail ?? undefined });
       if (t.status === "gone_quiet" && t.statements.length > 1)
-        items.push({ ...base, tone: "quiet", weight: 60,
-          headline: `Gone quiet on ${t.title} after ${t.statements.length} mentions` });
+        items.push({ ...base, tone: "quiet", tag: "Gone quiet", weight: 60,
+          headline: `${t.title}${guided}`, line: `Said ${t.statements.length} times; ${t.detail ?? "no update since"}` });
       if ((t.status === "delivered" || t.status === "beat") && t.basis === "financials" && t.kind === "hard")
-        items.push({ ...base, tone: "kept", weight: 40,
-          headline: `${t.status === "beat" ? "Beat" : "Kept"} ${t.title}${t.target ? ` (guided ${t.target})` : ""}` });
+        items.push({ ...base, tone: "kept", tag: t.status === "beat" ? "Beat" : "Kept", weight: 40,
+          headline: `${t.title}${guided}`, line: t.detail ?? undefined });
     }
   }
   // One item per thread, the most important reading of it.
@@ -274,7 +297,11 @@ export const loadDigest = () => get<Digest>("/data/filings.json");
 
 // ---- push: prices and alerts --------------------------------------------------------
 
-export interface Prices { built: string; source: string; series: { [sym: string]: [string, number, number][] } }
+export interface Prices {
+  built: string; source: string;
+  series: { [sym: string]: [string, number, number][] };
+  asof?: { [sym: string]: number | null }; // Unix time of each stock's last trade
+}
 export const loadPrices = () => get<Prices>("/data/prices.json");
 
 export interface AlertSettings {

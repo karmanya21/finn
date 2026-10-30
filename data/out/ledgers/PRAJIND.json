@@ -871,30 +871,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.13,
+    "label": "Net cash",
+    "value": -0.02,
     "unit": "x equity",
-    "reading": "Borrowings ₹173 cr, 0.13× equity; up from ₹21 cr in FY22.",
+    "reading": "₹31 cr net cash in FY26; up from ₹134 cr net cash in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 21.0
+      "y": -134.0
      },
      {
       "x": "FY23",
-      "y": 42.0
+      "y": -103.0
      },
      {
       "x": "FY24",
-      "y": 169.0
+      "y": -44.0
      },
      {
       "x": "FY25",
-      "y": 195.0
+      "y": 14.0
      },
      {
       "x": "FY26",
-      "y": 173.0
+      "y": -31.0
      }
     ]
    },
@@ -1187,56 +1187,46 @@
    241.7
   ]
  ],
+ "price_asof": 1793354395,
  "case": {
   "bull": [
    {
-    "figure": "19%",
-    "point": "Revenue compounded at 19% annually over five years, demonstrating strong long-term business expansion.",
-    "refs": [
-     "sales_growth"
-    ]
-   },
-   {
-    "figure": "86%",
-    "point": "Cash conversion remains reliable with five-year operating cash flow reaching 86% of net profit.",
-    "refs": [
-     "cash_conversion"
-    ]
-   },
-   {
-    "figure": "Q2FY26",
-    "point": "Management delivered on GenX facility diversification by completing audits and securing a breakthrough order.",
+    "figure": "GenX facility diversification Q2FY26 delivered",
+    "point": "Management successfully completed facility audits and secured the first breakthrough order for the GenX business.",
     "refs": [
      "PRAJIND-4"
+    ]
+   },
+   {
+    "figure": "Net cash ₹31 cr",
+    "point": "The company maintains a net cash position, providing a stable balance sheet foundation for future operations.",
+    "refs": [
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "-48%",
-    "point": "Profitability collapsed with last twelve months profit dropping 48% and operating margins compressing to 4.9%.",
+    "figure": "Operating margin 8% → 4.9%",
+    "point": "Operating margins have significantly compressed over the last four years, indicating weakening core profitability.",
     "refs": [
-     "profit_growth",
      "margin"
     ]
    },
    {
-    "figure": "23% → 6%",
-    "point": "Return on capital employed severely degraded while debt surged from ₹21 crore to ₹173 crore.",
+    "figure": "ROCE 23% → 6%",
+    "point": "Capital efficiency has deteriorated sharply, with returns on capital employed falling to 6% in FY26.",
     "refs": [
-     "returns",
-     "debt"
+     "returns"
     ]
    },
    {
-    "figure": "5 failed",
-    "point": "Management missed order and revenue targets while three distinct promises went quiet without update.",
+    "figure": "Missed promises 3",
+    "point": "Management failed to meet targets for GenX revenue, Mangalore order bookings, and lapsed on performance updates.",
     "refs": [
      "PRAJIND-2",
-     "PRAJIND-11",
-     "PRAJIND-9",
-     "PRAJIND-13",
-     "PRAJIND-17"
+     "PRAJIND-7",
+     "PRAJIND-11"
     ]
    }
   ]

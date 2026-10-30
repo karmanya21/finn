@@ -1912,30 +1912,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.32,
+    "label": "Net debt",
+    "value": 0.26,
     "unit": "x equity",
-    "reading": "Borrowings ₹3,478 cr, 0.32× equity; up from ₹913 cr in FY22.",
+    "reading": "Net debt ₹2,777 cr in FY26, 0.26× equity; up from ₹414 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 913.0
+      "y": 414.0
      },
      {
       "x": "FY23",
-      "y": 689.0
+      "y": -779.0
      },
      {
       "x": "FY24",
-      "y": 1299.0
+      "y": 200.0
      },
      {
       "x": "FY25",
-      "y": 3010.0
+      "y": 2328.0
      },
      {
       "x": "FY26",
-      "y": 3478.0
+      "y": 2777.0
      }
     ]
    },
@@ -2228,58 +2228,51 @@
    860.0
   ]
  ],
+ "price_asof": 1793354297,
  "case": {
   "bull": [
    {
-    "figure": "27% → 16%",
-    "point": "Revenue has demonstrated strong historical compounding, with recent growth of 16% in FY27 indicating sustained demand.",
-    "refs": [
-     "sales_growth",
-     "MAXHEALTH-25"
-    ]
-   },
-   {
-    "figure": "24% → 27%",
-    "point": "Operating margins have consistently expanded over the last four years, reflecting improved operational efficiency.",
+    "figure": "Operating margin 27%",
+    "point": "Operating margin expanded from 24% in FY22 to 27% in FY26, showing stronger profitability.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "116%",
-    "point": "The company maintains strong financial health with operating cash flow representing 116% of net profit over five years.",
+    "figure": "Profit growth 25%",
+    "point": "Profit grew by 25% over the last 12 months, highlighting solid bottom-line momentum.",
     "refs": [
-     "cash_conversion"
+     "profit_growth"
+    ]
+   },
+   {
+    "figure": "ROCE 15%",
+    "point": "ROCE improved to 15% in FY26 from 12% in FY22, demonstrating better capital efficiency.",
+    "refs": [
+     "returns"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "10 of 10+",
-    "point": "Management has repeatedly deferred or missed timelines for critical capacity expansion projects across multiple facilities.",
-    "refs": [
-     "MAXHEALTH-0",
-     "MAXHEALTH-1",
-     "MAXHEALTH-3",
-     "MAXHEALTH-4",
-     "MAXHEALTH-5",
-     "MAXHEALTH-18"
-    ]
-   },
-   {
-    "figure": "2",
-    "point": "Multiple key strategic promises, including specific capacity targets and cash flow updates, have gone quiet or lapsed without further disclosure.",
-    "refs": [
-     "MAXHEALTH-2",
-     "MAXHEALTH-10",
-     "MAXHEALTH-23"
-    ]
-   },
-   {
-    "figure": "₹3,478 cr",
-    "point": "Total borrowings have increased significantly from ₹913 cr in FY22, raising the debt burden while project timelines slip.",
+    "figure": "Net debt ₹2,777 cr",
+    "point": "Net debt increased significantly to ₹2,777 cr in FY26 up from ₹414 cr in FY22.",
     "refs": [
      "debt"
+    ]
+   },
+   {
+    "figure": "Capacity commissioning MAXHEALTH-0",
+    "point": "Multiple facility commissioning targets have been deferred repeatedly across several reporting periods.",
+    "refs": [
+     "MAXHEALTH-0"
+    ]
+   },
+   {
+    "figure": "Super speciality rate implementation MAXHEALTH-24",
+    "point": "The super specialty rates implementation was missed and delayed beyond the November 2025 deadline.",
+    "refs": [
+     "MAXHEALTH-24"
     ]
    }
   ]

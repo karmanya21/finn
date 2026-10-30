@@ -1,6 +1,6 @@
 {
- "built": "2026-10-30T11:00:41",
- "source": "Yahoo Finance (NSE, end of day)",
+ "built": "2026-10-30T17:35:44+05:30",
+ "source": "Yahoo Finance (NSE)",
  "series": {
   "INFY": [
    [
@@ -11378,5 +11378,25 @@
     1103591
    ]
   ]
+ },
+ "asof": {
+  "INFY": 1793354296,
+  "LT": 1793354303,
+  "BAJFINANCE": 1793354299,
+  "HDFCBANK": 1793354303,
+  "ETERNAL": 1793354303,
+  "DIXON": 1793354296,
+  "ULTRACEMCO": 1793354303,
+  "M&M": 1793354303,
+  "CIPLA": 1793354301,
+  "HINDUNILVR": 1793354297,
+  "TATAPOWER": 1793354303,
+  "BEL": 1793354298,
+  "MAXHEALTH": 1793354297,
+  "TRENT": 1793354296,
+  "TATASTEEL": 1793354303,
+  "AARTIIND": 1793354402,
+  "KAYNES": 1793354297,
+  "PRAJIND": 1793354395
  }
 }

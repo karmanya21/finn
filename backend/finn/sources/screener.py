@@ -51,6 +51,30 @@ def company_page(slug: str, consolidated: bool = True) -> BeautifulSoup:
     return page
 
 
+def schedule(page: BeautifulSoup, parent: str, section: str = "balance-sheet") -> dict[str, dict[str, float | None]]:
+    """A row's breakdown ("Other Assets" -> Inventories, Cash Equivalents, ...), the data
+    behind screener's expandable "+" rows. {row: {column: value}}, cached like pages."""
+    tag = page.find(attrs={"data-company-id": True})
+    if not tag:
+        return {}
+    cid = tag["data-company-id"]
+    consolidated = bool(page.find("a", href=re.compile(r"/consolidated/$"), class_=re.compile("active")) or
+                        "consolidated" in (page.find("link", rel="canonical") or {}).get("href", ""))
+    params = {"parent": parent, "section": section}
+    if consolidated:
+        params["consolidated"] = ""
+    dest = RAW / "screener" / f"schedule_{cid}_{section}_{parent.replace(' ', '_')}_{int(consolidated)}.json"
+    if not dest.exists() or time.time() - dest.stat().st_mtime > PAGE_TTL:
+        r = SESSION.get(f"{SCREENER}/api/company/{cid}/schedules/", params=params, timeout=30)
+        r.raise_for_status()
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(r.text)
+        time.sleep(1)
+    import json
+    raw = json.loads(dest.read_text())
+    return {row: {c: _num(v) for c, v in cols.items()} for row, cols in raw.items() if isinstance(cols, dict)}
+
+
 def search(query: str, limit: int = 8) -> list[dict]:
     """[{symbol, name}] for listed companies matching a name or ticker."""
     r = SESSION.get(f"{SCREENER}/api/company/search/", params={"q": query}, timeout=30)

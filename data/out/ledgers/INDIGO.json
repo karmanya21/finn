@@ -1086,30 +1086,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 11.15,
+    "label": "Net debt",
+    "value": 7.76,
     "unit": "x equity",
-    "reading": "Borrowings ₹77,749 cr, 11.15× equity; up from ₹36,878 cr in FY22.",
+    "reading": "Net debt ₹54,119 cr in FY26, 7.76× equity; up from ₹26,761 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 36878.0
+      "y": 26761.0
      },
      {
       "x": "FY23",
-      "y": 44860.0
+      "y": 33049.0
      },
      {
       "x": "FY24",
-      "y": 51280.0
+      "y": 34571.0
      },
      {
       "x": "FY25",
-      "y": 66810.0
+      "y": 47951.0
      },
      {
       "x": "FY26",
-      "y": 77749.0
+      "y": 54119.0
      }
     ]
    },
@@ -1402,54 +1402,56 @@
    4877.6
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "14%",
-    "point": "Operating margin expanded significantly from 2.2% in FY22 to reach 14% by FY26.",
+    "figure": "Operating margin 2.2% → 14%",
+    "point": "Operating margins have significantly expanded over the last four years, demonstrating improved operational efficiency.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "1,274%",
-    "point": "Over the past 5 years, operating cash flow reached an impressive 1274% of net profit.",
-    "refs": [
-     "cash_conversion"
-    ]
-   },
-   {
-    "figure": "3 delivered",
-    "point": "Management successfully delivered on three key operational promises including airport operations and XLR delivery.",
+    "figure": "Delivered 3 of 3",
+    "point": "Management successfully executed on key infrastructure and fleet expansion promises, including new airport operations and XLR aircraft delivery.",
     "refs": [
      "INDIGO-3",
      "INDIGO-9",
      "INDIGO-10"
     ]
+   },
+   {
+    "figure": "Cash conversion 1274%",
+    "point": "The company maintains strong cash generation capabilities relative to net profit over the past five years.",
+    "refs": [
+     "cash_conversion"
+    ]
    }
   ],
   "bear": [
    {
-    "figure": "-149%",
-    "point": "Profit growth suffered a severe contraction with the last 12 months dropping to -149%.",
-    "refs": [
-     "profit_growth"
-    ]
-   },
-   {
-    "figure": "11.15x",
-    "point": "Borrowings surged to 77,749 crores, representing 11.15 times equity and increasing risk.",
+    "figure": "Net debt ₹54,119 cr",
+    "point": "Net debt has more than doubled since FY22, reaching a high leverage ratio of 7.76 times equity.",
     "refs": [
      "debt"
     ]
    },
    {
-    "figure": "3 missed",
-    "point": "Management missed targets on flight frequency, demand expectations, and Middle East capacity deployment.",
+    "figure": "Missed 3 of 3",
+    "point": "Management failed to meet targets for flight frequency, demand expectations, and Middle East capacity deployment.",
     "refs": [
      "INDIGO-6",
      "INDIGO-11",
      "INDIGO-15"
+    ]
+   },
+   {
+    "figure": "Gone quiet 2 of 2",
+    "point": "Key strategic promises regarding widebody deliveries and new route launches were abandoned without further updates after the target periods.",
+    "refs": [
+     "INDIGO-1",
+     "INDIGO-2"
     ]
    }
   ]

@@ -1788,30 +1788,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 1.93,
+    "label": "Net debt",
+    "value": 1.58,
     "unit": "x equity",
-    "reading": "Borrowings ₹76,141 cr, 1.93× equity; up from ₹51,195 cr in FY22.",
+    "reading": "Net debt ₹62,497 cr in FY26, 1.58× equity; up from ₹44,554 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 51195.0
+      "y": 44554.0
      },
      {
       "x": "FY23",
-      "y": 52923.0
+      "y": 41716.0
      },
      {
       "x": "FY24",
-      "y": 53689.0
+      "y": 44537.0
      },
      {
       "x": "FY25",
-      "y": 62866.0
+      "y": 51115.0
      },
      {
       "x": "FY26",
-      "y": 76141.0
+      "y": 62497.0
      }
     ]
    },
@@ -2104,48 +2104,49 @@
    345.05
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "4.55 GW",
-    "point": "Solar cell and module production beat the FY26 target of 3,700 MW by reaching 4.55 gigawatts.",
-    "refs": [
-     "TATAPOWER-4"
-    ]
-   },
-   {
-    "figure": "3.4x",
-    "point": "Net debt-to-EBITDA for FY26 came in stronger than the target at 3.4x compared to the 4x target.",
+    "figure": "Net debt-to-EBITDA 3.4x",
+    "point": "Management successfully beat their net debt-to-EBITDA target of 4x for FY26.",
     "refs": [
      "TATAPOWER-21"
     ]
    },
    {
-    "figure": "224%",
-    "point": "Over 5 years, operating cash flow was a robust 224% of net profit demonstrating strong cash conversion.",
+    "figure": "TP Solar production 4.55 GW",
+    "point": "The company beat its FY26 cell and module production target of 3,700 MW.",
     "refs": [
-     "cash_conversion"
+     "TATAPOWER-4"
+    ]
+   },
+   {
+    "figure": "Operating margin 21%",
+    "point": "Operating margin expanded from 16% in FY22 to 21% in FY26.",
+    "refs": [
+     "margin"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "600 MW",
-    "point": "Utility scale capacity addition reached only 600 MW against the FY26 target of 1,600 MW.",
+    "figure": "Renewable commissioning 600 MW",
+    "point": "Management missed the FY26 utility scale capacity addition target of 1,600 MW, reaching only 600 MW.",
     "refs": [
      "TATAPOWER-13"
     ]
    },
    {
-    "figure": "-4%",
-    "point": "Revenue growth for the last 12 months declined by 4% reflecting slowing momentum.",
+    "figure": "Mundra plant availability 0%",
+    "point": "The Mundra plant missed its 80% availability target after being shut for 6 months without capacity charges.",
     "refs": [
-     "sales_growth"
+     "TATAPOWER-15"
     ]
    },
    {
-    "figure": "₹76,141 cr",
-    "point": "Total borrowings rose to ₹76,141 cr, increasing the debt-to-equity ratio to 1.93x.",
+    "figure": "Net debt ₹62,497 cr",
+    "point": "Net debt increased substantially from ₹44,554 cr in FY22 to ₹62,497 cr in FY26.",
     "refs": [
      "debt"
     ]

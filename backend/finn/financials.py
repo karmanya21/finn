@@ -63,6 +63,12 @@ class Financials:
     def borrowings(self, fy: int) -> float | None:
         return self.balance.get(fy, {}).get("Borrowings")
 
+    def net_debt(self, fy: int) -> float | None:
+        """Borrowings less cash and equivalents (investments excluded: some are strategic)."""
+        b = self.borrowings(fy)
+        cash = self.balance.get(fy, {}).get("Cash Equivalents")
+        return None if b is None or cash is None else b - cash
+
     def roe(self, fy: int) -> float | None:
         """Net profit / average equity (share capital + reserves)."""
         def equity(y):
@@ -93,4 +99,11 @@ def load(symbol: str, slug: str | None = None) -> Financials:
                 if v is None or not m:
                     continue  # skip TTM, half-year and "9m" columns
                 target.setdefault(int(m.group(1)) % 100, {})[row] = v
+    try:  # cash sits inside "Other Assets"; screener serves the breakdown separately
+        cash = screener.schedule(page, "Other Assets").get("Cash Equivalents", {})
+        for col, v in cash.items():
+            if v is not None and (m := FY_COLUMN.match(col)):
+                f.balance.setdefault(int(m.group(1)) % 100, {})["Cash Equivalents"] = v
+    except Exception:
+        pass  # net debt falls back to "unknown"; gross borrowings still work
     return f

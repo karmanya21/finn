@@ -1179,7 +1179,7 @@
     }
    ],
    "status": "missed",
-   "detail": "Borrowings ₹94,801 cr → ₹92,382 cr (down ₹2,419 cr). Gross borrowings, not net of cash.",
+   "detail": "Net debt ₹83,154 cr → ₹82,324 cr (down ₹830 cr)",
    "statements": [
     {
      "call": "May 2025",
@@ -2225,30 +2225,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.9,
+    "label": "Net debt",
+    "value": 0.81,
     "unit": "x equity",
-    "reading": "Borrowings ₹92,382 cr, 0.90× equity; up from ₹75,561 cr in FY22.",
+    "reading": "Net debt ₹82,324 cr in FY26, 0.81× equity; up from ₹59,662 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 75561.0
+      "y": 59662.0
      },
      {
       "x": "FY23",
-      "y": 84893.0
+      "y": 71536.0
      },
      {
       "x": "FY24",
-      "y": 87082.0
+      "y": 78404.0
      },
      {
       "x": "FY25",
-      "y": 94801.0
+      "y": 83154.0
      },
      {
       "x": "FY26",
-      "y": 92382.0
+      "y": 82324.0
      }
     ]
    },
@@ -2541,43 +2541,55 @@
    167.6
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "147%",
-    "point": "Profit growth achieved a strong 147% over the last 12 months.",
+    "figure": "Profit growth 147% in the last 12 months",
+    "point": "Profit surged significantly over the last year, demonstrating strong short-term earnings momentum.",
     "refs": [
      "profit_growth"
     ]
    },
    {
-    "figure": "245%",
-    "point": "Cash conversion was very strong, with operating cash flow reaching 245% of net profit over 5 years.",
+    "figure": "Cash conversion 245% over 5 years",
+    "point": "Operating cash flow heavily exceeded net profit over a five-year span, highlighting excellent earnings quality.",
     "refs": [
      "cash_conversion"
+    ]
+   },
+   {
+    "figure": "Kept promises including TATASTEEL-2 and TATASTEEL-16",
+    "point": "Management successfully delivered key operational cost savings and beat coking coal cost targets.",
+    "refs": [
+     "TATASTEEL-2",
+     "TATASTEEL-16",
+     "TATASTEEL-19"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "26% → 15%",
-    "point": "Operating margins compressed significantly from 26% in FY22 to 15% in FY26.",
+    "figure": "Operating margin 26% to 15%",
+    "point": "Operating margins compressed severely from FY22 to FY26, indicating ongoing core profitability pressures.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "31% → 13%",
-    "point": "ROCE dropped from 31% in FY22 down to 13% in FY26.",
+    "figure": "Net debt ₹82,324 cr in FY26",
+    "point": "Net debt expanded substantially compared to historical levels, raising financial leverage concerns.",
     "refs": [
-     "returns"
+     "debt"
     ]
    },
    {
-    "figure": "₹92,382 cr",
-    "point": "Total borrowings increased to ₹92,382 cr, rising from ₹75,561 cr in FY22.",
+    "figure": "Missed targets including TATASTEEL-26 and TATASTEEL-21",
+    "point": "Management failed to hit net debt targets and missed India price increase goals.",
     "refs": [
-     "debt"
+     "TATASTEEL-21",
+     "TATASTEEL-26",
+     "TATASTEEL-31"
     ]
    }
   ]

@@ -1583,30 +1583,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 1.47,
+    "label": "Net debt",
+    "value": 1.13,
     "unit": "x equity",
-    "reading": "Borrowings ₹136,936 cr, 1.47× equity; up from ₹77,605 cr in FY22.",
+    "reading": "Net debt ₹104,957 cr in FY26, 1.13× equity; up from ₹66,487 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 77605.0
+      "y": 66487.0
      },
      {
       "x": "FY23",
-      "y": 92647.0
+      "y": 81374.0
      },
      {
       "x": "FY24",
-      "y": 108647.0
+      "y": 96634.0
      },
      {
       "x": "FY25",
-      "y": 129025.0
+      "y": 108410.0
      },
      {
       "x": "FY26",
-      "y": 136936.0
+      "y": 104957.0
      }
     ]
    },
@@ -1899,25 +1899,26 @@
    2840.3
   ]
  ],
+ "price_asof": 1793354303,
  "case": {
   "bull": [
    {
-    "figure": "20%",
-    "point": "Management beat the FY26 ROE target by delivering an actual ROE of 20% versus the targeted 18%.",
+    "figure": "FY26 ROE 20%",
+    "point": "Management beat their target by delivering a 20% ROE compared to the expected 18%.",
     "refs": [
      "M&M-11"
     ]
    },
    {
-    "figure": "34%",
-    "point": "EPS growth significantly outperformed expectations, reaching 34% compared to the multi-year target of 15% to 20%.",
+    "figure": "FY26 net cash generation 16,000 crores",
+    "point": "The company successfully delivered on its cash generation promise for the period.",
     "refs": [
-     "M&M-32"
+     "M&M-7"
     ]
    },
    {
-    "figure": "19%",
-    "point": "Operating margins expanded from 16% in FY22 to 19% by FY26, showcasing strong profitability gains.",
+    "figure": "Operating margin 19%",
+    "point": "Operating margin expanded steadily from 16% in FY22 to reach 19% in FY26.",
     "refs": [
      "margin"
     ]
@@ -1925,24 +1926,24 @@
   ],
   "bear": [
    {
-    "figure": "14.9%",
-    "point": "Auto revenue growth missed guidance with SUV growth reaching only 14.9% compared to mid-to-high teens targets.",
+    "figure": "Auto revenue growth 14.9%",
+    "point": "SUV growth missed the mid-to-high teens guidance set for FY27.",
     "refs": [
      "M&M-14"
     ]
    },
    {
-    "figure": "18%",
-    "point": "Cash conversion was exceptionally weak over five years, with operating cash flow making up only 18% of net profit.",
+    "figure": "Net debt ₹104,957 cr",
+    "point": "Net debt increased substantially from ₹66,487 cr in FY22 to 1.13x equity in FY26.",
     "refs": [
-     "cash_conversion"
+     "debt"
     ]
    },
    {
-    "figure": "1.47x",
-    "point": "Borrowings surged significantly to 1.47 times equity, totaling 136,936 crores and increasing financial leverage.",
+    "figure": "Operating cash flow 18%",
+    "point": "Cash conversion remained weak with operating cash flow representing only 18% of net profit over five years.",
     "refs": [
-     "debt"
+     "cash_conversion"
     ]
    }
   ]

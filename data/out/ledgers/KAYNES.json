@@ -1517,30 +1517,30 @@
    },
    {
     "key": "debt",
-    "label": "Debt",
-    "value": 0.19,
+    "label": "Net debt",
+    "value": 0.02,
     "unit": "x equity",
-    "reading": "Borrowings ₹913 cr, 0.19× equity; up from ₹189 cr in FY22.",
+    "reading": "Net debt ₹114 cr in FY26, 0.02× equity; down from ₹167 cr in FY22.",
     "series": [
      {
       "x": "FY22",
-      "y": 189.0
+      "y": 167.0
      },
      {
       "x": "FY23",
-      "y": 155.0
+      "y": -331.0
      },
      {
       "x": "FY24",
-      "y": 323.0
+      "y": -1203.0
      },
      {
       "x": "FY25",
-      "y": 903.0
+      "y": -153.0
      },
      {
       "x": "FY26",
-      "y": 913.0
+      "y": 114.0
      }
     ]
    },
@@ -1833,49 +1833,51 @@
    3131.0
   ]
  ],
+ "price_asof": 1793354297,
  "case": {
   "bull": [
    {
-    "figure": "15.8%",
-    "point": "Management successfully delivered on their FY26 EBITDA margin target of at least 15.6%.",
+    "figure": "FY26 EBITDA margin 15.8%",
+    "point": "Management successfully met their profitability target of at least 15.6% for the fiscal year.",
     "refs": [
      "KAYNES-3"
     ]
    },
    {
-    "figure": "₹450–500 cr",
-    "point": "Management demonstrated confidence by raising their FY27 revenue guidance for the PCB and OSAT business.",
+    "figure": "OSAT facility operational",
+    "point": "The company successfully delivered on its Sanand OSAT facility project, which is now operational and shipping commercially.",
     "refs": [
-     "KAYNES-31"
+     "KAYNES-0",
+     "KAYNES-12"
     ]
    },
    {
-    "figure": "16%",
-    "point": "Operating margins have consistently expanded from 13% in FY22 to 16% by FY26.",
+    "figure": "FY27 revenue target raised ₹450–500 cr",
+    "point": "Management demonstrated confidence by increasing their revenue guidance for the PCB and OSAT segments.",
     "refs": [
-     "margin"
+     "KAYNES-31"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "₹3,626.4 cr",
+    "figure": "FY26 revenue ₹3,626.4 cr",
     "point": "The company significantly missed its FY26 revenue target of ₹4,500 crores.",
     "refs": [
      "KAYNES-2"
     ]
    },
    {
-    "figure": "122 days",
-    "point": "Working capital efficiency deteriorated significantly, missing the 85-day target by a wide margin.",
+    "figure": "FY26 working capital 122 days",
+    "point": "Operational efficiency lagged as the company missed its working capital target of 85 days by a wide margin.",
     "refs": [
      "KAYNES-5",
      "KAYNES-16"
     ]
    },
    {
-    "figure": "-63%",
-    "point": "Operating cash flow has been weak, averaging negative 63% of net profit over the last five years.",
+    "figure": "5-year cash conversion -63%",
+    "point": "Historical cash flow generation remains weak relative to net profit, indicating persistent challenges in converting earnings to cash.",
     "refs": [
      "cash_conversion"
     ]
