@@ -1,7 +1,62 @@
 {
- "built": "2026-10-30T15:59:49",
+ "built": "2026-10-30T16:49:11",
  "days": 30,
  "items": [
+  {
+   "id": "DIXON-096f1e5a-3667-42a5-b4e2-ba8272ee52fc",
+   "symbol": "DIXON",
+   "name": "Dixon Technologies",
+   "at": "2026-10-30T16:19:51",
+   "type": "results",
+   "label": "Results",
+   "subject": "Results For The Quarter And Half Year Ended 30Th September, 2026",
+   "headline": "Results for the quarter and half year ended 30th September, 20206",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d7b8fffb-7a5f-4efa-9241-482c5d765f1d.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [
+    "DIXON-47"
+   ],
+   "numbers": null,
+   "senior": false,
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f4cee6de-593c-4f4c-a0b0-368c8d0aa43e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "DIXON-573832b2-d25c-4a3e-a3b4-46c15e9b0178",
+   "symbol": "DIXON",
+   "name": "Dixon Technologies",
+   "at": "2026-10-30T16:09:12",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
+   "headline": "Announcement under Regulation 30 of SEBI LODR- Change in Management",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/53529778-f611-4f21-b789-0bc1bf52e7e5.pdf",
+   "summary": "Dixon Technologies reported a consolidated revenue of Rs. 21,863 crores for the quarter ended September 30, 2026.",
+   "people": [
+    {
+     "name": "Prithvi Vachani",
+     "role": "Executive Director",
+     "change": "appointed",
+     "effective": "2026-10-30",
+     "profile": "Bentley University graduate and MBA from London Business School. Previously served as VP at Dixon, spearheaded Chennai facility, and managed key partnerships with boAt, Asus, HP, Jio, and Xiaomi.",
+     "promises": []
+    }
+   ],
+   "promises": [
+    "DIXON-50"
+   ],
+   "numbers": null,
+   "senior": false,
+   "importance": 70,
+   "routine": false
+  },
   {
    "id": "PRAJIND-a87d7d3f-c0be-4ad7-bc82-b30b513f9351",
    "symbol": "PRAJIND",
@@ -12,6 +67,51 @@
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
    "headline": "Audio Recording of Analysts'' Call held on 30th October, 2026.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/19cc4943-5d22-4340-8882-b2a432ebea09.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 25,
+   "routine": true
+  },
+  {
+   "id": "MAXHEALTH-0369f8e7-8c5a-4cab-9661-00a596e6976d",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-10-30T14:57:24",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
+   "headline": "Change in Senior Management Personnel",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/275a113c-7a73-487f-895e-234e11d9ebba.pdf",
+   "summary": "Max Healthcare approved financial results, capex for hospital expansions, project cost revision, and appointed Dr. Dharmender Kumar as Senior Management Personnel.",
+   "people": [
+    {
+     "name": "Dr. Dharmender Kumar",
+     "role": "Director & Chief - Public Affairs",
+     "change": "appointed",
+     "effective": "2026-11-01",
+     "profile": null,
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 60,
+   "routine": false
+  },
+  {
+   "id": "MAXHEALTH-17df8ae9-bb4a-41d0-813a-a0ed316b80bd",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-10-30T14:54:48",
+   "type": "earnings_call",
+   "label": "Earnings call",
+   "subject": "Presentation On Earnings Update",
+   "headline": "Presentation of earnings update for the quarter and half year ended September 30, 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7bf7af6c-77ed-4dc3-9f87-e6031a4733f4.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -39,6 +139,34 @@
    "routine": false
   },
   {
+   "id": "MAXHEALTH-353a1940-cfa2-43a9-bad9-7b61148b104f",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-10-30T14:45:41",
+   "type": "results",
+   "label": "Results",
+   "subject": "Results - Financial Results For The Quarter And Half Year Ended September 30, 2026",
+   "headline": "Result - Financial Results for the quarter and half year ended September 30, 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/38413a36-f1cf-4992-834b-1108910d0ecf.pdf",
+   "summary": "Max Healthcare reported Q2 FY27 gross revenue of Rs 3,219 Cr, up 20% YoY, and PAT of Rs 448 Cr, up 10% YoY.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fe6aceba-7b4e-4210-97a6-a0f1f1d06edd.pdf"
+    },
+    {
+     "label": "Press release",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e2430484-f6c7-4bd6-bd14-c17820e93cda.pdf"
+    }
+   ]
+  },
+  {
    "id": "HDFCBANK-6072d0f1-030e-4a8f-8880-4378c9fc184e",
    "symbol": "HDFCBANK",
    "name": "HDFC Bank",
@@ -48,6 +176,42 @@
    "subject": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
    "headline": "Allotment of 46,75,598 equity shares pursuant to exercise of ESOP/RSU",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/38dab330-ca6e-4311-9679-7b47cebb7993.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "MAXHEALTH-2ad01cea-bd1d-4f28-bcbf-6813a29859c5",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-10-30T11:02:50",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
+   "headline": "Allotment of Equity Shares under Max Healthcare Institute Limited - Employee Stock Option Scheme 2022",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d69aebb0-5a70-430c-979e-c2d4fcc9948a.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "MAXHEALTH-e8653732-20c5-4475-9053-99f72ba3499d",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-10-30T10:57:12",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Grant Of Options Under Max Healthcare Institute Limited - Employee Stock Option Scheme 2022",
+   "headline": "Grant of options under Max Healthcare Institute Limited - Employee Stock Option Scheme 2022",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fa1457ec-d337-427d-8499-fa17742eb31e.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -3149,7 +3313,7 @@
    "label": "Update",
    "subject": "Company Statement On The U.S. Permanent Labor Certification Program",
    "headline": "Company statement on the U.S Permanent Labor Certification Program",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c46593f-8874-4274-a9e6-2f350d7d7da8.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8c46593f-8874-4274-a9e6-2f350d7d7da8.pdf",
    "summary": "Infosys does not expect the US Department of Labor's suspension of its PERM applications to have a material impact.",
    "people": [],
    "promises": [],
@@ -3221,7 +3385,7 @@
    "label": "M&A",
    "subject": "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
    "headline": "please refer to enclosed file",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ac5c0cc3-da3a-49b5-8986-f721ef92322b.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ac5c0cc3-da3a-49b5-8986-f721ef92322b.pdf",
    "summary": "Embraer S.A. will acquire a 51% equity stake in Novavayu Aerospace Limited from Mahindra & Mahindra for approximately Rs 5,10,000.",
    "people": [],
    "promises": [],
@@ -4069,7 +4233,7 @@
    "label": "Fund raise",
    "subject": "Announcement under Regulation 30 (LODR)-Preferential Issue",
    "headline": "Capital Raise through Preferential Issue",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/50fbec1c-9852-4043-9020-d9df179271d5.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/50fbec1c-9852-4043-9020-d9df179271d5.pdf",
    "summary": "Bajaj Finance approved raising up to Rs. 11,700 crore via QIP and Rs. 5,800 crore via preferential issue of warrants.",
    "people": [],
    "promises": [],
@@ -4569,5 +4733,6 @@
    "importance": 40,
    "routine": false
   }
- ]
+ ],
+ "failed": []
 }
