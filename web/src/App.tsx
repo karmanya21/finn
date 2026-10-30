@@ -538,34 +538,55 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
 
 // ---- results: what the latest quarter says -------------------------------------------
 
-/** One line from the numbers: what's going well, and where growth or margins are slipping. */
-function resultsSummary(h: Headline): string {
+interface Read { label: string; value: string; rest?: string; note?: string }
+
+/** What's going well and what to watch in the numbers, one figure per line. */
+function resultsRead(h: Headline): { good: Read[]; watch: Read[] } {
   const row = (k: string) => h.rows.find((r) => r.label === k);
   const p = (v: number) => fmtChange(v);
-  const good: string[] = [], watch: string[] = [];
+  const good: Read[] = [], watch: Read[] = [];
   const rev = row("Revenue"), pat = row("PAT");
   if (rev?.yoy != null) {
     const d = rev.prev_yoy != null ? rev.yoy - rev.prev_yoy : 0;
-    if (rev.yoy < 0) watch.push(`revenue down ${Math.abs(rev.yoy).toFixed(0)}% YoY`);
-    else if (d >= 3) good.push(`revenue growth up to ${p(rev.yoy)} from ${p(rev.prev_yoy!)}`);
-    else if (d <= -3) watch.push(`revenue growth slowed to ${p(rev.yoy)} from ${p(rev.prev_yoy!)}`);
-    else if (rev.yoy >= 10) good.push(`revenue ${p(rev.yoy)} YoY`);
+    if (rev.yoy < 0) watch.push({ label: "Revenue", value: p(rev.yoy), rest: "YoY" });
+    else if (d >= 3) good.push({ label: "Revenue", value: p(rev.yoy), rest: "YoY", note: `faster than ${p(rev.prev_yoy!)} last quarter` });
+    else if (d <= -3) watch.push({ label: "Revenue", value: p(rev.yoy), rest: "YoY", note: `slower than ${p(rev.prev_yoy!)} last quarter` });
+    else if (rev.yoy >= 10) good.push({ label: "Revenue", value: p(rev.yoy), rest: "YoY" });
   }
   const baseOneOff = h.notes?.some((n) => n.row === "PAT" && n.text.startsWith("Year-ago"));
   if (pat?.yoy != null) {
-    if (pat.yoy < 0) watch.push(`PAT down ${Math.abs(pat.yoy).toFixed(0)}%${baseOneOff ? " against a one-off year-ago base" : ""}`);
-    else if (rev?.yoy != null && pat.yoy >= rev.yoy + 5) good.push(`PAT ${p(pat.yoy)}, ahead of revenue`);
-    else if (pat.yoy >= 10) good.push(`PAT ${p(pat.yoy)}`);
+    if (pat.yoy < 0) watch.push({ label: "PAT", value: p(pat.yoy), rest: "YoY",
+      note: baseOneOff ? "the year-ago quarter had a one-off" : undefined });
+    else if (rev?.yoy != null && pat.yoy >= rev.yoy + 5) good.push({ label: "PAT", value: p(pat.yoy), rest: "YoY", note: "ahead of revenue" });
+    else if (pat.yoy >= 10) good.push({ label: "PAT", value: p(pat.yoy), rest: "YoY" });
   }
   const m = h.margin;
   if (m?.now != null && m.year_ago != null) {
     const d = m.now - m.year_ago;
-    if (d <= -0.5) watch.push(`EBITDA margin down ${Math.abs(d).toFixed(1)} pts to ${m.now.toFixed(1)}%`);
-    else if (d >= 0.5) good.push(`EBITDA margin up ${d.toFixed(1)} pts to ${m.now.toFixed(1)}%`);
+    const r = { label: "EBITDA margin", value: `${m.now.toFixed(1)}%`, rest: `${d > 0 ? "up" : "down"} ${Math.abs(d).toFixed(1)} pts YoY` };
+    if (d <= -0.5) watch.push(r);
+    else if (d >= 0.5) good.push(r);
   }
-  const cap = (x: string) => x[0].toUpperCase() + x.slice(1);
-  const parts = [good.length && `Going well: ${good.join(", ")}`, watch.length && `Watch: ${watch.join(", ")}`].filter(Boolean);
-  return parts.length ? parts.join(". ") + "." : `${cap(resultsLine(h).split(": ")[1] ?? "")}; a steady quarter.`;
+  return { good, watch };
+}
+
+function ResultsRead({ h }: { h: Headline }) {
+  const { good, watch } = resultsRead(h);
+  if (!good.length && !watch.length) return <p className="results-summary">A steady quarter: no big swings in growth or margins.</p>;
+  const block = (title: string, tone: "up" | "down", rs: Read[]) => rs.length > 0 && (
+    <div className={`read read-${tone}`}>
+      <span className="read-h">{title}</span>
+      {rs.map((r) => (
+        <span key={r.label} className="read-row">
+          <span className="read-l">{r.label}</span>
+          <span className="read-v">{r.value}</span>
+          {r.rest && <span className="read-rest">{r.rest}</span>}
+          {r.note && <span className="read-note">{r.note}</span>}
+        </span>
+      ))}
+    </div>
+  );
+  return <div className="reads">{block("Going well", "up", good)}{block("Watch", "down", watch)}</div>;
 }
 
 /** Guidance the latest numbers speak to: targets being paced, and anything moved on the last call. */
@@ -583,7 +604,7 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
   return (
     <section>
       <h2 className="section-title">Results · {h.quarter}</h2>
-      <p className="results-summary">{resultsSummary(h)}</p>
+      <ResultsRead h={h} />
       <div className="headline">
         <div className="hl-row hl-head"><span /><span /><span className="hl-yoy">YoY</span><span className="hl-qoq">QoQ</span></div>
         {h.rows.map((r) => (

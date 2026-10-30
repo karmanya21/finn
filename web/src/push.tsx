@@ -563,7 +563,7 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
       {linked.length > 0 && (
         <div className="filing-promises">
           <span className="fp-label">{f.type === "results" ? "What these results mean for their promises" : "Relates to"}</span>
-          <PromiseChips ts={linked} detail />
+          <PromiseRows ts={linked} quarter={f.type === "results" ? f.numbers?.quarter ?? resultsQuarter(f) : undefined} />
         </div>
       )}
 
@@ -572,6 +572,50 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
         {(f.also ?? []).map((a, i) => <a key={i} className="filing-link" href={a.pdf} target="_blank" rel="noreferrer">{a.label} ↗</a>)}
       </div>
     </article>
+  );
+}
+
+/** Highest quarter a span label covers: "H1FY27" → 2, "Q3FY27" → 3, "FY27" → 4. */
+function lastQuarter(label: string): number | null {
+  const m = label.match(/(?:Q(\d)|H(\d)|^)FY\d{2}$/);
+  if (!m) return null;
+  return m[1] ? Number(m[1]) : m[2] ? Number(m[2]) * 2 : 4;
+}
+
+/** One row per promise: name and verdict, then what was guided against what's come in. */
+function PromiseRows({ ts, quarter }: { ts: Thread[]; quarter?: string }) {
+  // Promises still running first; ones last year's results already settled after.
+  const rows = [...ts].sort((a, b) => Number(b.status === "tracking") - Number(a.status === "tracking"));
+  const q = quarter?.match(/Q([1-4])FY(\d{2})/);
+  const stale = q ? rows.map((t) => t.pace?.so_far_label).find((l) =>
+    l && l.endsWith(`FY${q[2]}`) && (lastQuarter(l) ?? 4) < Number(q[1])) : undefined;
+  return (
+    <div className="prows">
+      {rows.map((t) => {
+        const s = statusOf(t);
+        const sym = t.id.replace(/-\d+$/, "");
+        // "Reported revenue growth 16.2% for FY26" → 16.2%, FY26
+        const done = t.detail?.match(/^Reported .*? (-?[\d.,]+%) for (\S+)$/);
+        const actual = t.pace ? { when: normText(t.pace.so_far_label), value: `${t.pace.so_far.toFixed(1)}%` }
+          : done ? { when: done[2], value: done[1] } : null;
+        return (
+          <button key={t.id} className="prow-p" onClick={() => go(`/c/${sym}/t/${t.id}`)}>
+            <span className="prow-p-top">
+              <span className="prow-p-title">{t.title}</span>
+              <span className={`prow-p-status tone-text-${s.tone}`}>{s.label}</span>
+            </span>
+            <span className="prow-p-figs">
+              {t.target && <span><span className="k">Guided</span> <b>{normText(t.target)}</b></span>}
+              {actual && <span><span className="k">{actual.when}</span> <b className={`tone-text-${s.tone}`}>{actual.value}</b></span>}
+            </span>
+            {!actual && t.detail && <span className="prow-p-note">{normText(t.detail)}</span>}
+            {t.pace?.needs != null && t.pace.needs_label && (
+              <span className="prow-p-note">Needs {t.pace.needs.toFixed(1)}% in {normText(t.pace.needs_label)} to reach {t.pace.needs_for}%</span>)}
+          </button>
+        );
+      })}
+      {stale && quarter && <p className="footnote">Progress uses {stale} figures; {quarter} isn't in the financials FINN reads yet.</p>}
+    </div>
   );
 }
 
