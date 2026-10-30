@@ -29,7 +29,7 @@ Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction a
 
 `.github/workflows/refresh.yml` fetches end-of-day prices every evening at 19:00 IST (and on demand from the Actions tab) and commits them if they changed, so price and volume alerts stay current. It needs no secrets.
 
-Filings are refreshed by hand: BSE's announcements API answers 403 to GitHub's runners, so they have to be fetched from a machine in India. About a minute, since documents and model answers are cached:
+Filings can't be fetched from GitHub: BSE's announcements API answers 403 to its runners. They refresh daily from a free server in India instead; [`deploy/india-refresh/`](deploy/india-refresh/README.md) sets it up in two commands. Or refresh by hand from any machine in India (about a minute, since documents and model answers are cached):
 
 ```bash
 cd backend && .venv/bin/python -m scripts.build_push filings
