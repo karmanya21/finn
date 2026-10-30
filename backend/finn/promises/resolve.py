@@ -130,6 +130,11 @@ def _comparable(prev: dict, cur: dict) -> bool:
     p0, p1 = parse_period(prev.get("period")), parse_period(cur.get("period"))
     if p0 and p1 and (p0.fy, p0.quarters) != (p1.fy, p1.quarters):
         return False  # "1.3 GW in H2" and "2.7 GW this year" cover different spans
+    if bool(p0) != bool(p1) and prev.get("period") and cur.get("period"):
+        return False  # one year's capex and a multi-year plan aren't the same target
+    m0, m1 = _mid(prev), _mid(cur)
+    if _unit(cur) != "%" and m0 and m1 and m0 > 0 and m1 > 0 and max(m0, m1) / min(m0, m1) >= 3:
+        return False  # guidance doesn't move 3x in a quarter: a scale or scope mix-up
     revision = REVISION.search(cur.get("quote") or "")
     shared = {cur.get("low"), cur.get("high")}
     if not revision and any(v is not None and v not in shared and re.search(rf"(?<![\d.]){re.escape(f'{v:,.0f}' if v >= 1000 else f'{v:g}')}(?![\d])",

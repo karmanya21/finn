@@ -87,8 +87,7 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
 
         # A lender raises debt every week; an NCD or CP allotment is funding, not news.
         lender = bool(((ledger or {}).get("snapshot") or {}).get("lender"))
-        paper = DEBT_PAPER.search(f"{a['subject']} {a['headline']} {item['summary'] or ''}")
-        if kind == "fund_raise" and paper and (lender or re.search(r"commercial paper", paper.group(0), re.I)):
+        if kind == "fund_raise" and routine_debt(f"{a['subject']} {a['headline']} {item['summary'] or ''}", lender):
             kind = item["type"] = "unclassified"
             item["label"] = LABEL[kind]
             score = WEIGHT[kind]
@@ -117,7 +116,8 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
 def _fold_repeats(items: list[dict]) -> list[dict]:
     """The same event is often filed twice (a Reg 30 disclosure and a press release, or a
     correction). Same company, same type, within two days, naming the same people or with
-    the same subject: keep the most important one."""
+    the same subject, or (one filing per document: the board outcome and the record-date
+    notice) the same figures in the summary: keep the most important one."""
     keep: list[dict] = []
     for i in sorted(items, key=lambda x: -x["importance"]):
         names = {p["name"].lower().replace(".", "").replace("mr ", "").replace("ms ", "").strip() for p in i["people"]}
@@ -125,12 +125,30 @@ def _fold_repeats(items: list[dict]) -> list[dict]:
                     and abs((datetime.fromisoformat(k["at"]) - datetime.fromisoformat(i["at"])).days) <= 2
                     and ((names and names & {p["name"].lower().replace(".", "").replace("mr ", "").replace("ms ", "").strip()
                                              for p in k["people"]})
-                         or (not names and k["subject"] == i["subject"] and k["type"] in ("dividend", "management_change")))), None)
+                         or (not names and k["subject"] == i["subject"] and k["type"] in ("dividend", "management_change"))
+                         or _same_figures(k, i))), None)
         if dup is None:
             keep.append(i)
         elif i["pdf"]:
             dup.setdefault("also", []).append({"label": "Also filed", "pdf": i["pdf"]})
     return sorted(keep, key=lambda x: x["at"], reverse=True)
+
+
+def _same_figures(a: dict, b: dict) -> bool:
+    """Two summaries of one event: the same amounts (₹11,700 cr QIP and ₹5,800 cr
+    warrants), or mostly the same words (an NCLT order filed as the order and as a Reg 30
+    notice), whatever the subject lines say."""
+    sa, sb = a.get("summary") or "", b.get("summary") or ""
+    fa, fb = ({float(n.replace(",", "")) for n in re.findall(r"\d[\d,]*(?:\.\d+)?", x)} for x in (sa, sb))
+    wa, wb = (set(re.findall(r"[a-z]{4,}", x.lower())) for x in (sa, sb))
+    return (len(fa) >= 2 and fa == fb) or (bool(wa and wb) and len(wa & wb) / len(wa | wb) > 0.6)
+
+
+def routine_debt(text: str, lender: bool) -> bool:
+    """A lender raises debt every week (NCDs, CP, bonds): funding, not news. For anyone
+    else only commercial paper is routine; a bond or NCD issue can matter."""
+    paper = DEBT_PAPER.search(text)
+    return bool(paper) and (lender or bool(re.search(r"commercial paper", paper.group(0), re.I)))
 
 
 def _fold_results(items: list[dict]) -> list[dict]:
@@ -202,13 +220,19 @@ def eod(symbol: str, days: str = "6mo") -> tuple[list[list], int | None]:
     return rows, res.get("meta", {}).get("regularMarketTime")
 
 
-def build_prices() -> dict:
+def build_prices(previous: dict | None = None) -> dict:
+    """A company whose fetch fails keeps its last series (and says how old it is) rather
+    than vanishing from the app: Yahoo 404'd Eternal for one run."""
     out, asof = {}, {}
+    previous = previous or {}
     for c in PORTFOLIO:
         try:
             out[c.symbol], asof[c.symbol] = eod(c.symbol)
         except Exception as e:
             print(f"  prices {c.symbol:<11} FAILED {e}", flush=True)
+            if c.symbol in previous.get("series", {}):
+                out[c.symbol] = previous["series"][c.symbol]
+                asof[c.symbol] = previous.get("asof", {}).get(c.symbol)
         time.sleep(0.3)
     return {"built": datetime.now(IST).isoformat(timespec="seconds"), "source": "Yahoo Finance (NSE)",
             "series": out, "asof": asof}

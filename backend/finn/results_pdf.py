@@ -36,6 +36,18 @@ For each line give three columns exactly as printed: the quarter just ended ("cu
 Copy numbers as printed, without converting units. Use null if a line or column isn't there. Do not compute anything."""
 
 
+def printed_numbers(text: str) -> set[float]:
+    """Every number in a statement, including dotted thousands ("2.56.921" = 2,56,921)."""
+    out = set(_numbers(text))
+    out |= {float(m.replace(".", "")) for m in re.findall(r"\b\d{1,3}(?:\.\d{2,3})+\b", text)}
+    return out
+
+
+def is_printed(v: float | None, printed: set[float]) -> bool:
+    """Was this figure printed (sign aside; the model may round "2,56,921.15" to 256921)?"""
+    return v is not None and any(abs(abs(v) - n) <= max(0.51, abs(v) * 0.0005) for n in printed)
+
+
 def _agrees_with_history(rev: dict, quarter: str, fin) -> bool:
     import re
     from finn import fiscal
@@ -79,19 +91,14 @@ def from_filing(company: str, pdfs: list[str], quarter: str, fin=None) -> dict |
         return None
     out = complete_json(SYSTEM, f"Company: {company}\n\n{text}", SCHEMA)
 
-    printed = set(_numbers(text))
-    # Some statements print thousands separators as dots ("2.56.921" = 2,56,921).
-    printed |= {float(m.replace(".", "")) for m in re.findall(r"\b\d{1,3}(?:\.\d{2,3})+\b", text)}
+    printed = printed_numbers(text)
     k = TO_CRORE[out["unit"]]
     vals: dict[str, dict[str, float | None]] = {}
     for line in LINES:
         vals[line] = {}
         for c in COLS:
             v = out[line].get(c)
-            # every figure must be printed in the filing (sign aside; the model may round
-            # "2,56,921.15" to 256921), or it's dropped
-            ok = v is not None and any(abs(abs(v) - n) <= max(0.51, abs(v) * 0.0005) for n in printed)
-            vals[line][c] = v * k if ok else None
+            vals[line][c] = v * k if is_printed(v, printed) else None
 
     def ebitda(c):
         parts = [vals[x][c] for x in ("pbt", "finance_costs", "depreciation", "other_income")]

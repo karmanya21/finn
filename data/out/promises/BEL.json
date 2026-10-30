@@ -739,7 +739,7 @@
     "metric_label": "Non-defense revenue share",
     "scope": "company",
     "basis": "reported",
-    "low": 10,
+    "low": null,
     "high": null,
     "unit": "%",
     "direction": "up",

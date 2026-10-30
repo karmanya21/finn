@@ -659,7 +659,7 @@
     "metric_label": "Return on equity guidance",
     "scope": "company",
     "basis": "unclear",
-    "low": 19,
+    "low": null,
     "high": 20,
     "unit": "%",
     "direction": "flat",
@@ -937,7 +937,7 @@
     "metric_label": "Return on equity",
     "scope": "company",
     "basis": "unclear",
-    "low": 19,
+    "low": null,
     "high": 20,
     "unit": "%",
     "direction": "flat",
@@ -963,24 +963,6 @@
     "deadline": null,
     "condition": null,
     "change": "reaffirmed"
-   },
-   {
-    "quote": "And against that, you're guiding for 145 to 160 bps next year, full year. Is that the right understanding?",
-    "speaker": "Abhishek Murarka",
-    "page": 9,
-    "kind": "hard",
-    "metric": "asset_quality",
-    "metric_label": "Credit cost guidance",
-    "scope": "company",
-    "basis": "unclear",
-    "low": 145,
-    "high": 160,
-    "unit": "bps",
-    "direction": null,
-    "period": "FY27",
-    "deadline": null,
-    "condition": null,
-    "change": "new"
    },
    {
     "quote": "All goes well, which should start to look towards 5% kind of number in the next year as well.",
@@ -1181,7 +1163,7 @@
     "change": "new"
    }
   ],
-  "rejected": 0
+  "rejected": 1
  },
  {
   "call": "Aug 2026",

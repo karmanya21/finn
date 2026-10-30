@@ -106,6 +106,25 @@ def turns(text: str) -> list[Turn]:
     return [t for t in out if t.lines]
 
 
+def questioners(turns: list[Turn]) -> set[str]:
+    """Analysts and journalists: the speakers the moderator (or IR host) hands the line to
+    ("the next question is from the line of X"). Precise where "asks questions" isn't:
+    management answers can contain question marks too."""
+    hosts = " ".join(" ".join(t.lines) for t in turns if t.speaker.lower() in ("moderator", "operator"))
+    intro = re.findall(r"question(?:s)?\s+(?:is\s+|comes\s+)?from(?:\s+the\s+line\s+of)?\s+([A-Z][\w.'’-]*(?:\s+[A-Z][\w.'’-]*){0,3})", hosts)
+    names = {n.strip().split()[-1].lower() for n in intro}
+    return {t.speaker for t in turns if t.speaker.split()[-1].lower().strip(".") in names}
+
+
+def speaker_of(turns: list[Turn], quote: str, norm) -> str | None:
+    """Who actually said quote (norm: the comparison normaliser), whatever the model wrote."""
+    head = norm(quote)[:80]
+    for t in turns:
+        if head and head in norm(" ".join(t.lines)):
+            return t.speaker
+    return None
+
+
 def excerpts(text: str, context: int = 1) -> list[Excerpt]:
     out = []
     for t in turns(text):

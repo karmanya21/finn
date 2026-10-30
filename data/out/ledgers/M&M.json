@@ -1134,20 +1134,21 @@
    "title": "International farm business performance",
    "kind": "directional",
    "metric": "other",
-   "scope": "farm segment",
-   "basis": "management",
+   "scope": "Tech Mahindra",
+   "basis": null,
    "period": "FY27",
    "target": "",
    "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "delivered",
-   "detail": "Exited three international farm subsidiaries to remove drag",
-   "evidence": {
-    "quote": "So, 3 businesses which were, in a way, dragging the international business of farm, we've kind of taken the capital allocation calls and, you know, set in motion a process.",
-    "call": "May 2026",
-    "new_deadline": null
-   },
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
    "statements": [
     {
      "call": "Feb 2026",
@@ -1160,6 +1161,18 @@
      "deadline": null,
      "condition": null,
      "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Tech Mahindra up 28%, again a very strong quarter on track for all the commitments that the business has made.",
+     "speaker": "Dr. Anish Shah",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf"
     }
    ]
   },
@@ -1905,21 +1918,21 @@
   "bull": [
    {
     "figure": "FY26 ROE 20%",
-    "point": "Management beat their target by delivering a 20 percent ROE compared to the 18 percent goal.",
+    "point": "Management beat their target by delivering a 20% ROE against the 18% goal for FY26.",
     "refs": [
      "M&M-11"
     ]
    },
    {
-    "figure": "FY26 net cash 16,000 crores",
-    "point": "Management delivered strong cash generation during the fiscal year.",
+    "figure": "EPS growth 34%",
+    "point": "Earnings per share growth outperformed the 15-20% multi-year target, reaching 34%.",
     "refs": [
-     "M&M-7"
+     "M&M-32"
     ]
    },
    {
     "figure": "Operating margin 19%",
-    "point": "Operating margins expanded from 16 percent in FY22 to 19 percent in FY26.",
+    "point": "Operating margin expanded steadily from 16% in FY22 to 19% in FY26.",
     "refs": [
      "margin"
     ]
@@ -1928,21 +1941,21 @@
   "bear": [
    {
     "figure": "Net debt ₹104,957 cr",
-    "point": "Net debt rose significantly from ₹66,487 crore in FY22 to ₹104,957 crore in FY26.",
+    "point": "Net debt increased substantially from ₹66,487 cr in FY22 to ₹104,957 cr in FY26.",
     "refs": [
      "debt"
     ]
    },
    {
-    "figure": "Auto revenue growth missed",
-    "point": "SUV growth reached only 14.9 percent, missing the mid-to-high teens guidance.",
+    "figure": "Auto revenue growth 14.9%",
+    "point": "Auto revenue growth missed the mid-to-high teens guidance with SUV growth coming in at 14.9%.",
     "refs": [
      "M&M-14"
     ]
    },
    {
     "figure": "Cash conversion 18%",
-    "point": "Operating cash flow was weak at only 18 percent of net profit over five years.",
+    "point": "Over 5 years, operating cash flow was a weak 18% of net profit.",
     "refs": [
      "cash_conversion"
     ]

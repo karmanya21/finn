@@ -1078,14 +1078,6 @@
     ]
    },
    {
-    "key": "cash_conversion",
-    "label": "Cash conversion",
-    "value": 1274,
-    "unit": "% of profit, 5y",
-    "reading": "Over 5 years, operating cash flow was 1274% of net profit (strong).",
-    "series": []
-   },
-   {
     "key": "debt",
     "label": "Net debt",
     "value": 7.76,
@@ -1407,33 +1399,33 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered promises 3",
-    "point": "Management successfully delivered three key operational targets including new airport operations, XLR aircraft delivery, and damp lease capacity.",
-    "refs": [
-     "INDIGO-3",
-     "INDIGO-9",
-     "INDIGO-10"
-    ]
-   },
-   {
-    "figure": "Operating margin 14%",
-    "point": "Operating margins expanded significantly from 2.2% in FY22 to 14% by FY26.",
+    "figure": "Operating margin 2.2% → 14%",
+    "point": "Management successfully expanded operating margins significantly between FY22 and FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "Cash conversion 1274%",
-    "point": "Operating cash flow conversion was exceptionally strong at 1274% of net profit over five years.",
+    "figure": "Commence operations at new airports: due FY26, kept",
+    "point": "The company successfully met its commitments regarding new airport operations, XLR aircraft delivery, and damp lease capacity.",
     "refs": [
-     "cash_conversion"
+     "INDIGO-3",
+     "INDIGO-9",
+     "INDIGO-10"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Missed promises 3",
-    "point": "Management missed targets on full flight frequencies, demand strength, and Middle East flight capacity.",
+    "figure": "Net debt ₹54,119 cr",
+    "point": "Net debt has more than doubled since FY22, reaching a high leverage ratio of 7.76 times equity.",
+    "refs": [
+     "debt"
+    ]
+   },
+   {
+    "figure": "Full flight frequency operation: due CY2025, missed",
+    "point": "Management failed to meet targets for flight frequency, demand strength, and Middle East capacity deployment.",
     "refs": [
      "INDIGO-6",
      "INDIGO-11",
@@ -1441,18 +1433,11 @@
     ]
    },
    {
-    "figure": "Gone quiet promises 2",
-    "point": "Two promises regarding widebody deliveries and new route launches went quiet after their periods ended without updates.",
+    "figure": "Widebody aircraft delivery: due H2FY26, gone quiet",
+    "point": "Promises regarding widebody aircraft delivery and new route launches were abandoned without further updates after the target periods.",
     "refs": [
      "INDIGO-1",
      "INDIGO-2"
-    ]
-   },
-   {
-    "figure": "Net debt ₹54,119 cr",
-    "point": "Net debt surged to ₹54,119 crore in FY26, reaching 7.76 times equity.",
-    "refs": [
-     "debt"
     ]
    }
   ]

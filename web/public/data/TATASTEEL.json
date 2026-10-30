@@ -91,13 +91,13 @@
   "missed": 4,
   "resolved": 8,
   "moved": 1,
-  "quiet": 6,
-  "open": 19,
+  "quiet": 8,
+  "open": 18,
   "by_status": {
    "on_track": 8,
    "beat": 2,
-   "gone_quiet": 6,
-   "open": 11,
+   "gone_quiet": 8,
+   "open": 10,
    "delivered": 2,
    "missed": 4
   }
@@ -127,7 +127,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "We expect to continue the optimisation of fixed costs, not only in the next quarter, but in the year ahead, too.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 2,
      "target": "",
      "period": "FY26",
@@ -168,7 +168,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "In UK, we have placed equipment orders for ~3 MTPA EAF and are targeting to commence civil construction in July.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 2,
      "target": "",
      "period": "FY26",
@@ -221,7 +221,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "In terms of costs, as far as India is concerned, coking coal costs are expected to be about $10 per ton lower in 4Q vs. 3Q.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 6,
      "target": "10 USD per ton",
      "period": "Q4FY25",
@@ -233,7 +233,7 @@
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "India consumption cost will be about $6 per ton higher in 3Q than it was in 2Q",
-     "speaker": "KANCHINADHAM",
+     "speaker": "Operator",
      "page": 7,
      "target": "6 USD per ton",
      "period": "Q3FY26",
@@ -269,7 +269,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "In Netherlands, iron ore consumption cost is expected to be about $3 – 4 per ton lower in 4Q vs. 3Q.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 6,
      "target": "3–4 USD per ton",
      "period": "Q4FY25",
@@ -309,7 +309,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "we're expecting next year to have a better performance.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 6,
      "target": "",
      "period": "FY26",
@@ -337,7 +337,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "By September of 2026, we would have completed Kalinganagar and then the full benefit will start coming in.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 10,
      "target": "",
      "period": "FY27",
@@ -378,7 +378,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "In the next few months, a galvanising line will also get commissioned",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 10,
      "target": "",
      "period": "FY26",
@@ -424,7 +424,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "it will come back in July.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 11,
      "target": "",
      "period": "FY26",
@@ -458,7 +458,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "That will happen in March. One of it will happen in March and the other in September.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 15,
      "target": "",
      "period": "FY25",
@@ -486,7 +486,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "For the full year next year, we will certainly be trying to ensure that we are cashflow positive.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 15,
      "target": "",
      "period": "FY26",
@@ -515,7 +515,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "Total redundancies or people who have left the company since March 2024 was about 1,900 and expect more to leave in the upcoming quarters.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 2,
      "target": "",
      "period": "Q4FY25",
@@ -544,7 +544,7 @@
      "call": "Feb 2025",
      "quarter": "Q3FY25",
      "quote": "At least in the next quarter, once the G - blast furnace comes up, Kalinganagar, by end of 1QFY26 would have been even more ramped up. Therefore, we would be able to drive cost and working capital down as far as India is concerned.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 11,
      "target": "",
      "period": "Q1FY26",
@@ -597,7 +597,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "the Combi mill in Jamshedpur, which is 0.5 million tons, which converts some of the extra billets we have in the Gamharia plant into steel.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 6,
      "target": "0.5 million tons",
      "period": "FY26",
@@ -662,7 +662,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "What you will see over the next 12 months is, of course, the Ludhiana plant coming into action that will add another 0.75 million tons",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 6,
      "target": "0.75 million tons",
      "period": "FY26",
@@ -674,7 +674,7 @@
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "We have the Ludhiana plant coming up next year",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 7,
      "target": "",
      "period": "FY27",
@@ -762,7 +762,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "In FY2027 we are aiming to achieve cost transformation related savings of ~Rs 7,100 crores vs. FY2026 levels.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 2,
      "target": "₹7,100 cr",
      "period": "FY27",
@@ -905,24 +905,18 @@
   },
   {
    "id": "TATASTEEL-20",
-   "title": "Company capex",
+   "title": "FY26 Company capex",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
    "basis": null,
-   "period": "FY27",
-   "target": "₹20,000 cr",
+   "period": "FY26",
+   "target": "₹15,000 cr",
    "direction": null,
    "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "₹15,000 cr",
-     "to": "₹20,000 cr",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
    "statements": [
     {
      "call": "May 2025",
@@ -935,12 +929,28 @@
      "deadline": null,
      "condition": null,
      "url": null
-    },
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-21",
+   "title": "FY27 Capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹20,000 cr",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
     {
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "we intend to increase the same in FY2027 to around Rs 20,000 crores of which more than 60% will be spend in India.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 2,
      "target": "₹20,000 cr",
      "period": "FY27",
@@ -951,7 +961,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-21",
+   "id": "TATASTEEL-22",
    "title": "India price increase",
    "kind": "hard",
    "metric": "other",
@@ -985,7 +995,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-22",
+   "id": "TATASTEEL-23",
    "title": "Europe price increase",
    "kind": "hard",
    "metric": "other",
@@ -1014,14 +1024,14 @@
    ]
   },
   {
-   "id": "TATASTEEL-23",
-   "title": "Company volume growth",
-   "kind": "hard",
-   "metric": "volume_growth",
+   "id": "TATASTEEL-24",
+   "title": "FY26 Company volume growth",
+   "kind": "directional",
+   "metric": "revenue",
    "scope": "company",
    "basis": null,
-   "period": "FY27",
-   "target": "≥2 million tons",
+   "period": "Q4FY26",
+   "target": "",
    "direction": "up",
    "moved": false,
    "events": [
@@ -1030,15 +1040,10 @@
      "from": "1.5 million tons",
      "to": "",
      "type": "reaffirmed"
-    },
-    {
-     "call": "May 2026",
-     "from": "",
-     "to": "≥2 million tons",
-     "type": "reaffirmed"
     }
    ],
-   "status": "open",
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
    "statements": [
     {
      "call": "May 2025",
@@ -1063,23 +1068,11 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7e178a2e-ea18-4b55-8e55-56e03dc5bea5.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "The volume will be at least 2 million tons better in this financial year compared to the previous financial year",
-     "speaker": "Koushik Chatterjee",
-     "page": 10,
-     "target": "≥2 million tons",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
     }
    ]
   },
   {
-   "id": "TATASTEEL-24",
+   "id": "TATASTEEL-25",
    "title": "Company coking coal cost",
    "kind": "hard",
    "metric": "other",
@@ -1113,7 +1106,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-25",
+   "id": "TATASTEEL-26",
    "title": "Kalinganagar third caster commissioning",
    "kind": "milestone",
    "metric": "capacity",
@@ -1150,7 +1143,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "The third caster is up next month.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 15,
      "target": "",
      "period": "Q2FY26",
@@ -1161,7 +1154,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-26",
+   "id": "TATASTEEL-27",
    "title": "Company net debt",
    "kind": "hard",
    "metric": "debt",
@@ -1198,7 +1191,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "Your target to contain debt by Rs 6,000 crore to Rs 8,000 crores for FY2026, that remains? Indeed, yes.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 17,
      "target": "₹6,000–8,000 cr",
      "period": "FY26",
@@ -1209,7 +1202,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-27",
+   "id": "TATASTEEL-28",
    "title": "NINL EBITDA",
    "kind": "directional",
    "metric": "ebitda",
@@ -1238,7 +1231,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-28",
+   "id": "TATASTEEL-29",
    "title": "UK and Netherlands net realisations",
    "kind": "directional",
    "metric": "revenue",
@@ -1262,7 +1255,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "As far as UK and Netherlands are concerned, it will be flat or slightly higher.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 6,
      "target": "",
      "period": "Q2FY26",
@@ -1274,7 +1267,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "In UK, we expect it to be about £80/t higher in 1Q compared to 4Q and in Netherlands we expect it to be about €80/t higher in 1Q compared to 4Q.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 9,
      "target": "",
      "period": "Q1FY27",
@@ -1285,7 +1278,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-29",
+   "id": "TATASTEEL-30",
    "title": "UK EBITDA breakeven",
    "kind": "directional",
    "metric": "ebitda",
@@ -1303,7 +1296,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "But there is an effort to ensure that we get to the breakeven by the end of this year, for sure.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 6,
      "target": "",
      "period": "FY26",
@@ -1314,7 +1307,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-30",
+   "id": "TATASTEEL-31",
    "title": "India domestic demand",
    "kind": "directional",
    "metric": "revenue",
@@ -1332,7 +1325,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "we expect it to pick up once the monsoon ends",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 8,
      "target": "",
      "period": "Q3FY26",
@@ -1343,7 +1336,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-31",
+   "id": "TATASTEEL-32",
    "title": "India domestic pricing",
    "kind": "directional",
    "metric": "revenue",
@@ -1366,7 +1359,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "I think we see things improving from next quarter.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 8,
      "target": "",
      "period": "Q2FY26",
@@ -1377,7 +1370,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-32",
+   "id": "TATASTEEL-33",
    "title": "Company FX volatility",
    "kind": "directional",
    "metric": "other",
@@ -1394,7 +1387,7 @@
      "call": "Aug 2025",
      "quarter": "Q1FY26",
      "quote": "with more and more onshoring of FX debt into rupee debt that will certainly show up as a benefit and the volatility will certainly be lower in the future.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 14,
      "target": "",
      "period": "multi-year",
@@ -1405,7 +1398,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-33",
+   "id": "TATASTEEL-34",
    "title": "Neelachal Ispat Nigam Limited project completion",
    "kind": "milestone",
    "metric": "other",
@@ -1441,7 +1434,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "On NINL, I think between July and September, we should be able to get the FID and once we get the FID, the target date is somewhere around 2029-30.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 11,
      "target": "",
      "period": "FY30",
@@ -1452,8 +1445,37 @@
    ]
   },
   {
-   "id": "TATASTEEL-34",
-   "title": "India realisation per ton",
+   "id": "TATASTEEL-35",
+   "title": "FY26 India realisation per ton",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "India",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "1,500 Rs per ton",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "our 3Q guidance for India will be about Rs 1,500 per ton lower than 2Q.",
+     "speaker": "Operator",
+     "page": 7,
+     "target": "1,500 Rs per ton",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=816939c9-f6c8-404b-afce-29aee1c980ed.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-36",
+   "title": "FY27 Realisation per ton",
    "kind": "hard",
    "metric": "revenue",
    "scope": "India",
@@ -1462,33 +1484,14 @@
    "target": "6,000 Rs/t",
    "direction": "up",
    "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "1,500 Rs per ton",
-     "to": "6,000 Rs/t",
-     "type": "reaffirmed"
-    }
-   ],
+   "events": [],
    "status": "open",
    "statements": [
-    {
-     "call": "Nov 2025",
-     "quarter": "Q2FY26",
-     "quote": "our 3Q guidance for India will be about Rs 1,500 per ton lower than 2Q.",
-     "speaker": "KANCHINADHAM",
-     "page": 7,
-     "target": "1,500 Rs per ton",
-     "period": "Q3FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=816939c9-f6c8-404b-afce-29aee1c980ed.pdf"
-    },
     {
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "as far as realisations are concerned, in India we expect 1Q to be about Rs. 6,000/t higher than 4Q.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 9,
      "target": "6,000 Rs/t",
      "period": "Q1FY27",
@@ -1499,7 +1502,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-35",
+   "id": "TATASTEEL-37",
    "title": "Kalinganagar galvanising line commissioning",
    "kind": "milestone",
    "metric": "capacity",
@@ -1522,7 +1525,7 @@
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "the galvanising line, one of the two lines has come in, the other one will come by December.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 7,
      "target": "",
      "period": "Q3FY26",
@@ -1533,7 +1536,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-36",
+   "id": "TATASTEEL-38",
    "title": "Pipes business capacity",
    "kind": "soft",
    "metric": "capacity",
@@ -1550,7 +1553,7 @@
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "the ambition is to get to 4 million tons.",
-     "speaker": "T. V. Narendran",
+     "speaker": "Operator",
      "page": 16,
      "target": "4 million tons",
      "period": "multi-year",
@@ -1561,7 +1564,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-37",
+   "id": "TATASTEEL-39",
    "title": "Netherlands decarbonization FID",
    "kind": "milestone",
    "metric": "other",
@@ -1578,7 +1581,7 @@
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "we'll finalise the tailor- made agreement sometime next year and the FID will be next year.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 8,
      "target": "",
      "period": "FY27",
@@ -1589,7 +1592,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-38",
+   "id": "TATASTEEL-40",
    "title": "Company capacity utilization",
    "kind": "directional",
    "metric": "capacity",
@@ -1618,7 +1621,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-39",
+   "id": "TATASTEEL-41",
    "title": "Europe steel prices",
    "kind": "directional",
    "metric": "other",
@@ -1647,7 +1650,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-40",
+   "id": "TATASTEEL-42",
    "title": "Company financial performance",
    "kind": "directional",
    "metric": "pat",
@@ -1676,7 +1679,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-41",
+   "id": "TATASTEEL-43",
    "title": "Netherlands and UK EBITDA margin",
    "kind": "directional",
    "metric": "ebitda_margin",
@@ -1705,7 +1708,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-42",
+   "id": "TATASTEEL-44",
    "title": "Netherlands sales volume",
    "kind": "hard",
    "metric": "revenue",
@@ -1734,7 +1737,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-43",
+   "id": "TATASTEEL-45",
    "title": "India EBITDA margin",
    "kind": "directional",
    "metric": "ebitda_margin",
@@ -1763,7 +1766,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-44",
+   "id": "TATASTEEL-46",
    "title": "India product mix",
    "kind": "directional",
    "metric": "other",
@@ -1791,7 +1794,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-45",
+   "id": "TATASTEEL-47",
    "title": "Business profitability",
    "kind": "soft",
    "metric": "pat",
@@ -1819,7 +1822,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-46",
+   "id": "TATASTEEL-48",
    "title": "UK steel safeguard measures expiry",
    "kind": "milestone",
    "metric": "other",
@@ -1853,7 +1856,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-47",
+   "id": "TATASTEEL-49",
    "title": "EU steel safeguard measures expiry",
    "kind": "milestone",
    "metric": "other",
@@ -1876,7 +1879,7 @@
      "call": "Feb 2026",
      "quarter": "Q3FY26",
      "quote": "Existing steel safeguard measures are set to expire in June 2026 and the revised safeguard framework is yet to be formally announced.",
-     "speaker": "Operator",
+     "speaker": "Samita Shah",
      "page": 2,
      "target": "",
      "period": "Q1FY27",
@@ -1887,7 +1890,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-48",
+   "id": "TATASTEEL-50",
    "title": "UK realisation per ton",
    "kind": "hard",
    "metric": "revenue",
@@ -1904,7 +1907,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "In UK, we expect it to be about £80/t higher in 1Q compared to 4Q",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 9,
      "target": "80 GBP/t",
      "period": "Q1FY27",
@@ -1915,7 +1918,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-49",
+   "id": "TATASTEEL-51",
    "title": "Netherlands realisation per ton",
    "kind": "hard",
    "metric": "revenue",
@@ -1932,7 +1935,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "in Netherlands we expect it to be about €80/t higher in 1Q compared to 4Q.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 9,
      "target": "80 EUR/t",
      "period": "Q1FY27",
@@ -1943,14 +1946,14 @@
    ]
   },
   {
-   "id": "TATASTEEL-50",
+   "id": "TATASTEEL-52",
    "title": "Kalinganagar slab export volume",
    "kind": "hard",
    "metric": "volume_growth",
-   "scope": "Kalinganagar",
+   "scope": "company",
    "basis": null,
    "period": "FY27",
-   "target": "1.8 million tons",
+   "target": "≥2 million tons",
    "direction": "up",
    "moved": false,
    "events": [],
@@ -1959,10 +1962,10 @@
     {
      "call": "May 2026",
      "quarter": "Q4FY26",
-     "quote": "We are increasing that from India from Tata Steel Kalinganagar to about 1.8 million tons - that is our target to increase.",
-     "speaker": "Koushik Chatterjee",
-     "page": 11,
-     "target": "1.8 million tons",
+     "quote": "The volume will be at least 2 million tons better in this financial year compared to the previous financial year",
+     "speaker": "Operator",
+     "page": 10,
+     "target": "≥2 million tons",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -1971,7 +1974,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-51",
+   "id": "TATASTEEL-53",
    "title": "Company EAF project announcement",
    "kind": "milestone",
    "metric": "other",
@@ -1988,7 +1991,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "We also plan that in the next year or so, we will announce the next EAF project, maybe somewhere in the west, possibly in Maharashtra.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 13,
      "target": "",
      "period": "FY28",
@@ -1999,7 +2002,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-52",
+   "id": "TATASTEEL-54",
    "title": "Company EBITDA",
    "kind": "directional",
    "metric": "ebitda",
@@ -2016,7 +2019,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "Overall, the plan this year on an EBITDA basis is higher than the plan for last year and in Netherlands also.",
-     "speaker": "Koushik Chatterjee",
+     "speaker": "Operator",
      "page": 19,
      "target": "",
      "period": "FY27",
@@ -2027,7 +2030,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-53",
+   "id": "TATASTEEL-55",
    "title": "Company auto contract price benefit",
    "kind": "directional",
    "metric": "revenue",
@@ -2044,7 +2047,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "In this case, we are expecting maybe 30% of the benefit to come in this quarter and 70% of the benefit to come in next quarter.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 18,
      "target": "",
      "period": "Q1FY27 and Q2FY27",
@@ -2055,7 +2058,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-54",
+   "id": "TATASTEEL-56",
    "title": "UK EBITDA losses",
    "kind": "directional",
    "metric": "ebitda_margin",
@@ -2072,7 +2075,7 @@
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "EBITDA losses will shrink this quarter compared to last quarter and will 19 shrink again the next quarter.",
-     "speaker": "UNKNOWN",
+     "speaker": "Operator",
      "page": 19,
      "target": "",
      "period": "Q1FY27 and Q2FY27",
@@ -2215,14 +2218,6 @@
       "y": 15.0
      }
     ]
-   },
-   {
-    "key": "cash_conversion",
-    "label": "Cash conversion",
-    "value": 245,
-    "unit": "% of profit, 5y",
-    "reading": "Over 5 years, operating cash flow was 245% of net profit (strong).",
-    "series": []
    },
    {
     "key": "debt",
@@ -2546,44 +2541,46 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered 2 of 2: India cost savings ₹3,927 crores",
-    "point": "Management successfully executed key cost transformation benefits close to the targeted Rs 4,000 cr for FY26.",
+    "figure": "Profit growth 147% last 12 months",
+    "point": "Profit surged significantly over the last 12 months, showcasing strong recent earnings momentum.",
     "refs": [
-     "TATASTEEL-16"
+     "profit_growth"
     ]
    },
    {
-    "figure": "Profit growth 147%: Last 12 months profit growth",
-    "point": "The company delivered strong profit growth alongside high cash conversion at 245% of net profit over five years.",
+    "figure": "India galvanising line commissioning: Q1FY26 → Q2FY26",
+    "point": "Management successfully delivered on key operational milestones including the India galvanising line and India cost savings.",
     "refs": [
-     "profit_growth",
-     "cash_conversion"
+     "TATASTEEL-6",
+     "TATASTEEL-16"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Missed net debt: Target ₹6,000–8,000 cr vs FY26 actual ₹82,324 cr",
-    "point": "Net debt missed its target substantially, remaining elevated and rising from ₹59,662 cr in FY22.",
+    "figure": "Operating margin 26% to 15%",
+    "point": "Operating margins have compressed considerably from FY22 to FY26, indicating ongoing margin pressure.",
     "refs": [
-     "TATASTEEL-26",
-     "debt"
+     "margin"
     ]
    },
    {
-    "figure": "Operating margin 26% to 15%: Compression from FY22 to FY26",
-    "point": "Operating margins significantly compressed while returns on capital dropped from 31% to 13% over the same period.",
+    "figure": "Net debt ₹82,324 cr",
+    "point": "Net debt has increased substantially since FY22, falling short of net debt reduction targets.",
     "refs": [
-     "margin",
-     "returns"
+     "debt",
+     "TATASTEEL-27"
     ]
    },
    {
-    "figure": "Multiple misses: India price increase target of 3,000 Rs/t",
-    "point": "Management missed targets on price increases and conversion cost optimization in India during the period.",
+    "figure": "India conversion cost optimization: 1,000–1,200 Rs per ton target, missed",
+    "point": "Management missed several important targets regarding conversion costs, price increases, and net debt.",
     "refs": [
      "TATASTEEL-17",
-     "TATASTEEL-21"
+     "TATASTEEL-22",
+     "TATASTEEL-25",
+     "TATASTEEL-27",
+     "TATASTEEL-32"
     ]
    }
   ]

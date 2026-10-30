@@ -146,24 +146,6 @@
   "file": "ETERNAL_Jan2026_3f4eddf76428.txt",
   "promises": [
    {
-    "quote": "You've maintained your $3 billion NOV guidance for going-out in FY30",
-    "speaker": "Manish Adukia",
-    "page": 5,
-    "kind": "hard",
-    "metric": "revenue",
-    "metric_label": "NOV guidance for going-out",
-    "scope": "going-out business",
-    "basis": "unclear",
-    "low": 3,
-    "high": 3,
-    "unit": "USD bn",
-    "direction": "flat",
-    "period": "FY30",
-    "deadline": null,
-    "condition": null,
-    "change": "reaffirmed"
-   },
-   {
     "quote": "ROCE outcome should still be north of 40%. That's what we're solving for.",
     "speaker": "Akshant Goyal",
     "page": 6,
@@ -200,7 +182,7 @@
     "change": "new"
    }
   ],
-  "rejected": 0
+  "rejected": 1
  },
  {
   "call": "May 2026",
@@ -260,24 +242,6 @@
   "file": "ETERNAL_Oct2026_97127122ac03.txt",
   "promises": [
    {
-    "quote": "Does that better read on competition also give you more comfort around your $1 billion Adjusted EBITDA guidance that you have for FY29?",
-    "speaker": "Manish Adukia",
-    "page": 7,
-    "kind": "hard",
-    "metric": "ebitda",
-    "metric_label": "Adjusted EBITDA",
-    "scope": "company",
-    "basis": "adjusted",
-    "low": 1,
-    "high": 1,
-    "unit": "USD bn",
-    "direction": "up",
-    "period": "FY29",
-    "deadline": null,
-    "condition": null,
-    "change": "reaffirmed"
-   },
-   {
     "quote": "We gave guidance last time that in steady state it could get to about INR 11 lakh per day per store.",
     "speaker": "Akshant Goyal",
     "page": 12,
@@ -314,6 +278,6 @@
     "change": "reaffirmed"
    }
   ],
-  "rejected": 0
+  "rejected": 1
  }
 ]

@@ -92,19 +92,18 @@
   }
  ],
  "record": {
-  "kept": 2,
-  "missed": 1,
+  "kept": 3,
+  "missed": 0,
   "resolved": 3,
-  "moved": 6,
-  "quiet": 10,
-  "open": 36,
+  "moved": 5,
+  "quiet": 12,
+  "open": 31,
   "by_status": {
-   "open": 25,
-   "gone_quiet": 10,
+   "open": 22,
+   "gone_quiet": 12,
    "on_track": 6,
-   "delayed": 4,
-   "missed": 1,
-   "delivered": 1,
+   "delivered": 2,
+   "delayed": 2,
    "beat": 1,
    "tracking": 1
   }
@@ -112,7 +111,7 @@
  "threads": [
   {
    "id": "DIXON-0",
-   "title": "Display module capacity",
+   "title": "Display module capacity and production",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Display facility",
@@ -244,16 +243,24 @@
   {
    "id": "DIXON-2",
    "title": "Smartphone volume target",
-   "kind": "soft",
+   "kind": "hard",
    "metric": "volume_growth",
-   "scope": "mobile business",
+   "scope": "Mobile business",
    "basis": null,
    "period": "FY27",
-   "target": "",
+   "target": "55–60",
    "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "said",
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "55–60",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since Oct 2025",
    "statements": [
     {
      "call": "May 2025",
@@ -266,12 +273,24 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55e495a0-7626-4311-9f59-0a1b21076ca8.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, next year, we feel that we should be somewhere between 55 to 60 million.",
+     "speaker": "Atul Lall",
+     "page": 9,
+     "target": "55–60",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf"
     }
    ]
   },
   {
    "id": "DIXON-3",
-   "title": "Refrigerator business revenue growth",
+   "title": "FY26 Refrigerator business revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "refrigerator business",
@@ -300,6 +319,34 @@
   },
   {
    "id": "DIXON-4",
+   "title": "Refrigerator business revenue (multi-year)",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "Refrigerator business",
+   "basis": null,
+   "period": "FY28",
+   "target": "₹2,000–2,500 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "We feel in a couple of years our refrigerator business because in phase one we are expanding our capacity to 1.2 million and then to 2.2 million can be somewhere between INR2,000-2,500 crores.",
+     "speaker": "Atul Lall",
+     "page": 14,
+     "target": "₹2,000–2,500 cr",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf"
+    }
+   ]
+  },
+  {
+   "id": "DIXON-5",
    "title": "Capital expenditure",
    "kind": "hard",
    "metric": "capex",
@@ -347,7 +394,7 @@
    ]
   },
   {
-   "id": "DIXON-5",
+   "id": "DIXON-6",
    "title": "Capacity expansion",
    "kind": "directional",
    "metric": "capacity",
@@ -376,7 +423,7 @@
    ]
   },
   {
-   "id": "DIXON-6",
+   "id": "DIXON-7",
    "title": "webOS rollout",
    "kind": "milestone",
    "metric": "other",
@@ -405,7 +452,7 @@
    ]
   },
   {
-   "id": "DIXON-7",
+   "id": "DIXON-8",
    "title": "Semi-automatic washing machine launch",
    "kind": "milestone",
    "metric": "capacity",
@@ -476,23 +523,30 @@
    ]
   },
   {
-   "id": "DIXON-8",
+   "id": "DIXON-9",
    "title": "Front load washing machine and robotic vacuum cleaner launch",
    "kind": "milestone",
-   "metric": "other",
-   "scope": "company",
+   "metric": "capacity",
+   "scope": "Eureka Forbes line",
    "basis": "management",
-   "period": "Q2FY26",
+   "period": "Q3FY26",
    "target": "",
    "direction": null,
    "moved": false,
-   "events": [],
-   "status": "delayed",
-   "detail": "Front-loading washing machine production to start by Q2 FY27",
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Robotic vacuum cleaner production started for Eureka Forbes",
    "evidence": {
-    "quote": "Our new Tirupati facility for front-loading washing machine is ready and mass production to start by Q2 financial year '26-'27 with annual capacity of 300,000 units.",
-    "call": "Feb 2026",
-    "new_deadline": "Q2FY27"
+    "quote": "Production started for robotic vacuum cleaners for Eureka Forbes with healthy order book, and we are actively exploring other appliances like microwaves and kitchen chimneys.",
+    "call": "Feb 2026, p3",
+    "new_deadline": null
    },
    "statements": [
     {
@@ -506,12 +560,24 @@
      "deadline": "Q2FY26",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55e495a0-7626-4311-9f59-0a1b21076ca8.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Production of robo vacuum cleaners to Eureka Forbes is to start by December '25.",
+     "speaker": "Atul Lall",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "December 2025",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf"
     }
    ]
   },
   {
-   "id": "DIXON-9",
-   "title": "Signify JV operations commencement",
+   "id": "DIXON-10",
+   "title": "Signify JV operations",
    "kind": "milestone",
    "metric": "other",
    "scope": "Signify JV",
@@ -529,10 +595,10 @@
     }
    ],
    "status": "on_track",
-   "detail": "Signify JV operations started in August '25",
+   "detail": "JV operations started in August 2025",
    "evidence": {
     "quote": "Operations in Lightanium Technologies, that is a 50:50 JV between Dixon and Signify, started in August '25.",
-    "call": "Oct 2025, p3",
+    "call": "Oct 2025",
     "new_deadline": null
    },
    "statements": [
@@ -563,7 +629,7 @@
    ]
   },
   {
-   "id": "DIXON-10",
+   "id": "DIXON-11",
    "title": "IPTV boxes model launch",
    "kind": "milestone",
    "metric": "other",
@@ -592,7 +658,7 @@
    ]
   },
   {
-   "id": "DIXON-11",
+   "id": "DIXON-12",
    "title": "Factory readiness",
    "kind": "milestone",
    "metric": "capacity",
@@ -621,24 +687,26 @@
    ]
   },
   {
-   "id": "DIXON-12",
+   "id": "DIXON-13",
    "title": "Volume growth (QoQ)",
    "kind": "hard",
    "metric": "volume_growth",
    "scope": "company",
-   "basis": "management",
-   "period": "Q2FY26",
-   "target": "≥15%",
-   "direction": "up",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "7–7.5 million units",
+   "direction": null,
    "moved": false,
-   "events": [],
-   "status": "missed",
-   "detail": "Total shipment volumes saw a modest decline",
-   "evidence": {
-    "quote": "While total shipment volumes saw a modest decline amid elevated global memory and component prices, the total industry market value expanded securely into the positive territory.",
-    "call": "Aug 2026",
-    "new_deadline": null
-   },
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "≥15%",
+     "to": "7–7.5 million units",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
    "statements": [
     {
      "call": "Jul 2025",
@@ -651,12 +719,24 @@
      "deadline": null,
      "condition": "Ahead of the festive season",
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Q4 volumes are expected to be somewhere between 7 million to 7.5 million.",
+     "speaker": "Atul Lall",
+     "page": 7,
+     "target": "7–7.5 million units",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf"
     }
    ]
   },
   {
-   "id": "DIXON-13",
-   "title": "Mobile manufacturing campus completion",
+   "id": "DIXON-14",
+   "title": "Noida mobile manufacturing campus",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Noida facility",
@@ -756,7 +836,7 @@
    ]
   },
   {
-   "id": "DIXON-14",
+   "id": "DIXON-15",
    "title": "Q Tech transaction financial consolidation",
    "kind": "milestone",
    "metric": "other",
@@ -790,8 +870,8 @@
    ]
   },
   {
-   "id": "DIXON-15",
-   "title": "FATL Tirupati capacity expansion readiness",
+   "id": "DIXON-16",
+   "title": "FATL Tirupati capacity expansion",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "FATL Tirupati",
@@ -809,7 +889,7 @@
     }
    ],
    "status": "delayed",
-   "detail": "Tirupati facility production delayed to Q2 FY27",
+   "detail": "Tirupati facility production start moved to Q2 FY26-27",
    "evidence": {
     "quote": "Our new Tirupati facility for front-loading washing machine is ready and mass production to start by Q2 financial year '26-'27 with annual capacity of 300,000 units.",
     "call": "Feb 2026",
@@ -843,8 +923,8 @@
    ]
   },
   {
-   "id": "DIXON-16",
-   "title": "Inventec JV operational",
+   "id": "DIXON-17",
+   "title": "Inventec JV operations",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Inventec JV facility Chennai",
@@ -944,8 +1024,8 @@
    ]
   },
   {
-   "id": "DIXON-17",
-   "title": "Chennai facility operational",
+   "id": "DIXON-18",
+   "title": "Chennai facility operationalization",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Rexxam Dixon Electronics Chennai facility",
@@ -1003,7 +1083,7 @@
     {
      "call": "Feb 2026",
      "quarter": "Q3FY26",
-     "quote": "We have bagged order for desktops from one of our customers and we will start manufacturing in Q4 of this fiscal in Chennai, and also, in active discussion with an existing customer for manufacturing of tablets.",
+     "quote": "We expect a robust demand for AC this season and will scale up our capacity by operationalizing a new upcoming Chennai facility by end of Q4 of the current fiscal.",
      "speaker": "Atul Lall",
      "page": 3,
      "target": "",
@@ -1027,7 +1107,7 @@
    ]
   },
   {
-   "id": "DIXON-18",
+   "id": "DIXON-19",
    "title": "Total revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1056,7 +1136,7 @@
    ]
   },
   {
-   "id": "DIXON-19",
+   "id": "DIXON-20",
    "title": "Telecom business revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1084,46 +1164,26 @@
    ]
   },
   {
-   "id": "DIXON-20",
-   "title": "Refrigerator business revenue",
-   "kind": "hard",
-   "metric": "revenue",
-   "scope": "Refrigerator business",
-   "basis": null,
-   "period": "FY28",
-   "target": "₹2,000–2,500 cr",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Jul 2025",
-     "quarter": "Q1FY26",
-     "quote": "We feel in a couple of years our refrigerator business because in phase one we are expanding our capacity to 1.2 million and then to 2.2 million can be somewhere between INR2,000-2,500 crores.",
-     "speaker": "Atul Lall",
-     "page": 14,
-     "target": "₹2,000–2,500 cr",
-     "period": "FY28",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf"
-    }
-   ]
-  },
-  {
    "id": "DIXON-21",
    "title": "Mobile segment margins",
-   "kind": "directional",
-   "metric": "operating_margin",
-   "scope": "Mobile segment",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "mobile phone business",
    "basis": null,
    "period": "FY27",
-   "target": "",
-   "direction": "up",
+   "target": "2.8–3.2%",
+   "direction": null,
    "moved": false,
-   "events": [],
-   "status": "open",
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "2.8–3.2%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since Feb 2026",
    "statements": [
     {
      "call": "Jul 2025",
@@ -1136,6 +1196,18 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We still feel that we should be able to have a margin of somewhere between 2.8% to 3.1%, 3.2% in our mobile phone business.",
+     "speaker": "Atul Lall",
+     "page": 10,
+     "target": "2.8–3.2%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf"
     }
    ]
   },
@@ -1169,7 +1241,7 @@
   },
   {
    "id": "DIXON-23",
-   "title": "Longcheer JV facility operational",
+   "title": "Longcheer JV facility",
    "kind": "milestone",
    "metric": "other",
    "scope": "Longcheer JV",
@@ -1216,7 +1288,7 @@
   },
   {
    "id": "DIXON-24",
-   "title": "Smartphone manufacturing start",
+   "title": "Smartphone ODM manufacturing",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Smartphones ODM",
@@ -1245,40 +1317,6 @@
   },
   {
    "id": "DIXON-25",
-   "title": "Robo vacuum cleaner production start",
-   "kind": "milestone",
-   "metric": "capacity",
-   "scope": "Eureka Forbes line",
-   "basis": "management",
-   "period": "Q3FY26",
-   "target": "",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "on_track",
-   "detail": "Production of robotic vacuum cleaners started",
-   "evidence": {
-    "quote": "Production started for robotic vacuum cleaners for Eureka Forbes with healthy order book, and we are actively exploring other appliances like microwaves and kitchen chimneys.",
-    "call": "Feb 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Oct 2025",
-     "quarter": "Q2FY26",
-     "quote": "Production of robo vacuum cleaners to Eureka Forbes is to start by December '25.",
-     "speaker": "Atul Lall",
-     "page": 3,
-     "target": "",
-     "period": "Q3FY26",
-     "deadline": "December 2025",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-26",
    "title": "CPE business revenue",
    "kind": "soft",
    "metric": "revenue",
@@ -1306,70 +1344,14 @@
    ]
   },
   {
-   "id": "DIXON-27",
-   "title": "Mobile volume",
-   "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "Mobile business",
-   "basis": null,
-   "period": "FY27",
-   "target": "55–60",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Oct 2025",
-     "quarter": "Q2FY26",
-     "quote": "So, next year, we feel that we should be somewhere between 55 to 60 million.",
-     "speaker": "Atul Lall",
-     "page": 9,
-     "target": "55–60",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-28",
-   "title": "Longcheer JV volume",
-   "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "Longcheer JV",
-   "basis": null,
-   "period": "FY27",
-   "target": "8–10",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Oct 2025",
-     "quarter": "Q2FY26",
-     "quote": "We feel that the volumes in this JV for the next fiscal should be somewhere around 8 to 10 million, and this is going to be a part of 60 million, 65 million that we are talking about for next fiscal.",
-     "speaker": "Atul Lall",
-     "page": 11,
-     "target": "8–10",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-29",
+   "id": "DIXON-26",
    "title": "IT business revenue",
    "kind": "hard",
    "metric": "revenue",
    "scope": "IT business",
    "basis": null,
    "period": "multi-year",
-   "target": "₹4,000–5,000 cr",
+   "target": "≤₹5,000 cr",
    "direction": "up",
    "moved": false,
    "events": [],
@@ -1381,7 +1363,7 @@
      "quote": "We feel that the IT business for us in next two years should be around Rs. 4,000 crores to Rs. 5,000 crores business.",
      "speaker": "Atul Lall",
      "page": 14,
-     "target": "₹4,000–5,000 cr",
+     "target": "≤₹5,000 cr",
      "period": "multi-year",
      "deadline": null,
      "condition": null,
@@ -1390,8 +1372,8 @@
    ]
   },
   {
-   "id": "DIXON-30",
-   "title": "Smartphone JV facility operations start",
+   "id": "DIXON-27",
+   "title": "Smartphone JV facility",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "company",
@@ -1402,7 +1384,7 @@
    "moved": false,
    "events": [],
    "status": "delayed",
-   "detail": "Smartphone JV facility operations delayed to Q3 FY27",
+   "detail": "JV facility operations moved to Q3 FY27",
    "evidence": {
     "quote": "Our 400,000-square-foot facility for 74:26 Longcheer JV for manufacturing of smartphones and other electronic products is expected to start operations by Q3, which will meaningfully strengthen our execution capabilities.",
     "call": "May 2026",
@@ -1424,24 +1406,31 @@
    ]
   },
   {
-   "id": "DIXON-31",
+   "id": "DIXON-28",
    "title": "Smartphone camera modules volume",
    "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "company",
-   "basis": "management",
-   "period": "FY27",
-   "target": "190–200 million units",
+   "metric": "capacity",
+   "scope": "Q Tech",
+   "basis": null,
+   "period": "multi-year",
+   "target": "180–190",
    "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "delayed",
-   "detail": "Capacity expansion to 180-190 million units over 15-18 months",
-   "evidence": {
-    "quote": "We are expanding the capacities of camera module in subsidiary Q Tech, which is an ECMS beneficiary for smartphones from 70 million annually to 180 million to 190 million annually over the next 15 to 18 months",
-    "call": "Aug 2026",
-    "new_deadline": "FY28"
-   },
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "190–200 million units",
+     "to": "180–190 million units",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "180–190 million units",
+     "to": "180–190",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
    "statements": [
     {
      "call": "Feb 2026",
@@ -1454,12 +1443,36 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We will be expanding the capacities of camera module and a subsidiary Q Tech, which is an ECMS beneficiary for smartphones from 70 million units annually to around 180 million units to 190 million units annually over the next 15 to 18 months, largely catering to our captive smartphone volumes in addition to deepening the level of manufacturing, capturing more value add in India.",
+     "speaker": "Atul Lall",
+     "page": 3,
+     "target": "180–190 million units",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We are expanding the capacities of camera module in subsidiary Q Tech, which is an ECMS beneficiary for smartphones from 70 million annually to 180 million to 190 million annually over the next 15 to 18 months",
+     "speaker": "Atul Lall",
+     "page": 3,
+     "target": "180–190",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf"
     }
    ]
   },
   {
-   "id": "DIXON-32",
-   "title": "Tirupati front-loading washing machine mass production",
+   "id": "DIXON-29",
+   "title": "Tirupati front-loading washing machine",
    "kind": "hard",
    "metric": "capacity",
    "scope": "Tirupati facility",
@@ -1523,64 +1536,41 @@
    ]
   },
   {
-   "id": "DIXON-33",
-   "title": "Q4 volumes",
-   "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "company",
-   "basis": null,
+   "id": "DIXON-30",
+   "title": "Desktop manufacturing",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Chennai facility",
+   "basis": "management",
    "period": "Q4FY26",
-   "target": "7–7.5 million units",
+   "target": "",
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "gone_quiet",
-   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "status": "delivered",
+   "detail": "Desktop manufacturing established in Chennai",
+   "evidence": {
+    "quote": "Our dedicated IT hardware products manufacturing unit in Chennai has successfully established stabilized mass production of laptops and all-in-ones and has secured orders for desktop from one of our customers.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Feb 2026",
      "quarter": "Q3FY26",
-     "quote": "Q4 volumes are expected to be somewhere between 7 million to 7.5 million.",
+     "quote": "We have bagged order for desktops from one of our customers and we will start manufacturing in Q4 of this fiscal in Chennai, and also, in active discussion with an existing customer for manufacturing of tablets.",
      "speaker": "Atul Lall",
-     "page": 7,
-     "target": "7–7.5 million units",
-     "period": "Q4FY26",
-     "deadline": null,
+     "page": 3,
+     "target": "",
+     "period": "FY26",
+     "deadline": "Q4FY26",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf"
     }
    ]
   },
   {
-   "id": "DIXON-34",
-   "title": "Mobile phone business EBITDA margin",
-   "kind": "hard",
-   "metric": "ebitda_margin",
-   "scope": "mobile phone business",
-   "basis": null,
-   "period": "FY27",
-   "target": "2.8–3.2%",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Feb 2026",
-     "quarter": "Q3FY26",
-     "quote": "We still feel that we should be able to have a margin of somewhere between 2.8% to 3.1%, 3.2% in our mobile phone business.",
-     "speaker": "Atul Lall",
-     "page": 10,
-     "target": "2.8–3.2%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-35",
+   "id": "DIXON-31",
    "title": "Conclude discussion with new customer",
    "kind": "milestone",
    "metric": "deal_wins",
@@ -1609,7 +1599,7 @@
    ]
   },
   {
-   "id": "DIXON-36",
+   "id": "DIXON-32",
    "title": "Export revenue run rate",
    "kind": "directional",
    "metric": "revenue",
@@ -1643,7 +1633,7 @@
    ]
   },
   {
-   "id": "DIXON-37",
+   "id": "DIXON-33",
    "title": "IT and hardware products revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1677,54 +1667,7 @@
    ]
   },
   {
-   "id": "DIXON-38",
-   "title": "Camera module capacity",
-   "kind": "hard",
-   "metric": "capacity",
-   "scope": "Q Tech",
-   "basis": null,
-   "period": "multi-year",
-   "target": "180–190",
-   "direction": "up",
-   "moved": false,
-   "events": [
-    {
-     "call": "Aug 2026",
-     "from": "180–190 million units",
-     "to": "180–190",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "We will be expanding the capacities of camera module and a subsidiary Q Tech, which is an ECMS beneficiary for smartphones from 70 million units annually to around 180 million units to 190 million units annually over the next 15 to 18 months, largely catering to our captive smartphone volumes in addition to deepening the level of manufacturing, capturing more value add in India.",
-     "speaker": "Atul Lall",
-     "page": 3,
-     "target": "180–190 million units",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf"
-    },
-    {
-     "call": "Aug 2026",
-     "quarter": "Q1FY27",
-     "quote": "We are expanding the capacities of camera module in subsidiary Q Tech, which is an ECMS beneficiary for smartphones from 70 million annually to 180 million to 190 million annually over the next 15 to 18 months",
-     "speaker": "Atul Lall",
-     "page": 3,
-     "target": "180–190",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-39",
+   "id": "DIXON-34",
    "title": "Telecom and Networking products revenue growth",
    "kind": "directional",
    "metric": "revenue_growth",
@@ -1758,7 +1701,7 @@
    ]
   },
   {
-   "id": "DIXON-40",
+   "id": "DIXON-35",
    "title": "IT hardware products revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1792,54 +1735,7 @@
    ]
   },
   {
-   "id": "DIXON-41",
-   "title": "SSD manufacturing commencement",
-   "kind": "milestone",
-   "metric": "capacity",
-   "scope": "company",
-   "basis": null,
-   "period": "Q3FY27",
-   "target": "",
-   "direction": "up",
-   "moved": true,
-   "events": [
-    {
-     "call": "Aug 2026",
-     "from": "Q2FY27",
-     "to": "Q3FY27",
-     "type": "deferred"
-    }
-   ],
-   "status": "open",
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "In line with our backward integration plans, we'll commence SSD manufacturing in Q2 and display modules with HKC from end of Q3, beginning Q4.",
-     "speaker": "Atul Lall",
-     "page": 3,
-     "target": "",
-     "period": "FY27",
-     "deadline": "Q2FY27",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf"
-    },
-    {
-     "call": "Aug 2026",
-     "quarter": "Q1FY27",
-     "quote": "and will start manufacturing SSD from Q3 and also exploring other critical components such as power supplies and mechanicals, which will enhance value addition and margins.",
-     "speaker": "Atul Lall",
-     "page": 3,
-     "target": "",
-     "period": "Q3FY27",
-     "deadline": "Q3FY27",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf"
-    }
-   ]
-  },
-  {
-   "id": "DIXON-42",
+   "id": "DIXON-36",
    "title": "Lighting JV revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1867,7 +1763,7 @@
    ]
   },
   {
-   "id": "DIXON-43",
+   "id": "DIXON-37",
    "title": "Camera module business revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1895,7 +1791,7 @@
    ]
   },
   {
-   "id": "DIXON-44",
+   "id": "DIXON-38",
    "title": "Mobile and EMS business revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1929,7 +1825,7 @@
    ]
   },
   {
-   "id": "DIXON-45",
+   "id": "DIXON-39",
    "title": "Lighting segment revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -1957,7 +1853,7 @@
    ]
   },
   {
-   "id": "DIXON-46",
+   "id": "DIXON-40",
    "title": "Company revenue target",
    "kind": "hard",
    "metric": "revenue",
@@ -1985,7 +1881,7 @@
    ]
   },
   {
-   "id": "DIXON-47",
+   "id": "DIXON-41",
    "title": "Company revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -2022,7 +1918,7 @@
    ]
   },
   {
-   "id": "DIXON-48",
+   "id": "DIXON-42",
    "title": "Export orders execution",
    "kind": "milestone",
    "metric": "order_inflow",
@@ -2050,7 +1946,7 @@
    ]
   },
   {
-   "id": "DIXON-49",
+   "id": "DIXON-43",
    "title": "Camera modules manufacturing initiation",
    "kind": "milestone",
    "metric": "other",
@@ -2084,8 +1980,8 @@
    ]
   },
   {
-   "id": "DIXON-50",
-   "title": "Vivo JV revenue contribution",
+   "id": "DIXON-44",
+   "title": "Vivo JV operations",
    "kind": "milestone",
    "metric": "revenue",
    "scope": "Vivo JV",
@@ -2112,8 +2008,8 @@
    ]
   },
   {
-   "id": "DIXON-51",
-   "title": "Telecom vertical export commencement",
+   "id": "DIXON-45",
+   "title": "Export of microwave backhaul radios",
    "kind": "milestone",
    "metric": "revenue",
    "scope": "Telecom vertical",
@@ -2140,7 +2036,35 @@
    ]
   },
   {
-   "id": "DIXON-52",
+   "id": "DIXON-46",
+   "title": "SSD manufacturing",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "and will start manufacturing SSD from Q3 and also exploring other critical components such as power supplies and mechanicals, which will enhance value addition and margins.",
+     "speaker": "Atul Lall",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "DIXON-47",
    "title": "Dishwashers and microwave ovens production",
    "kind": "milestone",
    "metric": "capacity",
@@ -2168,7 +2092,7 @@
    ]
   },
   {
-   "id": "DIXON-53",
+   "id": "DIXON-48",
    "title": "Lighting products export",
    "kind": "milestone",
    "metric": "revenue",
@@ -2196,8 +2120,8 @@
    ]
   },
   {
-   "id": "DIXON-54",
-   "title": "Consumer electronics OEM transition",
+   "id": "DIXON-49",
+   "title": "Mini LED OEM model transition",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Consumer electronics",
@@ -2224,7 +2148,7 @@
    ]
   },
   {
-   "id": "DIXON-55",
+   "id": "DIXON-50",
    "title": "Professional lighting range launch",
    "kind": "milestone",
    "metric": "deal_wins",
@@ -2662,22 +2586,22 @@
  "case": {
   "bull": [
    {
-    "figure": "Profit growth 119% LTM",
-    "point": "Profit grew significantly over the last 12 months, showcasing strong recent earnings momentum.",
+    "figure": "Mobile and EMS revenue target ₹7,500–8,000 cr: beat",
+    "point": "The company significantly outperformed its revenue target for the mobile and EMS business segment.",
     "refs": [
-     "profit_growth"
+     "DIXON-38"
     ]
    },
    {
-    "figure": "ROCE 29% in FY26",
-    "point": "Return on capital employed improved from 23% in FY22, demonstrating increasing capital efficiency.",
+    "figure": "ROCE 29% in FY26: up from 23% in FY22",
+    "point": "Capital efficiency has improved steadily over the last five years, demonstrating strong operational execution.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Net debt ₹53 cr",
-    "point": "Net debt dropped substantially from ₹485 cr in FY22 to nearly zero equity leverage.",
+    "figure": "Net debt ₹53 cr: 0.01x equity",
+    "point": "The company has successfully deleveraged its balance sheet, reducing net debt from ₹485 cr in FY22.",
     "refs": [
      "debt"
     ]
@@ -2685,24 +2609,24 @@
   ],
   "bear": [
    {
-    "figure": "DIXON-12 volume growth missed",
-    "point": "Total shipment volumes saw a modest decline, leading to a missed QoQ target.",
+    "figure": "Smartphone volume target 55–60: gone quiet",
+    "point": "Management stopped providing updates on key volume targets after mentioning them twice, reducing visibility.",
     "refs": [
-     "DIXON-12"
+     "DIXON-2"
     ]
    },
    {
-    "figure": "DIXON-16 Inventec JV deferred",
-    "point": "Operations have been repeatedly pushed back across multiple quarters before reaching any final resolution.",
+    "figure": "Inventec JV operations: Q1FY27 → Q4FY27",
+    "point": "The timeline for the Inventec JV facility has been repeatedly pushed back, indicating execution delays.",
     "refs": [
-     "DIXON-16"
+     "DIXON-17"
     ]
    },
    {
-    "figure": "DIXON-4 capital expenditure gone quiet",
-    "point": "Management stopped providing updates on capital expenditure after the period ended.",
+    "figure": "Capital expenditure target ₹1,100–1,200 cr: gone quiet",
+    "point": "The company failed to provide updates on its capital expenditure target after the fiscal year ended.",
     "refs": [
-     "DIXON-4"
+     "DIXON-5"
     ]
    }
   ]

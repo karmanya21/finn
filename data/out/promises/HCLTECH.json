@@ -353,24 +353,6 @@
     "change": "new"
    },
    {
-    "quote": "We should assume that you will see a full quarter kind of an impact in the next quarter.",
-    "speaker": "Nitin Padmanabhan",
-    "page": 19,
-    "kind": "directional",
-    "metric": "revenue_growth",
-    "metric_label": "Revenue impact",
-    "scope": "company",
-    "basis": "unclear",
-    "low": null,
-    "high": null,
-    "unit": null,
-    "direction": "down",
-    "period": "Q1FY27",
-    "deadline": null,
-    "condition": null,
-    "change": "new"
-   },
-   {
     "quote": "So, our expectation is low-single digit, flattish or marginally declining, in the coming year.",
     "speaker": "C. Vijayakumar",
     "page": 20,
@@ -407,7 +389,7 @@
     "change": "new"
    }
   ],
-  "rejected": 0
+  "rejected": 1
  },
  {
   "call": "Jul 2026",

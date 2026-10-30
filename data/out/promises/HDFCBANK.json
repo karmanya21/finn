@@ -296,27 +296,8 @@
   "call": "Apr 2026",
   "quarter": "Q4FY26",
   "file": "HDFCBANK_Apr2026_fb0c1ac94413.txt",
-  "promises": [
-   {
-    "quote": "Should we expect some forward momentum in that part of the business in the coming FY27 early in the year?",
-    "speaker": "Seshadri Sen",
-    "page": 11,
-    "kind": "directional",
-    "metric": "loan_growth",
-    "metric_label": "Retail loan growth momentum",
-    "scope": "Retail",
-    "basis": "unclear",
-    "low": null,
-    "high": null,
-    "unit": null,
-    "direction": "up",
-    "period": "FY27",
-    "deadline": null,
-    "condition": null,
-    "change": "new"
-   }
-  ],
-  "rejected": 1
+  "promises": [],
+  "rejected": 2
  },
  {
   "call": "Jul 2026",

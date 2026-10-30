@@ -1337,15 +1337,6 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered promises 3",
-    "point": "Management successfully delivered on three key targets including the FY26 EBITDA margin and U.S. revenue goals.",
-    "refs": [
-     "CIPLA-0",
-     "CIPLA-3",
-     "CIPLA-5"
-    ]
-   },
-   {
     "figure": "Operating margin FY22 to FY26 21%",
     "point": "Operating margin remained stable at 21% from FY22 to FY26.",
     "refs": [
@@ -1355,7 +1346,7 @@
   ],
   "bear": [
    {
-    "figure": "Gone quiet promises 4",
+    "figure": "North America generic Advair launch: due Q4FY26, gone quiet",
     "point": "Several promises went quiet with no updates provided after their periods ended.",
     "refs": [
      "CIPLA-6",

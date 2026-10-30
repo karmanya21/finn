@@ -1,0 +1,100 @@
+[
+ {
+  "level": "warning",
+  "check": "title-period-mismatch",
+  "symbol": "INFY",
+  "ref": "INFY-18",
+  "message": "title says FY28, period is Q4FY27"
+ },
+ {
+  "level": "warning",
+  "check": "title-period-mismatch",
+  "symbol": "BAJFINANCE",
+  "ref": "BAJFINANCE-10",
+  "message": "title says FY26, period is FY27"
+ },
+ {
+  "level": "warning",
+  "check": "duplicate-threads",
+  "symbol": "BAJFINANCE",
+  "ref": null,
+  "message": "2 threads for revenue_growth multi-year (company): BAJFINANCE-38 Medium-term growth guidance 20–25%; BAJFINANCE-39 Longer-term growth guidance 23–25%"
+ },
+ {
+  "level": "warning",
+  "check": "title-period-mismatch",
+  "symbol": "HINDUNILVR",
+  "ref": "HINDUNILVR-4",
+  "message": "title says FY26, period is FY27"
+ },
+ {
+  "level": "warning",
+  "check": "thread-mixes-years",
+  "symbol": "TATAPOWER",
+  "ref": "TATAPOWER-3",
+  "message": "Solar rooftop business growth: statements for ['FY26', 'FY27']"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "DIXON",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "M&M",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "TATAPOWER",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "BEL",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "MAXHEALTH",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "TATASTEEL",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "AARTIIND",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "KAYNES",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ },
+ {
+  "level": "info",
+  "check": "results-behind-peers",
+  "symbol": "PIIND",
+  "ref": null,
+  "message": "latest results Q1FY27; most companies are on Q2FY27"
+ }
+]

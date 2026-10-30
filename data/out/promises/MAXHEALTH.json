@@ -569,8 +569,8 @@
     "metric_label": "Capacity",
     "scope": "Max Lucknow",
     "basis": "reported",
-    "low": 550,
-    "high": 550,
+    "low": null,
+    "high": null,
     "unit": "count",
     "direction": "up",
     "period": "FY26",
@@ -775,45 +775,9 @@
     "deadline": "Q3FY26",
     "condition": null,
     "change": "new"
-   },
-   {
-    "quote": "FY27 is the year where we can expect the total benefit to come in?",
-    "speaker": "Shaleen Kumar",
-    "page": 21,
-    "kind": "directional",
-    "metric": "revenue",
-    "metric_label": "Revenue",
-    "scope": "company",
-    "basis": "reported",
-    "low": null,
-    "high": null,
-    "unit": null,
-    "direction": "up",
-    "period": "FY27",
-    "deadline": null,
-    "condition": null,
-    "change": "new"
-   },
-   {
-    "quote": "But, yes, operating leverage should come in.",
-    "speaker": "Keshav Gupta",
-    "page": 22,
-    "kind": "directional",
-    "metric": "operating_margin",
-    "metric_label": "Operating margin",
-    "scope": "company",
-    "basis": "reported",
-    "low": null,
-    "high": null,
-    "unit": null,
-    "direction": "up",
-    "period": "FY26",
-    "deadline": null,
-    "condition": "once those brownfields start getting full up",
-    "change": "new"
    }
   ],
-  "rejected": 0
+  "rejected": 2
  },
  {
   "call": "Feb 2026",

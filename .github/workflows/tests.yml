@@ -1,0 +1,32 @@
+# Regression tests on every push: the deterministic checks around the model (number
+# rules, classification, results reading, formatting) must keep passing. No network,
+# no model calls; the extraction-quality test skips here (no transcripts in the repo).
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - run: pip install -r backend/requirements.txt
+      - name: Backend regression tests
+        working-directory: backend
+        run: python -m unittest discover -s tests -t . -v
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "23"
+      - name: Frontend formatting tests
+        working-directory: web
+        run: npm test

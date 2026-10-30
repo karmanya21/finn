@@ -140,7 +140,7 @@
     "scope": "Railway segment",
     "basis": "reported",
     "low": 10,
-    "high": 12,
+    "high": null,
     "unit": "%",
     "direction": "up",
     "period": "FY26",
@@ -534,7 +534,7 @@
   "promises": [
    {
     "quote": "we maintain our guidance of bringing down the net working capital to 85 days by March '26.",
-    "speaker": "Jairam Sampath",
+    "speaker": "Sonali Salgaonkar",
     "page": 6,
     "kind": "hard",
     "metric": "working_capital",
@@ -935,7 +935,7 @@
     "metric_label": "Revenue",
     "scope": "OSAT and PCB",
     "basis": "reported",
-    "low": 450,
+    "low": null,
     "high": 500,
     "unit": "Rs crore",
     "direction": null,

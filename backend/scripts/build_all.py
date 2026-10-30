@@ -45,6 +45,8 @@ def main(symbols: list[str]) -> None:
     with ThreadPoolExecutor(WORKERS) as pool:
         list(pool.map(lambda c: build_one(c, portfolio), wanted))
     write_index()
+    from scripts import audit  # every build ends with the invariant checks
+    audit.main([c.symbol for c in wanted] if symbols else [])
 
 
 def write_index() -> None:

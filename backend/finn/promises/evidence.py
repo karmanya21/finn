@@ -114,11 +114,15 @@ def check(company: str, thread: dict, later: list[tuple[str, str]], managers: se
     q = out.get("quote") or ""
     if q and _norm(q) not in _norm(" ".join(s for _, _, s in sents)):
         return {"status": "no_update"}  # unverifiable evidence is no evidence
-    # A delay can be stated in the future tense ("will only commission in April");
-    # delivery, misses and progress cannot.
-    if out["status"] != "delayed" and FUTURE.search(q) and not PAST.search(q):
+    if only_forward(out["status"], q):
         return {"status": "no_update"}
     return _figures_from_quote(out, q, p)
+
+
+def only_forward(status: str, quote: str) -> bool:
+    """A delay can be stated in the future tense ("will only commission in April");
+    delivery, misses and progress cannot: "we are going to hire 20,000" proves nothing."""
+    return status != "delayed" and bool(FUTURE.search(quote)) and not PAST.search(quote)
 
 
 PERIOD_TOKEN = re.compile(r"\b(?:FY|CY|Q[1-4]|H[12])\s?['’]?\d{2,4}\b|\b(?:19|20)\d{2}\b", re.I)

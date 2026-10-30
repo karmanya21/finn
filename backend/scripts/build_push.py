@@ -17,7 +17,8 @@ from scripts.build_ledger import WEB_DATA
 
 def main(what: list[str]) -> None:
     if not what or "prices" in what:
-        prices = push.build_prices()
+        old = WEB_DATA / "prices.json"
+        prices = push.build_prices(json.loads(old.read_text()) if old.exists() else None)
         push.write(WEB_DATA / "prices.json", prices)
         print(f"prices: {len(prices['series'])} companies")
     if not what or "filings" in what:
@@ -37,6 +38,8 @@ def main(what: list[str]) -> None:
         push.write(WEB_DATA / "filings.json", digest)
         n = len(digest["items"])
         print(f"filings: {n} items, {sum(not i['routine'] for i in digest['items'])} material")
+    from scripts import audit  # every build ends with the invariant checks
+    audit.main([])
 
 
 if __name__ == "__main__":

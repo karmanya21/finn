@@ -348,9 +348,9 @@
     {
      "call": "Nov 2025",
      "quarter": "Q2FY26",
-     "quote": "by the end of the year, we will make sure that we get to a lower number than even FY '25 number, much lower number in terms of net working capital days.",
+     "quote": "So we will have positive OCF, and we'll have lower net working capital by the end of this year.",
      "speaker": "Jairam Sampath",
-     "page": 15,
+     "page": 11,
      "target": "",
      "period": "FY26",
      "deadline": "FY26",
@@ -361,7 +361,7 @@
      "call": "Feb 2026",
      "quarter": "Q3FY26",
      "quote": "we maintain our guidance of bringing down the net working capital to 85 days by March '26.",
-     "speaker": "Jairam Sampath",
+     "speaker": "Sonali Salgaonkar",
      "page": 6,
      "target": "85 days",
      "period": "FY26",
@@ -413,7 +413,7 @@
    "scope": "Railway segment",
    "basis": null,
    "period": "FY26",
-   "target": "10–12%",
+   "target": "≥10%",
    "direction": "up",
    "moved": false,
    "events": [],
@@ -426,7 +426,7 @@
      "quote": "aerospace to be about maybe around 8% or so of the total and the railway also should exceed about 10%, 10%-12% of the total sales by the end of the year.",
      "speaker": "Jairam Sampath",
      "page": 17,
-     "target": "10–12%",
+     "target": "≥10%",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -682,40 +682,6 @@
   },
   {
    "id": "KAYNES-16",
-   "title": "FY26 net working capital",
-   "kind": "directional",
-   "metric": "working_capital",
-   "scope": "company",
-   "basis": "management",
-   "period": "FY26",
-   "target": "",
-   "direction": "down",
-   "moved": false,
-   "events": [],
-   "status": "missed",
-   "detail": "FY26 working capital days stood at 122 days",
-   "evidence": {
-    "quote": "We realized our working capital days stood at around 122 days in FY '26, primarily reflecting the business model procurement of the smart meter segment, which has different working capital cycle when compared to the core EMS business.",
-    "call": "May 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Nov 2025",
-     "quarter": "Q2FY26",
-     "quote": "So we will have positive OCF, and we'll have lower net working capital by the end of this year.",
-     "speaker": "Jairam Sampath",
-     "page": 11,
-     "target": "",
-     "period": "FY26",
-     "deadline": "FY26",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=13fd5473-73b9-41c4-a782-70e6608354f9.pdf"
-    }
-   ]
-  },
-  {
-   "id": "KAYNES-17",
    "title": "Multi-year equity contribution",
    "kind": "hard",
    "metric": "capex",
@@ -743,7 +709,7 @@
    ]
   },
   {
-   "id": "KAYNES-18",
+   "id": "KAYNES-17",
    "title": "FY26 automotive revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -772,7 +738,7 @@
    ]
   },
   {
-   "id": "KAYNES-19",
+   "id": "KAYNES-18",
    "title": "FY26 aerospace and defense revenue share",
    "kind": "directional",
    "metric": "revenue",
@@ -801,7 +767,7 @@
    ]
   },
   {
-   "id": "KAYNES-20",
+   "id": "KAYNES-19",
    "title": "H2FY26 smart metering revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -813,7 +779,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Metering business execution delayed and degrown due to collection constraints",
+   "detail": "Metering business execution delayed due to installation issues",
    "evidence": {
     "quote": "It is more than that because the first 2 quarters of this year, we could not execute while the metering we have supplied, the installation got hugely delayed, particularly in the rural towns where the government has given business.",
     "call": "May 2026",
@@ -835,7 +801,7 @@
    ]
   },
   {
-   "id": "KAYNES-21",
+   "id": "KAYNES-20",
    "title": "FY26 receivables reduction",
    "kind": "milestone",
    "metric": "working_capital",
@@ -869,7 +835,7 @@
    ]
   },
   {
-   "id": "KAYNES-22",
+   "id": "KAYNES-21",
    "title": "FY26 capex",
    "kind": "hard",
    "metric": "capex",
@@ -903,7 +869,7 @@
    ]
   },
   {
-   "id": "KAYNES-23",
+   "id": "KAYNES-22",
    "title": "FY28 revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -931,7 +897,7 @@
    ]
   },
   {
-   "id": "KAYNES-24",
+   "id": "KAYNES-23",
    "title": "FY28 OSAT revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -959,7 +925,7 @@
    ]
   },
   {
-   "id": "KAYNES-25",
+   "id": "KAYNES-24",
    "title": "FY28 PC Board revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -987,7 +953,7 @@
    ]
   },
   {
-   "id": "KAYNES-26",
+   "id": "KAYNES-25",
    "title": "FY27 order book growth",
    "kind": "directional",
    "metric": "order_book",
@@ -1015,7 +981,7 @@
    ]
   },
   {
-   "id": "KAYNES-27",
+   "id": "KAYNES-26",
    "title": "FY27 Phase 1 completion",
    "kind": "milestone",
    "metric": "capex",
@@ -1043,7 +1009,7 @@
    ]
   },
   {
-   "id": "KAYNES-28",
+   "id": "KAYNES-27",
    "title": "Multi-year NPD-led revenue contribution",
    "kind": "soft",
    "metric": "other",
@@ -1071,7 +1037,7 @@
    ]
   },
   {
-   "id": "KAYNES-29",
+   "id": "KAYNES-28",
    "title": "FY27 operating cash flow",
    "kind": "directional",
    "metric": "cash_flow",
@@ -1118,7 +1084,7 @@
    ]
   },
   {
-   "id": "KAYNES-30",
+   "id": "KAYNES-29",
    "title": "FY27 rail business revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1146,21 +1112,21 @@
    ]
   },
   {
-   "id": "KAYNES-31",
+   "id": "KAYNES-30",
    "title": "FY27 PCB and OSAT revenue",
    "kind": "hard",
    "metric": "revenue",
    "scope": "OSAT and PCB",
    "basis": null,
    "period": "FY27",
-   "target": "₹450–500 cr",
+   "target": "≤₹500 cr",
    "direction": null,
    "moved": true,
    "events": [
     {
      "call": "Aug 2026",
      "from": "₹300–400 cr",
-     "to": "₹450–500 cr",
+     "to": "≤₹500 cr",
      "type": "raised"
     }
    ],
@@ -1184,7 +1150,7 @@
      "quote": "we have committed a full year revenue of totally INR500 crores between both, INR450 to INR500 crores, which is what we are targeting at this point in time, we are on the target.",
      "speaker": "N. Muthukumar",
      "page": 14,
-     "target": "₹450–500 cr",
+     "target": "≤₹500 cr",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -1193,7 +1159,7 @@
    ]
   },
   {
-   "id": "KAYNES-32",
+   "id": "KAYNES-31",
    "title": "FY27 order wins",
    "kind": "milestone",
    "metric": "deal_wins",
@@ -1227,7 +1193,7 @@
    ]
   },
   {
-   "id": "KAYNES-33",
+   "id": "KAYNES-32",
    "title": "Q3FY27 plant operational status",
    "kind": "milestone",
    "metric": "capacity",
@@ -1255,7 +1221,7 @@
    ]
   },
   {
-   "id": "KAYNES-34",
+   "id": "KAYNES-33",
    "title": "FY27 GridCrest receivables turnaround",
    "kind": "directional",
    "metric": "working_capital",
@@ -1283,7 +1249,7 @@
    ]
   },
   {
-   "id": "KAYNES-35",
+   "id": "KAYNES-34",
    "title": "FY27 revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1311,8 +1277,8 @@
    ]
   },
   {
-   "id": "KAYNES-36",
-   "title": "FY27 capex",
+   "id": "KAYNES-35",
+   "title": "FY27 capex funding",
    "kind": "directional",
    "metric": "capex",
    "scope": "company",
@@ -1339,7 +1305,7 @@
    ]
   },
   {
-   "id": "KAYNES-37",
+   "id": "KAYNES-36",
    "title": "Q2FY27 commercial production start",
    "kind": "milestone",
    "metric": "capacity",
@@ -1367,7 +1333,7 @@
    ]
   },
   {
-   "id": "KAYNES-38",
+   "id": "KAYNES-37",
    "title": "FY28 satellite launch",
    "kind": "milestone",
    "metric": "other",
@@ -1395,7 +1361,7 @@
    ]
   },
   {
-   "id": "KAYNES-39",
+   "id": "KAYNES-38",
    "title": "Q3FY27 OSAT and PCB revenue commencement",
    "kind": "milestone",
    "metric": "revenue",
@@ -1837,47 +1803,49 @@
  "case": {
   "bull": [
    {
-    "figure": "Operating margin 16%",
-    "point": "Operating margin expanded from 13% in FY22 to 16% in FY26, showing improving profitability.",
+    "figure": "EBITDA margin 15.8%",
+    "point": "Management successfully delivered on their FY26 EBITDA margin target of at least 15.6%.",
     "refs": [
-     "margin"
+     "KAYNES-3"
     ]
    },
    {
     "figure": "Net debt ₹114 cr",
-    "point": "Net debt dropped to ₹114 cr in FY26, maintaining a very low leverage of 0.02x equity.",
+    "point": "The company maintains a strong balance sheet with net debt at only 0.02x equity.",
     "refs": [
      "debt"
     ]
    },
    {
-    "figure": "FY26 EBITDA margin 15.8%",
-    "point": "Management successfully delivered on the FY26 EBITDA margin target of at least 15.6%.",
+    "figure": "OSAT facility in Sanand operational: due Q3FY26, kept",
+    "point": "Management successfully delivered the Sanand OSAT facility and commenced commercial production as promised.",
     "refs": [
-     "KAYNES-3"
+     "KAYNES-0",
+     "KAYNES-12"
     ]
    }
   ],
   "bear": [
    {
+    "figure": "Working capital 122 days",
+    "point": "The company significantly missed its FY26 working capital target of 85 days.",
+    "refs": [
+     "KAYNES-5"
+    ]
+   },
+   {
     "figure": "ROCE 13%",
-    "point": "Return on capital employed declined significantly from 25% in FY22 down to 13% in FY26.",
+    "point": "Capital efficiency has deteriorated significantly, with ROCE falling from 25% in FY22 to 13% in FY26.",
     "refs": [
      "returns"
     ]
    },
    {
     "figure": "Operating cash flow -63%",
-    "point": "Over 5 years, operating cash flow was deeply negative relative to net profit, reflecting weak conversion.",
+    "point": "Over the last five years, operating cash flow has been weak, representing negative 63% of net profit.",
     "refs": [
-     "cash_conversion"
-    ]
-   },
-   {
-    "figure": "FY26 working capital days 122 days",
-    "point": "Working capital days badly missed the 85-day target, coming in much higher at around 122 days.",
-    "refs": [
-     "KAYNES-5"
+     "cash_conversion",
+     "KAYNES-4"
     ]
    }
   ]

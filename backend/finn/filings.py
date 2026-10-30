@@ -7,6 +7,7 @@ material ones. Importance is computed in code, so the ranking is explainable.
 """
 
 import re
+from collections import Counter
 
 from finn.llm.client import complete_json
 from finn.sources import bse
@@ -172,11 +173,15 @@ def related_promises(a: dict, ledger: dict, limit: int = 3) -> list[str]:
     if not ledger:
         return []
     fw = _words(f"{a['subject']} {a['headline']} {a.get('summary') or ''}")
+    threads = ledger.get("threads", [])
+    open_ = [t for t in threads if t["kind"] in ("milestone", "hard") and t["status"] not in ("said", "lapsed")]
+    words = {t["id"]: _words(f"{t['title']} {t.get('scope') or ''}") for t in threads}
+    # A word in many of this company's promises ("cement" at UltraTech, "project" at Tata
+    # Power, "order" at BEL) says nothing about which one a filing touches.
+    df = Counter(w for ws in words.values() for w in ws)
     hits = []
-    for t in ledger.get("threads", []):
-        if t["kind"] not in ("milestone", "hard") or t["status"] in ("said", "lapsed"):
-            continue
-        tw = _words(f"{t['title']} {t.get('scope') or ''}")
+    for t in open_:
+        tw = {w for w in words[t["id"]] if df[w] < 3}
         n = len(fw & tw)
         if n >= 2 or (n == 1 and t["kind"] == "milestone" and len(tw) <= 3):
             hits.append((n, t["id"]))
@@ -218,6 +223,8 @@ REG_GOOD = re.compile(r"\b(zero|nil|no)\s+(form\s*)?(483\s*)?observations?|\bEIR
                       r"\bVAI\b|voluntary action indicated|\bNAI\b|no action indicated|close[d-]?\s?out|"
                       r"approv(al|ed)|compliance status|successfully completed", re.I)
 REG_BAD = re.compile(r"warning letter|\bOAI\b|official action indicated|import alert|untitled letter|"
+                     r"suspen(?:d|ded|sion)|revok\w*|revocation|cancell?(?:ed|ation) of (?:its |the )?licen[cs]e|"
+                     r"show[- ]cause|penalt(?:y|ies)|debar\w*|ban(?:ned)? (?:on|from)|"
                      r"\b\d+\s+(form\s*)?483|observations?\s+(were|was|have been)\s+issued|issued\s+(a\s+)?form\s*483", re.I)
 
 

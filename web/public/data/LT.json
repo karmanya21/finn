@@ -87,26 +87,26 @@
   }
  ],
  "record": {
-  "kept": 2,
+  "kept": 1,
   "missed": 2,
-  "resolved": 4,
-  "moved": 3,
+  "resolved": 3,
+  "moved": 2,
   "quiet": 1,
-  "open": 12,
+  "open": 13,
   "by_status": {
    "missed": 2,
    "gone_quiet": 1,
-   "beat": 1,
+   "delayed": 1,
    "delivered": 1,
-   "open": 9,
-   "on_track": 1,
+   "open": 8,
+   "on_track": 2,
    "tracking": 2
   }
  },
  "threads": [
   {
    "id": "LT-0",
-   "title": "FY26 Group order inflow growth",
+   "title": "Group order inflow growth FY26",
    "kind": "directional",
    "metric": "order_inflow",
    "scope": "company",
@@ -195,7 +195,7 @@
   },
   {
    "id": "LT-1",
-   "title": "FY26 Group revenue growth",
+   "title": "Group revenue growth FY26",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -279,7 +279,7 @@
   },
   {
    "id": "LT-2",
-   "title": "FY26 Projects and Manufacturing margin",
+   "title": "Projects and Manufacturing portfolio margin FY26",
    "kind": "hard",
    "metric": "ebitda_margin",
    "scope": "Projects & Manufacturing",
@@ -363,15 +363,15 @@
   },
   {
    "id": "LT-3",
-   "title": "FY26 Net Working Capital to Revenue",
-   "kind": "hard",
+   "title": "Net Working Capital to Revenue FY26",
+   "kind": "directional",
    "metric": "working_capital",
    "scope": "company",
    "basis": "management",
    "period": "FY26",
-   "target": "10%",
+   "target": "",
    "direction": null,
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Jul 2025",
@@ -388,14 +388,14 @@
     {
      "call": "Jan 2026",
      "from": "12%",
-     "to": "10%",
-     "type": "lowered"
+     "to": "",
+     "type": "reaffirmed"
     }
    ],
-   "status": "beat",
-   "detail": "FY26 NWC to revenue closed at 4.1% vs 10% target",
+   "status": "delivered",
+   "detail": "FY26 NWC to Revenue closed at 4.1%",
    "evidence": {
-    "quote": "Our NWC to Sales ratio has improved from 11% in March '25 to 4.1% in March '26, mainly supported by higher customer advances and increased vendor credit.",
+    "quote": "As of March 2026, the Net Working Capital to Revenue ratio improved sharply to 4.1%, reflecting an improvement of 690 basis points on a YoY basis.",
     "call": "May 2026",
     "new_deadline": null
    },
@@ -442,7 +442,7 @@
      "quote": "However, with stronger collection intensity and improved contractual terms, our Net Working Capital to Revenue has improved sharply to 8.2% as of December '25, and we expect to close the year with a revised target of around 10%.",
      "speaker": "P. Ramakrishnan",
      "page": 2,
-     "target": "10%",
+     "target": "",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -452,22 +452,29 @@
   },
   {
    "id": "LT-4",
-   "title": "L&T Finance Gold loan transaction close",
+   "title": "Gold loan transaction close / Hyderabad Metro divestment",
    "kind": "milestone",
    "metric": "deal_wins",
-   "scope": "L&T Finance",
+   "scope": "company",
    "basis": "management",
-   "period": "Q2FY26",
+   "period": "FY26",
    "target": "",
    "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "delivered",
-   "detail": "Completed gold loan business acquisition in June 2025",
+   "moved": true,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "Q2FY26",
+     "to": "Q4FY26",
+     "type": "deferred"
+    }
+   ],
+   "status": "delayed",
+   "detail": "Hyderabad Metro divestment completion date revised to 30th September 2026",
    "evidence": {
-    "quote": "The business also completed the acquisition of the Gold Loan business from Paul Merchants Finance Pvt. Ltd. by way of a slump sale on the 9th of June.",
-    "call": "Jul 2025",
-    "new_deadline": null
+    "quote": "The estimated completion date for this transaction has been revised to 30th September 2026.",
+    "call": "Jul 2026, p2",
+    "new_deadline": "30th September 2026"
    },
    "statements": [
     {
@@ -481,12 +488,24 @@
      "deadline": "Q2FY26",
      "condition": null,
      "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2025AnalysttransL&T%20Q4FY25%20Earnings%20Call%20Transcript.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "The contours of the final agreement are being finalized, and we expect this transaction to get consummated by the end of the current fiscal FY '26.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
     }
    ]
   },
   {
    "id": "LT-5",
-   "title": "H2FY26 revenue and margin visibility",
+   "title": "Revenue and margin visibility H2FY26",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
@@ -534,7 +553,7 @@
   },
   {
    "id": "LT-6",
-   "title": "FY27 Hydrocarbon margin realization",
+   "title": "Hydrocarbon margin realization FY27",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "Hydrocarbon business",
@@ -562,17 +581,23 @@
   },
   {
    "id": "LT-7",
-   "title": "L&T Hyderabad Metro debt levels and breakeven",
+   "title": "Debt levels and ridership L&T Hyderabad Metro",
    "kind": "directional",
    "metric": "debt",
    "scope": "L&T Hyderabad Metro",
-   "basis": null,
+   "basis": "management",
    "period": "multi-year",
    "target": "",
    "direction": "down",
    "moved": false,
    "events": [],
-   "status": "open",
+   "status": "on_track",
+   "detail": "SPA executed to divest Hyderabad Metro stake",
+   "evidence": {
+    "quote": "The company has executed Share Purchase Agreement (SPA) to divest its 100% stake in Nabha Power and its entire stake in Hyderabad Metro.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Jul 2025",
@@ -590,7 +615,7 @@
   },
   {
    "id": "LT-8",
-   "title": "FY26 share of government order inflows",
+   "title": "Share of government order inflows FY26",
    "kind": "directional",
    "metric": "order_inflow",
    "scope": "company",
@@ -619,71 +644,6 @@
   },
   {
    "id": "LT-9",
-   "title": "Hyderabad Metro / stake divestment completion",
-   "kind": "milestone",
-   "metric": "asset_quality",
-   "scope": "L&T Metro Rail Hyderabad Limited",
-   "basis": null,
-   "period": "H1FY27",
-   "target": "",
-   "direction": null,
-   "moved": true,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "Q4FY26",
-     "to": "Q1FY27",
-     "type": "deferred"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Oct 2025",
-     "quarter": "Q2FY26",
-     "quote": "The contours of the final agreement are being finalized, and we expect this transaction to get consummated by the end of the current fiscal FY '26.",
-     "speaker": "P. Ramakrishnan",
-     "page": 2,
-     "target": "",
-     "period": "FY26",
-     "deadline": "FY26",
-     "condition": null,
-     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q2FY26%20Earnings%20Call%20Transcript%20.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "Both these transactions are expected to achieve closure in Q1 FY27.",
-     "speaker": "P. Ramakrishnan",
-     "page": 2,
-     "target": "",
-     "period": "Q1FY27",
-     "deadline": "Q1FY27",
-     "condition": null,
-     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "The estimated completion date for this transaction has been revised to 30th September 2026.",
-     "speaker": "P. Ramakrishnan",
-     "page": 2,
-     "target": "",
-     "period": "H1FY27",
-     "deadline": "2026-09-30",
-     "condition": null,
-     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
-    }
-   ]
-  },
-  {
-   "id": "LT-10",
    "title": "AMCA program RFP issuance",
    "kind": "soft",
    "metric": "other",
@@ -711,7 +671,7 @@
    ]
   },
   {
-   "id": "LT-11",
+   "id": "LT-10",
    "title": "AMCA prototype winner announcement",
    "kind": "soft",
    "metric": "other",
@@ -739,8 +699,8 @@
    ]
   },
   {
-   "id": "LT-12",
-   "title": "FY26 Infrastructure segment EBITDA margin",
+   "id": "LT-11",
+   "title": "Infrastructure segment EBITDA margin FY26",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "Infrastructure",
@@ -757,7 +717,7 @@
      "call": "Oct 2025",
      "quarter": "Q2FY26",
      "quote": "We do believe that infra margins will be a little northward.",
-     "speaker": "P. Ramakrishnan",
+     "speaker": "P Ramakrishnan",
      "page": 12,
      "target": "",
      "period": "FY26",
@@ -768,8 +728,8 @@
    ]
   },
   {
-   "id": "LT-13",
-   "title": "FY27 Energy segment margin",
+   "id": "LT-12",
+   "title": "Energy segment margin FY27",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "Energy",
@@ -796,8 +756,8 @@
    ]
   },
   {
-   "id": "LT-14",
-   "title": "Data Center capacity commissioning",
+   "id": "LT-13",
+   "title": "Data Center capacity commissioning FY26",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Data Center business",
@@ -808,10 +768,10 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Commissioned 12 MW at Kanchipuram, bringing total capacity to 30 MW",
+   "detail": "Not done (per management)",
    "evidence": {
     "quote": "The Data Center business rebranded as Larsen & Toubro Vyoma advanced its growth agenda by commissioning the 12 MW capacity at Kanchipuram, with an additional 6 MW at an advanced stage of commissioning, bringing the total capacity available to 30 MWs, positioning the platform to drive L&T's hyperscale data center expansion, catering to high-performance computing and advanced data storage requirements.",
-    "call": "May 2026, p2",
+    "call": "May 2026",
     "new_deadline": null
    },
    "statements": [
@@ -830,8 +790,8 @@
    ]
   },
   {
-   "id": "LT-15",
-   "title": "FY27 Projects & Manufacturing margin uptick",
+   "id": "LT-14",
+   "title": "Project & Manufacturing margin uptick FY27",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "Projects & Manufacturing",
@@ -858,8 +818,42 @@
    ]
   },
   {
+   "id": "LT-15",
+   "title": "Divestment closure Q1FY27",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Nabha Power divestment completed June 2026",
+   "evidence": {
+    "quote": "The divestment of Nabha Power was completed on 25th June 2026, in line with our strategy to exit the concessions portfolio.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Both these transactions are expected to achieve closure in Q1 FY27.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2026AnalysttransL&T%20Q4%20FY26%20Earnings%20Call%20Transcript.pdf"
+    }
+   ]
+  },
+  {
    "id": "LT-16",
-   "title": "LTM multi-year revenue doubling target",
+   "title": "LTM revenue doubling multi-year",
    "kind": "soft",
    "metric": "revenue",
    "scope": "LTM",
@@ -887,7 +881,7 @@
   },
   {
    "id": "LT-17",
-   "title": "LTTS multi-year revenue CAGR",
+   "title": "Revenue CAGR LTTS multi-year",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "LTTS",
@@ -915,7 +909,7 @@
   },
   {
    "id": "LT-18",
-   "title": "LTTS multi-year EBIT margin",
+   "title": "EBIT margin LTTS multi-year",
    "kind": "hard",
    "metric": "operating_margin",
    "scope": "LTTS",
@@ -943,7 +937,7 @@
   },
   {
    "id": "LT-19",
-   "title": "L&T Finance multi-year ROE target",
+   "title": "ROE L&T Finance multi-year",
    "kind": "hard",
    "metric": "roe",
    "scope": "L&T Finance",
@@ -977,7 +971,7 @@
   },
   {
    "id": "LT-20",
-   "title": "FY27 order inflow growth",
+   "title": "Group order inflow growth FY27",
    "kind": "hard",
    "metric": "order_inflow",
    "scope": "company",
@@ -1024,7 +1018,7 @@
   },
   {
    "id": "LT-21",
-   "title": "FY27 revenue growth",
+   "title": "Revenue growth FY27",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -1080,7 +1074,7 @@
   },
   {
    "id": "LT-22",
-   "title": "FY27 PPM margin",
+   "title": "PPM margin FY27",
    "kind": "hard",
    "metric": "ebitda_margin",
    "scope": "Projects, Products, and Manufacturing portfolio",
@@ -1127,7 +1121,7 @@
   },
   {
    "id": "LT-23",
-   "title": "FY27 working capital to sales ratio",
+   "title": "Working capital FY27",
    "kind": "hard",
    "metric": "working_capital",
    "scope": "company",
@@ -1174,17 +1168,23 @@
   },
   {
    "id": "LT-24",
-   "title": "Lakshya multi-year order inflow CAGR",
+   "title": "Order inflow CAGR multi-year",
    "kind": "hard",
    "metric": "order_inflow",
    "scope": "company",
-   "basis": null,
+   "basis": "management",
    "period": "multi-year",
    "target": "10–12%",
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "open",
+   "status": "on_track",
+   "detail": "Q1 order inflow growth 14% Y-on-Y",
+   "evidence": {
+    "quote": "Our order inflow recorded a strong 14% year-on growth in Q1 despite project deferments during the quarter.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "May 2026",
@@ -1202,7 +1202,7 @@
   },
   {
    "id": "LT-25",
-   "title": "Lakshya multi-year revenue CAGR",
+   "title": "Revenue CAGR multi-year",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -1237,7 +1237,7 @@
   },
   {
    "id": "LT-26",
-   "title": "Lakshya multi-year Return on Equity",
+   "title": "Return on Equity multi-year",
    "kind": "hard",
    "metric": "roe",
    "scope": "company",
@@ -1265,7 +1265,7 @@
   },
   {
    "id": "LT-27",
-   "title": "H2FY27 revenue growth",
+   "title": "Revenue growth H2FY27",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
@@ -1293,7 +1293,35 @@
   },
   {
    "id": "LT-28",
-   "title": "Q2FY27 project awards pickup",
+   "title": "Stake divestment completion L&T Metro Rail Hyderabad",
+   "kind": "milestone",
+   "metric": "asset_quality",
+   "scope": "L&T Metro Rail Hyderabad Limited",
+   "basis": null,
+   "period": "H1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "The estimated completion date for this transaction has been revised to 30th September 2026.",
+     "speaker": "P. Ramakrishnan",
+     "page": 2,
+     "target": "",
+     "period": "H1FY27",
+     "deadline": "2026-09-30",
+     "condition": null,
+     "url": "https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL&T-Earnings-Jul28-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "LT-29",
+   "title": "Project awards pickup Q2FY27",
    "kind": "directional",
    "metric": "order_inflow",
    "scope": "company",
@@ -1320,8 +1348,8 @@
    ]
   },
   {
-   "id": "LT-29",
-   "title": "Offshore megaprojects dispatch readiness",
+   "id": "LT-30",
+   "title": "Offshore megaprojects dispatch readiness Q4FY27",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Offshore",
@@ -1783,33 +1811,47 @@
  "case": {
   "bull": [
    {
-    "figure": "FY26 Net Working Capital 4.1%",
-    "point": "Management beat the working capital target significantly, closing FY26 NWC to revenue at 4.1% against a 10% target.",
+    "figure": "Cash conversion 115%",
+    "point": "Operating cash flow has consistently exceeded net profit over the last five years, demonstrating strong underlying cash generation.",
     "refs": [
-     "LT-3"
+     "cash_conversion"
     ]
    },
    {
-    "figure": "FY26 ROCE 15%",
-    "point": "Return on capital employed improved to 15% in FY26 compared to 10% in FY22, demonstrating better capital efficiency.",
+    "figure": "ROCE 15% in FY26",
+    "point": "Return on capital employed has improved significantly from 10% in FY22, indicating better efficiency in capital allocation.",
     "refs": [
      "returns"
+    ]
+   },
+   {
+    "figure": "NWC to Revenue 4.1%",
+    "point": "Management successfully delivered on its working capital efficiency target for FY26.",
+    "refs": [
+     "LT-3"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "FY26 Revenue growth 11.8%",
-    "point": "Management missed the FY26 group revenue growth target of 15% by only achieving 11.8%.",
+    "figure": "Op. margin 16% → 13%",
+    "point": "Operating margins have compressed over the last four years, reflecting ongoing pressure on profitability.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "FY26 revenue growth 11.8%",
+    "point": "The company missed its 15% revenue growth target for the fiscal year.",
     "refs": [
      "LT-1"
     ]
    },
    {
-    "figure": "Operating margin 16% to 13%",
-    "point": "Operating margins compressed from 16% in FY22 down to 13% by FY26.",
+    "figure": "Gold loan transaction close / Hyderabad Metro divestment: Q2FY26 → Q4FY26",
+    "point": "The planned divestment has been deferred multiple times, with the completion date pushed to September 2026.",
     "refs": [
-     "margin"
+     "LT-4"
     ]
    }
   ]

@@ -1,7 +1,83 @@
 {
- "built": "2026-10-30T18:04:01",
+ "built": "2026-10-30T19:10:05",
  "days": 30,
  "items": [
+  {
+   "id": "INFY-ed229dd3-9d22-4c2c-8214-d65575b6be4d",
+   "symbol": "INFY",
+   "name": "Infosys",
+   "at": "2026-10-30T18:52:32",
+   "type": "capex",
+   "label": "Capex",
+   "subject": "Infosys Announces Expansion Of Pocharam Development Center In Hyderabad",
+   "headline": "Enclosed",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de1d0c27-5ad6-474d-b3b4-44084de360c0.pdf",
+   "summary": "Infosys expanded its Pocharam Development Center in Hyderabad by inaugurating a new 1.1 million sq. ft. facility adding 10,000 seats.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 70,
+   "routine": false
+  },
+  {
+   "id": "TATASTEEL-cd049085-8457-4b2e-90d8-b08b0984ff7f",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-30T18:39:48",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "headline": "Tata Steel: 2QFY27 Earnings Discussion",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd1ecd31-1e5f-494a-9ea9-20dffa50f6d4.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
+   "id": "HINDUNILVR-fda148c4-8f42-4624-ab05-1d25f09b9dd9",
+   "symbol": "HINDUNILVR",
+   "name": "Hindustan Unilever",
+   "at": "2026-10-30T18:14:48",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Copy of Newspaper Publication regarding notice of declaration of interim dividend and payment date",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c27c0214-10cc-4880-bbb5-b0df9f4dd201.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "HINDUNILVR-53d6450f-b654-4dad-b62a-6b694039e08e",
+   "symbol": "HINDUNILVR",
+   "name": "Hindustan Unilever",
+   "at": "2026-10-30T18:10:01",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Copy of Newspaper Publication regarding extract of the Unaudited Standalone and Consolidated Financial Results for the quarter and half year ended 30th September, 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/880c267a-fcc5-410d-b2d6-c010ea640eb2.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
   {
    "id": "HINDUNILVR-927681ac-2faa-4769-ae96-54714b381e42",
    "symbol": "HINDUNILVR",
@@ -53,9 +129,10 @@
    "summary": "Q2FY27 results",
    "people": [],
    "promises": [
+    "BEL-0",
     "BEL-1",
-    "BEL-29",
-    "BEL-30"
+    "BEL-28",
+    "BEL-29"
    ],
    "numbers": {
     "quarter": "Q2FY27",
@@ -118,7 +195,7 @@
    "summary": "Q2FY27 results",
    "people": [],
    "promises": [
-    "DIXON-47"
+    "DIXON-41"
    ],
    "numbers": {
     "quarter": "Q2FY27",
@@ -201,13 +278,33 @@
     }
    ],
    "promises": [
-    "DIXON-48"
+    "DIXON-42",
+    "DIXON-18"
    ],
    "numbers": null,
    "senior": false,
    "tone": null,
    "importance": 70,
    "routine": false
+  },
+  {
+   "id": "PRAJIND-a87d7d3f-c0be-4ad7-bc82-b30b513f9351",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-30T15:54:33",
+   "type": "earnings_call",
+   "label": "Earnings call",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "headline": "Audio Recording of Analysts'' Call held on 30th October, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/19cc4943-5d22-4340-8882-b2a432ebea09.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 25,
+   "routine": true
   },
   {
    "id": "MAXHEALTH-0369f8e7-8c5a-4cab-9661-00a596e6976d",
@@ -411,6 +508,25 @@
    "routine": true
   },
   {
+   "id": "PRAJIND-05816a85-efa9-4d8d-adca-b52b00e5f5ff",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-30T09:04:13",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "headline": "Earnings Presentation for second quarter & half year ended 30th September, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ed644da3-f9ae-4779-bdf8-91f9aba18a68.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
    "id": "M&M-7bd45057-97aa-4b49-81d0-bdf11baa242d",
    "symbol": "M&M",
    "name": "Mahindra & Mahindra",
@@ -466,6 +582,273 @@
    "tone": null,
    "importance": 10,
    "routine": true
+  },
+  {
+   "id": "TRENT-29b51816-e553-4185-9a5c-72064ea8f7af",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-29T16:39:36",
+   "type": "results",
+   "label": "Results",
+   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "headline": "Investors'' Presentation on Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half-year ended 30th September 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5634f899-a008-45ab-b930-2b74cf08e566.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [],
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 5873.0,
+      "qoq": 2.050390964378801,
+      "yoy": 21.897052718970535,
+      "prev_yoy": 17.857874257628502
+     },
+     {
+      "label": "EBITDA",
+      "value": 1057.0,
+      "qoq": -5.540661304736371,
+      "yoy": 29.5343137254902,
+      "prev_yoy": 31.957547169811317
+     },
+     {
+      "label": "PBT",
+      "value": 619.0,
+      "qoq": -10.54913294797688,
+      "yoy": 29.769392033542985,
+      "prev_yoy": 22.477876106194692
+     },
+     {
+      "label": "PAT",
+      "value": 468.0,
+      "qoq": -9.652509652509655,
+      "yoy": 25.469168900804284,
+      "prev_yoy": 21.882352941176464
+     }
+    ],
+    "notes": [],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 17.99761620977354,
+     "year_ago": 16.936488169364882,
+     "prev": 19.44396177237185
+    },
+    "unit": "₹ cr",
+    "source": "screener.in, consolidated where published"
+   },
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/386aab9b-d99c-44af-ba52-1bd95d49a60c.pdf"
+    },
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b962e91a-b409-4f5f-a22f-3275c992153a.pdf"
+    },
+    {
+     "label": "Press release",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/984d68e3-738c-43cf-afd1-756b33f60610.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TRENT-ffa8ae18-f840-4cf4-965a-616cd00c62ee",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-29T16:36:32",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Retirement",
+   "headline": "Retirement of Mr. Noel N Tata as the Chairman",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6d04e12f-221f-4d62-925d-0792202a19e7.pdf",
+   "summary": "Trent announced the retirement of Chairman Noel N. Tata, appointment of Bahram Vakil as Chairman, and additions of Rajiv Dube and Kalpana Merchant.",
+   "people": [
+    {
+     "name": "Noel N. Tata",
+     "role": "Chairman and Director",
+     "change": "retired",
+     "effective": "2026-11-11",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Noel N. Tata",
+     "role": "Chairman Emeritus",
+     "change": "appointed",
+     "effective": "2026-11-12",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Bahram Vakil",
+     "role": "Chairman",
+     "change": "appointed",
+     "effective": "2026-11-12",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Rajiv Dube",
+     "role": "Additional Director (Non-Executive, Non-Independent)",
+     "change": "appointed",
+     "effective": "2026-10-30",
+     "profile": "An Indian industry veteran with over 40 years of multi-sector experience at Tata and Aditya Birla, engineer and post-graduate in Business Management.",
+     "promises": []
+    },
+    {
+     "name": "Kalpana Merchant",
+     "role": "Independent Director",
+     "change": "appointed",
+     "effective": "2026-10-30",
+     "profile": "Over 45 years of experience in the legal profession, partner at Kanga & Co., AZB & Partners and Jerome Merchant + Partners, holds LL.B., BA in Psychology, and qualified solicitor.",
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": true,
+   "tone": null,
+   "importance": 90,
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b891b5ce-4d60-44f6-a01f-1bd507d5de0f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-febabffe-0d53-4aac-805a-c11eb61ededd",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-29T16:34:49",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
+   "headline": "Intimation under Regulation 30 of SEBI LODR regarding change in Directors.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4153e7dd-10a1-41a0-9ada-a6bfb6163653.pdf",
+   "summary": "Dr. Shridhar Shukla resigned as Independent Director and Mr. Vijay Ratnaparkhe was appointed as Independent Director.",
+   "people": [
+    {
+     "name": "Dr. Shridhar Shukla",
+     "role": "Independent Director",
+     "change": "resigned",
+     "effective": "2026-10-29",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Mr. Vijay Ratnaparkhe",
+     "role": "Independent Director",
+     "change": "appointed",
+     "effective": "2026-10-29",
+     "profile": "President of Bosch in Southeast Asia and OCEANIA and MD of Bosch in Singapore till Dec 2025; former CIO and president of Global Information Systems at Robert Bosch GmbH; holds M.Tech from IIT Bombay and Chemical Engineering degree from Mumbai University.",
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 60,
+   "routine": false
+  },
+  {
+   "id": "PRAJIND-ea646cee-4771-4b21-805d-df4b55c8d04f",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-29T16:32:05",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Announcement under Regulation 30 (LODR)-Updates on Joint Venture",
+   "headline": "Intimation under Regulation 30 of SEBI LODR.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a28eaba-1d62-4175-8dad-f5bb0617491d.pdf",
+   "summary": "Praj Industries approved investing up to Rs 100 crore in a joint venture with Bharat Petroleum Corporation Ltd. for Compressed Bio Gas plants.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false
+  },
+  {
+   "id": "PRAJIND-51ec7d9b-e2a1-4615-b3b6-296e0a022f40",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-29T16:18:52",
+   "type": "results",
+   "label": "Results",
+   "subject": "Board Meeting Outcome for Unaudited Financial Results For Quarter And Half Year Ended 30Th September 2026",
+   "headline": "Unaudited Financial Results for quarter and half year ended 30th September 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e66c218f-c4ef-4efa-a5d3-d1a9bf4dc55b.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [],
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 849.0,
+      "qoq": 18.57541899441342,
+      "yoy": 0.8313539192398967,
+      "prev_yoy": 11.874999999999991
+     },
+     {
+      "label": "EBITDA",
+      "value": 52.0,
+      "qoq": 73.33333333333334,
+      "yoy": -7.14285714285714,
+      "prev_yoy": -3.2258064516129004
+     },
+     {
+      "label": "PBT",
+      "value": 36.0,
+      "qoq": 71.42857142857142,
+      "yoy": 19.999999999999996,
+      "prev_yoy": 110.00000000000001
+     },
+     {
+      "label": "PAT",
+      "value": 23.0,
+      "qoq": 91.66666666666667,
+      "yoy": 21.052631578947366,
+      "prev_yoy": 140.0
+     }
+    ],
+    "notes": [],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 6.124852767962309,
+     "year_ago": 6.65083135391924,
+     "prev": 4.189944134078212
+    },
+    "unit": "₹ cr",
+    "source": "screener.in, consolidated where published"
+   },
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Results filing",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c8a47c6a-733c-43e3-b316-727201f72193.pdf"
+    },
+    {
+     "label": "Press release",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c4387b6-3b5a-4731-a2b0-e4109fa684e6.pdf"
+    }
+   ]
   },
   {
    "id": "INFY-cbbf7462-ce7a-42d3-8ee4-d7ba539eb9f8",
@@ -555,15 +938,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
    "summary": "Infosys reported Q2 revenue growth of 1.5% YoY in constant currency, with AI revenue reaching 10.5% and large deals at $5.2 billion.",
    "people": [],
-   "promises": [
-    "INFY-10",
-    "INFY-0",
-    "INFY-18"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 45,
+   "importance": 35,
    "routine": false
   },
   {
@@ -659,7 +1038,13 @@
    "senior": false,
    "tone": null,
    "importance": 40,
-   "routine": false
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/180a72df-654a-47c0-a34b-4acf9a7ce2b8.pdf"
+    }
+   ]
   },
   {
    "id": "HINDUNILVR-826c6b94-ea78-4f14-a059-1f1c9c9354d5",
@@ -731,25 +1116,6 @@
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aecfd799-4d6c-49d4-9d7b-221d87d1352d.pdf"
     }
    ]
-  },
-  {
-   "id": "HINDUNILVR-b6cea0f6-9b6c-42dc-a1af-4930fd37f24d",
-   "symbol": "HINDUNILVR",
-   "name": "Hindustan Unilever",
-   "at": "2026-10-28T09:46:27",
-   "type": "dividend",
-   "label": "Dividend",
-   "subject": "Corporate Action-Board approves Dividend",
-   "headline": "Board approves Interim Dividend of Rs. 19/- per equity share for FY 2026-27",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/180a72df-654a-47c0-a34b-4acf9a7ce2b8.pdf",
-   "summary": "Hindustan Unilever reported a quarterly turnover of Rs 18,071 crores and declared an interim dividend of Rs 19 per share.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 40,
-   "routine": false
   },
   {
    "id": "INFY-1ee21456-900d-4569-95b2-6e286e6f3ef5",
@@ -1005,15 +1371,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3892cb51-dbcd-43ad-955f-fe9fafe54003.pdf",
    "summary": "UltraTech Cement reported a 21% increase in net profit for Q2 FY27, driven by 13.8% volume growth and improved operating efficiency.",
    "people": [],
-   "promises": [
-    "ULTRACEMCO-16",
-    "ULTRACEMCO-7",
-    "ULTRACEMCO-6"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 45,
+   "importance": 35,
    "routine": false
   },
   {
@@ -1188,15 +1550,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/77a076e8-3476-462a-9b25-360533cfcd07.pdf",
    "summary": "Tata Power signed an MoU with BPCL to develop 110 kV power infrastructure for BPCL's Mumbai Refinery project.",
    "people": [],
-   "promises": [
-    "TATAPOWER-28",
-    "TATAPOWER-24",
-    "TATAPOWER-2"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 50,
+   "importance": 40,
    "routine": false
   },
   {
@@ -1314,6 +1672,44 @@
    "routine": true
   },
   {
+   "id": "AARTIIND-7179c82a-5dd3-4a0c-bcb4-2363cdf9895f",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-26T13:06:43",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "headline": "Intimation of Earnings Conference Call",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9d7f5243-63c4-4470-875b-6d500812116c.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
+   "id": "AARTIIND-592e9dce-6b33-4e2b-8afb-2311875fec45",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-26T12:46:38",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "headline": "Intimation of Earnings Conference Call",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ef5d9970-a39a-4bb2-a9ed-7f12423cdf7b.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
    "id": "HDFCBANK-b07f2ce1-57f5-4a48-9e1b-b8b20736f34e",
    "symbol": "HDFCBANK",
    "name": "HDFC Bank",
@@ -1342,6 +1738,25 @@
    "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/33c1b5fb-5050-4952-9b3b-741b61357dfa.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TATASTEEL-73c8bf80-64ac-4727-a63f-2248b0236ec0",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-24T18:32:45",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Update on board meeting",
+   "headline": "The Board Meeting to be held on 27/10/2026 has been revised to 07/11/2026 The Board Meeting to be held on October 27, 2026, has been revised to November 7, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9f226c38-fc19-45fa-8f39-6598689caa04.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -1400,6 +1815,25 @@
    "importance": 95,
    "routine": false,
    "also": []
+  },
+  {
+   "id": "TRENT-d3016b7e-4efb-458a-95ee-01a85d813dc5",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-23T19:49:14",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
+   "headline": "Nahar Retail Trading Services Private Limited, a wholly owned subsidiary of the Company, has entered into a binding term sheet dated 22nd October 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf9c8eec-654a-4016-acf5-b7160985dc78.pdf",
+   "summary": "Trent's subsidiary Nahar Retail agreed to divest its entire stake in Netria Property Holdings to TreBits Investment Trust.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false
   },
   {
    "id": "MAXHEALTH-70d30b3d-0990-417f-ad9d-2d14245d3aea",
@@ -1468,6 +1902,25 @@
    "subject": "Board Meeting Intimation for Inter-Alia, Consideration And Approval Of Un-Audited Financial Results (Standalone & Consolidated) Of The Company For The Quarter And Half Year Ended 30Th September, 2026",
    "headline": "Dixon Technologies (India) Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 30/10/2026 ,inter alia, to consider and approve the Un-Audited Financial ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4ac4537e-4a64-4682-a4c5-5255ba8895cf.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-cc5f4786-34b8-4078-bd57-89b3ad960f64",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-23T16:35:03",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Reminder Letter For Transfer Of Equity Shares To The Investor Education And Protection Fund ('IEPF')",
+   "headline": "Reminder letter for transfer of equity shares to the Investor Education and Protection Fund (''IEPF'')",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aeaf0a5d-3d57-41ef-87d1-a10268a57932.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -1570,6 +2023,44 @@
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b0157a38-ac25-43d0-8be4-d73cfead434b.pdf"
     }
    ]
+  },
+  {
+   "id": "AARTIIND-176a2b2e-4da5-4746-b714-b11511e9a4ef",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-23T15:00:13",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Board Meeting Intimation for Approval Of Unaudited Financial Results For The Quarter And Half Year Ended September 30, 2026",
+   "headline": "Aarti Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 30/10/2026 ,inter alia, to consider and approve the Unaudited Financial Results ....",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ffc7d035-e803-4d85-9b4c-3f8be148ec1a.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "PRAJIND-6c309059-9ba1-4274-961b-d9c2738b4429",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-23T12:03:43",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "headline": "Schedule of Analysts' call regarding Un-audited Financial Results of the Company for the second quarter and half year ended on 30th September, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4bcfa3a2-57f1-43f5-97f7-115357cfa501.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
   },
   {
    "id": "CIPLA-53307209-2994-4e11-997f-dd037df66f0a",
@@ -1726,6 +2217,25 @@
    "routine": true
   },
   {
+   "id": "PRAJIND-a289bc1d-43f5-4149-8b28-69040d9caa05",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-21T17:10:13",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Board Meeting Intimation for Approval Of Un-Audited Financial Results Of The Company For The Second Quarter & Half Year Ended On 30Th September, 2026",
+   "headline": "Praj Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve Intimation of Board Meeting ....",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/725f964d-ce5b-46c1-8f46-2cb443e08d19.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "HINDUNILVR-a4135003-71a8-4756-b164-57d316f61a0d",
    "symbol": "HINDUNILVR",
    "name": "Hindustan Unilever",
@@ -1776,8 +2286,7 @@
    "summary": "Q2FY27 results",
    "people": [],
    "promises": [
-    "ETERNAL-1",
-    "ETERNAL-4"
+    "ETERNAL-1"
    ],
    "numbers": {
     "quarter": "Q2FY27",
@@ -2357,14 +2866,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/46ea80db-1a49-466a-9731-fafed9a90d23.pdf",
    "summary": "UltraTech Cement approved a corporate guarantee of up to USD 55 million for its associate company, UHG Holdings IFSC Private Limited.",
    "people": [],
-   "promises": [
-    "ULTRACEMCO-7",
-    "ULTRACEMCO-6"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 15,
+   "importance": 5,
    "routine": true
   },
   {
@@ -2435,6 +2941,25 @@
    ]
   },
   {
+   "id": "TRENT-4831d1f0-2bfb-48ac-84dc-0651e3e483ce",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-19T11:07:58",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Notice of Special Window for re-lodgement of transfer requests of physical shares",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/096b4491-68dc-4163-8b20-3621448309db.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "LT-8a57b0a9-8570-41ad-90a3-970cbc391c7b",
    "symbol": "LT",
    "name": "Larsen & Toubro",
@@ -2451,6 +2976,34 @@
    "senior": false,
    "tone": null,
    "importance": 40,
+   "routine": false
+  },
+  {
+   "id": "TRENT-39411793-001f-4adf-82c6-2fa5985df914",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-18T18:44:51",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Resignation of Director",
+   "headline": "Intimation of resignation of Non-Executive Non-Independent Director of the Company",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5f2619df-b01f-4905-978f-00de8477b2f8.pdf",
+   "summary": "Mr. Harish Bhat resigned as Non-Executive Non-Independent Director of Trent with effect from 17th October 2026.",
+   "people": [
+    {
+     "name": "Harish Bhat",
+     "role": "Non-Executive Non-Independent Director",
+     "change": "resigned",
+     "effective": "17th October 2026",
+     "profile": null,
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 60,
    "routine": false
   },
   {
@@ -2556,6 +3109,25 @@
    "subject": "Announcement Under Regulation 30",
    "headline": "Please refer to the enclosed file.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f632519d-7623-4358-9f18-f14b8cd2cde7.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TATASTEEL-c0ba2198-55b3-4584-b3ac-1ba810e707b0",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-16T18:43:15",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Board Meeting Intimation for Considering The Audited Standalone And Unaudited Consolidated Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026",
+   "headline": "Tata Steel Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve audited Standalone and unaudited ....",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/00371f43-ea25-429c-8b37-35b174e7d4d8.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -2718,6 +3290,31 @@
    "routine": true
   },
   {
+   "id": "TATASTEEL-a6f4cedd-b93b-432b-ade8-bfca19b19d22",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-15T19:10:15",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Receipt Of Certified True Copy Of The Order Of The Hon'Ble National Company Law Tribunal, Mumbai Bench In The Matter Of The Scheme Of Amalgamation Of Rujuvalika Investments Limited And Tata Steel Limited And Their Respective Shareholder",
+   "headline": "Receipt of certified true copy of the Order of Hon''ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited into and ....",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ed58c27c-5a50-4923-b54c-652a6e715f3c.pdf",
+   "summary": "Tata Steel received the NCLT Mumbai Bench order approving the amalgamation of its wholly owned subsidiary Rujuvalika Investments Limited.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c83c3dd-87e9-48c8-97fe-e7ad20f62800.pdf"
+    }
+   ]
+  },
+  {
    "id": "M&M-74fdb820-6898-4ac7-9bbe-a3ed87c75745",
    "symbol": "M&M",
    "name": "Mahindra & Mahindra",
@@ -2746,6 +3343,25 @@
    "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
    "headline": "Certificate under Regulation 74 (5) of SEBI (DP) Regulations, 2018",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc77b5e8-b6e0-436f-96bf-9575b1a20e6b.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TATASTEEL-136b74fa-266d-40d1-aed5-f8fc47ef91aa",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-15T18:16:59",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Newspaper Advertisement - Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0bc93472-468d-4573-b2fc-e754a3e88491.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -2786,13 +3402,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/08084342-de1f-448a-90bd-964006876f78.pdf",
    "summary": "Tata Power is developing a 2.8 GW+ energy infrastructure pipeline to support 18 data centre operators across India.",
    "people": [],
-   "promises": [
-    "TATAPOWER-39"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 50,
+   "importance": 40,
    "routine": false
   },
   {
@@ -2947,8 +3561,6 @@
    "summary": "Bharat Electronics Limited secured additional orders worth Rs. 533 crore for various defense equipment and services.",
    "people": [],
    "promises": [
-    "BEL-6",
-    "BEL-25",
     "BEL-16"
    ],
    "numbers": null,
@@ -2956,6 +3568,34 @@
    "tone": null,
    "importance": 50,
    "routine": false
+  },
+  {
+   "id": "AARTIIND-4135b711-e7d5-462b-913b-2655a2a31162",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-13T14:58:28",
+   "type": "press_release",
+   "label": "Update",
+   "subject": "Agreement With A Global Speciality Chemical Company.",
+   "headline": "Please find attached disclosure with respect to Agreement with a Global Speciality Chemical Company.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/92eec871-4124-4507-b744-d3914eb2b01a.pdf",
+   "summary": "Aarti Industries entered into a 10+ year manufacturing and supply agreement worth Rs. 1500 crores with a global speciality chemical company.",
+   "people": [],
+   "promises": [
+    "AARTIIND-6",
+    "AARTIIND-5"
+   ],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 50,
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e6c6dc03-4b08-4139-9f41-cfef09a0552c.pdf"
+    }
+   ]
   },
   {
    "id": "TATAPOWER-4c5d7941-8471-400b-a0e6-0e3fe1a499bf",
@@ -3141,9 +3781,7 @@
    "summary": "Tata Power Renewable Energy commissioned 419 MW of utility-scale capacity and 131.2 MWhr of battery storage in Q2 FY27.",
    "people": [],
    "promises": [
-    "TATAPOWER-7",
-    "TATAPOWER-27",
-    "TATAPOWER-26"
+    "TATAPOWER-11"
    ],
    "numbers": null,
    "senior": false,
@@ -3166,7 +3804,7 @@
    "promises": [],
    "numbers": null,
    "senior": false,
-   "tone": null,
+   "tone": "negative",
    "importance": 70,
    "routine": false
   },
@@ -3334,14 +3972,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1ce1a939-c888-418f-85da-971030430db6.pdf",
    "summary": "Mahindra & Mahindra reported its production, sales, and export figures for the month of September 2026.",
    "people": [],
-   "promises": [
-    "M&M-13",
-    "M&M-4"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 15,
+   "importance": 5,
    "routine": true
   },
   {
@@ -3402,6 +4037,25 @@
    "routine": false
   },
   {
+   "id": "PRAJIND-8b8546fe-7e83-4063-a75c-979a08e362a1",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-09T11:37:28",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under Reg. 74(5) of SEBI DP Regulation 2018.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/516fc23c-8883-4011-8f78-6fe0210d5042.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "INFY-f290def0-1c67-45ea-a9dd-9cebceda3de0",
    "symbol": "INFY",
    "name": "Infosys",
@@ -3411,6 +4065,25 @@
    "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/059809bd-88c7-4fce-a050-42333e6cbb2c.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TATASTEEL-1f9ea332-a265-44eb-a786-86847079f8d0",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-08T20:46:09",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations 2018",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fbba0f25-e548-4c7c-b96e-6ed7abd73398.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -3459,6 +4132,25 @@
    "routine": true
   },
   {
+   "id": "AARTIIND-7ff93984-767b-4163-bd23-57bdc00d5fa1",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-08T13:04:35",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Please find attached Newspaper Advertisement",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d3365ca9-08d6-49cf-a35b-2e280197e17c.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "HDFCBANK-d7d6d6a6-1955-42e3-9950-548d88a801d5",
    "symbol": "HDFCBANK",
    "name": "HDFC Bank",
@@ -3490,13 +4182,31 @@
    "summary": "TP Solar produced 1 GW of solar modules and 0.9 GW of solar cells during Q2 FY27.",
    "people": [],
    "promises": [
-    "TATAPOWER-4",
-    "TATAPOWER-26"
+    "TATAPOWER-4"
    ],
    "numbers": null,
    "senior": false,
    "tone": null,
    "importance": 50,
+   "routine": false
+  },
+  {
+   "id": "TATASTEEL-96780902-be14-44d6-a8bd-6368ee1b09da",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-07T21:52:50",
+   "type": "press_release",
+   "label": "Update",
+   "subject": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "headline": "Press Release titled ''Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4b4dc2e4-897e-46e4-8b3b-fde1ef1122e7.pdf",
+   "summary": "Tata Steel reported provisional crude steel production of 6.21 million tons and deliveries of 5.97 million tons for India in 2QFY2027.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 40,
    "routine": false
   },
   {
@@ -3571,6 +4281,25 @@
    "routine": true
   },
   {
+   "id": "AARTIIND-089360c1-37e3-4399-aefd-23d2211a748a",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-07T19:15:08",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "No-Objection For Reclassification From The 'Promoter Group' Category To The 'Public' Category",
+   "headline": "Please find attached No-objection Letters from Stock Exchanges",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9b431768-86bf-44fc-895f-981218ad9a08.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "BAJFINANCE-70fcba2b-7ca8-4dce-8bc1-b80fd0e3d9d6",
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
@@ -3620,16 +4349,31 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b96ee12e-a6e1-4943-9b9b-7174e587fdad.pdf",
    "summary": "Tata Power partnered with Norway's Ocean Sun to pilot a 300 kWp membrane-based floating solar project in Maharashtra.",
    "people": [],
-   "promises": [
-    "TATAPOWER-28",
-    "TATAPOWER-24",
-    "TATAPOWER-2"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 50,
+   "importance": 40,
    "routine": false
+  },
+  {
+   "id": "AARTIIND-e75b3a11-1760-44ff-a12c-747ee3492457",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-07T16:40:11",
+   "type": "agm_egm",
+   "label": "AGM / EGM",
+   "subject": "Notice Of Extra-Ordinary General Meeting Scheduled To Be Held On Saturday, October 31, 2026 At 11:00 A.M. (IST)",
+   "headline": "Please find attached Notice of EGM",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/adb9c0a3-9100-49d0-8d27-4afcd011c52a.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 20,
+   "routine": true
   },
   {
    "id": "HDFCBANK-ea5bd89f-5734-42c4-bac2-c19023e96209",
@@ -3670,6 +4414,25 @@
    "routine": true
   },
   {
+   "id": "KAYNES-68e8df26-d376-46ba-8e41-d8eb99aba8f7",
+   "symbol": "KAYNES",
+   "name": "Kaynes Technology",
+   "at": "2026-10-07T15:13:04",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under regulation 74(5) of SEBI (DP) Regulations",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b19eca1b-7714-4704-aa2b-401fe5011690.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "DIXON-2899f2e8-f4f5-47bd-acea-b95340f55986",
    "symbol": "DIXON",
    "name": "Dixon Technologies",
@@ -3682,9 +4445,8 @@
    "summary": "Dixon Technologies entered a joint venture with Gemtek to manufacture optical transceivers and telecom products via subsidiary Dixon Electroconnect.",
    "people": [],
    "promises": [
-    "DIXON-17",
-    "DIXON-54",
-    "DIXON-48"
+    "DIXON-18",
+    "DIXON-42"
    ],
    "numbers": null,
    "senior": false,
@@ -3750,6 +4512,25 @@
    "routine": false
   },
   {
+   "id": "AARTIIND-2c49e718-4590-44cd-87df-d478fcd21671",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-06T17:08:45",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018 for the quarter ended September 30, 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d89ea708-61f5-441f-b9f8-a0850e51d984.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "TATAPOWER-8da7c1e0-e0a1-4d50-a1b4-9b3b1839229b",
    "symbol": "TATAPOWER",
    "name": "Tata Power",
@@ -3769,6 +4550,44 @@
    "routine": true
   },
   {
+   "id": "TRENT-a1a041c5-d376-4fe5-bcd1-741372502738",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-06T12:10:54",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Board Meeting Intimation for Notice Of Board Meeting",
+   "headline": "Trent Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve Notice of Board Meeting",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/db15dcb8-dfc0-478f-a8cc-e528917d5414.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-c5c9570c-5471-4280-a1d5-2be2cf45579d",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-05T18:43:18",
+   "type": "press_release",
+   "label": "Update",
+   "subject": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "headline": "Update for Q2FY27 and H1FY27",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d875718e-467a-4f6c-bed2-acaca2693aef.pdf",
+   "summary": "Trent reported a standalone revenue of Rs. 5,788 crores for Q2 FY27, marking a 23% YoY growth.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 40,
+   "routine": false
+  },
+  {
    "id": "BAJFINANCE-8053132b-873b-4c42-a225-b6332f0f8dd6",
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
@@ -3778,6 +4597,25 @@
    "subject": "Board Meeting Intimation for Considering And Approving Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026",
    "headline": "Bajaj Finance Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 19/10/2026 ,inter alia, to consider and approve unaudited standalone and consolidated ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7befbd0b-8d13-47e1-bf9f-3f91b13538c2.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-389b3e05-bd1b-4db8-91ca-af20ae7290b1",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-05T14:53:39",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under Regulation 74(5) of the Securities Exchange Board of India (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31c0197c-75f9-4c97-b92e-4554175326b7.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -3818,14 +4656,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c784b31-4901-47b9-a350-59baf6893b21.pdf",
    "summary": "UltraTech Cement became India's first cement company to surpass 2 gigawatts of installed green energy capacity for captive use.",
    "people": [],
-   "promises": [
-    "ULTRACEMCO-7",
-    "ULTRACEMCO-6"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 50,
+   "importance": 40,
    "routine": false
   },
   {
@@ -3878,13 +4713,11 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/211b489c-1633-4c21-9141-73d4672004a4.pdf",
    "summary": "Bajaj Finance reported a 26.5% growth in assets under management to ₹584,750 crore for the quarter ended September 2026.",
    "people": [],
-   "promises": [
-    "BAJFINANCE-17"
-   ],
+   "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 65,
+   "importance": 55,
    "routine": false
   },
   {
@@ -3904,45 +4737,17 @@
    "senior": false,
    "tone": null,
    "importance": 75,
-   "routine": false
-  },
-  {
-   "id": "BAJFINANCE-52d08a9e-3ae5-42ae-8581-1992e98c3b89",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-01T23:27:15",
-   "type": "fund_raise",
-   "label": "Fund raise",
-   "subject": "Announcement under Regulation 30 (LODR)-Preferential Issue",
-   "headline": "Capital Raise through Preferential Issue",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/50fbec1c-9852-4043-9020-d9df179271d5.pdf",
-   "summary": "Bajaj Finance board approved raising up to Rs 11,700 crore via QIP and Rs 5,800 crore through a preferential warrant issue.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 75,
-   "routine": false
-  },
-  {
-   "id": "BAJFINANCE-860141ba-6a41-47fe-b3b7-85ea7ce6091a",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-01T23:10:46",
-   "type": "fund_raise",
-   "label": "Fund raise",
-   "subject": "Board Meeting Outcome for Capital Raise Through QIP And Preferential Issue",
-   "headline": "Capital raise through QIP and Preferential Issue.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8a657d02-934b-47e9-ad14-128578cc57ff.pdf",
-   "summary": "Bajaj Finance board approved raising up to Rs 11,700 crore via QIP and Rs 5,800 crore via preferential warrant issue.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 75,
-   "routine": false
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/50fbec1c-9852-4043-9020-d9df179271d5.pdf"
+    },
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8a657d02-934b-47e9-ad14-128578cc57ff.pdf"
+    }
+   ]
   },
   {
    "id": "INFY-8272733b-8cef-4e14-a6be-ae7c63790fad",
@@ -3962,6 +4767,25 @@
    "tone": null,
    "importance": 10,
    "routine": true
+  },
+  {
+   "id": "TATASTEEL-42062c47-efa7-42fc-8815-68f293f2a487",
+   "symbol": "TATASTEEL",
+   "name": "Tata Steel",
+   "at": "2026-10-01T21:01:34",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Announcement under Regulation 30 (LODR)-Scheme of Arrangement",
+   "headline": "Pronouncement of Order by the Hon''ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments ....",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd5d0d2e-5082-44e3-85fc-c42d83d89113.pdf",
+   "summary": "NCLT approved the Scheme of Amalgamation between Tata Steel Limited and its wholly owned subsidiary Rujuvalika Investments Limited.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false
   },
   {
    "id": "HINDUNILVR-ade0d46a-dae6-421e-b4fd-a5ec7ae92f40",
@@ -4015,7 +4839,8 @@
       "HDFCBANK-3",
       "HDFCBANK-4",
       "HDFCBANK-5",
-      "HDFCBANK-8"
+      "HDFCBANK-7",
+      "HDFCBANK-9"
      ]
     }
    ],
@@ -4082,6 +4907,27 @@
    "tone": null,
    "importance": 10,
    "routine": true
+  },
+  {
+   "id": "AARTIIND-e4ce0664-66c1-4bee-857b-44e23b479b2b",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-01T17:20:20",
+   "type": "fund_raise",
+   "label": "Fund raise",
+   "subject": "Board Meeting Outcome for Outcome Of Board Meeting - Fund Raising (Enabling Approval)",
+   "headline": "Please find attached Outcome of Board Meeting",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5f4bac16-067c-4bc5-a37b-0cfbafe86e22.pdf",
+   "summary": "Aarti Industries board approved raising up to Rs. 1,000 crores via equity or other eligible securities.",
+   "people": [],
+   "promises": [
+    "AARTIIND-6"
+   ],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 85,
+   "routine": false
   },
   {
    "id": "DIXON-43bc3624-6348-4795-9af8-a7af169c577b",
@@ -4153,7 +4999,6 @@
    "summary": "Mahindra & Mahindra reported September 2026 sales of 114,874 total vehicles, 50,208 tractors, and 2,912 trucks and buses.",
    "people": [],
    "promises": [
-    "M&M-13",
     "M&M-20"
    ],
    "numbers": null,
@@ -4334,7 +5179,7 @@
    "summary": "Larsen & Toubro extended the estimated completion date for the stake sale in L&T Metro Rail (Hyderabad) to December 31, 2026.",
    "people": [],
    "promises": [
-    "LT-9"
+    "LT-28"
    ],
    "numbers": null,
    "senior": false,
@@ -4355,9 +5200,9 @@
    "summary": "Dixon Technologies' subsidiary, DEAPL, signed an intellectual property license agreement with Aviat Networks to manufacture and sell microwave radios.",
    "people": [],
    "promises": [
-    "DIXON-17",
-    "DIXON-54",
-    "DIXON-48"
+    "DIXON-45",
+    "DIXON-18",
+    "DIXON-47"
    ],
    "numbers": null,
    "senior": false,
@@ -4383,101 +5228,6 @@
    "tone": null,
    "importance": 40,
    "routine": false
-  },
-  {
-   "id": "TRENT-None",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "",
-   "headline": "",
-   "pdf": null,
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
-  },
-  {
-   "id": "TATASTEEL-None",
-   "symbol": "TATASTEEL",
-   "name": "Tata Steel",
-   "at": "",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "",
-   "headline": "",
-   "pdf": null,
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
-  },
-  {
-   "id": "AARTIIND-None",
-   "symbol": "AARTIIND",
-   "name": "Aarti Industries",
-   "at": "",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "",
-   "headline": "",
-   "pdf": null,
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
-  },
-  {
-   "id": "KAYNES-None",
-   "symbol": "KAYNES",
-   "name": "Kaynes Technology",
-   "at": "",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "",
-   "headline": "",
-   "pdf": null,
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
-  },
-  {
-   "id": "PRAJIND-None",
-   "symbol": "PRAJIND",
-   "name": "Praj Industries",
-   "at": "",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "",
-   "headline": "",
-   "pdf": null,
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
   }
  ],
  "failed": []

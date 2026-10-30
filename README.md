@@ -25,6 +25,16 @@ cd ../web && npm install && npm run dev                # http://localhost:5173
 
 Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction against the hand-labelled set in `eval/gold/`.
 
+## Tests and audit
+
+```bash
+cd backend && .venv/bin/python -m unittest discover -s tests -t .   # regression tests (no network)
+cd backend && .venv/bin/python -m scripts.audit                     # invariant checks on all built output
+cd web && npm test                                                   # formatting tests
+```
+
+The regression tests pin every wrong output found by hand (fake cuts from numbers that weren't in a quote, "twice" read as 2%, an evidence figure lifted from the wrong sentence, a standalone statement read as consolidated, misfiled USFDA and NCD filings, ...). The audit checks the *classes* of error on real output, so companies nobody has reviewed still get checked; every build ends with it, and `--strict` makes errors fail the build. The tests run on every push (`.github/workflows/tests.yml`).
+
 ## Daily refresh
 
 `.github/workflows/refresh.yml` fetches end-of-day prices every evening at 19:00 IST (and on demand from the Actions tab) and commits them if they changed, so price and volume alerts stay current. It needs no secrets.

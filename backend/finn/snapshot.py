@@ -7,9 +7,11 @@ it sees only the record and these numbers, and every point must cite one of them
 is dropped.
 """
 
+import json
 import re
 
 from finn import config
+from finn.figures import THREAD_ID, backed, nums
 from finn.llm.client import complete_json
 from finn.sources import screener
 
@@ -83,7 +85,9 @@ def build(slug: str) -> dict:
     cfo, np_ = cf.get("Cash from Operating Activity"), pl.get("Net Profit")
     if not lender and cfo and np_:
         c5, n5 = [v for _, v in _years(cfo)], [v for _, v in _years(np_)]
-        if len(c5) == len(n5) and n5 and sum(n5) > 0:
+        # Only over years of profit: after a loss year the ratio divides by a sliver
+        # (IndiGo showed 1274%) and stops meaning anything.
+        if len(c5) == len(n5) and n5 and all(n > 0 for n in n5):
             ratio = sum(c5) / sum(n5) * 100
             word = "strong" if ratio >= 90 else "adequate" if ratio >= 70 else "weak"
             add("cash_conversion", "Cash conversion", round(ratio), "% of profit, 5y",
@@ -171,14 +175,80 @@ def case(company: str, ledger: dict, snap: dict) -> dict:
               + ("\n".join(lines) or "none (no earnings calls)")
               + "\n\nNUMBERS (key | reading):\n" + "\n".join(metrics))
     out = complete_json(CASE_SYSTEM, prompt, CASE_SCHEMA, model=config.MODEL_STRONG, fallback=config.MODEL_CHEAP)
-    valid = {t["id"] for t in threads} | {m["key"] for m in snap["metrics"]}
-    names = {t["id"]: t["title"] for t in threads} | {m["key"]: m["label"] for m in snap["metrics"]}
+    by_id = {t["id"]: t for t in threads}
+    metrics = {m["key"]: m for m in snap["metrics"]}
     clean = {}
     for side in ("bull", "bear"):
-        clean[side] = [{"figure": _labelled(p.get("figure", ""), [r for r in p["refs"] if r in valid], names),
-                        "point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
-                       for p in out.get(side, []) if any(r in valid for r in p["refs"])][:3]
+        clean[side] = [p for p in (_checked(p, by_id, metrics) for p in out.get(side, [])) if p][:3]
     return clean
+
+
+STATUS_WORD = {"delivered": "kept", "beat": "beaten", "missed": "missed", "gone_quiet": "gone quiet",
+               "lapsed": "lapsed", "delayed": "delayed", "behind": "behind", "on_track": "on track"}
+
+
+def case_sources(ref: str, threads: dict, metrics: dict) -> str:
+    """Everything a case point citing ref may take its numbers from."""
+    if ref in threads:
+        t = threads[ref]
+        return " ".join(filter(None, [t["title"], t["target"], t.get("detail") or "",
+                                      json.dumps(t.get("pace") or {}),
+                                      " ".join(s["target"] for s in t.get("statements", [])),
+                                      " ".join(f"{e['from']} {e['to']}" for e in t["events"])]))
+    if ref in metrics:
+        return f"{metrics[ref]['reading']} {metrics[ref].get('value')}"
+    return ""
+
+
+def _checked(p: dict, threads: dict, metrics: dict) -> dict | None:
+    """Keep a model-written point only if code can stand behind its figure.
+
+    The figure must carry a number, and every number in it must appear in one of the
+    sources the point cites; counts the model made up ("Delivered promises 3") and values
+    it inferred ("availability 0%") fail. A failing figure is rebuilt from the first
+    source, and a point with nothing to rebuild from is dropped. So is a point whose own
+    sentence has a number nobody cited ("delivered three key targets"). Internal ids
+    never reach the app.
+    """
+    refs = [r for r in p.get("refs", []) if r in threads or r in metrics]
+    if not refs:
+        return None
+    names = {r: threads[r]["title"] if r in threads else metrics[r]["label"] for r in refs}
+    point = _plain_words(THREAD_ID.sub(lambda m: names.get(m.group(), ""), p.get("point", "")).strip())
+    figure = _plain_words(THREAD_ID.sub("", p.get("figure", "")).strip(" :·-"))
+    sources = [case_sources(r, threads, metrics) for r in refs]
+    if nums(point) and not backed(point, sources):
+        return None
+    if not any(backed(figure, [src]) for src in sources):
+        figure = _figure_from(refs[0], threads, metrics)
+    if not figure:
+        return None
+    return {"figure": _labelled(figure, refs, names), "point": re.sub(r"\s{2,}", " ", point), "refs": refs}
+
+
+def _plain_words(text: str) -> str:
+    """Status codes the model copies from its input ("gone_quiet") read as words."""
+    return re.sub(r"\b(gone_quiet|on_track|cant_verify)\b", lambda m: STATUS_WORD.get(m.group(), "can't verify"), text)
+
+
+def _figure_from(ref: str, threads: dict, metrics: dict) -> str:
+    if ref in metrics:
+        m = metrics[ref]
+        if m.get("value") is None:
+            return ""
+        unit = m["unit"] if m["unit"].startswith("%") else f"× {m['unit'][2:]}" if m["unit"].startswith("x ") else f" {m['unit']}"
+        return f"{m['label']} {m['value']:g}{unit}".strip()
+    t = threads[ref]
+    moves = [e for e in t["events"] if e["type"] != "reaffirmed"]
+    if moves:
+        return f"{t['title']}: {moves[0]['from']} → {moves[-1]['to']}"
+    word = STATUS_WORD.get(t["status"])
+    if t["target"] and nums(t["target"]):
+        return f"{t['title']}: {t['target']}" + (f" target, {word}" if word else " target")
+    if t.get("period") and word:  # a milestone: its date is the figure
+        due = "" if t["period"] in t["title"] else f": due {t['period']}"
+        return f"{t['title']}{due}, {word}"
+    return ""
 
 
 def _labelled(figure: str, refs: list[str], names: dict[str, str]) -> str:

@@ -721,7 +721,7 @@
     "metric_label": "Renewable capacity commissioning",
     "scope": "company",
     "basis": "reported",
-    "low": 2.5,
+    "low": null,
     "high": 3,
     "unit": "GW",
     "direction": "up",

@@ -92,9 +92,9 @@
   "resolved": 0,
   "moved": 0,
   "quiet": 0,
-  "open": 2,
+  "open": 3,
   "by_status": {
-   "on_track": 1,
+   "on_track": 2,
    "open": 1
   }
  },
@@ -291,7 +291,7 @@
      "call": "Apr 2025",
      "quarter": "Q4FY25",
      "quote": "everything else being equal, If commodity prices are In the same domain space that they are now, we should start seeing margins to improve from this band in the Later half of the fiscal",
-     "speaker": "Modarcdor",
+     "speaker": "Modarator",
      "page": 27,
      "target": "",
      "period": "H2FY26",
@@ -387,7 +387,7 @@
   },
   {
    "id": "HINDUNILVR-4",
-   "title": "EBITDA margin",
+   "title": "FY26 EBITDA margin",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "company",
@@ -410,14 +410,8 @@
      "type": "reaffirmed"
     },
     {
-     "call": "May 2026",
-     "from": "",
-     "to": "22.5–23.5%",
-     "type": "reaffirmed"
-    },
-    {
      "call": "Aug 2026",
-     "from": "22.5–23.5%",
+     "from": "",
      "to": "",
      "type": "reaffirmed"
     }
@@ -461,18 +455,6 @@
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38a5c0b9-6eee-4de5-bdd8-98ac200204cc.pdf"
     },
     {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "as far as margins are concerned, our approach remains consistent and disciplined, and we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
-     "speaker": "Niranjan Gupta",
-     "page": 9,
-     "target": "22.5–23.5%",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
-    },
-    {
      "call": "Aug 2026",
      "quarter": "Q1FY27",
      "quote": "it's feasible for us to maintain the EBITDA Margins.",
@@ -488,6 +470,40 @@
   },
   {
    "id": "HINDUNILVR-5",
+   "title": "EBITDA margin (multi-year)",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "22.5–23.5%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "EBITDA margin of 23% within guided range",
+   "evidence": {
+    "quote": "We navigated external volatility through financial discipline across all the lines of P&L, delivering EBITDA Margin of 23%, which was within the guided range.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "as far as margins are concerned, our approach remains consistent and disciplined, and we expect the mid-term margin guidance to remain around our current guided range of 22.5% to 23.5%.",
+     "speaker": "Niranjan Gupta",
+     "page": 9,
+     "target": "22.5–23.5%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55988411-440d-4801-8c08-90a5908c4a04.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HINDUNILVR-6",
    "title": "Gross Margin",
    "kind": "directional",
    "metric": "operating_margin",
@@ -521,7 +537,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-6",
+   "id": "HINDUNILVR-7",
    "title": "Volume growth",
    "kind": "directional",
    "metric": "volume_growth",
@@ -550,7 +566,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-7",
+   "id": "HINDUNILVR-8",
    "title": "Market recovery",
    "kind": "directional",
    "metric": "revenue_growth",
@@ -579,7 +595,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-8",
+   "id": "HINDUNILVR-9",
    "title": "Home Care pricing",
    "kind": "directional",
    "metric": "other",
@@ -613,7 +629,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-9",
+   "id": "HINDUNILVR-10",
    "title": "Lifestyle Nutrition volume growth",
    "kind": "directional",
    "metric": "volume_growth",
@@ -641,7 +657,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-10",
+   "id": "HINDUNILVR-11",
    "title": "Personal Care revenue growth",
    "kind": "directional",
    "metric": "revenue_growth",
@@ -669,7 +685,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-11",
+   "id": "HINDUNILVR-12",
    "title": "Premium formats capex",
    "kind": "milestone",
    "metric": "capex",
@@ -697,7 +713,7 @@
    ]
   },
   {
-   "id": "HINDUNILVR-12",
+   "id": "HINDUNILVR-13",
    "title": "Competitive navigation",
    "kind": "directional",
    "metric": "other",
@@ -1167,44 +1183,50 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered promises 2",
-    "point": "Management successfully delivered market recovery and gross margin targets.",
-    "refs": [
-     "HINDUNILVR-5",
-     "HINDUNILVR-7"
-    ]
-   },
-   {
-    "figure": "ROCE 28%",
-    "point": "Return on capital employed improved from 25% in FY22 to 28% in FY26.",
+    "figure": "ROCE 28% in FY26",
+    "point": "Capital efficiency has improved significantly from 25% in FY22, demonstrating strong underlying business quality.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Net cash ₹1,770 cr",
-    "point": "The company maintains a strong net cash position.",
+    "figure": "Cash conversion 104%",
+    "point": "Operating cash flow consistently exceeding net profit over five years highlights high-quality earnings and strong cash generation.",
     "refs": [
-     "debt"
+     "cash_conversion"
+    ]
+   },
+   {
+    "figure": "H2 growth 6.7%",
+    "point": "Management successfully delivered on the market recovery promise, showing a significant acceleration from H1 growth of 0.1%.",
+    "refs": [
+     "HINDUNILVR-8"
     ]
    }
   ],
   "bear": [
    {
+    "figure": "Revenue growth 2% (3-year CAGR)",
+    "point": "Revenue growth has slowed significantly compared to the 7% five-year CAGR, indicating a weakening top-line trajectory.",
+    "refs": [
+     "sales_growth"
+    ]
+   },
+   {
+    "figure": "Operating margin 25% → 23%",
+    "point": "Operating margins have compressed over the last four years, reflecting ongoing pressure on profitability.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
     "figure": "Lapsed promises 4",
-    "point": "Price growth, operating margin, revenue growth, and volume growth promises lapsed without updates.",
+    "point": "Multiple key guidance targets including price, volume, and revenue growth have lapsed without further management updates.",
     "refs": [
      "HINDUNILVR-1",
      "HINDUNILVR-2",
      "HINDUNILVR-3",
-     "HINDUNILVR-6"
-    ]
-   },
-   {
-    "figure": "Operating margin 23%",
-    "point": "Operating margins compressed from 25% in FY22 to 23% in FY26.",
-    "refs": [
-     "margin"
+     "HINDUNILVR-7"
     ]
    }
   ]

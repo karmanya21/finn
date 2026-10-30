@@ -71,7 +71,7 @@
    "call": "Apr 2026",
    "quarter": "Q4FY26",
    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf",
-   "promises": 7
+   "promises": 6
   },
   {
    "call": "Jul 2026",
@@ -87,14 +87,15 @@
   }
  ],
  "record": {
-  "kept": 4,
-  "missed": 0,
+  "kept": 3,
+  "missed": 1,
   "resolved": 4,
   "moved": 2,
   "quiet": 1,
   "open": 5,
   "by_status": {
-   "delivered": 4,
+   "missed": 1,
+   "delivered": 3,
    "delayed": 1,
    "gone_quiet": 1,
    "cant_verify": 2,
@@ -105,7 +106,7 @@
  "threads": [
   {
    "id": "HCLTECH-0",
-   "title": "Company revenue growth",
+   "title": "FY26 company revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -122,11 +123,11 @@
      "type": "reaffirmed"
     }
    ],
-   "status": "delivered",
-   "detail": "FY26 company-level guidance raised to 4% to 4.5%",
+   "status": "missed",
+   "detail": "FY26 company revenue growth 2.4% YoY in constant currency",
    "evidence": {
-    "quote": "On the back of a standout quarter and sustained growth momentum, we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms.",
-    "call": "Jan 2026",
+    "quote": "Coming to our Q4 performance, our revenue for the quarter was $3.7 billion, a decline of 3.3% QoQ, and an increase of 2.4% YoY in constant currency.",
+    "call": "Apr 2026",
     "new_deadline": null
    },
    "statements": [
@@ -158,7 +159,7 @@
   },
   {
    "id": "HCLTECH-1",
-   "title": "EBIT margin",
+   "title": "FY26 EBIT margin",
    "kind": "hard",
    "metric": "operating_margin",
    "scope": "company",
@@ -224,7 +225,7 @@
   },
   {
    "id": "HCLTECH-2",
-   "title": "TCV step-up",
+   "title": "Q2FY26 TCV",
    "kind": "directional",
    "metric": "order_inflow",
    "scope": "company",
@@ -253,18 +254,23 @@
   },
   {
    "id": "HCLTECH-3",
-   "title": "Margins moderation",
+   "title": "Q3FY26 margins",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "company",
-   "basis": null,
+   "basis": "management",
    "period": "Q3FY26",
    "target": "",
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "lapsed",
-   "detail": "Period ended; no update in later calls (last said Jul 2025)",
+   "status": "delivered",
+   "detail": "FY26 EBIT margins 17.9% excluding restructuring costs",
+   "evidence": {
+    "quote": "Excluding the restructuring costs, our full year margins were 17.9%, down 40 basis points on a YoY basis.",
+    "call": "Apr 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Jul 2025",
@@ -316,7 +322,7 @@
   },
   {
    "id": "HCLTECH-5",
-   "title": "Services revenue growth",
+   "title": "FY26 Services revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "services",
@@ -334,7 +340,7 @@
     }
    ],
    "status": "delivered",
-   "detail": "FY26 services revenue growth 4.8% YoY vs 4.75-5.25% cc guided",
+   "detail": "FY26 Services revenue growth 4.8% vs 4.75-5.25% guidance",
    "evidence": {
     "quote": "Coming to the Services side, Services revenue came in at $13,315 million, a growth of 4.8% YoY.",
     "call": "Apr 2026",
@@ -461,7 +467,7 @@
   },
   {
    "id": "HCLTECH-9",
-   "title": "FY27 revenue growth",
+   "title": "FY27 company revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -598,7 +604,7 @@
   },
   {
    "id": "HCLTECH-11",
-   "title": "Revenue growth impact",
+   "title": "Q3FY27 revenue growth impact",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
@@ -626,7 +632,7 @@
   },
   {
    "id": "HCLTECH-12",
-   "title": "Discretionary spend impact",
+   "title": "Q3FY27 discretionary spend impact",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
@@ -637,7 +643,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Discretionary spending cuts impact playing out as expected",
+   "detail": "Discretionary spend cuts in two telcos impacting subsequent quarters as expected",
    "evidence": {
     "quote": "And we did call out that we had some sharp cuts in discretionary spending in two large US telcos, and we did say that it will have an impact in the subsequent quarters and that is what is playing out.",
     "call": "Jul 2026",
@@ -660,36 +666,7 @@
   },
   {
    "id": "HCLTECH-13",
-   "title": "Revenue impact",
-   "kind": "directional",
-   "metric": "revenue_growth",
-   "scope": "company",
-   "basis": null,
-   "period": "Q1FY27",
-   "target": "",
-   "direction": "down",
-   "moved": false,
-   "events": [],
-   "status": "lapsed",
-   "detail": "Period ended; no update in later calls (last said Apr 2026)",
-   "statements": [
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "We should assume that you will see a full quarter kind of an impact in the next quarter.",
-     "speaker": "Nitin Padmanabhan",
-     "page": 19,
-     "target": "",
-     "period": "Q1FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
-    }
-   ]
-  },
-  {
-   "id": "HCLTECH-14",
-   "title": "Portfolio revenue growth",
+   "title": "FY27 experience portfolio revenue growth",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "experience portfolio",
@@ -716,18 +693,24 @@
    ]
   },
   {
-   "id": "HCLTECH-15",
-   "title": "Mega deal ramp-up growth",
+   "id": "HCLTECH-14",
+   "title": "FY27 mega deal ramp-up growth",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
-   "basis": null,
+   "basis": "management",
    "period": "FY27",
    "target": "",
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "open",
+   "status": "on_track",
+   "detail": "Mega deal transition starting, steady state expected April 2027",
+   "evidence": {
+    "quote": "On the mega deal win, the transition is expected to start in a couple of months, and the steady state is expected to be reached only in April of 2027, so which is coming in the next financial year.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Apr 2026",
@@ -744,7 +727,7 @@
    ]
   },
   {
-   "id": "HCLTECH-16",
+   "id": "HCLTECH-15",
    "title": "Mega deal steady state",
    "kind": "milestone",
    "metric": "other",
@@ -772,7 +755,7 @@
    ]
   },
   {
-   "id": "HCLTECH-17",
+   "id": "HCLTECH-16",
    "title": "FY27 Services revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -801,8 +784,8 @@
    ]
   },
   {
-   "id": "HCLTECH-18",
-   "title": "Free cash flow to net income ratio",
+   "id": "HCLTECH-17",
+   "title": "FY27 Free cash flow to net income ratio",
    "kind": "directional",
    "metric": "cash_flow",
    "scope": "company",
@@ -1267,45 +1250,47 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered promises 5",
-    "point": "Management successfully delivered on five key commitments including FY26 company revenue growth and services revenue growth targets.",
+    "figure": "FY26 Services revenue growth 4.8%",
+    "point": "Management successfully raised guidance and delivered within the target range for services revenue growth.",
     "refs": [
-     "HCLTECH-0",
-     "HCLTECH-1",
-     "HCLTECH-4",
      "HCLTECH-5"
     ]
    },
    {
-    "figure": "ROCE 30%",
-    "point": "Return on capital employed strengthened to 30% in FY26 compared to 25% in FY22.",
+    "figure": "ROCE 30% in FY26",
+    "point": "Capital efficiency has improved significantly, with returns on capital employed rising from 25% to 30% over four years.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Net cash ₹18,210 cr",
-    "point": "The company holds a strong net cash position of ₹18,210 cr in FY26, up significantly from FY22.",
+    "figure": "Operating cash flow 127% of net profit",
+    "point": "The company maintains strong cash conversion, consistently generating operating cash flow well above net profit levels.",
     "refs": [
-     "debt"
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Delayed and gone quiet promises 3",
-    "point": "Management experienced delays and went quiet on key operational items like the AI Force v2.0 launch and restructuring.",
+    "figure": "FY26 revenue growth 2.4%",
+    "point": "The company missed its original revenue growth target of 3–5% for the fiscal year.",
     "refs": [
-     "HCLTECH-6",
-     "HCLTECH-7",
-     "HCLTECH-8"
+     "HCLTECH-0"
     ]
    },
    {
-    "figure": "Operating margin 24% to 21%",
-    "point": "Operating margins compressed from 24% in FY22 down to 21% by FY26.",
+    "figure": "Operating margin 24% → 21%",
+    "point": "Operating margins have faced consistent compression over the last five years, declining from 24% to 21%.",
     "refs": [
      "margin"
+    ]
+   },
+   {
+    "figure": "GA launch of AI Force v2.0 delayed",
+    "point": "Management failed to meet the scheduled Q4FY26 deadline for the general availability launch of its AI product.",
+    "refs": [
+     "HCLTECH-6"
     ]
    }
   ]

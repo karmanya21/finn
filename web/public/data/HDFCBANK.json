@@ -59,7 +59,7 @@
    "call": "Apr 2026",
    "quarter": "Q4FY26",
    "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a77abbbb-954a-4221-8240-67bf0da6ba1c.pdf",
-   "promises": 1
+   "promises": 0
   },
   {
    "call": "Jul 2026",
@@ -89,60 +89,7 @@
  "threads": [
   {
    "id": "HDFCBANK-0",
-   "title": "FY26 loan growth vs system",
-   "kind": "directional",
-   "metric": "loan_growth",
-   "scope": "company",
-   "basis": "management",
-   "period": "FY26",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [
-    {
-     "call": "Jan 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "delivered",
-   "detail": "FY26 loan growth at 12% vs system 10.5%-11.5%",
-   "evidence": {
-    "quote": "At least if you see through large part of FY26, the nominal GDP growth expected was somewhere around the 9%, 9.5%, so one consensus until the large part of the year was a system credit growth of around 10.5% to 11.5%. This is what we had expected, and we calibrated our strategies and our growth in line with that, and that is why we grew at 12%.",
-    "call": "Apr 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Oct 2025",
-     "quarter": "Q2FY26",
-     "quote": "Our strategic objectives, when we laid out was that the rate of growth on loans in this year will be at market and in FY'27 will be faster than the market, predicated that the LDR will come below the 90 mark, somewhere, call it 85 to 90 or below the 90 mark, right, which is okay, that is the kind of strategic direction.",
-     "speaker": "Srinivasan Vaidyanathan",
-     "page": 5,
-     "target": "",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": null
-    },
-    {
-     "call": "Jan 2026",
-     "quarter": "Q3FY26",
-     "quote": "I would also like to reiterate that we shall meet the glide path that we had indicated earlier in terms of the growth, our top line growth, which is in line with the system this financial year and faster than the system in the next financial year.",
-     "speaker": "Sashidhar Jagdishan",
-     "page": 3,
-     "target": "",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6e45f8a0-0fe6-40a3-8e5a-51c53713e6f0.pdf"
-    }
-   ]
-  },
-  {
-   "id": "HDFCBANK-1",
-   "title": "FY27 loan growth vs system",
+   "title": "Loan growth vs market and system in FY27",
    "kind": "directional",
    "metric": "loan_growth",
    "scope": "company",
@@ -189,8 +136,8 @@
    ]
   },
   {
-   "id": "HDFCBANK-2",
-   "title": "Growth duration cushion from FY27",
+   "id": "HDFCBANK-1",
+   "title": "Growth duration support",
    "kind": "directional",
    "metric": "loan_growth",
    "scope": "company",
@@ -217,8 +164,8 @@
    ]
   },
   {
-   "id": "HDFCBANK-3",
-   "title": "Home loan distribution trajectory",
+   "id": "HDFCBANK-2",
+   "title": "Home loan distribution benefits visibility",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
@@ -245,8 +192,61 @@
    ]
   },
   {
+   "id": "HDFCBANK-3",
+   "title": "Loan growth in FY26",
+   "kind": "directional",
+   "metric": "loan_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "grew at 12% in FY26, matching system expectations",
+   "evidence": {
+    "quote": "This is what we had expected, and we calibrated our strategies and our growth in line with that, and that is why we grew at 12%.",
+    "call": "Apr 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Our strategic objectives, when we laid out was that the rate of growth on loans in this year will be at market and in FY'27 will be faster than the market, predicated that the LDR will come below the 90 mark, somewhere, call it 85 to 90 or below the 90 mark, right, which is okay, that is the kind of strategic direction.",
+     "speaker": "Srinivasan Vaidyanathan",
+     "page": 5,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "I would also like to reiterate that we shall meet the glide path that we had indicated earlier in terms of the growth, our top line growth, which is in line with the system this financial year and faster than the system in the next financial year.",
+     "speaker": "Sashidhar Jagdishan",
+     "page": 3,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6e45f8a0-0fe6-40a3-8e5a-51c53713e6f0.pdf"
+    }
+   ]
+  },
+  {
    "id": "HDFCBANK-4",
-   "title": "FY26 Credit-Deposit Ratio",
+   "title": "Credit-Deposit Ratio FY26",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -275,7 +275,7 @@
   },
   {
    "id": "HDFCBANK-5",
-   "title": "FY27 Credit-Deposit Ratio",
+   "title": "Credit-Deposit Ratio FY27",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -303,41 +303,7 @@
   },
   {
    "id": "HDFCBANK-6",
-   "title": "FY27 Retail loan growth momentum",
-   "kind": "directional",
-   "metric": "loan_growth",
-   "scope": "Retail",
-   "basis": "management",
-   "period": "FY27",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "on_track",
-   "detail": "Retail assets ex agri annual growth 11.2% in Sep 26",
-   "evidence": {
-    "quote": "This is also reflected in the rising growth trend in EOP loan book, especially for retail assets ex agri, September'26 annual growth is about 11.2% compared to 9.1% as of June'26 and 7.4% as of March'26.",
-    "call": "Oct 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "Should we expect some forward momentum in that part of the business in the coming FY27 early in the year?",
-     "speaker": "Seshadri Sen",
-     "page": 11,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a77abbbb-954a-4221-8240-67bf0da6ba1c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "HDFCBANK-7",
-   "title": "Long-term profit growth vs balance sheet growth",
+   "title": "Profit growth relative to balance sheet growth",
    "kind": "soft",
    "metric": "pat_growth",
    "scope": "company",
@@ -364,7 +330,7 @@
    ]
   },
   {
-   "id": "HDFCBANK-8",
+   "id": "HDFCBANK-7",
    "title": "Q2FY27 milestones",
    "kind": "milestone",
    "metric": "other",
@@ -393,8 +359,8 @@
    ]
   },
   {
-   "id": "HDFCBANK-9",
-   "title": "Net interest margin trajectory",
+   "id": "HDFCBANK-8",
+   "title": "Net interest margin trajectory H2FY27",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "company",
@@ -414,6 +380,34 @@
      "page": 10,
      "target": "",
      "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d7e45614-ae12-4bb9-b92d-623b3a63f166.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HDFCBANK-9",
+   "title": "Margin trajectory Q3FY27",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "The trajectory will be upward from the next quarter onwards.",
+     "speaker": "Sashidhar Jagdishan",
+     "page": 10,
+     "target": "",
+     "period": "Q3FY27",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d7e45614-ae12-4bb9-b92d-623b3a63f166.pdf"
@@ -812,47 +806,40 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered FY26 loan growth 12%",
-    "point": "Management successfully delivered FY26 loan growth of 12% exceeding the system growth rate of 10.5% to 11.5%.",
+    "figure": "FY26 loan growth 12%",
+    "point": "Management successfully delivered on their FY26 loan growth target, aligning performance with system expectations.",
     "refs": [
-     "HDFCBANK-0"
+     "HDFCBANK-3"
     ]
    },
    {
-    "figure": "Retail loan growth 11.2%",
-    "point": "Retail loan growth momentum remains on track with retail assets excluding agri showing an annual growth of 11.2%.",
+    "figure": "3-year revenue growth 27%",
+    "point": "The bank has demonstrated strong historical compounding capability, with revenue growth accelerating over the three-year period.",
     "refs": [
-     "HDFCBANK-6"
-    ]
-   },
-   {
-    "figure": "Profit growth 11% last 12 months",
-    "point": "The company demonstrated solid profitability with profit growing 11% in the last 12 months and 18% over 3 years.",
-    "refs": [
-     "profit_growth"
+     "sales_growth"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Lapsed FY27 loan growth target",
-    "point": "Management lapsed the FY27 loan growth target after mentioning it twice and then omitting it since January 2026.",
+    "figure": "ROE 14% in FY26",
+    "point": "Return on equity has experienced a notable decline from 17% in FY22, indicating weakening capital efficiency.",
     "refs": [
-     "HDFCBANK-1"
+     "returns"
     ]
    },
    {
-    "figure": "Gone quiet FY26 Credit-Deposit Ratio",
-    "point": "The FY26 Credit-Deposit Ratio target went quiet after the period ended with no subsequent update provided.",
+    "figure": "Credit-Deposit Ratio FY26: 90–96% target, gone quiet",
+    "point": "Management failed to provide updates on the FY26 credit-deposit ratio target after the period concluded.",
     "refs": [
      "HDFCBANK-4"
     ]
    },
    {
-    "figure": "ROE decline 17% to 14%",
-    "point": "Return on equity declined from 17% in FY22 to 14% in FY26, indicating lower profitability relative to shareholders equity.",
+    "figure": "Q2FY27 milestones, gone quiet",
+    "point": "Specific performance milestones for Q2FY27 were not addressed in subsequent communications after the period ended.",
     "refs": [
-     "returns"
+     "HDFCBANK-7"
     ]
    }
   ]

@@ -139,14 +139,48 @@ def _normalize(p: dict) -> dict:
     for f in ("low", "high"):
         if p.get(f) is not None and not _supported(p[f], nums):
             p[f] = None
+    # One sentence, several targets: "R&D investments more than INR1,600 crores, capex more
+    # than INR1,000 crores". The number must sit in the clause naming this metric (BEL).
+    for f in ("low", "high"):
+        if p.get(f) is not None and _from_another_clause(p[f], p.get("metric_label") or "", q):
+            p[f] = None
     if p.get("kind") == "hard" and p.get("low") is None and p.get("high") is None:
         p["kind"] = "directional"
+    # "EBITDA per ton of INR1,000" read as ₹1,000 crore (UltraTech)
+    if re.search(r"crore|\bcr\b", p.get("unit") or "", re.I) and re.search(r"per (?:metric )?ton|per tonne|/t\b", q, re.I) \
+            and not re.search(r"crore|\bcr\b|billion|\bbn\b|lakh", q, re.I):
+        p["unit"] = "Rs per ton"
+    # "₹12 billion" in a crore target is ₹1,200 cr; the model copies the 12 (Polycab).
+    if re.search(r"crore|\bcr\b", p.get("unit") or "", re.I):
+        for f in ("low", "high"):
+            v = p.get(f)
+            if v is not None and (m := re.search(rf"(?<![\d.,]){re.escape(_fmt_num(v))}\s?(billion|bn|million|mn)\b", q, re.I)):
+                p[f] = v * (100 if m.group(1).lower() in ("billion", "bn") else 0.1)
     # "2x", "twice", "double" are multiples, not percentages.
     v = p.get("low") if p.get("low") is not None else p.get("high")
     if v is not None and (re.search(rf"(?<![\d.]){re.escape(_fmt_num(v))}\s?(x|X|×|times)\b", q)
                           or (v == 2 and re.search(r"\b(twice|double|2x)\b", q, re.I))):
         p["unit"] = "x"
     return p
+
+
+PERIODS = re.compile(r"\b(?:Q[1-4]|H[12])?\s?FY\s?'?\d{2,4}\b|\b(?:19|20)\d{2}\b", re.I)
+GENERIC_LABEL = {"growth", "target", "guidance", "company", "total", "overall", "level", "amount", "investment",
+                 "investments", "spend", "spending", "expenditure", "the", "and", "for"}
+
+
+def _from_another_clause(v: float, label: str, quote: str) -> bool:
+    """v sits in another clause, and the clause naming this metric has a number of its own
+    ("R&D more than 1,600, capex more than 1,000": 1,000 isn't R&D's). A clause that only
+    names the topic ("On Revenue, we expect 10% to 12%") points to the next one."""
+    words = [w for w in re.findall(r"[a-z&]{3,}", label.lower()) if w not in GENERIC_LABEL]
+    clauses = [c for c in re.split(r",(?!\d{2})|;|\.\s", quote) if c.strip()]  # not "1,600" or "10 and 12"
+    if not words or len(clauses) < 2:
+        return False
+    named = [c for c in clauses if any(re.search(rf"\b{re.escape(w)}", c, re.I) for w in words)
+             and _numbers(PERIODS.sub(" ", c))]
+    has_v = [c for c in clauses if _supported(v, _numbers(c))]
+    return bool(named) and bool(has_v) and not any(c in named for c in has_v)
 
 
 WORD_NUMBERS = {"twice": 2, "double": 2, "doubling": 2, "triple": 3, "thrice": 3, "half": 50}
@@ -185,8 +219,15 @@ def extract(text: str, company: str, call_label: str, model: str | None = None,
     if focused_pass:
         found += complete_json(FOCUS, prompt, SCHEMA, model=model)["promises"]
     source = _norm(body)
+    turns = prefilter.turns(text)
+    asks = prefilter.questioners(turns)
     good, bad = [], []
     for p in found:
         q = _norm(p.get("quote", ""))
-        (good if q and q in source else bad).append(_normalize(p))
+        # Attribute by where the quote sits, not by the model's label; an analyst's
+        # question ("you've maintained your $3 billion guidance?") is not a promise.
+        who = prefilter.speaker_of(turns, p.get("quote", ""), _norm)
+        if who:
+            p["speaker"] = who
+        (good if q and q in source and who not in asks else bad).append(_normalize(p))
     return Extraction(_dedupe(good), bad, len(body) // 4 * (2 if focused_pass else 1))

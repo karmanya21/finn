@@ -875,7 +875,7 @@
     "metric_label": "IT business revenue",
     "scope": "IT business",
     "basis": "reported",
-    "low": 4000,
+    "low": null,
     "high": 5000,
     "unit": "Rs crore",
     "direction": "up",
