@@ -1,8 +1,8 @@
 // Push: alerts against the user's own thresholds, and the filings digest.
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import {
-  ALERT_TYPES, AlertSettings, CompanySummary, Digest, Filing, Headline, Ledger, MoveAlert, Prices, Thread,
+  ALERT_TYPES, AlertSettings, CompanySummary, Digest, FeedItem, Filing, Headline, Ledger, MoveAlert, Prices, Thread,
   inWindow, loadDigest, loadLedger, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
 } from "./data";
 import { Shell, go } from "./shell";
@@ -41,11 +41,18 @@ function useThreads(index: CompanySummary[]): Map<string, Thread> {
   return m;
 }
 
-// ---- Today: alerts ----------------------------------------------------------------
+// ---- Today: one merged feed ---------------------------------------------------------
 
-type AlertRow = { key: string; date: string; move?: MoveAlert; filing?: Filing };
+type Entry = { key: string; weight: number; node: (fresh: boolean) => React.ReactNode };
+const CAP = 8;
+const SEEN_KEY = "finn.seen.v2";
 
-export function Alerts({ index, onSettings }: { index: CompanySummary[]; onSettings: () => void }) {
+/** Price/volume alerts, filing alerts and promise moves, ranked together and capped.
+ *  Ranking is by importance, with a nudge for the latest session. */
+export function TodayFeed({ index, promises, renderPromise, onSettings }: {
+  index: CompanySummary[]; promises: FeedItem[];
+  renderPromise: (i: FeedItem, fresh: boolean) => React.ReactNode; onSettings: () => void;
+}) {
   const prices = useData<Prices>(loadPrices);
   const loaded = useData<Digest>(loadDigest);
   const digest = loaded === null ? NO_FILINGS : loaded;  // price alerts don't need filings
@@ -53,42 +60,66 @@ export function Alerts({ index, onSettings }: { index: CompanySummary[]; onSetti
   const names = useMemo(() => new Map(index.map((c) => [c.symbol, c.name])), [index]);
   const [all, setAll] = useState(false);
 
-  const rows = useMemo<AlertRow[]>(() => {
+  const entries = useMemo<Entry[]>(() => {
     if (!prices || !digest) return [];
-    const moves = moveAlerts(prices, s, 5, digest.items);
-    const since = moves.length ? moves[moves.length - 1].date : "";
-    const anyDates = Object.values(prices.series)[0] || [];
-    const cutoff = anyDates.length >= 5 ? anyDates[anyDates.length - 5][0] : since;
-    const filings = digest.items.filter((f) => !f.routine && s.types.includes(f.type) && f.at.slice(0, 10) >= cutoff);
-    const r: AlertRow[] = [
-      ...moves.map((m) => ({ key: `m-${m.symbol}-${m.date}`, date: m.date, move: m })),
-      ...filings.map((f) => ({ key: `f-${f.id}`, date: f.at.slice(0, 10), filing: f })),
-    ];
-    return r.sort((a, b) => b.date.localeCompare(a.date) ||
-      (b.filing?.importance ?? Math.abs(b.move!.pct) * 10) - (a.filing?.importance ?? Math.abs(a.move!.pct) * 10));
-  }, [prices, digest, s]);
+    const dates = Object.values(prices.series)[0] || [];
+    const lastSession = dates.length ? dates[dates.length - 1][0] : "";
+    const cutoff = dates.length >= 5 ? dates[dates.length - 5][0] : "";
+    const recent = (d: string) => (d >= lastSession ? 10 : 0);
+    const out: Entry[] = [];
+    for (const m of moveAlerts(prices, s, 5, digest.items)) {
+      const w = (m.byPrice ? 55 + Math.min(Math.abs(m.pct), 15) * 2 : 45)
+        + (m.byVolume ? Math.min(m.volRatio, 6) * 3 : 0) + (m.reason ? 10 : 0) + recent(m.date);
+      out.push({ key: `m-${m.symbol}-${m.date}`, weight: w,
+        node: (fresh) => <MoveRow a={m} name={names.get(m.symbol) ?? m.symbol} fresh={fresh} /> });
+    }
+    for (const f of digest.items) {
+      if (f.routine || !s.types.includes(f.type) || f.at.slice(0, 10) < cutoff) continue;
+      if (f.type === "management_change" && !f.senior) continue;  // only CEO, CFO, MD, Chair
+      out.push({ key: `f-${f.id}`, weight: f.importance + recent(f.at.slice(0, 10)),
+        node: (fresh) => <FilingAlertRow f={f} fresh={fresh} /> });
+    }
+    for (const i of promises) {
+      out.push({ key: `p-${i.thread.id}|${i.headline}`, weight: i.weight, node: (fresh) => renderPromise(i, fresh) });
+    }
+    return out.sort((a, b) => b.weight - a.weight);
+  }, [prices, digest, s, promises, names]);
 
-  if (!prices || !digest) return null;
-  const shown = all ? rows : rows.slice(0, 5);
+  const seen = useSeenKeys(entries.map((e) => e.key));
+  if (!prices || !digest) return <p className="empty">Loading…</p>;
+  const fresh = entries.filter((e) => !seen.has(e.key)).length;
+  const shown = all ? entries : entries.slice(0, CAP);
   return (
     <section>
-      <h2 className="section-title">Alerts</h2>
+      <h2 className="section-title">Today</h2>
       <p className="section-sub">
-        Last 5 sessions · volume ≥{s.volume}× its 20-day average, moves beyond ±{s.move}%, and {s.types.length} filing
-        types. <button className="link" onClick={onSettings}>Change</button>
+        {seen.size === 0 ? "What needs you, most important first." : fresh ? `${fresh} new since you last looked.` : "Nothing new since you last looked."}
+        {" "}Alerts: volume ≥{s.volume}×, moves beyond ±{s.move}%, {s.types.length} filing types.{" "}
+        <button className="link" onClick={onSettings}>Change</button>
       </p>
-      {rows.length === 0 ? <p className="quiet-note">Nothing crossed your thresholds. FINN is staying quiet.</p> : (
-        <div className="feed">
-          {shown.map((r) => r.move ? <MoveRow key={r.key} a={r.move} name={names.get(r.move.symbol) ?? r.move.symbol} />
-            : <FilingAlertRow key={r.key} f={r.filing!} />)}
-        </div>
+      {entries.length === 0 ? <p className="quiet-note">Nothing crossed your thresholds. FINN is staying quiet.</p> : (
+        <div className="feed">{shown.map((e) => <Fragment key={e.key}>{e.node(seen.size > 0 && !seen.has(e.key))}</Fragment>)}</div>
       )}
-      {rows.length > 5 && <button className="more" onClick={() => setAll(!all)}>{all ? "Show less" : `${rows.length - 5} more`}</button>}
+      {entries.length > CAP && (
+        <button className="more" onClick={() => setAll(!all)}>{all ? "Show less" : `${entries.length - CAP} more, lower priority`}</button>
+      )}
     </section>
   );
 }
 
-function MoveRow({ a, name }: { a: MoveAlert; name: string }) {
+/** Keys seen before this visit; everything shown now counts as seen next time. */
+function useSeenKeys(keys: string[]): Set<string> {
+  const [before] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || "[]")); } catch { return new Set(); }
+  });
+  useEffect(() => {
+    if (!keys.length) return;
+    try { localStorage.setItem(SEEN_KEY, JSON.stringify([...new Set([...before, ...keys])])); } catch { /* private mode */ }
+  }, [keys.join("|"), before]);
+  return before;
+}
+
+function MoveRow({ a, name, fresh }: { a: MoveAlert; name: string; fresh?: boolean }) {
   const up = a.pct >= 0;
   const what = [a.byPrice && `${up ? "+" : ""}${a.pct.toFixed(1)}% on the day`, a.byVolume && `volume ${a.volRatio.toFixed(1)}× average`]
     .filter(Boolean).join(" · ");
@@ -96,7 +127,7 @@ function MoveRow({ a, name }: { a: MoveAlert; name: string }) {
     <button className="feed-row" onClick={() => go(`/c/${a.symbol}`)}>
       <span className={`dot tone-${a.byPrice ? (up ? "kept" : "missed") : "live"}`} />
       <span className="feed-body">
-        <span className="feed-co">{name} · {fmtDate(a.date)}</span>
+        <span className="feed-co">{name} · {fmtDate(a.date)}{fresh && <span className="new">new</span>}</span>
         <span className="feed-head">{what}</span>
         <span className="feed-line">
           Closed ₹{a.close.toLocaleString("en-IN")}
@@ -107,17 +138,31 @@ function MoveRow({ a, name }: { a: MoveAlert; name: string }) {
   );
 }
 
-function FilingAlertRow({ f }: { f: Filing }) {
+function FilingAlertRow({ f, fresh }: { f: Filing; fresh?: boolean }) {
+  const head = f.type === "results" ? resultsHeadline(f) : `${f.label}: ${f.summary ?? cleanSubject(f.subject)}`;
   return (
     <button className="feed-row" onClick={() => go(`/filings/${f.id}`)}>
-      <span className="dot tone-moved" />
+      <span className={`dot tone-${f.type === "litigation" ? "missed" : "moved"}`} />
       <span className="feed-body">
-        <span className="feed-co">{f.name} · {fmtDate(f.at)}</span>
-        <span className="feed-head">{f.type === "results" ? (f.summary ?? "Results") : `${f.label}: ${f.summary ?? cleanSubject(f.subject)}`}</span>
+        <span className="feed-co">{f.name} · {fmtDate(f.at)}{fresh && <span className="new">new</span>}</span>
+        <span className="feed-head">{head}</span>
+        {f.type === "results" && f.summary && f.numbers && !/^Q\dFY\d{2} results$/.test(f.summary) &&
+          <span className="feed-line">{f.summary}</span>}
         {f.people.length > 0 && <span className="feed-line">{peopleLine(f)}</span>}
       </span>
     </button>
   );
+}
+
+/** "Q2FY27: revenue +16% YoY · PAT +27%". A results alert should say how the quarter went. */
+function resultsHeadline(f: Filing): string {
+  const h = f.numbers;
+  if (!h) return f.summary ?? "Results";
+  const row = (l: string) => h.rows.find((r) => r.label === l);
+  const pct = (v: number | null | undefined) => v == null ? null : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  const rev = pct(row("Revenue")?.yoy), pat = pct(row("PAT")?.yoy);
+  const bits = [rev && `revenue ${rev} YoY`, pat && `PAT ${pat}`].filter(Boolean);
+  return bits.length ? `${h.quarter}: ${bits.join(" · ")}` : `${h.quarter} results`;
 }
 
 // ---- settings ----------------------------------------------------------------------

@@ -3,7 +3,7 @@
  "name": "Tata Steel",
  "sector": "Metals",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "May 2026",
  "latest_results": "Q1FY27",
  "headline": {
@@ -76,19 +76,19 @@
   }
  ],
  "record": {
-  "kept": 2,
+  "kept": 4,
   "missed": 4,
-  "resolved": 6,
-  "moved": 6,
-  "quiet": 5,
-  "open": 18,
+  "resolved": 8,
+  "moved": 1,
+  "quiet": 6,
+  "open": 19,
   "by_status": {
-   "on_track": 7,
+   "on_track": 8,
    "beat": 2,
-   "gone_quiet": 5,
-   "open": 10,
-   "missed": 4,
-   "delayed": 1
+   "gone_quiet": 6,
+   "open": 11,
+   "delivered": 2,
+   "missed": 4
   }
  },
  "threads": [
@@ -181,7 +181,7 @@
   },
   {
    "id": "TATASTEEL-2",
-   "title": "Coking coal cost",
+   "title": "India coking coal cost",
    "kind": "hard",
    "metric": "other",
    "scope": "India",
@@ -189,19 +189,13 @@
    "period": "Q3FY26",
    "target": "6 USD per ton",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
-    {
-     "call": "May 2025",
-     "from": "10 USD per ton",
-     "to": "10 USD per ton",
-     "type": "reaffirmed"
-    },
     {
      "call": "Nov 2025",
      "from": "10 USD per ton",
      "to": "6 USD per ton",
-     "type": "lowered"
+     "type": "reaffirmed"
     }
    ],
    "status": "beat",
@@ -225,18 +219,6 @@
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0fb45195-081f-436c-aa0a-909a6306d88e.pdf"
     },
     {
-     "call": "May 2025",
-     "quarter": "Q4FY25",
-     "quote": "For coking coal, the guidance is that it will be about $10 per ton lower on a consumption basis",
-     "speaker": "T. V. Narendran",
-     "page": 18,
-     "target": "10 USD per ton",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": null
-    },
-    {
      "call": "Nov 2025",
      "quarter": "Q2FY26",
      "quote": "India consumption cost will be about $6 per ton higher in 3Q than it was in 2Q",
@@ -252,7 +234,7 @@
   },
   {
    "id": "TATASTEEL-3",
-   "title": "Iron ore consumption cost",
+   "title": "Netherlands iron ore cost",
    "kind": "hard",
    "metric": "other",
    "scope": "Netherlands",
@@ -260,13 +242,13 @@
    "period": "FY26",
    "target": "10 USD per ton",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "May 2025",
      "from": "3–4 USD per ton",
      "to": "10 USD per ton",
-     "type": "raised"
+     "type": "reaffirmed"
     }
    ],
    "status": "gone_quiet",
@@ -356,12 +338,12 @@
   },
   {
    "id": "TATASTEEL-6",
-   "title": "Galvanising line commissioning",
+   "title": "India galvanising line commissioning",
    "kind": "milestone",
    "metric": "capacity",
-   "scope": "Kalinganagar",
+   "scope": "downstream",
    "basis": "management",
-   "period": "Q3FY26",
+   "period": "Q2FY26",
    "target": "",
    "direction": null,
    "moved": true,
@@ -371,19 +353,13 @@
      "from": "Q1FY26",
      "to": "Q2FY26",
      "type": "deferred"
-    },
-    {
-     "call": "Nov 2025",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
     }
    ],
-   "status": "on_track",
-   "detail": "Galvanising lines commissioned and ramping up",
+   "status": "delivered",
+   "detail": "First coil produced in June 2025",
    "evidence": {
-    "quote": "The cold rolling mill and the galvanising lines are ramping up very well.",
-    "call": "Feb 2026",
+    "quote": "The first coil from the new continuous galvanizing line was produced in June, and we are in the process of getting the approvals for the CGL products as well.",
+    "call": "Aug 2025",
     "new_deadline": null
    },
    "statements": [
@@ -410,24 +386,12 @@
      "deadline": "Q2FY26",
      "condition": null,
      "url": null
-    },
-    {
-     "call": "Nov 2025",
-     "quarter": "Q2FY26",
-     "quote": "the galvanising line, one of the two lines has come in, the other one will come by December.",
-     "speaker": "T. V. Narendran",
-     "page": 7,
-     "target": "",
-     "period": "Q3FY26",
-     "deadline": "December 2025",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=816939c9-f6c8-404b-afce-29aee1c980ed.pdf"
     }
    ]
   },
   {
    "id": "TATASTEEL-7",
-   "title": "G-blast furnace restart",
+   "title": "Jamshedpur G-blast furnace restart",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Jamshedpur",
@@ -461,17 +425,23 @@
   },
   {
    "id": "TATASTEEL-8",
-   "title": "Steel melt shop facilities commissioning",
+   "title": "Kalinganagar steel melt shop facilities commissioning",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Kalinganagar",
-   "basis": null,
+   "basis": "management",
    "period": "FY25",
    "target": "",
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "open",
+   "status": "on_track",
+   "detail": "Kalinganagar steel melt shop ramp-up complete",
+   "evidence": {
+    "quote": "The successful ramp-up of the 5 MTPA expansion at Kalinganagar, alongside the commissioning of downstream facilities, reflects our value-led growth strategy in India.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Feb 2025",
@@ -489,7 +459,7 @@
   },
   {
    "id": "TATASTEEL-9",
-   "title": "Cash flow",
+   "title": "Company cash flow",
    "kind": "soft",
    "metric": "cash_flow",
    "scope": "company",
@@ -517,7 +487,7 @@
   },
   {
    "id": "TATASTEEL-10",
-   "title": "Redundancies",
+   "title": "Company redundancies",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
@@ -546,7 +516,7 @@
   },
   {
    "id": "TATASTEEL-11",
-   "title": "Working capital",
+   "title": "India working capital",
    "kind": "directional",
    "metric": "working_capital",
    "scope": "India",
@@ -575,7 +545,7 @@
   },
   {
    "id": "TATASTEEL-12",
-   "title": "Combi mill commissioning",
+   "title": "Jamshedpur Combi mill commissioning",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Jamshedpur",
@@ -717,7 +687,7 @@
   },
   {
    "id": "TATASTEEL-14",
-   "title": "Cost savings",
+   "title": "Netherlands cost savings",
    "kind": "hard",
    "metric": "other",
    "scope": "Netherlands",
@@ -746,7 +716,88 @@
   },
   {
    "id": "TATASTEEL-15",
-   "title": "Conversion cost optimization",
+   "title": "Company cost savings",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹7,100 cr",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "₹11,500 cr",
+     "to": "₹7,100 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Looking ahead to FY2026, our focus continues to be on controllable factors, and we are targeting further cost takeouts of almost Rs. 11,500 crores, roughly about $1.3 billion across geographies",
+     "speaker": "Operator",
+     "page": 2,
+     "target": "₹11,500 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "In FY2027 we are aiming to achieve cost transformation related savings of ~Rs 7,100 crores vs. FY2026 levels.",
+     "speaker": "Koushik Chatterjee",
+     "page": 2,
+     "target": "₹7,100 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-16",
+   "title": "India cost savings",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "India",
+   "basis": "management",
+   "period": "FY26",
+   "target": "₹4,000 cr",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "India cost transformation benefits of Rs 3,927 crores in FY26",
+   "evidence": {
+    "quote": "India delivered cost transformation benefits of ~Rs 3,927 crores.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Firstly, in India, we intend to deliver savings of Rs. 4,000 crores by focusing on operating KPIs, employee productivity, supply chain optimisation, coupled with investment in projects with low payback period.",
+     "speaker": "Operator",
+     "page": 2,
+     "target": "₹4,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-17",
+   "title": "India conversion cost optimization",
    "kind": "hard",
    "metric": "other",
    "scope": "India",
@@ -757,10 +808,10 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Total costs improved by ~Rs 1,300 per ton",
+   "detail": "India cost transformation benefits of ~Rs 3,927 crores for FY26",
    "evidence": {
-    "quote": "Our consolidated revenues stood at Rs 58,689 crores, up 10% QoQ primarily driven by strong volume growth in India and continued improvement in cost transformation program led to improvement in total costs of ~Rs 1,300 per ton.",
-    "call": "Nov 2025",
+    "quote": "India delivered cost transformation benefits of ~Rs 3,927 crores.",
+    "call": "May 2026",
     "new_deadline": null
    },
    "statements": [
@@ -779,14 +830,14 @@
    ]
   },
   {
-   "id": "TATASTEEL-16",
-   "title": "Low capex projects",
+   "id": "TATASTEEL-18",
+   "title": "India low capex projects",
    "kind": "hard",
    "metric": "capex",
    "scope": "India",
    "basis": null,
    "period": "FY26",
-   "target": "₹0–500 cr",
+   "target": "≤₹500 cr",
    "direction": null,
    "moved": false,
    "events": [],
@@ -799,7 +850,7 @@
      "quote": "We have identified a pipeline of low capex, high IRR projects totalling less than Rs. 500 crores, that will improve operational cost and be completed in a short span of time.",
      "speaker": "Operator",
      "page": 2,
-     "target": "₹0–500 cr",
+     "target": "≤₹500 cr",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -808,8 +859,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-17",
-   "title": "Fixed cost reduction",
+   "id": "TATASTEEL-19",
+   "title": "UK fixed cost reduction",
    "kind": "hard",
    "metric": "other",
    "scope": "UK",
@@ -820,7 +871,7 @@
    "moved": false,
    "events": [],
    "status": "beat",
-   "detail": "Annualized fixed cost reduction >£200 million in FY2026",
+   "detail": "Annualized fixed cost reduction >£200 million in Q1 FY26",
    "evidence": {
     "quote": "Within costs, fixed costs have improved by about £17 million and first quarter fixed cost base on an annualized basis reflects a reduction of more than £200 million in FY2026 versus FY2025.",
     "call": "Aug 2025",
@@ -842,8 +893,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-18",
-   "title": "Capex",
+   "id": "TATASTEEL-20",
+   "title": "Company capex",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
@@ -851,13 +902,13 @@
    "period": "FY27",
    "target": "₹20,000 cr",
    "direction": null,
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "May 2026",
      "from": "₹15,000 cr",
      "to": "₹20,000 cr",
-     "type": "raised"
+     "type": "reaffirmed"
     }
    ],
    "status": "open",
@@ -889,8 +940,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-19",
-   "title": "Price increase",
+   "id": "TATASTEEL-21",
+   "title": "India price increase",
    "kind": "hard",
    "metric": "other",
    "scope": "India",
@@ -901,7 +952,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Rs 2,600 per ton increase vs 3,000 guided",
+   "detail": "India net steel realisations increased by Rs 2,600 per ton",
    "evidence": {
     "quote": "We could offset the impact of volumes by an increase in net steel realisations to the tune of about Rs 2,600 per ton on QoQ basis in India.",
     "call": "Aug 2025",
@@ -923,8 +974,37 @@
    ]
   },
   {
-   "id": "TATASTEEL-20",
-   "title": "Volume growth",
+   "id": "TATASTEEL-22",
+   "title": "Europe price increase",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Europe",
+   "basis": null,
+   "period": "Q1FY26",
+   "target": "20–30 EUR per ton",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "In Europe, it's about €20 – 30 per ton higher than last quarter.",
+     "speaker": "Operator",
+     "page": 7,
+     "target": "20–30 EUR per ton",
+     "period": "Q1FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-23",
+   "title": "Company volume growth",
    "kind": "hard",
    "metric": "volume_growth",
    "scope": "company",
@@ -932,13 +1012,19 @@
    "period": "FY27",
    "target": "≥2 million tons",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
-     "call": "May 2026",
+     "call": "Feb 2026",
      "from": "1.5 million tons",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
      "to": "≥2 million tons",
-     "type": "raised"
+     "type": "reaffirmed"
     }
    ],
    "status": "open",
@@ -956,6 +1042,18 @@
      "url": null
     },
     {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "overall we expect EBITDA to be better in 4Q compared to 3Q, and volumes to be almost half a million tons better in 4Q compared to 3Q.",
+     "speaker": "Operator",
+     "page": 10,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7e178a2e-ea18-4b55-8e55-56e03dc5bea5.pdf"
+    },
+    {
      "call": "May 2026",
      "quarter": "Q4FY26",
      "quote": "The volume will be at least 2 million tons better in this financial year compared to the previous financial year",
@@ -970,8 +1068,42 @@
    ]
   },
   {
-   "id": "TATASTEEL-21",
-   "title": "Third caster commissioning",
+   "id": "TATASTEEL-24",
+   "title": "Company coking coal cost",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "10 USD per ton",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Coking coal consumption cost declined by $12 per ton",
+   "evidence": {
+    "quote": "Within costs, material costs declined by about Rs 2,900 crores, primarily driven by decline in coking coal consumption cost by about $12 per ton as well as leaner coal mix and inventory management.",
+    "call": "Aug 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "For coking coal, the guidance is that it will be about $10 per ton lower on a consumption basis",
+     "speaker": "T. V. Narendran",
+     "page": 18,
+     "target": "10 USD per ton",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-25",
+   "title": "Kalinganagar third caster commissioning",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Kalinganagar",
@@ -1018,8 +1150,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-22",
-   "title": "Net debt",
+   "id": "TATASTEEL-26",
+   "title": "Company net debt",
    "kind": "hard",
    "metric": "debt",
    "scope": "company",
@@ -1066,24 +1198,19 @@
    ]
   },
   {
-   "id": "TATASTEEL-23",
+   "id": "TATASTEEL-27",
    "title": "NINL EBITDA",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "ebitda",
    "scope": "NINL",
-   "basis": "management",
+   "basis": null,
    "period": "FY26",
-   "target": "₹1,000 cr",
+   "target": "",
    "direction": "flat",
    "moved": false,
    "events": [],
-   "status": "missed",
-   "detail": "NINL EBITDA for Q3 FY26 was Rs 350 crores",
-   "evidence": {
-    "quote": "Our wholly owned subsidiary Neelachal Ispat Nigam Limited (NINL) recorded Rs. 350 crores EBITDA for the quarter, which was up 35% QoQ and reflecting an EBITDA margin of 22%.",
-    "call": "Feb 2026",
-    "new_deadline": null
-   },
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
    "statements": [
     {
      "call": "Aug 2025",
@@ -1091,7 +1218,7 @@
      "quote": "This year also, we expect it to deliver similarly.",
      "speaker": "T. V. Narendran",
      "page": 20,
-     "target": "₹1,000 cr",
+     "target": "",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -1100,24 +1227,25 @@
    ]
   },
   {
-   "id": "TATASTEEL-24",
-   "title": "Net realisations",
+   "id": "TATASTEEL-28",
+   "title": "UK and Netherlands net realisations",
    "kind": "directional",
    "metric": "revenue",
    "scope": "UK and Netherlands",
-   "basis": "management",
-   "period": "Q2FY26",
+   "basis": null,
+   "period": "Q1FY27",
    "target": "",
    "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "missed",
-   "detail": "Netherlands steel realisations declined in Q2FY26",
-   "evidence": {
-    "quote": "While steel realisations declined in India and Netherlands, they were more than offset by the benefits from our cost transformation program.",
-    "call": "Feb 2026",
-    "new_deadline": null
-   },
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
    "statements": [
     {
      "call": "Aug 2025",
@@ -1130,12 +1258,24 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=536435e3-b37b-4fca-98bf-d611bc8a4416.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "In UK, we expect it to be about £80/t higher in 1Q compared to 4Q and in Netherlands we expect it to be about €80/t higher in 1Q compared to 4Q.",
+     "speaker": "UNKNOWN",
+     "page": 9,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
     }
    ]
   },
   {
-   "id": "TATASTEEL-25",
-   "title": "EBITDA breakeven",
+   "id": "TATASTEEL-29",
+   "title": "UK EBITDA breakeven",
    "kind": "directional",
    "metric": "ebitda",
    "scope": "UK",
@@ -1163,24 +1303,19 @@
    ]
   },
   {
-   "id": "TATASTEEL-26",
-   "title": "Domestic demand",
+   "id": "TATASTEEL-30",
+   "title": "India domestic demand",
    "kind": "directional",
    "metric": "revenue",
    "scope": "India",
-   "basis": "management",
+   "basis": null,
    "period": "Q3FY26",
    "target": "",
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "delivered",
-   "detail": "India demand described as pretty strong in recent quarters",
-   "evidence": {
-    "quote": "In the last couple of quarters, there was a little bit more ramp up of capacities because our capacity ramped up and a few others, but now there's better balance in the domestic market.",
-    "call": "Feb 2026",
-    "new_deadline": null
-   },
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
    "statements": [
     {
      "call": "Aug 2025",
@@ -1197,8 +1332,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-27",
-   "title": "Domestic pricing",
+   "id": "TATASTEEL-31",
+   "title": "India domestic pricing",
    "kind": "directional",
    "metric": "revenue",
    "scope": "India",
@@ -1209,7 +1344,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Average HRC spot prices were down about Rs 2,300 per ton",
+   "detail": "Net steel realisations dropped QoQ in Q2FY26",
    "evidence": {
     "quote": "While average HRC spot prices were down about Rs 2,300 per ton on QoQ, we were able to limit the drop in our net realisations to about Rs 1,700 per ton.",
     "call": "Nov 2025",
@@ -1231,8 +1366,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-28",
-   "title": "FX volatility",
+   "id": "TATASTEEL-32",
+   "title": "Company FX volatility",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
@@ -1259,24 +1394,25 @@
    ]
   },
   {
-   "id": "TATASTEEL-29",
-   "title": "Project completion",
+   "id": "TATASTEEL-33",
+   "title": "Neelachal Ispat Nigam Limited project completion",
    "kind": "milestone",
    "metric": "other",
-   "scope": "Neelachal Ispat Nigam Limited",
-   "basis": "management",
-   "period": "Q3FY26",
+   "scope": "NINL",
+   "basis": null,
+   "period": "FY30",
    "target": "",
    "direction": null,
    "moved": false,
-   "events": [],
-   "status": "delayed",
-   "detail": "Neelachal expansion timeline delayed due to environmental clearances",
-   "evidence": {
-    "quote": "The reason is largely related to environment clearances and all the clearances that we need to have, because as per our current way of work, we go to the Board after we've got all the approvals in place.",
-    "call": "Nov 2025",
-    "new_deadline": "FY2027"
-   },
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
    "statements": [
     {
      "call": "Aug 2025",
@@ -1289,12 +1425,24 @@
      "deadline": "Q3FY26",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=536435e3-b37b-4fca-98bf-d611bc8a4416.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On NINL, I think between July and September, we should be able to get the FID and once we get the FID, the target date is somewhere around 2029-30.",
+     "speaker": "Koushik Chatterjee",
+     "page": 11,
+     "target": "",
+     "period": "FY30",
+     "deadline": "2030",
+     "condition": "FID approval",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
     }
    ]
   },
   {
-   "id": "TATASTEEL-30",
-   "title": "Realisation per ton",
+   "id": "TATASTEEL-34",
+   "title": "India realisation per ton",
    "kind": "hard",
    "metric": "revenue",
    "scope": "India",
@@ -1302,13 +1450,13 @@
    "period": "Q1FY27",
    "target": "6,000 Rs/t",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "May 2026",
      "from": "1,500 Rs per ton",
      "to": "6,000 Rs/t",
-     "type": "raised"
+     "type": "reaffirmed"
     }
    ],
    "status": "open",
@@ -1340,8 +1488,42 @@
    ]
   },
   {
-   "id": "TATASTEEL-31",
-   "title": "Pipe capacity",
+   "id": "TATASTEEL-35",
+   "title": "Kalinganagar galvanising line commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Kalinganagar",
+   "basis": "management",
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Galvanising lines commissioned and ramping up",
+   "evidence": {
+    "quote": "The cold rolling mill and the galvanising lines are ramping up very well.",
+    "call": "Feb 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "the galvanising line, one of the two lines has come in, the other one will come by December.",
+     "speaker": "T. V. Narendran",
+     "page": 7,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "December 2025",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=816939c9-f6c8-404b-afce-29aee1c980ed.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-36",
+   "title": "Pipes business capacity",
    "kind": "soft",
    "metric": "capacity",
    "scope": "Pipes business",
@@ -1368,7 +1550,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-32",
+   "id": "TATASTEEL-37",
    "title": "Netherlands decarbonization FID",
    "kind": "milestone",
    "metric": "other",
@@ -1396,8 +1578,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-33",
-   "title": "Capacity utilization",
+   "id": "TATASTEEL-38",
+   "title": "Company capacity utilization",
    "kind": "directional",
    "metric": "capacity",
    "scope": "company",
@@ -1425,8 +1607,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-34",
-   "title": "Steel prices in Europe",
+   "id": "TATASTEEL-39",
+   "title": "Europe steel prices",
    "kind": "directional",
    "metric": "other",
    "scope": "Europe",
@@ -1454,8 +1636,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-35",
-   "title": "Financial performance",
+   "id": "TATASTEEL-40",
+   "title": "Company financial performance",
    "kind": "directional",
    "metric": "pat",
    "scope": "company",
@@ -1483,8 +1665,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-36",
-   "title": "EBITDA margin",
+   "id": "TATASTEEL-41",
+   "title": "Netherlands and UK EBITDA margin",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "Netherlands",
@@ -1512,8 +1694,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-37",
-   "title": "Sales volume",
+   "id": "TATASTEEL-42",
+   "title": "Netherlands sales volume",
    "kind": "hard",
    "metric": "revenue",
    "scope": "Netherlands",
@@ -1541,24 +1723,47 @@
    ]
   },
   {
-   "id": "TATASTEEL-38",
-   "title": "Product mix",
+   "id": "TATASTEEL-43",
+   "title": "India EBITDA margin",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "India",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "India will also see an EBITDA expansion",
+     "speaker": "Operator",
+     "page": 10,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7e178a2e-ea18-4b55-8e55-56e03dc5bea5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-44",
+   "title": "India product mix",
    "kind": "directional",
    "metric": "other",
    "scope": "India",
-   "basis": "management",
+   "basis": null,
    "period": "FY27",
    "target": "",
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "delivered",
-   "detail": "Downstream facilities commissioned and product mix strengthened",
-   "evidence": {
-    "quote": "The successful ramp-up of the 5 MTPA expansion at Kalinganagar, alongside the commissioning of downstream facilities, reflects our value-led growth strategy in India.",
-    "call": "May 2026",
-    "new_deadline": null
-   },
+   "status": "open",
    "statements": [
     {
      "call": "Feb 2026",
@@ -1575,8 +1780,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-39",
-   "title": "Profitability",
+   "id": "TATASTEEL-45",
+   "title": "Business profitability",
    "kind": "soft",
    "metric": "pat",
    "scope": "business",
@@ -1603,7 +1808,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-40",
+   "id": "TATASTEEL-46",
    "title": "UK steel safeguard measures expiry",
    "kind": "milestone",
    "metric": "other",
@@ -1637,7 +1842,7 @@
    ]
   },
   {
-   "id": "TATASTEEL-41",
+   "id": "TATASTEEL-47",
    "title": "EU steel safeguard measures expiry",
    "kind": "milestone",
    "metric": "other",
@@ -1671,15 +1876,15 @@
    ]
   },
   {
-   "id": "TATASTEEL-42",
-   "title": "Cost transformation savings",
+   "id": "TATASTEEL-48",
+   "title": "UK realisation per ton",
    "kind": "hard",
-   "metric": "other",
-   "scope": "company",
+   "metric": "revenue",
+   "scope": "UK",
    "basis": null,
-   "period": "FY27",
-   "target": "₹7,100 cr",
-   "direction": null,
+   "period": "Q1FY27",
+   "target": "80 GBP/t",
+   "direction": "up",
    "moved": false,
    "events": [],
    "status": "open",
@@ -1687,11 +1892,11 @@
     {
      "call": "May 2026",
      "quarter": "Q4FY26",
-     "quote": "In FY2027 we are aiming to achieve cost transformation related savings of ~Rs 7,100 crores vs. FY2026 levels.",
+     "quote": "In UK, we expect it to be about £80/t higher in 1Q compared to 4Q",
      "speaker": "Koushik Chatterjee",
-     "page": 2,
-     "target": "₹7,100 cr",
-     "period": "FY27",
+     "page": 9,
+     "target": "80 GBP/t",
+     "period": "Q1FY27",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
@@ -1699,8 +1904,36 @@
    ]
   },
   {
-   "id": "TATASTEEL-43",
-   "title": "Slab export volume",
+   "id": "TATASTEEL-49",
+   "title": "Netherlands realisation per ton",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "Netherlands",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "80 EUR/t",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "in Netherlands we expect it to be about €80/t higher in 1Q compared to 4Q.",
+     "speaker": "Koushik Chatterjee",
+     "page": 9,
+     "target": "80 EUR/t",
+     "period": "Q1FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATASTEEL-50",
+   "title": "Kalinganagar slab export volume",
    "kind": "hard",
    "metric": "volume_growth",
    "scope": "Kalinganagar",
@@ -1727,36 +1960,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-44",
-   "title": "NINL project commissioning",
-   "kind": "milestone",
-   "metric": "other",
-   "scope": "NINL",
-   "basis": null,
-   "period": "FY30",
-   "target": "",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "On NINL, I think between July and September, we should be able to get the FID and once we get the FID, the target date is somewhere around 2029-30.",
-     "speaker": "Koushik Chatterjee",
-     "page": 11,
-     "target": "",
-     "period": "FY30",
-     "deadline": "2030",
-     "condition": "FID approval",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "TATASTEEL-45",
-   "title": "EAF project announcement",
+   "id": "TATASTEEL-51",
+   "title": "Company EAF project announcement",
    "kind": "milestone",
    "metric": "other",
    "scope": "company",
@@ -1783,8 +1988,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-46",
-   "title": "EBITDA",
+   "id": "TATASTEEL-52",
+   "title": "Company EBITDA",
    "kind": "directional",
    "metric": "ebitda",
    "scope": "company",
@@ -1811,36 +2016,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-47",
-   "title": "Realisations",
-   "kind": "directional",
-   "metric": "revenue",
-   "scope": "UK and Netherlands",
-   "basis": null,
-   "period": "Q1FY27",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "In UK, we expect it to be about £80/t higher in 1Q compared to 4Q and in Netherlands we expect it to be about €80/t higher in 1Q compared to 4Q.",
-     "speaker": "UNKNOWN",
-     "page": 9,
-     "target": "",
-     "period": "Q1FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d6e2d40-e300-4aae-94bc-b1dc1136656c.pdf"
-    }
-   ]
-  },
-  {
-   "id": "TATASTEEL-48",
-   "title": "Auto contract price benefit",
+   "id": "TATASTEEL-53",
+   "title": "Company auto contract price benefit",
    "kind": "directional",
    "metric": "revenue",
    "scope": "company",
@@ -1867,8 +2044,8 @@
    ]
   },
   {
-   "id": "TATASTEEL-49",
-   "title": "EBITDA losses",
+   "id": "TATASTEEL-54",
+   "title": "UK EBITDA losses",
    "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "UK",
@@ -1895,6 +2072,91 @@
    ]
   }
  ],
+ "business": {
+  "what": "Tata Steel manufactures and distributes steel products and related services to customers globally.",
+  "segments": [
+   {
+    "name": "Tata Steel India",
+    "share_pct": null,
+    "revenue_cr": 139720.22,
+    "note": "Steel products in India",
+    "page": 536
+   },
+   {
+    "name": "Neelachal Ispat Nigam Limited",
+    "share_pct": null,
+    "revenue_cr": 5281.59,
+    "note": "Steel products and related operations",
+    "page": 536
+   },
+   {
+    "name": "Other Indian Operations",
+    "share_pct": null,
+    "revenue_cr": 12943.95,
+    "note": "Other operations in India",
+    "page": 536
+   },
+   {
+    "name": "Tata Steel Netherlands operations",
+    "share_pct": null,
+    "revenue_cr": 61354.84,
+    "note": "Steel operations in Netherlands",
+    "page": 536
+   },
+   {
+    "name": "Tata Steel UK operations",
+    "share_pct": null,
+    "revenue_cr": 23332.67,
+    "note": "Steel operations in the UK",
+    "page": 536
+   },
+   {
+    "name": "Other trade related operations",
+    "share_pct": null,
+    "revenue_cr": 39561.96,
+    "note": "Trade related operations",
+    "page": 536
+   },
+   {
+    "name": "South-East Asian Operations",
+    "share_pct": null,
+    "revenue_cr": 8605.46,
+    "note": "Operations in South-East Asia",
+    "page": 536
+   },
+   {
+    "name": "Rest of the world",
+    "share_pct": 0.77,
+    "revenue_cr": 1795.19,
+    "note": "Operations in other regions",
+    "page": 536
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 537
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 537
+   }
+  ],
+  "year": "FY2025-26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eb836c3a-cf5f-427d-bc71-e368d5861e02.pdf",
+  "pages": [
+   5,
+   69,
+   99,
+   397,
+   536,
+   537,
+   538
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -2014,46 +2276,40 @@
  "case": {
   "bull": [
    {
-    "point": "The company successfully beat its fixed cost reduction target, achieving an annualized saving of over £200 million in FY2026.",
+    "figure": "147%",
+    "point": "Profit growth achieved a strong 147% over the last 12 months.",
     "refs": [
-     "TATASTEEL-17"
+     "profit_growth"
     ]
    },
    {
-    "point": "Management has demonstrated growth ambition by raising the FY27 volume growth target to at least 2 million tons.",
+    "figure": "245%",
+    "point": "Cash conversion was very strong, with operating cash flow reaching 245% of net profit over 5 years.",
     "refs": [
-     "TATASTEEL-20"
-    ]
-   },
-   {
-    "point": "Operational execution remains strong with the successful commissioning of the Combi mill and the Ludhiana plant during FY2026.",
-    "refs": [
-     "TATASTEEL-12",
-     "TATASTEEL-13"
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "point": "The company missed its FY26 net debt reduction target, with borrowings remaining high at ₹92,382 crore.",
-    "refs": [
-     "TATASTEEL-22",
-     "debt"
-    ]
-   },
-   {
-    "point": "Operating margins have significantly compressed from 26% in FY22 to 15% in FY26, reflecting ongoing profitability challenges.",
+    "figure": "26% → 15%",
+    "point": "Operating margins compressed significantly from 26% in FY22 to 15% in FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "point": "Several key performance targets, including NINL EBITDA and domestic pricing, were missed, while other initiatives have gone quiet or lapsed.",
+    "figure": "31% → 13%",
+    "point": "ROCE dropped from 31% in FY22 down to 13% in FY26.",
     "refs": [
-     "TATASTEEL-23",
-     "TATASTEEL-27",
-     "TATASTEEL-3",
-     "TATASTEEL-14"
+     "returns"
+    ]
+   },
+   {
+    "figure": "₹92,382 cr",
+    "point": "Total borrowings increased to ₹92,382 cr, rising from ₹75,561 cr in FY22.",
+    "refs": [
+     "debt"
     ]
    }
   ]

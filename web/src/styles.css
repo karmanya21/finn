@@ -413,3 +413,15 @@ main section { margin-top: 26px; }
 .feed-row.focus { background: var(--muted-bg); }
 a.feed-row { text-decoration: none; color: inherit; }
 .link.small { font-size: 12px; margin-top: 6px; }
+
+/* ---- business + figure-led case ---- */
+.biz-what { margin: 6px 0 10px; font-family: var(--serif); font-size: 17px; line-height: 1.4; }
+.mix { padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin-bottom: 8px; }
+.mix-title { margin: 0 0 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.mix-row { display: grid; grid-template-columns: minmax(0, 1.4fr) 1fr 40px; align-items: center; gap: 8px; padding: 3px 0; font-size: 13px; }
+.mix-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-2); }
+.mix-bar { height: 6px; border-radius: 3px; background: var(--bg); overflow: hidden; }
+.mix-bar span { display: block; height: 100%; background: var(--live); border-radius: 3px; }
+.mix-pct { text-align: right; font-weight: 600; }
+.figure { display: inline-block; margin-right: 6px; font-weight: 700; }
+.case-bull .figure { color: var(--kept); } .case-bear .figure { color: var(--missed); }

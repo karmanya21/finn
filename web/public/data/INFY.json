@@ -3,7 +3,7 @@
  "name": "Infosys",
  "sector": "IT services",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Oct 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -932,6 +932,101 @@
    ]
   }
  ],
+ "business": {
+  "what": "Infosys is a global leader in AI-first business consulting and technology services, enabling organizations across multiple countries to unlock AI value at scale.",
+  "segments": [
+   {
+    "name": "Financial Services",
+    "share_pct": null,
+    "revenue_cr": 49908,
+    "note": "Financial services and insurance enterprises",
+    "page": 81
+   },
+   {
+    "name": "Manufacturing",
+    "share_pct": null,
+    "revenue_cr": 29078,
+    "note": "Manufacturing enterprises",
+    "page": 81
+   },
+   {
+    "name": "Energy, Utilities, Resources and Services",
+    "share_pct": null,
+    "revenue_cr": 23818,
+    "note": "Energy, utilities, resources and services enterprises",
+    "page": 81
+   },
+   {
+    "name": "Retail",
+    "share_pct": null,
+    "revenue_cr": 23077,
+    "note": "Retail, consumer packaged goods and logistics",
+    "page": 81
+   },
+   {
+    "name": "Communication",
+    "share_pct": null,
+    "revenue_cr": 21765,
+    "note": "Communication, telecom OEM and media",
+    "page": 81
+   },
+   {
+    "name": "Hi-Tech",
+    "share_pct": null,
+    "revenue_cr": 13928,
+    "note": "Hi-Tech enterprises",
+    "page": 81
+   },
+   {
+    "name": "Life Sciences",
+    "share_pct": null,
+    "revenue_cr": 12267,
+    "note": "Life sciences and healthcare enterprises",
+    "page": 81
+   },
+   {
+    "name": "All other segments",
+    "share_pct": null,
+    "revenue_cr": 4809,
+    "note": "India, Japan, China and Public Services",
+    "page": 81
+   }
+  ],
+  "geographies": [
+   {
+    "region": "North America",
+    "share_pct": null,
+    "page": 81
+   },
+   {
+    "region": "Europe",
+    "share_pct": null,
+    "page": 81
+   },
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 81
+   },
+   {
+    "region": "Rest of the World",
+    "share_pct": null,
+    "page": 81
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/19dd605c-2b6b-4084-8dca-9d578a3eb7a0.pdf",
+  "pages": [
+   11,
+   76,
+   81,
+   131,
+   275,
+   335,
+   356
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1051,42 +1146,49 @@
  "case": {
   "bull": [
    {
-    "point": "Management successfully delivered on FY26 operating margin targets of 20-22% and completed the planned buyback.",
+    "figure": "+11.1%",
+    "point": "H2 FY26 revenue growth accelerated over H1's +8.1%, meeting seasonality expectations through large deal ramp-ups.",
     "refs": [
-     "INFY-1",
-     "INFY-3"
+     "INFY-5",
+     "INFY-6"
     ]
    },
    {
-    "point": "The company maintains strong capital efficiency with a 40% ROCE in FY26 and cash flow at 110% of net profit over five years.",
+    "figure": "40%",
+    "point": "ROCE expanded in FY26 while five-year operating cash conversion remained strong at 110% of net profit.",
     "refs": [
      "returns",
      "cash_conversion"
     ]
    },
    {
-    "point": "Operational execution remains on track with H1 FY27 operating margins at 21.0% and onsite mix reduction progressing at 0.7%.",
+    "figure": "20.9%",
+    "point": "Management delivered FY26 operating margins within target and remains on pace to hold 20–22% for FY27.",
     "refs": [
-     "INFY-11",
-     "INFY-15"
+     "INFY-1",
+     "INFY-11"
     ]
    }
   ],
   "bear": [
    {
-    "point": "Revenue growth guidance has been repeatedly lowered from 1.5-3.5% down to 1-2% for FY27.",
+    "figure": "1.5–3.5% → 1–2%",
+    "point": "Management repeatedly cut FY27 revenue growth guidance from an initial 1.5–3.5% down to 1–2%.",
     "refs": [
      "INFY-10"
     ]
    },
    {
-    "point": "Operating margins have compressed significantly from 26% in FY22 to 24% in FY26.",
+    "figure": "26% → 24%",
+    "point": "Operating margins compressed from FY22 to FY26 while total borrowings rose to ₹9,176 crore.",
     "refs": [
-     "margin"
+     "margin",
+     "debt"
     ]
    },
    {
-    "point": "Management failed to provide updates on the 20,000 fresh hiring target and the Telstra JV transaction remains delayed.",
+    "figure": "20,000",
+    "point": "Management went quiet on its FY26 fresh hiring promise while the Telstra JV closure faced delays.",
     "refs": [
      "INFY-2",
      "INFY-4"

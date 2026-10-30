@@ -3,7 +3,7 @@
  "name": "Praj Industries",
  "sector": "Engineering",
  "size": "small",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Aug 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -145,15 +145,15 @@
    "scope": "company",
    "basis": null,
    "period": "FY26",
-   "target": "5–9%",
+   "target": "",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Sep 2025",
-     "from": "≥10%",
-     "to": "5–9%",
-     "type": "lowered"
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
     }
    ],
    "status": "said",
@@ -164,7 +164,7 @@
      "quote": "We always mention that our first target is to reach on a sustainable basis to a double-digit EBITDA margin.",
      "speaker": "Sachin Raole",
      "page": 23,
-     "target": "≥10%",
+     "target": "",
      "period": "multi-year",
      "deadline": null,
      "condition": null,
@@ -176,7 +176,7 @@
      "quote": "the new normal which you are expecting that can we be in a little larger single- digit EBITDA margin, I think that is what we will be looking at going forward.",
      "speaker": "Sachin Raole",
      "page": 8,
-     "target": "5–9%",
+     "target": "",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -186,7 +186,7 @@
   },
   {
    "id": "PRAJIND-2",
-   "title": "GenX revenue",
+   "title": "Praj GenX revenue",
    "kind": "directional",
    "metric": "revenue",
    "scope": "GenX",
@@ -197,7 +197,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "GenX revenue not generated in H2 FY26",
+   "detail": "GenX business expenses with no corresponding revenues in H1 FY26",
    "evidence": {
     "quote": "The fixed costs at GenX facilities coupled with limited revenue activity has negatively impacted our bottom line.",
     "call": "Sep 2025",
@@ -282,55 +282,7 @@
   },
   {
    "id": "PRAJIND-5",
-   "title": "Company H2FY26 performance",
-   "kind": "directional",
-   "metric": "other",
-   "scope": "company",
-   "basis": null,
-   "period": "H2FY26",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [
-    {
-     "call": "Dec 2025",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "lapsed",
-   "detail": "Period ended; no update in later calls (last said Dec 2025)",
-   "statements": [
-    {
-     "call": "Sep 2025",
-     "quarter": "Q1FY26",
-     "quote": "Some pains might continue till quarter 2, but from quarter 3, from H2 onwards, we are not expecting this situation to continue.",
-     "speaker": "Sachin Raole",
-     "page": 8,
-     "target": "",
-     "period": "H2FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6b0473fc-dce5-46b0-96fc-15471d5e65d0.pdf"
-    },
-    {
-     "call": "Dec 2025",
-     "quarter": "Q2FY26",
-     "quote": "Overall, despite the challenging business environment, we will continue to focus on controllable factors to deliver good performance in the second half of FY'26.",
-     "speaker": "Ashish Gaikwad",
-     "page": 3,
-     "target": "",
-     "period": "H2FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
-    }
-   ]
-  },
-  {
-   "id": "PRAJIND-6",
-   "title": "GenX capacity utilization",
+   "title": "GenX full capacity utilization",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "GenX",
@@ -357,7 +309,7 @@
    ]
   },
   {
-   "id": "PRAJIND-7",
+   "id": "PRAJIND-6",
    "title": "Indian Oil 2G plant production",
    "kind": "milestone",
    "metric": "capacity",
@@ -385,8 +337,37 @@
    ]
   },
   {
+   "id": "PRAJIND-7",
+   "title": "Company performance H2FY26",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Dec 2025)",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "Overall, despite the challenging business environment, we will continue to focus on controllable factors to deliver good performance in the second half of FY'26.",
+     "speaker": "Ashish Gaikwad",
+     "page": 3,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=343432c6-9f66-4b13-9155-a6bd4069b75a.pdf"
+    }
+   ]
+  },
+  {
    "id": "PRAJIND-8",
-   "title": "Company FY27 revenue growth",
+   "title": "Company revenue growth FY27",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
@@ -505,7 +486,7 @@
   },
   {
    "id": "PRAJIND-12",
-   "title": "Company multi-year revenue target",
+   "title": "Company revenue target",
    "kind": "soft",
    "metric": "revenue",
    "scope": "company",
@@ -562,7 +543,7 @@
   },
   {
    "id": "PRAJIND-14",
-   "title": "Company FY27 performance",
+   "title": "Company performance FY27",
    "kind": "directional",
    "metric": "pat",
    "scope": "company",
@@ -590,7 +571,7 @@
   },
   {
    "id": "PRAJIND-15",
-   "title": "Company FY27 order book",
+   "title": "Company order book FY27",
    "kind": "directional",
    "metric": "order_book",
    "scope": "company",
@@ -618,7 +599,7 @@
   },
   {
    "id": "PRAJIND-16",
-   "title": "Company FY27 profitability",
+   "title": "Company profits FY27",
    "kind": "directional",
    "metric": "pat",
    "scope": "company",
@@ -675,6 +656,34 @@
   },
   {
    "id": "PRAJIND-18",
+   "title": "Company profitability FY27",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jun 2026",
+     "quarter": "Q4FY26",
+     "quote": "going forward, we would like to learn from these and therefore work on the profitability for a better result in FY '27.",
+     "speaker": "Ashish Gaikwad",
+     "page": 14,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cd3064ba-a21b-41ff-9acd-d466fa5ca87e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PRAJIND-19",
    "title": "Construction completion",
    "kind": "milestone",
    "metric": "capex",
@@ -702,8 +711,8 @@
    ]
   },
   {
-   "id": "PRAJIND-19",
-   "title": "Company H2FY27 top and bottom line",
+   "id": "PRAJIND-20",
+   "title": "Company top line H2FY27",
    "kind": "directional",
    "metric": "revenue",
    "scope": "company",
@@ -728,8 +737,72 @@
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf"
     }
    ]
+  },
+  {
+   "id": "PRAJIND-21",
+   "title": "Company bottom line H2FY27",
+   "kind": "directional",
+   "metric": "pat",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We believe that now going forward, they will start converging and starting giving us the top line and the bottom line. That's what we said that based on the order book which we have booked right now, we will see these colors of these results coming up in the latter part of this financial year.",
+     "speaker": "Sachin Raole",
+     "page": 15,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": "based on the order book which we have booked right now",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=55386e27-0641-4766-8f3e-0916ce53bdcf.pdf"
+    }
+   ]
   }
  ],
+ "business": {
+  "what": "Praj Industries provides process and project engineering solutions for bioenergy, low-carbon aviation fuels, and related bioeconomy sectors worldwide.",
+  "segments": [
+   {
+    "name": "Process and Project engineering",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "Process and project engineering operating segment",
+    "page": 178
+   }
+  ],
+  "geographies": [
+   {
+    "region": "Within India",
+    "share_pct": null,
+    "page": 253
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 253
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3b401a96-fade-436b-847f-fb7d6ec6b0d1.pdf",
+  "pages": [
+   14,
+   104,
+   177,
+   178,
+   251,
+   252,
+   253
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -849,36 +922,51 @@
  "case": {
   "bull": [
    {
-    "point": "The company successfully completed GenX facility audits and secured its first breakthrough order by Q2FY26.",
+    "figure": "19%",
+    "point": "Revenue compounded at 19% annually over five years, demonstrating strong long-term business expansion.",
     "refs": [
-     "PRAJIND-4"
+     "sales_growth"
     ]
    },
    {
-    "point": "Operating cash flow remains adequate at 86% of net profit over the last five years.",
+    "figure": "86%",
+    "point": "Cash conversion remains reliable with five-year operating cash flow reaching 86% of net profit.",
     "refs": [
      "cash_conversion"
+    ]
+   },
+   {
+    "figure": "Q2FY26",
+    "point": "Management delivered on GenX facility diversification by completing audits and securing a breakthrough order.",
+    "refs": [
+     "PRAJIND-4"
     ]
    }
   ],
   "bear": [
    {
-    "point": "Profitability has significantly declined with profit growth at -56% over three years and operating margins compressing to 4.9% in FY26.",
+    "figure": "-48%",
+    "point": "Profitability collapsed with last twelve months profit dropping 48% and operating margins compressing to 4.9%.",
     "refs": [
      "profit_growth",
      "margin"
     ]
    },
    {
-    "point": "Management missed the FY27 Mangalore facility order booking target of ₹500 crore.",
+    "figure": "23% → 6%",
+    "point": "Return on capital employed severely degraded while debt surged from ₹21 crore to ₹173 crore.",
     "refs": [
-     "PRAJIND-11"
+     "returns",
+     "debt"
     ]
    },
    {
-    "point": "Multiple growth initiatives including GenX revenue and Bio-IBA orders have either been missed or gone quiet.",
+    "figure": "5 failed",
+    "point": "Management missed order and revenue targets while three distinct promises went quiet without update.",
     "refs": [
      "PRAJIND-2",
+     "PRAJIND-11",
+     "PRAJIND-9",
      "PRAJIND-13",
      "PRAJIND-17"
     ]

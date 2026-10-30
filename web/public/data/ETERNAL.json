@@ -3,7 +3,7 @@
  "name": "Eternal",
  "sector": "Consumer internet",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Oct 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -501,6 +501,63 @@
    ]
   }
  ],
+ "business": {
+  "what": "Eternal provides online food delivery, quick commerce, B2B supplies, and going-out ticketing services to customers and businesses.",
+  "segments": [
+   {
+    "name": "Food delivery",
+    "share_pct": null,
+    "revenue_cr": 10159,
+    "note": "Food ordering and delivery services",
+    "page": 56
+   },
+   {
+    "name": "Quick commerce",
+    "share_pct": null,
+    "revenue_cr": 37779,
+    "note": "Quick commerce goods sales",
+    "page": 56
+   },
+   {
+    "name": "Going-out",
+    "share_pct": null,
+    "revenue_cr": 973,
+    "note": "Dining-out, movies, and events ticketing",
+    "page": 56
+   },
+   {
+    "name": "B2B supplies",
+    "share_pct": null,
+    "revenue_cr": 5366,
+    "note": "B2B supplies to restaurants and others",
+    "page": 56
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 279
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 279
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4b6a4218-6bde-4c99-b10c-39ec7553cc42.pdf",
+  "pages": [
+   56,
+   94,
+   109,
+   224,
+   277,
+   279,
+   394
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -612,19 +669,22 @@
  "case": {
   "bull": [
    {
-    "point": "Revenue growth significantly outperformed expectations with a 201.9% YoY increase in Q3 FY26.",
+    "figure": "201.9%",
+    "point": "The company significantly outperformed its 30% revenue growth target for Q3 FY26.",
     "refs": [
      "ETERNAL-1"
     ]
    },
    {
-    "point": "Operating margins improved substantially, moving from -44% in FY22 to 2.2% in FY26.",
+    "figure": "144%",
+    "point": "Revenue growth has accelerated to 144% over the last twelve months, demonstrating strong momentum.",
     "refs": [
-     "margin"
+     "sales_growth"
     ]
    },
    {
-    "point": "The company is currently on track to meet its FY27 NOV growth target of 113.7%.",
+    "figure": "113.7",
+    "point": "The company is currently on pace to meet its target of 100% year-over-year NOV growth for FY27.",
     "refs": [
      "ETERNAL-4"
     ]
@@ -632,22 +692,26 @@
   ],
   "bear": [
    {
-    "point": "Management failed to provide updates on profitability percentage targets after the Q3 FY26 period lapsed.",
+    "figure": "2 of 2",
+    "point": "Management has failed to provide updates on profitability and food delivery revenue growth targets after periods lapsed.",
     "refs": [
-     "ETERNAL-2"
-    ]
-   },
-   {
-    "point": "The 15% YoY growth target for Food Delivery revenue has gone quiet following the end of FY26.",
-    "refs": [
+     "ETERNAL-2",
      "ETERNAL-3"
     ]
    },
    {
-    "point": "Current ROCE remains low at 2% in FY26, significantly trailing the long-term target of 40%.",
+    "figure": "2%",
+    "point": "Current ROCE remains significantly below the long-term target of 40%, indicating inefficient capital utilization.",
     "refs": [
      "ETERNAL-8",
      "returns"
+    ]
+   },
+   {
+    "figure": "₹4,592 cr",
+    "point": "Borrowings have increased substantially from ₹70 cr in FY22, raising the company's debt profile.",
+    "refs": [
+     "debt"
     ]
    }
   ]

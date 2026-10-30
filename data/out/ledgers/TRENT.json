@@ -3,7 +3,7 @@
  "name": "Trent",
  "sector": "Retail",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": null,
  "latest_results": "Q2FY27",
  "headline": {
@@ -48,6 +48,37 @@
   "by_status": {}
  },
  "threads": [],
+ "business": {
+  "what": "Trent is a retail company that sells fashion and lifestyle merchandise, including apparel, footwear, and beauty products, directly to consumers through its own brand stores.",
+  "segments": [
+   {
+    "name": "Retailing/trading of merchandise",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "Retailing of fashion and lifestyle merchandise",
+    "page": 193
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 193
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c3f6fa4a-3c51-453e-b634-3c3ef98f7361.pdf",
+  "pages": [
+   78,
+   80,
+   120,
+   144,
+   157,
+   193,
+   232
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -167,33 +198,38 @@
  "case": {
   "bull": [
    {
-    "point": "Operating margins expanded significantly from 13% in FY22 to 19% in FY26.",
+    "figure": "13% → 19%",
+    "point": "Operating margins have expanded significantly over the last four years, demonstrating strong operational efficiency.",
     "refs": [
      "margin"
     ]
    },
    {
-    "point": "ROCE improved substantially to 28% in FY26 from just 7% in FY22.",
+    "figure": "123%",
+    "point": "The company maintains high capital quality with operating cash flow consistently exceeding net profit over five years.",
     "refs": [
-     "returns"
+     "cash_conversion"
     ]
    },
    {
-    "point": "The company maintains a strong balance sheet with debt reduced to ₹2,561 cr, representing 0.37x equity.",
+    "figure": "7% → 28%",
+    "point": "Return on capital employed has quadrupled since FY22, indicating highly effective capital allocation.",
     "refs": [
-     "debt"
+     "returns"
     ]
    }
   ],
   "bear": [
    {
-    "point": "Revenue growth has decelerated to 18% over the last 12 months compared to a 51% five-year compound rate.",
+    "figure": "51% → 18%",
+    "point": "Revenue growth has decelerated sharply from a five-year average of 51% to 18% over the last twelve months.",
     "refs": [
      "sales_growth"
     ]
    },
    {
-    "point": "Profit growth has also slowed to 18% over the last 12 months from a 71% three-year compound rate.",
+    "figure": "71% → 18%",
+    "point": "Profit growth has experienced a significant slowdown compared to the three-year compounded annual growth rate.",
     "refs": [
      "profit_growth"
     ]

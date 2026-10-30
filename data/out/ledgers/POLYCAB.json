@@ -3,7 +3,7 @@
  "name": "Polycab India",
  "sector": "Cables & wires",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Oct 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -77,30 +77,31 @@
  ],
  "record": {
   "kept": 0,
-  "missed": 0,
-  "resolved": 0,
-  "moved": 3,
-  "quiet": 4,
-  "open": 9,
+  "missed": 1,
+  "resolved": 1,
+  "moved": 2,
+  "quiet": 2,
+  "open": 8,
   "by_status": {
-   "gone_quiet": 4,
+   "missed": 1,
    "open": 6,
-   "on_track": 2,
+   "on_track": 1,
+   "gone_quiet": 2,
    "behind": 1
   }
  },
  "threads": [
   {
    "id": "POLYCAB-0",
-   "title": "Working capital cycle",
-   "kind": "hard",
+   "title": "Working capital cycle normalization",
+   "kind": "directional",
    "metric": "working_capital",
    "scope": "company",
    "basis": null,
-   "period": "FY27",
-   "target": "45–50 days",
-   "direction": null,
-   "moved": true,
+   "period": "Q4FY26",
+   "target": "50–55",
+   "direction": "down",
+   "moved": false,
    "events": [
     {
      "call": "Oct 2025",
@@ -113,16 +114,10 @@
      "from": "",
      "to": "50–55",
      "type": "reaffirmed"
-    },
-    {
-     "call": "May 2026",
-     "from": "50–55",
-     "to": "45–50 days",
-     "type": "lowered"
     }
    ],
-   "status": "gone_quiet",
-   "detail": "Not mentioned since May 2026",
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
    "statements": [
     {
      "call": "Jul 2025",
@@ -159,42 +154,28 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "On a normalized basis, we expect the working capital cycle to revert to our steady-state range of 45 to 50 days.",
-     "speaker": "Shashank Yagnick",
-     "page": 5,
-     "target": "45–50 days",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f66f17ac-c40f-4309-afca-3e66af0956a0.pdf"
     }
    ]
   },
   {
    "id": "POLYCAB-1",
-   "title": "Advertising and promotion spends",
-   "kind": "directional",
-   "metric": "capex",
-   "scope": "company",
-   "basis": null,
-   "period": "multi-year",
-   "target": "",
-   "direction": "up",
+   "title": "B2C advertising and promotion spending",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "B2C",
+   "basis": "management",
+   "period": "FY26",
+   "target": "3–5%",
+   "direction": null,
    "moved": false,
-   "events": [
-    {
-     "call": "Jan 2026",
-     "from": "3–5%",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "lapsed",
-   "detail": "Not mentioned since Jan 2026",
+   "events": [],
+   "status": "missed",
+   "detail": "A&P spend currently at around 1.5%",
+   "evidence": {
+    "quote": "Even with this increased spend of this quarter, we are hardly at around 1.5%, currently.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "Jul 2025",
@@ -207,24 +188,12 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0d06e9ad-0c88-4d9a-beda-c76de11b708e.pdf"
-    },
-    {
-     "call": "Jan 2026",
-     "quarter": "Q3FY26",
-     "quote": "Every year going ahead, we can definitely see an improvement or increase in our investments towards A&P.",
-     "speaker": "Chirayu Upadhyaya",
-     "page": 14,
-     "target": "",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf"
     }
    ]
   },
   {
    "id": "POLYCAB-2",
-   "title": "FMEG EBITDA margin",
+   "title": "FMEG EBITDA margin target for FY30",
    "kind": "hard",
    "metric": "ebitda_margin",
    "scope": "FMEG",
@@ -307,7 +276,7 @@
   },
   {
    "id": "POLYCAB-3",
-   "title": "EPC operating margin",
+   "title": "EPC sustainable operating margin",
    "kind": "soft",
    "metric": "operating_margin",
    "scope": "EPC",
@@ -354,18 +323,18 @@
   },
   {
    "id": "POLYCAB-4",
-   "title": "FMEG business growth vs industry",
+   "title": "FMEG revenue growth vs industry",
    "kind": "hard",
    "metric": "volume_growth",
    "scope": "FMEG",
    "basis": "management",
    "period": "multi-year",
-   "target": "1.5–2 x",
+   "target": "1.5–2×",
    "direction": "up",
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "FMEG on track for 1.5x-2x industry growth by FY30",
+   "detail": "FMEG segment consistently outperforming industry in-line with Project Spring",
    "evidence": {
     "quote": "Looking ahead, we are confident in the long-term potential of the FMEG segment and remain on track to achieve our Project Spring targets of 1.5x - 2x industry growth and EBITDA margins in the range of 8% to 10% by FY30, positioning the business for sustained growth and value creation.",
     "call": "Jan 2026",
@@ -378,7 +347,7 @@
      "quote": "Within Project Spring, we are now targetting to grow this business at roughly 1.5 to 2x of the industry growth.",
      "speaker": "Chirayu Upadhyaya",
      "page": 7,
-     "target": "1.5–2 x",
+     "target": "1.5–2×",
      "period": "multi-year",
      "deadline": null,
      "condition": null,
@@ -388,7 +357,7 @@
   },
   {
    "id": "POLYCAB-5",
-   "title": "Annual Capex",
+   "title": "Project Spring annual capex guidance",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
@@ -418,7 +387,7 @@
     }
    ],
    "status": "gone_quiet",
-   "detail": "Not mentioned since May 2026",
+   "detail": "Said 4 times, then not mentioned since May 2026",
    "statements": [
     {
      "call": "Jul 2025",
@@ -472,7 +441,7 @@
   },
   {
    "id": "POLYCAB-6",
-   "title": "BharatNet order book EBITDA margin",
+   "title": "BharatNet EBITDA margin target",
    "kind": "hard",
    "metric": "ebitda_margin",
    "scope": "BharatNet order book",
@@ -483,10 +452,10 @@
    "moved": false,
    "events": [],
    "status": "behind",
-   "detail": "BharatNet execution margin at 6.7%",
+   "detail": "BharatNet segment profitability margin at 6.7%",
    "evidence": {
-    "quote": "Segment profitability stood at † 272 million, translating to a margin of 6.7%.",
-    "call": "Jan 2026",
+    "quote": "Segment profitability stood at ₹ 272 million, translating to a margin of 6.7%.",
+    "call": "Jan 2026, p5",
     "new_deadline": null
    },
    "statements": [
@@ -506,7 +475,7 @@
   },
   {
    "id": "POLYCAB-7",
-   "title": "BharatNet revenue accrual and EPC execution start",
+   "title": "BharatNet EPC execution and revenue accrual timeline",
    "kind": "milestone",
    "metric": "revenue",
    "scope": "BharatNet",
@@ -535,11 +504,11 @@
   },
   {
    "id": "POLYCAB-8",
-   "title": "Export contribution",
+   "title": "Export revenue contribution target for FY30",
    "kind": "hard",
    "metric": "revenue",
    "scope": "Exports",
-   "basis": "management",
+   "basis": null,
    "period": "FY30",
    "target": "≥10%",
    "direction": "up",
@@ -558,13 +527,7 @@
      "type": "reaffirmed"
     }
    ],
-   "status": "on_track",
-   "detail": "Exports picked up strongly growing 17% YoY",
-   "evidence": {
-    "quote": "We continue to maintain a strong export order pipeline and remain confident about our long term growth prospects of this business.",
-    "call": "Oct 2026",
-    "new_deadline": null
-   },
+   "status": "open",
    "statements": [
     {
      "call": "Oct 2025",
@@ -606,7 +569,7 @@
   },
   {
    "id": "POLYCAB-9",
-   "title": "EHV plant commissioning",
+   "title": "EHV plant commissioning milestone",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "EHV plant",
@@ -671,7 +634,7 @@
   },
   {
    "id": "POLYCAB-10",
-   "title": "International business revenue growth",
+   "title": "International business revenue growth in H2FY26",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "International business",
@@ -700,30 +663,18 @@
   },
   {
    "id": "POLYCAB-11",
-   "title": "Revenue growth",
+   "title": "Company revenue growth in H2FY26",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
-   "basis": null,
-   "period": "FY27",
+   "basis": "financials",
+   "period": "H2FY26",
    "target": "",
    "direction": "up",
    "moved": false,
-   "events": [
-    {
-     "call": "Jan 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
+   "events": [],
+   "status": "delivered",
+   "detail": "H2 growth +35.1% vs H1 +21.4%",
    "statements": [
     {
      "call": "Oct 2025",
@@ -736,36 +687,12 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a5825e0-67d1-41af-96e0-d78387aaba8d.pdf"
-    },
-    {
-     "call": "Jan 2026",
-     "quarter": "Q3FY26",
-     "quote": "Q4 should be another good quarter for us, and we are quite optimistic on that.",
-     "speaker": "Chirayu Upadhyaya",
-     "page": 11,
-     "target": "",
-     "period": "Q4FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "Over maybe 2-3 next quarters, you will see a trend, and you should definitely see 1.5x of market growth.",
-     "speaker": "Shashank Yagnick",
-     "page": 9,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e47a217c-cefa-4ff6-8e34-6bbd07d42b13.pdf"
     }
    ]
   },
   {
    "id": "POLYCAB-12",
-   "title": "Commodity inflation price pass-through",
+   "title": "Commodity inflation price pass-through in Q4FY26",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
@@ -776,7 +703,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Passed on all raw material prices throughout the quarter",
+   "detail": "Passed on all raw material price throughout the quarter",
    "evidence": {
     "quote": "So we were completely in tandem with the raw material price throughout the quarter.",
     "call": "May 2026",
@@ -799,7 +726,92 @@
   },
   {
    "id": "POLYCAB-13",
-   "title": "Dividend payout ratio",
+   "title": "Company revenue growth in Q4FY26",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Q4 should be another good quarter for us, and we are quite optimistic on that.",
+     "speaker": "Chirayu Upadhyaya",
+     "page": 11,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf"
+    }
+   ]
+  },
+  {
+   "id": "POLYCAB-14",
+   "title": "Annual advertising and promotion investments",
+   "kind": "directional",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Every year going ahead, we can definitely see an improvement or increase in our investments towards A&P.",
+     "speaker": "Chirayu Upadhyaya",
+     "page": 14,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c54bf2c3-22fa-45e1-bf1a-2194e7b46183.pdf"
+    }
+   ]
+  },
+  {
+   "id": "POLYCAB-15",
+   "title": "Working capital cycle target for FY27",
+   "kind": "hard",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "45–50 days",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "On a normalized basis, we expect the working capital cycle to revert to our steady-state range of 45 to 50 days.",
+     "speaker": "Shashank Yagnick",
+     "page": 5,
+     "target": "45–50 days",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f66f17ac-c40f-4309-afca-3e66af0956a0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "POLYCAB-16",
+   "title": "Dividend payout ratio target for FY30",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -809,8 +821,7 @@
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "gone_quiet",
-   "detail": "Not mentioned since May 2026",
+   "status": "open",
    "statements": [
     {
      "call": "May 2026",
@@ -827,37 +838,8 @@
    ]
   },
   {
-   "id": "POLYCAB-14",
-   "title": "Cables and wires growth",
-   "kind": "directional",
-   "metric": "revenue_growth",
-   "scope": "Wires & Cables",
-   "basis": null,
-   "period": "FY27",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "lapsed",
-   "detail": "Not mentioned since May 2026",
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "So if market is growing, say, for example, 10-12%, we'll continue to deliver 1.5x of that growth.",
-     "speaker": "Shashank Yagnick",
-     "page": 11,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": "if market grows 10-12%",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f66f17ac-c40f-4309-afca-3e66af0956a0.pdf"
-    }
-   ]
-  },
-  {
-   "id": "POLYCAB-15",
-   "title": "Wires and Cables EBITDA margin",
+   "id": "POLYCAB-17",
+   "title": "Wires and Cables EBITDA margin target",
    "kind": "hard",
    "metric": "ebitda_margin",
    "scope": "Wires and Cables",
@@ -903,36 +885,73 @@
    ]
   },
   {
-   "id": "POLYCAB-16",
-   "title": "Volume growth vs market",
-   "kind": "hard",
+   "id": "POLYCAB-18",
+   "title": "Company revenue and volume growth vs market",
+   "kind": "directional",
    "metric": "volume_growth",
-   "scope": "company",
+   "scope": "Wires and Cables",
    "basis": null,
-   "period": "FY27",
-   "target": "1.5 x",
-   "direction": null,
+   "period": "multi-year",
+   "target": "",
+   "direction": "up",
    "moved": false,
-   "events": [],
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "1.5×",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "1.5×",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
    "status": "open",
    "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So if market is growing, say, for example, 10-12%, we'll continue to deliver 1.5x of that growth.",
+     "speaker": "Shashank Yagnick",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "if market grows 10-12%",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f66f17ac-c40f-4309-afca-3e66af0956a0.pdf"
+    },
     {
      "call": "Jul 2026",
      "quarter": "Q1FY27",
      "quote": "So I think 10 to 12 months is a good period. Over maybe 2-3 next quarters, you will see a trend, and you should definitely see 1.5x of market growth.",
      "speaker": "Shashank Yagnick",
      "page": 9,
-     "target": "1.5 x",
+     "target": "1.5×",
      "period": "FY27",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e47a217c-cefa-4ff6-8e34-6bbd07d42b13.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "So if the market -- if you look at the GDP print recently, it's at 7.8% growth. If that kind of market continues, the wires and cables definitely is going to grow at around 12%, 13%, and we will do 1.5x of that.",
+     "speaker": "Aditya Nathany",
+     "page": 13,
+     "target": "",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": "if the market grows at around 12%, 13%",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=77b6d277-0ffc-440d-ba8a-2bd9bc3dc43e.pdf"
     }
    ]
   },
   {
-   "id": "POLYCAB-17",
-   "title": "Export revenue growth",
+   "id": "POLYCAB-19",
+   "title": "Export revenue growth pickup in FY27",
    "kind": "directional",
    "metric": "revenue_growth",
    "scope": "Exports",
@@ -943,10 +962,10 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "exports picked up strongly, up 17% YoY and 85% QoQ",
+   "detail": "Exports grew 17% YoY and 85% QoQ",
    "evidence": {
     "quote": "Despite challenging geopolitical environment, exports picked up strongly during the quarter as sales grew 17% year-on-year and grew 85% quarter-on-quarter.",
-    "call": "Oct 2026, p5",
+    "call": "Oct 2026",
     "new_deadline": null
    },
    "statements": [
@@ -965,14 +984,14 @@
    ]
   },
   {
-   "id": "POLYCAB-18",
-   "title": "Company EBITDA margin",
-   "kind": "hard",
+   "id": "POLYCAB-20",
+   "title": "Company EBITDA margin guidance",
+   "kind": "directional",
    "metric": "ebitda_margin",
    "scope": "company",
    "basis": null,
    "period": "FY30",
-   "target": "11–13%",
+   "target": "",
    "direction": null,
    "moved": false,
    "events": [],
@@ -984,41 +1003,229 @@
      "quote": "I think we would like to be in that guidance range, I think, till FY30, and that's how we continue to maintain our stance of our guidance.",
      "speaker": "Aditya Nathany",
      "page": 9,
-     "target": "11–13%",
+     "target": "",
      "period": "FY30",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=77b6d277-0ffc-440d-ba8a-2bd9bc3dc43e.pdf"
     }
    ]
-  },
-  {
-   "id": "POLYCAB-19",
-   "title": "Wires and Cables volume growth",
-   "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "Wires and Cables",
-   "basis": null,
-   "period": "multi-year",
-   "target": "18–19.5%",
-   "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Oct 2026",
-     "quarter": "Q2FY27",
-     "quote": "So if the market -- if you look at the GDP print recently, it's at 7.8% growth. If that kind of market continues, the wires and cables definitely is going to grow at around 12%, 13%, and we will do 1.5x of that.",
-     "speaker": "Aditya Nathany",
-     "page": 13,
-     "target": "18–19.5%",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": "if the market grows at around 12%, 13%",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=77b6d277-0ffc-440d-ba8a-2bd9bc3dc43e.pdf"
-    }
-   ]
   }
- ]
+ ],
+ "business": {
+  "what": "Polycab India manufactures and sells wires, cables, and fast-moving electrical goods, and executes electrical infrastructure projects for retail, industrial, and institutional customers.",
+  "segments": [
+   {
+    "name": "Wires and Cables",
+    "share_pct": null,
+    "revenue_cr": 24480.65,
+    "note": "Manufacture and sale of wires and cables.",
+    "page": 489
+   },
+   {
+    "name": "Fast moving electrical goods (FMEG)",
+    "share_pct": null,
+    "revenue_cr": 2069.33,
+    "note": "Fans, lighting, switches, switchgears, solar products, pumps, and appliances.",
+    "page": 489
+   },
+   {
+    "name": "EPC",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "Design, engineering, supply, and execution of electrical infrastructure projects.",
+    "page": 489
+   }
+  ],
+  "geographies": [
+   {
+    "region": "Within India",
+    "share_pct": null,
+    "page": 489
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 489
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ff6bcced-1327-449f-8a82-6fd651a0124f.pdf",
+  "pages": [
+   9,
+   173,
+   387,
+   388,
+   487,
+   488,
+   489
+  ]
+ },
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 27.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 27% a year over 5 years, 27% over 3 (steady); last 12 months 41%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 24.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 24% a year over 5 years, 28% over 3; last 12 months 28%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 14.0,
+    "unit": "%",
+    "reading": "Operating margin expanded from 10% (FY22) to 14% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 10.0
+     },
+     {
+      "x": "FY23",
+      "y": 13.0
+     },
+     {
+      "x": "FY24",
+      "y": 14.0
+     },
+     {
+      "x": "FY25",
+      "y": 13.0
+     },
+     {
+      "x": "FY26",
+      "y": 14.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 101,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 101% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.02,
+    "unit": "x equity",
+    "reading": "Borrowings ₹236 cr, 0.02× equity; up from ₹118 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 118.0
+     },
+     {
+      "x": "FY23",
+      "y": 191.0
+     },
+     {
+      "x": "FY24",
+      "y": 161.0
+     },
+     {
+      "x": "FY25",
+      "y": 202.0
+     },
+     {
+      "x": "FY26",
+      "y": 236.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 33.0,
+    "unit": "%",
+    "reading": "ROCE 33% in FY26 (from 21% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 21.0
+     },
+     {
+      "x": "FY23",
+      "y": 27.0
+     },
+     {
+      "x": "FY24",
+      "y": 31.0
+     },
+     {
+      "x": "FY25",
+      "y": 30.0
+     },
+     {
+      "x": "FY26",
+      "y": 33.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "figure": "41%",
+    "point": "Revenue growth over the last 12 months significantly outpaced the historical three-year compound growth rate of 27%.",
+    "refs": [
+     "sales_growth"
+    ]
+   },
+   {
+    "figure": "33%",
+    "point": "Return on Capital Employed has improved substantially from 21% in FY22, demonstrating strong capital efficiency.",
+    "refs": [
+     "returns"
+    ]
+   },
+   {
+    "figure": "+35.1%",
+    "point": "International business and company revenue growth accelerated in H2FY26 compared to the first half of the year.",
+    "refs": [
+     "POLYCAB-10",
+     "POLYCAB-11"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "figure": "1.5%",
+    "point": "Actual advertising and promotion spending is significantly below the stated target range of 3–5% for FY26.",
+    "refs": [
+     "POLYCAB-1"
+    ]
+   },
+   {
+    "figure": "6.7%",
+    "point": "BharatNet segment profitability is currently trailing the company's long-term margin target of 12–14%.",
+    "refs": [
+     "POLYCAB-6"
+    ]
+   },
+   {
+    "figure": "Gone quiet",
+    "point": "Management has ceased providing updates on critical Project Spring capex guidance and BharatNet execution timelines.",
+    "refs": [
+     "POLYCAB-5",
+     "POLYCAB-7"
+    ]
+   }
+  ]
+ }
 }

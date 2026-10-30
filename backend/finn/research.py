@@ -11,7 +11,7 @@ from collections import Counter
 from datetime import date
 from typing import Callable
 
-from finn import financials, fiscal, snapshot
+from finn import business, financials, fiscal, snapshot
 from finn.config import OUT
 from finn.portfolio import by_symbol
 from finn.promises import evidence, extract, link, resolve
@@ -172,7 +172,11 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
 
 def enrich(ledger: dict, slug: str, progress: Progress = _quiet) -> dict:
     """Add the numbers snapshot and the bull/bear case (both read the finished record)."""
-    progress("verdicts", "Summing up the numbers and the case each way")
+    progress("verdicts", "Reading the annual report, summing up the numbers and the case each way")
+    try:
+        ledger["business"] = business.build(ledger["name"], slug)
+    except Exception:  # a missing or unreadable annual report shouldn't sink the record
+        ledger["business"] = None
     ledger["snapshot"] = snapshot.build(slug)
     ledger["case"] = snapshot.case(ledger["name"], ledger, ledger["snapshot"])
     return ledger

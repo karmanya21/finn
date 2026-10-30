@@ -4,6 +4,7 @@ Everything here is arithmetic on published figures, so a verdict built on it can
 always show its working: which quarters, which line, what sum.
 """
 
+import re
 from dataclasses import dataclass, field
 
 from finn import fiscal
@@ -75,6 +76,9 @@ class Financials:
         return np_ / avg * 100
 
 
+FY_COLUMN = re.compile(r"^Mar (\d{4})$")  # a full fiscal year; not "Mar 2026 9m" or TTM
+
+
 def load(symbol: str, slug: str | None = None) -> Financials:
     page = screener.company_page(slug or symbol)
     f = Financials(symbol)
@@ -85,7 +89,8 @@ def load(symbol: str, slug: str | None = None) -> Financials:
     for section, target in (("profit-loss", f.annual), ("balance-sheet", f.balance)):
         for row, by_col in screener.table(page, section).items():
             for col, v in by_col.items():
-                if v is None or not col.startswith("Mar "):
-                    continue  # skip TTM and half-year columns
-                target.setdefault(int(col[-2:]), {})[row] = v
+                m = FY_COLUMN.match(col)
+                if v is None or not m:
+                    continue  # skip TTM, half-year and "9m" columns
+                target.setdefault(int(m.group(1)) % 100, {})[row] = v
     return f

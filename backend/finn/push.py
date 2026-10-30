@@ -18,8 +18,9 @@ from finn.filings import (LABEL, ROUTINE, WEIGHT, classify, related_promises, re
 from finn.portfolio import PORTFOLIO
 from finn.sources import bse
 
-SENIOR = re.compile(r"\b(CEO|CFO|MD|Managing Director|Chief Executive|Chief Financial|Chairman|"
-                    r"Whole[- ]time Director|COO|(?<!Vice )President)\b", re.I)
+# The roles that alert: who runs the company and who signs its numbers.
+SENIOR = re.compile(r"\b(CEO|CFO|MD|Managing Director|Chief Executive Officer|Chief Financial Officer|"
+                    r"(?<!Vice )Chair(?:man|person|woman)?)\b", re.I)
 # "September 30, 2026", "30th September, 2026", "30.09.2026"
 QUARTER_END = re.compile(r"(March|June|Sept?(?:ember)?|December)\s*,?\s*(?:\d{1,2}(?:st|nd|rd|th)?,?\s*)?(\d{4})", re.I)
 
@@ -47,7 +48,8 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
             score = 35  # a new transcript is where FINN re-reads the promises; notices and audio links aren't
         item = {"id": f"{c.symbol}-{a['id']}", "symbol": c.symbol, "name": c.name, "at": a["at"],
                 "type": kind, "label": LABEL[kind], "subject": a["subject"], "headline": a["headline"],
-                "pdf": a["pdf"], "summary": None, "people": [], "promises": [], "numbers": None}
+                "pdf": a["pdf"], "summary": None, "people": [], "promises": [], "numbers": None,
+                "senior": False}
 
         if kind == "results" and ledger:
             q = _results_quarter(a)
@@ -72,7 +74,8 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
                 if kind == "management_change":
                     # Company-level roles only; "SVP & Chief Executive - <unit>" is a promotion.
                     senior = any(SENIOR.search(p["role"]) and "vice president" not in p["role"].lower()
-                                 for p in s.get("people", []))
+                                 and p["change"] != "redesignated" for p in s.get("people", []))
+                    item["senior"] = senior
                     score += 10 if senior else -20
             if ledger:
                 item["promises"] = related_promises({**a, "summary": item["summary"]}, ledger)

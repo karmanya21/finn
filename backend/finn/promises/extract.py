@@ -133,7 +133,39 @@ def _normalize(p: dict) -> dict:
     if p.get("metric") == "ebitda_margin" and re.search(r"operating margin|\bEBIT margin", q, re.I) \
             and not re.search(r"EBITDA", q):
         p["metric"] = "operating_margin"
+    # A target only counts if its number is in its own quote. "We remain with this
+    # guidance" carries no number; the model borrowing one from context made fake cuts.
+    nums = _numbers(q)
+    for f in ("low", "high"):
+        if p.get(f) is not None and not _supported(p[f], nums):
+            p[f] = None
+    if p.get("kind") == "hard" and p.get("low") is None and p.get("high") is None:
+        p["kind"] = "directional"
+    # "2x", "twice", "double" are multiples, not percentages.
+    v = p.get("low") if p.get("low") is not None else p.get("high")
+    if v is not None and (re.search(rf"(?<![\d.]){re.escape(_fmt_num(v))}\s?(x|X|×|times)\b", q)
+                          or (v == 2 and re.search(r"\b(twice|double|2x)\b", q, re.I))):
+        p["unit"] = "x"
     return p
+
+
+WORD_NUMBERS = {"twice": 2, "double": 2, "doubling": 2, "triple": 3, "thrice": 3, "half": 50}
+
+
+def _numbers(text: str) -> list[float]:
+    out = [float(m.replace(",", "")) for m in re.findall(r"\d[\d,]*(?:\.\d+)?", text)]
+    out += [v for w, v in WORD_NUMBERS.items() if re.search(rf"\b{w}\b", text, re.I)]
+    return out
+
+
+def _supported(v: float, nums: list[float]) -> bool:
+    """v appears in the quote, allowing unit rescaling (Rs 50 billion = Rs 5,000 crore)."""
+    return any(abs(n * s - v) <= 1e-6 * max(1, abs(v)) for n in nums
+               for s in (1, 10, 100, 1000, 0.1, 0.01, 0.001))
+
+
+def _fmt_num(v: float) -> str:
+    return f"{v:g}"
 
 
 def extract(text: str, company: str, call_label: str, model: str | None = None,

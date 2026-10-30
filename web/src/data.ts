@@ -86,13 +86,20 @@ export interface Metric {
   key: string; label: string; value: number | null; unit: string; reading: string;
   series: { x: string; y: number }[];
 }
-export interface CasePoint { point: string; refs: string[] }
+export interface CasePoint { figure?: string; point: string; refs: string[] }
+
+export interface Business {
+  what: string; year: string | null; source: string; url: string; pages: number[];
+  segments: { name: string; share_pct: number | null; revenue_cr: number | null; note: string | null; page: number | null }[];
+  geographies: { region: string; share_pct: number | null; page: number | null }[];
+}
 
 export interface Ledger extends CompanySummary {
   built: string;
   headline: Headline | null;
   snapshot?: { lender: boolean; metrics: Metric[] };
   case?: { bull: CasePoint[]; bear: CasePoint[] };
+  business?: Business | null;
   calls: { call: string; quarter: string; url: string | null; promises: number }[];
   threads: Thread[];
 }
@@ -257,6 +264,7 @@ export interface Filing {
   summary: string | null; people: Person[]; promises: string[];
   numbers: Headline | null; importance: number; routine: boolean;
   also?: { label: string; pdf: string }[]; // other documents filed with the same results
+  senior?: boolean; // management change involving the CEO, CFO, MD or Chair
 }
 
 export interface Digest { built: string; days: number; items: Filing[] }

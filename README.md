@@ -25,6 +25,16 @@ cd ../web && npm install && npm run dev                # http://localhost:5173
 
 Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction against the hand-labelled set in `eval/gold/`.
 
+## Daily refresh
+
+`.github/workflows/refresh.yml` rebuilds the filings digest and end-of-day prices every evening at 19:00 IST (and on demand from the Actions tab), and commits them if anything changed. It needs one repository secret, `GEMINI_API_KEY`:
+
+```bash
+gh secret set GEMINI_API_KEY
+```
+
+Promise records change only when a new earnings call lands, so they're rebuilt by hand with `scripts.build_all`.
+
 ## How it works
 
 | Stage | What | Model |

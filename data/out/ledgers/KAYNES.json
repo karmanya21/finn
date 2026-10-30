@@ -3,7 +3,7 @@
  "name": "Kaynes Technology",
  "sector": "Electronics manufacturing",
  "size": "mid",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Aug 2026",
  "latest_results": "Q1FY27",
  "headline": {
@@ -76,26 +76,26 @@
   }
  ],
  "record": {
-  "kept": 3,
-  "missed": 6,
+  "kept": 4,
+  "missed": 5,
   "resolved": 9,
-  "moved": 0,
-  "quiet": 4,
-  "open": 16,
+  "moved": 1,
+  "quiet": 5,
+  "open": 15,
   "by_status": {
-   "delivered": 2,
-   "missed": 6,
-   "gone_quiet": 4,
-   "open": 13,
-   "beat": 1,
+   "delivered": 3,
+   "gone_quiet": 5,
+   "missed": 5,
+   "behind": 1,
    "on_track": 2,
-   "tracking": 1
+   "open": 12,
+   "beat": 1
   }
  },
  "threads": [
   {
    "id": "KAYNES-0",
-   "title": "OSAT facility operational",
+   "title": "OSAT facility in Sanand operational",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "OSAT facility in Sanand",
@@ -106,7 +106,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Sanand OSAT facility is operational and ramping up capacity",
+   "detail": "Sanand OSAT facility is now operational",
    "evidence": {
     "quote": "With the Sanand OSAT facility now operational and ramping up capacity, Kaynes is not only contributing to India's goal of semiconductor self-reliance, but also helping shape its journey to becoming a new global leader in advanced electronic manufacturing.",
     "call": "Nov 2025",
@@ -129,23 +129,18 @@
   },
   {
    "id": "KAYNES-1",
-   "title": "PCB plant operational",
+   "title": "HDI PCB plant in Chennai operational",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "HDI PCB plant in Chennai",
-   "basis": "management",
+   "basis": null,
    "period": "Q4FY26",
    "target": "",
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "missed",
-   "detail": "Market expectations for PCB scaling moved ahead of actual delivery",
-   "evidence": {
-    "quote": "One important point that deserves acknowledgment is that certain areas where market expectations moved ahead of actual delivery were driven not only by execution pacing, but also by the broader operational complexities associated with managing the core EMS business amid global uncertainties, while simultaneously scaling new strategic platforms such as OSAT and PCB.",
-    "call": "May 2026",
-    "new_deadline": null
-   },
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
    "statements": [
     {
      "call": "Aug 2025",
@@ -460,6 +455,40 @@
   },
   {
    "id": "KAYNES-9",
+   "title": "PCB business operations",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "PCB business",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "behind",
+   "detail": "PCB operations scaling, market expectations ahead of actual delivery",
+   "evidence": {
+    "quote": "One important point that deserves acknowledgment is that certain areas where market expectations moved ahead of actual delivery were driven not only by execution pacing, but also by the broader operational complexities associated with managing the core EMS business amid global uncertainties, while simultaneously scaling new strategic platforms such as OSAT and PCB.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "the PCB business will start commencement of operations from early next year.",
+     "speaker": "Jairam Sampath",
+     "page": 5,
+     "target": "",
+     "period": "FY27",
+     "deadline": "early FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9ed5c7b3-510f-4570-8d68-92c16e782894.pdf"
+    }
+   ]
+  },
+  {
+   "id": "KAYNES-10",
    "title": "FY27 efficiency",
    "kind": "directional",
    "metric": "other",
@@ -487,7 +516,75 @@
    ]
   },
   {
-   "id": "KAYNES-10",
+   "id": "KAYNES-11",
+   "title": "OSAT facility Phase 0.09 operational",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "OSAT facility",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Sanand OSAT facility is now operational",
+   "evidence": {
+    "quote": "With the Sanand OSAT facility now operational and ramping up capacity, Kaynes is not only contributing to India's goal of semiconductor self-reliance, but also helping shape its journey to becoming a new global leader in advanced electronic manufacturing.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "by, let's say, September or so, we'll have operational the, let's say, Phase 0.09, if you will.",
+     "speaker": "Jairam Sampath",
+     "page": 9,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "September 2025",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9ed5c7b3-510f-4570-8d68-92c16e782894.pdf"
+    }
+   ]
+  },
+  {
+   "id": "KAYNES-12",
+   "title": "OSAT facility commercial shipping",
+   "kind": "milestone",
+   "metric": "revenue",
+   "scope": "OSAT facility",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Commercial production started in Dec 2025",
+   "evidence": {
+    "quote": "And so, the samples have been shipped out, so in some sense, technically, the commercial production has started.",
+    "call": "Dec 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We'll start shipping commercial as we have promised in the fourth quarter, but maybe it will happen sooner than that.",
+     "speaker": "Jairam Sampath",
+     "page": 9,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9ed5c7b3-510f-4570-8d68-92c16e782894.pdf"
+    }
+   ]
+  },
+  {
+   "id": "KAYNES-13",
    "title": "H1FY26 noncurrent assets reduction",
    "kind": "milestone",
    "metric": "working_capital",
@@ -516,7 +613,7 @@
    ]
   },
   {
-   "id": "KAYNES-11",
+   "id": "KAYNES-14",
    "title": "FY26 aerospace billing",
    "kind": "directional",
    "metric": "revenue",
@@ -545,8 +642,8 @@
    ]
   },
   {
-   "id": "KAYNES-12",
-   "title": "FY26 Oragadam plant readiness",
+   "id": "KAYNES-15",
+   "title": "Oragadam plant readiness",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "Oragadam plant",
@@ -574,7 +671,7 @@
    ]
   },
   {
-   "id": "KAYNES-13",
+   "id": "KAYNES-16",
    "title": "FY26 net working capital",
    "kind": "directional",
    "metric": "working_capital",
@@ -608,7 +705,7 @@
    ]
   },
   {
-   "id": "KAYNES-14",
+   "id": "KAYNES-17",
    "title": "Multi-year equity contribution",
    "kind": "hard",
    "metric": "capex",
@@ -636,7 +733,7 @@
    ]
   },
   {
-   "id": "KAYNES-15",
+   "id": "KAYNES-18",
    "title": "FY26 automotive revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -665,7 +762,7 @@
    ]
   },
   {
-   "id": "KAYNES-16",
+   "id": "KAYNES-19",
    "title": "FY26 aerospace and defense revenue share",
    "kind": "directional",
    "metric": "revenue",
@@ -694,7 +791,7 @@
    ]
   },
   {
-   "id": "KAYNES-17",
+   "id": "KAYNES-20",
    "title": "H2FY26 smart metering revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -728,7 +825,7 @@
    ]
   },
   {
-   "id": "KAYNES-18",
+   "id": "KAYNES-21",
    "title": "FY26 receivables reduction",
    "kind": "milestone",
    "metric": "working_capital",
@@ -762,7 +859,7 @@
    ]
   },
   {
-   "id": "KAYNES-19",
+   "id": "KAYNES-22",
    "title": "FY26 capex",
    "kind": "hard",
    "metric": "capex",
@@ -796,7 +893,7 @@
    ]
   },
   {
-   "id": "KAYNES-20",
+   "id": "KAYNES-23",
    "title": "FY28 revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -824,7 +921,7 @@
    ]
   },
   {
-   "id": "KAYNES-21",
+   "id": "KAYNES-24",
    "title": "FY28 OSAT revenue",
    "kind": "hard",
    "metric": "revenue",
@@ -852,8 +949,8 @@
    ]
   },
   {
-   "id": "KAYNES-22",
-   "title": "FY28 PCB revenue",
+   "id": "KAYNES-25",
+   "title": "FY28 PC Board revenue",
    "kind": "hard",
    "metric": "revenue",
    "scope": "PC Board business",
@@ -880,7 +977,7 @@
    ]
   },
   {
-   "id": "KAYNES-23",
+   "id": "KAYNES-26",
    "title": "FY27 order book growth",
    "kind": "directional",
    "metric": "order_book",
@@ -908,7 +1005,7 @@
    ]
   },
   {
-   "id": "KAYNES-24",
+   "id": "KAYNES-27",
    "title": "FY27 Phase 1 completion",
    "kind": "milestone",
    "metric": "capex",
@@ -936,7 +1033,7 @@
    ]
   },
   {
-   "id": "KAYNES-25",
+   "id": "KAYNES-28",
    "title": "Multi-year NPD-led revenue contribution",
    "kind": "soft",
    "metric": "other",
@@ -964,21 +1061,21 @@
    ]
   },
   {
-   "id": "KAYNES-26",
+   "id": "KAYNES-29",
    "title": "FY27 operating cash flow",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "cash_flow",
    "scope": "company",
    "basis": null,
    "period": "FY27",
-   "target": "≥0",
+   "target": "",
    "direction": "up",
    "moved": false,
    "events": [
     {
      "call": "Aug 2026",
-     "from": "≥0",
-     "to": "≥0",
+     "from": "",
+     "to": "",
      "type": "reaffirmed"
     }
    ],
@@ -990,7 +1087,7 @@
      "quote": "at least 70% to 80% of this will come down for sure. And by end of the year, we'll be positive.",
      "speaker": "N. Muthukumar",
      "page": 12,
-     "target": "≥0",
+     "target": "",
      "period": "FY27",
      "deadline": "FY27",
      "condition": null,
@@ -1002,7 +1099,7 @@
      "quote": "whatever the commitment that we have given to you as a leadership team, that by end of the financial year we'll turn the cash positive, we are pretty confident on that.",
      "speaker": "N. Muthukumar",
      "page": 5,
-     "target": "≥0",
+     "target": "",
      "period": "FY27",
      "deadline": "FY27",
      "condition": null,
@@ -1011,7 +1108,7 @@
    ]
   },
   {
-   "id": "KAYNES-27",
+   "id": "KAYNES-30",
    "title": "FY27 rail business revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1039,24 +1136,25 @@
    ]
   },
   {
-   "id": "KAYNES-28",
-   "title": "FY27 PCB revenue",
+   "id": "KAYNES-31",
+   "title": "FY27 PCB and OSAT revenue",
    "kind": "hard",
    "metric": "revenue",
-   "scope": "PCB business",
-   "basis": "management",
+   "scope": "OSAT and PCB",
+   "basis": null,
    "period": "FY27",
-   "target": "₹300–400 cr",
+   "target": "₹450–500 cr",
    "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "on_track",
-   "detail": "OSAT and PCB revenue target of INR450-500 crores on track",
-   "evidence": {
-    "quote": "As far as OSAT and PCB is concerned, we already told from third quarter the revenue starts in both the business, and we have committed a full year revenue of totally INR500 crores between both, INR450 to INR500 crores, which is what we are targeting at this point in time, we are on the target.",
-    "call": "Aug 2026",
-    "new_deadline": null
-   },
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "₹300–400 cr",
+     "to": "₹450–500 cr",
+     "type": "raised"
+    }
+   ],
+   "status": "open",
    "statements": [
     {
      "call": "May 2026",
@@ -1069,11 +1167,23 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c2aa16ac-08ab-430a-819a-833f94c09dde.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "we have committed a full year revenue of totally INR500 crores between both, INR450 to INR500 crores, which is what we are targeting at this point in time, we are on the target.",
+     "speaker": "N. Muthukumar",
+     "page": 14,
+     "target": "₹450–500 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e8d82234-f369-467f-a76f-75bb2747aaa1.pdf"
     }
    ]
   },
   {
-   "id": "KAYNES-29",
+   "id": "KAYNES-32",
    "title": "FY27 order wins",
    "kind": "milestone",
    "metric": "deal_wins",
@@ -1107,7 +1217,7 @@
    ]
   },
   {
-   "id": "KAYNES-30",
+   "id": "KAYNES-33",
    "title": "Q3FY27 plant operational status",
    "kind": "milestone",
    "metric": "capacity",
@@ -1135,7 +1245,7 @@
    ]
   },
   {
-   "id": "KAYNES-31",
+   "id": "KAYNES-34",
    "title": "FY27 GridCrest receivables turnaround",
    "kind": "directional",
    "metric": "working_capital",
@@ -1163,27 +1273,18 @@
    ]
   },
   {
-   "id": "KAYNES-32",
+   "id": "KAYNES-35",
    "title": "FY27 revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
-   "basis": "financials",
+   "basis": null,
    "period": "FY27",
-   "target": "2 x",
+   "target": "2×",
    "direction": "up",
    "moved": false,
    "events": [],
-   "status": "tracking",
-   "pace": {
-    "so_far": 40.564635958395236,
-    "so_far_label": "Q1 FY27",
-    "needs": -6.78902810700982,
-    "needs_label": "Q2–Q4 FY27",
-    "needs_for": 2,
-    "status": "ahead",
-    "measure": "revenue growth"
-   },
+   "status": "open",
    "statements": [
     {
      "call": "Aug 2026",
@@ -1191,7 +1292,7 @@
      "quote": "we are quite confident of achieving the twice the market growth.",
      "speaker": "N. Muthukumar",
      "page": 14,
-     "target": "2 x",
+     "target": "2×",
      "period": "FY27",
      "deadline": null,
      "condition": "market growth",
@@ -1200,42 +1301,14 @@
    ]
   },
   {
-   "id": "KAYNES-33",
-   "title": "FY27 OSAT and PCB revenue",
-   "kind": "hard",
-   "metric": "revenue",
-   "scope": "OSAT and PCB",
-   "basis": null,
-   "period": "FY27",
-   "target": "₹450–500 cr",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Aug 2026",
-     "quarter": "Q1FY27",
-     "quote": "we have committed a full year revenue of totally INR500 crores between both, INR450 to INR500 crores, which is what we are targeting at this point in time, we are on the target.",
-     "speaker": "N. Muthukumar",
-     "page": 14,
-     "target": "₹450–500 cr",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e8d82234-f369-467f-a76f-75bb2747aaa1.pdf"
-    }
-   ]
-  },
-  {
-   "id": "KAYNES-34",
+   "id": "KAYNES-36",
    "title": "FY27 capex",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "capex",
    "scope": "company",
    "basis": null,
    "period": "FY27",
-   "target": "₹850 cr",
+   "target": "",
    "direction": null,
    "moved": false,
    "events": [],
@@ -1247,7 +1320,7 @@
      "quote": "We said we will be funding for this capex for this year is about INR300 crores for OSAT, INR300 crores for PCB, and about INR250 crores for EMS business.",
      "speaker": "N. Muthukumar",
      "page": 16,
-     "target": "₹850 cr",
+     "target": "",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -1256,7 +1329,7 @@
    ]
   },
   {
-   "id": "KAYNES-35",
+   "id": "KAYNES-37",
    "title": "Q2FY27 commercial production start",
    "kind": "milestone",
    "metric": "capacity",
@@ -1284,7 +1357,7 @@
    ]
   },
   {
-   "id": "KAYNES-36",
+   "id": "KAYNES-38",
    "title": "FY28 satellite launch",
    "kind": "milestone",
    "metric": "other",
@@ -1312,7 +1385,7 @@
    ]
   },
   {
-   "id": "KAYNES-37",
+   "id": "KAYNES-39",
    "title": "Q3FY27 OSAT and PCB revenue commencement",
    "kind": "milestone",
    "metric": "revenue",
@@ -1340,6 +1413,42 @@
    ]
   }
  ],
+ "business": {
+  "what": "Kaynes Technology is a vertically integrated electronics manufacturing services provider that designs and manufactures electronic systems and components for various industrial and commercial customers.",
+  "segments": [
+   {
+    "name": "Electronics Manufacturing Services (EMS)",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "The company operates predominantly in one business segment of Electronics Manufacturing Services.",
+    "page": 280
+   }
+  ],
+  "geographies": [
+   {
+    "region": "In India",
+    "share_pct": null,
+    "page": 280
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 280
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf",
+  "pages": [
+   3,
+   4,
+   54,
+   186,
+   210,
+   257,
+   280
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1459,43 +1568,47 @@
  "case": {
   "bull": [
    {
-    "point": "The company successfully delivered on its FY26 EBITDA margin target of 15.8%, exceeding the 15.6% goal.",
+    "figure": "15.8%",
+    "point": "Management successfully delivered on their FY26 EBITDA margin target of at least 15.6%.",
     "refs": [
-     "KAYNES-3",
+     "KAYNES-3"
+    ]
+   },
+   {
+    "figure": "₹450–500 cr",
+    "point": "Management demonstrated confidence by raising their FY27 revenue guidance for the PCB and OSAT business.",
+    "refs": [
+     "KAYNES-31"
+    ]
+   },
+   {
+    "figure": "16%",
+    "point": "Operating margins have consistently expanded from 13% in FY22 to 16% by FY26.",
+    "refs": [
      "margin"
-    ]
-   },
-   {
-    "point": "Management has successfully operationalized the Sanand OSAT facility, which is currently ramping up capacity.",
-    "refs": [
-     "KAYNES-0"
-    ]
-   },
-   {
-    "point": "The order book remains strong at ₹8,900 crores with positive momentum in recent order wins.",
-    "refs": [
-     "KAYNES-29"
     ]
    }
   ],
   "bear": [
    {
-    "point": "FY26 revenue of ₹3,626.4 crores significantly missed the ₹4,500 crore guidance target.",
+    "figure": "₹3,626.4 cr",
+    "point": "The company significantly missed its FY26 revenue target of ₹4,500 crores.",
     "refs": [
      "KAYNES-2"
     ]
    },
    {
-    "point": "Working capital management remains a concern, with FY26 days reaching 122 against a target of 85 days.",
+    "figure": "122 days",
+    "point": "Working capital efficiency deteriorated significantly, missing the 85-day target by a wide margin.",
     "refs": [
      "KAYNES-5",
-     "KAYNES-13"
+     "KAYNES-16"
     ]
    },
    {
-    "point": "Operating cash flow has been weak, representing -63% of net profit over the last five years.",
+    "figure": "-63%",
+    "point": "Operating cash flow has been weak, averaging negative 63% of net profit over the last five years.",
     "refs": [
-     "KAYNES-4",
      "cash_conversion"
     ]
    }

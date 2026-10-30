@@ -1,0 +1,1049 @@
+{
+ "symbol": "HCLTECH",
+ "name": "HCLTech",
+ "sector": "IT services",
+ "size": "large",
+ "built": "2026-10-30",
+ "latest_call": "Oct 2026",
+ "latest_results": "Q2FY27",
+ "headline": {
+  "quarter": "Q2FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 35620.0,
+    "qoq": 3.0104977009167477,
+    "yoy": 11.514620249201668
+   },
+   {
+    "label": "EBITDA",
+    "value": 7439.0,
+    "qoq": 8.282387190684126,
+    "yoy": 13.659281894576015
+   },
+   {
+    "label": "PBT",
+    "value": 6467.0,
+    "qoq": 5.8775376555337155,
+    "yoy": 13.416345142055409
+   },
+   {
+    "label": "PAT",
+    "value": 5132.0,
+    "qoq": 10.938175529615224,
+    "yoy": 21.152030217186034
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "Jul 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf",
+   "promises": 6
+  },
+  {
+   "call": "Oct 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=172ac7e9-7ce4-4c53-9e40-8b70187da3f9.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Jan 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=08d64f75-ab38-4158-8b8a-0d933bc007d3.pdf",
+   "promises": 4
+  },
+  {
+   "call": "Apr 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf",
+   "promises": 7
+  },
+  {
+   "call": "Jul 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=11be9fba-0308-4756-a474-e4f2903fdaac.pdf",
+   "promises": 3
+  },
+  {
+   "call": "Oct 2026",
+   "quarter": "Q2FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf",
+   "promises": 6
+  }
+ ],
+ "record": {
+  "kept": 4,
+  "missed": 0,
+  "resolved": 4,
+  "moved": 2,
+  "quiet": 1,
+  "open": 5,
+  "by_status": {
+   "delivered": 4,
+   "delayed": 1,
+   "gone_quiet": 1,
+   "cant_verify": 2,
+   "tracking": 1,
+   "open": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "HCLTECH-0",
+   "title": "Company revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "3–5%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "3–5%",
+     "to": "3–5%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "FY26 company-level guidance raised to 4% to 4.5%",
+   "evidence": {
+    "quote": "On the back of a standout quarter and sustained growth momentum, we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms.",
+    "call": "Jan 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "Looking ahead, we are improving our revenue guidance now for FY26 to 3% to 5% in constant currency, based on better Q1 performance and the outlook for the remaining quarters.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "3–5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "Given the softness in Software segment, due to decline in perpetual license revenue, we are keeping the company-level guidance unchanged at 3%-5% in constant currency terms.",
+     "speaker": "Shiv Walia",
+     "page": 11,
+     "target": "3–5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=172ac7e9-7ce4-4c53-9e40-8b70187da3f9.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-1",
+   "title": "EBIT margin",
+   "kind": "hard",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "17–18%",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Oct 2025",
+     "from": "17–18%",
+     "to": "17–18%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jan 2026",
+     "from": "17–18%",
+     "to": "17–18%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Reported EBIT margin 17.2% for FY26",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "On margin guidance, we are adjusting our EBIT guidance to 17% to 18%, due to the factors I mentioned earlier: 1.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "17–18%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf"
+    },
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "We remain on track to deliver our full-year EBIT margin guidance of 17%-18%.",
+     "speaker": "Shiv Walia",
+     "page": 11,
+     "target": "17–18%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=172ac7e9-7ce4-4c53-9e40-8b70187da3f9.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "We remain on track to deliver on our full year EBIT margin guidance of 17% to 18%.",
+     "speaker": "Shiv Walia",
+     "page": 11,
+     "target": "17–18%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=08d64f75-ab38-4158-8b8a-0d933bc007d3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-2",
+   "title": "TCV step-up",
+   "kind": "directional",
+   "metric": "order_inflow",
+   "scope": "company",
+   "basis": null,
+   "period": "Q2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jul 2025)",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "If all goes as per plan, the TCV number should see a step-up next quarter.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": null,
+     "condition": "if all goes as per plan",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-3",
+   "title": "Margins moderation",
+   "kind": "directional",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jul 2025)",
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "It would significantly moderate in Q2 and in Q3 we should be in line with the expected margins.",
+     "speaker": "C. Vijayakumar",
+     "page": 15,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-4",
+   "title": "Marquee win announcement",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q2FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Marquee deal announced with Fortune 250 semiconductor OEM",
+   "evidence": {
+    "quote": "While there are several deals that added to this $2.4 billion, I want to talk about a marquee deal that showcases the depth of value we deliver to our clients.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2025",
+     "quarter": "Q1FY26",
+     "quote": "We had one marquee win in the last quarter, which we will probably announce during this quarter more formally.",
+     "speaker": "C. Vijayakumar",
+     "page": 16,
+     "target": "",
+     "period": "Q2FY26",
+     "deadline": "Q2FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=70e8e2f8-36ca-4816-9bce-5587cead0c23.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-5",
+   "title": "Services revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "services",
+   "basis": "management",
+   "period": "FY26",
+   "target": "4.75–5.25%",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Jan 2026",
+     "from": "4–5%",
+     "to": "4.75–5.25%",
+     "type": "raised"
+    }
+   ],
+   "status": "delivered",
+   "detail": "FY26 services revenue growth 4.8% YoY vs 4.75-5.25% cc guided",
+   "evidence": {
+    "quote": "Coming to the Services side, Services revenue came in at $13,315 million, a growth of 4.8% YoY.",
+    "call": "Apr 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "On the back of standout quarter and sustained growth momentum, we are raising our full-year Services revenue growth guidance to 4%-5% in constant currency terms.",
+     "speaker": "Shiv Walia",
+     "page": 11,
+     "target": "4–5%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=172ac7e9-7ce4-4c53-9e40-8b70187da3f9.pdf"
+    },
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "we are raising our full year services revenue growth guidance to 4.75% to 5.25% in constant currency terms and the company level guidance to 4% to 4.5% in constant currency terms.",
+     "speaker": "Shiv Walia",
+     "page": 11,
+     "target": "4.75–5.25%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=08d64f75-ab38-4158-8b8a-0d933bc007d3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-6",
+   "title": "GA launch of AI Force v2.0",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delayed",
+   "detail": "GA launch expected soon",
+   "evidence": {
+    "quote": "We had launched AI Force 2.0 beta in the previous quarter, which is an agentic platform delivering service transformation offerings. We are seeing excellent results, and we expect to launch GA soon.",
+    "call": "Jan 2026",
+    "new_deadline": "soon"
+   },
+   "statements": [
+    {
+     "call": "Oct 2025",
+     "quarter": "Q2FY26",
+     "quote": "On offerings, our AI Force platform, we launched v2.0 beta release with GA planned in January 2026.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "January 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=172ac7e9-7ce4-4c53-9e40-8b70187da3f9.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-7",
+   "title": "Restructuring exercise completion",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our endeavour is to finish this exercise by Q4 and start the new financial year on a clean state.",
+     "speaker": "Shiv Walia",
+     "page": 15,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=08d64f75-ab38-4158-8b8a-0d933bc007d3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-8",
+   "title": "Mega deal contribution",
+   "kind": "directional",
+   "metric": "revenue",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "statements": [
+    {
+     "call": "Jan 2026",
+     "quarter": "Q3FY26",
+     "quote": "No, there is no contribution from the mega deal this quarter. It will start ramping up in the current quarter.",
+     "speaker": "C. Vijayakumar",
+     "page": 16,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=08d64f75-ab38-4158-8b8a-0d933bc007d3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-9",
+   "title": "FY27 revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "2.5–4%",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "1–4%",
+     "to": "1–4%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "1–4%",
+     "to": "2.5–4%",
+     "type": "raised"
+    }
+   ],
+   "status": "cant_verify",
+   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1 FY27, which includes currency moves, so it isn't comparable.",
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "The revenue growth guidance for the full year is 1% to 4% in constant currency and 1.5% to 4.5% for Services.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "1–4%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+     "speaker": "C. Vijayakumar",
+     "page": 4,
+     "target": "1–4%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "organic growth",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=11be9fba-0308-4756-a474-e4f2903fdaac.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+     "speaker": "AI",
+     "page": 8,
+     "target": "2.5–4%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-10",
+   "title": "FY27 EBIT margin",
+   "kind": "hard",
+   "metric": "operating_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY27",
+   "target": "17.5–18.5%",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "17.5–18.5%",
+     "to": "17.5–18.5%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Oct 2026",
+     "from": "17.5–18.5%",
+     "to": "17.5–18.5%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "tracking",
+   "pace": {
+    "so_far": 17.46178720494594,
+    "so_far_label": "H1 FY27",
+    "status": "on_pace",
+    "measure": "EBIT margin"
+   },
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "EBIT margin guidance is 17.5% to 18.5%.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "17.5–18.5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Looking ahead, we are retaining our guidance of 1% to 4% and margin guidance of 17.5% to 18.5% for FY27.",
+     "speaker": "C. Vijayakumar",
+     "page": 4,
+     "target": "17.5–18.5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "organic growth",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=11be9fba-0308-4756-a474-e4f2903fdaac.pdf"
+    },
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+     "speaker": "AI",
+     "page": 8,
+     "target": "17.5–18.5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-11",
+   "title": "Revenue growth impact",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect the impact to continue for rest of the calendar year as well, which is accounted for in the guidance we will provide.",
+     "speaker": "C. Vijayakumar",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-12",
+   "title": "Discretionary spend impact",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q3FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Discretionary spending cuts impact playing out as expected",
+   "evidence": {
+    "quote": "And we did call out that we had some sharp cuts in discretionary spending in two large US telcos, and we did say that it will have an impact in the subsequent quarters and that is what is playing out.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "And as I said, two large Telecom clients have cut down on the discretionary spent for 17 this calendar year. I see that continuing till end of the year.",
+     "speaker": "C. Vijayakumar",
+     "page": 16,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-13",
+   "title": "Revenue impact",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "Q1FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Apr 2026)",
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "We should assume that you will see a full quarter kind of an impact in the next quarter.",
+     "speaker": "Nitin Padmanabhan",
+     "page": 19,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-14",
+   "title": "Portfolio revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "experience portfolio",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "So, our expectation is low-single digit, flattish or marginally declining, in the coming year.",
+     "speaker": "C. Vijayakumar",
+     "page": 20,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-15",
+   "title": "Mega deal ramp-up growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "Despite the headwinds that we had in Q4, which will continue into Q1, the mega deal ramp-up is on track. And that growth will offset the headwinds from the two client challenges that we talked about.",
+     "speaker": "C. Vijayakumar",
+     "page": 21,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=48f5d6fd-b499-45da-bc6d-2e0439495ec2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-16",
+   "title": "Mega deal steady state",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "On the mega deal win, the transition is expected to start in a couple of months, and the steady state is expected to be reached only in April of 2027, so which is coming in the next financial year.",
+     "speaker": "C. Vijayakumar",
+     "page": 17,
+     "target": "",
+     "period": "FY28",
+     "deadline": "Apr 2027",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=11be9fba-0308-4756-a474-e4f2903fdaac.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-17",
+   "title": "FY27 Services revenue growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Services",
+   "basis": null,
+   "period": "FY27",
+   "target": "3–4%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "cant_verify",
+   "detail": "Guided in constant currency; reported ₹ revenue grew +12.7% in H1 FY27, which includes currency moves, so it isn't comparable.",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "Services revenue growth guidance is 3% to 4%.",
+     "speaker": "AI",
+     "page": 8,
+     "target": "3–4%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf"
+    }
+   ]
+  },
+  {
+   "id": "HCLTECH-18",
+   "title": "Free cash flow to net income ratio",
+   "kind": "directional",
+   "metric": "cash_flow",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "So we should be able to see that this FCI to NI revert to maybe 100% plus level as these one- off roll over from LTM calculation.",
+     "speaker": "Shiv Walia",
+     "page": 18,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ccce0001-ff5d-4875-b1e5-5c558669f49c.pdf"
+    }
+   ]
+  }
+ ],
+ "business": {
+  "what": "HCLTech is a global technology company providing digital transformation, engineering, R&D, and software products to enterprises worldwide.",
+  "segments": [
+   {
+    "name": "IT and Business Services",
+    "share_pct": 73.8,
+    "revenue_cr": 96095,
+    "note": "Digital transformation solutions in applications, infrastructure, cloud, AI, and business processes.",
+    "page": 139
+   },
+   {
+    "name": "Engineering and R&D services",
+    "share_pct": 17.0,
+    "revenue_cr": 22063,
+    "note": "Engineering and research and development services.",
+    "page": 139
+   },
+   {
+    "name": "HCLSoftware",
+    "share_pct": 9.5,
+    "revenue_cr": 12397,
+    "note": "Products and platforms business.",
+    "page": 139
+   }
+  ],
+  "geographies": [
+   {
+    "region": "United States of America (USA)",
+    "share_pct": 55.5,
+    "page": 139
+   },
+   {
+    "region": "Europe",
+    "share_pct": 28.1,
+    "page": 139
+   },
+   {
+    "region": "India",
+    "share_pct": 3.0,
+    "page": 139
+   },
+   {
+    "region": "Rest of the world",
+    "share_pct": 13.4,
+    "page": 139
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4bc45f66-7fb5-4fab-a87a-b32321b63059.pdf",
+  "pages": [
+   108,
+   118,
+   126,
+   139,
+   387,
+   451,
+   452
+  ]
+ },
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 12.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 12% a year over 5 years, 9% over 3 (slowing); last 12 months 13%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 9.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 9% a year over 5 years, 6% over 3; last 12 months 12%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 21.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 24% (FY22) to 21% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 24.0
+     },
+     {
+      "x": "FY23",
+      "y": 22.0
+     },
+     {
+      "x": "FY24",
+      "y": 22.0
+     },
+     {
+      "x": "FY25",
+      "y": 22.0
+     },
+     {
+      "x": "FY26",
+      "y": 21.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 127,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 127% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.07,
+    "unit": "x equity",
+    "reading": "Borrowings ₹5,215 cr, 0.07× equity; down from ₹6,343 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 6343.0
+     },
+     {
+      "x": "FY23",
+      "y": 4794.0
+     },
+     {
+      "x": "FY24",
+      "y": 5756.0
+     },
+     {
+      "x": "FY25",
+      "y": 6276.0
+     },
+     {
+      "x": "FY26",
+      "y": 5215.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 30.0,
+    "unit": "%",
+    "reading": "ROCE 30% in FY26 (from 25% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 25.0
+     },
+     {
+      "x": "FY23",
+      "y": 28.0
+     },
+     {
+      "x": "FY24",
+      "y": 30.0
+     },
+     {
+      "x": "FY25",
+      "y": 32.0
+     },
+     {
+      "x": "FY26",
+      "y": 30.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "figure": "4% to 4.5%",
+    "point": "Management successfully raised FY26 revenue growth guidance, demonstrating confidence in meeting their targets.",
+    "refs": [
+     "HCLTECH-0"
+    ]
+   },
+   {
+    "figure": "30%",
+    "point": "ROCE has improved significantly from 25% in FY22 to 30% in FY26, indicating efficient capital allocation.",
+    "refs": [
+     "returns"
+    ]
+   },
+   {
+    "figure": "127%",
+    "point": "The company maintains strong financial discipline with operating cash flow averaging 127% of net profit over five years.",
+    "refs": [
+     "cash_conversion"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "figure": "24% → 21%",
+    "point": "Operating margins have faced consistent compression over the last four years, dropping from 24% to 21%.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "3 of 8",
+    "point": "Multiple operational promises including TCV step-ups, margin moderation, and restructuring updates have lapsed or gone quiet.",
+    "refs": [
+     "HCLTECH-2",
+     "HCLTECH-3",
+     "HCLTECH-7",
+     "HCLTECH-8",
+     "HCLTECH-13"
+    ]
+   },
+   {
+    "figure": "Delayed",
+    "point": "The GA launch of AI Force v2.0 has missed its original Q4FY26 target, indicating potential execution friction.",
+    "refs": [
+     "HCLTECH-6"
+    ]
+   }
+  ]
+ }
+}

@@ -60,16 +60,16 @@
    "kept": 3,
    "missed": 1,
    "resolved": 4,
-   "moved": 4,
-   "quiet": 7,
-   "open": 26,
+   "moved": 3,
+   "quiet": 6,
+   "open": 24,
    "by_status": {
-    "gone_quiet": 7,
+    "gone_quiet": 6,
     "delivered": 3,
     "missed": 1,
     "open": 20,
-    "on_track": 4,
     "behind": 1,
+    "on_track": 2,
     "delayed": 1
    }
   }
@@ -125,16 +125,17 @@
   "latest_results": "Q1FY27",
   "record": {
    "kept": 2,
-   "missed": 0,
-   "resolved": 2,
-   "moved": 8,
-   "quiet": 12,
-   "open": 34,
+   "missed": 1,
+   "resolved": 3,
+   "moved": 6,
+   "quiet": 10,
+   "open": 36,
    "by_status": {
-    "open": 22,
-    "gone_quiet": 12,
-    "on_track": 7,
+    "open": 25,
+    "gone_quiet": 10,
+    "on_track": 6,
     "delayed": 4,
+    "missed": 1,
     "delivered": 1,
     "beat": 1,
     "tracking": 1
@@ -153,13 +154,13 @@
    "missed": 0,
    "resolved": 1,
    "moved": 4,
-   "quiet": 2,
-   "open": 18,
+   "quiet": 3,
+   "open": 14,
    "by_status": {
     "behind": 1,
-    "on_track": 5,
-    "open": 11,
-    "gone_quiet": 2,
+    "on_track": 2,
+    "open": 10,
+    "gone_quiet": 3,
     "delayed": 1,
     "delivered": 1
    }
@@ -173,17 +174,17 @@
   "latest_call": "Aug 2026",
   "latest_results": "Q1FY27",
   "record": {
-   "kept": 3,
+   "kept": 2,
    "missed": 0,
-   "resolved": 3,
-   "moved": 4,
-   "quiet": 4,
-   "open": 25,
+   "resolved": 2,
+   "moved": 2,
+   "quiet": 5,
+   "open": 19,
    "by_status": {
-    "on_track": 4,
-    "beat": 3,
-    "open": 21,
-    "gone_quiet": 4
+    "on_track": 2,
+    "beat": 2,
+    "open": 17,
+    "gone_quiet": 5
    }
   }
  },
@@ -204,10 +205,9 @@
    "by_status": {
     "delivered": 3,
     "open": 4,
-    "delayed": 1,
     "gone_quiet": 3,
-    "behind": 1,
-    "on_track": 1
+    "on_track": 2,
+    "behind": 1
    }
   }
  },
@@ -222,13 +222,11 @@
    "kept": 0,
    "missed": 0,
    "resolved": 0,
-   "moved": 1,
-   "quiet": 1,
-   "open": 3,
+   "moved": 0,
+   "quiet": 0,
+   "open": 2,
    "by_status": {
     "on_track": 1,
-    "gone_quiet": 1,
-    "tracking": 1,
     "open": 1
    }
   }
@@ -242,16 +240,17 @@
   "latest_results": "Q1FY27",
   "record": {
    "kept": 2,
-   "missed": 2,
-   "resolved": 4,
-   "moved": 5,
-   "quiet": 0,
-   "open": 16,
+   "missed": 3,
+   "resolved": 5,
+   "moved": 3,
+   "quiet": 6,
+   "open": 19,
    "by_status": {
-    "on_track": 2,
-    "open": 12,
+    "on_track": 3,
     "beat": 2,
-    "missed": 2,
+    "gone_quiet": 6,
+    "missed": 3,
+    "open": 14,
     "delayed": 2
    }
   }
@@ -267,14 +266,14 @@
    "kept": 2,
    "missed": 1,
    "resolved": 3,
-   "moved": 4,
+   "moved": 1,
    "quiet": 4,
-   "open": 24,
+   "open": 22,
    "by_status": {
     "gone_quiet": 4,
     "beat": 1,
     "delivered": 1,
-    "open": 18,
+    "open": 16,
     "on_track": 3,
     "missed": 1,
     "delayed": 1,
@@ -293,15 +292,16 @@
    "kept": 1,
    "missed": 1,
    "resolved": 2,
-   "moved": 9,
-   "quiet": 1,
-   "open": 21,
+   "moved": 8,
+   "quiet": 2,
+   "open": 22,
    "by_status": {
-    "delivered": 1,
-    "delayed": 1,
     "open": 17,
+    "delayed": 1,
+    "gone_quiet": 2,
+    "behind": 1,
     "on_track": 3,
-    "gone_quiet": 1,
+    "delivered": 1,
     "missed": 1
    }
   }
@@ -331,19 +331,19 @@
   "latest_call": "May 2026",
   "latest_results": "Q1FY27",
   "record": {
-   "kept": 2,
+   "kept": 4,
    "missed": 4,
-   "resolved": 6,
-   "moved": 6,
-   "quiet": 5,
-   "open": 18,
+   "resolved": 8,
+   "moved": 1,
+   "quiet": 6,
+   "open": 19,
    "by_status": {
-    "on_track": 7,
+    "on_track": 8,
     "beat": 2,
-    "gone_quiet": 5,
-    "open": 10,
-    "missed": 4,
-    "delayed": 1
+    "gone_quiet": 6,
+    "open": 11,
+    "delivered": 2,
+    "missed": 4
    }
   }
  },
@@ -379,20 +379,20 @@
   "latest_call": "Aug 2026",
   "latest_results": "Q1FY27",
   "record": {
-   "kept": 3,
-   "missed": 6,
+   "kept": 4,
+   "missed": 5,
    "resolved": 9,
-   "moved": 0,
-   "quiet": 4,
-   "open": 16,
+   "moved": 1,
+   "quiet": 5,
+   "open": 15,
    "by_status": {
-    "delivered": 2,
-    "missed": 6,
-    "gone_quiet": 4,
-    "open": 13,
-    "beat": 1,
+    "delivered": 3,
+    "gone_quiet": 5,
+    "missed": 5,
+    "behind": 1,
     "on_track": 2,
-    "tracking": 1
+    "open": 12,
+    "beat": 1
    }
   }
  },

@@ -3,7 +3,7 @@
  "name": "UltraTech Cement",
  "sector": "Cement",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Oct 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -80,13 +80,13 @@
   "missed": 0,
   "resolved": 1,
   "moved": 4,
-  "quiet": 2,
-  "open": 18,
+  "quiet": 3,
+  "open": 14,
   "by_status": {
    "behind": 1,
-   "on_track": 5,
-   "open": 11,
-   "gone_quiet": 2,
+   "on_track": 2,
+   "open": 10,
+   "gone_quiet": 3,
    "delayed": 1,
    "delivered": 1
   }
@@ -219,37 +219,28 @@
   {
    "id": "ULTRACEMCO-2",
    "title": "Revenue growth",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "revenue_growth",
    "scope": "company",
    "basis": "management",
    "period": "FY27",
-   "target": "≥10%",
+   "target": "",
    "direction": "up",
    "moved": false,
    "events": [
     {
      "call": "May 2026",
-     "from": "≥10%",
-     "to": "≥10%",
+     "from": "",
+     "to": "",
      "type": "reaffirmed"
     }
    ],
-   "status": "on_track",
-   "detail": "Revenue growth of 21% in Q1 FY27",
+   "status": "beat",
+   "detail": "FY27 revenue growth 21% on like-for-like basis",
    "evidence": {
-    "quote": "if you look at net of freight cost, since we have started reporting ex-factory sales from Q1 '27, knocking off the freight costs, the revenues were INR993 crores as compared to INR821 crores on a like-for- like basis, which is a 21% growth in revenues, backed by a 19% growth in their volumes.",
+    "quote": "the revenues were INR993 crores as compared to INR821 crores on a like-for- like basis, which is a 21% growth in revenues, backed by a 19% growth in their volumes.",
     "call": "Jul 2026",
     "new_deadline": null
-   },
-   "pace": {
-    "so_far": 17.271659899222147,
-    "so_far_label": "H1 FY27",
-    "needs": 3.758424489281742,
-    "needs_label": "H2 FY27",
-    "needs_for": 10,
-    "status": "on_pace",
-    "measure": "revenue growth"
    },
    "statements": [
     {
@@ -258,7 +249,7 @@
      "quote": "But on the base of FY '25, we'll do a double-digit growth, definitely.",
      "speaker": "Atul Daga",
      "page": 9,
-     "target": "≥10%",
+     "target": "",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -270,7 +261,7 @@
      "quote": "Next financial year. We would target double-digit growth.",
      "speaker": "Atul Daga",
      "page": 16,
-     "target": "≥10%",
+     "target": "",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -280,7 +271,7 @@
   },
   {
    "id": "ULTRACEMCO-3",
-   "title": "Annual capex",
+   "title": "Capex",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
@@ -300,13 +291,13 @@
      "call": "Jan 2026",
      "from": "≥₹10,000 cr",
      "to": "₹9,500–10,000 cr",
-     "type": "lowered"
+     "type": "reaffirmed"
     },
     {
      "call": "May 2026",
      "from": "₹9,500–10,000 cr",
      "to": "₹8,000–10,000 cr",
-     "type": "lowered"
+     "type": "reaffirmed"
     },
     {
      "call": "Oct 2026",
@@ -487,13 +478,13 @@
      "call": "May 2026",
      "from": "200 MTPA",
      "to": "242 MTPA",
-     "type": "raised"
+     "type": "reaffirmed"
     },
     {
      "call": "Jul 2026",
      "from": "242 MTPA",
      "to": "213 MTPA",
-     "type": "lowered"
+     "type": "reaffirmed"
     },
     {
      "call": "Oct 2026",
@@ -590,26 +581,26 @@
    "scope": "company",
    "basis": null,
    "period": "Q4FY27",
-   "target": "≤1 x",
+   "target": "≤1×",
    "direction": "down",
    "moved": true,
    "events": [
     {
      "call": "Jan 2026",
-     "from": "≤0.7 x",
-     "to": "0.8–0.9 x",
+     "from": "≤0.7×",
+     "to": "0.8–0.9×",
      "type": "raised"
     },
     {
      "call": "May 2026",
-     "from": "0.8–0.9 x",
-     "to": "≤1 x",
-     "type": "raised"
+     "from": "0.8–0.9×",
+     "to": "≤1×",
+     "type": "reaffirmed"
     },
     {
      "call": "Oct 2026",
-     "from": "≤1 x",
-     "to": "≤1 x",
+     "from": "≤1×",
+     "to": "≤1×",
      "type": "reaffirmed"
     }
    ],
@@ -621,7 +612,7 @@
      "quote": "by the time we complete our expansion, we will be again less than 0.7x net debt EBITDA.",
      "speaker": "Atul Daga",
      "page": 3,
-     "target": "≤0.7 x",
+     "target": "≤0.7×",
      "period": "multi-year",
      "deadline": null,
      "condition": "completion of expansion",
@@ -633,7 +624,7 @@
      "quote": "I believe and I'm very confident that we'll reach the mark of 1x and be in 0.8, 0.9x net debt EBITDA by the end of this fiscal year.",
      "speaker": "Atul Daga",
      "page": 3,
-     "target": "0.8–0.9 x",
+     "target": "0.8–0.9×",
      "period": "FY26",
      "deadline": "Q4FY26",
      "condition": null,
@@ -645,7 +636,7 @@
      "quote": "We'll maintain our leverage below 1x year after year after meeting our growth capex.",
      "speaker": "Atul Daga",
      "page": 3,
-     "target": "≤1 x",
+     "target": "≤1×",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -657,7 +648,7 @@
      "quote": "But by the end of March, I will be below 1x net debt to EBITDA.",
      "speaker": "Atul Daga",
      "page": 9,
-     "target": "≤1 x",
+     "target": "≤1×",
      "period": "FY27",
      "deadline": "Q4FY27",
      "condition": null,
@@ -834,13 +825,13 @@
      "call": "May 2026",
      "from": "60%",
      "to": "85%",
-     "type": "raised"
+     "type": "reaffirmed"
     },
     {
      "call": "Jul 2026",
      "from": "85%",
      "to": "2.5–3 GW",
-     "type": "lowered"
+     "type": "reaffirmed"
     }
    ],
    "status": "said",
@@ -967,21 +958,23 @@
    "id": "ULTRACEMCO-16",
    "title": "All-India cement demand growth",
    "kind": "hard",
-   "metric": "other",
+   "metric": "volume_growth",
    "scope": "company",
-   "basis": "management",
+   "basis": null,
    "period": "FY27",
-   "target": "9–10%",
+   "target": "7–8%",
    "direction": "up",
-   "moved": false,
-   "events": [],
-   "status": "on_track",
-   "detail": "Industry estimates put cement demand to grow closer to 10%",
-   "evidence": {
-    "quote": "Industry estimates put cement demand to grow closer to 10% year-on-year.",
-    "call": "Oct 2026",
-    "new_deadline": null
-   },
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "9–10%",
+     "to": "7–8%",
+     "type": "lowered"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 2 times, then not mentioned since May 2026",
    "statements": [
     {
      "call": "Jan 2026",
@@ -994,6 +987,18 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect a sustainable volume growth of 7% to 8% per annum.",
+     "speaker": "Atul Daga",
+     "page": 3,
+     "target": "7–8%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
     }
    ]
   },
@@ -1027,94 +1032,13 @@
   },
   {
    "id": "ULTRACEMCO-18",
-   "title": "Long-term demand growth",
-   "kind": "hard",
-   "metric": "other",
-   "scope": "company",
-   "basis": null,
-   "period": "multi-year",
-   "target": "7–8%",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "open",
-   "statements": [
-    {
-     "call": "Jan 2026",
-     "quarter": "Q3FY26",
-     "quote": "And for next 4, 5 years, normally what we guided in corporate 7% to 8%. So that number remains intact.",
-     "speaker": "Atul Daga",
-     "page": 15,
-     "target": "7–8%",
-     "period": "multi-year",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2974562d-4ddc-4eab-bb39-5c69215eecc3.pdf"
-    }
-   ]
-  },
-  {
-   "id": "ULTRACEMCO-19",
-   "title": "Volume growth",
-   "kind": "hard",
-   "metric": "volume_growth",
-   "scope": "company",
-   "basis": "management",
-   "period": "FY27",
-   "target": "≥10%",
-   "direction": "up",
-   "moved": true,
-   "events": [
-    {
-     "call": "Jul 2026",
-     "from": "7–8%",
-     "to": "≥10%",
-     "type": "raised"
-    }
-   ],
-   "status": "on_track",
-   "detail": "Volume growth of 13.8% vs double-digit target",
-   "evidence": {
-    "quote": "Our growth of 13.8% this quarter is comfortably ahead, which means that our presence in the market is continuously increasing.",
-    "call": "Oct 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "We expect a sustainable volume growth of 7% to 8% per annum.",
-     "speaker": "Atul Daga",
-     "page": 3,
-     "target": "7–8%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b4e6bf58-5985-4eda-b714-7489b4b926b0.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "Yes, we are targeting double-digit volume growth this year.",
-     "speaker": "Atul Daga",
-     "page": 16,
-     "target": "≥10%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
-    }
-   ]
-  },
-  {
-   "id": "ULTRACEMCO-20",
    "title": "Clinker factor",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
    "basis": null,
    "period": "FY28",
-   "target": "1.54 x",
+   "target": "1.54×",
    "direction": "flat",
    "moved": false,
    "events": [],
@@ -1126,7 +1050,7 @@
      "quote": "1.54x is our target to reach by fiscal '28.",
      "speaker": "Atul Daga",
      "page": 14,
-     "target": "1.54 x",
+     "target": "1.54×",
      "period": "FY28",
      "deadline": "FY28",
      "condition": null,
@@ -1135,7 +1059,41 @@
    ]
   },
   {
-   "id": "ULTRACEMCO-21",
+   "id": "ULTRACEMCO-19",
+   "title": "Grey cement volume growth",
+   "kind": "directional",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "Volume growth of 13.8% in the quarter",
+   "evidence": {
+    "quote": "Our growth of 13.8% this quarter is comfortably ahead, which means that our presence in the market is continuously increasing.",
+    "call": "Oct 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Yes, we are targeting double-digit volume growth this year.",
+     "speaker": "Atul Daga",
+     "page": 16,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4fd54e8a-8de9-4547-8a4c-908568d1cd0e.pdf"
+    }
+   ]
+  },
+  {
+   "id": "ULTRACEMCO-20",
    "title": "Non-core asset disposal",
    "kind": "milestone",
    "metric": "other",
@@ -1163,7 +1121,7 @@
    ]
   },
   {
-   "id": "ULTRACEMCO-22",
+   "id": "ULTRACEMCO-21",
    "title": "Cost environment",
    "kind": "directional",
    "metric": "other",
@@ -1191,14 +1149,14 @@
    ]
   },
   {
-   "id": "ULTRACEMCO-23",
+   "id": "ULTRACEMCO-22",
    "title": "Ultravolt capex",
    "kind": "milestone",
    "metric": "capex",
    "scope": "Ultravolt",
    "basis": null,
    "period": "Q4FY27",
-   "target": "₹700 cr",
+   "target": "",
    "direction": null,
    "moved": false,
    "events": [],
@@ -1210,7 +1168,7 @@
      "quote": "The investment of INR1,800 crores, which has been planned, we have spent around INR1,100 crores till date and the balance will get spent in the next maybe 2 quarters.",
      "speaker": "Atul Daga",
      "page": 3,
-     "target": "₹700 cr",
+     "target": "",
      "period": "Q4FY27",
      "deadline": "Q4FY27",
      "condition": null,
@@ -1219,7 +1177,7 @@
    ]
   },
   {
-   "id": "ULTRACEMCO-24",
+   "id": "ULTRACEMCO-23",
    "title": "India Cements performance",
    "kind": "soft",
    "metric": "other",
@@ -1247,7 +1205,7 @@
    ]
   },
   {
-   "id": "ULTRACEMCO-25",
+   "id": "ULTRACEMCO-24",
    "title": "Store network",
    "kind": "hard",
    "metric": "other",
@@ -1275,6 +1233,42 @@
    ]
   }
  ],
+ "business": {
+  "what": "UltraTech Cement manufactures, markets, and distributes building materials and provides complete building solutions and support services to customers.",
+  "segments": [
+   {
+    "name": "Building materials and solutions",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "Manufacturing, marketing and distribution of building materials and building solutions",
+    "page": 543
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 543
+   },
+   {
+    "region": "Others",
+    "share_pct": null,
+    "page": 543
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1551898a-ebd8-40be-960b-1b16f0a1af60.pdf",
+  "pages": [
+   74,
+   75,
+   143,
+   210,
+   234,
+   269,
+   299
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1394,45 +1388,47 @@
  "case": {
   "bull": [
    {
-    "point": "Revenue growth is currently tracking at 21% for Q1 FY27, exceeding the annual target of 10%.",
+    "figure": "21%",
+    "point": "Management delivered strong results with a 21% revenue growth rate on a like-for-like basis.",
     "refs": [
-     "ULTRACEMCO-2",
-     "sales_growth"
+     "ULTRACEMCO-2"
     ]
    },
    {
-    "point": "Volume growth of 13.8% is outpacing the company's own double-digit target for FY27.",
+    "figure": "164%",
+    "point": "Cash conversion remained robust as operating cash flow reached 164% of net profit over 5 years.",
     "refs": [
-     "ULTRACEMCO-19",
-     "ULTRACEMCO-15"
+     "cash_conversion"
     ]
    },
    {
-    "point": "Management successfully delivered on the Wires and Cables business launch and reduced total borrowings to ₹23,755 cr.",
+    "figure": "21%",
+    "point": "Profit growth accelerated to 21% in the last 12 months, supported by delivered borrowing cost reductions.",
     "refs": [
-     "ULTRACEMCO-10",
+     "profit_growth",
      "ULTRACEMCO-5"
     ]
    }
   ],
   "bear": [
    {
-    "point": "India Cements EBITDA per ton is currently at INR603, significantly trailing the FY28 target of ≥1,000 Rs.",
+    "figure": "19%",
+    "point": "Operating margins compressed from 22% in FY22 down to 19% in FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "603",
+    "point": "India Cements EBITDA per ton lagged behind the target, reaching only INR603 in Q1FY27.",
     "refs": [
      "ULTRACEMCO-0"
     ]
    },
    {
-    "point": "Management has gone quiet on the organic growth announcement and the 100 Rs per ton cost reduction target.",
+    "figure": "13%",
+    "point": "Return on capital employed declined to 13% in FY26 compared to 14% in FY22.",
     "refs": [
-     "ULTRACEMCO-4",
-     "ULTRACEMCO-11"
-    ]
-   },
-   {
-    "point": "Operating margins have compressed from 22% in FY22 to 19% in FY26, while ROCE declined to 13%.",
-    "refs": [
-     "margin",
      "returns"
     ]
    }

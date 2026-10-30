@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Alerts, FilingsView, SettingsSheet } from "./push";
+import { FilingsView, SettingsSheet, TodayFeed } from "./push";
 import { Shell, go } from "./shell";
 import {
-  CompanySummary, FeedItem, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
+  Business, CasePoint, CompanySummary, FeedItem, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
   feed, loadIndex, loadLedger, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
@@ -71,34 +71,15 @@ function Routes({ route }: { route: string[] }) {
 function Home({ index }: { index: CompanySummary[] }) {
   const [ledgers, setLedgers] = useState<Ledger[]>([]);
   useEffect(() => { Promise.all(index.map((c) => loadLedger(c.symbol))).then(setLedgers); }, [index]);
-  const items = useMemo(() => feed(ledgers), [ledgers]);
-  const [all, setAll] = useState(false);
-  const shown = all ? items : items.slice(0, 6);
-  const seen = useSeen(items);
-  const fresh = items.filter((i) => !seen.has(feedKey(i))).length;
+  const promises = useMemo(() => feed(ledgers), [ledgers]);
   const [settings, setSettings] = useState(false);
 
   return (
     <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
       <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
       <SearchBar />
-      <Alerts index={index} onSettings={() => setSettings(true)} />
-      <section>
-        <h2 className="section-title">What moved</h2>
-        <p className="section-sub">
-          {seen.size === 0 ? "From the latest earnings calls and results, most important first."
-            : fresh ? `${fresh} new since you last looked.` : "Nothing new since you last looked."}
-        </p>
-        <div className="feed">
-          {shown.map((i) => <FeedRow key={i.thread.id} item={i} fresh={seen.size > 0 && !seen.has(feedKey(i))} />)}
-        </div>
-        {items.length > 6 && (
-          <button className="more" onClick={() => setAll(!all)}>
-            {all ? "Show less" : `${items.length - 6} more`}
-          </button>
-        )}
-      </section>
-
+      <TodayFeed index={index} promises={promises} onSettings={() => setSettings(true)}
+        renderPromise={(i, fresh) => <FeedRow item={i} fresh={fresh} />} />
       {settings && <SettingsSheet onClose={() => setSettings(false)} />}
     </Shell>
   );
@@ -117,24 +98,6 @@ function Portfolio({ index }: { index: CompanySummary[] }) {
       </section>
     </Shell>
   );
-}
-
-// "Since you last looked": remembered per device in localStorage. The set returned is
-// what had been seen *before* this visit; everything shown now is marked seen for next time.
-const SEEN_KEY = "finn.seen.v1";
-const feedKey = (i: FeedItem) => `${i.thread.id}|${i.headline}`;
-
-function useSeen(items: FeedItem[]): Set<string> {
-  const [before] = useState<Set<string>>(() => {
-    try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || "[]")); }
-    catch { return new Set(); }
-  });
-  useEffect(() => {
-    if (!items.length) return;
-    try { localStorage.setItem(SEEN_KEY, JSON.stringify([...new Set([...before, ...items.map(feedKey)])])); }
-    catch { /* private mode: every visit is a first visit */ }
-  }, [items, before]);
-  return before;
 }
 
 function FeedRow({ item, fresh }: { item: FeedItem; fresh: boolean }) {
@@ -185,8 +148,19 @@ function RecordBar({ r }: { r: CompanySummary["record"] }) {
 
 type Filter = "all" | "live" | "settled" | "moved" | "quiet";
 
-const GROUPS: { key: string; title: string; test: (t: Thread) => boolean }[] = [
-  { key: "live", title: "Live", test: (t) => ["tracking", "on_track", "behind", "delayed", "open", "cant_verify"].includes(t.status) && t.kind !== "soft" },
+const LIVE = ["tracking", "on_track", "behind", "delayed", "open", "cant_verify"];
+
+/** A target due after next fiscal year (or a multi-year plan) can't move this quarter. */
+function farDated(t: Thread, fy: number): boolean {
+  if (/multi/i.test(t.period)) return true;
+  const m = t.period.match(/FY(\d{2})/);
+  return !!m && Number(m[1]) > fy + 1;
+}
+
+const GROUPS: { key: string; title: string; test: (t: Thread, fy: number) => boolean; collapsed?: boolean }[] = [
+  { key: "live", title: "Live", test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && !farDated(t, fy) },
+  { key: "later", title: "Longer-term targets", collapsed: true,
+    test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && farDated(t, fy) },
   { key: "settled", title: "Settled", test: (t) => ["delivered", "beat", "missed"].includes(t.status) },
   { key: "quiet", title: "Gone quiet", test: (t) => t.status === "gone_quiet" },
   { key: "said", title: "Also said", test: (t) => t.status === "said" || t.status === "lapsed" },
@@ -344,13 +318,13 @@ function HeadlineStrip({ h }: { h: Headline }) {
 function CaseView({ l, base }: { l: Ledger; base: string }) {
   const threads = new Map(l.threads.map((t) => [t.id, t]));
   const metric = new Map((l.snapshot?.metrics ?? []).map((m) => [m.key, m.label]));
-  const side = (title: string, pts: { point: string; refs: string[] }[], tone: string) => (
+  const side = (title: string, pts: CasePoint[], tone: string) => (
     <div className={`case-side case-${tone}`}>
       <h3>{title}</h3>
       <ul>
         {pts.map((p, i) => (
           <li key={i}>
-            {p.point}
+            {p.figure && <b className="figure">{p.figure}</b>}{p.point}
             <span className="refs">
               {p.refs.map((r) => threads.has(r)
                 ? <button key={r} className="ref" onClick={() => go(`${base}/t/${r}`)}>{threads.get(r)!.title}</button>
@@ -369,6 +343,35 @@ function CaseView({ l, base }: { l: Ledger; base: string }) {
         {l.case!.bull.length > 0 && side("Bull", l.case!.bull, "bull")}
         {l.case!.bear.length > 0 && side("Bear", l.case!.bear, "bear")}
       </div>
+    </section>
+  );
+}
+
+function BusinessView({ b }: { b: Business }) {
+  const segs = b.segments.filter((s) => s.share_pct !== null);
+  const geos = b.geographies.filter((g) => g.share_pct !== null);
+  const cite = `${b.source}${b.pages.length ? `, pp. ${b.pages.slice(0, 3).join(", ")}${b.pages.length > 3 ? "…" : ""}` : ""}`;
+  return (
+    <section>
+      <h2 className="section-title">The business</h2>
+      <p className="biz-what">{b.what}</p>
+      {segs.length > 0 && (
+        <div className="mix">
+          <p className="mix-title">Revenue mix{b.year ? `, ${b.year}` : ""}</p>
+          {segs.map((s) => (
+            <div key={s.name} className="mix-row">
+              <span className="mix-name">{s.name}</span>
+              <span className="mix-bar"><span style={{ width: `${Math.min(100, s.share_pct!)}%` }} /></span>
+              <span className="mix-pct">{s.share_pct}%</span>
+            </div>
+          ))}
+        </div>
+      )}
+      {segs.length === 0 && b.segments.length > 0 && (
+        <p className="snap-reading">Businesses: {b.segments.map((s) => s.name).join(", ")}.</p>
+      )}
+      {geos.length > 0 && <p className="snap-reading">{geos.map((g) => `${g.region} ${g.share_pct}%`).join(" · ")}</p>}
+      <a className="filing-link" href={b.url} target="_blank" rel="noreferrer">{cite} ↗</a>
     </section>
   );
 }
@@ -412,8 +415,12 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
   const [filter, setFilter] = useState<Filter>("all");
   const open = l.threads.find((t) => t.id === threadId);
   const r = l.record;
+  const fy = Number((l.latest_results ?? "").match(/FY(\d{2})/)?.[1] ?? 0);
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const visible = l.threads.filter((t) =>
-    filter === "all" || (filter === "moved" ? t.moved : GROUPS.find((g) => g.key === filter)!.test(t)));
+    filter === "all" || (filter === "moved" ? t.moved
+      : filter === "live" ? LIVE.includes(t.status) && t.kind !== "soft"
+      : GROUPS.find((g) => g.key === filter)!.test(t, fy)));
   const noCalls = l.calls.length === 0;
 
   return (
@@ -445,6 +452,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
         )}
       </section>
 
+      {l.business && <BusinessView b={l.business} />}
       {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
       {l.snapshot && l.snapshot.metrics.length > 0 && <SnapshotView m={l.snapshot.metrics} lender={l.snapshot.lender} />}
 
@@ -461,14 +469,23 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       </nav>}
 
       {GROUPS.map((g) => {
-        const ts = visible.filter(g.test).sort((a, b) => rank(a) - rank(b));
+        const ts = visible.filter((t) => g.test(t, fy)).sort((a, b) => rank(a) - rank(b));
         if (!ts.length) return null;
+        const folded = g.collapsed && !expanded.has(g.key) && filter === "all";
         return (
           <section key={g.key}>
             <h2 className="section-title">{g.title} <span className="count">{ts.length}</span></h2>
-            <div className="cards">
-              {ts.map((t) => <ThreadCard key={t.id} t={t} onOpen={() => go(`${base}/t/${t.id}`)} />)}
-            </div>
+            {folded ? (
+              <button className="routine-toggle" onClick={() => setExpanded(new Set([...expanded, g.key]))}>
+                <span>{ts.length} targets due after FY{String(fy + 1).padStart(2, "0")}</span>
+                <span className="routine-kinds">{ts.slice(0, 3).map((t) => t.title).join(", ")}</span>
+                <span className="chev">▾</span>
+              </button>
+            ) : (
+              <div className="cards">
+                {ts.map((t) => <ThreadCard key={t.id} t={t} onOpen={() => go(`${base}/t/${t.id}`)} />)}
+              </div>
+            )}
           </section>
         );
       })}

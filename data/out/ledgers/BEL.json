@@ -3,7 +3,7 @@
  "name": "Bharat Electronics",
  "sector": "Defence PSU",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Jul 2026",
  "latest_results": "Q1FY27",
  "headline": {
@@ -79,14 +79,14 @@
   "kept": 2,
   "missed": 1,
   "resolved": 3,
-  "moved": 4,
+  "moved": 1,
   "quiet": 4,
-  "open": 24,
+  "open": 22,
   "by_status": {
    "gone_quiet": 4,
    "beat": 1,
    "delivered": 1,
-   "open": 18,
+   "open": 16,
    "on_track": 3,
    "missed": 1,
    "delayed": 1,
@@ -104,7 +104,7 @@
    "period": "FY26",
    "target": "₹1,000 cr",
    "direction": "flat",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Aug 2025",
@@ -122,7 +122,7 @@
      "call": "Jan 2026",
      "from": "≥15%",
      "to": "₹1,000 cr",
-     "type": "raised"
+     "type": "reaffirmed"
     }
    ],
    "status": "gone_quiet",
@@ -338,7 +338,7 @@
    "period": "FY26",
    "target": "≥₹1,000 cr",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Aug 2025",
@@ -350,7 +350,7 @@
      "call": "Nov 2025",
      "from": "≥₹1,600 cr",
      "to": "≥₹1,000 cr",
-     "type": "lowered"
+     "type": "reaffirmed"
     }
    ],
    "status": "gone_quiet",
@@ -457,13 +457,13 @@
    "period": "multi-year",
    "target": "≥15%",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Jan 2026",
      "from": "15–17.5%",
      "to": "≥15%",
-     "type": "lowered"
+     "type": "reaffirmed"
     }
    ],
    "status": "said",
@@ -796,7 +796,7 @@
   },
   {
    "id": "BEL-14",
-   "title": "Project Kusha order inflow",
+   "title": "Project Kusha order acquisition",
    "kind": "milestone",
    "metric": "order_inflow",
    "scope": "Project Kusha",
@@ -1219,12 +1219,12 @@
   {
    "id": "BEL-28",
    "title": "FY28 non-defense revenue share",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "other",
    "scope": "company",
    "basis": null,
    "period": "FY28",
-   "target": "11–12%",
+   "target": "",
    "direction": "up",
    "moved": false,
    "events": [],
@@ -1236,7 +1236,7 @@
      "quote": "We want to increase it to more than 10% of our turnover. But in near future of next 1, 1.5 years, the increase will be maybe 1% or 2%, not more.",
      "speaker": "Manoj Jain",
      "page": 16,
-     "target": "11–12%",
+     "target": "",
      "period": "FY28",
      "deadline": null,
      "condition": null,
@@ -1356,20 +1356,20 @@
   {
    "id": "BEL-31",
    "title": "FY27 order inflow",
-   "kind": "hard",
+   "kind": "directional",
    "metric": "order_inflow",
    "scope": "company",
    "basis": null,
    "period": "FY27",
-   "target": "≥₹20,000 cr",
+   "target": "",
    "direction": "up",
-   "moved": true,
+   "moved": false,
    "events": [
     {
      "call": "Jul 2026",
      "from": "≥₹55,000 cr",
-     "to": "≥₹20,000 cr",
-     "type": "lowered"
+     "to": "",
+     "type": "reaffirmed"
     }
    ],
    "status": "open",
@@ -1392,7 +1392,7 @@
      "quote": "We are definitely going to meet the guidance given about the order inflow for this year.",
      "speaker": "Manoj Jain",
      "page": 4,
-     "target": "≥₹20,000 cr",
+     "target": "",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -1551,6 +1551,31 @@
    ]
   }
  ],
+ "business": {
+  "what": "Bharat Electronics Limited manufactures and sells electronic products and systems primarily for the defence sector, as well as for government and non-defence applications.",
+  "segments": [
+   {
+    "name": "Defence and Non-Defence",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "The company is exempt from segment reporting for defence production.",
+    "page": 202
+   }
+  ],
+  "geographies": [],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fe7510ea-01e4-4f93-99bd-b41007aebe1d.pdf",
+  "pages": [
+   60,
+   69,
+   74,
+   78,
+   103,
+   150,
+   202
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1670,19 +1695,15 @@
  "case": {
   "bull": [
    {
-    "point": "Management exceeded the FY26 EBITDA margin target of 27% by delivering a 29.2% margin.",
+    "figure": "29.2%",
+    "point": "Management beat the FY26 EBITDA margin target by delivering an actual 29.2% margin.",
     "refs": [
      "BEL-1"
     ]
    },
    {
-    "point": "Operating margins have consistently expanded from 22% in FY22 to 29% in FY26.",
-    "refs": [
-     "margin"
-    ]
-   },
-   {
-    "point": "The company achieved a strong 36% ROCE in FY26, up from 27% in FY22.",
+    "figure": "36%",
+    "point": "The return on capital employed reached 36% in FY26, showing high capital efficiency.",
     "refs": [
      "returns"
     ]
@@ -1690,21 +1711,20 @@
   ],
   "bear": [
    {
-    "point": "Management failed to secure emergency procurement orders in Q3FY26 as originally promised.",
-    "refs": [
-     "BEL-16"
-    ]
-   },
-   {
-    "point": "The FY27 order inflow target was significantly lowered from ₹55,000 crore to ₹20,000 crore.",
-    "refs": [
-     "BEL-31"
-    ]
-   },
-   {
-    "point": "Operating cash flow has been weak, representing only 59% of net profit over the last five years.",
+    "figure": "59%",
+    "point": "Operating cash flow over five years was only 59% of net profit, indicating weak cash conversion.",
     "refs": [
      "cash_conversion"
+    ]
+   },
+   {
+    "figure": "4",
+    "point": "Multiple FY26 targets including revenue, order inflow, R&D, and exports went quiet after the period ended.",
+    "refs": [
+     "BEL-0",
+     "BEL-2",
+     "BEL-3",
+     "BEL-9"
     ]
    }
   ]

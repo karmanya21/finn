@@ -3,7 +3,7 @@
  "name": "Cipla",
  "sector": "Pharma",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Jul 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -85,10 +85,9 @@
   "by_status": {
    "delivered": 3,
    "open": 4,
-   "delayed": 1,
    "gone_quiet": 3,
-   "behind": 1,
-   "on_track": 1
+   "on_track": 2,
+   "behind": 1
   }
  },
  "threads": [
@@ -304,7 +303,7 @@
   },
   {
    "id": "CIPLA-5",
-   "title": "Q2FY26 Biosimilar launch",
+   "title": "North America biosimilar launch",
    "kind": "milestone",
    "metric": "other",
    "scope": "North America",
@@ -315,7 +314,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Launched filgrastim, first biosimilar in the U.S. market",
+   "detail": "First biosimilar (filgrastim) launched in U.S. market in Q2 FY26",
    "evidence": {
     "quote": "This quarter also marked a significant milestone in our growth journey with the launch of filgrastim, our first biosimilar in the U.S. market, signalling a strategic entry into high potential segments.",
     "call": "Nov 2025",
@@ -338,23 +337,25 @@
   },
   {
    "id": "CIPLA-6",
-   "title": "H2FY26 Generic Advair launch",
+   "title": "North America generic Advair launch",
    "kind": "milestone",
    "metric": "other",
-   "scope": "North America",
-   "basis": "management",
-   "period": "H2FY26",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
    "target": "",
    "direction": null,
    "moved": false,
-   "events": [],
-   "status": "delayed",
-   "detail": "Generic Advair launch moved to calendar year 2026 Q4",
-   "evidence": {
-    "quote": "By calendar year '26, we expect the launch of four major respiratory assets, including generic Advair in quarter 4, '26 and three peptide assets, including liraglutide.",
-    "call": "Nov 2025",
-    "new_deadline": "Q4 CY2026"
-   },
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
    "statements": [
     {
      "call": "Jul 2025",
@@ -367,24 +368,7 @@
      "deadline": "H2FY26",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=156e5b80-4621-43c8-8c6c-e3a6dad66b56.pdf"
-    }
-   ]
-  },
-  {
-   "id": "CIPLA-7",
-   "title": "FY26/FY27 Product launches",
-   "kind": "milestone",
-   "metric": "other",
-   "scope": "company",
-   "basis": null,
-   "period": "Q4FY26",
-   "target": "",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "gone_quiet",
-   "detail": "Period ended; no update in later calls (last said Nov 2025)",
-   "statements": [
+    },
     {
      "call": "Nov 2025",
      "quarter": "Q2FY26",
@@ -400,7 +384,7 @@
    ]
   },
   {
-   "id": "CIPLA-8",
+   "id": "CIPLA-7",
    "title": "Indore facility inspection",
    "kind": "milestone",
    "metric": "other",
@@ -429,31 +413,18 @@
    ]
   },
   {
-   "id": "CIPLA-9",
-   "title": "FY27 U.S. revenue run rate",
-   "kind": "hard",
+   "id": "CIPLA-8",
+   "title": "FY27 U.S. revenue",
+   "kind": "soft",
    "metric": "revenue",
-   "scope": "U.S. segment",
+   "scope": "U.S. business",
    "basis": null,
-   "period": "Q4FY27",
-   "target": "1 USD bn",
-   "direction": "flat",
+   "period": "FY27",
+   "target": "",
+   "direction": null,
    "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "1 USD bn",
-     "to": "1 USD bn",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "1 USD bn",
-     "to": "1 USD bn",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
+   "events": [],
+   "status": "said",
    "statements": [
     {
      "call": "Nov 2025",
@@ -461,40 +432,16 @@
      "quote": "on a run rate basis, we'll be able to get there during the next year.",
      "speaker": "Ashish Adukia",
      "page": 17,
-     "target": "1 USD bn",
+     "target": "",
      "period": "FY27",
      "deadline": null,
      "condition": "assuming that all our approvals will come through",
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ea9d3f9-fdfe-4f40-9d9e-057a5018ec8f.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "And our aim is to cross $1 billion mark as a run rate towards the end of this financial year, i.e., FY '27.",
-     "speaker": "Ashish Adukia",
-     "page": 6,
-     "target": "1 USD bn",
-     "period": "FY27",
-     "deadline": "FY27",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=85f5f17a-ce72-45a5-9acb-43f1f8c77b27.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "So, yes, and that is the approval of these will give us a line of sight towards that $1 billion exit rate.",
-     "speaker": "Achin Gupta",
-     "page": 8,
-     "target": "1 USD bn",
-     "period": "FY27",
-     "deadline": "Q4FY27",
-     "condition": "approval of these will give us a line of sight",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a036a014-e0e9-4194-9a9e-9d44134da589.pdf"
     }
    ]
   },
   {
-   "id": "CIPLA-10",
+   "id": "CIPLA-9",
    "title": "Q3FY26 U.S. base business revenue",
    "kind": "directional",
    "metric": "revenue",
@@ -523,8 +470,42 @@
    ]
   },
   {
+   "id": "CIPLA-10",
+   "title": "U.S. peptide assets launch",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "U.S. pipeline",
+   "basis": "management",
+   "period": "Q3FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "One big peptide approval and 3 other products approved in year",
+   "evidence": {
+    "quote": "There's one big peptide approval, and there are 3 other products which have already got approved in the year, smaller assets, et cetera.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "By calendar year '26, we expect the launch of four major respiratory assets, including generic Advair in quarter 4, '26 and three peptide assets, including liraglutide.",
+     "speaker": "Umang Vohra",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY27",
+     "deadline": "Q3FY27",
+     "condition": "subject to U.S. FDA approval",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ea9d3f9-fdfe-4f40-9d9e-057a5018ec8f.pdf"
+    }
+   ]
+  },
+  {
    "id": "CIPLA-11",
-   "title": "H1FY27 Lanreotide resupply",
+   "title": "Lanreotide resupply",
    "kind": "milestone",
    "metric": "other",
    "scope": "company",
@@ -629,7 +610,7 @@
   },
   {
    "id": "CIPLA-14",
-   "title": "FY27 Revenue growth",
+   "title": "FY27 revenue growth",
    "kind": "soft",
    "metric": "revenue_growth",
    "scope": "company",
@@ -676,7 +657,7 @@
   },
   {
    "id": "CIPLA-15",
-   "title": "FY27 Cost improvement benefits",
+   "title": "FY27 cost improvement benefits",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
@@ -704,7 +685,7 @@
   },
   {
    "id": "CIPLA-16",
-   "title": "FY27 Trade generics launches",
+   "title": "FY27 trade generics launches",
    "kind": "hard",
    "metric": "other",
    "scope": "Trade generics",
@@ -738,7 +719,7 @@
   },
   {
    "id": "CIPLA-17",
-   "title": "FY27 Respiratory asset commercialization",
+   "title": "FY27 respiratory asset commercialization",
    "kind": "milestone",
    "metric": "other",
    "scope": "Respiratory portfolio",
@@ -749,7 +730,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Pipeline includes 4 significant launches including 3 respiratory assets",
+   "detail": "3 respiratory assets in pipeline for remainder of year",
    "evidence": {
     "quote": "As we mentioned earlier, our pipeline for the remainder of the year includes 4 significant launches comprising 3 respiratory assets, including generic Advair and the key peptide opportunity as well.",
     "call": "Jul 2026",
@@ -772,6 +753,53 @@
   },
   {
    "id": "CIPLA-18",
+   "title": "FY27 U.S. revenue run rate",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "U.S. segment",
+   "basis": null,
+   "period": "Q4FY27",
+   "target": "1 USD bn",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "1 USD bn",
+     "to": "1 USD bn",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "And our aim is to cross $1 billion mark as a run rate towards the end of this financial year, i.e., FY '27.",
+     "speaker": "Ashish Adukia",
+     "page": 6,
+     "target": "1 USD bn",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=85f5f17a-ce72-45a5-9acb-43f1f8c77b27.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "So, yes, and that is the approval of these will give us a line of sight towards that $1 billion exit rate.",
+     "speaker": "Achin Gupta",
+     "page": 8,
+     "target": "1 USD bn",
+     "period": "FY27",
+     "deadline": "Q4FY27",
+     "condition": "approval of these will give us a line of sight",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a036a014-e0e9-4194-9a9e-9d44134da589.pdf"
+    }
+   ]
+  },
+  {
+   "id": "CIPLA-19",
    "title": "FY27 EBITDA margin",
    "kind": "directional",
    "metric": "ebitda_margin",
@@ -818,8 +846,8 @@
    ]
   },
   {
-   "id": "CIPLA-19",
-   "title": "Q4FY27 Lanreotide filing",
+   "id": "CIPLA-20",
+   "title": "Lanreotide filing",
    "kind": "milestone",
    "metric": "other",
    "scope": "company",
@@ -846,7 +874,7 @@
    ]
   },
   {
-   "id": "CIPLA-20",
+   "id": "CIPLA-21",
    "title": "FY27 PLI revenue",
    "kind": "directional",
    "metric": "revenue",
@@ -874,6 +902,52 @@
    ]
   }
  ],
+ "business": {
+  "what": "Cipla manufactures and sells pharmaceutical products and active pharmaceutical ingredients to patients and healthcare providers globally.",
+  "segments": [
+   {
+    "name": "Pharmaceutical and related products",
+    "share_pct": 100.0,
+    "revenue_cr": 28162.59,
+    "note": "Manufactures and sells pharmaceutical products and related items.",
+    "page": 433
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 433
+   },
+   {
+    "region": "United States of America",
+    "share_pct": null,
+    "page": 433
+   },
+   {
+    "region": "One Africa",
+    "share_pct": null,
+    "page": 433
+   },
+   {
+    "region": "Rest of the World",
+    "share_pct": null,
+    "page": 433
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4070b137-2a68-4790-8821-268ff7c4e408.pdf",
+  "pages": [
+   67,
+   159,
+   202,
+   307,
+   325,
+   405,
+   433
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -993,41 +1067,49 @@
  "case": {
   "bull": [
    {
-    "point": "The company successfully exceeded its Q1FY26 U.S. revenue guidance of $220 million by delivering $226 million.",
+    "figure": "$226 mn",
+    "point": "The company successfully exceeded its Q1FY26 U.S. revenue guidance of $220 million.",
     "refs": [
      "CIPLA-3"
     ]
    },
    {
-    "point": "Management maintains a strong balance sheet with debt reduced to ₹614 crore, representing a low 0.02x equity ratio.",
+    "figure": "105%",
+    "point": "Strong cash management is evidenced by operating cash flow averaging 105% of net profit over the last five years.",
     "refs": [
-     "debt"
+     "cash_conversion"
     ]
    },
    {
-    "point": "Operating cash flow remains robust, averaging 105% of net profit over the last five years.",
+    "figure": "0.02x",
+    "point": "The balance sheet is robust with debt-to-equity reduced to a minimal 0.02x from ₹1,056 crore in FY22.",
     "refs": [
-     "cash_conversion"
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "point": "The FY26 EBITDA margin target was repeatedly lowered from an initial range of 23.5–24.5% down to 21%.",
+    "figure": "23.5% → 21%",
+    "point": "Management repeatedly lowered EBITDA margin guidance for FY26 before finally delivering at the bottom end of expectations.",
     "refs": [
      "CIPLA-0"
     ]
    },
    {
-    "point": "The launch of the Generic Advair product has been delayed from H2FY26 to Q4 of calendar year 2026.",
+    "figure": "3 of 17",
+    "point": "The company is significantly behind on its FY27 trade generics launch target, having only completed three launches in Q1.",
     "refs": [
-     "CIPLA-6"
+     "CIPLA-16"
     ]
    },
    {
-    "point": "Profit growth has significantly deteriorated, with a 43% decline in profit over the last 12 months.",
+    "figure": "4",
+    "point": "Multiple key promises including generic Advair, Indore facility inspections, and Lanreotide resupply have gone quiet without updates.",
     "refs": [
-     "profit_growth"
+     "CIPLA-6",
+     "CIPLA-7",
+     "CIPLA-11"
     ]
    }
   ]

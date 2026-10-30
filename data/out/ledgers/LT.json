@@ -3,7 +3,7 @@
  "name": "Larsen & Toubro",
  "sector": "Capital goods",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Jul 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -1337,6 +1337,63 @@
    ]
   }
  ],
+ "business": {
+  "what": "Larsen & Toubro undertakes engineering, construction, manufacturing, technology services, and financial services for various industrial and infrastructure sectors globally.",
+  "segments": [
+   {
+    "name": "Infrastructure Projects",
+    "share_pct": null,
+    "revenue_cr": 106638.26,
+    "note": "Engineering and construction of buildings, transport, power and water infrastructure.",
+    "page": 551
+   },
+   {
+    "name": "Energy Projects",
+    "share_pct": null,
+    "revenue_cr": 28520.18,
+    "note": "EPC solutions for hydrocarbon, power generation and clean energy sectors.",
+    "page": 551
+   },
+   {
+    "name": "Hi-Tech Manufacturing",
+    "share_pct": null,
+    "revenue_cr": 13894.34,
+    "note": "Critical equipment, systems and platforms for process, defence and aerospace.",
+    "page": 551
+   },
+   {
+    "name": "Others",
+    "share_pct": null,
+    "revenue_cr": 4627.39,
+    "note": "Realty, smart infrastructure, and construction equipment.",
+    "page": 551
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 550
+   },
+   {
+    "region": "Foreign countries",
+    "share_pct": null,
+    "page": 550
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/825f9859-e7f2-4e90-8583-01a38850f795.pdf",
+  "pages": [
+   515,
+   550,
+   551,
+   552,
+   637,
+   684,
+   685
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1456,19 +1513,22 @@
  "case": {
   "bull": [
    {
-    "point": "The company significantly outperformed its FY26 order inflow guidance, achieving a 20% CAGR compared to the 10% target.",
+    "figure": "20% CAGR",
+    "point": "Group order inflow achieved a 20% CAGR in FY26, beating the 10% guidance.",
     "refs": [
      "LT-0"
     ]
    },
    {
-    "point": "Management demonstrated strong capital efficiency by beating the FY26 Net Working Capital to revenue target with a result of 4.1% versus 10%.",
+    "figure": "4.1%",
+    "point": "FY26 Net Working Capital to revenue closed at 4.1%, significantly beating the 10% target.",
     "refs": [
      "LT-3"
     ]
    },
    {
-    "point": "Operating cash flow has been strong, representing 115% of net profit over the last five years.",
+    "figure": "115%",
+    "point": "Five-year operating cash flow reached 115% of net profit, demonstrating robust cash generation.",
     "refs": [
      "cash_conversion"
     ]
@@ -1476,21 +1536,24 @@
   ],
   "bear": [
    {
-    "point": "Revenue growth missed the FY26 target of 15%, with the company reporting only 11.8% growth for the period.",
+    "figure": "11.8%",
+    "point": "FY26 reported revenue growth of 11.8% missed the target of 15%.",
     "refs": [
      "LT-1"
     ]
    },
    {
-    "point": "Operating margins have faced compression, declining from 16% in FY22 to 13% in FY26.",
+    "figure": "16% → 13%",
+    "point": "Operating margin continuously compressed from 16% in FY22 to 13% in FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "point": "The company missed its H2FY26 growth visibility target, with H2 growth slowing to 10.9% from 12.8% in H1.",
+    "figure": "8.5%",
+    "point": "Management provided no update on the FY26 Projects and Manufacturing margin target of 8.5% after period end.",
     "refs": [
-     "LT-5"
+     "LT-2"
     ]
    }
   ]

@@ -1,7 +1,97 @@
 {
- "built": "2026-10-29T21:36:33",
+ "built": "2026-10-30T15:59:49",
  "days": 30,
  "items": [
+  {
+   "id": "PRAJIND-a87d7d3f-c0be-4ad7-bc82-b30b513f9351",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-30T15:54:33",
+   "type": "earnings_call",
+   "label": "Earnings call",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "headline": "Audio Recording of Analysts'' Call held on 30th October, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/19cc4943-5d22-4340-8882-b2a432ebea09.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 25,
+   "routine": true
+  },
+  {
+   "id": "BAJFINANCE-130eee3b-b8b6-49c6-9a19-7b867a942435",
+   "symbol": "BAJFINANCE",
+   "name": "Bajaj Finance",
+   "at": "2026-10-30T14:49:27",
+   "type": "fund_raise",
+   "label": "Fund raise",
+   "subject": "Announcement under Regulation 30 (LODR)-Allotment",
+   "headline": "Allotment of Secured Redeemable Non-Convertible Debentures on Private Placement basis",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/20d73044-2322-4d46-883f-67bff54a3b50.pdf",
+   "summary": "Bajaj Finance allotted 2,06,950 secured redeemable non-convertible debentures aggregating to Rs. 2,069.501 crore on a private placement basis.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 75,
+   "routine": false
+  },
+  {
+   "id": "HDFCBANK-6072d0f1-030e-4a8f-8880-4378c9fc184e",
+   "symbol": "HDFCBANK",
+   "name": "HDFC Bank",
+   "at": "2026-10-30T13:24:55",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
+   "headline": "Allotment of 46,75,598 equity shares pursuant to exercise of ESOP/RSU",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/38dab330-ca6e-4311-9679-7b47cebb7993.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "PRAJIND-05816a85-efa9-4d8d-adca-b52b00e5f5ff",
+   "symbol": "PRAJIND",
+   "name": "Praj Industries",
+   "at": "2026-10-30T09:04:13",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "headline": "Earnings Presentation for second quarter & half year ended 30th September, 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ed644da3-f9ae-4779-bdf8-91f9aba18a68.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 15,
+   "routine": true
+  },
+  {
+   "id": "M&M-7bd45057-97aa-4b49-81d0-bdf11baa242d",
+   "symbol": "M&M",
+   "name": "Mahindra & Mahindra",
+   "at": "2026-10-29T21:59:27",
+   "type": "insider_trading",
+   "label": "Insider trade",
+   "subject": "Transfer Of Equity Shares By Mahindra & Mahindra Employees Stock Option Trust To The Stock Option Grantees.",
+   "headline": "Please refer enclosed file",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6d89568e-2040-457b-ae07-e15484116093.pdf",
+   "summary": "Mahindra & Mahindra Employees Stock Option Trust transferred equity shares to 211 stock option grantees.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "importance": 55,
+   "routine": false
+  },
   {
    "id": "MAXHEALTH-aa88855b-099f-44a1-a360-033ef4f52cbf",
    "symbol": "MAXHEALTH",
@@ -16,6 +106,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -33,6 +124,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -80,12 +172,17 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
     {
      "label": "Board outcome",
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/386aab9b-d99c-44af-ba52-1bd95d49a60c.pdf"
+    },
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b962e91a-b409-4f5f-a22f-3275c992153a.pdf"
     },
     {
      "label": "Press release",
@@ -148,6 +245,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": true,
    "importance": 90,
    "routine": false,
    "also": [
@@ -188,6 +286,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -205,6 +304,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -252,6 +352,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -264,23 +365,6 @@
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c4387b6-3b5a-4731-a2b0-e4109fa684e6.pdf"
     }
    ]
-  },
-  {
-   "id": "TRENT-d53eaf45-b3a2-4b76-95c4-35d69f117a62",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-29T16:11:11",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Board Meeting Outcome for Outcome Of Board Meeting Held Today I.E. 29Th October 2026",
-   "headline": "Outcome of Board Meeting held today i.e. 29th October 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b962e91a-b409-4f5f-a22f-3275c992153a.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
   },
   {
    "id": "INFY-cbbf7462-ce7a-42d3-8ee4-d7ba539eb9f8",
@@ -296,6 +380,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -313,6 +398,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -330,6 +416,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 25,
    "routine": true
   },
@@ -347,6 +434,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -368,6 +456,7 @@
     "INFY-18"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 45,
    "routine": false
   },
@@ -385,6 +474,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -402,6 +492,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -419,6 +510,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -436,6 +528,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -453,6 +546,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -468,9 +562,7 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f0d1483f-551a-46d8-ade7-7a390baacc1c.pdf",
    "summary": "Q2FY27 results",
    "people": [],
-   "promises": [
-    "HINDUNILVR-4"
-   ],
+   "promises": [],
    "numbers": {
     "quarter": "Q2FY27",
     "rows": [
@@ -502,9 +594,14 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e773ea8a-a7a5-41a0-bb2c-bfb8ed46c12c.pdf"
+    },
     {
      "label": "Investor presentation",
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aecfd799-4d6c-49d4-9d7b-221d87d1352d.pdf"
@@ -525,25 +622,9 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
-  },
-  {
-   "id": "HINDUNILVR-f9216c1f-c59f-43ae-b14a-b567b315870f",
-   "symbol": "HINDUNILVR",
-   "name": "Hindustan Unilever",
-   "at": "2026-10-28T09:38:20",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Board Meeting Outcome for Outcome Of The Board Meeting",
-   "headline": "Outcome of the Board Meeting held on 28th October, 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e773ea8a-a7a5-41a0-bb2c-bfb8ed46c12c.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
   },
   {
    "id": "INFY-1ee21456-900d-4569-95b2-6e286e6f3ef5",
@@ -559,6 +640,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -576,6 +658,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 25,
    "routine": true
   },
@@ -593,6 +676,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 25,
    "routine": true
   },
@@ -610,6 +694,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -661,25 +746,15 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
-   "routine": false
-  },
-  {
-   "id": "LT-ff19303b-925a-4392-9219-6125d7ea71f7",
-   "symbol": "LT",
-   "name": "Larsen & Toubro",
-   "at": "2026-10-27T17:14:57",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Board Meeting Outcome for Outcome Of Board Meeting Of Larsen & Toubro Limited Held On October 27, 2026",
-   "headline": "Outcome of Board Meeting of Larsen & Toubro Limited held on October 27, 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e0efae36-4554-4d02-8938-9a63b303f9c3.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e0efae36-4554-4d02-8938-9a63b303f9c3.pdf"
+    }
+   ]
   },
   {
    "id": "ETERNAL-be299086-d70d-4db2-af4b-0307eb15a5d9",
@@ -697,6 +772,7 @@
     "ETERNAL-3"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 45,
    "routine": false
   },
@@ -705,8 +781,8 @@
    "symbol": "BEL",
    "name": "Bharat Electronics",
    "at": "2026-10-27T16:51:00",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Conference Call with Investors for Discussion on Financial Results for the quarter ended 30th September, 2026.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/81894933-f0ff-4ac3-a959-261e0965efc6.pdf",
@@ -714,7 +790,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -731,6 +808,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -748,6 +826,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -756,8 +835,8 @@
    "symbol": "TATAPOWER",
    "name": "Tata Power",
    "at": "2026-10-27T15:00:51",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Schedule of Analyst/Institutional Investor Meet.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/03e4a1f0-302f-4029-8996-9cd1f254f916.pdf",
@@ -765,7 +844,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -781,11 +861,12 @@
    "summary": "UltraTech Cement reported a 21% increase in net profit for Q2 FY27, driven by 13.8% volume growth and improved operating efficiency.",
    "people": [],
    "promises": [
-    "ULTRACEMCO-19",
     "ULTRACEMCO-16",
-    "ULTRACEMCO-7"
+    "ULTRACEMCO-7",
+    "ULTRACEMCO-6"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 45,
    "routine": false
   },
@@ -803,6 +884,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -829,6 +911,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false,
    "also": [
@@ -852,6 +935,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -869,6 +953,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -918,6 +1003,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -940,11 +1026,12 @@
    "summary": "Tata Power signed an MoU with BPCL to develop 110 kV power infrastructure for BPCL's Mumbai Refinery project.",
    "people": [],
    "promises": [
-    "TATAPOWER-2",
-    "TATAPOWER-17",
-    "TATAPOWER-16"
+    "TATAPOWER-28",
+    "TATAPOWER-24",
+    "TATAPOWER-2"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -962,6 +1049,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -979,6 +1067,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -996,6 +1085,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1013,6 +1103,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1021,8 +1112,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-26T19:33:10",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analysts''/Investors'' meet.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bd352f0e-ac9c-4c6d-94cd-6b50802c665b.pdf",
@@ -1030,7 +1121,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1043,14 +1135,12 @@
    "subject": "Corporate Dossier Of Ultratech Cement Limited",
    "headline": "Corporate Dossier of UltraTech Cement Limited",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3508aa22-42c9-4ecf-85ab-d81352c06cb1.pdf",
-   "summary": "UltraTech Cement released its Q2FY27 corporate dossier providing an overview of the company and the Aditya Birla Group.",
+   "summary": null,
    "people": [],
-   "promises": [
-    "ULTRACEMCO-7",
-    "ULTRACEMCO-6"
-   ],
+   "promises": [],
    "numbers": null,
-   "importance": 15,
+   "senior": false,
+   "importance": 10,
    "routine": true
   },
   {
@@ -1058,8 +1148,8 @@
    "symbol": "AARTIIND",
    "name": "Aarti Industries",
    "at": "2026-10-26T13:06:43",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Earnings Conference Call",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9d7f5243-63c4-4470-875b-6d500812116c.pdf",
@@ -1067,7 +1157,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1075,8 +1166,8 @@
    "symbol": "AARTIIND",
    "name": "Aarti Industries",
    "at": "2026-10-26T12:46:38",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Earnings Conference Call",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ef5d9970-a39a-4bb2-a9ed-7f12423cdf7b.pdf",
@@ -1084,7 +1175,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1101,6 +1193,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1118,6 +1211,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1135,6 +1229,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1176,6 +1271,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": []
@@ -1194,6 +1290,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -1202,8 +1299,8 @@
    "symbol": "MAXHEALTH",
    "name": "Max Healthcare",
    "at": "2026-10-23T18:23:48",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Earnings Call for Investors and Analysts",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/039ae52f-5500-4ad5-9845-81493c43ccb0.pdf",
@@ -1211,7 +1308,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1228,6 +1326,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1236,8 +1335,8 @@
    "symbol": "DIXON",
    "name": "Dixon Technologies",
    "at": "2026-10-23T18:10:44",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "We wish to inform you that Dixon Technologies (India) Limited ('Company') has arranged a Conference Call for the Un-Audited Financial Results (Standalone and Consolidated) of the Company ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4260af0d-9e97-44f0-a19a-04b0b0ddb4e5.pdf",
@@ -1245,7 +1344,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1262,6 +1362,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1279,6 +1380,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1296,6 +1398,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -1347,6 +1450,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -1374,6 +1478,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1382,8 +1487,8 @@
    "symbol": "PRAJIND",
    "name": "Praj Industries",
    "at": "2026-10-23T12:03:43",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analysts' call regarding Un-audited Financial Results of the Company for the second quarter and half year ended on 30th September, 2026.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4bcfa3a2-57f1-43f5-97f7-115357cfa501.pdf",
@@ -1391,7 +1496,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1399,17 +1505,20 @@
    "symbol": "CIPLA",
    "name": "Cipla",
    "at": "2026-10-23T09:02:35",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "litigation",
+   "label": "Legal / regulatory",
    "subject": "USFDA Inspection At Invagen Manufacturing Facility In Hauppauge, Long Island, New York, USA",
    "headline": "Please find enclosed disclosure.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f23c5791-28be-478e-9be4-f037068b73d5.pdf",
-   "summary": null,
+   "summary": "Cipla's US subsidiary InvaGen completed a USFDA inspection at its New York facility with zero Form 483 observations.",
    "people": [],
-   "promises": [],
+   "promises": [
+    "CIPLA-7"
+   ],
    "numbers": null,
-   "importance": 10,
-   "routine": true
+   "senior": false,
+   "importance": 85,
+   "routine": false
   },
   {
    "id": "ULTRACEMCO-89f83f6d-7340-48e1-a9a4-0d09d9410598",
@@ -1425,6 +1534,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1442,6 +1552,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1459,6 +1570,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1476,6 +1588,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 55,
    "routine": false
   },
@@ -1493,6 +1606,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1512,6 +1626,7 @@
     "BEL-16"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -1529,6 +1644,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1546,6 +1662,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1554,8 +1671,8 @@
    "symbol": "HINDUNILVR",
    "name": "Hindustan Unilever",
    "at": "2026-10-21T16:32:22",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Earnings Conference call for quarter and half year ended 30th September, 2026",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bff766e5-708c-4040-b2a9-da0ced14931a.pdf",
@@ -1563,7 +1680,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -1580,6 +1698,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -1630,6 +1749,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false
   },
@@ -1638,16 +1758,17 @@
    "symbol": "ETERNAL",
    "name": "Eternal",
    "at": "2026-10-21T15:23:59",
-   "type": "earnings_call",
-   "label": "Earnings call",
+   "type": "unclassified",
+   "label": "Routine",
    "subject": "Shareholders Letter",
    "headline": "Eternal limited has filed with exchange copy of shareholders letter dated October 21, 2026",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cbfbd146-6a68-43d6-9cbc-dfb7d0f50fd0.pdf",
-   "summary": "Eternal Limited released its Q2FY27 results and a shareholders' letter discussing business strategy and the upcoming launch of dark.ai.",
+   "summary": null,
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 20,
+   "senior": false,
+   "importance": 10,
    "routine": true
   },
   {
@@ -1664,6 +1785,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1681,6 +1803,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -1698,6 +1821,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -1715,6 +1839,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -1732,6 +1857,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1749,6 +1875,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1766,6 +1893,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -1783,6 +1911,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -1800,6 +1929,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 25,
    "routine": true
   },
@@ -1817,6 +1947,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 25,
    "routine": true
   },
@@ -1834,6 +1965,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1860,6 +1992,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -1877,6 +2010,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -1894,6 +2028,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -1935,6 +2070,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -1962,6 +2098,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -2013,6 +2150,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": []
@@ -2031,6 +2169,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2048,6 +2187,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -2061,11 +2201,15 @@
    "subject": "Issuance Of Corporate Guarantee",
    "headline": "Issuance of Corporate Guarantee",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/46ea80db-1a49-466a-9731-fafed9a90d23.pdf",
-   "summary": null,
+   "summary": "UltraTech Cement's board approved issuing a corporate guarantee of up to USD 55 million for associate company UHG Holdings.",
    "people": [],
-   "promises": [],
+   "promises": [
+    "ULTRACEMCO-7",
+    "ULTRACEMCO-6"
+   ],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2102,7 +2246,8 @@
     "ULTRACEMCO-6"
    ],
    "numbers": null,
-   "importance": 100,
+   "senior": false,
+   "importance": 70,
    "routine": false,
    "also": [
     {
@@ -2155,6 +2300,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -2178,6 +2324,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2195,6 +2342,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2221,6 +2369,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -2238,6 +2387,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2246,8 +2396,8 @@
    "symbol": "HDFCBANK",
    "name": "HDFC Bank",
    "at": "2026-10-17T15:15:38",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Presentation to be made at the Earnings Call",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/81c8a966-dda9-4600-96d9-79961ddc42d0.pdf",
@@ -2255,7 +2405,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2296,6 +2447,7 @@
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
+   "senior": false,
    "importance": 95,
    "routine": false,
    "also": [
@@ -2319,6 +2471,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2336,6 +2489,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2344,8 +2498,8 @@
    "symbol": "LT",
    "name": "Larsen & Toubro",
    "at": "2026-10-16T16:52:23",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analyst / Institutional Investors'' Meet",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/821c9264-499f-4c19-a55c-233ed13d8e11.pdf",
@@ -2353,7 +2507,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2370,6 +2525,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2378,8 +2534,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-16T16:12:35",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analysts''/Investors'' Meet.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b93f01a0-573d-4aaa-9d02-929ffa10c5ce.pdf",
@@ -2387,7 +2543,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2395,8 +2552,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-16T16:07:54",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analysts''/Investors'' Meet.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c15837a7-6d43-4f62-9e8c-d6700c138a70.pdf",
@@ -2404,7 +2561,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2412,8 +2570,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-16T16:06:37",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Schedule of Analysts''/Investors'' Meet.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fc936909-2b70-497f-8330-629acc3fb6b3.pdf",
@@ -2421,7 +2579,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2438,6 +2597,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2455,6 +2615,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2472,6 +2633,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2489,6 +2651,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -2506,6 +2669,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -2514,8 +2678,8 @@
    "symbol": "M&M",
    "name": "Mahindra & Mahindra",
    "at": "2026-10-15T18:43:10",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Please refer enclosed file.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/06d7ee7d-54f0-4212-a569-d8a00d986150.pdf",
@@ -2523,7 +2687,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2540,6 +2705,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2557,6 +2723,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2574,6 +2741,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 5,
    "routine": true
   },
@@ -2589,9 +2757,12 @@
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/08084342-de1f-448a-90bd-964006876f78.pdf",
    "summary": "Tata Power is developing a 2.8 GW energy infrastructure pipeline to support 18 data centre operators across India.",
    "people": [],
-   "promises": [],
+   "promises": [
+    "TATAPOWER-39"
+   ],
    "numbers": null,
-   "importance": 40,
+   "senior": false,
+   "importance": 50,
    "routine": false
   },
   {
@@ -2599,8 +2770,8 @@
    "symbol": "CIPLA",
    "name": "Cipla",
    "at": "2026-10-13T18:53:26",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Please find enclosed intimation for Earnings Conference Call.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/10415382-a94b-4f11-a507-c7c91a0fca3b.pdf",
@@ -2608,7 +2779,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2616,8 +2788,8 @@
    "symbol": "ETERNAL",
    "name": "Eternal",
    "at": "2026-10-13T18:24:54",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Eternal Limited has informed the exchange that the Company will hold its Earnings Conference Call on Wednesday, October 21, 2026 at 5 P.M. (IST) to discuss the financial results for the ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b8f0c3b0-f814-4eed-9df7-91b7af42a586.pdf",
@@ -2625,7 +2797,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2642,6 +2815,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2659,6 +2833,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2701,6 +2876,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -2709,8 +2885,8 @@
    "symbol": "HDFCBANK",
    "name": "HDFC Bank",
    "at": "2026-10-13T16:16:31",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Earnings call intimation to the unaudited standalone and consolidated financial results of HDFC Bank Limited for the quarter and half-year ended September 30, 2026.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d2b066c5-c0d1-4b6d-a927-02640ebe5152.pdf",
@@ -2718,7 +2894,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2739,6 +2916,7 @@
     "BEL-16"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -2756,6 +2934,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2773,6 +2952,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2790,6 +2970,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2807,6 +2988,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -2824,6 +3006,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2832,8 +3015,8 @@
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
    "at": "2026-10-13T11:47:18",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation of Conference Call in respect of financial results for the quarter ended 30 September 2026",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2b45cbcd-a093-4983-817e-7bd6ab6c059c.pdf",
@@ -2841,7 +3024,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -2858,6 +3042,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2875,6 +3060,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2892,6 +3078,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -2909,6 +3096,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -2926,6 +3114,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2943,10 +3132,11 @@
    "people": [],
    "promises": [
     "TATAPOWER-7",
-    "TATAPOWER-13",
-    "TATAPOWER-2"
+    "TATAPOWER-27",
+    "TATAPOWER-26"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -2964,6 +3154,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -2981,6 +3172,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -2998,6 +3190,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -3015,6 +3208,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -3032,6 +3226,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -3049,6 +3244,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -3066,6 +3262,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 65,
    "routine": false
   },
@@ -3083,6 +3280,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3100,6 +3298,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3117,10 +3316,10 @@
    "people": [],
    "promises": [
     "M&M-13",
-    "M&M-4",
-    "M&M-31"
+    "M&M-4"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -3138,6 +3337,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -3155,6 +3355,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -3175,6 +3376,7 @@
     "MAXHEALTH-14"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -3192,6 +3394,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3209,6 +3412,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3226,6 +3430,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3243,6 +3448,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3260,6 +3466,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3277,6 +3484,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3294,6 +3502,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3310,9 +3519,11 @@
    "summary": "TP Solar produced 1 GW of solar modules and 0.9 GW of solar cells during Q2 FY27.",
    "people": [],
    "promises": [
-    "TATAPOWER-4"
+    "TATAPOWER-4",
+    "TATAPOWER-26"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -3330,6 +3541,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -3380,6 +3592,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -3397,6 +3610,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3414,6 +3628,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3431,6 +3646,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3448,6 +3664,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3464,11 +3681,12 @@
    "summary": "Tata Power partnered with Norway's Ocean Sun to pilot a 300 kWp membrane-based floating solar project in Maharashtra.",
    "people": [],
    "promises": [
-    "TATAPOWER-2",
-    "TATAPOWER-17",
-    "TATAPOWER-16"
+    "TATAPOWER-28",
+    "TATAPOWER-24",
+    "TATAPOWER-2"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -3486,6 +3704,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -3503,6 +3722,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 20,
    "routine": true
   },
@@ -3520,6 +3740,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3537,6 +3758,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3553,11 +3775,12 @@
    "summary": "Dixon Technologies executed a joint venture agreement with Gemtek Technology to manufacture optical transceivers and telecom products.",
    "people": [],
    "promises": [
-    "DIXON-49",
     "DIXON-17",
-    "DIXON-42"
+    "DIXON-54",
+    "DIXON-48"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 100,
    "routine": false
   },
@@ -3575,6 +3798,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3592,6 +3816,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3609,6 +3834,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -3626,6 +3852,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3643,6 +3870,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3660,6 +3888,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3677,6 +3906,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -3694,6 +3924,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3711,6 +3942,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3728,6 +3960,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3748,6 +3981,7 @@
     "ULTRACEMCO-6"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -3765,6 +3999,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -3782,6 +4017,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3798,10 +4034,11 @@
    "summary": "Bajaj Finance reported provisional AUM of ₹ 584,750 crore and 128.85 million customers for the quarter ended September 30, 2026.",
    "people": [],
    "promises": [
-    "BAJFINANCE-33",
-    "BAJFINANCE-32"
+    "BAJFINANCE-30",
+    "BAJFINANCE-29"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 65,
    "routine": false
   },
@@ -3819,6 +4056,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -3836,6 +4074,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -3853,6 +4092,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 75,
    "routine": false
   },
@@ -3870,6 +4110,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3887,6 +4128,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 90,
    "routine": false
   },
@@ -3904,6 +4146,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3948,13 +4191,13 @@
       "HDFCBANK-3",
       "HDFCBANK-4",
       "HDFCBANK-5",
-      "HDFCBANK-8",
-      "HDFCBANK-10"
+      "HDFCBANK-8"
      ]
     }
    ],
    "promises": [],
    "numbers": null,
+   "senior": true,
    "importance": 100,
    "routine": false
   },
@@ -3972,6 +4215,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -3989,6 +4233,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -4006,6 +4251,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -4014,17 +4260,18 @@
    "symbol": "AARTIIND",
    "name": "Aarti Industries",
    "at": "2026-10-01T17:20:20",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "fund_raise",
+   "label": "Fund raise",
    "subject": "Board Meeting Outcome for Outcome Of Board Meeting - Fund Raising (Enabling Approval)",
    "headline": "Please find attached Outcome of Board Meeting",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5f4bac16-067c-4bc5-a37b-0cfbafe86e22.pdf",
-   "summary": null,
+   "summary": "Aarti Industries board approved raising up to Rs. 1,000 Crores through various eligible securities and instruments.",
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
-   "routine": true
+   "senior": false,
+   "importance": 75,
+   "routine": false
   },
   {
    "id": "DIXON-43bc3624-6348-4795-9af8-a7af169c577b",
@@ -4040,6 +4287,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 15,
    "routine": true
   },
@@ -4057,6 +4305,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -4065,8 +4314,8 @@
    "symbol": "ULTRACEMCO",
    "name": "UltraTech Cement",
    "at": "2026-10-01T15:08:49",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Intimation regarding Earnings Call of UltraTech Cement Limited",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/951e26c8-59be-4cd7-badb-ef151fcc4b0b.pdf",
@@ -4074,7 +4323,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -4095,6 +4345,7 @@
     "M&M-20"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 50,
    "routine": false
   },
@@ -4112,6 +4363,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 55,
    "routine": false
   },
@@ -4138,6 +4390,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -4146,8 +4399,8 @@
    "symbol": "M&M",
    "name": "Mahindra & Mahindra",
    "at": "2026-09-30T19:13:15",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
    "headline": "Please refer enclosed file.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d532ba2f-89b8-4a95-965c-589d755911c0.pdf",
@@ -4155,7 +4408,8 @@
    "people": [],
    "promises": [],
    "numbers": null,
-   "importance": 10,
+   "senior": false,
+   "importance": 15,
    "routine": true
   },
   {
@@ -4172,6 +4426,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -4214,6 +4469,7 @@
    ],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 60,
    "routine": false
   },
@@ -4231,6 +4487,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 10,
    "routine": true
   },
@@ -4248,6 +4505,7 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
   },
@@ -4267,6 +4525,7 @@
     "LT-9"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 100,
    "routine": false
   },
@@ -4283,11 +4542,12 @@
    "summary": "Dixon subsidiary DEAPL signed an intellectual property license agreement with Aviat Networks to manufacture and sell microwave radios.",
    "people": [],
    "promises": [
-    "DIXON-45",
     "DIXON-17",
-    "DIXON-42"
+    "DIXON-54",
+    "DIXON-48"
    ],
    "numbers": null,
+   "senior": false,
    "importance": 100,
    "routine": false
   },
@@ -4305,193 +4565,9 @@
    "people": [],
    "promises": [],
    "numbers": null,
+   "senior": false,
    "importance": 40,
    "routine": false
-  },
-  {
-   "id": "MAXHEALTH-63cd50e6-a3ab-412e-8aad-f62caf261adf",
-   "symbol": "MAXHEALTH",
-   "name": "Max Healthcare",
-   "at": "2026-09-29T22:41:10",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Disclosure Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015",
-   "headline": "Disclosure under regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/05828a87-dc47-4378-95a0-9b9f8f451ce0.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "DIXON-2ce4bbbb-8341-4ed1-9326-aa2252848296",
-   "symbol": "DIXON",
-   "name": "Dixon Technologies",
-   "at": "2026-09-29T18:33:04",
-   "type": "management_change",
-   "label": "Management",
-   "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
-   "headline": "Announcement under Regulation 30 of SEBI LODR- Change in Management",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f150a679-c9ae-49fc-a533-f0599a16dfac.pdf",
-   "summary": "Dixon Technologies shareholders approved the re-appointment of Sunil Vachani as Whole Time Director and Atul B. Lall as Managing Director for five years.",
-   "people": [
-    {
-     "name": "Mr. Sunil Vachani",
-     "role": "Whole Time Director",
-     "change": "appointed",
-     "effective": "2027-05-05",
-     "profile": "Over three decades of experience in the EMS industry; associated with the Company since its inception.",
-     "promises": []
-    },
-    {
-     "name": "Mr. Atul B. Lall",
-     "role": "Managing Director",
-     "change": "appointed",
-     "effective": "2027-05-05",
-     "profile": "Over 30 years of experience in the EMS industry; leading Dixon Technologies since foundation.",
-     "promises": []
-    }
-   ],
-   "promises": [],
-   "numbers": null,
-   "importance": 90,
-   "routine": false
-  },
-  {
-   "id": "ULTRACEMCO-09a5c294-64b2-4175-8a1c-cae9f0a04bda",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-09-29T18:26:34",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Rumour verification - Regulation 30(11)",
-   "headline": "Regulation 30(11) of the SEBI (LODR) Regulations, 2015.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1cf9fdce-64a8-4b1c-9c4b-da0b98b454b4.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "DIXON-3f3a6017-fc44-4248-842a-565416327a77",
-   "symbol": "DIXON",
-   "name": "Dixon Technologies",
-   "at": "2026-09-29T18:12:01",
-   "type": "results",
-   "label": "Results",
-   "subject": "Closure of Trading Window",
-   "headline": "Closure of Trading Window with effect from 1st October, 2026 until 48 hours after the declaration of financial results (standalone & consolidated) of the Company for the quarter and half ....",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f4c94c72-ec38-47af-b9f3-3677ce419804.pdf",
-   "summary": "Q1FY27 results",
-   "people": [],
-   "promises": [
-    "DIXON-41"
-   ],
-   "numbers": {
-    "quarter": "Q1FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 15548.0,
-      "qoq": 47.92122538293218,
-      "yoy": 21.128077282642565
-     },
-     {
-      "label": "EBITDA",
-      "value": 463.0,
-      "qoq": 13.480392156862742,
-      "yoy": -3.941908713692943
-     },
-     {
-      "label": "PBT",
-      "value": 869.0,
-      "qoq": 134.8648648648649,
-      "yoy": 137.43169398907105
-     },
-     {
-      "label": "PAT",
-      "value": 718.0,
-      "qoq": 140.93959731543623,
-      "yoy": 156.42857142857144
-     }
-    ],
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
-   "importance": 95,
-   "routine": false
-  },
-  {
-   "id": "TATASTEEL-af2ee01b-7f72-4a21-a4f3-5c037d01ef0f",
-   "symbol": "TATASTEEL",
-   "name": "Tata Steel",
-   "at": "2026-09-29T18:06:45",
-   "type": "M&A",
-   "label": "M&A",
-   "subject": "Announcement under Regulation 30 (LODR)-Acquisition",
-   "headline": "Acquisition of equity shares in T Steel Holdings Pte. Ltd",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dbd4fa32-cf5b-4d4a-aaed-15da327b521e.pdf",
-   "summary": "Tata Steel acquired 393,51,85,186 equity shares of T Steel Holdings Pte. Ltd for USD 340 million.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 90,
-   "routine": false
-  },
-  {
-   "id": "DIXON-a5f23d2a-9cf0-4c96-afd2-fe8b57ffb66f",
-   "symbol": "DIXON",
-   "name": "Dixon Technologies",
-   "at": "2026-09-29T17:39:05",
-   "type": "postal_ballot",
-   "label": "Postal ballot",
-   "subject": "Shareholder Meeting / Postal Ballot-Scrutinizer''s Report",
-   "headline": "Regulation 30 of SEBI LODR- Scrutinizer''s Report of 33rd Annual General Meeting of Dixon Technologies (India) Limited along with voting results",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de8ae5f9-37cf-4c51-99bd-c4d17e799b2b.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 20,
-   "routine": true
-  },
-  {
-   "id": "TATASTEEL-08d96a31-be77-4401-a1ed-73a3495f4297",
-   "symbol": "TATASTEEL",
-   "name": "Tata Steel",
-   "at": "2026-09-29T16:40:54",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Disclosure Under Regulation(S) 30 Read With 51 Of The Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015.",
-   "headline": "Disclosure under Regulation(s) 30 read with 51 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a0509c6d-130c-42ef-8b84-edcf3d2859be.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "HDFCBANK-5ec55d1b-4fc9-4c99-a716-18ed4260e240",
-   "symbol": "HDFCBANK",
-   "name": "HDFC Bank",
-   "at": "2026-09-29T12:07:33",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Newspaper Publication Regarding Special Window For Transfer And Dematerialization Of Physical Shares Of HDFC Bank Limited.",
-   "headline": "Newspaper publication regarding special window for transfer and dematerialization of physical shares of HDFC Bank Limited.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/22c5ad94-5bbe-47b6-9d5c-cdd2705a68d2.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "importance": 10,
-   "routine": true
   }
  ]
 }

@@ -33,7 +33,7 @@ def _ranges(page) -> dict[str, dict[str, float]]:
 
 def _years(row: dict[str, float | None], n: int = 5) -> list[tuple[str, float]]:
     """Last n fiscal years (Mar columns), oldest first, as ('FY26', value)."""
-    pts = [(f"FY{c[-2:]}", v) for c, v in row.items() if c.startswith("Mar ") and v is not None]
+    pts = [(f"FY{c[-2:]}", v) for c, v in row.items() if re.fullmatch(r"Mar \d{4}", c) and v is not None]
     return pts[-n:]
 
 
@@ -53,15 +53,18 @@ def build(slug: str) -> dict:
 
     # Trajectory
     sales, profit = rng.get("Compounded Sales Growth", {}), rng.get("Compounded Profit Growth", {})
+    def pct(v):
+        return "n/a" if v is None else f"{v:g}%"
     if sales.get("5 Years") is not None:
         s5, s3, st = sales.get("5 Years"), sales.get("3 Years"), sales.get("TTM")
-        trend = "accelerating" if s3 is not None and s3 > s5 + 2 else "slowing" if s3 is not None and s3 < s5 - 2 else "steady"
+        trend = ("accelerating" if s3 is not None and s3 > s5 + 2 else
+                 "slowing" if s3 is not None and s3 < s5 - 2 else "steady")
         add("sales_growth", "Revenue growth", s5, "% CAGR 5y",
-            f"Revenue compounded {s5:g}% a year over 5 years, {s3:g}% over 3 ({trend}); last 12 months {st:g}%.")
+            f"Revenue compounded {pct(s5)} a year over 5 years, {pct(s3)} over 3 ({trend}); last 12 months {pct(st)}.")
     if profit.get("5 Years") is not None:
         p5, p3, pt = profit.get("5 Years"), profit.get("3 Years"), profit.get("TTM")
         add("profit_growth", "Profit growth", p5, "% CAGR 5y",
-            f"Profit compounded {p5:g}% a year over 5 years, {p3:g}% over 3; last 12 months {pt:g}%.")
+            f"Profit compounded {pct(p5)} a year over 5 years, {pct(p3)} over 3; last 12 months {pct(pt)}.")
 
     # Margins. Screener's "Financing Margin %" for lenders is after provisions and swings
     # negative; it isn't what an investor means by a bank's margin, so lenders skip this.
@@ -119,16 +122,17 @@ CASE_SCHEMA = {
     "type": "object",
     "properties": {
         side: {"type": "array", "items": {"type": "object", "properties": {
-            "point": {"type": "string", "description": "One sentence, at most 25 words, concrete, with the number"},
+            "figure": {"type": "string", "description": "The key number this point rests on, as short as possible: '+11.8%', '₹1,118 cr', '28% → 14%', '3 of 4'"},
+            "point": {"type": "string", "description": "One sentence, at most 22 words, saying what the figure means"},
             "refs": {"type": "array", "items": {"type": "string"}, "description": "Promise ids (e.g. LT-3) or metric keys used"},
-        }, "required": ["point", "refs"]}}
+        }, "required": ["figure", "point", "refs"]}}
         for side in ("bull", "bear")
     },
     "required": ["bull", "bear"],
 }
 
 CASE_SYSTEM = """Write a tight bull case and bear case for an investor, using ONLY the promise record and numbers given.
-- 2 or 3 points each side. Each point is one concrete sentence with the relevant number.
+- 2 or 3 points each side. Each point leads with a figure (the number it rests on) and one sentence on what it means. No point without a number.
 - Every point must cite in refs the promise ids and/or metric keys it rests on. No outside knowledge, no news, no industry claims.
 - The promise record is evidence about management credibility: kept promises and raised guidance support the bull case; misses, cuts, delays and promises gone quiet support the bear case.
 - If the evidence for a side is thin, give fewer points rather than inventing."""
@@ -158,6 +162,6 @@ def case(company: str, ledger: dict, snap: dict) -> dict:
     valid = {t["id"] for t in threads} | {m["key"] for m in snap["metrics"]}
     clean = {}
     for side in ("bull", "bear"):
-        clean[side] = [{"point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
+        clean[side] = [{"figure": p.get("figure", ""), "point": p["point"], "refs": [r for r in p["refs"] if r in valid]}
                        for p in out.get(side, []) if any(r in valid for r in p["refs"])][:3]
     return clean

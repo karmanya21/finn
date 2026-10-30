@@ -15,7 +15,7 @@ from finn.sources import bse
 
 LABEL = {
     "results": "Results", "M&A": "M&A", "fund_raise": "Fund raise", "management_change": "Management",
-    "litigation": "Litigation", "insider_trading": "Insider trade", "earnings_call": "Earnings call",
+    "litigation": "Legal / regulatory", "insider_trading": "Insider trade", "earnings_call": "Earnings call",
     "investor_meetings": "Investor meet", "credit_rating": "Credit rating", "dividend": "Dividend",
     "bonus_split": "Bonus / split", "capex": "Capex", "press_release": "Update", "postal_ballot": "Postal ballot",
     "agm_egm": "AGM / EGM", "pledging": "Pledge", "unclassified": "Routine",
@@ -31,14 +31,22 @@ WEIGHT = {
 ROUTINE = 30
 
 SUBCATEGORY = [  # (regex on "category / subcategory / subject", category); first match wins
+    # Drug regulators: inspections, warning letters, import alerts. For a pharma company
+    # this is among the most material news there is, whatever BSE files it under.
+    (r"USFDA|US ?FDA|\bFDA\b|Warning Letter|Form 483|Import Alert|Establishment Inspection|"
+     r"\bEIR\b|\bOAI\b|\bVAI\b|EU ?GMP|MHRA|WHO ?GMP", "litigation"),
     # Newspaper copies of results are paperwork, whatever their subject says; so is the
     # notice that a board *will* meet to consider results.
     (r"Newspaper|Publication of Financial Results|Advertisement|Board Meeting Intimation|"
-     r"Intimation of Board Meeting|Investor Meet - Intimation", "unclassified"),
+     r"Intimation of Board Meeting", "unclassified"),
+    # A notice that a call or meeting *will* happen, whatever results it says it's about.
+    (r"Investor Meet - Intimation|Intimation of (Earnings |Conference |Analyst)|Schedule of (Analyst|Investor|Earnings)|"
+     r"Earnings Call Intimation|Conference Call (Intimation|with Investors)", "investor_meetings"),
     (r"Financial Results|Result\b|Outcome of Board Meeting.*Results|Results? For The Quarter", "results"),
     (r"Change in Management|Change in Directorate|Resignation|Cessation|Retirement|Appointment", "management_change"),
     (r"Acquisition|Joint Venture|Amalgamation|Merger|Demerger|Scheme of Arrangement|Disinvestment|Restructuring|Divest", "M&A"),
-    (r"Qualified Institutional|Preferential Issue|Rights Issue|Issue of Securities|Buy ?back|Commercial Paper|Debentures|NCD", "fund_raise"),
+    (r"Qualified Institutional|Preferential Issue|Rights Issue|Issue of Securities|Buy ?back|Commercial Paper|"
+     r"Debentures|NCD|Fund Rais|Capital Raise|Enabling Resolution", "fund_raise"),
     (r"Allotment of ESOP|ESPS|ESOS", "unclassified"),
     (r"Credit Rating", "credit_rating"),
     (r"Pledge|Encumbrance", "pledging"),
@@ -50,6 +58,8 @@ SUBCATEGORY = [  # (regex on "category / subcategory / subject", category); firs
     (r"Analyst|Investor Meet|Investor Conference|Investor Presentation", "investor_meetings"),
     (r"Postal Ballot", "postal_ballot"),
     (r"AGM|EGM|General Meeting|Scrutinizer", "agm_egm"),
+    # A board outcome can be anything (dividend, fund raise, appointment): read the PDF.
+    (r"Outcome of (the )?Board Meeting|Board Meeting Outcome", "vague"),
     (r"Board Meeting(?! Outcome)|Intimation", "unclassified"),
     (r"Award of Order|Receipt of Order|Bagging|Order Win|Monthly Business|Memorandum of Understanding|"
      r"Agreement|Press Release|Media Release|Launch", "press_release"),
@@ -108,15 +118,11 @@ newspaper ads, compliance certificates, clarifications of no substance)."""
 def rule_category(a: dict) -> str | None:
     text = f"{a['category']} / {a['subcategory']} / {a['subject']} {a['headline']}"
     if VAGUE.match(f"{a['category']} / {a['subcategory']}"):
-        # The subject may still be decisive ("Board Meeting Outcome for Financial Results").
-        for pat, cat in SUBCATEGORY:
-            if re.search(pat, f"{a['subject']} {a['headline']}", re.I):
-                return cat
-        return None
+        text = f"{a['subject']} {a['headline']}"  # the subject may still be decisive
     for pat, cat in SUBCATEGORY:
         if re.search(pat, text, re.I):
-            return cat
-    return "unclassified"
+            return None if cat == "vague" else cat
+    return None if VAGUE.match(f"{a['category']} / {a['subcategory']}") else "unclassified"
 
 
 def classify(company: str, items: list[dict]) -> None:

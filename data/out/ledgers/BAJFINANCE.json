@@ -3,7 +3,7 @@
  "name": "Bajaj Finance",
  "sector": "NBFC",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Oct 2026",
  "latest_results": "Q2FY27",
  "headline": {
@@ -73,16 +73,16 @@
   "kept": 3,
   "missed": 1,
   "resolved": 4,
-  "moved": 4,
-  "quiet": 7,
-  "open": 26,
+  "moved": 3,
+  "quiet": 6,
+  "open": 24,
   "by_status": {
-   "gone_quiet": 7,
+   "gone_quiet": 6,
    "delivered": 3,
    "missed": 1,
    "open": 20,
-   "on_track": 4,
    "behind": 1,
+   "on_track": 2,
    "delayed": 1
   }
  },
@@ -277,6 +277,95 @@
   },
   {
    "id": "BAJFINANCE-4",
+   "title": "FY27 credit cost",
+   "kind": "directional",
+   "metric": "asset_quality",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": "down",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "165–175 bps",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Apr 2026",
+     "from": "165–175 bps",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Credit costs structurally improving and optimistic outlook for FY27",
+   "evidence": {
+    "quote": "And we, in general, remain quite optimistic about the credit cost outlook for FY '27.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "As a result, we expect full year credit cost to come within 1.85% to 1.95% for FY'26, and we expect significant improvements in credit costs for FY'27.",
+     "speaker": "Rajeev Jain",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=39ea369b-a7b8-42e8-b787-2d1df4efa020.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points, that's the number, including the permanent provisions that we're talking about.",
+     "speaker": "Rajeev Jain",
+     "page": 8,
+     "target": "165–175 bps",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf"
+    },
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect this to continue to trend down.",
+     "speaker": "Rajeev Jain",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect this to continue to trend down.",
+     "speaker": "Rajeev Jain",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BAJFINANCE-5",
    "title": "FY26 MSME business growth",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -310,8 +399,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-5",
-   "title": "FinAI service and gold loan branches rollout",
+   "id": "BAJFINANCE-6",
+   "title": "FinAI service and branch rollout",
    "kind": "milestone",
    "metric": "other",
    "scope": "FinAI",
@@ -338,22 +427,35 @@
    ]
   },
   {
-   "id": "BAJFINANCE-6",
-   "title": "Gold loan business size by March 2027",
+   "id": "BAJFINANCE-7",
+   "title": "Gold loan business size and contribution",
    "kind": "hard",
-   "metric": "other",
-   "scope": "Gold loan business",
+   "metric": "loan_growth",
+   "scope": "Gold loan",
    "basis": "management",
    "period": "FY27",
-   "target": "₹27,000–30,000 cr",
-   "direction": null,
+   "target": "5%",
+   "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "on_track",
-   "detail": "Gold loan business sustained strong momentum, grew by 112%",
+   "events": [
+    {
+     "call": "Apr 2026",
+     "from": "₹27,000–30,000 cr",
+     "to": "5%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "5%",
+     "to": "5%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "behind",
+   "detail": "Gold loan portfolio is 4.1% of balance sheet",
    "evidence": {
-    "quote": "Gold loan business sustained its strong momentum, grew by 112%.",
-    "call": "Aug 2026",
+    "quote": "Gold loan book portfolio continued to grow, it's now 4.1% of balance sheet.",
+    "call": "Oct 2026, p3",
     "new_deadline": null
    },
    "statements": [
@@ -368,12 +470,36 @@
      "deadline": "March 2027",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=39ea369b-a7b8-42e8-b787-2d1df4efa020.pdf"
+    },
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "All goes well, which should start to look towards 5% kind of number in the next year as well.",
+     "speaker": "Sandeep Jain",
+     "page": 10,
+     "target": "5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "All goes well",
+     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "All goes well, which should start to look towards 5% kind of number in the next year as well.",
+     "speaker": "Sandeep Jain",
+     "page": 11,
+     "target": "5%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": "All goes well",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
     }
    ]
   },
   {
-   "id": "BAJFINANCE-7",
-   "title": "FY26 fee revenue pool growth",
+   "id": "BAJFINANCE-8",
+   "title": "FY26 fee revenue growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -401,23 +527,17 @@
    ]
   },
   {
-   "id": "BAJFINANCE-8",
-   "title": "FY27 credit cost trajectory improvement",
-   "kind": "directional",
-   "metric": "asset_quality",
+   "id": "BAJFINANCE-9",
+   "title": "Products live date and Copilots transition",
+   "kind": "milestone",
+   "metric": "other",
    "scope": "company",
-   "basis": "management",
-   "period": "FY27",
+   "basis": null,
+   "period": "Q1FY27",
    "target": "",
-   "direction": "down",
+   "direction": null,
    "moved": false,
    "events": [
-    {
-     "call": "Feb 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    },
     {
      "call": "Apr 2026",
      "from": "",
@@ -431,77 +551,8 @@
      "type": "reaffirmed"
     }
    ],
-   "status": "on_track",
-   "detail": "Credit cost outlook for FY27 remains optimistic",
-   "evidence": {
-    "quote": "And we, in general, remain quite optimistic about the credit cost outlook for FY '27.",
-    "call": "Aug 2026",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Dec 2025",
-     "quarter": "Q2FY26",
-     "quote": "If the trajectory that we are seeing today should continue for the next year, we should definitely see a significant improvement in the credit cost ratio.",
-     "speaker": "Sandeep Jain",
-     "page": 14,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": "If the trajectory that we are seeing today should continue for the next year",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=39ea369b-a7b8-42e8-b787-2d1df4efa020.pdf"
-    },
-    {
-     "call": "Feb 2026",
-     "quarter": "Q3FY26",
-     "quote": "You will continue to see acceleration of these three areas as we progress well into FY '27.",
-     "speaker": "Rajeev Jain",
-     "page": 3,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf"
-    },
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "We expect this to continue to trend down.",
-     "speaker": "Rajeev Jain",
-     "page": 2,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "We expect this to continue to trend down.",
-     "speaker": "Rajeev Jain",
-     "page": 3,
-     "target": "",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
-    }
-   ]
-  },
-  {
-   "id": "BAJFINANCE-9",
-   "title": "Product live date in April-May 2026",
-   "kind": "milestone",
-   "metric": "other",
-   "scope": "company",
-   "basis": null,
-   "period": "FY27",
-   "target": "",
-   "direction": null,
-   "moved": false,
-   "events": [],
-   "status": "open",
+   "status": "gone_quiet",
+   "detail": "Said 3 times, then not mentioned since May 2026",
    "statements": [
     {
      "call": "Feb 2026",
@@ -514,6 +565,30 @@
      "deadline": "May 2026",
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf"
+    },
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "They'll all transitioning by end of May to Copilots.",
+     "speaker": "Rajeev Jain",
+     "page": 13,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "May 2026",
+     "condition": null,
+     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "They'll all transitioning by end of May to Copilots.",
+     "speaker": "Rajeev Jain",
+     "page": 14,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "end of May 2026",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
     }
    ]
   },
@@ -594,7 +669,7 @@
   },
   {
    "id": "BAJFINANCE-12",
-   "title": "Customer franchise size multi-year",
+   "title": "Customer franchise size target",
    "kind": "soft",
    "metric": "other",
    "scope": "company",
@@ -622,71 +697,59 @@
   },
   {
    "id": "BAJFINANCE-13",
-   "title": "FY27 credit cost",
-   "kind": "hard",
-   "metric": "asset_quality",
+   "title": "FY27 business acceleration",
+   "kind": "directional",
+   "metric": "other",
    "scope": "company",
-   "basis": "management",
+   "basis": null,
    "period": "FY27",
-   "target": "145–160 bps",
-   "direction": null,
-   "moved": true,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "165–175 bps",
-     "to": "145–160 bps",
-     "type": "lowered"
-    }
-   ],
-   "status": "on_track",
-   "detail": "Credit cost outlook for FY27 remains on track",
-   "evidence": {
-    "quote": "And we, in general, remain quite optimistic about the credit cost outlook for FY '27.",
-    "call": "Aug 2026, p3",
-    "new_deadline": null
-   },
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
    "statements": [
     {
      "call": "Feb 2026",
      "quarter": "Q3FY26",
-     "quote": "We foresee that the number next year as we enter could be anywhere between 165 to 175 basis points, that's the number, including the permanent provisions that we're talking about.",
+     "quote": "You will continue to see acceleration of these three areas as we progress well into FY '27.",
      "speaker": "Rajeev Jain",
-     "page": 8,
-     "target": "165–175 bps",
+     "page": 3,
+     "target": "",
      "period": "FY27",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "And against that, you're guiding for 145 to 160 bps next year, full year. Is that the right understanding?",
-     "speaker": "Abhishek Murarka",
-     "page": 9,
-     "target": "145–160 bps",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
     }
    ]
   },
   {
    "id": "BAJFINANCE-14",
-   "title": "MSME business growth in FY27 Q2",
-   "kind": "hard",
-   "metric": "loan_growth",
-   "scope": "MSME business",
+   "title": "MSME business growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "MSME",
    "basis": null,
-   "period": "Q2FY27",
-   "target": "20–29%",
+   "period": "H2FY27",
+   "target": "",
    "direction": "up",
    "moved": false,
-   "events": [],
-   "status": "gone_quiet",
-   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "events": [
+    {
+     "call": "Apr 2026",
+     "from": "≥20%",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "lapsed",
+   "detail": "Said 3 times, then not mentioned since May 2026",
    "statements": [
     {
      "call": "Feb 2026",
@@ -694,11 +757,35 @@
      "quote": "we think by June quarter or so, that business should also be back in -- between July and September quarter, that business should also be back in the 20s growth.",
      "speaker": "Rajeev Jain",
      "page": 8,
-     "target": "20–29%",
+     "target": "≥20%",
      "period": "Q2FY27",
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6eb34dc2-bde9-4df5-8b93-aad3d461140e.pdf"
+    },
+    {
+     "call": "Apr 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect that it should come back to double-digit growth or the company growth momentum between Q2 and Q3 of FY'27.",
+     "speaker": "Rajeev Jain",
+     "page": 2,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect that it should come back to double-digit growth or the company growth momentum between Q2 and Q3 of FY'27.",
+     "speaker": "Rajeev Jain",
+     "page": 3,
+     "target": "",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
     }
    ]
   },
@@ -766,7 +853,7 @@
    "scope": "New car financing",
    "basis": null,
    "period": "FY27",
-   "target": "30–33%",
+   "target": "≥30%",
    "direction": null,
    "moved": false,
    "events": [],
@@ -778,7 +865,7 @@
      "quote": "So now let me summarize the point. That means that new car financing next year would probably still grow in the early 30s.",
      "speaker": "Rajeev Jain",
      "page": 9,
-     "target": "30–33%",
+     "target": "≥30%",
      "period": "FY27",
      "deadline": null,
      "condition": null,
@@ -788,7 +875,7 @@
   },
   {
    "id": "BAJFINANCE-18",
-   "title": "Used car financing growth in H2FY27",
+   "title": "Used car financing growth",
    "kind": "directional",
    "metric": "loan_growth",
    "scope": "Used car financing",
@@ -816,55 +903,7 @@
   },
   {
    "id": "BAJFINANCE-19",
-   "title": "MSME growth momentum in H2FY27",
-   "kind": "directional",
-   "metric": "revenue_growth",
-   "scope": "MSME",
-   "basis": null,
-   "period": "H2FY27",
-   "target": "",
-   "direction": "up",
-   "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "lapsed",
-   "detail": "Said 2 times, then not mentioned since May 2026",
-   "statements": [
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "We expect that it should come back to double-digit growth or the company growth momentum between Q2 and Q3 of FY'27.",
-     "speaker": "Rajeev Jain",
-     "page": 2,
-     "target": "",
-     "period": "H2FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "We expect that it should come back to double-digit growth or the company growth momentum between Q2 and Q3 of FY'27.",
-     "speaker": "Rajeev Jain",
-     "page": 3,
-     "target": "",
-     "period": "H2FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
-    }
-   ]
-  },
-  {
-   "id": "BAJFINANCE-20",
-   "title": "Captive 2W and 3W book size reduction by September 2026",
+   "title": "Captive 2W and 3W book size",
    "kind": "milestone",
    "metric": "debt",
    "scope": "captive 2-wheeler and 3-wheeler business",
@@ -911,8 +950,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-21",
-   "title": "Autonomous agents deployment in FY27",
+   "id": "BAJFINANCE-20",
+   "title": "Autonomous agents deployment",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -930,10 +969,10 @@
     }
    ],
    "status": "on_track",
-   "detail": "Progressing to deliver 600-odd agents for the year",
+   "detail": "600-odd agents on track for the year",
    "evidence": {
     "quote": "We are well on track to deliver 180-odd agentic applications and 600-odd agents for the year.",
-    "call": "Oct 2026, p3",
+    "call": "Oct 2026",
     "new_deadline": null
    },
    "statements": [
@@ -964,7 +1003,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-22",
+   "id": "BAJFINANCE-21",
    "title": "FY27 opex to NTI improvement",
    "kind": "hard",
    "metric": "operating_margin",
@@ -1047,7 +1086,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-23",
+   "id": "BAJFINANCE-22",
    "title": "FY27 ROA guidance",
    "kind": "hard",
    "metric": "roe",
@@ -1095,7 +1134,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-24",
+   "id": "BAJFINANCE-23",
    "title": "FY27 return on equity guidance",
    "kind": "hard",
    "metric": "roe",
@@ -1148,8 +1187,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-25",
-   "title": "FY27 GNPA and NNPA range",
+   "id": "BAJFINANCE-24",
+   "title": "FY27 GNPA and NNPA trajectory",
    "kind": "directional",
    "metric": "asset_quality",
    "scope": "company",
@@ -1201,109 +1240,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-26",
-   "title": "Gold loan balance sheet contribution in FY27",
-   "kind": "hard",
-   "metric": "loan_growth",
-   "scope": "Gold loan",
-   "basis": "management",
-   "period": "FY27",
-   "target": "5%",
-   "direction": "up",
-   "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "5%",
-     "to": "5%",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "behind",
-   "detail": "Gold loan portfolio is now 4.1% of balance sheet",
-   "evidence": {
-    "quote": "Gold loan book portfolio continued to grow, it's now 4.1% of balance sheet.",
-    "call": "Oct 2026, p3",
-    "new_deadline": null
-   },
-   "statements": [
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "All goes well, which should start to look towards 5% kind of number in the next year as well.",
-     "speaker": "Sandeep Jain",
-     "page": 10,
-     "target": "5%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": "All goes well",
-     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "All goes well, which should start to look towards 5% kind of number in the next year as well.",
-     "speaker": "Sandeep Jain",
-     "page": 11,
-     "target": "5%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": "All goes well",
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
-    }
-   ]
-  },
-  {
-   "id": "BAJFINANCE-27",
-   "title": "Transition to Copilots by end of May 2026",
-   "kind": "milestone",
-   "metric": "other",
-   "scope": "company",
-   "basis": null,
-   "period": "Q1FY27",
-   "target": "",
-   "direction": null,
-   "moved": false,
-   "events": [
-    {
-     "call": "May 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "gone_quiet",
-   "detail": "Said 2 times, then not mentioned since May 2026",
-   "statements": [
-    {
-     "call": "Apr 2026",
-     "quarter": "Q4FY26",
-     "quote": "They'll all transitioning by end of May to Copilots.",
-     "speaker": "Rajeev Jain",
-     "page": 13,
-     "target": "",
-     "period": "Q1FY27",
-     "deadline": "May 2026",
-     "condition": null,
-     "url": "https://cms-assets.bajajfinserv.in/is/content/bajajfinance/bajaj-finance-q4-fy26-earnings-conference-call-transcript?scl=1&fmt=pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "They'll all transitioning by end of May to Copilots.",
-     "speaker": "Rajeev Jain",
-     "page": 14,
-     "target": "",
-     "period": "Q1FY27",
-     "deadline": "end of May 2026",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a448b6b0-edb5-4b99-a122-d602950310af.pdf"
-    }
-   ]
-  },
-  {
-   "id": "BAJFINANCE-28",
-   "title": "FY27 AUM growth guidance",
+   "id": "BAJFINANCE-25",
+   "title": "FY27 AUM and balance sheet growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -1367,8 +1305,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-29",
-   "title": "FY27 digital platform business volume",
+   "id": "BAJFINANCE-26",
+   "title": "Digital platform business volume",
    "kind": "hard",
    "metric": "other",
    "scope": "digital platform",
@@ -1395,8 +1333,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-30",
-   "title": "FY28 digital transformation volume",
+   "id": "BAJFINANCE-27",
+   "title": "Digital transformation volume",
    "kind": "hard",
    "metric": "other",
    "scope": "digital platform",
@@ -1423,8 +1361,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-31",
-   "title": "FY27 AI disbursements",
+   "id": "BAJFINANCE-28",
+   "title": "AI disbursements",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -1451,8 +1389,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-32",
-   "title": "B2B custom AI model go live in Q2FY27",
+   "id": "BAJFINANCE-29",
+   "title": "Custom AI model go live",
    "kind": "milestone",
    "metric": "other",
    "scope": "B2B business",
@@ -1480,8 +1418,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-33",
-   "title": "B2C custom AI model go live",
+   "id": "BAJFINANCE-30",
+   "title": "B2C custom AI model launch",
    "kind": "milestone",
    "metric": "other",
    "scope": "B2C business",
@@ -1492,9 +1430,9 @@
    "moved": false,
    "events": [],
    "status": "delayed",
-   "detail": "B2C AI model launch delayed to January",
+   "detail": "B2C model launch subject to January assessment",
    "evidence": {
-    "quote": "We are working on our B2C model as well at this point in time, subject to the 3MOB performance we would launch our  B2C model as well if the performance by January for our B2B business holds based on our assessment at this point in time.",
+    "quote": "We are working on our B2C model as well at this point in time, subject to the 3MOB performance we would launch our B2C model as well if the performance by January for our B2B business holds based on our assessment at this point in time.",
     "call": "Oct 2026",
     "new_deadline": "Q4FY27"
    },
@@ -1514,8 +1452,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-34",
-   "title": "Branch capacity AUM delivery in FY27",
+   "id": "BAJFINANCE-31",
+   "title": "Branch capacity AUM delivery",
    "kind": "hard",
    "metric": "asset_quality",
    "scope": "new branches",
@@ -1542,8 +1480,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-35",
-   "title": "Launch of two new lines of business in FY27",
+   "id": "BAJFINANCE-32",
+   "title": "Launch of two new lines of business",
    "kind": "milestone",
    "metric": "other",
    "scope": "company",
@@ -1570,7 +1508,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-36",
+   "id": "BAJFINANCE-33",
    "title": "FY27 new loans",
    "kind": "hard",
    "metric": "other",
@@ -1598,7 +1536,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-37",
+   "id": "BAJFINANCE-34",
    "title": "Medium-term growth guidance",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1626,8 +1564,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-38",
-   "title": "Longer-term fee income growth",
+   "id": "BAJFINANCE-35",
+   "title": "Multi-year fee income growth",
    "kind": "hard",
    "metric": "revenue_growth",
    "scope": "company",
@@ -1654,7 +1592,7 @@
    ]
   },
   {
-   "id": "BAJFINANCE-39",
+   "id": "BAJFINANCE-36",
    "title": "Longer-term growth guidance",
    "kind": "hard",
    "metric": "revenue_growth",
@@ -1682,8 +1620,8 @@
    ]
   },
   {
-   "id": "BAJFINANCE-40",
-   "title": "Long-term profit growth and return on equity",
+   "id": "BAJFINANCE-37",
+   "title": "Long-term profit growth",
    "kind": "hard",
    "metric": "pat_growth",
    "scope": "company",
@@ -1710,8 +1648,36 @@
    ]
   },
   {
-   "id": "BAJFINANCE-41",
-   "title": "Launch of term loan variants in H2FY27",
+   "id": "BAJFINANCE-38",
+   "title": "Long-term return on equity",
+   "kind": "hard",
+   "metric": "roe",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "19–21%",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Oct 2026",
+     "quarter": "Q2FY27",
+     "quote": "We have to deliver the long-term 20% to 25% profit growth to investors in 19% to 21% return on equity.",
+     "speaker": "Rajeev Jain",
+     "page": 18,
+     "target": "19–21%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7873abcb-7f97-487d-a474-028b0a26feea.pdf"
+    }
+   ]
+  },
+  {
+   "id": "BAJFINANCE-39",
+   "title": "Launch of term loan variants",
    "kind": "milestone",
    "metric": "other",
    "scope": "company",
@@ -1738,6 +1704,37 @@
    ]
   }
  ],
+ "business": {
+  "what": "Bajaj Finance is a financial services company that provides various lending products and financial solutions to retail, SME, and corporate customers in India.",
+  "segments": [
+   {
+    "name": "Financing",
+    "share_pct": null,
+    "revenue_cr": null,
+    "note": "Provides various loan products and financial services to customers.",
+    "page": 325
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": 100,
+    "page": 325
+   }
+  ],
+  "year": "FY2026",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2357f0b-2828-4790-8a02-61064bd1929b.pdf",
+  "pages": [
+   74,
+   106,
+   116,
+   325,
+   362,
+   466,
+   503
+  ]
+ },
  "snapshot": {
   "lender": true,
   "metrics": [
@@ -1799,43 +1796,51 @@
  "case": {
   "bull": [
    {
-    "point": "Management successfully delivered on key FY26 targets, including 17.5 million new customer additions and 22.4% AUM growth.",
+    "figure": "17.5 million",
+    "point": "Management successfully exceeded the upper end of their raised FY26 new customer acquisition guidance.",
     "refs": [
-     "BAJFINANCE-1",
+     "BAJFINANCE-1"
+    ]
+   },
+   {
+    "figure": "22.4%",
+    "point": "The company delivered on its FY26 AUM growth target, demonstrating consistent execution of its core lending strategy.",
+    "refs": [
      "BAJFINANCE-2"
     ]
    },
    {
-    "point": "The company demonstrated disciplined cost management by achieving a 7.41% cost of funds, beating the 7.55–7.6% guidance range.",
+    "figure": "19–21%",
+    "point": "Long-term return on equity targets remain on track, supported by a steady improvement in ROE from 17% to 18%.",
     "refs": [
-     "BAJFINANCE-3"
-    ]
-   },
-   {
-    "point": "Management has proactively lowered FY27 credit cost guidance to 145–160 bps, signaling confidence in asset quality.",
-    "refs": [
-     "BAJFINANCE-13"
+     "BAJFINANCE-23",
+     "BAJFINANCE-38",
+     "returns"
     ]
    }
   ],
   "bear": [
    {
-    "point": "The company missed its FY26 MSME business growth target of 10–12%, achieving only 6% growth.",
+    "figure": "6%",
+    "point": "The company significantly missed its FY26 MSME business growth target of 10–12%.",
     "refs": [
-     "BAJFINANCE-4"
+     "BAJFINANCE-5"
     ]
    },
    {
-    "point": "Several strategic targets, including FY26 fee revenue and FY27 ROA guidance, have gone quiet without updates after the periods ended.",
+    "figure": "4.1%",
+    "point": "The gold loan business is currently behind its 5% portfolio contribution target for FY27.",
     "refs": [
-     "BAJFINANCE-7",
-     "BAJFINANCE-23"
+     "BAJFINANCE-7"
     ]
    },
    {
-    "point": "The gold loan portfolio contribution of 4.1% is currently behind the 5% target set for FY27.",
+    "figure": "3",
+    "point": "Multiple strategic initiatives, including fee revenue and AI-related product transitions, have gone quiet or lapsed without updates.",
     "refs": [
-     "BAJFINANCE-26"
+     "BAJFINANCE-8",
+     "BAJFINANCE-9",
+     "BAJFINANCE-14"
     ]
    }
   ]

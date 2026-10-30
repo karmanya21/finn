@@ -3,7 +3,7 @@
  "name": "Aarti Industries",
  "sector": "Specialty chemicals",
  "size": "mid",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Aug 2026",
  "latest_results": "Q1FY27",
  "headline": {
@@ -108,7 +108,7 @@
      "call": "Aug 2025",
      "from": "₹950–1,000 cr",
      "to": "≤₹1,000 cr",
-     "type": "raised"
+     "type": "reaffirmed"
     },
     {
      "call": "Nov 2025",
@@ -1314,6 +1314,77 @@
    ]
   }
  ],
+ "business": {
+  "what": "Aarti Industries manufactures and sells specialty chemicals and downstream derivatives to global customers across multiple industries.",
+  "segments": [
+   {
+    "name": "Energy",
+    "share_pct": 43,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   },
+   {
+    "name": "Agrochemicals and Fertilisers",
+    "share_pct": 18,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   },
+   {
+    "name": "Polymers and Additives",
+    "share_pct": 14,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   },
+   {
+    "name": "Dyes, Pigments and Printing Inks",
+    "share_pct": 11,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   },
+   {
+    "name": "Pharmaceuticals",
+    "share_pct": 10,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   },
+   {
+    "name": "Others",
+    "share_pct": 4,
+    "revenue_cr": null,
+    "note": null,
+    "page": 98
+   }
+  ],
+  "geographies": [
+   {
+    "region": "Within India",
+    "share_pct": null,
+    "page": 213
+   },
+   {
+    "region": "Outside India",
+    "share_pct": null,
+    "page": 213
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e07a7c0-2acd-4c8c-b356-37c5b01dde51.pdf",
+  "pages": [
+   8,
+   21,
+   34,
+   97,
+   98,
+   106,
+   213
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1433,42 +1504,48 @@
  "case": {
   "bull": [
    {
-    "point": "Management successfully delivered on the FY26 capex target by investing ₹1,125 crore.",
+    "figure": "14.0",
+    "point": "The FY27 tax rate is tracking well below the target at 14.0.",
     "refs": [
-     "AARTIIND-0"
+     "AARTIIND-9"
     ]
    },
    {
-    "point": "The company completed its key MMA capacity expansion to 360 KTPA.",
+    "figure": "360 KTPA",
+    "point": "Management successfully delivered on the MMA capacity expansion to 360 KTPA.",
     "refs": [
      "AARTIIND-11"
     ]
    },
    {
-    "point": "The FY27 tax rate is currently tracking on pace at 14.0% against the target of ≤15%.",
+    "figure": "175%",
+    "point": "Cash conversion was strong over 5 years, with operating cash flow reaching 175% of net profit.",
     "refs": [
-     "AARTIIND-9"
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "point": "Borrowings increased by ₹1,118 crore, failing the FY26 net debt reduction target of ₹200–300 crore.",
+    "figure": "₹1,118 cr",
+    "point": "Net debt reduction was badly missed as borrowings jumped by ₹1,118 crore to ₹4,966 crore.",
     "refs": [
-     "AARTIIND-1"
+     "AARTIIND-1",
+     "debt"
     ]
    },
    {
-    "point": "Operating margins have compressed significantly from 28% in FY22 to 14% in FY26.",
+    "figure": "28% → 14%",
+    "point": "Operating margins compressed severely from 28% in FY22 down to 14% by FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "point": "Multiple projects including Zone 4 and Aarti Circularity have faced repeated commissioning delays.",
+    "figure": "22% → 7%",
+    "point": "ROCE degraded significantly from 22% in FY22 down to just 7% in FY26.",
     "refs": [
-     "AARTIIND-4",
-     "AARTIIND-6"
+     "returns"
     ]
    }
   ]

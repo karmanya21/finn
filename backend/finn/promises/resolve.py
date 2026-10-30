@@ -51,7 +51,7 @@ def fmt_range(low, high, unit) -> str:
     if unit.lower() in ("count", "number", "nos", "people", "employees", "units"):
         unit = ""
     pct = unit in ("%", "percent")
-    u = "%" if pct else (f" {unit}" if unit else "")
+    u = "%" if pct else "×" if unit.lower() in ("x", "times") else (f" {unit}" if unit else "")
     def n(x):
         return f"{x:,.0f}" if abs(x) >= 100 else f"{x:g}"
     if low is None and high is None:
@@ -98,6 +98,8 @@ def changes(stmts: list[dict]) -> list[dict]:
         d0 = _order(parse_period(prev.get("deadline") or prev.get("period")))
         d1 = _order(parse_period(cur.get("deadline") or cur.get("period")))
         m0, m1 = _mid(prev), _mid(cur)
+        if not _comparable(prev, cur):
+            m0 = m1 = None
         if cur["kind"] == "milestone" and d0 and d1 and d0 != d1:
             ev.update(type="deferred" if d1 > d0 else "advanced",
                       **{"from": fiscal.label(*d0), "to": fiscal.label(*d1)})
@@ -117,6 +119,37 @@ def changes(stmts: list[dict]) -> list[dict]:
     return events
 
 
+REVISION = re.compile(r"\b(revis\w*|chang\w*|new (?:\w+ ){0,3}guidance|from \S+ to|earlier|last guidance|previous\w*|narrow\w*|"
+                      r"lower\w*|rais\w*|cut|reduc\w*|increas\w*|upgrad\w*|downgrad\w*)\b", re.I)
+
+
+def _comparable(prev: dict, cur: dict) -> bool:
+    """Can a change between these two statements be read as a raise or a cut?"""
+    if _unit(prev) != _unit(cur):
+        return False  # "15%" and "₹1,000 cr" aren't the same target
+    p0, p1 = parse_period(prev.get("period")), parse_period(cur.get("period"))
+    if p0 and p1 and (p0.fy, p0.quarters) != (p1.fy, p1.quarters):
+        return False  # "1.3 GW in H2" and "2.7 GW this year" cover different spans
+    revision = REVISION.search(cur.get("quote") or "")
+    shared = {cur.get("low"), cur.get("high")}
+    if not revision and any(v is not None and v not in shared and re.search(rf"(?<![\d.]){re.escape(f'{v:,.0f}' if v >= 1000 else f'{v:g}')}(?![\d])",
+                                       cur.get("quote") or "")
+           for v in (prev.get("low"), prev.get("high"))):
+        # The old number is still in the new quote: restated (perhaps beside another
+        # figure the model latched on to, as in "R&D 1,600 crores, capex 1,000 crores").
+        return False
+    bands = [(p.get("low"), p.get("high")) for p in (prev, cur)]
+    if any((lo is None) != (hi is None) for lo, hi in bands) and \
+            {b for pair in bands for b in pair if b is not None} & {bands[0][0], bands[0][1]} & {bands[1][0], bands[1][1]}:
+        return False  # "15–17.5%" then "more than 15%": an open bound sharing an edge isn't a cut
+    return True
+
+
+def _unit(p: dict) -> str:
+    u = (p.get("unit") or "").strip().lower()
+    return "%" if u in ("%", "percent") else "cr" if "crore" in u else u
+
+
 # ---- financial checks ----------------------------------------------------------
 
 def _company_scope(p: dict) -> bool:
@@ -127,8 +160,8 @@ def _company_scope(p: dict) -> bool:
 def _measure(p: dict):
     """(name, fn(fin, fy, qs) -> value) when reported financials can check this promise."""
     m, label = p.get("metric"), f"{p.get('metric_label', '')} {p.get('quote', '')}".lower()
-    if not _company_scope(p):
-        return None
+    if not _company_scope(p) or _unit(p) not in ("%", ""):
+        return None  # "2x the market" isn't a growth rate to compare with reported growth
     if m == "revenue_growth" and p.get("basis") != "constant_currency":
         return "revenue growth", lambda f, fy, qs: f.growth(fy, qs)
     if m == "ebitda_margin":

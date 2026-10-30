@@ -1,0 +1,1565 @@
+{
+ "symbol": "PIIND",
+ "name": "PI Industries",
+ "sector": "Agrochemicals",
+ "size": "mid",
+ "built": "2026-10-30",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 1702.0,
+    "qoq": 8.753993610223642,
+    "yoy": -10.421052631578942
+   },
+   {
+    "label": "EBITDA",
+    "value": 367.0,
+    "qoq": 8.902077151335309,
+    "yoy": -29.28709055876686
+   },
+   {
+    "label": "PBT",
+    "value": 322.0,
+    "qoq": 7.333333333333325,
+    "yoy": -36.489151873767256
+   },
+   {
+    "label": "PAT",
+    "value": 244.0,
+    "qoq": 21.999999999999996,
+    "yoy": -39.0
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf",
+   "promises": 14
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf",
+   "promises": 9
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf",
+   "promises": 11
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf",
+   "promises": 14
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf",
+   "promises": 10
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c6e89e11-f33d-4ab2-9db8-d4f53da649e5.pdf",
+   "promises": 5
+  }
+ ],
+ "record": {
+  "kept": 3,
+  "missed": 3,
+  "resolved": 6,
+  "moved": 4,
+  "quiet": 3,
+  "open": 13,
+  "by_status": {
+   "gone_quiet": 3,
+   "on_track": 5,
+   "open": 8,
+   "delivered": 2,
+   "missed": 3,
+   "beat": 1
+  }
+ },
+ "threads": [
+  {
+   "id": "PIIND-0",
+   "title": "Multi-year effective tax rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "multi-year",
+   "target": "22–23%",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "22–23%",
+     "to": "22–23%",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "22–23%",
+     "to": "22–23%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 3 times, then not mentioned since Nov 2025",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect ETR to be in the range of 22% - 23% for the next 2-3 years.",
+     "speaker": "Sanjay Agarwal",
+     "page": 4,
+     "target": "22–23%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect the ETR to be in the range of 22%-23% for the next 2-3 years.",
+     "speaker": "Sanjay Agarwal",
+     "page": 4,
+     "target": "22–23%",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We expect the ETR to be in the range of 22%-23% for the next 2-3 years.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "22–23%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-1",
+   "title": "Multi-year EBITDA margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "25%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "FY26 EBITDA margin of 25% met the 25% target",
+   "evidence": {
+    "quote": "Our consolidated revenue for the full year FY26, we have delivered revenue of ₹ 67,137 million with healthy EBITDA margins of 25% and cash balance of INR 34,265 million enabling the company to pursue future strategic investments for long - term sustainable growth.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "As we indicated earlier, we continue to keep those guidelines around 25% as our EBITDA margins on a long-term sustainable basis.",
+     "speaker": "Mayank Singhal",
+     "page": 6,
+     "target": "25%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-2",
+   "title": "Multi-year biological revenues",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "biological business",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "₹1,000–1,200 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Biologicals achieved 50% growth in recent quarter",
+   "evidence": {
+    "quote": "While there have been shortages in fertilizer area, our special effort to use biological to support need of the farmer while addressing the need of sustainable vision in agriculture has resulted in achieving positive quarter and aggressive growth of 50% in biologicals, and a flat rather than negative outlook.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Clearly, today we are at something around Rs. 250 crore right now. This would probably move up to 5x, it will be Rs. 1,000 to Rs. 1,200 crore in the next 5 years.",
+     "speaker": "Mayank Singhal",
+     "page": 7,
+     "target": "₹1,000–1,200 cr",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-3",
+   "title": "FY26 domestic business growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "domestic business",
+   "basis": null,
+   "period": "FY26",
+   "target": "15–20%",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we are looking at a 15%-20% growth which is 2x of the industry average growth.",
+     "speaker": "Mayank Singhal",
+     "page": 8,
+     "target": "15–20%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-4",
+   "title": "FY26 revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "missed",
+   "detail": "FY26 revenue Rs 67,137 million, no single-digit growth reported",
+   "evidence": {
+    "quote": "On a full year basis, revenue is Rs. 67,137 million delivering growth on a 3-year CAGR.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We are looking for mid single digit level growth this year given the industry headwinds and the uncertainties of the climatic situation.",
+     "speaker": "Mayank Singhal",
+     "page": 8,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we expect accelerated H2 to drive a single-digit revenue growth for FY26",
+     "speaker": "Sanjay Agarwal",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-5",
+   "title": "FY26 capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "₹700–800 cr",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "₹800–900 cr",
+     "to": "₹700–800 cr",
+     "type": "lowered"
+    }
+   ],
+   "status": "open",
+   "detail": "Capex guidance maintained at Rs. 700-800 crore",
+   "evidence": {
+    "quote": "We have given a guidance of Rs. 700 to Rs. 800 crore, which is the standard capex as you rightly said.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Well, there is no breakdown we would have, but CAPEX in the manufacturing would be around that same area, right now about Rs. 800 - Rs. 900 crore in the similar ratio that we had last year.",
+     "speaker": "Mayank Singhal",
+     "page": 10,
+     "target": "₹800–900 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we shall continue to invest about Rs. 700 crore to Rs. 800 crore during the year.",
+     "speaker": "Mayank Singhal",
+     "page": 3,
+     "target": "₹700–800 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-6",
+   "title": "FY26 EBITDA margin",
+   "kind": "hard",
+   "metric": "ebitda_margin",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "25–26%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "25%",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "25–26%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Reported EBITDA margin 25.3% for FY26",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We would be looking at in the range of around 25%.",
+     "speaker": "Sanjay Agarwal",
+     "page": 10,
+     "target": "25%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "we expect accelerated H2 to drive a single-digit revenue growth for FY26 with a sustained EBITDA margin.",
+     "speaker": "Sanjay Agarwal",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So, we will keep to our guidance as earlier.",
+     "speaker": "Mayank Singhal",
+     "page": 9,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we would still hold ourselves for the year what we have started the year with 25% to 26",
+     "speaker": "Sanjay Agarwal",
+     "page": 8,
+     "target": "25–26%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-7",
+   "title": "FY26 effective tax rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "financials",
+   "period": "FY26",
+   "target": "23%",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "Reported tax rate 21.9% for FY26",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "FY25-26 CAPEX should be in the range of around Rs. 800 - Rs. 900 crore and the effective tax rate should be around 23%.",
+     "speaker": "Sanjay Agarwal",
+     "page": 10,
+     "target": "23%",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-8",
+   "title": "H2FY26 revenue growth momentum",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "AgChem exports",
+   "basis": "financials",
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "missed",
+   "detail": "H2 growth -20.3% vs H1 -12.1%",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "As we have guided that for next couple of quarters, while the global industry is navigating through this headwind, we certainly believe that from the second-half of FY26, we should be able to again be catching up the growth momentum and that is how it will function.",
+     "speaker": "Rajnish Sarna",
+     "page": 12,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We are expecting to resume acceleration of supplies in H2.",
+     "speaker": "Mayank Singhal",
+     "page": 3,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-9",
+   "title": "Plant commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q2FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "Q4FY26",
+     "to": "Q2FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "on_track",
+   "detail": "One plant commissioned, other multi-product plant investments running on track",
+   "evidence": {
+    "quote": "With regard to Electronic and specialty chemicals, new queries & commercialization is showing continued trajectory, and the investments which are supporting on this are also running on track.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We expect to commission one this year, maybe the next in the beginning of March next year.",
+     "speaker": "Mayank Singhal",
+     "page": 13,
+     "target": "",
+     "period": "FY26",
+     "deadline": "March FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "So, one plant will start by the last quarter of this year, and the other one probably from first or second quarter of next year.",
+     "speaker": "Mayank Singhal",
+     "page": 8,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q2FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-10",
+   "title": "FY26 trade working capital days",
+   "kind": "hard",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "65–70 days",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "FY26 trade working capital at 139 days vs 65-70 target",
+   "evidence": {
+    "quote": "We have sustained our Trade working capital in terms of days of sales at 139 days despite of volatile market scenario.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "For the next year, you may consider the range, what we have, so we are at around 73 odd days, the same could be taken around 65-70 days.",
+     "speaker": "Sanjay Agarwal",
+     "page": 13,
+     "target": "65–70 days",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38261851-5c27-43d2-b605-12b873df944f.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-11",
+   "title": "FY26 new molecule commercialization",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "8–10",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "6–7",
+     "to": "8–10",
+     "type": "raised"
+    }
+   ],
+   "status": "missed",
+   "detail": "Launched 4 new products in FY26 vs 8-10 target",
+   "evidence": {
+    "quote": "We have launched 4 new products this year – 3 herbicides & 1 insecticide",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We will commercialize 6 to 7 new molecules in the remaining quarters.",
+     "speaker": "Mayank Singhal",
+     "page": 3,
+     "target": "6–7",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We remain on track to commercialise 8 to 10 new molecules in the current fiscal, having commercialized 5 in H1.",
+     "speaker": "Mayank Singhal",
+     "page": 2,
+     "target": "8–10",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-12",
+   "title": "FY26 new product launches",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "3",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "beat",
+   "detail": "4 new products launched in domestic business in FY26",
+   "evidence": {
+    "quote": "We have launched 4 new products this year – 3 herbicides & 1 insecticide",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "introducing additional 3 products during the year.",
+     "speaker": "Mayank Singhal",
+     "page": 3,
+     "target": "3",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3a498be-f866-4ff9-a041-0f7180e8cb27.pdf"
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We introduced three new brands in the first half of the year and plan to launch an additional three products later this year.",
+     "speaker": "Mayank Singhal",
+     "page": 2,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "with 2 more expected to be launched by the close of FY26.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "",
+     "period": "FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-13",
+   "title": "FY26 pharma client onboarding",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "Pharma business",
+   "basis": null,
+   "period": "FY26",
+   "target": "4",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We had given guidance that we will try to onboard 4, and we are well on track for that.",
+     "speaker": "Ramesh Subramanian",
+     "page": 14,
+     "target": "4",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-14",
+   "title": "Multi-year gross margin",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "50–52%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "50–52%",
+     "to": "50–52%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "FY26 gross margin 58% vs 50-52% target",
+   "evidence": {
+    "quote": "Our gross margin expanded to 58% during the quarter & for the year, supported by a favourable product mix and strong operational efficiencies.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "On a longer-term basis, as we have guided in the past, 50% to 52% gross margin is what we believe is a sustainable level.",
+     "speaker": "Rajnish Sarna",
+     "page": 16,
+     "target": "50–52%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we continue to maintain our long-term GP margin guidance between 50% to 52%",
+     "speaker": "Mayank Singhal",
+     "page": 7,
+     "target": "50–52%",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-15",
+   "title": "H2FY26 domestic revenue",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "domestic",
+   "basis": "financials",
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "H2 growth -20.3% vs H1 -12.1%",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "we expect better rabi seasons, and an increase in rice and corn acreages should lead to a positive market scenario in H2.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": "increase in rice and corn acreages",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-16",
+   "title": "Q4FY26 revenue recovery",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Q4 FY26 revenue of Rs. 15,652 million, sequential growth achieved",
+   "evidence": {
+    "quote": "For Q4 FY26, we reported revenue of Rs. 15,652 million delivering sequential growth as per our guidance given last quarter.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We also anticipate a recovery in our domestic and agchem exports, particularly in Q4, to offset the decline in revenue and profitability in the first half.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5742f2a6-285c-4117-b2ca-e636c6b3cb4a.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "While the operating environment remains cautious, we expect gradual recovery beginning quarter 4 FY26, with growth momentum building to FY27 as industry conditions stabilize and our new product stamp up.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": null,
+     "condition": "industry conditions stabilize and our new product stamp up",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-17",
+   "title": "Q4FY26 product launch",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q4FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "delivered",
+   "detail": "Launched 4 new products in Domestic Agri Brands during the year",
+   "evidence": {
+    "quote": "We have commercialised 5 new molecules in AgChem Exports and launched 4 new products in Domestic Agri Brands.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we are looking at launching this product in the next quarter.",
+     "speaker": "Jagresh Rana",
+     "page": 10,
+     "target": "",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-18",
+   "title": "FY27 product commercialization",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "the first Indian innovation in Ag-chem, Pioxaniliprole, will be commercialised in the coming financial year.",
+     "speaker": "Mayank Singhal",
+     "page": 11,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-19",
+   "title": "FY27 capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹700–800 cr",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "₹500–600 cr",
+     "to": "₹700–800 cr",
+     "type": "raised"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "₹700–800 cr",
+     "to": "₹700–800 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "So broadly, it will be about INR 500 crore to INR 600 crore.",
+     "speaker": "Mayank Singhal",
+     "page": 12,
+     "target": "₹500–600 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "the capex would be as we have guided in the past also, we should have INR 700 to INR 800 crore of capex",
+     "speaker": "Sanjay Agarwal",
+     "page": 12,
+     "target": "₹700–800 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We have given a guidance of Rs. 700 to Rs. 800 crore, which is the standard capex as you rightly said.",
+     "speaker": "Mayank Singhal",
+     "page": 11,
+     "target": "₹700–800 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c6e89e11-f33d-4ab2-9db8-d4f53da649e5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-20",
+   "title": "FY27 domestic revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "domestic business",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We expect the domestic growth to be back on track from FY27 onwards.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-21",
+   "title": "FY27 revenue growth",
+   "kind": "directional",
+   "metric": "revenue_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "we are positive to say that we will start seeing growth in FY27.",
+     "speaker": "Mayank Singhal",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect FY27 to deliver growth, with exports and global biologicals gaining traction backed by customer momentum as well as domestic business is expected to gain from new brand launches.",
+     "speaker": "Mayank Singhal",
+     "page": 2,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "You see, as we stated earlier, we are looking at a positive trajectory, and in the lower single digit as indicated earlier.",
+     "speaker": "Mayank Singhal",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c6e89e11-f33d-4ab2-9db8-d4f53da649e5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-22",
+   "title": "FY27 biologics business performance",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "biologics business",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We are pretty confident it will turn positive in FY27.",
+     "speaker": "Mayank Singhal",
+     "page": 14,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ac6417-b08f-45e6-9bc9-cef1827c6c93.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-23",
+   "title": "FY27 effective tax rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "24%",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "≤24%",
+     "to": "24%",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "We expect FY27 and thereafter ETR to inch upto 24%.",
+     "speaker": "Sanjay Agarwal",
+     "page": 4,
+     "target": "≤24%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We expect ETR for FY27 to be around 24%.",
+     "speaker": "Sanjay Agarwal",
+     "page": 5,
+     "target": "24%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c6e89e11-f33d-4ab2-9db8-d4f53da649e5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-24",
+   "title": "FY30 electronic chemicals revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "Electronic Chemicals",
+   "basis": null,
+   "period": "FY30",
+   "target": "100 USD mn",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "As we have stated earlier last year, we are looking to target about $100 million in the next 4 to 5 years in this segment.",
+     "speaker": "Mayank Singhal",
+     "page": 10,
+     "target": "100 USD mn",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-25",
+   "title": "FY29 electronic chemicals revenue",
+   "kind": "hard",
+   "metric": "revenue",
+   "scope": "Electronic Chemicals",
+   "basis": "management",
+   "period": "FY29",
+   "target": "₹500–600 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Investments in electronic and specialty chemicals running on track",
+   "evidence": {
+    "quote": "With regard to Electronic and specialty chemicals, new queries & commercialization is showing continued trajectory, and the investments which are supporting on this are also running on track.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "we are trying to build those capabilities in the next two-three years, the positive EBITDA where we would be able to look at INR 500 to INR 600 crore top line",
+     "speaker": "Mayank Singhal",
+     "page": 11,
+     "target": "₹500–600 cr",
+     "period": "FY29",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-26",
+   "title": "FY27 R&D spends",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹50–100 cr",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "the same trend will continue of INR 50 to INR 100 crore of additional spends.",
+     "speaker": "Sanjay Agarwal",
+     "page": 11,
+     "target": "₹50–100 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-27",
+   "title": "Regulatory filing",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So, we will be looking to put in application outside India for filing probably at the end of this year or next year.",
+     "speaker": "Mayank Singhal",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY28",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a49358d-c938-4581-827e-d66dcf6bb7d5.pdf"
+    }
+   ]
+  },
+  {
+   "id": "PIIND-28",
+   "title": "India product launch",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "India",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We are hoping within the year we should get the launch for India.",
+     "speaker": "Mayank Singhal",
+     "page": 10,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": "regulatory framework",
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c6e89e11-f33d-4ab2-9db8-d4f53da649e5.pdf"
+    }
+   ]
+  }
+ ],
+ "business": {
+  "what": "PI Industries manufactures and distributes agrochemicals and pharmaceutical products for domestic and international markets.",
+  "segments": [
+   {
+    "name": "Agro Chemicals",
+    "share_pct": null,
+    "revenue_cr": 64168,
+    "note": "Manufacturing and distribution of agrochemicals.",
+    "page": 475
+   },
+   {
+    "name": "Pharma",
+    "share_pct": null,
+    "revenue_cr": 3005,
+    "note": "Pharmaceutical research, development, and manufacturing services.",
+    "page": 475
+   }
+  ],
+  "geographies": [
+   {
+    "region": "India",
+    "share_pct": null,
+    "page": 192
+   },
+   {
+    "region": "Asia (other than India)",
+    "share_pct": null,
+    "page": 192
+   },
+   {
+    "region": "North America",
+    "share_pct": null,
+    "page": 192
+   },
+   {
+    "region": "Europe",
+    "share_pct": null,
+    "page": 192
+   },
+   {
+    "region": "Rest of the World",
+    "share_pct": null,
+    "page": 192
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ab5760e-385f-4ee8-998d-d3aeafcaf998.pdf",
+  "pages": [
+   51,
+   80,
+   172,
+   192,
+   217,
+   239,
+   266
+  ]
+ },
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 8.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 8% a year over 5 years, 1% over 3 (slowing); last 12 months -17%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 10.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 10% a year over 5 years, -1% over 3; last 12 months -33%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 26.0,
+    "unit": "%",
+    "reading": "Operating margin expanded from 22% (FY22) to 26% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 22.0
+     },
+     {
+      "x": "FY23",
+      "y": 24.0
+     },
+     {
+      "x": "FY24",
+      "y": 26.0
+     },
+     {
+      "x": "FY25",
+      "y": 28.0
+     },
+     {
+      "x": "FY26",
+      "y": 26.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 88,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 88% of net profit (adequate).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.03,
+    "unit": "x equity",
+    "reading": "Borrowings ₹342 cr, 0.03× equity; flat from ₹316 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 316.0
+     },
+     {
+      "x": "FY23",
+      "y": 46.0
+     },
+     {
+      "x": "FY24",
+      "y": 191.0
+     },
+     {
+      "x": "FY25",
+      "y": 184.0
+     },
+     {
+      "x": "FY26",
+      "y": 342.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 15.0,
+    "unit": "%",
+    "reading": "ROCE 15% in FY26 (from 17% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 17.0
+     },
+     {
+      "x": "FY23",
+      "y": 22.0
+     },
+     {
+      "x": "FY24",
+      "y": 24.0
+     },
+     {
+      "x": "FY25",
+      "y": 23.0
+     },
+     {
+      "x": "FY26",
+      "y": 15.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "figure": "25.3%",
+    "point": "The company successfully delivered on its FY26 EBITDA margin target of 25-26%.",
+    "refs": [
+     "PIIND-6",
+     "PIIND-1"
+    ]
+   },
+   {
+    "figure": "58%",
+    "point": "Gross margins significantly outperformed the multi-year target of 50-52%.",
+    "refs": [
+     "PIIND-14"
+    ]
+   },
+   {
+    "figure": "0.03x",
+    "point": "The company maintains a very strong balance sheet with negligible debt relative to equity.",
+    "refs": [
+     "debt"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "figure": "139 days",
+    "point": "Trade working capital significantly missed the FY26 target of 65-70 days.",
+    "refs": [
+     "PIIND-10"
+    ]
+   },
+   {
+    "figure": "4 of 8-10",
+    "point": "New molecule commercialization fell well short of the FY26 target despite raised expectations.",
+    "refs": [
+     "PIIND-11"
+    ]
+   },
+   {
+    "figure": "-33%",
+    "point": "Profit growth has declined sharply over the last 12 months.",
+    "refs": [
+     "profit_growth"
+    ]
+   }
+  ]
+ }
+}

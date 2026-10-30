@@ -1,0 +1,1558 @@
+{
+ "symbol": "HINDALCO",
+ "name": "Hindalco Industries Ltd",
+ "sector": "Aluminium",
+ "size": null,
+ "built": "2026-10-30",
+ "latest_call": "Aug 2026",
+ "latest_results": "Q1FY27",
+ "headline": {
+  "quarter": "Q1FY27",
+  "rows": [
+   {
+    "label": "Revenue",
+    "value": 84825.0,
+    "qoq": 8.564882955985297,
+    "yoy": 32.06034375389215
+   },
+   {
+    "label": "EBITDA",
+    "value": 13932.0,
+    "qoq": 39.12522468544037,
+    "yoy": 76.22059195547686
+   },
+   {
+    "label": "PBT",
+    "value": 9393.0,
+    "qoq": 172.18197623877137,
+    "yoy": 65.48625792811839
+   },
+   {
+    "label": "PAT",
+    "value": 7013.0,
+    "qoq": 170.0423565652676,
+    "yoy": 75.14985014985014
+   }
+  ],
+  "unit": "₹ cr",
+  "source": "screener.in, consolidated where published"
+ },
+ "calls": [
+  {
+   "call": "May 2025",
+   "quarter": "Q4FY25",
+   "url": null,
+   "promises": 12
+  },
+  {
+   "call": "Aug 2025",
+   "quarter": "Q1FY26",
+   "url": null,
+   "promises": 12
+  },
+  {
+   "call": "Nov 2025",
+   "quarter": "Q2FY26",
+   "url": null,
+   "promises": 11
+  },
+  {
+   "call": "Feb 2026",
+   "quarter": "Q3FY26",
+   "url": null,
+   "promises": 11
+  },
+  {
+   "call": "May 2026",
+   "quarter": "Q4FY26",
+   "url": null,
+   "promises": 13
+  },
+  {
+   "call": "Aug 2026",
+   "quarter": "Q1FY27",
+   "url": null,
+   "promises": 11
+  }
+ ],
+ "record": {
+  "kept": 5,
+  "missed": 1,
+  "resolved": 6,
+  "moved": 6,
+  "quiet": 7,
+  "open": 11,
+  "by_status": {
+   "gone_quiet": 7,
+   "delivered": 3,
+   "open": 9,
+   "beat": 2,
+   "missed": 1,
+   "on_track": 2
+  }
+ },
+ "threads": [
+  {
+   "id": "HINDALCO-0",
+   "title": "Aditya FRP project commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Aditya FRP project",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Our Aditya FRP project remains on track with target commissioning in FY '26, taking total downstream capacity to 600 KTPA.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-1",
+   "title": "Belgavi Specialty Alumina project commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Specialty Alumina",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "Q1FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Precipitate hydrate facility commissioned",
+   "evidence": {
+    "quote": "In our specialty alumina business, the precipitate hydrate facility has also been commissioned this quarter and is currently undergoing customer approvals.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Our Specialty Alumina precipitated hydrate value- added product project at Belgavi remains on track and is expected to commission this quarter.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "",
+     "period": "Q1FY26",
+     "deadline": "Q1FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "In our Specialty Alumina business, precipitated hydrate facility is expected to be commissioned in Q1 of FY 2027.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-2",
+   "title": "Silvassa Extrusion commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Silvassa Extrusion",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "Silvassa Extrusion 36 KT will fully commission this year.",
+     "speaker": "Satish Pai",
+     "page": 13,
+     "target": "",
+     "period": "FY26",
+     "deadline": "FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-3",
+   "title": "Commercial foil stock sales volume",
+   "kind": "hard",
+   "metric": "volume_growth",
+   "scope": "company",
+   "basis": null,
+   "period": "FY26",
+   "target": "60–70 KT",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "We are planning about 60 KT to 70 KT of commercial sales this year.",
+     "speaker": "Satish Pai",
+     "page": 17,
+     "target": "60–70 KT",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-4",
+   "title": "Downstream EBITDA per ton",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "aluminum downstream",
+   "basis": "management",
+   "period": "FY26",
+   "target": "250–300 USD",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "250–300 USD",
+     "to": "250–300 USD",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Q2 FY26 Downstream EBITDA per ton at $265",
+   "evidence": {
+    "quote": "The resultant EBITDA per ton stood at a record $265 a ton, higher by 49% on a year-on-year basis.",
+    "call": "Nov 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "I think it's between $250 to $300 this year.",
+     "speaker": "Satish Pai",
+     "page": 18,
+     "target": "250–300 USD",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "I think that's our target. I think that it will be between $250 and $300.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "250–300 USD",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-5",
+   "title": "Chakla coal mine development",
+   "kind": "hard",
+   "metric": "volume_growth",
+   "scope": "captive coal",
+   "basis": null,
+   "period": "FY27",
+   "target": "1 MT",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "Q3FY26",
+     "to": "Q1FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q1FY27",
+     "to": "Q4FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "1 MT",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So the coal production should start probably by December of next year.",
+     "speaker": "Satish Pai",
+     "page": 18,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Dec 2026",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "Yes. I think that we should be doing the box cut somewhere around December, January. That is still on track.",
+     "speaker": "Satish Pai",
+     "page": 19,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "The box cut now looks like more likely like April. So, yes, there has been about a quarter delay.",
+     "speaker": "Satish Pai",
+     "page": 21,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Chakla, we are expecting to box cut in the next 2 months and the first coal may start to come from Q4 itself.",
+     "speaker": "Satish Pai",
+     "page": 10,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q4FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Chakla back to commence, we are expecting about 1 million tons from Chakla, Bandha will only start from the middle of the year. So I would say about 0.5 million tons for Bandha.",
+     "speaker": "Satish Pai",
+     "page": 14,
+     "target": "1 MT",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-6",
+   "title": "Copper quarterly EBITDA",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "copper business",
+   "basis": "management",
+   "period": "Q1FY26",
+   "target": "₹600 cr",
+   "direction": "flat",
+   "moved": false,
+   "events": [],
+   "status": "beat",
+   "detail": "Q1FY26 copper EBITDA was INR673 crores vs 600 guided",
+   "evidence": {
+    "quote": "Our quarterly copper EBITDA stood at INR673 crores, down 16% year-on-year on account of lower TC/RCs, offset by better realizations in byproducts and operational efficiencies.",
+    "call": "Aug 2025",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "This time we will guide Rs. 600 crores and probably do Rs. 600 crores, Sumangal.",
+     "speaker": "Satish Pai",
+     "page": 19,
+     "target": "₹600 cr",
+     "period": "Q1FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-7",
+   "title": "FY26 domestic capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "India",
+   "basis": null,
+   "period": "FY26",
+   "target": "₹10,000 cr",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Aug 2025",
+     "from": "₹7,500–8,000 cr",
+     "to": "₹7,500–8,000 cr",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "₹7,500–8,000 cr",
+     "to": "₹10,000 cr",
+     "type": "raised"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "So this current year the guidance is about Rs. 7,500 crores to Rs. 8,000 crores.",
+     "speaker": "Satish Pai",
+     "page": 22,
+     "target": "₹7,500–8,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Guidance for the full year is about INR7,500 crores to INR8,000 crores.",
+     "speaker": "Satish Pai",
+     "page": 19,
+     "target": "₹7,500–8,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "So, this year, our target is about, we will be finishing the year at around INR 8,000 crores, and you need to add to that the INR 2,000 crores we paid to get the Bandha Mine. So, roughly this year will be INR 10,000 crores",
+     "speaker": "Satish Pai",
+     "page": 20,
+     "target": "₹10,000 cr",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-8",
+   "title": "Copper IGT plant commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Copper IGT plant",
+   "basis": null,
+   "period": "Q1FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "The copper IGT plant is commissioning this quarter, and the aluminum AC fin is also commissioning this quarter.",
+     "speaker": "Satish Pai",
+     "page": 13,
+     "target": "",
+     "period": "Q1FY26",
+     "deadline": "Q1FY26",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-9",
+   "title": "Renewable capacity expansion",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "523 megawatts",
+   "direction": "up",
+   "moved": true,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "300 megawatts",
+     "to": "522 MW",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "522 MW",
+     "to": "522 Megawatts",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "522 Megawatts",
+     "to": "523 megawatts",
+     "type": "raised"
+    }
+   ],
+   "status": "missed",
+   "detail": "470 megawatts renewable capacity at end of Q1",
+   "evidence": {
+    "quote": "As of the end of Q1, we have 470 megawatts of renewable energy capacity across solar, wind, hydro resources along with 35 megawatts of pump storage tie-ups under our round-the-clock renewable energy program.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our total renewable energy capacity, primarily solar and wind, stands at 189 megawatts, and we are aligned towards our target of reaching 300 megawatts of renewable capacity by Q3 FY '26.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "300 megawatts",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "taking our total renewable capacity to 522 MW by the end of this financial year.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "522 MW",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "taking our renewable capacity to 522 Megawatts by the end of this financial year.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "522 Megawatts",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "At the same time, we are making strong progress in round-the-clock renewable energy initiatives with 30 megawatts of storage-based power scheduled for deployment this quarter, taking our total renewable capacity to 523 megawatts by the end of Q1 FY '27.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "523 megawatts",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-10",
+   "title": "Downstream EBITDA quadrupling by FY30",
+   "kind": "soft",
+   "metric": "ebitda",
+   "scope": "India downstream",
+   "basis": null,
+   "period": "FY30",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our strategic focuses to scale up capacities across both aluminum and copper upstream and to quadruple downstream EBITDA by FY '30 from the 2024 baseline remains intact.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We are accelerating our upstream expansion in both aluminum and copper while building a significantly strong downstream portfolio with the ambition of delivering a fourfold increase in EBITDA, downstream EBITDA by FY30.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "",
+     "period": "FY30",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-11",
+   "title": "Copper recycling and e-waste project",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "copper business",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "",
+     "to": "100 Kt",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "100 Kt",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Our copper e-waste and recycling projects also remain on track for FY '27 commissioning, reinforcing our commitment to sustainability-driven growth.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So we are committed to get the recycling volumes up to 100 Kt in the next few years. The copper recycling plant will get commissioned next calendar year. So even in copper, we'll have 50 kt of recycling.",
+     "speaker": "Satish Pai",
+     "page": 11,
+     "target": "100 Kt",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "50 KT recycling Pakhajan plant will commission in August.",
+     "speaker": "Satish Pai",
+     "page": 18,
+     "target": "",
+     "period": "FY27",
+     "deadline": "August",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "On the scrap, yes, the smelter uses some scrap, but we also have the scrap melting project in Pakhajan commissioning this year. So, we'll be using quite a lot of copper scrap as well.",
+     "speaker": "Satish Pai",
+     "page": 22,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-12",
+   "title": "Novelis exit savings run rate",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Novelis",
+   "basis": "management",
+   "period": "FY26",
+   "target": "150 USD bn",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "≥100 USD mn",
+     "to": "150 USD bn",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "beat",
+   "detail": "FY26 exit savings run rate reached $200M",
+   "evidence": {
+    "quote": "With another quarter of solid execution behind us, that run rate is now $200 million as we accelerate all cost efficiency initiatives.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Based on accelerated progress, we have now raised our FY '26 exit savings target to over $100 million, up from the earlier estimate of $75 million.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "≥100 USD mn",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "With another quarter of solid execution behind us, that run rate is now $150 million as we accelerate all cost efficiency initiatives.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "150 USD bn",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-13",
+   "title": "Aditya FRP volume target",
+   "kind": "hard",
+   "metric": "volume_growth",
+   "scope": "Aditya FRP",
+   "basis": null,
+   "period": "FY26",
+   "target": "70 Kt",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "So this year, we are targeting roughly 70 Kt.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "70 Kt",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-14",
+   "title": "FY27 capital expenditure",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "India",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹10,000–12,000 cr",
+   "direction": "flat",
+   "moved": true,
+   "events": [
+    {
+     "call": "Nov 2025",
+     "from": "₹15,000 cr",
+     "to": "₹11,000 cr",
+     "type": "lowered"
+    },
+    {
+     "call": "Feb 2026",
+     "from": "₹11,000 cr",
+     "to": "₹10,000–12,000 cr",
+     "type": "widened"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Said 3 times, then not mentioned since Feb 2026",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "Yes, I'll give you -- so this year, we are at INR7,500 crores to INR8,000 crores. Next year, we'll be around INR15,000 crores.",
+     "speaker": "Satish Pai",
+     "page": 11,
+     "target": "₹15,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So this year, we have said the capex is going to be around INR8,500 crores. I think that next year, we are expecting around INR11,000 crores. I think that is FY '27.",
+     "speaker": "Satish Pai",
+     "page": 14,
+     "target": "₹11,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "So this year, our target is about, we will be finishing the year at around INR 8,000 crores, and you need to add to that the INR 2,000 crores we paid to get the Bandha Mine. So, roughly this year will be INR 10,000 crores, and next year we also will be in the same range, about INR 10,000 crores to INR 12,000 crores",
+     "speaker": "Satish Pai",
+     "page": 20,
+     "target": "₹10,000–12,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-15",
+   "title": "Consolidated net debt to EBITDA",
+   "kind": "hard",
+   "metric": "debt",
+   "scope": "consolidated",
+   "basis": "management",
+   "period": "multi-year",
+   "target": "2×",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "2×",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "May 2026",
+     "from": "2×",
+     "to": "2×",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "on_track",
+   "detail": "Consolidated net debt-to-EBITDA stood at 1.95x",
+   "evidence": {
+    "quote": "As of June 2026, our consolidated net debt-to-EBITDA stood at 1.95x below our stated threshold of 2x.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "So what we are doing now is as we do any of the India capex announcements, we are taking the Bay Minette number of 5 is already in our calculation.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Despite the temporary impact of Oswego fires, we remain committed to maintain our net leverage around 2x at the consolidated level.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "2×",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "Despite the temporary impact of Oswego fires, we remain committed to maintain our net leverage around 2 times at the consol level.",
+     "speaker": "Satish Pai",
+     "page": 7,
+     "target": "2×",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-16",
+   "title": "Bay Minette project",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Novelis",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "Q3FY26",
+     "to": "Q4FY26",
+     "type": "deferred"
+    },
+    {
+     "call": "May 2026",
+     "from": "Q4FY26",
+     "to": "Q4FY27",
+     "type": "deferred"
+    },
+    {
+     "call": "Aug 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "We're about to commission the cold mill next quarter and then the rest of the equipment through the remainder of next year.",
+     "speaker": "Steven Fisher",
+     "page": 11,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our Bay Minette 600 Kt greenfield rolling and recycling facility is scheduled for completion this year to meet growing customer demand for automotive, beverage packaging, and aluminum specialty products.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "In parallel, we continue to invest for growth with our 600 KT greenfield rolling and recycling facility at Bay Minette scheduled for completion this year.",
+     "speaker": "Satish Pai",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "The 600 KT Bay Minette greenfield rolling and recycling facility, which is on track for completion this year represents a transformational milestone for Novelis.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-17",
+   "title": "MJP premium",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Nov 2025)",
+   "statements": [
+    {
+     "call": "Nov 2025",
+     "quarter": "Q2FY26",
+     "quote": "Now that South Korea and Japan have signed deals with the U.S., we are assuming that in Q3 and Q4, the MJP will start to go above 100 where it should normally be.",
+     "speaker": "Satish Pai",
+     "page": 13,
+     "target": "",
+     "period": "H2FY26",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-18",
+   "title": "Oswego hot mill restart",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Novelis",
+   "basis": "management",
+   "period": "Q1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "delivered",
+   "detail": "Oswego hot mill successfully restarted in June",
+   "evidence": {
+    "quote": "We have successfully restarted the mill in June, and it is now stated ramping up steadily towards normal operating levels.",
+    "call": "Aug 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our Oswego hot mill is expected to start in late Q1 FY '27.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "",
+     "period": "Q1FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "The Oswego Hot Mill is on track to restart in the next few weeks, and we view the outage largely as a timing-related impact with the current year headwinds expected to substantially recover in the next fiscal year.",
+     "speaker": "Satish Pai",
+     "page": 7,
+     "target": "",
+     "period": "FY27",
+     "deadline": "Q1FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-19",
+   "title": "Novelis EBITDA per ton target",
+   "kind": "hard",
+   "metric": "ebitda",
+   "scope": "Novelis",
+   "basis": null,
+   "period": "multi-year",
+   "target": "600 USD",
+   "direction": "flat",
+   "moved": false,
+   "events": [
+    {
+     "call": "Aug 2026",
+     "from": "600 USD",
+     "to": "600 USD",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "Our long-term guidance of $600 per ton remains intact as we advance on accelerated pace in our $300 million structural cost reduction program, driving sustained improvements in operational efficiency and margins.",
+     "speaker": "Satish Pai",
+     "page": 4,
+     "target": "600 USD",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    },
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Importantly, our long-term EBITDA per ton guidance of $600 remains unchanged.",
+     "speaker": "Satish Pai",
+     "page": 9,
+     "target": "600 USD",
+     "period": "multi-year",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-20",
+   "title": "Consolidated net debt peak",
+   "kind": "hard",
+   "metric": "debt",
+   "scope": "consolidated",
+   "basis": null,
+   "period": "FY28",
+   "target": "₹80,000–90,000 cr",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So consolidated net debt peak should be between INR80,000 crores and INR90,000 crores over the next 2 years.",
+     "speaker": "Satish Pai",
+     "page": 12,
+     "target": "₹80,000–90,000 cr",
+     "period": "FY28",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-21",
+   "title": "Aditya smelter pots commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Aditya",
+   "basis": "management",
+   "period": "Q3FY28",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Aditya smelter expansion progressing well and on track",
+   "evidence": {
+    "quote": "On the growth front, all our key upstream expansion projects, including the Aditya Alumina refinery and aluminum smelter expansions are progressing well and remain on track.",
+    "call": "Aug 2026, p3",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So, calendar year December '27, the first 180 pots of Aditya will get commissioned. And calendar year December '28, the next 180 pots of Aditya will get commissioned.",
+     "speaker": "Satish Pai",
+     "page": 15,
+     "target": "",
+     "period": "FY28",
+     "deadline": "Q3FY28",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-22",
+   "title": "Novelis FY27 recovery",
+   "kind": "directional",
+   "metric": "ebitda",
+   "scope": "Novelis",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So, I think that Novelis is heading to a recovery year in FY27.",
+     "speaker": "Satish Pai",
+     "page": 19,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-23",
+   "title": "Renewable capacity FY27",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "884 MW",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "We remain on track to add another 414 megawatts of solar and wind capacity as well as 90 megawatts of RE RTC pump storage capacity during the year. With these additions, our renewable portfolio is expected to reach 884 megawatts of solar wind hydel capacity, along with 125 megawatts of RE RTC capacity by the end of FY27.",
+     "speaker": "Satish Pai",
+     "page": 3,
+     "target": "884 MW",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-24",
+   "title": "Novelis net leverage FY27",
+   "kind": "hard",
+   "metric": "debt",
+   "scope": "Novelis",
+   "basis": null,
+   "period": "FY27",
+   "target": "≤4×",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Yes. So, I already said that based on all the visibility that I can see right now, we will be below 4x.",
+     "speaker": "Dev Ahuja",
+     "page": 16,
+     "target": "≤4×",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-25",
+   "title": "Bandha coal production start",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "company",
+   "basis": null,
+   "period": "H1FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Chakla back to commence, we are expecting about 1 million tons from Chakla, Bandha will only start from the middle of the year. So I would say about 0.5 million tons for Bandha.",
+     "speaker": "Satish Pai",
+     "page": 14,
+     "target": "",
+     "period": "FY27",
+     "deadline": "H1FY27",
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-26",
+   "title": "Working capital reduction",
+   "kind": "hard",
+   "metric": "working_capital",
+   "scope": "company",
+   "basis": null,
+   "period": "H2FY27",
+   "target": "300–400 USD mn",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "Net-net, I think for modeling propose, you can take 300 to 400 in over the next couple of quarters.",
+     "speaker": "Dev Ahuja",
+     "page": 17,
+     "target": "300–400 USD mn",
+     "period": "H2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  },
+  {
+   "id": "HINDALCO-27",
+   "title": "Novelis insurance recoveries",
+   "kind": "directional",
+   "metric": "cash_flow",
+   "scope": "Novelis",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2026",
+     "quarter": "Q1FY27",
+     "quote": "a good decent recovery will happen within this fiscal year.",
+     "speaker": "Devinder Ahuja",
+     "page": 21,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": null
+    }
+   ]
+  }
+ ],
+ "snapshot": {
+  "lender": false,
+  "metrics": [
+   {
+    "key": "sales_growth",
+    "label": "Revenue growth",
+    "value": 16.0,
+    "unit": "% CAGR 5y",
+    "reading": "Revenue compounded 16% a year over 5 years, 7% over 3 (slowing); last 12 months 20%.",
+    "series": []
+   },
+   {
+    "key": "profit_growth",
+    "label": "Profit growth",
+    "value": 35.0,
+    "unit": "% CAGR 5y",
+    "reading": "Profit compounded 35% a year over 5 years, 19% over 3; last 12 months 20%.",
+    "series": []
+   },
+   {
+    "key": "margin",
+    "label": "Operating margin",
+    "value": 13.0,
+    "unit": "%",
+    "reading": "Operating margin compressed from 15% (FY22) to 13% (FY26).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 15.0
+     },
+     {
+      "x": "FY23",
+      "y": 10.0
+     },
+     {
+      "x": "FY24",
+      "y": 11.0
+     },
+     {
+      "x": "FY25",
+      "y": 13.0
+     },
+     {
+      "x": "FY26",
+      "y": 13.0
+     }
+    ]
+   },
+   {
+    "key": "cash_conversion",
+    "label": "Cash conversion",
+    "value": 150,
+    "unit": "% of profit, 5y",
+    "reading": "Over 5 years, operating cash flow was 150% of net profit (strong).",
+    "series": []
+   },
+   {
+    "key": "debt",
+    "label": "Debt",
+    "value": 0.73,
+    "unit": "x equity",
+    "reading": "Borrowings ₹99,165 cr, 0.73× equity; up from ₹64,486 cr in FY22.",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 64486.0
+     },
+     {
+      "x": "FY23",
+      "y": 60291.0
+     },
+     {
+      "x": "FY24",
+      "y": 56356.0
+     },
+     {
+      "x": "FY25",
+      "y": 65642.0
+     },
+     {
+      "x": "FY26",
+      "y": 99165.0
+     }
+    ]
+   },
+   {
+    "key": "returns",
+    "label": "ROCE",
+    "value": 13.0,
+    "unit": "%",
+    "reading": "ROCE 13% in FY26 (from 17% in FY22).",
+    "series": [
+     {
+      "x": "FY22",
+      "y": 17.0
+     },
+     {
+      "x": "FY23",
+      "y": 11.0
+     },
+     {
+      "x": "FY24",
+      "y": 11.0
+     },
+     {
+      "x": "FY25",
+      "y": 15.0
+     },
+     {
+      "x": "FY26",
+      "y": 13.0
+     }
+    ]
+   }
+  ]
+ },
+ "case": {
+  "bull": [
+   {
+    "point": "Q1FY26 copper EBITDA reached INR 673 crores, beating the guided target of ₹600 cr.",
+    "refs": [
+     "HINDALCO-6"
+    ]
+   },
+   {
+    "point": "Novelis exit savings run rate reached $200M in FY26, exceeding the target of $150M.",
+    "refs": [
+     "HINDALCO-12"
+    ]
+   },
+   {
+    "point": "Consolidated net debt-to-EBITDA stood at 1.95x, meeting management's target to stay below 2x.",
+    "refs": [
+     "HINDALCO-15"
+    ]
+   }
+  ],
+  "bear": [
+   {
+    "point": "Renewable capacity expansion missed its target, delivering 470 megawatts against the 523 megawatts guidance in Q1FY27.",
+    "refs": [
+     "HINDALCO-9"
+    ]
+   },
+   {
+    "point": "Management repeatedly deferred the Bay Minette project completion target, pushing execution from Q3FY26 to Q4FY27.",
+    "refs": [
+     "HINDALCO-16"
+    ]
+   },
+   {
+    "point": "Operating margin compressed from 15% in FY22 to 13% in FY26 as total borrowings rose to ₹99,165 cr.",
+    "refs": [
+     "margin",
+     "debt"
+    ]
+   }
+  ]
+ }
+}

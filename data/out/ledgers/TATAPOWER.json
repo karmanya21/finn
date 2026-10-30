@@ -3,7 +3,7 @@
  "name": "Tata Power",
  "sector": "Power & renewables",
  "size": "large",
- "built": "2026-10-29",
+ "built": "2026-10-30",
  "latest_call": "Jul 2026",
  "latest_results": "Q1FY27",
  "headline": {
@@ -77,16 +77,17 @@
  ],
  "record": {
   "kept": 2,
-  "missed": 2,
-  "resolved": 4,
-  "moved": 5,
-  "quiet": 0,
-  "open": 16,
+  "missed": 3,
+  "resolved": 5,
+  "moved": 3,
+  "quiet": 6,
+  "open": 19,
   "by_status": {
-   "on_track": 2,
-   "open": 12,
+   "on_track": 3,
    "beat": 2,
-   "missed": 2,
+   "gone_quiet": 6,
+   "missed": 3,
+   "open": 14,
    "delayed": 2
   }
  },
@@ -183,36 +184,17 @@
   },
   {
    "id": "TATAPOWER-3",
-   "title": "Solar rooftop revenue growth",
-   "kind": "hard",
-   "metric": "revenue_growth",
-   "scope": "Rooftop business",
+   "title": "FY26 solar rooftop revenue growth",
+   "kind": "soft",
+   "metric": "revenue",
+   "scope": "solar rooftop business",
    "basis": null,
-   "period": "FY27",
-   "target": "60–70%",
-   "direction": null,
-   "moved": true,
-   "events": [
-    {
-     "call": "Aug 2025",
-     "from": "",
-     "to": "40,000–50,000",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "May 2026",
-     "from": "40,000–50,000",
-     "to": "50–60%",
-     "type": "lowered"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "50–60%",
-     "to": "60–70%",
-     "type": "raised"
-    }
-   ],
-   "status": "open",
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "said",
    "statements": [
     {
      "call": "May 2025",
@@ -225,48 +207,12 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea54098-79fe-444a-ab4a-2dce13dd511b.pdf"
-    },
-    {
-     "call": "Aug 2025",
-     "quarter": "Q1FY26",
-     "quote": "hopefully later part of this year, we will supply 40,000 to 50,000 units per month.",
-     "speaker": "Dr. Praveer Sinha",
-     "page": 16,
-     "target": "40,000–50,000",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "I do expect that in FY '27, the rooftop market, the rooftop business will grow, if not by 100%, at least by 50%, 60%.",
-     "speaker": "Praveer Sinha",
-     "page": 12,
-     "target": "50–60%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "this year also, we have plans to grow by about 60% to 70%.",
-     "speaker": "Praveer Sinha",
-     "page": 3,
-     "target": "60–70%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
     }
    ]
   },
   {
    "id": "TATAPOWER-4",
-   "title": "TP Solar cell and module production",
+   "title": "FY26 TP Solar cell and module production",
    "kind": "hard",
    "metric": "capacity",
    "scope": "TP Solar",
@@ -300,42 +246,18 @@
   },
   {
    "id": "TATAPOWER-5",
-   "title": "Distribution business PAT/performance",
+   "title": "FY26 distribution business PAT",
    "kind": "directional",
-   "metric": "working_capital",
-   "scope": "distribution",
+   "metric": "pat",
+   "scope": "distribution business",
    "basis": null,
-   "period": "Q2FY27",
+   "period": "FY26",
    "target": "",
    "direction": "up",
    "moved": false,
-   "events": [
-    {
-     "call": "Aug 2025",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "Feb 2026",
-     "from": "",
-     "to": "",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "May 2026",
-     "from": "",
-     "to": "2%",
-     "type": "reaffirmed"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "2%",
-     "to": "",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "open",
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
    "statements": [
     {
      "call": "May 2025",
@@ -348,68 +270,20 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea54098-79fe-444a-ab4a-2dce13dd511b.pdf"
-    },
-    {
-     "call": "Aug 2025",
-     "quarter": "Q1FY26",
-     "quote": "you will see substantial improvements considering that many of the legacy issues which were there in Odisha, we have been able to overcome",
-     "speaker": "Dr. Praveer Sinha",
-     "page": 6,
-     "target": "",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
-    },
-    {
-     "call": "Feb 2026",
-     "quarter": "Q3FY26",
-     "quote": "at least 50% to 60% more will happen in this year and we will continue to see the increase going forward.",
-     "speaker": "Dr. Praveer Sinha",
-     "page": 11,
-     "target": "",
-     "period": "FY26",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "you can expect that you will reduce about 2% every year in that sort of reduction will be a ballpark number.",
-     "speaker": "Praveer Sinha",
-     "page": 19,
-     "target": "2%",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "So the collection efficiency will be improving in this quarter.",
-     "speaker": "Praveer Sinha",
-     "page": 8,
-     "target": "",
-     "period": "Q2FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
     }
    ]
   },
   {
    "id": "TATAPOWER-6",
-   "title": "Annual company CAPEX",
+   "title": "FY26 company CAPEX",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
    "basis": null,
-   "period": "FY27",
+   "period": "FY26",
    "target": "₹25,000 cr",
-   "direction": null,
-   "moved": true,
+   "direction": "flat",
+   "moved": false,
    "events": [
     {
      "call": "Aug 2025",
@@ -422,21 +296,10 @@
      "from": "₹25,000 cr",
      "to": "₹25,000 cr",
      "type": "reaffirmed"
-    },
-    {
-     "call": "May 2026",
-     "from": "₹25,000 cr",
-     "to": "₹22,000 cr",
-     "type": "lowered"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "₹22,000 cr",
-     "to": "₹25,000 cr",
-     "type": "raised"
     }
    ],
-   "status": "open",
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Dec 2025)",
    "statements": [
     {
      "call": "May 2025",
@@ -473,77 +336,47 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=dc08c9a5-8cf1-4103-951a-2ab5bdce40cd.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "So that's why our target of yearly investment continues to be the same.",
-     "speaker": "Praveer Sinha",
-     "page": 6,
-     "target": "₹22,000 cr",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "And we expect that the INR 25,000 crores that we have lined up for this year, we'll be able to implement.",
-     "speaker": "Praveer Sinha",
-     "page": 3,
-     "target": "₹25,000 cr",
-     "period": "FY27",
-     "deadline": null,
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
     }
    ]
   },
   {
    "id": "TATAPOWER-7",
-   "title": "Renewable capacity commissioning",
+   "title": "FY26 renewable capacity commissioning",
    "kind": "hard",
    "metric": "capacity",
    "scope": "company",
-   "basis": null,
-   "period": "FY27",
-   "target": "2,500–2,700 MW",
-   "direction": null,
-   "moved": true,
+   "basis": "management",
+   "period": "FY26",
+   "target": "2.7 GW",
+   "direction": "flat",
+   "moved": false,
    "events": [
     {
      "call": "Aug 2025",
      "from": "2.5–2.7 GW",
-     "to": "1,600 MW",
-     "type": "raised"
+     "to": "≥2,000 MW",
+     "type": "reaffirmed"
     },
     {
      "call": "Dec 2025",
-     "from": "1,600 MW",
+     "from": "≥2,000 MW",
      "to": "1.3 GW",
-     "type": "lowered"
+     "type": "reaffirmed"
     },
     {
      "call": "Feb 2026",
      "from": "1.3 GW",
-     "to": "400–500 MW",
-     "type": "raised"
-    },
-    {
-     "call": "May 2026",
-     "from": "400–500 MW",
-     "to": "2.5 GW",
-     "type": "lowered"
-    },
-    {
-     "call": "Jul 2026",
-     "from": "2.5 GW",
-     "to": "2,500–2,700 MW",
-     "type": "raised"
+     "to": "2.7 GW",
+     "type": "reaffirmed"
     }
    ],
-   "status": "open",
+   "status": "missed",
+   "detail": "FY26 commissioning not explicitly stated as 2.7GW",
+   "evidence": {
+    "quote": "And we do expect that the nearly 5 gigawatt of projects which are under implementation, and these are all in-house projects. 50% of it will be completed in this financial year and the balance 50% in FY '28.",
+    "call": "May 2026",
+    "new_deadline": null
+   },
    "statements": [
     {
      "call": "May 2025",
@@ -560,10 +393,10 @@
     {
      "call": "Aug 2025",
      "quarter": "Q1FY26",
-     "quote": "We expect nearly 1,600 megawatt of own utility scale projects to come up in the next three quarters",
+     "quote": "This year itself we will be doing more than 2 gigawatt of commissioning.",
      "speaker": "Dr. Praveer Sinha",
-     "page": 3,
-     "target": "1,600 MW",
+     "page": 12,
+     "target": "≥2,000 MW",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -584,73 +417,31 @@
     {
      "call": "Feb 2026",
      "quarter": "Q3FY26",
-     "quote": "We have another 400 to 500 megawatt of project which we are pursuing which we expect to complete in this quarter",
+     "quote": "So, 2.7 gigawatts we will be doing in this financial year.",
      "speaker": "Dr. Praveer Sinha",
-     "page": 5,
-     "target": "400–500 MW",
-     "period": "Q4FY26",
-     "deadline": "Q4FY26",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
-    },
-    {
-     "call": "May 2026",
-     "quarter": "Q4FY26",
-     "quote": "And we do expect that the nearly 5 gigawatt of projects which are under implementation, and these are all in-house projects. 50% of it will be completed in this financial year and the balance 50% in FY '28.",
-     "speaker": "Praveer Sinha",
-     "page": 3,
-     "target": "2.5 GW",
-     "period": "FY27",
-     "deadline": "FY27",
-     "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
-    },
-    {
-     "call": "Jul 2026",
-     "quarter": "Q1FY27",
-     "quote": "Now this year, we will set up 2,500 megawatt to 2,700 megawatt.",
-     "speaker": "Praveer Sinha",
-     "page": 3,
-     "target": "2,500–2,700 MW",
-     "period": "FY27",
+     "page": 13,
+     "target": "2.7 GW",
+     "period": "FY26",
      "deadline": null,
      "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
     }
    ]
   },
   {
    "id": "TATAPOWER-8",
-   "title": "Third-party EPC delivery and margin",
+   "title": "FY26 third-party EPC delivery",
    "kind": "hard",
-   "metric": "operating_margin",
+   "metric": "capacity",
    "scope": "EPC business",
-   "basis": "management",
+   "basis": null,
    "period": "FY26",
-   "target": "5–6%",
+   "target": "1 GW",
    "direction": "flat",
-   "moved": true,
-   "events": [
-    {
-     "call": "Aug 2025",
-     "from": "Q4FY26",
-     "to": "Q3FY26",
-     "type": "advanced"
-    },
-    {
-     "call": "Feb 2026",
-     "from": "",
-     "to": "5–6%",
-     "type": "reaffirmed"
-    }
-   ],
-   "status": "missed",
-   "detail": "Discontinued third-party EPC business",
-   "evidence": {
-    "quote": "So we have discontinued doing the EPC third party.",
-    "call": "Jul 2026",
-    "new_deadline": null
-   },
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
    "statements": [
     {
      "call": "May 2025",
@@ -663,18 +454,42 @@
      "deadline": null,
      "condition": null,
      "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea54098-79fe-444a-ab4a-2dce13dd511b.pdf"
-    },
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-9",
+   "title": "FY26 EPC margin",
+   "kind": "hard",
+   "metric": "operating_margin",
+   "scope": "EPC business",
+   "basis": null,
+   "period": "FY26",
+   "target": "5–6%",
+   "direction": "flat",
+   "moved": true,
+   "events": [
     {
-     "call": "Aug 2025",
-     "quarter": "Q1FY26",
-     "quote": "We expect the third party order that we have will get more or less completed in Q2 and little bit in Q3",
-     "speaker": "Dr. Praveer Sinha",
-     "page": 3,
-     "target": "",
-     "period": "Q3FY26",
-     "deadline": "Q3FY26",
+     "call": "Feb 2026",
+     "from": "5%",
+     "to": "5–6%",
+     "type": "raised"
+    }
+   ],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "we kind of want to maintain a margin profile of 5%.",
+     "speaker": "Sanjeev Churiwala",
+     "page": 16,
+     "target": "5%",
+     "period": "FY26",
+     "deadline": null,
      "condition": null,
-     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea54098-79fe-444a-ab4a-2dce13dd511b.pdf"
     },
     {
      "call": "Feb 2026",
@@ -691,12 +506,41 @@
    ]
   },
   {
-   "id": "TATAPOWER-9",
-   "title": "Company performance consistency",
+   "id": "TATAPOWER-10",
+   "title": "FY26 Odisha Discoms operating margin",
+   "kind": "directional",
+   "metric": "operating_margin",
+   "scope": "Odisha Discoms",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said May 2025)",
+   "statements": [
+    {
+     "call": "May 2025",
+     "quarter": "Q4FY25",
+     "quote": "And we do expect that with the operations stabilizing and a whole lot of work that has been done in improving the quality of service, this performance will further improve in the coming year.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 3,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6ea54098-79fe-444a-ab4a-2dce13dd511b.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-11",
+   "title": "FY26 company performance",
    "kind": "directional",
    "metric": "other",
    "scope": "company",
-   "basis": "management",
+   "basis": null,
    "period": "Q2FY26",
    "target": "",
    "direction": "up",
@@ -709,13 +553,8 @@
      "type": "reaffirmed"
     }
    ],
-   "status": "delivered",
-   "detail": "PAT of INR 1,401 crores, an 11% increase",
-   "evidence": {
-    "quote": "Tata Power has done exceedingly well, INR 1,401 crores of PAT in the quarter, which is an 11% increase.",
-    "call": "Jul 2026",
-    "new_deadline": null
-   },
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
    "statements": [
     {
      "call": "May 2025",
@@ -744,7 +583,7 @@
    ]
   },
   {
-   "id": "TATAPOWER-10",
+   "id": "TATAPOWER-12",
    "title": "Section-11 arrangement conclusion",
    "kind": "milestone",
    "metric": "other",
@@ -772,8 +611,42 @@
    ]
   },
   {
-   "id": "TATAPOWER-11",
-   "title": "AT&C losses",
+   "id": "TATAPOWER-13",
+   "title": "FY26 utility scale capacity addition",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": "management",
+   "period": "FY26",
+   "target": "1,600 MW",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "missed",
+   "detail": "FY26 own utility scale capacity addition reached 600 MW",
+   "evidence": {
+    "quote": "We have already done 1.9 gigawatt which includes third party and also it includes 600 megawatt of our own capacity addition.",
+    "call": "Feb 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect nearly 1,600 megawatt of own utility scale projects to come up in the next three quarters",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 3,
+     "target": "1,600 MW",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-14",
+   "title": "FY28 AT&C losses",
    "kind": "hard",
    "metric": "other",
    "scope": "company",
@@ -800,8 +673,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-12",
-   "title": "Mundra plant availability",
+   "id": "TATAPOWER-15",
+   "title": "FY26 Mundra plant availability",
    "kind": "hard",
    "metric": "other",
    "scope": "Mundra plant",
@@ -834,8 +707,66 @@
    ]
   },
   {
-   "id": "TATAPOWER-13",
-   "title": "Pumped hydro project commissioning",
+   "id": "TATAPOWER-16",
+   "title": "FY26 rooftop solar unit supply",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "rooftop business",
+   "basis": null,
+   "period": "FY26",
+   "target": "40,000–50,000",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "hopefully later part of this year, we will supply 40,000 to 50,000 units per month.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 16,
+     "target": "40,000–50,000",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-17",
+   "title": "FY26 third party order completion",
+   "kind": "milestone",
+   "metric": "deal_wins",
+   "scope": "EPC business",
+   "basis": null,
+   "period": "Q3FY26",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Aug 2025)",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "We expect the third party order that we have will get more or less completed in Q2 and little bit in Q3",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 3,
+     "target": "",
+     "period": "Q3FY26",
+     "deadline": "Q3FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-18",
+   "title": "FY29 pumped hydro project commissioning",
    "kind": "milestone",
    "metric": "other",
    "scope": "Pumped hydro project",
@@ -899,22 +830,103 @@
    ]
   },
   {
-   "id": "TATAPOWER-14",
-   "title": "Net debt-to-EBITDA",
+   "id": "TATAPOWER-19",
+   "title": "FY29 Bhutan project commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "Bhutan project",
+   "basis": "management",
+   "period": "FY29",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Bhutan hydro project on track to meet set timelines",
+   "evidence": {
+    "quote": "Work on all our other businesses, especially our PSP project in Bhivpuri and our hydro plant in Bhutan are going at full swing and they will meet the timelines that have been set by us for both these projects.",
+    "call": "Feb 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "that will also get commissioned in 29.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 3,
+     "target": "",
+     "period": "FY29",
+     "deadline": "FY29",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-20",
+   "title": "FY26 distribution collection efficiency",
+   "kind": "directional",
+   "metric": "working_capital",
+   "scope": "distribution",
+   "basis": null,
+   "period": "Q2FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Aug 2025",
+     "quarter": "Q1FY26",
+     "quote": "you will see substantial improvements considering that many of the legacy issues which were there in Odisha, we have been able to overcome",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 6,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0ed5c7d7-8483-462f-9d08-041954bd624d.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "So the collection efficiency will be improving in this quarter.",
+     "speaker": "Praveer Sinha",
+     "page": 8,
+     "target": "",
+     "period": "Q2FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-21",
+   "title": "FY26 net debt-to-EBITDA",
    "kind": "hard",
    "metric": "debt",
    "scope": "company",
    "basis": "management",
    "period": "FY26",
-   "target": "4 x",
+   "target": "4×",
    "direction": "flat",
    "moved": false,
    "events": [],
    "status": "beat",
-   "detail": "Net debt-to-EBITDA 3.41 vs 4x target",
+   "detail": "FY26 net debt-to-EBITDA 3.4x vs 4x target",
    "evidence": {
-    "quote": "Our net debt to underlying EBITDA is 3.41 and our net debt to equity is 1.25.",
-    "call": "Jul 2026",
+    "quote": "I think the debt, what we see from a console basis, we have a debt equity of 1.2, a debt to underlying EBITDA of 3.4.",
+    "call": "Feb 2026",
     "new_deadline": null
    },
    "statements": [
@@ -924,7 +936,7 @@
      "quote": "we are looking at a net debt-to-EBITDA of about 4x.",
      "speaker": "Management",
      "page": 10,
-     "target": "4 x",
+     "target": "4×",
      "period": "FY26",
      "deadline": null,
      "condition": null,
@@ -933,8 +945,36 @@
    ]
   },
   {
-   "id": "TATAPOWER-15",
-   "title": "Dorjilung project financial closure",
+   "id": "TATAPOWER-22",
+   "title": "FY27 renewable capacity target",
+   "kind": "soft",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "said",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "hopefully by end of financial year ‘27, you will see that our overall target that we have set, we will be able to achieve.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 12,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=dc08c9a5-8cf1-4103-951a-2ab5bdce40cd.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-23",
+   "title": "FY27 Dorjilung project financial closure",
    "kind": "milestone",
    "metric": "other",
    "scope": "Dorjilung project",
@@ -980,8 +1020,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-16",
-   "title": "1,125 MW project construction",
+   "id": "TATAPOWER-24",
+   "title": "FY27 1,125 MW project construction start",
    "kind": "milestone",
    "metric": "other",
    "scope": "1,125 MW project",
@@ -992,7 +1032,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Bhutan hydro project work going at full swing meeting timelines",
+   "detail": "Bhutan hydro project work proceeding at full swing",
    "evidence": {
     "quote": "Work on all our other businesses, especially our PSP project in Bhivpuri and our hydro plant in Bhutan are going at full swing and they will meet the timelines that have been set by us for both these projects.",
     "call": "Feb 2026",
@@ -1014,8 +1054,150 @@
    ]
   },
   {
-   "id": "TATAPOWER-17",
-   "title": "Internal project completion",
+   "id": "TATAPOWER-25",
+   "title": "FY26/FY27 capacity additions",
+   "kind": "directional",
+   "metric": "capacity",
+   "scope": "Odisha utility-led scheme",
+   "basis": null,
+   "period": "FY26",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [
+    {
+     "call": "Feb 2026",
+     "from": "",
+     "to": "",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "lapsed",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "Dec 2025",
+     "quarter": "Q2FY26",
+     "quote": "we will be in a position to execute only our project. So, that is the whole plan, and you will see that that is why there will be a lot of capacity additions in Q3, Q4 and in the next financial year",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 14,
+     "target": "",
+     "period": "H2FY26 and FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=dc08c9a5-8cf1-4103-951a-2ab5bdce40cd.pdf"
+    },
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "at least 50% to 60% more will happen in this year and we will continue to see the increase going forward.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 11,
+     "target": "",
+     "period": "FY26",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-26",
+   "title": "Q4FY26 renewable capacity commissioning",
+   "kind": "milestone",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "Q4FY26",
+   "target": "400–500 MW",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "gone_quiet",
+   "detail": "Period ended; no update in later calls (last said Feb 2026)",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "We have another 400 to 500 megawatt of project which we are pursuing which we expect to complete in this quarter",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 5,
+     "target": "400–500 MW",
+     "period": "Q4FY26",
+     "deadline": "Q4FY26",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-27",
+   "title": "FY27 renewable capacity commissioning",
+   "kind": "hard",
+   "metric": "capacity",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "2,500–2,700 MW",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "May 2026",
+     "from": "2.5–3 GW",
+     "to": "",
+     "type": "reaffirmed"
+    },
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "2,500–2,700 MW",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Feb 2026",
+     "quarter": "Q3FY26",
+     "quote": "If we look at next year, we have a capacity to execute 2.7. We may do more than 2.5 while we have taken the initial estimate of 2.5, we can go up to 3 gigawatts of capacity add.",
+     "speaker": "Dr. Praveer Sinha",
+     "page": 13,
+     "target": "2.5–3 GW",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=93b975b6-96db-407e-b75e-8ba408beb787.pdf"
+    },
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "And we do expect that the nearly 5 gigawatt of projects which are under implementation, and these are all in-house projects. 50% of it will be completed in this financial year and the balance 50% in FY '28.",
+     "speaker": "Praveer Sinha",
+     "page": 3,
+     "target": "",
+     "period": "FY27",
+     "deadline": "FY27",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "Now this year, we will set up 2,500 megawatt to 2,700 megawatt.",
+     "speaker": "Praveer Sinha",
+     "page": 3,
+     "target": "2,500–2,700 MW",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-28",
+   "title": "FY26 internal project completion",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "internal projects",
@@ -1026,9 +1208,9 @@
    "moved": false,
    "events": [],
    "status": "delayed",
-   "detail": "Projects delayed from last year now expected in current financial year",
+   "detail": "Transmission projects delayed due to ROW issues, completion pushed to FY27",
    "evidence": {
-    "quote": "As I mentioned to you, those projects, which we missed out last year, we'll ensure that those get completed in this financial year.",
+    "quote": "Many of the places, the right of way got delayed.",
     "call": "May 2026",
     "new_deadline": "FY27"
    },
@@ -1048,8 +1230,102 @@
    ]
   },
   {
-   "id": "TATAPOWER-18",
-   "title": "Tata Projects profitability",
+   "id": "TATAPOWER-29",
+   "title": "FY27 company annual capex",
+   "kind": "hard",
+   "metric": "capex",
+   "scope": "company",
+   "basis": null,
+   "period": "FY27",
+   "target": "₹25,000 cr",
+   "direction": null,
+   "moved": false,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "",
+     "to": "₹25,000 cr",
+     "type": "reaffirmed"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "So that's why our target of yearly investment continues to be the same.",
+     "speaker": "Praveer Sinha",
+     "page": 6,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "And we expect that the INR 25,000 crores that we have lined up for this year, we'll be able to implement.",
+     "speaker": "Praveer Sinha",
+     "page": 3,
+     "target": "₹25,000 cr",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-30",
+   "title": "FY27 rooftop business growth",
+   "kind": "hard",
+   "metric": "revenue_growth",
+   "scope": "Rooftop business",
+   "basis": null,
+   "period": "FY27",
+   "target": "60–70%",
+   "direction": null,
+   "moved": true,
+   "events": [
+    {
+     "call": "Jul 2026",
+     "from": "50–60%",
+     "to": "60–70%",
+     "type": "raised"
+    }
+   ],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "I do expect that in FY '27, the rooftop market, the rooftop business will grow, if not by 100%, at least by 50%, 60%.",
+     "speaker": "Praveer Sinha",
+     "page": 12,
+     "target": "50–60%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
+    },
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "this year also, we have plans to grow by about 60% to 70%.",
+     "speaker": "Praveer Sinha",
+     "page": 3,
+     "target": "60–70%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-31",
+   "title": "FY27 Tata Projects profitability",
    "kind": "directional",
    "metric": "pat",
    "scope": "Tata Projects",
@@ -1076,8 +1352,36 @@
    ]
   },
   {
-   "id": "TATAPOWER-19",
-   "title": "Wafer and ingot plant construction",
+   "id": "TATAPOWER-32",
+   "title": "FY27 Odisha DISCOMS AT&C loss reduction",
+   "kind": "hard",
+   "metric": "other",
+   "scope": "Odisha DISCOMS",
+   "basis": null,
+   "period": "FY27",
+   "target": "2%",
+   "direction": "down",
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "you can expect that you will reduce about 2% every year in that sort of reduction will be a ballpark number.",
+     "speaker": "Praveer Sinha",
+     "page": 19,
+     "target": "2%",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-33",
+   "title": "FY27 wafer and ingot plant construction",
    "kind": "milestone",
    "metric": "capacity",
    "scope": "company",
@@ -1110,8 +1414,42 @@
    ]
   },
   {
-   "id": "TATAPOWER-20",
-   "title": "Small modular nuclear plants DPR",
+   "id": "TATAPOWER-34",
+   "title": "FY27 Odisha DISCOMS performance",
+   "kind": "directional",
+   "metric": "other",
+   "scope": "Odisha DISCOMS",
+   "basis": "management",
+   "period": "FY27",
+   "target": "",
+   "direction": "up",
+   "moved": false,
+   "events": [],
+   "status": "on_track",
+   "detail": "Odisha DISCOM operating performance described as excellently well",
+   "evidence": {
+    "quote": "But on an operating perspective, I think the Odisha DISCOM still did excellently well.",
+    "call": "Jul 2026",
+    "new_deadline": null
+   },
+   "statements": [
+    {
+     "call": "May 2026",
+     "quarter": "Q4FY26",
+     "quote": "I think Odisha performance next year should possibly peak in terms of the type of results you would see.",
+     "speaker": "Praveer Sinha",
+     "page": 8,
+     "target": "",
+     "period": "FY27",
+     "deadline": null,
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3e7a67bd-6f64-475b-96e4-37f8d51b86f3.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-35",
+   "title": "FY27 small modular nuclear plants DPR",
    "kind": "milestone",
    "metric": "other",
    "scope": "small modular nuclear plants",
@@ -1138,8 +1476,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-21",
-   "title": "Shirwata plant construction and operation",
+   "id": "TATAPOWER-36",
+   "title": "FY27 Shirwata plant construction start",
    "kind": "milestone",
    "metric": "other",
    "scope": "Shirwata PSP",
@@ -1185,8 +1523,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-22",
-   "title": "Mumbai Transmission CAPEX",
+   "id": "TATAPOWER-37",
+   "title": "FY31 Mumbai Transmission capex",
    "kind": "hard",
    "metric": "capex",
    "scope": "Mumbai Transmission",
@@ -1213,8 +1551,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-23",
-   "title": "Transmission line commissioning",
+   "id": "TATAPOWER-38",
+   "title": "FY27 transmission line commissioning",
    "kind": "milestone",
    "metric": "other",
    "scope": "Jalpura-Khurja line",
@@ -1241,8 +1579,36 @@
    ]
   },
   {
-   "id": "TATAPOWER-24",
-   "title": "Quarterly CAPEX",
+   "id": "TATAPOWER-39",
+   "title": "FY31 Shirwata PSP operational",
+   "kind": "milestone",
+   "metric": "other",
+   "scope": "Shirwata PSP",
+   "basis": null,
+   "period": "FY31",
+   "target": "",
+   "direction": null,
+   "moved": false,
+   "events": [],
+   "status": "open",
+   "statements": [
+    {
+     "call": "Jul 2026",
+     "quarter": "Q1FY27",
+     "quote": "And we do expect that this plant will also become operational in the calendar year 2030.",
+     "speaker": "Praveer Sinha",
+     "page": 3,
+     "target": "",
+     "period": "FY31",
+     "deadline": "FY31",
+     "condition": null,
+     "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TATAPOWER-40",
+   "title": "Q2FY27 company capex",
    "kind": "hard",
    "metric": "capex",
    "scope": "company",
@@ -1269,8 +1635,8 @@
    ]
   },
   {
-   "id": "TATAPOWER-25",
-   "title": "Pumped storage project construction acceleration",
+   "id": "TATAPOWER-41",
+   "title": "FY27 PSP construction",
    "kind": "directional",
    "metric": "capex",
    "scope": "PSP",
@@ -1297,6 +1663,63 @@
    ]
   }
  ],
+ "business": {
+  "what": "Tata Power generates, transmits, and distributes electricity from thermal, hydro, and renewable sources, while also providing solar manufacturing, EPC services, and EV charging solutions to diverse customers.",
+  "segments": [
+   {
+    "name": "Thermal & Hydro",
+    "share_pct": null,
+    "revenue_cr": 11635.93,
+    "note": "Generation from thermal, hydro, coal mining, trading, and shipping.",
+    "page": 321
+   },
+   {
+    "name": "Renewables",
+    "share_pct": null,
+    "revenue_cr": 15027.82,
+    "note": "Wind, solar, rooftop projects, EV charging, and solar manufacturing.",
+    "page": 321
+   },
+   {
+    "name": "Transmission and Distribution",
+    "share_pct": null,
+    "revenue_cr": 41338.59,
+    "note": "Network operations, retail power sales, and power trading.",
+    "page": 321
+   },
+   {
+    "name": "Others",
+    "share_pct": null,
+    "revenue_cr": 431.79,
+    "note": "Project management, infrastructure services, and satellite communication.",
+    "page": 321
+   }
+  ],
+  "geographies": [
+   {
+    "region": "Domestic",
+    "share_pct": null,
+    "page": 322
+   },
+   {
+    "region": "Overseas",
+    "share_pct": null,
+    "page": 322
+   }
+  ],
+  "year": "FY26",
+  "source": "Annual Report 2026",
+  "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a5491ca0-092d-4f99-a329-c62579cc6ef2.pdf",
+  "pages": [
+   79,
+   121,
+   122,
+   126,
+   232,
+   321,
+   322
+  ]
+ },
  "snapshot": {
   "lender": false,
   "metrics": [
@@ -1416,41 +1839,47 @@
  "case": {
   "bull": [
    {
-    "point": "The company exceeded its solar production target by achieving 4.55 gigawatts of capacity against a 3,700 MW goal.",
+    "figure": "4.55 GW",
+    "point": "Solar cell and module production beat the FY26 target of 3,700 MW by reaching 4.55 gigawatts.",
     "refs": [
      "TATAPOWER-4"
     ]
    },
    {
-    "point": "Management successfully maintained a net debt-to-EBITDA ratio of 3.41, beating the 4x target for FY26.",
+    "figure": "3.4x",
+    "point": "Net debt-to-EBITDA for FY26 came in stronger than the target at 3.4x compared to the 4x target.",
     "refs": [
-     "TATAPOWER-14"
+     "TATAPOWER-21"
     ]
    },
    {
-    "point": "Operating margins have shown consistent improvement, expanding from 16% in FY22 to 21% in FY26.",
+    "figure": "224%",
+    "point": "Over 5 years, operating cash flow was a robust 224% of net profit demonstrating strong cash conversion.",
     "refs": [
-     "margin"
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "point": "The company missed its Mundra plant availability target of 80% due to a six-month shutdown and loss of capacity charges.",
+    "figure": "600 MW",
+    "point": "Utility scale capacity addition reached only 600 MW against the FY26 target of 1,600 MW.",
     "refs": [
-     "TATAPOWER-12"
+     "TATAPOWER-13"
     ]
    },
    {
-    "point": "The wafer and ingot plant construction has been significantly delayed, with commissioning pushed to calendar year 2029.",
+    "figure": "-4%",
+    "point": "Revenue growth for the last 12 months declined by 4% reflecting slowing momentum.",
     "refs": [
-     "TATAPOWER-19"
+     "sales_growth"
     ]
    },
    {
-    "point": "The third-party EPC business was discontinued after failing to meet the 5-6% margin target.",
+    "figure": "₹76,141 cr",
+    "point": "Total borrowings rose to ₹76,141 cr, increasing the debt-to-equity ratio to 1.93x.",
     "refs": [
-     "TATAPOWER-8"
+     "debt"
     ]
    }
   ]
