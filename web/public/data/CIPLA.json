@@ -261,7 +261,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Q1FY26 U.S. revenue $226 million vs $220 million guidance",
+   "detail": "Met the 220 USD mn guide (per management; no figure given)",
    "evidence": {
     "quote": "In North America, as expected, we delivered a quarterly revenue of $226 million.",
     "call": "Jul 2025",
@@ -324,7 +324,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "First biosimilar (filgrastim) launched in U.S. market in Q2 FY26",
+   "detail": "Done (per management)",
    "evidence": {
     "quote": "This quarter also marked a significant milestone in our growth journey with the launch of filgrastim, our first biosimilar in the U.S. market, signalling a strategic entry into high potential segments.",
     "call": "Nov 2025",
@@ -706,7 +706,7 @@
    "moved": false,
    "events": [],
    "status": "behind",
-   "detail": "3 new launches in Q1 FY27",
+   "detail": "Behind the 17 guide (per management; no figure given)",
    "evidence": {
     "quote": "Expanding our portfolio remains a key growth driver with 3 new launches this quarter, addressing specific patient needs.",
     "call": "Jul 2026",
@@ -1337,7 +1337,7 @@
   "bull": [
    {
     "figure": "Delivered promises 3",
-    "point": "Management successfully delivered on three key milestones including US revenue targets and biosimilar launches.",
+    "point": "Management successfully delivered on three key targets including the FY26 EBITDA margin and U.S. revenue goals.",
     "refs": [
      "CIPLA-0",
      "CIPLA-3",
@@ -1345,34 +1345,26 @@
     ]
    },
    {
-    "figure": "Operating margin 21%",
-    "point": "Operating margin held steady from FY22 to FY26 demonstrating consistent profitability.",
+    "figure": "Operating margin FY22 to FY26 21%",
+    "point": "Operating margin remained stable at 21% from FY22 to FY26.",
     "refs": [
      "margin"
-    ]
-   },
-   {
-    "figure": "Cash conversion 105%",
-    "point": "Strong operating cash flow over five years reached 105 percent of net profit.",
-    "refs": [
-     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
     "figure": "Gone quiet promises 4",
-    "point": "Several tracked promises went quiet without updates in later calls after periods ended.",
+    "point": "Several promises went quiet with no updates provided after their periods ended.",
     "refs": [
      "CIPLA-6",
      "CIPLA-7",
-     "CIPLA-9",
      "CIPLA-11"
     ]
    },
    {
-    "figure": "Profit growth -43%",
-    "point": "Profit declined by 43 percent over the last 12 months.",
+    "figure": "Last 12 months profit growth -43%",
+    "point": "Profit experienced a significant decline of 43% over the last 12 months.",
     "refs": [
      "profit_growth"
     ]

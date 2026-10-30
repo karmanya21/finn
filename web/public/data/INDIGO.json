@@ -762,7 +762,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Added 4 B787s and 2 A320s on damp-lease basis",
+   "detail": "Met the promise (per management; no figure given)",
    "evidence": {
     "quote": "While we await the delivery of our own widebodies from 2028 onwards, in the interim to support rising demand and maintain flexibility, we have already added 4 B787 widebodies on damp-lease basis and will be adding 2 more in the coming months.",
     "call": "Nov 2025",
@@ -796,7 +796,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Q2 demand described as softer, contrary to stronger expectation",
+   "detail": "Fell short of the promise (per management; no figure given)",
    "evidence": {
     "quote": "The quarter opened with the industry rebounding after a seasonally weaker second quarter, when Indian carriers had reduced capacity to align with softer demand trends.",
     "call": "Jan 2026",
@@ -1406,15 +1406,8 @@
  "case": {
   "bull": [
    {
-    "figure": "Operating margin 2.2% → 14%",
-    "point": "Operating margins have significantly expanded over the last four years, demonstrating improved operational efficiency.",
-    "refs": [
-     "margin"
-    ]
-   },
-   {
-    "figure": "Delivered 3 of 3",
-    "point": "Management successfully executed on key infrastructure and fleet expansion promises, including new airport operations and XLR aircraft delivery.",
+    "figure": "Delivered promises 3",
+    "point": "Management successfully delivered three key operational targets including new airport operations, XLR aircraft delivery, and damp lease capacity.",
     "refs": [
      "INDIGO-3",
      "INDIGO-9",
@@ -1422,8 +1415,15 @@
     ]
    },
    {
+    "figure": "Operating margin 14%",
+    "point": "Operating margins expanded significantly from 2.2% in FY22 to 14% by FY26.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
     "figure": "Cash conversion 1274%",
-    "point": "The company maintains strong cash generation capabilities relative to net profit over the past five years.",
+    "point": "Operating cash flow conversion was exceptionally strong at 1274% of net profit over five years.",
     "refs": [
      "cash_conversion"
     ]
@@ -1431,15 +1431,8 @@
   ],
   "bear": [
    {
-    "figure": "Net debt ₹54,119 cr",
-    "point": "Net debt has more than doubled since FY22, reaching a high leverage ratio of 7.76 times equity.",
-    "refs": [
-     "debt"
-    ]
-   },
-   {
-    "figure": "Missed 3 of 3",
-    "point": "Management failed to meet targets for flight frequency, demand expectations, and Middle East capacity deployment.",
+    "figure": "Missed promises 3",
+    "point": "Management missed targets on full flight frequencies, demand strength, and Middle East flight capacity.",
     "refs": [
      "INDIGO-6",
      "INDIGO-11",
@@ -1447,11 +1440,18 @@
     ]
    },
    {
-    "figure": "Gone quiet 2 of 2",
-    "point": "Key strategic promises regarding widebody deliveries and new route launches were abandoned without further updates after the target periods.",
+    "figure": "Gone quiet promises 2",
+    "point": "Two promises regarding widebody deliveries and new route launches went quiet after their periods ended without updates.",
     "refs": [
      "INDIGO-1",
      "INDIGO-2"
+    ]
+   },
+   {
+    "figure": "Net debt ₹54,119 cr",
+    "point": "Net debt surged to ₹54,119 crore in FY26, reaching 7.76 times equity.",
+    "refs": [
+     "debt"
     ]
    }
   ]

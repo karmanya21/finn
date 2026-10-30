@@ -135,7 +135,7 @@
     }
    ],
    "status": "beat",
-   "detail": "FY26 order inflow 20% CAGR vs 10% guidance",
+   "detail": "Beat the ≥10% guide (per management; no figure given)",
    "evidence": {
     "quote": "I am pleased to share that we have significantly surpassed this guidance, driven by strong order wins across multiple sectors.",
     "call": "May 2026",
@@ -1782,22 +1782,15 @@
  "case": {
   "bull": [
    {
-    "figure": "FY26 order inflow 20% CAGR",
-    "point": "Management significantly outperformed initial expectations by delivering 20% CAGR order inflow growth compared to the 10% guidance.",
-    "refs": [
-     "LT-0"
-    ]
-   },
-   {
-    "figure": "FY26 NWC to revenue 4.1%",
-    "point": "Working capital efficiency greatly exceeded the target of 10% by closing the period at a low 4.1%.",
+    "figure": "FY26 Net Working Capital 4.1%",
+    "point": "Management beat the working capital target significantly, closing FY26 NWC to revenue at 4.1% against a 10% target.",
     "refs": [
      "LT-3"
     ]
    },
    {
-    "figure": "ROCE 15% in FY26",
-    "point": "Capital returns improved substantially over the period, rising from 10% in FY22 to 15% in FY26.",
+    "figure": "FY26 ROCE 15%",
+    "point": "Return on capital employed improved to 15% in FY26 compared to 10% in FY22, demonstrating better capital efficiency.",
     "refs": [
      "returns"
     ]
@@ -1805,22 +1798,15 @@
   ],
   "bear": [
    {
-    "figure": "FY26 revenue growth 11.8%",
-    "point": "Management missed their stated FY26 revenue growth target of 15% by delivering only 11.8%.",
+    "figure": "FY26 Revenue growth 11.8%",
+    "point": "Management missed the FY26 group revenue growth target of 15% by only achieving 11.8%.",
     "refs": [
      "LT-1"
     ]
    },
    {
-    "figure": "Data Center capacity 30 MW",
-    "point": "The company missed its FY26 Data Center capacity commissioning goal by delivering only 30 MW total capacity.",
-    "refs": [
-     "LT-14"
-    ]
-   },
-   {
-    "figure": "Operating margin 13% in FY26",
-    "point": "Operating profitability deteriorated over the period, compressing from 16% in FY22 down to 13% in FY26.",
+    "figure": "Operating margin 16% to 13%",
+    "point": "Operating margins compressed from 16% in FY22 down to 13% by FY26.",
     "refs": [
      "margin"
     ]

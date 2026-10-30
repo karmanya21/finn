@@ -911,7 +911,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Supply chain challenges persisted through Q4",
+   "detail": "Fell short of the promise (per management; no figure given)",
    "evidence": {
     "quote": "And even this quarter, where despite multiple challenges, despite supply chain problems, we managed to deliver a 42% profit growth year-over-year.",
     "call": "May 2026",
@@ -1904,21 +1904,21 @@
   "bull": [
    {
     "figure": "FY26 ROE 20%",
-    "point": "Management beat their target by delivering a 20% ROE compared to the expected 18%.",
+    "point": "Management beat their target by delivering a 20 percent ROE compared to the 18 percent goal.",
     "refs": [
      "M&M-11"
     ]
    },
    {
-    "figure": "FY26 net cash generation 16,000 crores",
-    "point": "The company successfully delivered on its cash generation promise for the period.",
+    "figure": "FY26 net cash 16,000 crores",
+    "point": "Management delivered strong cash generation during the fiscal year.",
     "refs": [
      "M&M-7"
     ]
    },
    {
     "figure": "Operating margin 19%",
-    "point": "Operating margin expanded steadily from 16% in FY22 to reach 19% in FY26.",
+    "point": "Operating margins expanded from 16 percent in FY22 to 19 percent in FY26.",
     "refs": [
      "margin"
     ]
@@ -1926,22 +1926,22 @@
   ],
   "bear": [
    {
-    "figure": "Auto revenue growth 14.9%",
-    "point": "SUV growth missed the mid-to-high teens guidance set for FY27.",
-    "refs": [
-     "M&M-14"
-    ]
-   },
-   {
     "figure": "Net debt ₹104,957 cr",
-    "point": "Net debt increased substantially from ₹66,487 cr in FY22 to 1.13x equity in FY26.",
+    "point": "Net debt rose significantly from ₹66,487 crore in FY22 to ₹104,957 crore in FY26.",
     "refs": [
      "debt"
     ]
    },
    {
-    "figure": "Operating cash flow 18%",
-    "point": "Cash conversion remained weak with operating cash flow representing only 18% of net profit over five years.",
+    "figure": "Auto revenue growth missed",
+    "point": "SUV growth reached only 14.9 percent, missing the mid-to-high teens guidance.",
+    "refs": [
+     "M&M-14"
+    ]
+   },
+   {
+    "figure": "Cash conversion 18%",
+    "point": "Operating cash flow was weak at only 18 percent of net profit over five years.",
     "refs": [
      "cash_conversion"
     ]

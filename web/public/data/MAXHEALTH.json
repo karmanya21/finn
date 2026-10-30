@@ -1027,7 +1027,7 @@
    "moved": false,
    "events": [],
    "status": "open",
-   "detail": "Network operating EBITDA grew by 23% year-on-year in H1 FY26",
+   "detail": "Open (per management; no figure given)",
    "evidence": {
     "quote": "For the second quarter, revenue grew by 21% year-on-year, while operating EBITDA increased by 23%, thereby extending our track record to 20 consecutive quarters of consistent growth.",
     "call": "Nov 2025",
@@ -2232,45 +2232,47 @@
  "case": {
   "bull": [
    {
+    "figure": "Sales growth 16%",
+    "point": "The last 12 months showed solid revenue growth of 16% as operations expand.",
+    "refs": [
+     "sales_growth"
+    ]
+   },
+   {
     "figure": "Operating margin 27%",
-    "point": "Operating margin expanded from 24% in FY22 to 27% in FY26, showing stronger profitability.",
+    "point": "Operating margin expanded from 24% in FY22 to 27% in FY26, showing improved efficiency.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "Profit growth 25%",
-    "point": "Profit grew by 25% over the last 12 months, highlighting solid bottom-line momentum.",
+    "figure": "Kept promises 2",
+    "point": "Management successfully delivered on both the FY26 EBITDA per bed and the Lucknow radiation program.",
     "refs": [
-     "profit_growth"
-    ]
-   },
-   {
-    "figure": "ROCE 15%",
-    "point": "ROCE improved to 15% in FY26 from 12% in FY22, demonstrating better capital efficiency.",
-    "refs": [
-     "returns"
+     "MAXHEALTH-11",
+     "MAXHEALTH-22"
     ]
    }
   ],
   "bear": [
    {
     "figure": "Net debt ₹2,777 cr",
-    "point": "Net debt increased significantly to ₹2,777 cr in FY26 up from ₹414 cr in FY22.",
+    "point": "Net debt increased significantly to ₹2,777 cr in FY26 compared to ₹414 cr in FY22.",
     "refs": [
      "debt"
     ]
    },
    {
-    "figure": "Capacity commissioning MAXHEALTH-0",
-    "point": "Multiple facility commissioning targets have been deferred repeatedly across several reporting periods.",
+    "figure": "Deferred projects 5",
+    "point": "Multiple facility commissioning targets including Max Smart, Mohali and Sector 56 have suffered repeated delays.",
     "refs": [
-     "MAXHEALTH-0"
+     "MAXHEALTH-0",
+     "MAXHEALTH-4"
     ]
    },
    {
-    "figure": "Super speciality rate implementation MAXHEALTH-24",
-    "point": "The super specialty rates implementation was missed and delayed beyond the November 2025 deadline.",
+    "figure": "Missed promises 1",
+    "point": "Management missed the super specialty rates implementation deadline which was delayed beyond November 2025.",
     "refs": [
      "MAXHEALTH-24"
     ]

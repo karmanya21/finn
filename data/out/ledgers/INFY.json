@@ -668,7 +668,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Operating margin at 21.1% in Q1",
+   "detail": "On track (per management; no figure given)",
    "evidence": {
     "quote": "Our large deals, $3.6 bn at 61% net new, operating margin at 21.1%, free cash flow at $955 mn.",
     "call": "Jul 2026",
@@ -1415,46 +1415,45 @@
  "case": {
   "bull": [
    {
-    "figure": "Delivered FY26 operating margin 20.9%",
-    "point": "Management successfully delivered on their operating margin target for the fiscal year.",
+    "figure": "Delivered 20.9% margin",
+    "point": "Operating margin of 20.9% for FY26 met the target range of 20-22%.",
     "refs": [
      "INFY-1"
     ]
    },
    {
     "figure": "ROCE 40% in FY26",
-    "point": "Capital returns improved from 37% in FY22, demonstrating strong operational efficiency.",
+    "point": "Return on capital employed rose from 37% in FY22 to 40% in FY26.",
     "refs": [
      "returns"
     ]
    },
    {
     "figure": "Net cash ₹13,025 cr",
-    "point": "The company maintains a solid net cash position with high cash conversion of 110%.",
+    "point": "The company maintained a strong net cash position of ₹13,025 cr in FY26.",
     "refs": [
-     "debt",
-     "cash_conversion"
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Lowered FY27 revenue growth 1–2%",
-    "point": "Guidance was repeatedly lowered across periods, indicating deteriorating top-line momentum.",
-    "refs": [
-     "INFY-10"
-    ]
-   },
-   {
-    "figure": "Delayed Telstra JV transaction close",
-    "point": "The JV closure was delayed awaiting regulatory approvals, missing its original FY26 timeline.",
+    "figure": "Delayed JV transaction",
+    "point": "The Telstra JV transaction close was delayed awaiting necessary regulatory approvals.",
     "refs": [
      "INFY-4"
     ]
    },
    {
-    "figure": "Operating margin compressed 26% → 24%",
-    "point": "Operating margins declined from FY22 levels over the multi-year period.",
+    "figure": "Lowered FY27 growth 1-2%",
+    "point": "Management repeatedly lowered guidance for FY27 revenue growth down to 1-2%.",
+    "refs": [
+     "INFY-10"
+    ]
+   },
+   {
+    "figure": "Margin compressed to 24%",
+    "point": "Operating margin compressed from 26% in FY22 to 24% by FY26.",
     "refs": [
      "margin"
     ]

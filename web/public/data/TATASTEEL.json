@@ -573,7 +573,7 @@
     }
    ],
    "status": "on_track",
-   "detail": "Combi mill commissioned in Q2 FY26",
+   "detail": "On track (per management)",
    "evidence": {
     "quote": "We have a combi mill, which is a state-of-the-art long products plant of half a million ton which has just got commissioned last quarter.",
     "call": "Nov 2025",
@@ -881,7 +881,7 @@
    "moved": false,
    "events": [],
    "status": "beat",
-   "detail": "Annualized fixed cost reduction >£200 million in Q1 FY26",
+   "detail": "Beat the 220 GBP million guide (per management; no figure given)",
    "evidence": {
     "quote": "Within costs, fixed costs have improved by about £17 million and first quarter fixed cost base on an annualized basis reflects a reduction of more than £200 million in FY2026 versus FY2025.",
     "call": "Aug 2025",
@@ -1354,7 +1354,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Net steel realisations dropped QoQ in Q2FY26",
+   "detail": "Fell short of the promise (per management; no figure given)",
    "evidence": {
     "quote": "While average HRC spot prices were down about Rs 2,300 per ton on QoQ, we were able to limit the drop in our net realisations to about Rs 1,700 per ton.",
     "call": "Nov 2025",
@@ -2545,51 +2545,44 @@
  "case": {
   "bull": [
    {
-    "figure": "Profit growth 147% in the last 12 months",
-    "point": "Profit surged significantly over the last year, demonstrating strong short-term earnings momentum.",
+    "figure": "Delivered 2 of 2: India cost savings ₹3,927 crores",
+    "point": "Management successfully executed key cost transformation benefits close to the targeted Rs 4,000 cr for FY26.",
     "refs": [
-     "profit_growth"
+     "TATASTEEL-16"
     ]
    },
    {
-    "figure": "Cash conversion 245% over 5 years",
-    "point": "Operating cash flow heavily exceeded net profit over a five-year span, highlighting excellent earnings quality.",
+    "figure": "Profit growth 147%: Last 12 months profit growth",
+    "point": "The company delivered strong profit growth alongside high cash conversion at 245% of net profit over five years.",
     "refs": [
+     "profit_growth",
      "cash_conversion"
-    ]
-   },
-   {
-    "figure": "Kept promises including TATASTEEL-2 and TATASTEEL-16",
-    "point": "Management successfully delivered key operational cost savings and beat coking coal cost targets.",
-    "refs": [
-     "TATASTEEL-2",
-     "TATASTEEL-16",
-     "TATASTEEL-19"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Operating margin 26% to 15%",
-    "point": "Operating margins compressed severely from FY22 to FY26, indicating ongoing core profitability pressures.",
+    "figure": "Missed net debt: Target ₹6,000–8,000 cr vs FY26 actual ₹82,324 cr",
+    "point": "Net debt missed its target substantially, remaining elevated and rising from ₹59,662 cr in FY22.",
     "refs": [
-     "margin"
-    ]
-   },
-   {
-    "figure": "Net debt ₹82,324 cr in FY26",
-    "point": "Net debt expanded substantially compared to historical levels, raising financial leverage concerns.",
-    "refs": [
+     "TATASTEEL-26",
      "debt"
     ]
    },
    {
-    "figure": "Missed targets including TATASTEEL-26 and TATASTEEL-21",
-    "point": "Management failed to hit net debt targets and missed India price increase goals.",
+    "figure": "Operating margin 26% to 15%: Compression from FY22 to FY26",
+    "point": "Operating margins significantly compressed while returns on capital dropped from 31% to 13% over the same period.",
     "refs": [
-     "TATASTEEL-21",
-     "TATASTEEL-26",
-     "TATASTEEL-31"
+     "margin",
+     "returns"
+    ]
+   },
+   {
+    "figure": "Multiple misses: India price increase target of 3,000 Rs/t",
+    "point": "Management missed targets on price increases and conversion cost optimization in India during the period.",
+    "refs": [
+     "TATASTEEL-17",
+     "TATASTEEL-21"
     ]
    }
   ]

@@ -93,8 +93,7 @@
   "quiet": 3,
   "open": 14,
   "by_status": {
-   "behind": 1,
-   "on_track": 2,
+   "on_track": 3,
    "open": 10,
    "gone_quiet": 3,
    "delayed": 1,
@@ -127,8 +126,8 @@
      "type": "reaffirmed"
     }
    ],
-   "status": "behind",
-   "detail": "India Cements EBITDA per ton reached INR603 in Q1FY27",
+   "status": "on_track",
+   "detail": "On track (per management; no figure given)",
    "evidence": {
     "quote": "The direction of travel is unmistakable and the destination is unchanged, and EBITDA of INR1,000 per ton for India Cements remains very much in sight with the full benefit of the capex program flowing through the P&L from Q4 fiscal '28.",
     "call": "Jul 2026",
@@ -909,7 +908,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Kesoram operating at INR1,000-plus EBITDA per ton by Q4 FY26",
+   "detail": "On track (per management; no figure given)",
    "evidence": {
     "quote": "So Kesoram, if I look at January, March quarter, it was already operating at INR1,000-plus EBITDA per ton.",
     "call": "May 2026",
@@ -1658,44 +1657,44 @@
   "bull": [
    {
     "figure": "FY27 revenue growth 21%",
-    "point": "Management delivered a strong beat on their revenue growth target for FY27.",
+    "point": "Management beat expectations by delivering 21% like-for-like revenue growth.",
     "refs": [
      "ULTRACEMCO-2"
     ]
    },
    {
-    "figure": "Operating cash flow 164%",
-    "point": "Cash conversion was exceptionally strong over a five year period.",
+    "figure": "Net profit growth 21%",
+    "point": "Profit growth accelerated to 21% over the last 12 months.",
     "refs": [
-     "cash_conversion"
+     "profit_growth"
     ]
    },
    {
-    "figure": "Net debt ₹22,371 cr",
-    "point": "Management successfully delivered on their average cost of borrowing target for FY26.",
+    "figure": "Operating cash flow 164%",
+    "point": "Cash conversion remained exceptionally strong over the five-year period.",
     "refs": [
-     "ULTRACEMCO-5"
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Operating margin 19%",
-    "point": "Operating margins have compressed down from 22% in FY22.",
+    "figure": "Operating margin 22% → 19%",
+    "point": "Operating margins compressed notably from FY22 to FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "India Cements EBITDA INR603",
-    "point": "The India Cements EBITDA per metric ton target is currently lagging behind expectations.",
+    "figure": "Net debt ₹10,940 cr → ₹22,371 cr",
+    "point": "Net debt more than doubled from FY22 levels.",
     "refs": [
-     "ULTRACEMCO-0"
+     "debt"
     ]
    },
    {
-    "figure": "ICL P&L benefits Q4 FY28",
-    "point": "The full P&L benefits from ICL capex have been delayed into fiscal 2028.",
+    "figure": "ICL P&L benefits delayed",
+    "point": "Full benefits of ICL capex flowing through the P&L were delayed to Q4 fiscal 28.",
     "refs": [
      "ULTRACEMCO-6"
     ]

@@ -207,7 +207,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "GenX business expenses with no corresponding revenues in H1 FY26",
+   "detail": "Fell short of the promise (per management; no figure given)",
    "evidence": {
     "quote": "The fixed costs at GenX facilities coupled with limited revenue activity has negatively impacted our bottom line.",
     "call": "Sep 2025",
@@ -1191,42 +1191,48 @@
  "case": {
   "bull": [
    {
-    "figure": "GenX facility diversification Q2FY26 delivered",
-    "point": "Management successfully completed facility audits and secured the first breakthrough order for the GenX business.",
+    "figure": "Delivered promises 1",
+    "point": "Management successfully completed GenX facility audits and secured its first breakthrough order.",
     "refs": [
      "PRAJIND-4"
     ]
    },
    {
     "figure": "Net cash ₹31 cr",
-    "point": "The company maintains a net cash position, providing a stable balance sheet foundation for future operations.",
+    "point": "The company maintains a positive net cash position of 31 crore rupees in FY26.",
     "refs": [
      "debt"
+    ]
+   },
+   {
+    "figure": "Cash conversion 86%",
+    "point": "Operating cash flow remained adequate at 86 percent of net profit over a 5-year period.",
+    "refs": [
+     "cash_conversion"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Operating margin 8% → 4.9%",
-    "point": "Operating margins have significantly compressed over the last four years, indicating weakening core profitability.",
-    "refs": [
-     "margin"
-    ]
-   },
-   {
-    "figure": "ROCE 23% → 6%",
-    "point": "Capital efficiency has deteriorated sharply, with returns on capital employed falling to 6% in FY26.",
-    "refs": [
-     "returns"
-    ]
-   },
-   {
-    "figure": "Missed promises 3",
-    "point": "Management failed to meet targets for GenX revenue, Mangalore order bookings, and lapsed on performance updates.",
+    "figure": "Missed promises 2",
+    "point": "Management missed targets for Praj GenX revenue and the Mangalore facility order booking of 500 crore rupees.",
     "refs": [
      "PRAJIND-2",
-     "PRAJIND-7",
      "PRAJIND-11"
+    ]
+   },
+   {
+    "figure": "Profit growth -48%",
+    "point": "Profitability declined severely with profit growth falling by 48 percent over the last 12 months.",
+    "refs": [
+     "profit_growth"
+    ]
+   },
+   {
+    "figure": "Operating margin 4.9%",
+    "point": "Operating margin compressed significantly down to 4.9 percent in FY26 compared to 8 percent in FY22.",
+    "refs": [
+     "margin"
     ]
    }
   ]

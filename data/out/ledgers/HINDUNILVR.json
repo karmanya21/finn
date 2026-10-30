@@ -498,7 +498,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Gross margin improved 130 bps sequentially in Q2FY26",
+   "detail": "Met the promise (per management; no figure given)",
    "evidence": {
     "quote": "On a sequential basis, our gross margin has seen a 130 bps improvement as this transitory price versus cost gap has moderated.",
     "call": "Oct 2025",
@@ -1167,31 +1167,31 @@
   "bull": [
    {
     "figure": "Delivered promises 2",
-    "point": "Management successfully delivered on gross margin improvement and market recovery targets.",
+    "point": "Management successfully delivered market recovery and gross margin targets.",
     "refs": [
      "HINDUNILVR-5",
      "HINDUNILVR-7"
     ]
    },
    {
-    "figure": "ROCE 28% in FY26",
-    "point": "Return on capital employed expanded solidly from 25% in FY22.",
+    "figure": "ROCE 28%",
+    "point": "Return on capital employed improved from 25% in FY22 to 28% in FY26.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Cash conversion 104%",
-    "point": "Operating cash flow was exceptionally strong over the 5-year period.",
+    "figure": "Net cash ₹1,770 cr",
+    "point": "The company maintains a strong net cash position.",
     "refs": [
-     "cash_conversion"
+     "debt"
     ]
    }
   ],
   "bear": [
    {
     "figure": "Lapsed promises 4",
-    "point": "Multiple key targets including price growth, operating margin, revenue growth, and volume growth lapsed without updates.",
+    "point": "Price growth, operating margin, revenue growth, and volume growth promises lapsed without updates.",
     "refs": [
      "HINDUNILVR-1",
      "HINDUNILVR-2",
@@ -1200,17 +1200,10 @@
     ]
    },
    {
-    "figure": "Operating margin 25% to 23%",
-    "point": "Operating margins compressed over the period from FY22 to FY26.",
+    "figure": "Operating margin 23%",
+    "point": "Operating margins compressed from 25% in FY22 to 23% in FY26.",
     "refs": [
      "margin"
-    ]
-   },
-   {
-    "figure": "Revenue growth 2%",
-    "point": "Revenue growth slowed down over the 3-year period despite 10% in the last 12 months.",
-    "refs": [
-     "sales_growth"
     ]
    }
   ]

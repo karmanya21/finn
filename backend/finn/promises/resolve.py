@@ -181,6 +181,20 @@ def _band_verdict(v: float, low, high) -> str:
     return "delivered"
 
 
+def _plain(status: str, p: dict) -> str:
+    """A verdict line when management gave no usable figure: say only what's supported."""
+    if p.get("kind") == "milestone":
+        word = {"delivered": "Done", "beat": "Done early", "missed": "Not done", "delayed": "Delayed",
+                "on_track": "On track", "behind": "Behind schedule"}.get(status, status.replace("_", " ").capitalize())
+        return f"{word} (per management)"
+    target = fmt_range(p.get("low"), p.get("high"), p.get("unit"))
+    guide = f"the {target} guide" if target else "the promise"
+    return {
+        "beat": f"Beat {guide}", "delivered": f"Met {guide}", "missed": f"Fell short of {guide}",
+        "on_track": "On track", "behind": f"Behind {guide}", "delayed": "Delayed",
+    }.get(status, status.replace("_", " ").capitalize()) + " (per management; no figure given)"
+
+
 def _value_verdict(v: float, p: dict, lower_is_better: bool, ended: bool) -> str:
     """A number management reported, judged in code against the promised band.
     Percentages get TOL points of slack; amounts get 5% (capex guided ~1,100, spent 1,125 = kept)."""
@@ -356,7 +370,8 @@ def verdict(stmts: list[dict], events: list[dict], fin: Financials, n_calls: int
             s = "on_track"  # a five-year target can't be kept after one year
         if s == "on_track" and ended:
             s = "open"
-        out = {"status": s, "basis": "management", "detail": evidence.get("reported"),
+        with_target = next((x for x in reversed(stmts) if x.get("low") is not None or x.get("high") is not None), p)
+        out = {"status": s, "basis": "management", "detail": evidence.get("reported") or _plain(s, with_target),
                "evidence": {k: evidence.get(k) for k in ("quote", "call", "new_deadline")}}
         if fc and fc.get("pace"):
             out["pace"] = fc["pace"]

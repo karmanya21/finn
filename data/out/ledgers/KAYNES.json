@@ -86,8 +86,8 @@
   }
  ],
  "record": {
-  "kept": 4,
-  "missed": 5,
+  "kept": 3,
+  "missed": 6,
   "resolved": 9,
   "moved": 1,
   "quiet": 5,
@@ -95,11 +95,10 @@
   "by_status": {
    "delivered": 3,
    "gone_quiet": 5,
-   "missed": 5,
+   "missed": 6,
    "behind": 1,
    "on_track": 2,
-   "open": 12,
-   "beat": 1
+   "open": 12
   }
  },
  "threads": [
@@ -179,7 +178,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "FY26 revenue INR3,626.4 crores vs INR4,500 crores guidance",
+   "detail": "Fell short of the ₹4,500 cr guide (per management; no figure given)",
    "evidence": {
     "quote": "I think these are the 2 things that while we have delivered about 33% growth in revenue and 39% growth in the bottom line, we sincerely understand and appreciate that the guidance what we have given, we could not meet.",
     "call": "May 2026",
@@ -880,8 +879,8 @@
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "beat",
-   "detail": "FY26 capex was INR797 crores for OSAT and PCB",
+   "status": "missed",
+   "detail": "Fell short of the ₹400 cr guide (per management; no figure given)",
    "evidence": {
     "quote": "The capex done in FY26 was INR473 crores for OSAT and INR324 crores for PCB.",
     "call": "Aug 2026",
@@ -1205,7 +1204,7 @@
    "moved": false,
    "events": [],
    "status": "on_track",
-   "detail": "Order book at INR8,900 crores with strong additions in Q1",
+   "detail": "On track (per management)",
    "evidence": {
     "quote": "So, very strong order book of more than about INR8,900 crores is in the system, and things are shaping up much faster.",
     "call": "Aug 2026",
@@ -1837,49 +1836,47 @@
  "case": {
   "bull": [
    {
+    "figure": "Operating margin 16%",
+    "point": "Operating margin expanded from 13% in FY22 to 16% in FY26, showing improving profitability.",
+    "refs": [
+     "margin"
+    ]
+   },
+   {
+    "figure": "Net debt ₹114 cr",
+    "point": "Net debt dropped to ₹114 cr in FY26, maintaining a very low leverage of 0.02x equity.",
+    "refs": [
+     "debt"
+    ]
+   },
+   {
     "figure": "FY26 EBITDA margin 15.8%",
-    "point": "Management successfully met their profitability target of at least 15.6% for the fiscal year.",
+    "point": "Management successfully delivered on the FY26 EBITDA margin target of at least 15.6%.",
     "refs": [
      "KAYNES-3"
-    ]
-   },
-   {
-    "figure": "OSAT facility operational",
-    "point": "The company successfully delivered on its Sanand OSAT facility project, which is now operational and shipping commercially.",
-    "refs": [
-     "KAYNES-0",
-     "KAYNES-12"
-    ]
-   },
-   {
-    "figure": "FY27 revenue target raised ₹450–500 cr",
-    "point": "Management demonstrated confidence by increasing their revenue guidance for the PCB and OSAT segments.",
-    "refs": [
-     "KAYNES-31"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "FY26 revenue ₹3,626.4 cr",
-    "point": "The company significantly missed its FY26 revenue target of ₹4,500 crores.",
+    "figure": "ROCE 13%",
+    "point": "Return on capital employed declined significantly from 25% in FY22 down to 13% in FY26.",
     "refs": [
-     "KAYNES-2"
+     "returns"
     ]
    },
    {
-    "figure": "FY26 working capital 122 days",
-    "point": "Operational efficiency lagged as the company missed its working capital target of 85 days by a wide margin.",
-    "refs": [
-     "KAYNES-5",
-     "KAYNES-16"
-    ]
-   },
-   {
-    "figure": "5-year cash conversion -63%",
-    "point": "Historical cash flow generation remains weak relative to net profit, indicating persistent challenges in converting earnings to cash.",
+    "figure": "Operating cash flow -63%",
+    "point": "Over 5 years, operating cash flow was deeply negative relative to net profit, reflecting weak conversion.",
     "refs": [
      "cash_conversion"
+    ]
+   },
+   {
+    "figure": "FY26 working capital days 122 days",
+    "point": "Working capital days badly missed the 85-day target, coming in much higher at around 122 days.",
+    "refs": [
+     "KAYNES-5"
     ]
    }
   ]

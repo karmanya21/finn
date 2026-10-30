@@ -157,8 +157,7 @@
    "quiet": 3,
    "open": 14,
    "by_status": {
-    "behind": 1,
-    "on_track": 2,
+    "on_track": 3,
     "open": 10,
     "gone_quiet": 3,
     "delayed": 1,
@@ -379,8 +378,8 @@
   "latest_call": "Aug 2026",
   "latest_results": "Q1FY27",
   "record": {
-   "kept": 4,
-   "missed": 5,
+   "kept": 3,
+   "missed": 6,
    "resolved": 9,
    "moved": 1,
    "quiet": 5,
@@ -388,11 +387,10 @@
    "by_status": {
     "delivered": 3,
     "gone_quiet": 5,
-    "missed": 5,
+    "missed": 6,
     "behind": 1,
     "on_track": 2,
-    "open": 12,
-    "beat": 1
+    "open": 12
    }
   }
  },

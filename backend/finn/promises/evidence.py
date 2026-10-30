@@ -11,7 +11,7 @@ import re
 
 from finn.llm.client import complete_json
 from finn.promises import prefilter
-from finn.promises.extract import _norm
+from finn.promises.extract import _norm, _numbers, _supported
 
 STOP = set("""the and for with from that this will our are was were has have had into over
 under about next year years quarter quarters half first second fy27 fy26 fy28 company
@@ -118,4 +118,23 @@ def check(company: str, thread: dict, later: list[tuple[str, str]], managers: se
     # delivery, misses and progress cannot.
     if out["status"] != "delayed" and FUTURE.search(q) and not PAST.search(q):
         return {"status": "no_update"}
+    return _figures_from_quote(out, q, p)
+
+
+PERIOD_TOKEN = re.compile(r"\b(?:FY|CY|Q[1-4]|H[12])\s?['’]?\d{2,4}\b|\b(?:19|20)\d{2}\b", re.I)
+
+
+def _figures_from_quote(out: dict, quote: str, promise: dict) -> dict:
+    """The verdict's figures must come from the verdict's own quote (or the promise's target).
+    The model sees several later sentences and can lift a number from the wrong one: L&T's
+    FY26 order inflow got "20% CAGR", which is the FY21-26 five-year rate from another sentence."""
+    allowed = _numbers(PERIOD_TOKEN.sub(" ", quote))
+    targets = [v for v in (promise.get("low"), promise.get("high")) if v is not None]
+    def backed(v):
+        return _supported(v, allowed) or any(abs(v - t) < 1e-9 for t in targets)
+    if out.get("value") is not None and not _supported(out["value"], allowed):
+        out["value"] = None
+    reported = out.get("reported") or ""
+    if any(not backed(n) for n in _numbers(PERIOD_TOKEN.sub(" ", reported))):
+        out["reported"] = None  # resolve.py writes a plain line from the status instead
     return out

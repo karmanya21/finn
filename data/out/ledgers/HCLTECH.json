@@ -292,7 +292,7 @@
    "moved": false,
    "events": [],
    "status": "delivered",
-   "detail": "Marquee deal announced with Fortune 250 semiconductor OEM",
+   "detail": "Done (per management)",
    "evidence": {
     "quote": "While there are several deals that added to this $2.4 billion, I want to talk about a marquee deal that showcases the depth of value we deliver to our clients.",
     "call": "Jul 2026",
@@ -1266,47 +1266,45 @@
  "case": {
   "bull": [
    {
-    "figure": "FY26 revenue growth 4% to 4.5%",
-    "point": "Management successfully raised and delivered on company-level revenue growth targets for the fiscal year.",
+    "figure": "Delivered promises 5",
+    "point": "Management successfully delivered on five key commitments including FY26 company revenue growth and services revenue growth targets.",
     "refs": [
-     "HCLTECH-0"
+     "HCLTECH-0",
+     "HCLTECH-1",
+     "HCLTECH-4",
+     "HCLTECH-5"
     ]
    },
    {
-    "figure": "ROCE 30% in FY26",
-    "point": "Capital efficiency has improved significantly, rising from 25% in FY22 to 30% in FY26.",
+    "figure": "ROCE 30%",
+    "point": "Return on capital employed strengthened to 30% in FY26 compared to 25% in FY22.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Services revenue growth 4.8%",
-    "point": "The company met its raised services revenue growth guidance, demonstrating strong operational execution.",
+    "figure": "Net cash ₹18,210 cr",
+    "point": "The company holds a strong net cash position of ₹18,210 cr in FY26, up significantly from FY22.",
     "refs": [
-     "HCLTECH-5"
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "Operating margin 24% → 21%",
-    "point": "Operating margins have faced consistent compression over the last four fiscal years.",
+    "figure": "Delayed and gone quiet promises 3",
+    "point": "Management experienced delays and went quiet on key operational items like the AI Force v2.0 launch and restructuring.",
+    "refs": [
+     "HCLTECH-6",
+     "HCLTECH-7",
+     "HCLTECH-8"
+    ]
+   },
+   {
+    "figure": "Operating margin 24% to 21%",
+    "point": "Operating margins compressed from 24% in FY22 down to 21% by FY26.",
     "refs": [
      "margin"
-    ]
-   },
-   {
-    "figure": "GA launch of AI Force v2.0 delayed",
-    "point": "The company failed to meet its scheduled general availability launch timeline for its key AI product.",
-    "refs": [
-     "HCLTECH-6"
-    ]
-   },
-   {
-    "figure": "Restructuring exercise gone quiet",
-    "point": "Management stopped providing updates on the status of the restructuring exercise after the target period lapsed.",
-    "refs": [
-     "HCLTECH-7"
     ]
    }
   ]

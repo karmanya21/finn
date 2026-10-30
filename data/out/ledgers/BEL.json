@@ -879,7 +879,7 @@
    "moved": false,
    "events": [],
    "status": "missed",
-   "detail": "Emergency procurement orders not received in Q3FY26",
+   "detail": "Not done (per management)",
    "evidence": {
     "quote": "And QRSAM, we told we were highly optimistic to get it by March, but procedural delays we knew, that is why we told it may go to Q1/Q2, maximum by September we will get and I am still sticking to that.",
     "call": "Jul 2026",
@@ -1964,22 +1964,22 @@
  "case": {
   "bull": [
    {
-    "figure": "Operating margin expanded from 22% (FY22) to 29% (FY26)",
-    "point": "Operating margins showed strong expansion over the four-year period.",
+    "figure": "Operating margin 29% in FY26",
+    "point": "Operating margins expanded nicely from 22% in FY22 to 29% by FY26.",
     "refs": [
      "margin"
     ]
    },
    {
-    "figure": "FY26 EBITDA margin 29.2%",
-    "point": "Management successfully beat their initial EBITDA margin target for FY26.",
+    "figure": "Net cash ₹8,507 cr",
+    "point": "The company holds strong net cash of ₹8,507 crores in FY26.",
     "refs": [
-     "BEL-1"
+     "debt"
     ]
    },
    {
     "figure": "ROCE 36% in FY26",
-    "point": "Return on capital employed improved significantly from 27% in FY22.",
+    "point": "Return on capital employed improved significantly to 36% in FY26.",
     "refs": [
      "returns"
     ]
@@ -1987,24 +1987,17 @@
   ],
   "bear": [
    {
-    "figure": "Cash conversion 59% of net profit",
-    "point": "Operating cash flow conversion over five years remained relatively weak.",
+    "figure": "Cash conversion 59%",
+    "point": "Operating cash flow was a weak 59% of net profit over five years.",
     "refs": [
      "cash_conversion"
     ]
    },
    {
     "figure": "Q3FY26 emergency procurement orders missed",
-    "point": "Management failed to secure expected emergency procurement orders in the third quarter.",
+    "point": "Management explicitly stated that the Q3FY26 emergency procurement orders were not done.",
     "refs": [
      "BEL-16"
-    ]
-   },
-   {
-    "figure": "FY26 revenue growth gone quiet",
-    "point": "Targets for FY26 revenue growth went quiet with no updates provided after the period ended.",
-    "refs": [
-     "BEL-0"
     ]
    }
   ]
