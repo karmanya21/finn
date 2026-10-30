@@ -617,6 +617,147 @@
    "routine": true
   },
   {
+   "id": "TRENT-29b51816-e553-4185-9a5c-72064ea8f7af",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-29T16:39:36",
+   "type": "results",
+   "label": "Results",
+   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "headline": "Investors'' Presentation on Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half-year ended 30th September 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5634f899-a008-45ab-b930-2b74cf08e566.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [],
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 5873.0,
+      "qoq": 2.050390964378801,
+      "yoy": 21.897052718970535,
+      "prev_yoy": 17.857874257628502
+     },
+     {
+      "label": "EBITDA",
+      "value": 1057.0,
+      "qoq": -5.540661304736371,
+      "yoy": 29.5343137254902,
+      "prev_yoy": 31.957547169811317
+     },
+     {
+      "label": "PBT",
+      "value": 619.0,
+      "qoq": -10.54913294797688,
+      "yoy": 29.769392033542985,
+      "prev_yoy": 22.477876106194692
+     },
+     {
+      "label": "PAT",
+      "value": 468.0,
+      "qoq": -9.652509652509655,
+      "yoy": 25.469168900804284,
+      "prev_yoy": 21.882352941176464
+     }
+    ],
+    "notes": [],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 17.99761620977354,
+     "year_ago": 16.936488169364882,
+     "prev": 19.44396177237185
+    },
+    "unit": "₹ cr",
+    "source": "screener.in, consolidated where published"
+   },
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/386aab9b-d99c-44af-ba52-1bd95d49a60c.pdf"
+    },
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b962e91a-b409-4f5f-a22f-3275c992153a.pdf"
+    },
+    {
+     "label": "Press release",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/984d68e3-738c-43cf-afd1-756b33f60610.pdf"
+    }
+   ]
+  },
+  {
+   "id": "TRENT-ffa8ae18-f840-4cf4-965a-616cd00c62ee",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-29T16:36:32",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Retirement",
+   "headline": "Retirement of Mr. Noel N Tata as the Chairman",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6d04e12f-221f-4d62-925d-0792202a19e7.pdf",
+   "summary": "Trent announced the retirement of Chairman Noel N. Tata, appointment of Bahram Vakil as Chairman, and additions of Rajiv Dube and Kalpana Merchant.",
+   "people": [
+    {
+     "name": "Noel N. Tata",
+     "role": "Chairman and Director",
+     "change": "retired",
+     "effective": "2026-11-11",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Noel N. Tata",
+     "role": "Chairman Emeritus",
+     "change": "appointed",
+     "effective": "2026-11-12",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Bahram Vakil",
+     "role": "Chairman",
+     "change": "appointed",
+     "effective": "2026-11-12",
+     "profile": null,
+     "promises": []
+    },
+    {
+     "name": "Rajiv Dube",
+     "role": "Additional Director (Non-Executive, Non-Independent)",
+     "change": "appointed",
+     "effective": "2026-10-30",
+     "profile": "An Indian industry veteran with over 40 years of multi-sector experience at Tata and Aditya Birla, engineer and post-graduate in Business Management.",
+     "promises": []
+    },
+    {
+     "name": "Kalpana Merchant",
+     "role": "Independent Director",
+     "change": "appointed",
+     "effective": "2026-10-30",
+     "profile": "Over 45 years of experience in the legal profession, partner at Kanga & Co., AZB & Partners and Jerome Merchant + Partners, holds LL.B., BA in Psychology, and qualified solicitor.",
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": true,
+   "tone": null,
+   "importance": 90,
+   "routine": false,
+   "also": [
+    {
+     "label": "Also filed",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b891b5ce-4d60-44f6-a01f-1bd507d5de0f.pdf"
+    }
+   ]
+  },
+  {
    "id": "PRAJIND-febabffe-0d53-4aac-805a-c11eb61ededd",
    "symbol": "PRAJIND",
    "name": "Praj Industries",
@@ -1709,6 +1850,25 @@
    "also": []
   },
   {
+   "id": "TRENT-d3016b7e-4efb-458a-95ee-01a85d813dc5",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-23T19:49:14",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
+   "headline": "Nahar Retail Trading Services Private Limited, a wholly owned subsidiary of the Company, has entered into a binding term sheet dated 22nd October 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf9c8eec-654a-4016-acf5-b7160985dc78.pdf",
+   "summary": "Trent's subsidiary Nahar Retail agreed to divest its entire stake in Netria Property Holdings to TreBits Investment Trust.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false
+  },
+  {
    "id": "MAXHEALTH-70d30b3d-0990-417f-ad9d-2d14245d3aea",
    "symbol": "MAXHEALTH",
    "name": "Max Healthcare",
@@ -1775,6 +1935,25 @@
    "subject": "Board Meeting Intimation for Inter-Alia, Consideration And Approval Of Un-Audited Financial Results (Standalone & Consolidated) Of The Company For The Quarter And Half Year Ended 30Th September, 2026",
    "headline": "Dixon Technologies (India) Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 30/10/2026 ,inter alia, to consider and approve the Un-Audited Financial ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4ac4537e-4a64-4682-a4c5-5255ba8895cf.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-cc5f4786-34b8-4078-bd57-89b3ad960f64",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-23T16:35:03",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Reminder Letter For Transfer Of Equity Shares To The Investor Education And Protection Fund ('IEPF')",
+   "headline": "Reminder letter for transfer of equity shares to the Investor Education and Protection Fund (''IEPF'')",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aeaf0a5d-3d57-41ef-87d1-a10268a57932.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -2748,6 +2927,25 @@
    ]
   },
   {
+   "id": "TRENT-4831d1f0-2bfb-48ac-84dc-0651e3e483ce",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-19T11:07:58",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "headline": "Notice of Special Window for re-lodgement of transfer requests of physical shares",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/096b4491-68dc-4163-8b20-3621448309db.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
    "id": "LT-8a57b0a9-8570-41ad-90a3-970cbc391c7b",
    "symbol": "LT",
    "name": "Larsen & Toubro",
@@ -2764,6 +2962,34 @@
    "senior": false,
    "tone": null,
    "importance": 40,
+   "routine": false
+  },
+  {
+   "id": "TRENT-39411793-001f-4adf-82c6-2fa5985df914",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-18T18:44:51",
+   "type": "management_change",
+   "label": "Management",
+   "subject": "Announcement under Regulation 30 (LODR)-Resignation of Director",
+   "headline": "Intimation of resignation of Non-Executive Non-Independent Director of the Company",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5f2619df-b01f-4905-978f-00de8477b2f8.pdf",
+   "summary": "Mr. Harish Bhat resigned as Non-Executive Non-Independent Director of Trent with effect from 17th October 2026.",
+   "people": [
+    {
+     "name": "Harish Bhat",
+     "role": "Non-Executive Non-Independent Director",
+     "change": "resigned",
+     "effective": "17th October 2026",
+     "profile": null,
+     "promises": []
+    }
+   ],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 60,
    "routine": false
   },
   {
@@ -4310,6 +4536,44 @@
    "routine": true
   },
   {
+   "id": "TRENT-a1a041c5-d376-4fe5-bcd1-741372502738",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-06T12:10:54",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Board Meeting Intimation for Notice Of Board Meeting",
+   "headline": "Trent Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve Notice of Board Meeting",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/db15dcb8-dfc0-478f-a8cc-e528917d5414.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-c5c9570c-5471-4280-a1d5-2be2cf45579d",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-05T18:43:18",
+   "type": "press_release",
+   "label": "Update",
+   "subject": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "headline": "Update for Q2FY27 and H1FY27",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d875718e-467a-4f6c-bed2-acaca2693aef.pdf",
+   "summary": "Trent reported a standalone revenue of Rs. 5,788 crores for Q2 FY27, marking a 23% YoY growth.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 40,
+   "routine": false
+  },
+  {
    "id": "BAJFINANCE-8053132b-873b-4c42-a225-b6332f0f8dd6",
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
@@ -4319,6 +4583,25 @@
    "subject": "Board Meeting Intimation for Considering And Approving Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026",
    "headline": "Bajaj Finance Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 19/10/2026 ,inter alia, to consider and approve unaudited standalone and consolidated ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7befbd0b-8d13-47e1-bf9f-3f91b13538c2.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "TRENT-389b3e05-bd1b-4db8-91ca-af20ae7290b1",
+   "symbol": "TRENT",
+   "name": "Trent",
+   "at": "2026-10-05T14:53:39",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "headline": "Certificate under Regulation 74(5) of the Securities Exchange Board of India (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31c0197c-75f9-4c97-b92e-4554175326b7.pdf",
    "summary": null,
    "people": [],
    "promises": [],

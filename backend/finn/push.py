@@ -183,8 +183,12 @@ def _doc_kind(subject: str) -> str:
             else "Board outcome" if "outcome" in s else "Auditor's report" if "auditor" in s else "Results filing")
 
 
-def build_digest(ledgers: dict[str, dict], days: int = 30) -> dict:
+def build_digest(ledgers: dict[str, dict], days: int = 30, previous: dict | None = None) -> dict:
+    """A company that fails (source down, model quota) keeps its filings from the last build
+    that are still inside the window, rather than vanishing: Trent lost all 9 when the
+    Gemini allowance ran out mid-run."""
     items, failed = [], []
+    since = (datetime.now() - timedelta(days=days)).isoformat(timespec="seconds")
     for c in PORTFOLIO:
         try:
             got = digest_company(c, ledgers.get(c.symbol), days)
@@ -192,7 +196,10 @@ def build_digest(ledgers: dict[str, dict], days: int = 30) -> dict:
             print(f"  filings {c.symbol:<11} {len(got):>3}  material {sum(not i['routine'] for i in got)}", flush=True)
         except Exception as e:
             failed.append(c.symbol)
-            print(f"  filings {c.symbol:<11} FAILED {type(e).__name__}: {str(e)[:100]}", flush=True)
+            kept = [i for i in (previous or {}).get("items", []) if i["symbol"] == c.symbol and i["at"] >= since]
+            items += kept
+            print(f"  filings {c.symbol:<11} FAILED {type(e).__name__}: {str(e)[:100]}; kept {len(kept)} from last build",
+                  flush=True)
     items.sort(key=lambda i: i["at"], reverse=True)
     return {"built": datetime.now().isoformat(timespec="seconds"), "days": days, "items": items,
             "failed": failed}

@@ -17,6 +17,7 @@ from finn.promises.extract import _normalize
 from finn.promises.resolve import _plain, _value_verdict, changes, fmt_range, verdict
 from finn.promises import link
 from finn.promises.resolve import _comparable
+from finn import push
 from finn.push import _fold_repeats, routine_debt
 from finn.results_pdf import _agrees_with_history, is_printed, printed_numbers
 from finn.snapshot import _checked, _labelled
@@ -493,6 +494,24 @@ class FilingsRound2(unittest.TestCase):
     def test_non_pharma_regulatory_tone(self):  # Infosys PERM suspension
         self.assertEqual(regulatory_tone("the suspension of its U.S. Permanent Labor Certification applications"), "negative")
         self.assertEqual(regulatory_tone("show-cause notice received from the tax authority"), "negative")
+
+    def test_failed_company_keeps_last_filings(self):  # Trent lost all 9 when the model quota ran out
+        from datetime import datetime, timedelta
+        from unittest import mock
+        recent = (datetime.now() - timedelta(days=3)).isoformat(timespec="seconds")
+        expired = (datetime.now() - timedelta(days=40)).isoformat(timespec="seconds")
+        first = push.PORTFOLIO[0].symbol
+        previous = {"items": [{"symbol": first, "at": recent, "routine": False},
+                              {"symbol": first, "at": expired, "routine": False}]}
+
+        def fetch(c, ledger, days):
+            if c.symbol == first:
+                raise RuntimeError("no free model available")
+            return []
+        with mock.patch.object(push, "digest_company", fetch), mock.patch("builtins.print"):
+            d = push.build_digest({}, previous=previous)
+        self.assertEqual(d["failed"], [first])
+        self.assertEqual([i["at"] for i in d["items"]], [recent])  # still in the window; the 40-day-old one ages out
 
 
 class FiscalCalendar(unittest.TestCase):

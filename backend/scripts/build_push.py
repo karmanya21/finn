@@ -27,7 +27,8 @@ def main(what: list[str]) -> None:
             p = WEB_DATA / f"{c.symbol}.json"
             if p.exists():
                 ledgers[c.symbol] = json.loads(p.read_text())
-        digest = push.build_digest(ledgers)
+        old = WEB_DATA / "filings.json"
+        digest = push.build_digest(ledgers, previous=json.loads(old.read_text()) if old.exists() else None)
         if len(digest["failed"]) > len(PORTFOLIO) // 2:
             # The source is down or blocking us: an empty digest would read as "nothing
             # happened". Keep the last good one and say so loudly (an Actions annotation).

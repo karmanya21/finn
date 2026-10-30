@@ -35,6 +35,20 @@
   "message": "Solar rooftop business growth: statements for ['FY26', 'FY27']"
  },
  {
+  "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "TRENT",
+  "ref": null,
+  "message": "this run's fetch failed; showing 9 filings from the last good build"
+ },
+ {
+  "level": "info",
+  "check": "results-without-figures",
+  "symbol": "AARTIIND",
+  "ref": "AARTIIND-1d92760b-605c-4dbc-9930-602c74351f1c",
+  "message": "Financial Results For The Quarter And Half Year Ended Septem (0d old)"
+ },
+ {
   "level": "info",
   "check": "results-behind-peers",
   "symbol": "DIXON",

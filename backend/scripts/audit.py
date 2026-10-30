@@ -243,6 +243,9 @@ def check_filing_results_vs_screener(sym: str, f: dict, fin, r: Report) -> None:
 
 def check_filings(digest: dict, ledgers: dict, r: Report) -> None:
     built = datetime.fromisoformat(digest["built"][:19])
+    for sym in digest.get("failed", []):
+        n = sum(f["symbol"] == sym for f in digest["items"])
+        r.warn("filings-fetch-failed", sym, f"this run's fetch failed; showing {n} filings from the last good build")
     material = [f for f in digest["items"] if not f["routine"]]
     for f in digest["items"]:
         sym, text = f["symbol"], f"{f['subject']} {f['headline']} {f.get('summary') or ''}"
@@ -398,7 +401,8 @@ def main(argv: list[str]) -> int:
                         c = by_symbol(f["symbol"])
                         fins[f["symbol"]] = financials.load(f["symbol"], c.slug if c else None)
                     check_filing_results_vs_screener(f["symbol"], f, fins[f["symbol"]], r)
-        check_filings({**digest, "items": [f for f in digest["items"] if not wanted or f["symbol"] in wanted]}, ledgers, r)
+        check_filings({**digest, "items": [f for f in digest["items"] if not wanted or f["symbol"] in wanted],
+                       "failed": [s for s in digest.get("failed", []) if not wanted or s in wanted]}, ledgers, r)
     if (WEB_DATA / "prices.json").exists() and not wanted:
         check_prices(json.loads((WEB_DATA / "prices.json").read_text()), r)
 
