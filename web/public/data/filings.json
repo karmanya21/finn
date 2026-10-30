@@ -1,7 +1,40 @@
 {
- "built": "2026-10-30T19:10:05",
+ "built": "2026-10-30T19:25:41",
  "days": 30,
  "items": [
+  {
+   "id": "AARTIIND-1d92760b-605c-4dbc-9930-602c74351f1c",
+   "symbol": "AARTIIND",
+   "name": "Aarti Industries",
+   "at": "2026-10-30T19:18:55",
+   "type": "results",
+   "label": "Results",
+   "subject": "Financial Results For The Quarter And Half Year Ended September 30, 2026",
+   "headline": "Please find attached un-audited Financial Results for quarter and half year ended September 30, 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/503a7a67-29b8-4cd9-a051-aba831aa8adc.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [
+    "AARTIIND-1",
+    "AARTIIND-9"
+   ],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/22600a61-c7c8-44c2-b973-18948ae9a662.pdf"
+    },
+    {
+     "label": "Press release",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7fcc77d2-6c0b-4288-86a7-2cfdf0e54fe0.pdf"
+    }
+   ]
+  },
   {
    "id": "INFY-ed229dd3-9d22-4c2c-8214-d65575b6be4d",
    "symbol": "INFY",
@@ -12,7 +45,7 @@
    "subject": "Infosys Announces Expansion Of Pocharam Development Center In Hyderabad",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/de1d0c27-5ad6-474d-b3b4-44084de360c0.pdf",
-   "summary": "Infosys expanded its Pocharam Development Center in Hyderabad by inaugurating a new 1.1 million sq. ft. facility adding 10,000 seats.",
+   "summary": "Infosys expanded its Pocharam Development Center in Hyderabad with a new 1.1 million sq. ft. facility adding 10,000 seats.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -107,7 +140,7 @@
    "subject": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
    "headline": "Please find enclosed Earnings Call Transcript - Q2FY27",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b3ecbdbf-929d-4e28-9598-94a0069417b4.pdf",
-   "summary": "Cipla reported Q2 FY27 revenue of INR7,404 crores with a steady sequential growth of 4% Q-o-Q.",
+   "summary": "Cipla reported Q2 FY27 revenue of INR 7,404 crores, reflecting a 4% sequential growth driven by strong performance across key businesses.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -584,147 +617,6 @@
    "routine": true
   },
   {
-   "id": "TRENT-29b51816-e553-4185-9a5c-72064ea8f7af",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-29T16:39:36",
-   "type": "results",
-   "label": "Results",
-   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "headline": "Investors'' Presentation on Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half-year ended 30th September 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5634f899-a008-45ab-b930-2b74cf08e566.pdf",
-   "summary": "Q2FY27 results",
-   "people": [],
-   "promises": [],
-   "numbers": {
-    "quarter": "Q2FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 5873.0,
-      "qoq": 2.050390964378801,
-      "yoy": 21.897052718970535,
-      "prev_yoy": 17.857874257628502
-     },
-     {
-      "label": "EBITDA",
-      "value": 1057.0,
-      "qoq": -5.540661304736371,
-      "yoy": 29.5343137254902,
-      "prev_yoy": 31.957547169811317
-     },
-     {
-      "label": "PBT",
-      "value": 619.0,
-      "qoq": -10.54913294797688,
-      "yoy": 29.769392033542985,
-      "prev_yoy": 22.477876106194692
-     },
-     {
-      "label": "PAT",
-      "value": 468.0,
-      "qoq": -9.652509652509655,
-      "yoy": 25.469168900804284,
-      "prev_yoy": 21.882352941176464
-     }
-    ],
-    "notes": [],
-    "margin": {
-     "label": "EBITDA margin",
-     "now": 17.99761620977354,
-     "year_ago": 16.936488169364882,
-     "prev": 19.44396177237185
-    },
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
-   "senior": false,
-   "tone": null,
-   "quarter": "Q2FY27",
-   "importance": 95,
-   "routine": false,
-   "also": [
-    {
-     "label": "Board outcome",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/386aab9b-d99c-44af-ba52-1bd95d49a60c.pdf"
-    },
-    {
-     "label": "Board outcome",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b962e91a-b409-4f5f-a22f-3275c992153a.pdf"
-    },
-    {
-     "label": "Press release",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/984d68e3-738c-43cf-afd1-756b33f60610.pdf"
-    }
-   ]
-  },
-  {
-   "id": "TRENT-ffa8ae18-f840-4cf4-965a-616cd00c62ee",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-29T16:36:32",
-   "type": "management_change",
-   "label": "Management",
-   "subject": "Announcement under Regulation 30 (LODR)-Retirement",
-   "headline": "Retirement of Mr. Noel N Tata as the Chairman",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6d04e12f-221f-4d62-925d-0792202a19e7.pdf",
-   "summary": "Trent announced the retirement of Chairman Noel N. Tata, appointment of Bahram Vakil as Chairman, and additions of Rajiv Dube and Kalpana Merchant.",
-   "people": [
-    {
-     "name": "Noel N. Tata",
-     "role": "Chairman and Director",
-     "change": "retired",
-     "effective": "2026-11-11",
-     "profile": null,
-     "promises": []
-    },
-    {
-     "name": "Noel N. Tata",
-     "role": "Chairman Emeritus",
-     "change": "appointed",
-     "effective": "2026-11-12",
-     "profile": null,
-     "promises": []
-    },
-    {
-     "name": "Bahram Vakil",
-     "role": "Chairman",
-     "change": "appointed",
-     "effective": "2026-11-12",
-     "profile": null,
-     "promises": []
-    },
-    {
-     "name": "Rajiv Dube",
-     "role": "Additional Director (Non-Executive, Non-Independent)",
-     "change": "appointed",
-     "effective": "2026-10-30",
-     "profile": "An Indian industry veteran with over 40 years of multi-sector experience at Tata and Aditya Birla, engineer and post-graduate in Business Management.",
-     "promises": []
-    },
-    {
-     "name": "Kalpana Merchant",
-     "role": "Independent Director",
-     "change": "appointed",
-     "effective": "2026-10-30",
-     "profile": "Over 45 years of experience in the legal profession, partner at Kanga & Co., AZB & Partners and Jerome Merchant + Partners, holds LL.B., BA in Psychology, and qualified solicitor.",
-     "promises": []
-    }
-   ],
-   "promises": [],
-   "numbers": null,
-   "senior": true,
-   "tone": null,
-   "importance": 90,
-   "routine": false,
-   "also": [
-    {
-     "label": "Also filed",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b891b5ce-4d60-44f6-a01f-1bd507d5de0f.pdf"
-    }
-   ]
-  },
-  {
    "id": "PRAJIND-febabffe-0d53-4aac-805a-c11eb61ededd",
    "symbol": "PRAJIND",
    "name": "Praj Industries",
@@ -734,7 +626,7 @@
    "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
    "headline": "Intimation under Regulation 30 of SEBI LODR regarding change in Directors.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4153e7dd-10a1-41a0-9ada-a6bfb6163653.pdf",
-   "summary": "Dr. Shridhar Shukla resigned as Independent Director and Mr. Vijay Ratnaparkhe was appointed as Independent Director.",
+   "summary": "Dr. Shridhar Shukla resigned as Independent Director, and Mr. Vijay Ratnaparkhe was appointed as Independent Director for five years.",
    "people": [
     {
      "name": "Dr. Shridhar Shukla",
@@ -749,7 +641,7 @@
      "role": "Independent Director",
      "change": "appointed",
      "effective": "2026-10-29",
-     "profile": "President of Bosch in Southeast Asia and OCEANIA and MD of Bosch in Singapore till Dec 2025; former CIO and president of Global Information Systems at Robert Bosch GmbH; holds M.Tech from IIT Bombay and Chemical Engineering degree from Mumbai University.",
+     "profile": "President of Bosch Southeast Asia and Oceania and MD of Bosch Singapore; previously CIO and president of Global IS&S at Robert Bosch GmbH. Holds M.Tech from IIT Bombay and B.E. in Chemical Engineering from Mumbai University.",
      "promises": []
     }
    ],
@@ -879,7 +771,7 @@
    "subject": "Winners Of Qorus-Infosys Finacle Banking Innovation Awards 2026 Announced",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/35b12a6d-e165-42d3-a0d1-cbe42fe2a99f.pdf",
-   "summary": "Infosys and Qorus announced winners of the 13th Qorus-Infosys Finacle Banking Innovation Awards, recognizing 37 financial institutions.",
+   "summary": "Infosys Finacle and Qorus announced 37 winners across ten categories for the 13th Banking Innovation Awards 2026.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -936,7 +828,7 @@
    "subject": "Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7982fc61-7765-4981-ab3d-6aec36ba2137.pdf",
-   "summary": "Infosys reported Q2 revenue growth of 1.5% YoY in constant currency, with AI revenue reaching 10.5% and large deals at $5.2 billion.",
+   "summary": "Infosys reported Q2 constant currency revenue growth of 1.5% YoY, large deals of $5.2 billion, and revised its annual revenue guidance to 1%-2%.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -955,7 +847,7 @@
    "subject": "Canada'S UNI Financial Cooperation Advances Branch Modernization With Infosys Finacle Universal Banker",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e740e1c4-75bc-4392-808c-a3323d612194.pdf",
-   "summary": "Canada's UNI Financial Cooperation deployed Infosys Finacle Universal Banker across its branch network to modernize operations and enhance member experiences.",
+   "summary": "Infosys Finacle announced that Canada's UNI Financial Cooperation has deployed Finacle Universal Banker across all its branches.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -1331,7 +1223,7 @@
    "subject": "Infosys Successfully Delivers Syngenta'S Global SAP S/4HANA Transformation For Crop Protection Business",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/00c170b0-d771-4ac7-bda2-8424c8729de7.pdf",
-   "summary": "Infosys successfully delivered Syngenta's global SAP S/4HANA transformation for its Crop Protection business across 80 countries.",
+   "summary": "Infosys successfully delivered Syngenta's global SAP S/4HANA transformation for its crop protection business, supporting over 10,000 employees across 80 countries.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -1586,7 +1478,7 @@
    "subject": "Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
    "headline": "L&T Wins Orders (Major*) for Dhaka Metro",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/115618e0-f718-4b8b-81e1-642618cbe608.pdf",
-   "summary": "Larsen & Toubro secured major Design & Build orders for Dhaka Metro Line 1 in Bangladesh.",
+   "summary": "Larsen & Toubro secured major orders for Dhaka Metro Line 1 in Bangladesh.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -1817,25 +1709,6 @@
    "also": []
   },
   {
-   "id": "TRENT-d3016b7e-4efb-458a-95ee-01a85d813dc5",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-23T19:49:14",
-   "type": "M&A",
-   "label": "M&A",
-   "subject": "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
-   "headline": "Nahar Retail Trading Services Private Limited, a wholly owned subsidiary of the Company, has entered into a binding term sheet dated 22nd October 2026.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf9c8eec-654a-4016-acf5-b7160985dc78.pdf",
-   "summary": "Trent's subsidiary Nahar Retail agreed to divest its entire stake in Netria Property Holdings to TreBits Investment Trust.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 90,
-   "routine": false
-  },
-  {
    "id": "MAXHEALTH-70d30b3d-0990-417f-ad9d-2d14245d3aea",
    "symbol": "MAXHEALTH",
    "name": "Max Healthcare",
@@ -1912,25 +1785,6 @@
    "routine": true
   },
   {
-   "id": "TRENT-cc5f4786-34b8-4078-bd57-89b3ad960f64",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-23T16:35:03",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Reminder Letter For Transfer Of Equity Shares To The Investor Education And Protection Fund ('IEPF')",
-   "headline": "Reminder letter for transfer of equity shares to the Investor Education and Protection Fund (''IEPF'')",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aeaf0a5d-3d57-41ef-87d1-a10268a57932.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
    "id": "INFY-af95ecc7-ad1a-42ce-a6ef-7c5a46f327e3",
    "symbol": "INFY",
    "name": "Infosys",
@@ -1940,7 +1794,7 @@
    "subject": "Corporate Action-Board approves Dividend",
    "headline": "Declared an interim dividend of Rs. 26/- per equity share, fixed November 3, 2026 as a record date and November 11, 2026 as a payout date",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0f7c4fa3-6c9a-497a-921a-e14c20919f86.pdf",
-   "summary": "Infosys approved financial results for the quarter and half year ended September 30, 2026, and declared an interim dividend of ₹26 per share.",
+   "summary": "Infosys approved financial results for the quarter and half year ended September 30, 2026, and declared an interim dividend of Rs 26 per share.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -2422,7 +2276,7 @@
    "subject": "Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
    "headline": "L&T Wins Orders (Large*) in New Delhi and Andhra Pradesh",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/42761949-c90f-4c0c-8fad-6d79416f15d2.pdf",
-   "summary": "L&T secured large orders for building Common Central Secretariat buildings in New Delhi and office towers in Andhra Pradesh.",
+   "summary": "Larsen & Toubro secured large orders in New Delhi and Andhra Pradesh for construction projects.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -2713,66 +2567,19 @@
    "symbol": "INFY",
    "name": "Infosys",
    "at": "2026-10-19T15:41:22",
-   "type": "results",
-   "label": "Results",
+   "type": "investor_meetings",
+   "label": "Investor meet",
    "subject": "Infosys To Announce Second Quarter Results On October 23, 2026",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4a39bee0-4f0d-4b6e-9383-284a0ca26e0f.pdf",
-   "summary": "Q2FY27 results",
+   "summary": null,
    "people": [],
-   "promises": [
-    "INFY-1",
-    "INFY-11",
-    "INFY-14"
-   ],
-   "numbers": {
-    "quarter": "Q2FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 49244.0,
-      "qoq": 2.1426645371388275,
-      "yoy": 10.685547314003152,
-      "prev_yoy": 14.030606211121356
-     },
-     {
-      "label": "EBITDA",
-      "value": 11689.0,
-      "qoq": 2.45420282233324,
-      "yoy": 10.953962980541053,
-      "prev_yoy": 14.744041033893197
-     },
-     {
-      "label": "PBT",
-      "value": 11063.0,
-      "qoq": 0.3173739571998624,
-      "yoy": 8.15328966663409,
-      "prev_yoy": 13.223819301848039
-     },
-     {
-      "label": "PAT",
-      "value": 7838.0,
-      "qoq": 0.8102893890675311,
-      "yoy": 6.2779661016949095,
-      "prev_yoy": 12.290583477758531
-     }
-    ],
-    "notes": [],
-    "margin": {
-     "label": "EBITDA margin",
-     "now": 23.736901957598896,
-     "year_ago": 23.679478534502135,
-     "prev": 23.664723818215762
-    },
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
+   "promises": [],
+   "numbers": null,
    "senior": false,
    "tone": null,
-   "quarter": "Q2FY27",
-   "importance": 95,
-   "routine": false,
-   "also": []
+   "importance": 15,
+   "routine": true
   },
   {
    "id": "INFY-af966210-08cc-49da-b19e-b90e2e4b58f9",
@@ -2784,7 +2591,7 @@
    "subject": "Infosys And Truist Strengthen Strategic Collaboration To Build A Global Capability Center In India",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0fa9a84b-8686-4831-8cee-de8486f1c6c1.pdf",
-   "summary": "Infosys expanded its collaboration with Truist to support the build-out of Truist's Global Capability Center in India.",
+   "summary": "Infosys and Truist expanded their collaboration to build an AI-first Global Capability Center in Hyderabad, onboarding over 1,000 colleagues.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -2941,25 +2748,6 @@
    ]
   },
   {
-   "id": "TRENT-4831d1f0-2bfb-48ac-84dc-0651e3e483ce",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-19T11:07:58",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "headline": "Notice of Special Window for re-lodgement of transfer requests of physical shares",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/096b4491-68dc-4163-8b20-3621448309db.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
    "id": "LT-8a57b0a9-8570-41ad-90a3-970cbc391c7b",
    "symbol": "LT",
    "name": "Larsen & Toubro",
@@ -2969,41 +2757,13 @@
    "subject": "Announcement under Regulation 30 (LODR)-Award_of_Order_Receipt_of_Order",
    "headline": "L&T Commences Initial Activities for New Tashkent International Airport (Ultra-mega*) Project",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3f057a04-479c-4785-9250-f18c7d1ad88a.pdf",
-   "summary": "Larsen & Toubro commenced initial activities for the Ultra-mega New Tashkent International Airport project in Uzbekistan.",
+   "summary": "Larsen & Toubro's PAH business vertical commenced initial activities for the ultra-mega New Tashkent International Airport project in Uzbekistan.",
    "people": [],
    "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
    "importance": 40,
-   "routine": false
-  },
-  {
-   "id": "TRENT-39411793-001f-4adf-82c6-2fa5985df914",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-18T18:44:51",
-   "type": "management_change",
-   "label": "Management",
-   "subject": "Announcement under Regulation 30 (LODR)-Resignation of Director",
-   "headline": "Intimation of resignation of Non-Executive Non-Independent Director of the Company",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5f2619df-b01f-4905-978f-00de8477b2f8.pdf",
-   "summary": "Mr. Harish Bhat resigned as Non-Executive Non-Independent Director of Trent with effect from 17th October 2026.",
-   "people": [
-    {
-     "name": "Harish Bhat",
-     "role": "Non-Executive Non-Independent Director",
-     "change": "resigned",
-     "effective": "17th October 2026",
-     "profile": null,
-     "promises": []
-    }
-   ],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 60,
    "routine": false
   },
   {
@@ -3299,7 +3059,7 @@
    "subject": "Receipt Of Certified True Copy Of The Order Of The Hon'Ble National Company Law Tribunal, Mumbai Bench In The Matter Of The Scheme Of Amalgamation Of Rujuvalika Investments Limited And Tata Steel Limited And Their Respective Shareholder",
    "headline": "Receipt of certified true copy of the Order of Hon''ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited into and ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ed58c27c-5a50-4923-b54c-652a6e715f3c.pdf",
-   "summary": "Tata Steel received the NCLT Mumbai Bench order approving the amalgamation of its wholly owned subsidiary Rujuvalika Investments Limited.",
+   "summary": "Tata Steel received the NCLT Mumbai bench order copy approving the amalgamation of its wholly owned subsidiary Rujuvalika Investments Limited.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -3579,7 +3339,7 @@
    "subject": "Agreement With A Global Speciality Chemical Company.",
    "headline": "Please find attached disclosure with respect to Agreement with a Global Speciality Chemical Company.",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/92eec871-4124-4507-b744-d3914eb2b01a.pdf",
-   "summary": "Aarti Industries entered into a 10+ year manufacturing and supply agreement worth Rs. 1500 crores with a global speciality chemical company.",
+   "summary": "Aarti Industries entered into a 10+ year manufacturing and supply agreement with a global specialty chemical company, with a revenue potential of about Rs. 1500 crores.",
    "people": [],
    "promises": [
     "AARTIIND-6",
@@ -3799,7 +3559,7 @@
    "subject": "Company Statement On The U.S. Permanent Labor Certification Program",
    "headline": "Company statement on the U.S Permanent Labor Certification Program",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c46593f-8874-4274-a9e6-2f350d7d7da8.pdf",
-   "summary": "Infosys stated that the suspension of its U.S. Permanent Labor Certification applications will not materially impact the organization.",
+   "summary": "Infosys stated that the US Department of Labor suspended its PERM program applications without material impact on the organization.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -4219,14 +3979,14 @@
    "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
    "headline": "Changes in Senior Management",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1ddedabb-dcb8-4f59-864f-bcbdcd86f98e.pdf",
-   "summary": "Larsen & Toubro promoted four senior officials to Senior Vice President within the senior management personnel category effective July 1, 2026.",
+   "summary": "Larsen & Toubro promoted four senior officials to the position of Senior Vice President, effective July 1, 2026.",
    "people": [
     {
      "name": "Dr. C Jayakumar",
      "role": "Senior Vice President & Head - Corporate Human Resources",
      "change": "appointed",
      "effective": "2026-07-01",
-     "profile": "A distinguished HR leader with over 38 years of experience in strategic HRM and organizational transformation, holding a doctorate in leadership and serving as National President of the National HRD Network.",
+     "profile": "Distinguished HR leader with over 38 years of experience in strategic HRM and organizational transformation, currently serving as National President of the National HRD Network.",
      "promises": []
     },
     {
@@ -4234,7 +3994,7 @@
      "role": "Senior Vice President & IC Head - CarbonLite Solutions IC & Chief Executive – LMB",
      "change": "appointed",
      "effective": "2026-07-01",
-     "profile": "An electrical engineering graduate from Punjab Engineering College with over four decades of power sector experience spanning thermal power design, EPC execution, and operations, having led Nabha Power Ltd.",
+     "profile": "Electrical Engineering graduate with over four decades of experience in the power sector, including EPC execution, operations, and commercial management.",
      "promises": []
     },
     {
@@ -4242,7 +4002,7 @@
      "role": "Senior Vice President & IC Head - Transportation Infrastructure IC",
      "change": "appointed",
      "effective": "2026-07-01",
-     "profile": "An electrical engineer from NIT Durgapur and London Business School alumnus with over three decades at L&T, heading the Transportation Infrastructure Division spanning roads, bridges, and railways.",
+     "profile": "Electrical Engineer from NIT Durgapur with over three decades at L&T, currently heading the Transportation Infrastructure Division.",
      "promises": []
     },
     {
@@ -4250,7 +4010,7 @@
      "role": "Senior Vice President & IC Head - Residential, Commercial Buildings & Factories IC",
      "change": "appointed",
      "effective": "2026-07-01",
-     "profile": "Joined L&T as a Graduate Engineer Trainee in 1992 with over 34 years of experience across project execution, contracts, procurement, and business strategy within L&T Construction.",
+     "profile": "Joined L&T in 1992 as a Graduate Engineer Trainee with over 34 years of experience across diverse functions and business verticals within L&T Construction.",
      "promises": []
     }
    ],
@@ -4285,19 +4045,19 @@
    "symbol": "AARTIIND",
    "name": "Aarti Industries",
    "at": "2026-10-07T19:15:08",
-   "type": "unclassified",
-   "label": "Routine",
+   "type": "insider_trading",
+   "label": "Insider trade",
    "subject": "No-Objection For Reclassification From The 'Promoter Group' Category To The 'Public' Category",
    "headline": "Please find attached No-objection Letters from Stock Exchanges",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9b431768-86bf-44fc-895f-981218ad9a08.pdf",
-   "summary": null,
+   "summary": "BSE and NSE granted no-objection for reclassifying Mrs. Ratanben Premji Gogri from promoter group to public.",
    "people": [],
    "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 10,
-   "routine": true
+   "importance": 55,
+   "routine": false
   },
   {
    "id": "BAJFINANCE-70fcba2b-7ca8-4dce-8bc1-b80fd0e3d9d6",
@@ -4550,44 +4310,6 @@
    "routine": true
   },
   {
-   "id": "TRENT-a1a041c5-d376-4fe5-bcd1-741372502738",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-06T12:10:54",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Board Meeting Intimation for Notice Of Board Meeting",
-   "headline": "Trent Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve Notice of Board Meeting",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/db15dcb8-dfc0-478f-a8cc-e528917d5414.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "TRENT-c5c9570c-5471-4280-a1d5-2be2cf45579d",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-05T18:43:18",
-   "type": "press_release",
-   "label": "Update",
-   "subject": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "headline": "Update for Q2FY27 and H1FY27",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d875718e-467a-4f6c-bed2-acaca2693aef.pdf",
-   "summary": "Trent reported a standalone revenue of Rs. 5,788 crores for Q2 FY27, marking a 23% YoY growth.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 40,
-   "routine": false
-  },
-  {
    "id": "BAJFINANCE-8053132b-873b-4c42-a225-b6332f0f8dd6",
    "symbol": "BAJFINANCE",
    "name": "Bajaj Finance",
@@ -4597,25 +4319,6 @@
    "subject": "Board Meeting Intimation for Considering And Approving Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026",
    "headline": "Bajaj Finance Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 19/10/2026 ,inter alia, to consider and approve unaudited standalone and consolidated ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7befbd0b-8d13-47e1-bf9f-3f91b13538c2.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "TRENT-389b3e05-bd1b-4db8-91ca-af20ae7290b1",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-05T14:53:39",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
-   "headline": "Certificate under Regulation 74(5) of the Securities Exchange Board of India (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31c0197c-75f9-4c97-b92e-4554175326b7.pdf",
    "summary": null,
    "people": [],
    "promises": [],
@@ -4778,7 +4481,7 @@
    "subject": "Announcement under Regulation 30 (LODR)-Scheme of Arrangement",
    "headline": "Pronouncement of Order by the Hon''ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments ....",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd5d0d2e-5082-44e3-85fc-c42d83d89113.pdf",
-   "summary": "NCLT approved the Scheme of Amalgamation between Tata Steel Limited and its wholly owned subsidiary Rujuvalika Investments Limited.",
+   "summary": "NCLT Mumbai approved the scheme of amalgamation of wholly owned subsidiary Rujuvalika Investments Limited into Tata Steel Limited.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -5157,7 +4860,7 @@
    "subject": "Infosys And ABN Amro Extend Strategic Collaboration To Simplify IT Landscape And Accelerate AI-Driven Transformation",
    "headline": "Enclosed",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/15f48cff-75ef-45d9-a556-f22be1f4c699.pdf",
-   "summary": "Infosys and ABN AMRO extended their strategic collaboration to simplify IT landscape and accelerate AI-driven transformation.",
+   "summary": "Infosys extended its strategic collaboration with ABN AMRO to simplify its IT landscape and accelerate AI-driven transformation.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -5230,5 +4933,7 @@
    "routine": false
   }
  ],
- "failed": []
+ "failed": [
+  "TRENT"
+ ]
 }
