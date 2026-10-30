@@ -100,7 +100,8 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
       const blank = f.type === "results" && !f.numbers ? 25 : 0;
       add({ key: `f-${f.id}`, symbol: f.symbol, name: f.name, weight: f.importance + recent(f.at.slice(0, 10)) - blank,
         tag: f.label, date: fmtDate(f.at), title: f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject),
-        tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down") : undefined,
+        tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down")
+          : f.tone === "positive" ? "up" : f.tone === "negative" ? "down" : undefined,
         line: f.people.length ? peopleLine(f) : undefined,
         open: () => go(`/filings/${f.id}`) });
     }
@@ -466,7 +467,8 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
       </div>
       <div className="filing-head">
         <span className={`pill kind-${f.type.replace(/[^a-z]/gi, "")}`}>{f.label}</span>
-        <span className="filing-title">{f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject)}</span>
+        <span className={`filing-title ${f.tone === "positive" ? "up" : f.tone === "negative" ? "down" : ""}`}>
+          {f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject)}</span>
       </div>
 
       {f.numbers && <Numbers h={f.numbers} />}
@@ -536,6 +538,7 @@ function Numbers({ h }: { h: Headline }) {
           <span className="num-v">{Math.round(r.value).toLocaleString("en-IN")}</span>
           <span className={`num-yoy ${tone(r.yoy)}`}>{fmtChange(r.yoy)}</span>
           <span className="num-qoq">{fmtChange(r.qoq)}</span>
+          {h.notes?.filter((n) => n.row === r.label).map((n, i) => <span key={i} className="row-note">{n.text}</span>)}
         </div>
       ))}
     </div>

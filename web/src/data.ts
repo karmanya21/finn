@@ -81,6 +81,7 @@ export interface Headline {
   source: string;
   rows: { label: string; value: number; qoq: number | null; yoy: number | null; prev_yoy?: number | null }[];
   margin?: { label: string; now: number | null; year_ago: number | null; prev: number | null } | null;
+  notes?: { row: string; text: string }[]; // e.g. a year-ago tax credit that distorts PAT growth
 }
 
 export interface Metric {
@@ -259,7 +260,9 @@ export function feed(ledgers: Ledger[]): FeedItem[] {
         items.push({ ...base, tone: "moved", tag: "Delayed", weight: 75, headline: `${t.title}${guided}`, line: t.detail ?? undefined });
       if (t.status === "gone_quiet" && t.statements.length > 1)
         items.push({ ...base, tone: "quiet", tag: "Gone quiet", weight: 60,
-          headline: `${t.title}${guided}`, line: `Said ${t.statements.length} times; ${t.detail ?? "no update since"}` });
+          // The backend's detail may already say "Said 3 times, then…"; only add it when it doesn't.
+          headline: `${t.title}${guided}`,
+          line: /^Said \d+ times/.test(t.detail ?? "") ? t.detail! : `Said ${t.statements.length} times; ${t.detail ?? "no update since"}` });
       if ((t.status === "delivered" || t.status === "beat") && t.basis === "financials" && t.kind === "hard")
         items.push({ ...base, tone: "kept", tag: t.status === "beat" ? "Beat" : "Kept", weight: 40,
           headline: `${t.title}${guided}`, line: t.detail ?? undefined });
@@ -290,6 +293,7 @@ export interface Filing {
   numbers: Headline | null; importance: number; routine: boolean;
   also?: { label: string; pdf: string }[]; // other documents filed with the same results
   senior?: boolean; // management change involving the CEO, CFO, MD or Chair
+  tone?: "positive" | "negative" | null; // which way a regulatory outcome points
 }
 
 export interface Digest { built: string; days: number; items: Filing[] }
@@ -310,18 +314,22 @@ export interface AlertSettings {
   types: string[];  // filing categories that alert
 }
 export const DEFAULT_SETTINGS: AlertSettings = {
-  volume: 2, move: 5, types: ["results", "M&A", "management_change", "litigation", "fund_raise", "credit_rating"],
+  volume: 2, move: 5, types: ["results", "M&A", "management_change", "litigation", "regulatory", "fund_raise", "credit_rating"],
 };
 export const ALERT_TYPES: [string, string][] = [
   ["results", "Results"], ["M&A", "M&A"], ["management_change", "Management change"],
-  ["litigation", "Litigation"], ["fund_raise", "Fund raise"], ["credit_rating", "Credit rating"],
+  ["litigation", "Legal"], ["regulatory", "Regulatory"], ["fund_raise", "Fund raise"], ["credit_rating", "Credit rating"],
   ["capex", "Capex"], ["pledging", "Pledging"], ["insider_trading", "Insider trades"], ["dividend", "Dividend"],
 ];
 
 const SETTINGS_KEY = "finn.alerts.v1";
 export function readSettings(): AlertSettings {
-  try { return { ...DEFAULT_SETTINGS, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}") }; }
-  catch { return DEFAULT_SETTINGS; }
+  try {
+    const s: AlertSettings = { ...DEFAULT_SETTINGS, ...JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}") };
+    // Regulatory used to be part of litigation: carry the choice over.
+    if (s.types.includes("litigation") && !s.types.includes("regulatory")) s.types = [...s.types, "regulatory"];
+    return s;
+  } catch { return DEFAULT_SETTINGS; }
 }
 export function saveSettings(s: AlertSettings) {
   try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)); } catch { /* private mode */ }

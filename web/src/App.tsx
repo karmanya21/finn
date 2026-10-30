@@ -551,8 +551,9 @@ function resultsSummary(h: Headline): string {
     else if (d <= -3) watch.push(`revenue growth slowed to ${p(rev.yoy)} from ${p(rev.prev_yoy!)}`);
     else if (rev.yoy >= 10) good.push(`revenue ${p(rev.yoy)} YoY`);
   }
+  const baseOneOff = h.notes?.some((n) => n.row === "PAT" && n.text.startsWith("Year-ago"));
   if (pat?.yoy != null) {
-    if (pat.yoy < 0) watch.push(`PAT down ${Math.abs(pat.yoy).toFixed(0)}%`);
+    if (pat.yoy < 0) watch.push(`PAT down ${Math.abs(pat.yoy).toFixed(0)}%${baseOneOff ? " against a one-off year-ago base" : ""}`);
     else if (rev?.yoy != null && pat.yoy >= rev.yoy + 5) good.push(`PAT ${p(pat.yoy)}, ahead of revenue`);
     else if (pat.yoy >= 10) good.push(`PAT ${p(pat.yoy)}`);
   }
@@ -591,6 +592,7 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
             <span className="hl-val">₹{Math.round(r.value).toLocaleString("en-IN")} cr</span>
             <span className={`hl-yoy ${tone(r.yoy)}`}>{chg(r.yoy)}</span>
             <span className="hl-qoq">{chg(r.qoq)}</span>
+            {h.notes?.filter((n) => n.row === r.label).map((n, i) => <span key={i} className="row-note">{n.text}</span>)}
           </div>
         ))}
         {h.margin?.now != null && (

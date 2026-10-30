@@ -15,7 +15,7 @@ from finn.sources import bse
 
 LABEL = {
     "results": "Results", "M&A": "M&A", "fund_raise": "Fund raise", "management_change": "Management",
-    "litigation": "Legal / regulatory", "insider_trading": "Insider trade", "earnings_call": "Earnings call",
+    "litigation": "Legal", "regulatory": "Regulatory", "insider_trading": "Insider trade", "earnings_call": "Earnings call",
     "investor_meetings": "Investor meet", "credit_rating": "Credit rating", "dividend": "Dividend",
     "bonus_split": "Bonus / split", "capex": "Capex", "press_release": "Update", "postal_ballot": "Postal ballot",
     "agm_egm": "AGM / EGM", "pledging": "Pledge", "unclassified": "Routine",
@@ -23,7 +23,7 @@ LABEL = {
 
 # Base importance (0-100). Routine (< ROUTINE) is collapsed in the app.
 WEIGHT = {
-    "results": 90, "M&A": 85, "management_change": 75, "litigation": 70, "fund_raise": 70,
+    "results": 90, "M&A": 85, "management_change": 75, "litigation": 70, "regulatory": 70, "fund_raise": 70,
     "capex": 65, "credit_rating": 60, "pledging": 60, "insider_trading": 50, "bonus_split": 45,
     "press_release": 35, "dividend": 35, "earnings_call": 20, "agm_egm": 15, "postal_ballot": 15,
     "investor_meetings": 10, "unclassified": 5,
@@ -34,7 +34,7 @@ SUBCATEGORY = [  # (regex on "category / subcategory / subject", category); firs
     # Drug regulators: inspections, warning letters, import alerts. For a pharma company
     # this is among the most material news there is, whatever BSE files it under.
     (r"USFDA|US ?FDA|\bFDA\b|Warning Letter|Form 483|Import Alert|Establishment Inspection|"
-     r"\bEIR\b|\bOAI\b|\bVAI\b|EU ?GMP|MHRA|WHO ?GMP", "litigation"),
+     r"\bEIR\b|\bOAI\b|\bVAI\b|EU ?GMP|MHRA|WHO ?GMP", "regulatory"),
     # Newspaper copies of results are paperwork, whatever their subject says; so is the
     # notice that a board *will* meet to consider results.
     (r"Newspaper|Publication of Financial Results|Advertisement|Board Meeting Intimation|"
@@ -95,7 +95,7 @@ SUMMARY_SCHEMA = {
 }
 
 SUMMARY_SYSTEM = """You read one Indian stock-exchange filing and summarise it for an investor.
-- category: what the filing is really about (results, M&A, fund_raise, management_change, litigation, insider_trading, earnings_call, investor_meetings, credit_rating, dividend, bonus_split, capex, press_release, postal_ballot, agm_egm, pledging, unclassified for routine paperwork).
+- category: what the filing is really about (results, M&A, fund_raise, management_change, litigation, regulatory (drug-regulator inspections, warning letters, approvals), insider_trading, earnings_call, investor_meetings, credit_rating, dividend, bonus_split, capex, press_release, postal_ballot, agm_egm, pledging, unclassified for routine paperwork).
 - summary: the key fact in one sentence: who, what, how much. No filler like "The company has informed".
 - people: for appointments, resignations, retirements: each person, their role, the change, effective date, and the background given in the filing's brief profile (prior roles, employers, qualifications). Empty list otherwise.
 Use only the filing text. Do not add outside knowledge."""
@@ -156,8 +156,11 @@ def summarise(company: str, a: dict) -> dict | None:
 
 # ---- promise-awareness -----------------------------------------------------------
 
+# Words too generic to link a filing to a promise ("facility inspection" at one plant isn't
+# the inspection promised at another).
 STOP = set("the and for with from that this will our are was has have into over company "
-           "limited ltd business india update announcement regulation lodr".split())
+           "limited ltd business india update announcement regulation lodr "
+           "facility facilities inspection plant plants site sites unit units".split())
 
 
 def _words(s: str) -> set[str]:
@@ -207,3 +210,20 @@ def speaker_promises(name: str, ledger: dict) -> list[str]:
                 out.append(t["id"])
                 break
     return out
+
+
+# Which way a regulator's outcome points. Positive patterns first: "zero observations"
+# also contains "observations".
+REG_GOOD = re.compile(r"\b(zero|nil|no)\s+(form\s*)?(483\s*)?observations?|\bEIR\b|establishment inspection report|"
+                      r"\bVAI\b|voluntary action indicated|\bNAI\b|no action indicated|close[d-]?\s?out|"
+                      r"approv(al|ed)|compliance status|successfully completed", re.I)
+REG_BAD = re.compile(r"warning letter|\bOAI\b|official action indicated|import alert|untitled letter|"
+                     r"\b\d+\s+(form\s*)?483|observations?\s+(were|was|have been)\s+issued|issued\s+(a\s+)?form\s*483", re.I)
+
+
+def regulatory_tone(text: str) -> str | None:
+    if REG_GOOD.search(text):
+        return "positive"
+    if REG_BAD.search(text):
+        return "negative"
+    return None

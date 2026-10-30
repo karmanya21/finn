@@ -115,5 +115,9 @@ def from_filing(company: str, pdfs: list[str], quarter: str, fin=None) -> dict |
         return None if e is None or not r else e / r * 100
     m = {"label": "EBITDA margin", "now": margin("current"), "year_ago": margin("year_ago"),
          "prev": margin("previous_quarter")}
-    return {"quarter": quarter, "rows": rows, "margin": m if m["now"] is not None else None, "unit": "₹ cr",
-            "source": f"the company's results filing ({out['basis']}); screener hasn't tabulated this quarter yet"}
+    def profit(c):
+        return {"ebitda": ebitda(c), "pbt": vals["pbt"][c], "pat": vals["pat"][c]}
+    from finn.financials import oneoff_notes
+    return {"quarter": quarter, "rows": rows, "notes": oneoff_notes(profit("current"), profit("year_ago")),
+            "margin": m if m["now"] is not None else None, "unit": "₹ cr",
+            "source": f"the company's results filing (statutory {out['basis']}); screener hasn't tabulated this quarter yet"}

@@ -107,3 +107,24 @@ def load(symbol: str, slug: str | None = None) -> Financials:
     except Exception:
         pass  # net debt falls back to "unknown"; gross borrowings still work
     return f
+
+
+def oneoff_notes(now: dict, year_ago: dict) -> list[dict]:
+    """Short notes for the PAT line when a quarter's profit isn't comparable.
+    now / year_ago: {"ebitda", "pbt", "pat"} in Rs crore (any may be None).
+    PAT above PBT means a tax credit; PBT well above EBITDA means a one-off gain
+    (other income or an exceptional item). Either inflates that quarter's profit."""
+    def flags(q):
+        e, b, t = q.get("ebitda"), q.get("pbt"), q.get("pat")
+        out = []
+        if b is not None and t is not None and b > 0 and t > b * 1.05:  # small tax credits are noise
+            out.append(f"a tax credit (PAT ₹{t:,.0f} cr above PBT ₹{b:,.0f} cr)")
+        if e is not None and b is not None and e > 0 and b > e * 1.15:
+            out.append(f"a one-off gain (PBT ₹{b:,.0f} cr above EBITDA ₹{e:,.0f} cr)")
+        return out
+    notes = []
+    if f := flags(year_ago):
+        notes.append({"row": "PAT", "text": f"Year-ago quarter had {' and '.join(f)}, so YoY understates the business."})
+    if f := flags(now):
+        notes.append({"row": "PAT", "text": f"This quarter includes {' and '.join(f)}."})
+    return notes

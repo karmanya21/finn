@@ -15,8 +15,8 @@ IST = timezone(timedelta(hours=5, minutes=30))
 import requests
 
 from finn import financials, fiscal, results_pdf
-from finn.filings import (LABEL, ROUTINE, WEIGHT, classify, related_promises, results_promises,
-                          speaker_promises, summarise)
+from finn.filings import (LABEL, ROUTINE, WEIGHT, classify, regulatory_tone, related_promises,
+                          results_promises, speaker_promises, summarise)
 from finn.portfolio import PORTFOLIO
 from finn.sources import bse
 
@@ -53,7 +53,7 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
         item = {"id": f"{c.symbol}-{a['id']}", "symbol": c.symbol, "name": c.name, "at": a["at"],
                 "type": kind, "label": LABEL[kind], "subject": a["subject"], "headline": a["headline"],
                 "pdf": a["pdf"], "summary": None, "people": [], "promises": [], "numbers": None,
-                "senior": False}
+                "senior": False, "tone": None}
 
         if kind == "results" and ledger:
             q = _results_quarter(a)
@@ -97,6 +97,8 @@ def digest_company(c, ledger: dict | None, days: int = 30, summarise_min: int = 
             score += 10  # touches something management promised
         if any(p["promises"] for p in item["people"]):
             score += 10  # the person leaving made promises we're tracking
+        if kind == "regulatory":  # read the subject and summary, not the BSE headline (often boilerplate)
+            item["tone"] = regulatory_tone(f"{a['subject']} {item['summary'] or ''}")
         item["pdf"] = bse.RESOLVED.get(item["pdf"], item["pdf"])
         item["importance"] = min(score, 100)
         item["routine"] = item["importance"] < ROUTINE

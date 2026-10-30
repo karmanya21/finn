@@ -102,7 +102,10 @@ def headline(fin: financials.Financials) -> dict | None:
         e, s = fin.q(*p, "Operating Profit"), fin.q(*p, "Sales")
         return None if e is None or not s else e / s * 100
     m = {"label": "EBITDA margin", "now": margin((fy, q)), "year_ago": margin(year_ago), "prev": margin(prev)}
-    return {"quarter": fiscal.label(fy, q), "rows": rows, "margin": m if m["now"] is not None else None,
+    def profit(p):
+        return {"ebitda": fin.q(*p, "Operating Profit"), "pbt": fin.q(*p, "Profit before tax"), "pat": fin.q(*p, "Net Profit")}
+    notes = financials.oneoff_notes(profit((fy, q)), profit(year_ago))
+    return {"quarter": fiscal.label(fy, q), "rows": rows, "notes": notes, "margin": m if m["now"] is not None else None,
             "unit": "₹ cr", "source": "screener.in, consolidated where published"}
 
 

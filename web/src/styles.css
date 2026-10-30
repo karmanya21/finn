@@ -503,3 +503,6 @@ details.more[open] > summary::after { content: "▴"; }
 details.more > section { margin-top: 10px; }
 .num-yoy { font-weight: 700; } .num-row .num-yoy.up { color: var(--kept); } .num-row .num-yoy.down { color: var(--missed); }
 .num-qoq { font-size: 11px; color: var(--ink-3); }
+.row-note { grid-column: 1 / -1; margin-top: -2px; font-size: 11px; line-height: 1.4; color: var(--ink-3); }
+.pill.kind-regulatory { background: var(--live-bg); color: var(--live); }
+.filing-title.up { color: var(--kept); } .filing-title.down { color: var(--missed); }

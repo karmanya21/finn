@@ -38,6 +38,12 @@
     "prev_yoy": -35.913978494623656
    }
   ],
+  "notes": [
+   {
+    "row": "PAT",
+    "text": "This quarter includes a one-off gain (PBT ₹869 cr above EBITDA ₹463 cr)."
+   }
+  ],
   "margin": {
    "label": "EBITDA margin",
    "now": 2.977874967841523,
