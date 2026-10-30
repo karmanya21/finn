@@ -27,13 +27,16 @@ Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction a
 
 ## Daily refresh
 
-`.github/workflows/refresh.yml` rebuilds the filings digest and end-of-day prices every evening at 19:00 IST (and on demand from the Actions tab), and commits them if anything changed. It needs one repository secret, `GEMINI_API_KEY`:
+`.github/workflows/refresh.yml` fetches end-of-day prices every evening at 19:00 IST (and on demand from the Actions tab) and commits them if they changed, so price and volume alerts stay current. It needs no secrets.
+
+Filings are refreshed by hand: BSE's announcements API answers 403 to GitHub's runners, so they have to be fetched from a machine in India. About a minute, since documents and model answers are cached:
 
 ```bash
-gh secret set GEMINI_API_KEY
+cd backend && .venv/bin/python -m scripts.build_push filings
+git add web/public/data/filings.json && git commit -m "Refresh filings" && git push
 ```
 
-Promise records change only when a new earnings call lands, so they're rebuilt by hand with `scripts.build_all`.
+If most companies fail to fetch, the script keeps the previous digest rather than writing an empty one. Promise records change only when a new earnings call lands, so they're rebuilt by hand with `scripts.build_all`.
 
 ## How it works
 

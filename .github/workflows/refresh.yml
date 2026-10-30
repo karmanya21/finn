@@ -1,10 +1,10 @@
-# Refresh the push side every evening after the NSE close: exchange filings (BSE) and
-# end-of-day prices (Yahoo). Promise records change quarterly and are rebuilt by hand.
+# Refresh end-of-day prices (Yahoo) every evening after the NSE close, so price and volume
+# alerts stay current.
 #
-# Needs one repository secret: GEMINI_API_KEY (Settings → Secrets and variables → Actions).
-# Fetched documents and model responses are kept in the Actions cache between runs, so a
-# day's refresh only pays for new filings.
-name: Refresh filings and prices
+# Filings are refreshed by hand (see README): BSE's announcements API answers 403 to
+# GitHub's runners, so they have to be fetched from a machine in India. Prices need no
+# model calls, so this workflow needs no secrets.
+name: Refresh prices
 
 on:
   schedule:
@@ -19,7 +19,7 @@ concurrency: refresh
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -31,37 +31,18 @@ jobs:
 
       - run: pip install -r backend/requirements.txt
 
-      - uses: actions/cache@v4
-        with:
-          path: |
-            data/cache
-            data/raw
-            data/text
-          key: finn-data-${{ github.run_id }}
-          restore-keys: finn-data-
-
-      - name: Build filings digest and prices
+      - name: Fetch end-of-day prices
         working-directory: backend
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m scripts.build_push
+        run: python -m scripts.build_push prices
 
       - name: Commit if anything changed
         run: |
           git config user.name "finn-refresh"
           git config user.email "finn-refresh@users.noreply.github.com"
-          git add web/public/data/filings.json web/public/data/prices.json
+          git add web/public/data/prices.json
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "Refresh filings and prices ($(date -u +%F))"
+            git commit -m "Refresh prices ($(date -u +%F))"
             git push
-          fi
-
-      # Prices were committed above; if filings couldn't be fetched, fail the run so it's noticed.
-      - name: Fail if the filings digest is stale
-        run: |
-          if [ -f .filings-stale ]; then
-            echo "::error::Filings were not refreshed (kept the previous digest): $(cat .filings-stale)"
-            exit 1
           fi
