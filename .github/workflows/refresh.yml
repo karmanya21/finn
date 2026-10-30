@@ -57,3 +57,11 @@ jobs:
             git commit -m "Refresh filings and prices ($(date -u +%F))"
             git push
           fi
+
+      # Prices were committed above; if filings couldn't be fetched, fail the run so it's noticed.
+      - name: Fail if the filings digest is stale
+        run: |
+          if [ -f .filings-stale ]; then
+            echo "::error::Filings were not refreshed (kept the previous digest): $(cat .filings-stale)"
+            exit 1
+          fi

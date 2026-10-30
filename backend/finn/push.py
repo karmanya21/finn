@@ -143,16 +143,18 @@ def _doc_kind(subject: str) -> str:
 
 
 def build_digest(ledgers: dict[str, dict], days: int = 30) -> dict:
-    items = []
+    items, failed = [], []
     for c in PORTFOLIO:
         try:
             got = digest_company(c, ledgers.get(c.symbol), days)
             items += got
             print(f"  filings {c.symbol:<11} {len(got):>3}  material {sum(not i['routine'] for i in got)}", flush=True)
         except Exception as e:
+            failed.append(c.symbol)
             print(f"  filings {c.symbol:<11} FAILED {type(e).__name__}: {str(e)[:100]}", flush=True)
     items.sort(key=lambda i: i["at"], reverse=True)
-    return {"built": datetime.now().isoformat(timespec="seconds"), "days": days, "items": items}
+    return {"built": datetime.now().isoformat(timespec="seconds"), "days": days, "items": items,
+            "failed": failed}
 
 
 # ---- prices ------------------------------------------------------------------------

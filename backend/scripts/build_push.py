@@ -27,6 +27,13 @@ def main(what: list[str]) -> None:
             if p.exists():
                 ledgers[c.symbol] = json.loads(p.read_text())
         digest = push.build_digest(ledgers)
+        if len(digest["failed"]) > len(PORTFOLIO) // 2:
+            # The source is down or blocking us: an empty digest would read as "nothing
+            # happened". Keep the last good one and say so loudly (an Actions annotation).
+            print(f"::error::Filings fetch failed for {len(digest['failed'])} of {len(PORTFOLIO)} companies; "
+                  "kept the previous digest.")
+            (WEB_DATA.parent.parent.parent / ".filings-stale").write_text(", ".join(digest["failed"]))
+            return
         push.write(WEB_DATA / "filings.json", digest)
         n = len(digest["items"])
         print(f"filings: {n} items, {sum(not i['routine'] for i in digest['items'])} material")

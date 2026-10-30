@@ -13,3 +13,6 @@ data/cache/
 
 # challenge brief (not ours to republish)
 *ENAM_AI_Engineer_Build_Challenge*.pdf
+
+# refresh marker (CI)
+.filings-stale
