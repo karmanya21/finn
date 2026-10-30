@@ -52,6 +52,11 @@ export interface Update {
   title: string;      // the one line that matters, with its number
   line?: string;      // optional detail
   tone?: "up" | "down";
+  // How the Today tile lays it out, when there's more structure than a sentence:
+  figures?: Figure[];                               // results, price, volume: one row per figure
+  change?: { subject: string; from: string; to: string };  // guidance moved: old → new
+  target?: { subject: string; value: string };     // a promise's verdict: what was guided
+  heading?: string;   // the tile's whole heading when "tag · date" won't fit ("Q2FY27 · 30 Oct", "Guidance cut")
   open: () => void;
 }
 
@@ -88,6 +93,11 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         weight: (m.byPrice ? 55 + Math.min(Math.abs(m.pct), 15) * 2 : 45) + (m.byVolume ? Math.min(m.volRatio, 6) * 3 : 0)
           + (m.reason ? 10 : 0) + recent(m.date),
         tag: m.byPrice ? "Price" : "Volume", date: fmtDate(m.date), title: what, tone: m.byPrice ? (up ? "up" : "down") : undefined,
+        figures: [
+          ...(m.byPrice ? [{ label: "Price", change: fmtChange(m.pct, 1), tone: up ? "up" as const : "down" as const }] : []),
+          ...(m.byVolume ? [{ label: "Volume", change: `${m.volRatio.toFixed(1)}×`, unit: "avg" }] : []),
+          ...(!m.byPrice ? [{ label: "Price", change: fmtChange(m.pct, 1) }] : []),
+        ],
         line: m.reason ? `Same day: ${m.reason.type === "results" ? resultsHeadline(m.reason) : filingText(m.reason.summary, m.reason.subject)}`
           : `Closed ₹${m.close.toLocaleString("en-IN")}; no material filing that day`,
         open: () => go(`/c/${m.symbol}`) });
@@ -99,7 +109,8 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
       // Results without figures yet say little; let a real move or a cut outrank them.
       const blank = f.type === "results" && !f.numbers ? 25 : 0;
       add({ key: `f-${f.id}`, symbol: f.symbol, name: f.name, weight: f.importance + recent(f.at.slice(0, 10)) - blank,
-        tag: f.label, date: fmtDate(f.at), title: f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject),
+        tag: f.label, date: fmtDate(f.at),
+        figures: f.numbers ? resultsFigures(f.numbers) : undefined, heading: resultsQuarter(f) && `${resultsQuarter(f)} · ${fmtDate(f.at)}`, title: f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject),
         tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down")
           : f.tone === "positive" ? "up" : f.tone === "negative" ? "down" : undefined,
         line: f.people.length ? peopleLine(f) : undefined,
@@ -115,9 +126,14 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
       const lastEvent = i.thread.events[i.thread.events.length - 1];
       const date = VERDICT.has(i.tag) || i.tag === "Behind pace" ? `${l.latest_results ?? ""} results`
         : i.tag === "Gone quiet" ? `${l.latest_call} call` : `${lastEvent?.call ?? l.latest_call} call`;
+      const moved = i.headline.includes(" → ") && lastEvent?.from && lastEvent?.to;
+      const better = moved && (lastEvent.type === "raised" || lastEvent.type === "advanced");
       add({ key: `p-${i.thread.id}|${i.headline}`, symbol: i.symbol, name: i.name, weight: i.weight,
         tag: i.tag, date, title: normText(i.headline), line: i.line && normText(i.line),
-        tone: i.tone === "missed" ? "down" : i.tone === "kept" ? "up" : undefined,
+        tone: better || i.tone === "kept" ? "up" : i.tone === "missed" ? "down" : undefined,
+        heading: i.tag,  // the call or quarter is on the promise page; "Guidance cut · Oct 2026 call" wraps
+        change: moved ? { subject: normText(i.thread.title), from: normText(lastEvent.from!), to: normText(lastEvent.to!) } : undefined,
+        target: !moved ? { subject: normText(i.thread.title), value: i.thread.target ? normText(i.thread.target) : "" } : undefined,
         open: () => go(`/c/${i.symbol}/t/${i.thread.id}`) });
     }
     for (const list of out.values()) list.sort((a, b) => b.weight - a.weight);
@@ -139,6 +155,37 @@ function daysBetween(callLabel: string, isoDate: string): number {
   const [m, y] = callLabel.split(" ");
   const call = new Date(`${m} 1, ${y}`).getTime();
   return (new Date(isoDate || Date.now()).getTime() - call) / 86_400_000;
+}
+
+/** A tile's lead update: figures in rows, a guidance move as old → new, a verdict under
+ *  what was promised; anything else as its one line. */
+function TileBody({ u }: { u: Update }) {
+  const verdict = !!(u.change || u.target);
+  const tag = <span className={`tile-tag ${verdict ? u.tone ?? "" : ""}`}>{u.heading ?? `${u.tag} · ${u.date}`}</span>;
+  if (u.figures?.length) return <>{tag}
+    <span className="tile-figs">
+      {u.figures.map((f) => (
+        <span key={f.label} className="tile-fig">
+          <span className="tile-fig-l">{f.label}</span>
+          <span className={`tile-fig-v ${f.tone ?? ""}`}>{f.change}</span>
+          <span className="tile-fig-u">{f.unit}</span>
+        </span>
+      ))}
+    </span></>;
+  if (u.change) return <>{tag}
+    <span className="tile-subject">{u.change.subject}</span>
+    <span className="tile-move">
+      <span className="tile-from">{u.change.from}</span><span className="tile-arrow">→</span>
+      <span className={`tile-to ${u.tone ?? ""}`}>{u.change.to}</span>
+    </span></>;
+  if (u.target) return <>{tag}
+    <span className="tile-subject">{u.target.subject}</span>
+    {u.target.value && <span className="tile-move"><span className="tile-fig-u">Guided</span>
+      <span className="tile-to">{u.target.value}</span></span>}</>;
+  // The heading already names the quarter: "Q2FY27: filed, …" → "Filed, …"
+  const q = u.heading?.split(" · ")[0];
+  const title = q && u.title.startsWith(`${q}: `) ? u.title.slice(q.length + 2).replace(/^./, (c) => c.toUpperCase()) : u.title;
+  return <>{tag}<span className={`tile-line ${u.tone ?? ""}`}>{title}</span></>;
 }
 
 /** The Today grid: one tile per company, those needing attention first. */
@@ -170,8 +217,7 @@ export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSe
               <span className="tile-name">{c.name}</span>
               <span className="tile-count">{us.length}{fresh > 0 && <span className="new">{fresh} new</span>}</span>
             </span>
-            <span className="tile-tag">{lead!.tag} · {lead!.date}</span>
-            <span className={`tile-line ${lead!.tone ?? ""}`}>{lead!.title}</span>
+            <TileBody u={lead!} />
           </button>
         ))}
       </div>
@@ -302,6 +348,18 @@ export function Footnote({ children }: { children: React.ReactNode }) {
   return <p className="footnote">{children}</p>;
 }
 
+export interface Figure { label: string; change: string; unit?: string; tone?: "up" | "down" }
+
+/** Revenue and PAT growth as separate rows, each coloured by its own direction. */
+export function resultsFigures(h: Headline): Figure[] {
+  return ["Revenue", "PAT"].flatMap((label) => {
+    const yoy = h.rows.find((r) => r.label === label)?.yoy;
+    if (yoy == null) return [];
+    const change = fmtChange(yoy);
+    return [{ label, change, unit: "YoY", tone: change === "flat" ? undefined : yoy > 0 ? "up" as const : "down" as const }];
+  });
+}
+
 /** "Q2FY27: Revenue +16% YoY · PAT +27%". The one format for results everywhere. */
 export function resultsLine(h: Headline): string {
   const row = (l: string) => h.rows.find((r) => r.label === l);
@@ -311,9 +369,16 @@ export function resultsLine(h: Headline): string {
   return bits.length ? `${h.quarter}: ${bits.join(" · ")}` : `${h.quarter} results`;
 }
 
+/** "Q2FY27" for a results filing, from its figures or else its text. */
+function resultsQuarter(f: Filing): string | undefined {
+  if (f.type !== "results") return undefined;
+  return f.numbers?.quarter
+    ?? `${f.summary ?? ""} ${f.subject}`.match(/Q[1-4]\s?FY\s?\d{2}/i)?.[0].replace(/\s/g, "").toUpperCase();
+}
+
 function resultsHeadline(f: Filing): string {
   if (f.numbers) return resultsLine(f.numbers);
-  const q = `${f.summary ?? ""} ${f.subject}`.match(/Q[1-4]\s?FY\s?\d{2}/i)?.[0].replace(/\s/g, "").toUpperCase();
+  const q = resultsQuarter(f);
   return `${q ?? "Results"}: filed, figures not yet tabulated`;
 }
 
