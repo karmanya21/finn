@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FilingsView, SettingsSheet, TodayFeed } from "./push";
+import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayGrid, priceStats, resultsLine, usePrices } from "./push";
 import { Shell, go } from "./shell";
 import {
-  Business, CasePoint, CompanySummary, FeedItem, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
-  feed, loadIndex, loadLedger, researchStatus, searchCompanies, startResearch, statusOf,
+  Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
+  loadIndex, loadLedger, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
 // ---- routing: #/  and  #/c/INFY  and  #/c/INFY/t/INFY-3 ------------------------
@@ -61,6 +61,7 @@ function Routes({ route }: { route: string[] }) {
     const sym = decodeURIComponent(route[1]).toUpperCase();
     return <ResearchView symbol={sym} threadId={route[3]} portfolio={index.some((c) => c.symbol === sym)} />;
   }
+  if (route[0] === "u" && route[1]) return <CompanyUpdates index={index} symbol={decodeURIComponent(route[1])} />;
   if (route[0] === "filings") return <FilingsView index={index} />;
   if (route[0] === "portfolio") return <Portfolio index={index} />;
   return <Home index={index} />;
@@ -69,78 +70,68 @@ function Routes({ route }: { route: string[] }) {
 // ---- today (home) ------------------------------------------------------------------
 
 function Home({ index }: { index: CompanySummary[] }) {
-  const [ledgers, setLedgers] = useState<Ledger[]>([]);
-  useEffect(() => { Promise.all(index.map((c) => loadLedger(c.symbol))).then(setLedgers); }, [index]);
-  const promises = useMemo(() => feed(ledgers), [ledgers]);
   const [settings, setSettings] = useState(false);
-
   return (
     <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
       <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
       <SearchBar />
-      <TodayFeed index={index} promises={promises} onSettings={() => setSettings(true)}
-        renderPromise={(i, fresh) => <FeedRow item={i} fresh={fresh} />} />
+      <TodayGrid index={index} onSettings={() => setSettings(true)} />
       {settings && <SettingsSheet onClose={() => setSettings(false)} />}
     </Shell>
   );
 }
 
+// ---- portfolio: a compact overview, sortable --------------------------------------------
+
+type Sort = "name" | "kept" | "missed" | "quiet";
+
 function Portfolio({ index }: { index: CompanySummary[] }) {
+  const prices = usePrices();
+  const [sort, setSort] = useState<Sort>("name");
+  const keptRate = (c: CompanySummary) => c.record.resolved ? c.record.kept / c.record.resolved : -1;
+  const rows = [...index].sort((a, b) =>
+    sort === "kept" ? keptRate(b) - keptRate(a) || b.record.kept - a.record.kept
+      : sort === "missed" ? b.record.missed - a.record.missed
+      : sort === "quiet" ? b.record.quiet - a.record.quiet
+      : a.name.localeCompare(b.name));
   return (
     <Shell tab="portfolio">
-      <SearchBar />
       <section>
-        <h2 className="section-title">Track records</h2>
-        <p className="section-sub">{index.length} companies. Kept vs missed counts settled numbers and milestones only.</p>
-        <div className="companies">
-          {index.map((c) => <CompanyRow key={c.symbol} c={c} />)}
+        <h2 className="section-title">Portfolio <span className="count">{index.length}</span></h2>
+        <nav className="chips tight">
+          {(["name", "kept", "missed", "quiet"] as Sort[]).map((k) => (
+            <button key={k} className={`chip ${sort === k ? "on" : ""}`} onClick={() => setSort(k)}>
+              {{ name: "A–Z", kept: "Kept", missed: "Missed", quiet: "Quiet" }[k]}
+            </button>
+          ))}
+        </nav>
+        <div className="plist">
+          {rows.map((c) => {
+            const st = priceStats(prices?.series[c.symbol]?.map(([d, cl]) => [d, cl] as [string, number]));
+            const r = c.record;
+            return (
+              <button key={c.symbol} className="prow" onClick={() => go(`/c/${c.symbol}`)}>
+                <span className="prow-main">
+                  <span className="prow-name">{c.name}</span>
+                  <span className="prow-rec">
+                    <span className={sort === "kept" ? "hl" : ""}>{r.resolved ? `${r.kept}/${r.resolved} kept` : "none settled"}</span>
+                    <span className={sort === "missed" ? "hl" : ""}>{r.missed} missed</span>
+                    <span className={sort === "quiet" ? "hl" : ""}>{r.quiet} quiet</span>
+                  </span>
+                </span>
+                {st && (
+                  <span className="prow-price">
+                    <span>₹{st.close.toLocaleString("en-IN", { maximumFractionDigits: 0 })}</span>
+                    <span className={st.change >= 0 ? "up" : "down"}>{st.change >= 0 ? "+" : ""}{st.change.toFixed(1)}%</span>
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
+        <Footnote>Kept and missed count settled numbers and milestones only. Prices are end-of-day NSE closes (Yahoo Finance).</Footnote>
       </section>
     </Shell>
-  );
-}
-
-function FeedRow({ item, fresh }: { item: FeedItem; fresh: boolean }) {
-  const t = item.thread;
-  return (
-    <button className="feed-row" onClick={() => go(`/c/${item.symbol}/t/${t.id}`)}>
-      <span className={`dot tone-${item.tone}`} />
-      <span className="feed-body">
-        <span className="feed-co">{item.name}{fresh && <span className="new">new</span>}</span>
-        <span className="feed-head">{item.headline}</span>
-        <span className="feed-line">{item.line ?? oneLine(t)}</span>
-      </span>
-    </button>
-  );
-}
-
-function CompanyRow({ c }: { c: CompanySummary }) {
-  const r = c.record;
-  return (
-    <button className="company-row" onClick={() => go(`/c/${c.symbol}`)}>
-      <span className="co-main">
-        <span className="co-name">{c.name}</span>
-        <span className="co-meta">{c.sector} · last call {c.latest_call}</span>
-      </span>
-      <span className="co-record">
-        <RecordBar r={r} />
-        <span className="co-record-text">
-          {r.resolved ? <><b>{r.kept}</b> of {r.resolved} kept</> : "Nothing settled yet"}
-          {r.moved ? <> · {r.moved} moved</> : null}
-          {r.quiet ? <> · {r.quiet} quiet</> : null}
-        </span>
-      </span>
-    </button>
-  );
-}
-
-function RecordBar({ r }: { r: CompanySummary["record"] }) {
-  const parts: [Tone, number][] = [["kept", r.kept], ["missed", r.missed], ["quiet", r.quiet], ["muted", r.open]];
-  const total = parts.reduce((s, [, n]) => s + n, 0) || 1;
-  return (
-    <span className="bar" aria-hidden>
-      {parts.map(([tone, n]) => n ? <span key={tone} className={`seg tone-${tone}`} style={{ flex: n / total }} /> : null)}
-    </span>
   );
 }
 
@@ -157,13 +148,19 @@ function farDated(t: Thread, fy: number): boolean {
   return !!m && Number(m[1]) > fy + 1;
 }
 
-const GROUPS: { key: string; title: string; test: (t: Thread, fy: number) => boolean; collapsed?: boolean }[] = [
-  { key: "live", title: "Live", test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && !farDated(t, fy) },
-  { key: "later", title: "Longer-term targets", collapsed: true,
-    test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && farDated(t, fy) },
+/** Pending: nothing to check yet (no numbers in, not due) or due after next fiscal year. */
+function pending(t: Thread, fy: number): boolean {
+  return t.status === "open" || farDated(t, fy);
+}
+
+const GROUPS: { key: string; title: string; test: (t: Thread, fy: number) => boolean; collapsed?: (n: number, fy: number) => string }[] = [
+  { key: "live", title: "Live", test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && !pending(t, fy) },
   { key: "settled", title: "Settled", test: (t) => ["delivered", "beat", "missed"].includes(t.status) },
   { key: "quiet", title: "Gone quiet", test: (t) => t.status === "gone_quiet" },
-  { key: "said", title: "Also said", test: (t) => t.status === "said" || t.status === "lapsed" },
+  { key: "later", title: "Due later", test: (t, fy) => LIVE.includes(t.status) && t.kind !== "soft" && pending(t, fy),
+    collapsed: (n) => `${n} more due later` },
+  { key: "said", title: "Also said", test: (t) => t.status === "said" || t.status === "lapsed",
+    collapsed: (n) => `${n} ambitions and remarks, not scored` },
 ];
 
 // Headline P&L promises first, then what investors model off, then the rest.
@@ -290,29 +287,6 @@ function SearchBar() {
   );
 }
 
-function HeadlineStrip({ h }: { h: Headline }) {
-  const chg = (v: number | null) => v === null ? "–" : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
-  const tone = (v: number | null) => v === null ? "" : v >= 0 ? "up" : "down";
-  return (
-    <div className="headline">
-      <div className="hl-head">
-        <span>{h.quarter} results</span>
-        <span className="hl-cols"><span>QoQ</span><span>YoY</span></span>
-      </div>
-      {h.rows.map((r) => (
-        <div key={r.label} className="hl-row">
-          <span className="hl-label">{r.label}</span>
-          <span className="hl-val">₹{Math.round(r.value).toLocaleString("en-IN")} cr</span>
-          <span className="hl-cols">
-            <span className={tone(r.qoq)}>{chg(r.qoq)}</span>
-            <span className={tone(r.yoy)}>{chg(r.yoy)}</span>
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // ---- snapshot and the case each way ------------------------------------------------
 
 function CaseView({ l, base }: { l: Ledger; base: string }) {
@@ -336,14 +310,10 @@ function CaseView({ l, base }: { l: Ledger; base: string }) {
     </div>
   );
   return (
-    <section>
-      <h2 className="section-title">The case each way</h2>
-      <p className="section-sub">Built only from this promise record and the reported numbers below; every point cites its source.</p>
-      <div className="case">
-        {l.case!.bull.length > 0 && side("Bull", l.case!.bull, "bull")}
-        {l.case!.bear.length > 0 && side("Bear", l.case!.bear, "bear")}
-      </div>
-    </section>
+    <div className="case">
+      {l.case!.bull.length > 0 && side("Bull", l.case!.bull, "bull")}
+      {l.case!.bear.length > 0 && side("Bear", l.case!.bear, "bear")}
+    </div>
   );
 }
 
@@ -371,7 +341,7 @@ function BusinessView({ b }: { b: Business }) {
         <p className="snap-reading">Businesses: {b.segments.map((s) => s.name).join(", ")}.</p>
       )}
       {geos.length > 0 && <p className="snap-reading">{geos.map((g) => `${g.region} ${g.share_pct}%`).join(" · ")}</p>}
-      <a className="filing-link" href={b.url} target="_blank" rel="noreferrer">{cite} ↗</a>
+      <Footnote>From the <a href={b.url} target="_blank" rel="noreferrer">{cite}</a>.</Footnote>
     </section>
   );
 }
@@ -380,7 +350,6 @@ function SnapshotView({ m, lender }: { m: Metric[]; lender: boolean }) {
   return (
     <section>
       <h2 className="section-title">The numbers</h2>
-      <p className="section-sub">From reported annual results (screener.in){lender ? "; shown the way a lender should be read" : ""}.</p>
       <div className="snapshot">
         {m.map((x) => (
           <div key={x.key} className="snap-row">
@@ -393,6 +362,7 @@ function SnapshotView({ m, lender }: { m: Metric[]; lender: boolean }) {
           </div>
         ))}
       </div>
+      <Footnote>From reported annual results (screener.in){lender ? "; read the way a lender should be read" : ""}.</Footnote>
     </section>
   );
 }
@@ -422,76 +392,179 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       : filter === "live" ? LIVE.includes(t.status) && t.kind !== "soft"
       : GROUPS.find((g) => g.key === filter)!.test(t, fy)));
   const noCalls = l.calls.length === 0;
+  const short_ = l.name.replace(/ (Ltd|Limited|India)\.?$/i, "");
 
   return (
     <Shell back>
       <section className="co-head">
         <h1 className="co-title">{l.name}</h1>
-        <p className="co-sub">
-          {l.sector ? `${l.sector} · ` : ""}
-          {noCalls ? "no earnings calls on record" : `${l.calls.length} calls read, ${l.calls[0].call} to ${l.latest_call}`}
-          {l.latest_results ? ` · results through ${l.latest_results}` : ""}
-        </p>
-        {l.headline && l.headline.rows.length > 0 && <HeadlineStrip h={l.headline} />}
+        {l.sector && <p className="co-sub">{l.sector}</p>}
+        <PriceLine symbol={l.symbol} fallback={l.price} />
+      </section>
+
+      {l.headline && l.headline.rows.length > 0 && <ResultsBlock h={l.headline} l={l} base={base} />}
+
+      <section>
+        <h2 className="section-title">Record</h2>
         {noCalls ? (
           <div className="notice">
             <b>No promise record.</b>
-            <p>{l.name} doesn't publish earnings-call transcripts, so there are no management promises to track. The numbers above are from its reported results.</p>
+            <p>{l.name} doesn't publish earnings-call transcripts, so there are no management promises to track.</p>
           </div>
         ) : (
-          <>
-            <div className="record">
-              <Stat n={r.resolved ? `${r.kept}/${r.resolved}` : "–"} label="kept" tone="kept" />
-              <Stat n={r.missed} label="missed" tone="missed" />
-              <Stat n={r.moved} label="moved" tone="moved" />
-              <Stat n={r.quiet} label="gone quiet" tone="quiet" />
-              <Stat n={r.open} label="open" tone="muted" />
-            </div>
-            <p className="record-note">Numbers and milestones only. Directional remarks and ambitions are listed but not scored.</p>
-          </>
+          <div className="record">
+            <Stat n={r.resolved ? `${r.kept}/${r.resolved}` : "–"} label="kept" tone="kept" />
+            <Stat n={r.missed} label="missed" tone="missed" />
+            <Stat n={r.moved} label="moved" tone="moved" />
+            <Stat n={r.quiet} label="gone quiet" tone="quiet" />
+            <Stat n={r.open} label="open" tone="muted" />
+          </div>
         )}
+        {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
+        <Footnote>
+          {noCalls ? "" : "Counts settled numbers and milestones only; directional remarks and ambitions are listed but not scored. "}
+          {l.case ? "The case each way uses only this record and reported numbers; every point cites its source." : ""}
+        </Footnote>
       </section>
 
-      {l.business && <BusinessView b={l.business} />}
-      {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
-      {l.snapshot && l.snapshot.metrics.length > 0 && <SnapshotView m={l.snapshot.metrics} lender={l.snapshot.lender} />}
-
-      {!noCalls && l.threads.length === 0 && (
-        <div className="notice"><b>No forward-looking promises found.</b><p>Management didn't commit to numbers, directions or milestones in the calls read.</p></div>
+      {!noCalls && (
+        <section>
+          <h2 className="section-title">Promises <span className="count">{l.threads.length}</span></h2>
+          {l.threads.length === 0 ? (
+            <div className="notice"><b>No forward-looking promises found.</b><p>Management didn't commit to numbers, directions or milestones in the calls read.</p></div>
+          ) : (
+            <nav className="chips">
+              {(["all", "live", "settled", "moved", "quiet"] as Filter[]).map((f) => (
+                <button key={f} className={`chip ${filter === f ? "on" : ""}`} onClick={() => setFilter(f)}>
+                  {{ all: "All", live: "Live", settled: "Settled", moved: "Moved", quiet: "Quiet" }[f]}
+                </button>
+              ))}
+            </nav>
+          )}
+          {GROUPS.map((g) => {
+            const ts = visible.filter((t) => g.test(t, fy)).sort((a, b) => rank(a) - rank(b));
+            if (!ts.length) return null;
+            const folded = g.collapsed && !expanded.has(g.key) && filter === "all";
+            return (
+              <div key={g.key} className="group">
+                {folded ? (
+                  <button className="routine-toggle" onClick={() => setExpanded(new Set([...expanded, g.key]))}>
+                    <span>{g.collapsed!(ts.length, fy)}</span>
+                    <span className="routine-kinds">{ts.slice(0, 3).map((t) => t.title).join(", ")}</span>
+                    <span className="chev">▾</span>
+                  </button>
+                ) : (
+                  <>
+                    <h3 className="group-title">{g.title} <span className="count">{ts.length}</span></h3>
+                    <div className="cards">
+                      {ts.map((t) => <ThreadCard key={t.id} t={t} onOpen={() => go(`${base}/t/${t.id}`)} />)}
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })}
+          <Footnote>
+            From {l.calls.length} earnings calls, {l.calls[0]?.call} to {l.latest_call}. Quotes are verbatim from the BSE transcripts;
+            verdicts are checked against reported results or, where marked, management's own later statements.
+          </Footnote>
+        </section>
       )}
 
-      {l.threads.length > 0 && <nav className="chips">
-        {(["all", "live", "settled", "moved", "quiet"] as Filter[]).map((f) => (
-          <button key={f} className={`chip ${filter === f ? "on" : ""}`} onClick={() => setFilter(f)}>
-            {{ all: "All", live: "Live", settled: "Settled", moved: "Moved", quiet: "Quiet" }[f]}
-          </button>
-        ))}
-      </nav>}
-
-      {GROUPS.map((g) => {
-        const ts = visible.filter((t) => g.test(t, fy)).sort((a, b) => rank(a) - rank(b));
-        if (!ts.length) return null;
-        const folded = g.collapsed && !expanded.has(g.key) && filter === "all";
-        return (
-          <section key={g.key}>
-            <h2 className="section-title">{g.title} <span className="count">{ts.length}</span></h2>
-            {folded ? (
-              <button className="routine-toggle" onClick={() => setExpanded(new Set([...expanded, g.key]))}>
-                <span>{ts.length} targets due after FY{String(fy + 1).padStart(2, "0")}</span>
-                <span className="routine-kinds">{ts.slice(0, 3).map((t) => t.title).join(", ")}</span>
-                <span className="chev">▾</span>
-              </button>
-            ) : (
-              <div className="cards">
-                {ts.map((t) => <ThreadCard key={t.id} t={t} onOpen={() => go(`${base}/t/${t.id}`)} />)}
-              </div>
-            )}
-          </section>
-        );
-      })}
+      {(l.business || l.snapshot?.metrics.length) && (
+        <details className="more">
+          <summary>More about {short_}</summary>
+          {l.business && <BusinessView b={l.business} />}
+          {l.snapshot && l.snapshot.metrics.length > 0 && <SnapshotView m={l.snapshot.metrics} lender={l.snapshot.lender} />}
+        </details>
+      )}
 
       {open && <Sheet t={open} company={l.name} onClose={() => go(base)} />}
     </Shell>
+  );
+}
+
+// ---- results: what the latest quarter says -------------------------------------------
+
+/** One line from the numbers: what's going well, and where growth or margins are slipping. */
+function resultsSummary(h: Headline): string {
+  const row = (k: string) => h.rows.find((r) => r.label === k);
+  const p = (v: number) => `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  const good: string[] = [], watch: string[] = [];
+  const rev = row("Revenue"), pat = row("PAT");
+  if (rev?.yoy != null) {
+    const d = rev.prev_yoy != null ? rev.yoy - rev.prev_yoy : 0;
+    if (rev.yoy < 0) watch.push(`revenue down ${Math.abs(rev.yoy).toFixed(0)}% YoY`);
+    else if (d >= 3) good.push(`revenue growth up to ${p(rev.yoy)} from ${p(rev.prev_yoy!)}`);
+    else if (d <= -3) watch.push(`revenue growth slowed to ${p(rev.yoy)} from ${p(rev.prev_yoy!)}`);
+    else if (rev.yoy >= 10) good.push(`revenue ${p(rev.yoy)} YoY`);
+  }
+  if (pat?.yoy != null) {
+    if (pat.yoy < 0) watch.push(`PAT down ${Math.abs(pat.yoy).toFixed(0)}%`);
+    else if (rev?.yoy != null && pat.yoy >= rev.yoy + 5) good.push(`PAT ${p(pat.yoy)}, ahead of revenue`);
+    else if (pat.yoy >= 10) good.push(`PAT ${p(pat.yoy)}`);
+  }
+  const m = h.margin;
+  if (m?.now != null && m.year_ago != null) {
+    const d = m.now - m.year_ago;
+    if (d <= -0.5) watch.push(`EBITDA margin down ${Math.abs(d).toFixed(1)} pts to ${m.now.toFixed(1)}%`);
+    else if (d >= 0.5) good.push(`EBITDA margin up ${d.toFixed(1)} pts to ${m.now.toFixed(1)}%`);
+  }
+  const cap = (x: string) => x[0].toUpperCase() + x.slice(1);
+  const parts = [good.length && `Going well: ${good.join(", ")}`, watch.length && `Watch: ${watch.join(", ")}`].filter(Boolean);
+  return parts.length ? parts.join(". ") + "." : `${cap(resultsLine(h).split(": ")[1] ?? "")}; a steady quarter.`;
+}
+
+/** Guidance the latest numbers speak to: targets being paced, and anything moved on the last call. */
+function guidance(l: Ledger): Thread[] {
+  return l.threads.filter((t) => t.kind === "hard" && (
+    t.pace || (t.moved && t.events[t.events.length - 1]?.call === l.latest_call)
+  )).sort((a, b) => rank(a) - rank(b)).slice(0, 3);
+}
+
+function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) {
+  const chg = (v: number | null) => v === null ? "–" : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
+  const tone = (v: number | null) => v === null ? "" : v >= 0 ? "up" : "down";
+  const g = guidance(l);
+  return (
+    <section>
+      <h2 className="section-title">Results · {h.quarter}</h2>
+      <p className="results-summary">{resultsSummary(h)}</p>
+      <div className="headline">
+        <div className="hl-row hl-head"><span /><span /><span className="hl-yoy">YoY</span><span className="hl-qoq">QoQ</span></div>
+        {h.rows.map((r) => (
+          <div key={r.label} className="hl-row">
+            <span className="hl-label">{r.label}</span>
+            <span className="hl-val">₹{Math.round(r.value).toLocaleString("en-IN")} cr</span>
+            <span className={`hl-yoy ${tone(r.yoy)}`}>{chg(r.yoy)}</span>
+            <span className="hl-qoq">{chg(r.qoq)}</span>
+          </div>
+        ))}
+        {h.margin?.now != null && (
+          <div className="hl-row">
+            <span className="hl-label">Margin</span>
+            <span className="hl-val">{h.margin.now.toFixed(1)}%</span>
+            <span className={`hl-yoy ${h.margin.year_ago != null ? tone(h.margin.now - h.margin.year_ago) : ""}`}>
+              {h.margin.year_ago != null ? `${h.margin.now - h.margin.year_ago >= 0 ? "+" : ""}${(h.margin.now - h.margin.year_ago).toFixed(1)} pts` : "–"}
+            </span>
+            <span className="hl-qoq">{h.margin.prev != null ? `${h.margin.now - h.margin.prev >= 0 ? "+" : ""}${(h.margin.now - h.margin.prev).toFixed(1)} pts` : "–"}</span>
+          </div>
+        )}
+      </div>
+      {g.length > 0 && (
+        <div className="guidance">
+          {g.map((t) => (
+            <button key={t.id} className="guide-row" onClick={() => go(`${base}/t/${t.id}`)}>
+              <span className="guide-label">Guidance</span>
+              <span className="guide-text">{t.title}: {t.target}{t.pace ? ` · ${paceLine(t)}` : ""}
+                {t.moved && !t.pace ? ` · ${MOVE_VERB[t.events[t.events.length - 1].type].toLowerCase()} on the ${t.events[t.events.length - 1].call} call` : ""}</span>
+              <span className={`pill tone-${statusOf(t).tone}`}>{statusOf(t).label}</span>
+            </button>
+          ))}
+        </div>
+      )}
+      <Footnote>Consolidated results via screener.in. YoY compares with the same quarter last year; margin is EBITDA ÷ revenue.</Footnote>
+    </section>
   );
 }
 
@@ -518,7 +591,7 @@ function ThreadCard({ t, onOpen }: { t: Thread; onOpen: () => void }) {
         {t.moved ? <span className="moved-tag">moved</span> : null}
       </span>
       <span className="card-line">{oneLine(t)}</span>
-      {t.statements.length > 1 && <Trail t={t} />}
+      {t.moved && <Trail t={t} />}
     </button>
   );
 }
@@ -567,7 +640,7 @@ function Sheet({ t, company, onClose }: { t: Thread; company: string; onClose: (
         <div className={`verdict tone-border-${s.tone}`}>
           <span className={`pill tone-${s.tone}`}>{s.label}</span>
           <p className="verdict-line">{verdictLine(t)}</p>
-          {t.basis && <p className="basis">{t.basis === "financials"
+          {t.basis && <p className="footnote">{t.basis === "financials"
             ? "Checked against reported consolidated financials (screener.in)."
             : "Per management's own later statements; not independently verified."}</p>}
           {t.evidence?.quote && (

@@ -16,3 +16,6 @@ data/cache/
 
 # refresh marker (CI)
 .filings-stale
+
+# web build output
+web/dist/

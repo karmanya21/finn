@@ -11,7 +11,7 @@ from collections import Counter
 from datetime import date
 from typing import Callable
 
-from finn import business, financials, fiscal, snapshot
+from finn import business, financials, fiscal, push, snapshot
 from finn.config import OUT
 from finn.portfolio import by_symbol
 from finn.promises import evidence, extract, link, resolve
@@ -73,13 +73,17 @@ HEADLINE = [
 
 
 def headline(fin: financials.Financials) -> dict | None:
-    """Latest quarter's headline numbers, QoQ and YoY, straight from reported results."""
+    """Latest quarter's headline numbers, YoY and QoQ, straight from reported results, plus
+    what the app needs to say whether growth and margins are improving or slowing: last
+    quarter's YoY, and EBITDA margin now / a year ago / last quarter."""
     lq = fin.latest_quarter()
     if not lq:
         return None
     fy, q = lq
-    prev = (fy, q - 1) if q > 1 else (fy - 1, 4)
-    year_ago = (fy - 1, q)
+    def back(fy, q):
+        return (fy, q - 1) if q > 1 else (fy - 1, 4)
+    prev = back(fy, q)
+    year_ago, prev_year_ago = (fy - 1, q), (prev[0] - 1, prev[1])
 
     def chg(a, b):
         return None if a is None or not b else (a / b - 1) * 100 if b > 0 else None
@@ -90,10 +94,16 @@ def headline(fin: financials.Financials) -> dict | None:
         if not name:
             continue
         v = fin.q(fy, q, name)
-        rows.append({"label": label,
-                     "value": v, "qoq": chg(v, fin.q(*prev, name)), "yoy": chg(v, fin.q(*year_ago, name))})
-    return {"quarter": fiscal.label(fy, q), "rows": rows, "unit": "₹ cr",
-            "source": "screener.in, consolidated where published"}
+        rows.append({"label": label, "value": v,
+                     "qoq": chg(v, fin.q(*prev, name)), "yoy": chg(v, fin.q(*year_ago, name)),
+                     "prev_yoy": chg(fin.q(*prev, name), fin.q(*prev_year_ago, name))})
+
+    def margin(p):
+        e, s = fin.q(*p, "Operating Profit"), fin.q(*p, "Sales")
+        return None if e is None or not s else e / s * 100
+    m = {"label": "EBITDA margin", "now": margin((fy, q)), "year_ago": margin(year_ago), "prev": margin(prev)}
+    return {"quarter": fiscal.label(fy, q), "rows": rows, "margin": m if m["now"] is not None else None,
+            "unit": "₹ cr", "source": "screener.in, consolidated where published"}
 
 
 # ---- the ledger -----------------------------------------------------------------
@@ -178,6 +188,10 @@ def enrich(ledger: dict, slug: str, progress: Progress = _quiet) -> dict:
     except Exception:  # a missing or unreadable annual report shouldn't sink the record
         ledger["business"] = None
     ledger["snapshot"] = snapshot.build(slug)
+    try:  # 3 months of closes for the header sparkline (portfolio prices also refresh daily)
+        ledger["price"] = [[d, c] for d, c, _ in push.eod(ledger["symbol"], "3mo")]
+    except Exception:
+        ledger["price"] = None
     ledger["case"] = snapshot.case(ledger["name"], ledger, ledger["snapshot"])
     return ledger
 

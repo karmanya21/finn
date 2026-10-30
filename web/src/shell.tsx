@@ -18,7 +18,6 @@ export function Shell({ children, back, tab, action }: {
       <header className="top">
         {back ? <button className="back" onClick={() => history.length > 1 ? history.back() : go("/")} aria-label="Back">‹</button> : null}
         <a className="wordmark" href="#/">FINN</a>
-        <span className="tagline">promises, kept or not</span>
         {action ? <span className="top-action">{action}</span> : null}
       </header>
       <main>{children}</main>

@@ -1,9 +1,9 @@
 // Push: alerts against the user's own thresholds, and the filings digest.
 
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
-  ALERT_TYPES, AlertSettings, CompanySummary, Digest, FeedItem, Filing, Headline, Ledger, MoveAlert, Prices, Thread,
-  inWindow, loadDigest, loadLedger, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
+  ALERT_TYPES, AlertSettings, CompanySummary, Digest, Filing, Headline, Ledger, Prices, Thread,
+  feed, inWindow, loadDigest, loadLedger, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
 } from "./data";
 import { Shell, go } from "./shell";
 
@@ -41,69 +41,171 @@ function useThreads(index: CompanySummary[]): Map<string, Thread> {
   return m;
 }
 
-// ---- Today: one merged feed ---------------------------------------------------------
+// ---- Today: what needs attention, company by company ---------------------------------
 
-type Entry = { key: string; weight: number; node: (fresh: boolean) => React.ReactNode };
-const CAP = 8;
-const SEEN_KEY = "finn.seen.v2";
+/** One thing that happened: a price/volume alert, a filing, or a move in a promise. */
+export interface Update {
+  key: string; symbol: string; name: string; weight: number;
+  tag: string;        // what it is, in words ("Results", "Price", "Promise cut")
+  title: string;      // the one line that matters
+  line?: string;      // optional detail
+  tone?: "up" | "down";
+  open: () => void;
+}
 
-/** Price/volume alerts, filing alerts and promise moves, ranked together and capped.
- *  Ranking is by importance, with a nudge for the latest session. */
-export function TodayFeed({ index, promises, renderPromise, onSettings }: {
-  index: CompanySummary[]; promises: FeedItem[];
-  renderPromise: (i: FeedItem, fresh: boolean) => React.ReactNode; onSettings: () => void;
-}) {
+const SEEN_KEY = "finn.seen.v3";
+const RECENT_CALL_DAYS = 60;  // promise moves from older calls aren't news any more
+
+/** Every update in the alert window, grouped by company, most important first. */
+export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | null {
   const prices = useData<Prices>(loadPrices);
   const loaded = useData<Digest>(loadDigest);
   const digest = loaded === null ? NO_FILINGS : loaded;  // price alerts don't need filings
   const s = useSettings();
-  const names = useMemo(() => new Map(index.map((c) => [c.symbol, c.name])), [index]);
-  const [all, setAll] = useState(false);
+  const [ledgers, setLedgers] = useState<Ledger[] | null>(null);
+  useEffect(() => {
+    Promise.all(index.map((c) => loadLedger(c.symbol).catch(() => null)))
+      .then((ls) => setLedgers(ls.filter(Boolean) as Ledger[]));
+  }, [index]);
 
-  const entries = useMemo<Entry[]>(() => {
-    if (!prices || !digest) return [];
+  return useMemo(() => {
+    if (!prices || !digest || !ledgers) return null;
+    const names = new Map(index.map((c) => [c.symbol, c.name]));
     const dates = Object.values(prices.series)[0] || [];
     const lastSession = dates.length ? dates[dates.length - 1][0] : "";
     const cutoff = dates.length >= 5 ? dates[dates.length - 5][0] : "";
     const recent = (d: string) => (d >= lastSession ? 10 : 0);
-    const out: Entry[] = [];
+    const out = new Map<string, Update[]>(index.map((c) => [c.symbol, []]));
+    const add = (u: Update) => out.get(u.symbol)?.push(u);
+
     for (const m of moveAlerts(prices, s, 5, digest.items)) {
-      const w = (m.byPrice ? 55 + Math.min(Math.abs(m.pct), 15) * 2 : 45)
-        + (m.byVolume ? Math.min(m.volRatio, 6) * 3 : 0) + (m.reason ? 10 : 0) + recent(m.date);
-      out.push({ key: `m-${m.symbol}-${m.date}`, weight: w,
-        node: (fresh) => <MoveRow a={m} name={names.get(m.symbol) ?? m.symbol} fresh={fresh} /> });
+      const up = m.pct >= 0;
+      const what = [m.byPrice && `${up ? "+" : ""}${m.pct.toFixed(1)}% on ${fmtDate(m.date)}`,
+                    m.byVolume && `volume ${m.volRatio.toFixed(1)}× average`].filter(Boolean).join(" · ");
+      add({ key: `m-${m.symbol}-${m.date}`, symbol: m.symbol, name: names.get(m.symbol) ?? m.symbol,
+        weight: (m.byPrice ? 55 + Math.min(Math.abs(m.pct), 15) * 2 : 45) + (m.byVolume ? Math.min(m.volRatio, 6) * 3 : 0)
+          + (m.reason ? 10 : 0) + recent(m.date),
+        tag: m.byPrice ? "Price" : "Volume", title: what, tone: m.byPrice ? (up ? "up" : "down") : undefined,
+        line: m.reason ? `Same day: ${m.reason.type === "results" ? resultsHeadline(m.reason) : (m.reason.summary ?? cleanSubject(m.reason.subject))}`
+          : `Closed ₹${m.close.toLocaleString("en-IN")}; no material filing that day`,
+        open: () => go(`/c/${m.symbol}`) });
     }
     for (const f of digest.items) {
       if (f.routine || !s.types.includes(f.type) || f.at.slice(0, 10) < cutoff) continue;
       if (f.type === "management_change" && !f.senior) continue;  // only CEO, CFO, MD, Chair
-      out.push({ key: `f-${f.id}`, weight: f.importance + recent(f.at.slice(0, 10)),
-        node: (fresh) => <FilingAlertRow f={f} fresh={fresh} /> });
+      const yoy = f.numbers?.rows.find((r) => r.label === "PAT")?.yoy;
+      // Results without figures yet say little; let a real move or a cut outrank them.
+      const blank = f.type === "results" && !f.numbers ? 25 : 0;
+      add({ key: `f-${f.id}`, symbol: f.symbol, name: f.name, weight: f.importance + recent(f.at.slice(0, 10)) - blank,
+        tag: f.label, title: f.type === "results" ? resultsHeadline(f) : (f.summary ?? cleanSubject(f.subject)),
+        tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down") : undefined,
+        line: f.people.length ? peopleLine(f) : `Filed ${fmtDate(f.at)}`,
+        open: () => go(`/filings/${f.id}`) });
     }
-    for (const i of promises) {
-      out.push({ key: `p-${i.thread.id}|${i.headline}`, weight: i.weight, node: (fresh) => renderPromise(i, fresh) });
+    const latestCall = new Map(ledgers.map((l) => [l.symbol, l.latest_call]));
+    for (const i of feed(ledgers)) {
+      const call = latestCall.get(i.symbol);
+      if (!call || daysBetween(call, lastSession) > RECENT_CALL_DAYS) continue;
+      add({ key: `p-${i.thread.id}|${i.headline}`, symbol: i.symbol, name: i.name, weight: i.weight,
+        tag: i.tone === "missed" ? "Promise cut" : i.tone === "kept" ? "Promise kept" : i.tone === "quiet" ? "Gone quiet" : "Promise moved",
+        title: i.headline, line: i.line, tone: i.tone === "missed" ? "down" : i.tone === "kept" ? "up" : undefined,
+        open: () => go(`/c/${i.symbol}/t/${i.thread.id}`) });
     }
-    return out.sort((a, b) => b.weight - a.weight);
-  }, [prices, digest, s, promises, names]);
+    for (const list of out.values()) list.sort((a, b) => b.weight - a.weight);
+    return out;
+  }, [prices, digest, ledgers, s, index]);
+}
 
-  const seen = useSeenKeys(entries.map((e) => e.key));
-  if (!prices || !digest) return <p className="empty">Loading…</p>;
-  const fresh = entries.filter((e) => !seen.has(e.key)).length;
-  const shown = all ? entries : entries.slice(0, CAP);
+function daysBetween(callLabel: string, isoDate: string): number {
+  const [m, y] = callLabel.split(" ");
+  const call = new Date(`${m} 1, ${y}`).getTime();
+  return (new Date(isoDate || Date.now()).getTime() - call) / 86_400_000;
+}
+
+/** The Today grid: one tile per company, those needing attention first. */
+export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSettings: () => void }) {
+  const updates = useUpdates(index);
+  const s = useSettings();
+  const allKeys = useMemo(() => [...(updates?.values() ?? [])].flat().map((u) => u.key), [updates]);
+  const seen = useSeenKeys(allKeys);
+  if (!updates) return <p className="empty">Loading…</p>;
+
+  const tiles = index.map((c) => {
+    const us = updates.get(c.symbol) ?? [];
+    const fresh = seen.size > 0 ? us.filter((u) => !seen.has(u.key)).length : 0;
+    return { c, us, fresh, score: us.length ? us[0].weight + Math.min(us.length, 5) * 2 : -1 };
+  }).sort((a, b) => b.score - a.score);
+  const active = tiles.filter((t) => t.us.length);
+  const quiet = tiles.filter((t) => !t.us.length);
+
   return (
     <section>
-      <h2 className="section-title">Today</h2>
-      <p className="section-sub">
-        {seen.size === 0 ? "What needs you, most important first." : fresh ? `${fresh} new since you last looked.` : "Nothing new since you last looked."}
-        {" "}Alerts: volume ≥{s.volume}×, moves beyond ±{s.move}%, {s.types.length} filing types.{" "}
+      <h2 className="section-title">Needs attention <span className="count">{active.length}</span></h2>
+      <div className="tiles">
+        {active.map(({ c, us, fresh }) => (
+          <button key={c.symbol} className="tile" onClick={() => go(`/u/${c.symbol}`)}>
+            <span className="tile-top">
+              <span className="tile-name">{c.name}</span>
+              <span className="tile-count">{us.length}{fresh > 0 && <span className="new">{fresh} new</span>}</span>
+            </span>
+            <span className="tile-tag">{us[0].tag}</span>
+            <span className={`tile-line ${us[0].tone ?? ""}`}>{us[0].title}</span>
+          </button>
+        ))}
+      </div>
+      {quiet.length > 0 && (
+        <>
+          <h2 className="section-title quiet-title">Nothing new <span className="count">{quiet.length}</span></h2>
+          <div className="tiles quiet">
+            {quiet.map(({ c }) => (
+              <button key={c.symbol} className="tile muted" onClick={() => go(`/c/${c.symbol}`)}>
+                <span className="tile-name">{c.name}</span>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+      <Footnote>
+        Last 5 sessions. Alerts when volume is ≥{s.volume}× its 20-day average, a stock moves beyond ±{s.move}%,
+        or one of {s.types.length} filing types lands; promise moves from calls in the last 60 days.{" "}
         <button className="link" onClick={onSettings}>Change</button>
-      </p>
-      {entries.length === 0 ? <p className="quiet-note">Nothing crossed your thresholds. FINN is staying quiet.</p> : (
-        <div className="feed">{shown.map((e) => <Fragment key={e.key}>{e.node(seen.size > 0 && !seen.has(e.key))}</Fragment>)}</div>
-      )}
-      {entries.length > CAP && (
-        <button className="more" onClick={() => setAll(!all)}>{all ? "Show less" : `${entries.length - CAP} more, lower priority`}</button>
-      )}
+      </Footnote>
     </section>
+  );
+}
+
+/** One company's updates, most important first, with a way into its full record. */
+export function CompanyUpdates({ index, symbol }: { index: CompanySummary[]; symbol: string }) {
+  const updates = useUpdates(index);
+  const c = index.find((x) => x.symbol === symbol);
+  if (!updates) return <Shell back><p className="empty">Loading…</p></Shell>;
+  const us = updates.get(symbol) ?? [];
+  return (
+    <Shell back>
+      <section className="co-head">
+        <h1 className="co-title">{c?.name ?? symbol}</h1>
+        <PriceLine symbol={symbol} />
+      </section>
+      <section>
+        <h2 className="section-title">Updates <span className="count">{us.length}</span></h2>
+        {us.length === 0 ? <p className="quiet-note">Nothing new in the last 5 sessions.</p> : (
+          <div className="feed">{us.map((u) => <UpdateRow key={u.key} u={u} />)}</div>
+        )}
+        <button className="cta" onClick={() => go(`/c/${symbol}`)}>Open the full record →</button>
+      </section>
+    </Shell>
+  );
+}
+
+function UpdateRow({ u }: { u: Update }) {
+  return (
+    <button className="feed-row" onClick={u.open}>
+      <span className="feed-body">
+        <span className="feed-tag">{u.tag}</span>
+        <span className={`feed-head ${u.tone ?? ""}`}>{u.title}</span>
+        {u.line && <span className="feed-line">{u.line}</span>}
+      </span>
+    </button>
   );
 }
 
@@ -119,50 +221,65 @@ function useSeenKeys(keys: string[]): Set<string> {
   return before;
 }
 
-function MoveRow({ a, name, fresh }: { a: MoveAlert; name: string; fresh?: boolean }) {
-  const up = a.pct >= 0;
-  const what = [a.byPrice && `${up ? "+" : ""}${a.pct.toFixed(1)}% on the day`, a.byVolume && `volume ${a.volRatio.toFixed(1)}× average`]
-    .filter(Boolean).join(" · ");
+// ---- prices -------------------------------------------------------------------------
+
+/** Daily-refreshed portfolio prices; a searched company falls back to its record's series. */
+export function usePrices(): Prices | null {
+  return useData<Prices>(loadPrices) ?? null;
+}
+
+export function priceStats(rows: [string, number][] | undefined | null) {
+  if (!rows || rows.length < 2) return null;
+  const [, close] = rows[rows.length - 1], [, prev] = rows[rows.length - 2];
+  return { close, change: (close / prev - 1) * 100, date: rows[rows.length - 1][0] };
+}
+
+/** "₹3,017.30  +5.4%" with a 3-month sparkline. */
+export function PriceLine({ symbol, fallback }: { symbol: string; fallback?: [string, number][] | null }) {
+  const prices = usePrices();
+  const series = prices?.series[symbol]?.map(([d, c]) => [d, c] as [string, number]) ?? fallback ?? null;
+  const st = priceStats(series);
+  if (!series || !st) return null;
+  const last3m = series.slice(-63);
   return (
-    <button className="feed-row" onClick={() => go(`/c/${a.symbol}`)}>
-      <span className={`dot tone-${a.byPrice ? (up ? "kept" : "missed") : "live"}`} />
-      <span className="feed-body">
-        <span className="feed-co">{name} · {fmtDate(a.date)}{fresh && <span className="new">new</span>}</span>
-        <span className="feed-head">{what}</span>
-        <span className="feed-line">
-          Closed ₹{a.close.toLocaleString("en-IN")}
-          {a.reason ? ` · same day: ${a.reason.label.toLowerCase()}, ${a.reason.summary ?? a.reason.subject}` : " · no material filing that day"}
-        </span>
-      </span>
-    </button>
+    <div className="price-line">
+      <span className="price">₹{st.close.toLocaleString("en-IN", { maximumFractionDigits: 2 })}</span>
+      <span className={st.change >= 0 ? "up" : "down"}>{st.change >= 0 ? "+" : ""}{st.change.toFixed(1)}%</span>
+      <Sparkline ys={last3m.map(([, c]) => c)} />
+      <span className="price-date">{fmtDate(st.date)} close · 3 months</span>
+    </div>
   );
 }
 
-function FilingAlertRow({ f, fresh }: { f: Filing; fresh?: boolean }) {
-  const head = f.type === "results" ? resultsHeadline(f) : `${f.label}: ${f.summary ?? cleanSubject(f.subject)}`;
+function Sparkline({ ys, w = 96, h = 24 }: { ys: number[]; w?: number; h?: number }) {
+  if (ys.length < 2) return null;
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = hi - lo || 1;
+  const pts = ys.map((y, i) => `${((i / (ys.length - 1)) * w).toFixed(1)},${(h - 2 - ((y - lo) / span) * (h - 4)).toFixed(1)}`).join(" ");
   return (
-    <button className="feed-row" onClick={() => go(`/filings/${f.id}`)}>
-      <span className={`dot tone-${f.type === "litigation" ? "missed" : "moved"}`} />
-      <span className="feed-body">
-        <span className="feed-co">{f.name} · {fmtDate(f.at)}{fresh && <span className="new">new</span>}</span>
-        <span className="feed-head">{head}</span>
-        {f.type === "results" && f.summary && f.numbers && !/^Q\dFY\d{2} results$/.test(f.summary) &&
-          <span className="feed-line">{f.summary}</span>}
-        {f.people.length > 0 && <span className="feed-line">{peopleLine(f)}</span>}
-      </span>
-    </button>
+    <svg className={`spark ${ys[ys.length - 1] >= ys[0] ? "up" : "down"}`} width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden>
+      <polyline points={pts} fill="none" />
+    </svg>
   );
 }
 
-/** "Q2FY27: revenue +16% YoY · PAT +27%". A results alert should say how the quarter went. */
-function resultsHeadline(f: Filing): string {
-  const h = f.numbers;
-  if (!h) return f.summary ?? "Results";
+/** Small, muted source notes and caveats; the same style at the end of every section. */
+export function Footnote({ children }: { children: React.ReactNode }) {
+  return <p className="footnote">{children}</p>;
+}
+
+/** "Q2FY27: Revenue +16% YoY · PAT +27%". The one format for results everywhere. */
+export function resultsLine(h: Headline): string {
   const row = (l: string) => h.rows.find((r) => r.label === l);
   const pct = (v: number | null | undefined) => v == null ? null : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`;
   const rev = pct(row("Revenue")?.yoy), pat = pct(row("PAT")?.yoy);
-  const bits = [rev && `revenue ${rev} YoY`, pat && `PAT ${pat}`].filter(Boolean);
+  const bits = [rev && `Revenue ${rev} YoY`, pat && `PAT ${pat}`].filter(Boolean);
   return bits.length ? `${h.quarter}: ${bits.join(" · ")}` : `${h.quarter} results`;
+}
+
+function resultsHeadline(f: Filing): string {
+  if (f.numbers) return resultsLine(f.numbers);
+  const q = `${f.summary ?? ""} ${f.subject}`.match(/Q[1-4]\s?FY\s?\d{2}/i)?.[0].replace(/\s/g, "").toUpperCase();
+  return `${q ?? "Results"}: filed, figures not yet tabulated`;
 }
 
 // ---- settings ----------------------------------------------------------------------
@@ -243,7 +360,7 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
     <Shell tab="filings">
       <section>
         <h2 className="section-title">Filings</h2>
-        <p className="section-sub">Every exchange filing across your {index.length} companies, most important first. As of {fmtStamp(digest.built)}.</p>
+        <p className="section-sub">Every exchange filing across your {index.length} companies, most important first.</p>
         <div className="segmented wide">
           {WINDOWS.map(([label, h], i) => (
             <button key={label} className={h === hours ? "on" : ""} onClick={() => setHours(h)}>
@@ -267,7 +384,6 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
           <div className="feed">
             {notable.map((f) => (
               <a key={f.id} id={`f-${f.id}`} className={`feed-row ${f.id === openId ? "focus" : ""}`} href={f.pdf ?? undefined} target="_blank" rel="noreferrer">
-                <span className="dot tone-muted" />
                 <span className="feed-body">
                   <span className="feed-co">{f.name} · {f.label} · {ago(f.at, digest.built)}</span>
                   <span className="feed-line strong">{f.summary ?? cleanSubject(f.subject)}</span>
@@ -298,6 +414,10 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
           )}
         </section>
       )}
+      <Footnote>
+        From BSE corporate announcements, as of {fmtStamp(digest.built)}. Summaries and appointee profiles are read from
+        each filing's PDF; ranking is FINN's.
+      </Footnote>
     </Shell>
   );
 }
@@ -312,11 +432,10 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
       </div>
       <div className="filing-head">
         <span className={`pill kind-${f.type.replace(/[^a-z]/gi, "")}`}>{f.label}</span>
-        <span className="filing-title">{f.summary ?? cleanSubject(f.subject)}</span>
+        <span className="filing-title">{f.type === "results" ? resultsHeadline(f) : (f.summary ?? cleanSubject(f.subject))}</span>
       </div>
 
       {f.numbers && <Numbers h={f.numbers} />}
-      {f.type === "results" && !f.numbers && <p className="basis">Numbers not yet in the consolidated table; open the filing.</p>}
 
       {f.people.map((p, i) => {  // one person can appear twice, once per role
         const leaving = ["resigned", "retired", "ceased"].includes(p.change);
@@ -362,9 +481,8 @@ function PromiseChips({ ts, detail }: { ts: Thread[]; detail?: boolean }) {
         const sym = t.id.replace(/-\d+$/, "");
         return (
           <button key={t.id} className="pchip" onClick={() => go(`/c/${sym}/t/${t.id}`)}>
-            <span className={`pdot tone-${s.tone}`} />
             <span className="pchip-title">{t.title}{t.target ? ` · ${t.target}` : ""}</span>
-            {detail && <span className="pchip-status">{s.label}{t.pace ? `: ${t.pace.so_far_label} at ${t.pace.so_far.toFixed(1)}%` : ""}</span>}
+            <span className={`pchip-status tone-text-${s.tone}`}>{s.label}{detail && t.pace ? `: ${t.pace.so_far_label} at ${t.pace.so_far.toFixed(1)}%` : ""}</span>
           </button>
         );
       })}

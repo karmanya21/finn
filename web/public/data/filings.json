@@ -1,5 +1,5 @@
 {
- "built": "2026-10-30T16:49:11",
+ "built": "2026-10-30T17:01:26",
  "days": 30,
  "items": [
   {
@@ -38,19 +38,20 @@
    "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
    "headline": "Announcement under Regulation 30 of SEBI LODR- Change in Management",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/53529778-f611-4f21-b789-0bc1bf52e7e5.pdf",
-   "summary": "Dixon Technologies reported a consolidated revenue of Rs. 21,863 crores for the quarter ended September 30, 2026.",
+   "summary": "Dixon Technologies reported a consolidated quarterly revenue of Rs. 21,863 Crores and appointed Prithvi Vachani as Executive Director.",
    "people": [
     {
      "name": "Prithvi Vachani",
      "role": "Executive Director",
      "change": "appointed",
      "effective": "2026-10-30",
-     "profile": "Bentley University graduate and MBA from London Business School. Previously served as VP at Dixon, spearheaded Chennai facility, and managed key partnerships with boAt, Asus, HP, Jio, and Xiaomi.",
+     "profile": "Currently serving as Vice President. A 2017 graduate of Bentley University with an MBA from London Business School. Orchestrated collaboration with boAt, spearheaded Chennai facility, drove IT hardware division growth, and managed Jio and Xiaomi accounts.",
      "promises": []
     }
    ],
    "promises": [
-    "DIXON-50"
+    "DIXON-50",
+    "DIXON-48"
    ],
    "numbers": null,
    "senior": false,
@@ -148,7 +149,7 @@
    "subject": "Results - Financial Results For The Quarter And Half Year Ended September 30, 2026",
    "headline": "Result - Financial Results for the quarter and half year ended September 30, 2026",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/38413a36-f1cf-4992-834b-1108910d0ecf.pdf",
-   "summary": "Max Healthcare reported Q2 FY27 gross revenue of Rs 3,219 Cr, up 20% YoY, and PAT of Rs 448 Cr, up 10% YoY.",
+   "summary": "Max Healthcare reported Q2 revenue of ₹3,219 Cr up 20% YoY and PAT of ₹448 Cr up 10% YoY.",
    "people": [],
    "promises": [],
    "numbers": null,
@@ -312,27 +313,37 @@
       "label": "Revenue",
       "value": 5873.0,
       "qoq": 2.050390964378801,
-      "yoy": 21.897052718970535
+      "yoy": 21.897052718970535,
+      "prev_yoy": 17.857874257628502
      },
      {
       "label": "EBITDA",
       "value": 1057.0,
       "qoq": -5.540661304736371,
-      "yoy": 29.5343137254902
+      "yoy": 29.5343137254902,
+      "prev_yoy": 31.957547169811317
      },
      {
       "label": "PBT",
       "value": 619.0,
       "qoq": -10.54913294797688,
-      "yoy": 29.769392033542985
+      "yoy": 29.769392033542985,
+      "prev_yoy": 22.477876106194692
      },
      {
       "label": "PAT",
       "value": 468.0,
       "qoq": -9.652509652509655,
-      "yoy": 25.469168900804284
+      "yoy": 25.469168900804284,
+      "prev_yoy": 21.882352941176464
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 17.99761620977354,
+     "year_ago": 16.936488169364882,
+     "prev": 19.44396177237185
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -492,27 +503,37 @@
       "label": "Revenue",
       "value": 849.0,
       "qoq": 18.57541899441342,
-      "yoy": 0.8313539192398967
+      "yoy": 0.8313539192398967,
+      "prev_yoy": 11.874999999999991
      },
      {
       "label": "EBITDA",
       "value": 52.0,
       "qoq": 73.33333333333334,
-      "yoy": -7.14285714285714
+      "yoy": -7.14285714285714,
+      "prev_yoy": -3.2258064516129004
      },
      {
       "label": "PBT",
       "value": 36.0,
       "qoq": 71.42857142857142,
-      "yoy": 19.999999999999996
+      "yoy": 19.999999999999996,
+      "prev_yoy": 110.00000000000001
      },
      {
       "label": "PAT",
       "value": 23.0,
       "qoq": 91.66666666666667,
-      "yoy": 21.052631578947366
+      "yoy": 21.052631578947366,
+      "prev_yoy": 140.0
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 6.124852767962309,
+     "year_ago": 6.65083135391924,
+     "prev": 4.189944134078212
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -734,27 +755,37 @@
       "label": "Revenue",
       "value": 18226.0,
       "qoq": 5.103511908194447,
-      "yoy": 14.49211633896601
+      "yoy": 14.49211633896601,
+      "prev_yoy": 10.052675001586596
      },
      {
       "label": "EBITDA",
       "value": 4089.0,
       "qoq": 3.597669115784141,
-      "yoy": 8.117398202009518
+      "yoy": 8.117398202009518,
+      "prev_yoy": 8.463863698818352
      },
      {
       "label": "PBT",
       "value": 3814.0,
       "qoq": 5.011013215859039,
-      "yoy": 5.797503467406373
+      "yoy": 5.797503467406373,
+      "prev_yoy": 10.261080752884034
      },
      {
       "label": "PAT",
       "value": 2796.0,
       "qoq": 4.32835820895523,
-      "yoy": 3.786191536748329
+      "yoy": 3.786191536748329,
+      "prev_yoy": -3.1791907514450823
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 22.434982991331065,
+     "year_ago": 23.757773729505622,
+     "prev": 22.761086442535035
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -886,27 +917,37 @@
       "label": "Revenue",
       "value": 78750.0,
       "qoq": 15.90768596744281,
-      "yoy": 15.836079077429988
+      "yoy": 15.836079077429988,
+      "prev_yoy": 6.69451467516764
      },
      {
       "label": "EBITDA",
       "value": 8814.0,
       "qoq": 8.160510492084928,
-      "yoy": 3.5357688241512975
+      "yoy": 3.5357688241512975,
+      "prev_yoy": 1.5578265204386765
      },
      {
       "label": "PBT",
       "value": 7641.0,
       "qoq": 10.387171337763657,
-      "yoy": 20.596590909090917
+      "yoy": 20.596590909090917,
+      "prev_yoy": 18.122866894197955
      },
      {
       "label": "PAT",
       "value": 5949.0,
       "qoq": 19.2662389735365,
-      "yoy": 27.16973065412569
+      "yoy": 27.16973065412569,
+      "prev_yoy": 15.516442797591479
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 11.192380952380953,
+     "year_ago": 12.522064015062368,
+     "prev": 11.994053751729417
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -1143,27 +1184,37 @@
       "label": "Revenue",
       "value": 7404.0,
       "qoq": 4.003371260008426,
-      "yoy": -2.4377388325207527
+      "yoy": -2.4377388325207527,
+      "prev_yoy": 2.3285899094437346
      },
      {
       "label": "EBITDA",
       "value": 1388.0,
       "qoq": 16.442953020134233,
-      "yoy": -26.754617414248017
+      "yoy": -26.754617414248017,
+      "prev_yoy": -32.95838020247469
      },
      {
       "label": "PBT",
       "value": 1177.0,
       "qoq": 8.780036968576699,
-      "yoy": -36.515641855447676
+      "yoy": -36.515641855447676,
+      "prev_yoy": -38.87005649717514
      },
      {
       "label": "PAT",
       "value": 852.0,
       "qoq": 8.3969465648855,
-      "yoy": -37.02882483370288
+      "yoy": -37.02882483370288,
+      "prev_yoy": -39.1640866873065
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 18.74662344678552,
+     "year_ago": 24.97035182500988,
+     "prev": 16.743924708526478
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -1417,21 +1468,25 @@
       "label": "Revenue",
       "value": 95132.0,
       "qoq": 5.0311896218603325,
-      "yoy": 9.354668138032519
+      "yoy": 9.354668138032519,
+      "prev_yoy": 3.6659341665522094
      },
      {
       "label": "PBT",
       "value": 28663.0,
       "qoq": 5.405802963998085,
-      "yoy": 7.51716118384036
+      "yoy": 7.51716118384036,
+      "prev_yoy": 30.422062350119905
      },
      {
       "label": "PAT",
       "value": 21537.0,
       "qoq": 5.661580729038906,
-      "yoy": 5.7601649970536295
+      "yoy": 5.7601649970536295,
+      "prev_yoy": 19.268578115857228
      }
     ],
+    "margin": null,
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -1590,27 +1645,37 @@
       "label": "Revenue",
       "value": 49244.0,
       "qoq": 2.1426645371388275,
-      "yoy": 10.685547314003152
+      "yoy": 10.685547314003152,
+      "prev_yoy": 14.030606211121356
      },
      {
       "label": "EBITDA",
       "value": 11689.0,
       "qoq": 2.45420282233324,
-      "yoy": 10.953962980541053
+      "yoy": 10.953962980541053,
+      "prev_yoy": 14.744041033893197
      },
      {
       "label": "PBT",
       "value": 11063.0,
       "qoq": 0.3173739571998624,
-      "yoy": 8.15328966663409
+      "yoy": 8.15328966663409,
+      "prev_yoy": 13.223819301848039
      },
      {
       "label": "PAT",
       "value": 7838.0,
       "qoq": 0.8102893890675311,
-      "yoy": 6.2779661016949095
+      "yoy": 6.2779661016949095,
+      "prev_yoy": 12.290583477758531
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 23.736901957598896,
+     "year_ago": 23.679478534502135,
+     "prev": 23.664723818215762
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -1889,27 +1954,37 @@
       "label": "Revenue",
       "value": 24138.0,
       "qoq": 19.430013359061892,
-      "yoy": 77.6158940397351
+      "yoy": 77.6158940397351,
+      "prev_yoy": 182.00083717036418
      },
      {
       "label": "EBITDA",
       "value": 752.0,
       "qoq": 26.599326599326602,
-      "yoy": 214.64435146443518
+      "yoy": 214.64435146443518,
+      "prev_yoy": 416.5217391304348
      },
      {
       "label": "PBT",
       "value": 323.0,
       "qoq": 18.75,
-      "yoy": 150.3875968992248
+      "yoy": 150.3875968992248,
+      "prev_yoy": 209.0909090909091
      },
      {
       "label": "PAT",
       "value": 125.0,
       "qoq": 35.86956521739131,
-      "yoy": 92.3076923076923
+      "yoy": 92.3076923076923,
+      "prev_yoy": 268.0
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 3.115419670229514,
+     "year_ago": 1.7586460632818248,
+     "prev": 2.938993617337094
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -2216,21 +2291,25 @@
       "label": "Revenue",
       "value": 24546.0,
       "qoq": 5.961579969781994,
-      "yoy": 22.791395697848916
+      "yoy": 22.791395697848916,
+      "prev_yoy": 18.64884245031755
      },
      {
       "label": "PBT",
       "value": 8537.0,
       "qoq": 4.761320407411951,
-      "yoy": 29.191888619854712
+      "yoy": 29.191888619854712,
+      "prev_yoy": 27.967964824120607
      },
      {
       "label": "PAT",
       "value": 6367.0,
       "qoq": 4.703173820095374,
-      "yoy": 28.67825383993532
+      "yoy": 28.67825383993532,
+      "prev_yoy": 27.618048268625394
      }
     ],
+    "margin": null,
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -2290,27 +2369,37 @@
       "label": "Revenue",
       "value": 49244.0,
       "qoq": 2.1426645371388275,
-      "yoy": 10.685547314003152
+      "yoy": 10.685547314003152,
+      "prev_yoy": 14.030606211121356
      },
      {
       "label": "EBITDA",
       "value": 11689.0,
       "qoq": 2.45420282233324,
-      "yoy": 10.953962980541053
+      "yoy": 10.953962980541053,
+      "prev_yoy": 14.744041033893197
      },
      {
       "label": "PBT",
       "value": 11063.0,
       "qoq": 0.3173739571998624,
-      "yoy": 8.15328966663409
+      "yoy": 8.15328966663409,
+      "prev_yoy": 13.223819301848039
      },
      {
       "label": "PAT",
       "value": 7838.0,
       "qoq": 0.8102893890675311,
-      "yoy": 6.2779661016949095
+      "yoy": 6.2779661016949095,
+      "prev_yoy": 12.290583477758531
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 23.736901957598896,
+     "year_ago": 23.679478534502135,
+     "prev": 23.664723818215762
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -2440,27 +2529,37 @@
       "label": "Revenue",
       "value": 23295.0,
       "qoq": -5.489289191820834,
-      "yoy": 18.80960881317897
+      "yoy": 18.80960881317897,
+      "prev_yoy": 15.854289071680384
      },
      {
       "label": "EBITDA",
       "value": 3719.0,
       "qoq": -25.84247258225324,
-      "yoy": 20.39494982194885
+      "yoy": 20.39494982194885,
+      "prev_yoy": 13.822060826146165
      },
      {
       "label": "PBT",
       "value": 2059.0,
       "qoq": -40.833333333333336,
-      "yoy": 24.33574879227054
+      "yoy": 24.33574879227054,
+      "prev_yoy": 15.691489361702127
      },
      {
       "label": "PAT",
       "value": 1501.0,
       "qoq": -42.357910906298,
-      "yoy": 21.243941841680126
+      "yoy": 21.243941841680126,
+      "prev_yoy": 17.244484466456544
      }
     ],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 15.964799313157329,
+     "year_ago": 15.754577446830215,
+     "prev": 20.34647841609867
+    },
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -2593,21 +2692,25 @@
       "label": "Revenue",
       "value": 95132.0,
       "qoq": 5.0311896218603325,
-      "yoy": 9.354668138032519
+      "yoy": 9.354668138032519,
+      "prev_yoy": 3.6659341665522094
      },
      {
       "label": "PBT",
       "value": 28663.0,
       "qoq": 5.405802963998085,
-      "yoy": 7.51716118384036
+      "yoy": 7.51716118384036,
+      "prev_yoy": 30.422062350119905
      },
      {
       "label": "PAT",
       "value": 21537.0,
       "qoq": 5.661580729038906,
-      "yoy": 5.7601649970536295
+      "yoy": 5.7601649970536295,
+      "prev_yoy": 19.268578115857228
      }
     ],
+    "margin": null,
     "unit": "₹ cr",
     "source": "screener.in, consolidated where published"
    },
@@ -3313,7 +3416,7 @@
    "label": "Update",
    "subject": "Company Statement On The U.S. Permanent Labor Certification Program",
    "headline": "Company statement on the U.S Permanent Labor Certification Program",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8c46593f-8874-4274-a9e6-2f350d7d7da8.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c46593f-8874-4274-a9e6-2f350d7d7da8.pdf",
    "summary": "Infosys does not expect the US Department of Labor's suspension of its PERM applications to have a material impact.",
    "people": [],
    "promises": [],
@@ -3385,7 +3488,7 @@
    "label": "M&A",
    "subject": "Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
    "headline": "please refer to enclosed file",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ac5c0cc3-da3a-49b5-8986-f721ef92322b.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ac5c0cc3-da3a-49b5-8986-f721ef92322b.pdf",
    "summary": "Embraer S.A. will acquire a 51% equity stake in Novavayu Aerospace Limited from Mahindra & Mahindra for approximately Rs 5,10,000.",
    "people": [],
    "promises": [],
@@ -4233,7 +4336,7 @@
    "label": "Fund raise",
    "subject": "Announcement under Regulation 30 (LODR)-Preferential Issue",
    "headline": "Capital Raise through Preferential Issue",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/50fbec1c-9852-4043-9020-d9df179271d5.pdf",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/50fbec1c-9852-4043-9020-d9df179271d5.pdf",
    "summary": "Bajaj Finance approved raising up to Rs. 11,700 crore via QIP and Rs. 5,800 crore via preferential issue of warrants.",
    "people": [],
    "promises": [],

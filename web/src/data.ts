@@ -79,7 +79,8 @@ export interface Headline {
   quarter: string;
   unit: string;
   source: string;
-  rows: { label: string; value: number; qoq: number | null; yoy: number | null }[];
+  rows: { label: string; value: number; qoq: number | null; yoy: number | null; prev_yoy?: number | null }[];
+  margin?: { label: string; now: number | null; year_ago: number | null; prev: number | null } | null;
 }
 
 export interface Metric {
@@ -100,6 +101,7 @@ export interface Ledger extends CompanySummary {
   snapshot?: { lender: boolean; metrics: Metric[] };
   case?: { bull: CasePoint[]; bear: CasePoint[] };
   business?: Business | null;
+  price?: [string, number][] | null; // 3 months of closes, for companies outside the daily price file
   calls: { call: string; quarter: string; url: string | null; promises: number }[];
   threads: Thread[];
 }
