@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayGrid, priceStats, resultsLine, useNewerResults, usePrices } from "./push";
 import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
-import { Shell, go } from "./shell";
+import { Shell, closeTo, go } from "./shell";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
   loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
@@ -295,22 +295,23 @@ function useShipped(index: CompanySummary[]): Shipped[] {
 function SearchBar({ index }: { index: CompanySummary[] }) {
   const [q, setQ] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [busy, setBusy] = useState(false);
+  const [doneFor, setDoneFor] = useState("");  // the query `results` answer
   const [offline, setOffline] = useState(false);
   const shipped = useShipped(index);
   useEffect(() => {
     if (q.trim().length < 2) { setResults([]); return; }
-    setBusy(true);
+    let live = true;  // a slower, older search mustn't overwrite a newer one
     const id = setTimeout(() => {
-      searchCompanies(q.trim()).then((r) => { setResults(r); setOffline(false); })
+      searchCompanies(q.trim()).then((r) => { if (live) { setResults(r); setOffline(false); } })
         .catch(() => {  // API down: match what's already built
+          if (!live) return;
           const k = q.trim().toLowerCase();
           setOffline(true);
           setResults(shipped.filter((c) => c.name.toLowerCase().includes(k) || c.symbol.toLowerCase().includes(k))
             .map((c) => ({ symbol: c.symbol, name: c.name, ready: true })));
-        }).finally(() => setBusy(false));
+        }).finally(() => { if (live) setDoneFor(q.trim()); });
     }, 250);
-    return () => clearTimeout(id);
+    return () => { live = false; clearTimeout(id); };
   }, [q, shipped.length]);
 
   return (
@@ -330,7 +331,7 @@ function SearchBar({ index }: { index: CompanySummary[] }) {
             </button>
           ))}
           {offline && <p className="sr-empty">Live research is offline; showing companies FINN has already built.</p>}
-          {!busy && !results.length && <p className="sr-empty">{offline ? `None of them match “${q.trim()}”.` : `No listed company matches “${q.trim()}”.`}</p>}
+          {doneFor === q.trim() && !results.length && <p className="sr-empty">{offline ? `None of them match “${q.trim()}”.` : `No listed company matches “${q.trim()}”.`}</p>}
         </div>
       )}
     </div>
@@ -531,7 +532,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
         </details>
       )}
 
-      {open && <Sheet t={open} company={l.name} onClose={() => go(base)} />}
+      {open && <Sheet t={open} company={l.name} onClose={() => closeTo(base)} />}
     </Shell>
   );
 }

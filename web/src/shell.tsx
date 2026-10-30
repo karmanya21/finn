@@ -1,6 +1,21 @@
 // App chrome shared by every screen: header, bottom tab bar, hash navigation.
 
-export const go = (path: string) => { window.location.hash = path; };
+const here = () => window.location.hash.replace(/^#/, "") || "/";
+
+/** Navigate, remembering where from, so a sheet can close by stepping back. */
+export const go = (path: string) => {
+  const from = here();
+  window.location.hash = path;
+  history.replaceState({ from }, "");
+};
+
+/** Leave an overlay (a promise sheet) for `path` without adding a history entry: step back
+ *  if that's where we came from, else swap this entry for it. Back then lands where the
+ *  user was before, not on the sheet again. */
+export const closeTo = (path: string) => {
+  if (history.state?.from === path) history.back();
+  else window.location.replace(`#${path}`);
+};
 
 export type Tab = "today" | "filings" | "portfolio";
 
