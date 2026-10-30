@@ -51,13 +51,6 @@
  {
   "level": "info",
   "check": "results-behind-peers",
-  "symbol": "DIXON",
-  "ref": null,
-  "message": "latest results Q1FY27; most companies are on Q2FY27"
- },
- {
-  "level": "info",
-  "check": "results-behind-peers",
   "symbol": "M&M",
   "ref": null,
   "message": "latest results Q1FY27; most companies are on Q2FY27"
@@ -66,20 +59,6 @@
   "level": "info",
   "check": "results-behind-peers",
   "symbol": "TATAPOWER",
-  "ref": null,
-  "message": "latest results Q1FY27; most companies are on Q2FY27"
- },
- {
-  "level": "info",
-  "check": "results-behind-peers",
-  "symbol": "BEL",
-  "ref": null,
-  "message": "latest results Q1FY27; most companies are on Q2FY27"
- },
- {
-  "level": "info",
-  "check": "results-behind-peers",
-  "symbol": "MAXHEALTH",
   "ref": null,
   "message": "latest results Q1FY27; most companies are on Q2FY27"
  },

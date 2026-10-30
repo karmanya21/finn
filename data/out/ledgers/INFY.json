@@ -617,6 +617,20 @@
     "status": "on_pace",
     "measure": "EBIT margin"
    },
+   "check": {
+    "kind": "hard",
+    "metric": "operating_margin",
+    "metric_label": "Operating margin",
+    "quote": "Our operating margin guidance remains at 20% to 22% for the year.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 20.0,
+    "high": 22.0,
+    "period": "FY27",
+    "deadline": null,
+    "direction": null
+   },
    "statements": [
     {
      "call": "Apr 2026",
@@ -750,6 +764,20 @@
     "so_far_label": "H1FY27",
     "status": "on_pace",
     "measure": "tax rate"
+   },
+   "check": {
+    "kind": "hard",
+    "metric": "other",
+    "metric_label": "Effective tax rate",
+    "quote": "We expect effective tax rate for the year to be in the range of 29% to 30%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 29.0,
+    "high": 30.0,
+    "period": "FY27",
+    "deadline": null,
+    "direction": null
    },
    "statements": [
     {

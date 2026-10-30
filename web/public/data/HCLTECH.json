@@ -563,6 +563,20 @@
     "status": "on_pace",
     "measure": "EBIT margin"
    },
+   "check": {
+    "kind": "hard",
+    "metric": "operating_margin",
+    "metric_label": "EBIT margin",
+    "quote": "Our FY27 growth guidance is now 2.5% to 4%, and our EBIT margin guidance remains at 17.5% to 18.5%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 17.5,
+    "high": 18.5,
+    "period": "FY27",
+    "deadline": null,
+    "direction": null
+   },
    "statements": [
     {
      "call": "Apr 2026",

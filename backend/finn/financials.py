@@ -5,10 +5,15 @@ always show its working: which quarters, which line, what sum.
 """
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from finn import fiscal
 from finn.sources import screener
+
+
+# A filing's headline rows, in screener's row names. No tax or depreciation: measures that
+# need them stop at the last quarter screener has.
+FILED_ROWS = {"Revenue": "Sales", "EBITDA": "Operating Profit", "PBT": "Profit before tax", "PAT": "Net Profit"}
 
 
 @dataclass
@@ -17,6 +22,21 @@ class Financials:
     quarters: dict[tuple[int, int], dict[str, float]] = field(default_factory=dict)  # (fy, q) -> row -> value
     annual: dict[int, dict[str, float]] = field(default_factory=dict)  # fy -> row -> value
     balance: dict[int, dict[str, float]] = field(default_factory=dict)  # fy (Mar year-end) -> row -> value
+    filed: set[tuple[int, int]] = field(default_factory=set)  # quarters read from a results filing, not screener
+
+    def with_filing(self, numbers: dict | None) -> "Financials":
+        """A copy with the quarter a results filing reported, when it's the one right after
+        screener's latest. Promise progress then counts the results the app already shows
+        (BEL's Q2FY27 filing was out while progress still read Q1FY27)."""
+        m = re.fullmatch(r"Q([1-4])FY(\d{2})", (numbers or {}).get("quarter") or "")
+        if not m or "filing" not in (numbers.get("source") or "") or not self.quarters:
+            return self
+        fy, q = max(self.quarters)
+        if (int(m.group(2)), int(m.group(1))) != ((fy, q + 1) if q < 4 else (fy + 1, 1)):
+            return self
+        rows = {FILED_ROWS[r["label"]]: r["value"] for r in numbers["rows"] if r["label"] in FILED_ROWS}
+        nxt = (int(m.group(2)), int(m.group(1)))
+        return replace(self, quarters={**self.quarters, nxt: rows}, filed=self.filed | {nxt})
 
     # ---- quarters -------------------------------------------------------
     def latest_quarter(self) -> tuple[int, int] | None:

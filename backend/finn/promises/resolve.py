@@ -311,6 +311,9 @@ def financial_check(p: dict, fin: Financials) -> dict | None:
     if not done:
         return None
     v = fn(fin, period.fy, done)
+    while v is None and len(done) > 1 and (period.fy, done[-1]) in fin.filed:
+        done = done[:-1]  # the filing has no figure for this measure (tax, depreciation)
+        v = fn(fin, period.fy, done)
     if v is None:
         return None
     if len(done) == len(period.quarters):
@@ -338,6 +341,27 @@ def reference(p: dict, fin: Financials) -> str | None:
     return None
 
 
+CHECK_FIELDS = ("kind", "metric", "metric_label", "quote", "unit", "basis", "scope", "low", "high",
+                "period", "deadline", "direction")
+
+
+def refresh_pace(ledger: dict, fin: Financials) -> int:
+    """Re-read progress on promises still running against newer financials, with no model
+    calls: the daily filings refresh uses it when a results filing beats screener. Only
+    pace moves; a verdict waits for the full rebuild. Returns how many threads changed."""
+    n = 0
+    for t in ledger["threads"]:
+        if not t.get("check") or not t.get("pace"):
+            continue
+        fc = financial_check(t["check"], fin)
+        if fc and fc.get("pace") and fc["pace"] != t["pace"]:
+            t["pace"], n = fc["pace"], n + 1
+    lq = fin.latest_quarter()
+    if lq:
+        ledger["latest_results"] = fiscal.label(*lq)
+    return n
+
+
 # ---- the verdict ---------------------------------------------------------------
 
 def needs_evidence(p: dict, fin: Financials) -> bool:
@@ -348,7 +372,9 @@ def needs_evidence(p: dict, fin: Financials) -> bool:
 
 
 def verdict(stmts: list[dict], events: list[dict], fin: Financials, n_calls: int,
-            evidence: dict | None) -> dict:
+            evidence: dict | None, heard_through: tuple[int, int] | None = None) -> dict:
+    """`heard_through`: the quarter the latest call reported on. Silence about a period only
+    counts once a call after it has gone by: results can be filed weeks before the call."""
     p = stmts[-1]
     period = parse_period(p.get("deadline") or p.get("period"))
     latest = fin.latest_quarter()
@@ -392,7 +418,7 @@ def verdict(stmts: list[dict], events: list[dict], fin: Financials, n_calls: int
     # Silence. Only numbers and milestones can "go quiet"; a passing directional remark
     # whose period ended unremarked has merely lapsed, which isn't worth an accusation.
     quiet = "gone_quiet" if p["kind"] in ("hard", "milestone") else "lapsed"
-    if ended and silent_calls >= 1:
+    if ended and silent_calls >= 1 and (heard_through is None or heard_through >= period.end):
         return {"status": quiet, "basis": None,
                 "detail": f"Period ended; no update in later calls (last said {p['call']})"}
     # Dropped: repeated, then dropped. A one-off remark that hasn't come due yet stays open;

@@ -91,12 +91,12 @@
   "missed": 0,
   "resolved": 3,
   "moved": 2,
-  "quiet": 3,
-  "open": 7,
+  "quiet": 2,
+  "open": 8,
   "by_status": {
    "delivered": 3,
-   "open": 4,
-   "gone_quiet": 3,
+   "open": 5,
+   "gone_quiet": 2,
    "on_track": 2,
    "behind": 1
   }
@@ -526,8 +526,7 @@
    "direction": null,
    "moved": false,
    "events": [],
-   "status": "gone_quiet",
-   "detail": "Period ended; no update in later calls (last said Jan 2026)",
+   "status": "open",
    "statements": [
     {
      "call": "Jan 2026",
@@ -1337,28 +1336,44 @@
  "case": {
   "bull": [
    {
-    "figure": "Operating margin FY22 to FY26 21%",
-    "point": "Operating margin remained stable at 21% from FY22 to FY26.",
+    "figure": "Operating margin 21%",
+    "point": "Operating margin held steady at 21% from FY22 to FY26, demonstrating stable profitability.",
     "refs": [
      "margin"
+    ]
+   },
+   {
+    "figure": "Net cash ₹693 cr",
+    "point": "The company maintains a strong balance sheet with ₹693 cr of net cash in FY26.",
+    "refs": [
+     "debt"
     ]
    }
   ],
   "bear": [
    {
-    "figure": "North America generic Advair launch: due Q4FY26, gone quiet",
-    "point": "Several promises went quiet with no updates provided after their periods ended.",
+    "figure": "FY26 India revenue growth, lapsed",
+    "point": "Several commitments such as FY26 India revenue growth and generic Advair launch lapsed or went quiet without updates.",
     "refs": [
+     "CIPLA-2",
+     "CIPLA-4",
      "CIPLA-6",
      "CIPLA-7",
-     "CIPLA-11"
+     "CIPLA-9"
     ]
    },
    {
-    "figure": "Last 12 months profit growth -43%",
-    "point": "Profit experienced a significant decline of 43% over the last 12 months.",
+    "figure": "Profit growth -43%",
+    "point": "Profit dropped significantly with a negative 43% growth rate over the last 12 months.",
     "refs": [
      "profit_growth"
+    ]
+   },
+   {
+    "figure": "FY27 trade generics launches: 17 target, behind",
+    "point": "Management reported being behind the target of 17 trade generics launches for FY27.",
+    "refs": [
+     "CIPLA-16"
     ]
    }
   ]

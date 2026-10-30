@@ -9,8 +9,9 @@ Run after build_all so filings can be read against each company's promise record
 import json
 import sys
 
-from finn import push
-from finn.portfolio import PORTFOLIO
+from finn import financials, push, research
+from finn.portfolio import PORTFOLIO, by_symbol
+from finn.promises import resolve
 
 from scripts.build_ledger import WEB_DATA
 
@@ -39,8 +40,34 @@ def main(what: list[str]) -> None:
         push.write(WEB_DATA / "filings.json", digest)
         n = len(digest["items"])
         print(f"filings: {n} items, {sum(not i['routine'] for i in digest['items'])} material")
+        refresh_progress(ledgers)
     from scripts import audit  # every build ends with the invariant checks
     audit.main([])
+
+
+def refresh_progress(ledgers: dict[str, dict]) -> None:
+    """Results filed today should move promise progress today, not at the next full rebuild
+    (which this daily job doesn't run). No model calls: only the pace on running promises."""
+    changed = False
+    for sym, l in ledgers.items():
+        nums = research.filed_results(sym)
+        if not nums or nums["quarter"] == l.get("latest_results") or not any(t.get("check") for t in l["threads"]):
+            continue
+        try:
+            c = by_symbol(sym)
+            fin = financials.load(sym, c.slug if c else None).with_filing(nums)
+        except Exception as e:
+            print(f"  progress {sym:<11} FAILED {type(e).__name__}: {str(e)[:100]}", flush=True)
+            continue
+        if not fin.filed:
+            continue  # screener caught up, or the filing isn't the next quarter
+        n = resolve.refresh_pace(l, fin)
+        (WEB_DATA / f"{sym}.json").write_text(json.dumps(l, indent=1, ensure_ascii=False))
+        changed = True
+        print(f"  progress {sym:<11} {n} promise(s) re-read with {nums['quarter']} from the filing", flush=True)
+    if changed:
+        from scripts.build_all import write_index
+        write_index()
 
 
 if __name__ == "__main__":

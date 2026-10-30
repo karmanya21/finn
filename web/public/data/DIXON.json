@@ -5,7 +5,7 @@
  "size": "mid",
  "built": "2026-10-30",
  "latest_call": "Aug 2026",
- "latest_results": "Q1FY27",
+ "latest_results": "Q2FY27",
  "headline": {
   "quarter": "Q1FY27",
   "rows": [
@@ -1894,13 +1894,27 @@
    "events": [],
    "status": "tracking",
    "pace": {
-    "so_far": 21.128077282642565,
-    "so_far_label": "Q1FY27",
-    "needs": 12.817303956934346,
-    "needs_label": "Q2–Q4FY27",
+    "so_far": 34.85117908345672,
+    "so_far_label": "H1FY27",
+    "needs": -10.950007081149982,
+    "needs_label": "H2FY27",
     "needs_for": 15,
     "status": "ahead",
     "measure": "revenue growth"
+   },
+   "check": {
+    "kind": "hard",
+    "metric": "revenue_growth",
+    "metric_label": "Revenue growth",
+    "quote": "We feel that without the Vivo also, the company will keep growing at almost 15% to 17%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 15,
+    "high": 17,
+    "period": "FY27",
+    "deadline": null,
+    "direction": "up"
    },
    "statements": [
     {
@@ -2586,22 +2600,23 @@
  "case": {
   "bull": [
    {
-    "figure": "Mobile and EMS revenue target ₹7,500–8,000 cr: beat",
-    "point": "The company significantly outperformed its revenue target for the mobile and EMS business segment.",
+    "figure": "Q Tech transaction financial consolidation: due Q3FY26, kept",
+    "point": "Management successfully delivered on key milestones like desktop manufacturing and Q Tech transaction financial consolidation.",
     "refs": [
-     "DIXON-38"
+     "DIXON-15",
+     "DIXON-30"
     ]
    },
    {
-    "figure": "ROCE 29% in FY26: up from 23% in FY22",
-    "point": "Capital efficiency has improved steadily over the last five years, demonstrating strong operational execution.",
+    "figure": "ROCE 29%",
+    "point": "Return on capital employed improved significantly to 29% in FY26 compared to 23% in FY22.",
     "refs": [
      "returns"
     ]
    },
    {
-    "figure": "Net debt ₹53 cr: 0.01x equity",
-    "point": "The company has successfully deleveraged its balance sheet, reducing net debt from ₹485 cr in FY22.",
+    "figure": "Net debt ₹53 cr",
+    "point": "Net debt dropped sharply to just ₹53 cr in FY26, representing a negligible 0.01x equity.",
     "refs": [
      "debt"
     ]
@@ -2609,23 +2624,20 @@
   ],
   "bear": [
    {
-    "figure": "Smartphone volume target 55–60: gone quiet",
-    "point": "Management stopped providing updates on key volume targets after mentioning them twice, reducing visibility.",
+    "figure": "FATL Tirupati capacity expansion: due Q3FY26, delayed",
+    "point": "The company experienced noticeable delays in facility operations such as the Tirupati capacity expansion and smartphone JV facility.",
     "refs": [
-     "DIXON-2"
+     "DIXON-16",
+     "DIXON-27"
     ]
    },
    {
-    "figure": "Inventec JV operations: Q1FY27 → Q4FY27",
-    "point": "The timeline for the Inventec JV facility has been repeatedly pushed back, indicating execution delays.",
+    "figure": "Cooling division revenue growth: 50% target, gone quiet",
+    "point": "A substantial number of guidance targets and project timelines went quiet without updates after their periods ended.",
     "refs": [
-     "DIXON-17"
-    ]
-   },
-   {
-    "figure": "Capital expenditure target ₹1,100–1,200 cr: gone quiet",
-    "point": "The company failed to provide updates on its capital expenditure target after the fiscal year ended.",
-    "refs": [
+     "DIXON-1",
+     "DIXON-2",
+     "DIXON-3",
      "DIXON-5"
     ]
    }

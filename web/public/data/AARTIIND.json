@@ -774,6 +774,20 @@
     "status": "on_pace",
     "measure": "tax rate"
    },
+   "check": {
+    "kind": "hard",
+    "metric": "other",
+    "metric_label": "Tax rate",
+    "quote": "On the tax rate, I anticipate FY '27, we should be somewhere at a number below 15%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": null,
+    "high": 15,
+    "period": "FY27",
+    "deadline": null,
+    "direction": "down"
+   },
    "statements": [
     {
      "call": "Nov 2025",

@@ -5,7 +5,7 @@
  "size": "large",
  "built": "2026-10-30",
  "latest_call": "Jul 2026",
- "latest_results": "Q1FY27",
+ "latest_results": "Q2FY27",
  "headline": {
   "quarter": "Q1FY27",
   "rows": [
@@ -1304,13 +1304,27 @@
    ],
    "status": "tracking",
    "pace": {
-    "so_far": 24.93243243243244,
-    "so_far_label": "Q1FY27",
-    "needs": 13.096676737160106,
-    "needs_label": "Q2–Q4FY27",
+    "so_far": 25.82799061767007,
+    "so_far_label": "H1FY27",
+    "needs": 8.624582805846437,
+    "needs_label": "H2FY27",
     "needs_for": 15,
     "status": "ahead",
     "measure": "revenue growth"
+   },
+   "check": {
+    "kind": "hard",
+    "metric": "revenue_growth",
+    "metric_label": "Revenue growth",
+    "quote": "our balanced plan is 15% and I am confident we will reach 15%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 15,
+    "high": 15,
+    "period": "FY27",
+    "deadline": null,
+    "direction": "flat"
    },
    "statements": [
     {
@@ -1360,10 +1374,24 @@
    ],
    "status": "tracking",
    "pace": {
-    "so_far": 25.022534703443306,
-    "so_far_label": "Q1FY27",
+    "so_far": 26.632501522363206,
+    "so_far_label": "H1FY27",
     "status": "behind",
     "measure": "EBITDA margin"
+   },
+   "check": {
+    "kind": "hard",
+    "metric": "ebitda_margin",
+    "metric_label": "EBITDA margin",
+    "quote": "Overall on a yearly basis, we maintain the EBITDA margin of 28%, which we have given already.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 28,
+    "high": 28,
+    "period": "FY27",
+    "deadline": null,
+    "direction": "flat"
    },
    "statements": [
     {
@@ -1947,48 +1975,44 @@
   "bull": [
    {
     "figure": "FY26 revenue growth 16.2%",
-    "point": "Management delivered strong top line performance exceeding the targeted revenue growth.",
+    "point": "Management successfully delivered revenue growth of 16.2% against the 15% target for FY26.",
     "refs": [
      "BEL-0"
     ]
    },
    {
     "figure": "FY26 EBITDA margin 29.2%",
-    "point": "Profitability beat expectations, supported by operating margin expansion over the period.",
+    "point": "Management beat the EBITDA margin target by reaching 29.2% for FY26.",
     "refs": [
-     "BEL-1",
-     "margin"
+     "BEL-1"
     ]
    },
    {
     "figure": "ROCE 36%",
-    "point": "Capital returns improved significantly from previous levels alongside robust net cash accumulation.",
+    "point": "Capital returns improved strongly, reaching 36% in FY26 from 27% in FY22.",
     "refs": [
-     "returns",
-     "debt"
+     "returns"
     ]
    }
   ],
   "bear": [
    {
     "figure": "Q3FY26 emergency procurement orders, missed",
-    "point": "Management missed executing critical emergency procurement orders during the period.",
+    "point": "Management completely missed the scheduled Q3FY26 emergency procurement orders.",
     "refs": [
      "BEL-16"
     ]
    },
    {
-    "figure": "FY26 order inflow: ≥₹27,000 cr target, gone quiet",
-    "point": "Several major guidance metrics went quiet after reporting periods ended without updates.",
+    "figure": "FY26 Capex: ₹1,000 cr target, delayed",
+    "point": "Management failed to stick to initial capex guidance, increasing it beyond INR 1,200 crores.",
     "refs": [
-     "BEL-2",
-     "BEL-3",
-     "BEL-9"
+     "BEL-4"
     ]
    },
    {
     "figure": "Cash conversion 59%",
-    "point": "Operating cash flow remained weak relative to net profit generation over five years.",
+    "point": "Operating cash flow over 5 years remained weak at only 59% of net profit.",
     "refs": [
      "cash_conversion"
     ]

@@ -11,7 +11,7 @@ import unittest
 from finn import fiscal
 from finn.filings import STOP, regulatory_tone, related_promises, rule_category
 from finn.financials import Financials, oneoff_notes
-from finn.promises import prefilter
+from finn.promises import prefilter, resolve
 from finn.promises.evidence import _figures_from_quote, only_forward
 from finn.promises.extract import _normalize
 from finn.promises.resolve import _plain, _value_verdict, changes, fmt_range, verdict
@@ -512,6 +512,47 @@ class FilingsRound2(unittest.TestCase):
             d = push.build_digest({}, previous=previous)
         self.assertEqual(d["failed"], [first])
         self.assertEqual([i["at"] for i in d["items"]], [recent])  # still in the window; the 40-day-old one ages out
+
+
+class ProgressCountsFiledResults(unittest.TestCase):
+    """BEL's Q2FY27 filing was out, but promise progress still read Q1FY27 from screener."""
+    def fin(self):
+        q = lambda s, op, pbt, tax: {"Sales": s, "Operating Profit": op, "Profit before tax": pbt,
+                                     "Net Profit": pbt * 0.75, "Tax %": tax}
+        return Financials("BEL", quarters={(26, 1): q(100, 25, 24, 25), (26, 2): q(100, 25, 24, 25),
+                                           (27, 1): q(125, 31, 30, 25)})
+    filing = {"quarter": "Q2FY27", "source": "the company's results filing (statutory consolidated)",
+              "rows": [{"label": "Revenue", "value": 110}, {"label": "EBITDA", "value": 33},
+                       {"label": "PBT", "value": 32}, {"label": "PAT", "value": 24}]}
+
+    def test_growth_pace_uses_the_filed_quarter(self):
+        p = {"kind": "hard", "metric": "revenue_growth", "low": 15, "high": 15, "unit": "%", "period": "FY27"}
+        pace = resolve.financial_check(p, self.fin().with_filing(self.filing))["pace"]
+        self.assertEqual(pace["so_far_label"], "H1FY27")
+        self.assertAlmostEqual(pace["so_far"], 17.5)
+
+    def test_measure_the_filing_lacks_stops_at_screener(self):  # no tax line in the filing
+        p = {"kind": "hard", "metric": "other", "metric_label": "tax rate", "low": None, "high": 26, "unit": "%",
+             "period": "FY27"}
+        self.assertEqual(resolve.financial_check(p, self.fin().with_filing(self.filing))["pace"]["so_far_label"], "Q1FY27")
+
+    def test_only_the_next_quarter_or_a_filing_source(self):
+        self.assertFalse(self.fin().with_filing({**self.filing, "quarter": "Q3FY27"}).filed)
+        self.assertFalse(self.fin().with_filing({**self.filing, "source": "screener.in"}).filed)
+
+    def test_refresh_pace_rewrites_running_promises(self):
+        p = {"kind": "hard", "metric": "revenue_growth", "low": 15, "high": 15, "unit": "%", "period": "FY27"}
+        old = resolve.financial_check(p, self.fin())["pace"]
+        ledger = {"latest_results": "Q1FY27", "threads": [{"check": p, "pace": old}]}
+        self.assertEqual(resolve.refresh_pace(ledger, self.fin().with_filing(self.filing)), 1)
+        self.assertEqual(ledger["threads"][0]["pace"]["so_far_label"], "H1FY27")
+        self.assertEqual(ledger["latest_results"], "Q2FY27")
+
+    def test_silence_waits_for_the_call_after_the_period(self):  # BEL H1FY27 NGC inflow, Q2 filed before the call
+        s = [stmt(None, None, "NGC order in H1", kind="milestone", period="H1FY27", call="Jan 2026", call_index=0)]
+        fin = self.fin().with_filing(self.filing)
+        self.assertNotEqual(resolve.verdict(s, [], fin, 3, None, heard_through=(27, 1))["status"], "gone_quiet")
+        self.assertEqual(resolve.verdict(s, [], fin, 3, None, heard_through=(27, 2))["status"], "gone_quiet")
 
 
 class FiscalCalendar(unittest.TestCase):

@@ -12,7 +12,7 @@ from datetime import date
 from typing import Callable
 
 from finn import business, financials, fiscal, push, snapshot
-from finn.config import OUT
+from finn.config import OUT, ROOT
 from finn.portfolio import by_symbol
 from finn.promises import evidence, extract, link, resolve
 from finn.sources import screener
@@ -111,8 +111,20 @@ def headline(fin: financials.Financials) -> dict | None:
 
 # ---- the ledger -----------------------------------------------------------------
 
+def filed_results(sym: str) -> dict | None:
+    """The newest results figures read from the company's own filing, from the push side's
+    digest (portfolio companies only)."""
+    p = ROOT / "web" / "public" / "data" / "filings.json"
+    if not p.exists():
+        return None
+    got = [f for f in json.loads(p.read_text())["items"] if f["symbol"] == sym and f["type"] == "results"
+           and f.get("numbers")]
+    return max(got, key=lambda f: f["at"])["numbers"] if got else None
+
+
 def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: Progress = _quiet) -> dict:
-    fin = financials.load(sym, slug)
+    screener_fin = financials.load(sym, slug)
+    fin = screener_fin.with_filing(filed_results(sym))  # verdicts and pace count the newest results
     page = screener.company_page(slug)
     urls = {c.label: c.transcript_url for c in screener.concalls(page)}
     texts = {c["call"]: screener.transcript_path(c["file"]).read_text() for c in calls}
@@ -132,7 +144,8 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
                 progress("verdicts", f"Checking what they said later: {t['title']}")
                 ev = evidence.check(sym, {"title": t["title"], "latest": last, "first_call": stmts[0]["call"],
                                           "last_call": last["call"]}, later, managers)
-            v = resolve.verdict(stmts, events, fin, len(calls), ev)
+            heard = resolve.parse_period(calls[-1].get("quarter"))
+            v = resolve.verdict(stmts, events, fin, len(calls), ev, heard.end if heard else None)
             period = resolve.parse_period(last.get("deadline") or last.get("period"))
             threads.append({
                 "id": f"{sym}-{n}",
@@ -147,6 +160,8 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
                 "moved": any(e["type"] in MOVES for e in events),
                 "events": events,
                 **v,
+                # what refresh_pace needs to re-read progress without the model
+                **({"check": {k: last.get(k) for k in resolve.CHECK_FIELDS}} if v.get("pace") else {}),
                 "statements": [{
                     "call": s["call"], "quarter": s["quarter"], "quote": s["quote"], "speaker": s["speaker"],
                     "page": s["page"], "target": resolve.fmt_range(s.get("low"), s.get("high"), s.get("unit")),
@@ -164,7 +179,7 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
         "built": date.today().isoformat(),
         "latest_call": calls[-1]["call"] if calls else None,
         "latest_results": fiscal.label(*lq) if lq else None,
-        "headline": headline(fin),
+        "headline": headline(screener_fin),
         "calls": [{"call": c["call"], "quarter": c["quarter"], "url": urls.get(c["call"]),
                    "promises": len(c["promises"])} for c in calls],
         "record": {

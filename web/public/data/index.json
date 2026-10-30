@@ -119,7 +119,7 @@
   "sector": "Electronics manufacturing",
   "size": "mid",
   "latest_call": "Aug 2026",
-  "latest_results": "Q1FY27",
+  "latest_results": "Q2FY27",
   "record": {
    "kept": 3,
    "missed": 0,
@@ -196,12 +196,12 @@
    "missed": 0,
    "resolved": 3,
    "moved": 2,
-   "quiet": 3,
-   "open": 7,
+   "quiet": 2,
+   "open": 8,
    "by_status": {
     "delivered": 3,
-    "open": 4,
-    "gone_quiet": 3,
+    "open": 5,
+    "gone_quiet": 2,
     "on_track": 2,
     "behind": 1
    }
@@ -257,7 +257,7 @@
   "sector": "Defence PSU",
   "size": "large",
   "latest_call": "Jul 2026",
-  "latest_results": "Q1FY27",
+  "latest_results": "Q2FY27",
   "record": {
    "kept": 2,
    "missed": 1,
@@ -283,7 +283,7 @@
   "sector": "Hospitals",
   "size": "mid",
   "latest_call": "Aug 2026",
-  "latest_results": "Q1FY27",
+  "latest_results": "Q2FY27",
   "record": {
    "kept": 3,
    "missed": 1,

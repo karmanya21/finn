@@ -1045,6 +1045,20 @@
     "status": "on_pace",
     "measure": "revenue growth"
    },
+   "check": {
+    "kind": "hard",
+    "metric": "revenue_growth",
+    "metric_label": "Revenue growth",
+    "quote": "For now, we remain committed to our FY '27 growth guidance of 10% to 12% revenue growth guidance.",
+    "unit": "%",
+    "basis": "unclear",
+    "scope": "company",
+    "low": 10,
+    "high": 12,
+    "period": "FY27",
+    "deadline": null,
+    "direction": null
+   },
    "statements": [
     {
      "call": "May 2026",
@@ -1219,6 +1233,20 @@
     "status": "behind",
     "measure": "revenue growth",
     "note": "against the plan's annual growth rate"
+   },
+   "check": {
+    "kind": "hard",
+    "metric": "revenue_growth",
+    "metric_label": "Revenue CAGR",
+    "quote": "Concluding with the Lakshya guidance, over the next five years, we are targeting order inflow growth at a CAGR return of 10% to 12%, revenue growth of 12% to 15%, and a Return on Equity in the range of 16% to 17%.",
+    "unit": "%",
+    "basis": "reported",
+    "scope": "company",
+    "low": 12.0,
+    "high": 15.0,
+    "period": "multi-year",
+    "deadline": null,
+    "direction": null
    },
    "statements": [
     {
