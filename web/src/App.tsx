@@ -469,16 +469,16 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
           <RecordBox r={r} />
         )}
         {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
-        <Footnote>
-          {noCalls ? "" : `Scores the ${scored} numbers and milestones among the ${l.threads.length} promises; the other ${l.threads.length - scored} are directional remarks and ambitions, listed below but not scored. Kept or missed is judged against reported results or management's own later word; gone quiet means management stopped reporting on it: the period ended, or a repeated promise went unmentioned for two calls. `}
-          {l.case ? "The case each way uses only this record and reported numbers; every point cites its source." : ""}
-        </Footnote>
+        {!noCalls && <Footnote>
+          {scored} of {l.threads.length} promises are tracked (numbers and milestones). Kept or missed: checked against
+          results or management's later word. Gone quiet: they stopped reporting on it.
+        </Footnote>}
       </section>
 
       {!noCalls && (
         <section>
           <h2 className="section-title">Promises <span className="count">{l.threads.length}</span>
-            {scored < l.threads.length && <span className="count"> · {scored} scored</span>}</h2>
+            {scored < l.threads.length && <span className="count"> · {scored} tracked</span>}</h2>
           {l.threads.length === 0 ? (
             <div className="notice"><b>No forward-looking promises found.</b><p>Management didn't commit to numbers, directions or milestones in the calls read.</p></div>
           ) : (
