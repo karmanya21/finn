@@ -4,7 +4,7 @@ import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, closeTo, go } from "./shell";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
-  loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
+  MEANING, loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
 // ---- routing: #/  and  #/c/INFY  and  #/c/INFY/t/INFY-3 ------------------------
@@ -190,14 +190,35 @@ function CompanyView({ symbol, threadId }: { symbol: string; threadId?: string }
 
 // ---- pull: research any company ---------------------------------------------------
 
-const STEP_ORDER = ["company", "calls", "link", "verdicts", "done"];
+const STEP_ORDER = ["company", "calls", "link", "verdicts", "case", "done"];
 const STEP_LABEL: { [s: string]: string } = {
   company: "Find the company",
   calls: "Read the earnings calls",
   link: "Follow each promise across calls",
   verdicts: "Check against results and later calls",
+  case: "Sum up the numbers and the case each way",
   done: "Done",
 };
+
+/** "Read 6 calls" for a finished step, from its last progress line. */
+function stepSummary(step: string, details: string[]): string | null {
+  const last = details[details.length - 1] ?? "";
+  if (step === "calls") { const m = last.match(/\((\d+) of (\d+)\)/); return m ? `Read ${m[2]} calls` : null; }
+  if (step === "verdicts") { const n = details.filter((d) => d.startsWith("Checking")).length; return n ? `Checked ${n} promises against later calls` : null; }
+  return null;
+}
+
+function useElapsed(running: boolean): string {
+  const [start] = useState(() => Date.now());
+  const [now, setNow] = useState(start);
+  useEffect(() => {
+    if (!running) return;
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, [running]);
+  const s = Math.floor((now - start) / 1000);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
 
 function ResearchView({ symbol, threadId, portfolio, index }: {
   symbol: string; threadId?: string; portfolio: boolean; index: CompanySummary[];
@@ -222,12 +243,14 @@ function ResearchView({ symbol, threadId, portfolio, index }: {
     return () => { alive = false; clearTimeout(timer); };
   }, [symbol, portfolio, shipped]);
 
+  const elapsed = useElapsed(!err && s?.state !== "done" && s?.state !== "error");
   if (shipped) return <LedgerView l={shipped} threadId={threadId} base={`/r/${symbol}`} />;
   if (s?.state === "done" && s.ledger) return <LedgerView l={s.ledger} threadId={threadId} base={`/r/${symbol}`} />;
   if (err) return <Offline symbol={symbol} index={index} />;
   const failed = s?.state === "error" ? s.error : null;
   const reached = new Set(s?.steps.map((x) => x.step));
-  const current = s?.steps[s.steps.length - 1];
+  // Before the server reports anything, the first step is under way, not a blank list.
+  const current = s?.steps[s.steps.length - 1] ?? (s?.state === "queued" ? undefined : { step: "company", detail: "Looking it up on screener.in" });
 
   return (
     <Shell back>
@@ -243,20 +266,24 @@ function ResearchView({ symbol, threadId, portfolio, index }: {
                 : "Reading primary sources only: the company's own transcripts and reported results. The first run takes a minute or two; after that it's instant."}
             </p>
             <ol className="steps">
-              {STEP_ORDER.slice(0, -1).map((k) => {
-                const done = reached.has(k) && current?.step !== k;
+              {STEP_ORDER.slice(0, -1).map((k, i) => {
+                const at = STEP_ORDER.indexOf(current?.step ?? "");
+                const done = (reached.has(k) || (at > i)) && current?.step !== k;
                 const now = current?.step === k;
+                const summary = done ? stepSummary(k, (s?.steps ?? []).filter((x) => x.step === k).map((x) => x.detail)) : null;
                 return (
                   <li key={k} className={done ? "done" : now ? "now" : ""}>
-                    <span className="step-mark">{done ? "✓" : now ? <span className="spin" /> : ""}</span>
+                    <span className="step-mark">{done ? "✓" : now ? <span className="spin" /> : i + 1}</span>
                     <span>
                       <span className="step-name">{STEP_LABEL[k]}</span>
                       {now && current?.detail && <span className="step-detail">{current.detail}</span>}
+                      {summary && <span className="step-detail">{summary}</span>}
                     </span>
                   </li>
                 );
               })}
             </ol>
+            <p className="footnote">{elapsed} elapsed · you can leave this page; the research keeps running.</p>
           </>
         )}
       </section>
@@ -340,23 +367,34 @@ function SearchBar({ index }: { index: CompanySummary[] }) {
 
 // ---- snapshot and the case each way ------------------------------------------------
 
+/** Bull and bear: three one-line points a side; tap one for the full point and its sources. */
 function CaseView({ l, base }: { l: Ledger; base: string }) {
   const threads = new Map(l.threads.map((t) => [t.id, t]));
   const metric = new Map((l.snapshot?.metrics ?? []).map((m) => [m.key, m.label]));
+  const [open, setOpen] = useState<string | null>(null);
   const side = (title: string, pts: CasePoint[], tone: string) => (
     <div className={`case-side case-${tone}`}>
       <h3>{title}</h3>
       <ul>
-        {pts.map((p, i) => (
-          <li key={i}>
-            {p.figure && <b className="figure">{normText(p.figure)}</b>}{normText(p.point)}
-            <span className="refs">
-              {p.refs.map((r) => threads.has(r)
-                ? <button key={r} className="ref" onClick={() => go(`${base}/t/${r}`)}>{threads.get(r)!.title}</button>
-                : <span key={r} className="ref num">{metric.get(r) ?? r}</span>)}
-            </span>
-          </li>
-        ))}
+        {pts.slice(0, 3).map((p, i) => {
+          const key = `${tone}-${i}`, isOpen = open === key;
+          return (
+            <li key={key} className={isOpen ? "open" : ""}>
+              <button className="case-pt" onClick={() => setOpen(isOpen ? null : key)} aria-expanded={isOpen}>
+                <span className="case-pt-l">{p.figure ? <b className="figure">{normText(p.figure)}</b> : normText(p.point)}</span>
+                <span className="chev">{isOpen ? "▴" : "▾"}</span>
+              </button>
+              {isOpen && p.figure && <span className="case-pt-text">{normText(p.point)}</span>}
+              {isOpen && p.refs.length > 0 && (
+                <span className="refs">
+                  {p.refs.map((r) => threads.has(r)
+                    ? <button key={r} className="ref" onClick={() => go(`${base}/t/${r}`)}>{threads.get(r)!.title} ›</button>
+                    : <span key={r} className="ref">{metric.get(r) ?? r}</span>)}
+                </span>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
@@ -365,6 +403,41 @@ function CaseView({ l, base }: { l: Ledger; base: string }) {
       {l.case!.bull.length > 0 && side("Bull", l.case!.bull, "bull")}
       {l.case!.bear.length > 0 && side("Bear", l.case!.bear, "bear")}
     </div>
+  );
+}
+
+const qOrder = (q: string | null | undefined) => {
+  const m = (q ?? "").match(/Q([1-4])FY(\d{2})/);
+  return m ? Number(m[2]) * 10 + Number(m[1]) : 0;
+};
+
+/** One line on what's changed since the last earnings call: newer results, promises that
+ *  slipped, and what the call itself moved or added. */
+function SinceLastCall({ l, results }: { l: Ledger; results: Headline | null | undefined }) {
+  const call = l.calls[l.calls.length - 1];
+  if (!call) return null;
+  const bits: string[] = [];
+  if (results && qOrder(results.quarter) > qOrder(call.quarter)) {
+    const yoy = (k: string) => results.rows.find((r) => r.label === k)?.yoy;
+    const figs = [["revenue", yoy("Revenue")], ["PAT", yoy("PAT")]].filter(([, v]) => v != null)
+      .map(([k, v]) => `${k} ${fmtChange(v as number)}`);
+    bits.push(`${results.quarter} results${figs.length ? `: ${figs.join(", ")} YoY` : " filed"}`);
+  }
+  const behind = l.threads.filter((t) => t.pace?.status === "behind");
+  if (behind.length === 1) bits.push(`${behind[0].title} behind its ${behind[0].target} guide`);
+  else if (behind.length > 1) bits.push(`${behind.length} guides now behind pace`);
+  const moves = l.threads.filter((t) => t.kind !== "soft" && t.events.some((e) => e.call === call.call && e.type !== "reaffirmed"));
+  if (moves.length === 1) {
+    const e = moves[0].events.filter((x) => x.call === call.call).pop()!;
+    bits.push(`${moves[0].title} ${MOVE_VERB[e.type].toLowerCase()} to ${e.to} on the call`);
+  } else if (moves.length > 1) bits.push(`${moves.length} guides moved on the call`);
+  const added = l.threads.filter((t) => (t.kind === "hard" || t.kind === "milestone") && t.statements[0]?.call === call.call).length;
+  if (added) bits.push(`${added} new promise${added > 1 ? "s" : ""}`);
+  return (
+    <p className="since">
+      <span className="since-h">Since the {call.call} call</span>
+      {bits.length ? normText(bits.join(" · ")) : "Nothing new: no results since, and no guidance moved."}
+    </p>
   );
 }
 
@@ -433,7 +506,9 @@ function Spark({ s }: { s: { x: string; y: number }[] }) {
 // ---- one company's promise record (push and pull share it) ----------------------
 
 function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base: string }) {
-  const [filter, setFilter] = useState<Filter>("all");
+  // Opens on what's still running; a record with nothing live opens on everything.
+  const [filter, setFilter] = useState<Filter>(() =>
+    l.threads.some((t) => LIVE.includes(t.status) && t.kind !== "soft") ? "live" : "all");
   const open = l.threads.find((t) => t.id === threadId);
   const r = l.record;
   const fy = Number((l.latest_results ?? "").match(/FY(\d{2})/)?.[1] ?? 0);
@@ -454,6 +529,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
         <h1 className="co-title">{l.name}</h1>
         {l.sector && <p className="co-sub">{l.sector}</p>}
         <PriceLine symbol={l.symbol} fallback={l.price} fallbackAsof={l.price_asof} />
+        {!noCalls && <SinceLastCall l={l} results={results} />}
       </section>
 
       {results && results.rows.length > 0 && <ResultsBlock h={results} l={l} base={base} />}
@@ -626,14 +702,7 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
       </div>
       {g.length > 0 && (
         <div className="guidance">
-          {g.map((t) => (
-            <button key={t.id} className="guide-row" onClick={() => go(`${base}/t/${t.id}`)}>
-              <span className="guide-label">Guidance</span>
-              <span className="guide-text">{normText(t.title)}: {t.target}{t.pace ? ` · ${paceLine(t)}` : ""}
-                {t.moved && !t.pace ? ` · ${MOVE_VERB[t.events[t.events.length - 1].type].toLowerCase()} on the ${t.events[t.events.length - 1].call} call` : ""}</span>
-              <span className={`pill tone-${statusOf(t).tone}`}>{statusOf(t).label}</span>
-            </button>
-          ))}
+          {g.map((t) => <GuideRow key={t.id} t={t} onOpen={() => go(`${base}/t/${t.id}`)} />)}
         </div>
       )}
       <Footnote>
@@ -641,6 +710,20 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
         quarter last year; margin is EBITDA ÷ revenue.
       </Footnote>
     </section>
+  );
+}
+
+function GuideRow({ t, onOpen }: { t: Thread; onOpen: () => void }) {
+  const [why, setWhy] = useState(false);
+  const last = t.events[t.events.length - 1];
+  return (
+    <button className="guide-row" onClick={onOpen}>
+      <span className="guide-label">Guidance</span>
+      <span className="guide-text">{normText(t.title)}: {t.target}{t.pace ? ` · ${paceLine(t)}` : ""}
+        {t.moved && !t.pace ? ` · ${MOVE_VERB[last.type].toLowerCase()} on the ${last.call} call` : ""}
+        {why && <Meaning t={t} />}</span>
+      <StatusPill t={t} shown={why} onToggle={() => setWhy(!why)} />
+    </button>
   );
 }
 
@@ -679,14 +762,30 @@ function Stat({ n, label, tone }: { n: number | string; label: string; tone: Ton
   );
 }
 
-function ThreadCard({ t, onOpen }: { t: Thread; onOpen: () => void }) {
+/** A status pill that says what it means when tapped, without opening what it sits on. */
+function StatusPill({ t, shown, onToggle }: { t: Thread; shown: boolean; onToggle: () => void }) {
   const s = statusOf(t);
+  const toggle = (e: React.SyntheticEvent) => { e.stopPropagation(); e.preventDefault(); onToggle(); };
+  return (
+    <span role="button" tabIndex={0} aria-expanded={shown} title={MEANING[s.label]}
+      className={`pill tone-${s.tone} tappable ${shown ? "on" : ""}`} onClick={toggle}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle(e)}>{s.label}<span className="pill-i">i</span></span>
+  );
+}
+
+function Meaning({ t }: { t: Thread }) {
+  return <span className="meaning">{MEANING[statusOf(t).label]}</span>;
+}
+
+function ThreadCard({ t, onOpen }: { t: Thread; onOpen: () => void }) {
+  const [why, setWhy] = useState(false);
   return (
     <button className="card" onClick={onOpen}>
       <span className="card-top">
         <span className="card-title">{t.title}</span>
-        <span className={`pill tone-${s.tone}`}>{s.label}</span>
+        <StatusPill t={t} shown={why} onToggle={() => setWhy(!why)} />
       </span>
+      {why && <Meaning t={t} />}
       <span className="card-target">
         {t.target ? <span className="target">{t.target}</span> : null}
         <span className="kind">{KIND_LABEL[t.kind]} · {t.period}</span>
@@ -721,6 +820,7 @@ function Trail({ t }: { t: Thread }) {
 
 function Sheet({ t, company, onClose }: { t: Thread; company: string; onClose: () => void }) {
   const s = statusOf(t);
+  const [why, setWhy] = useState(false);
   useEffect(() => {
     const k = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", k);
@@ -740,7 +840,8 @@ function Sheet({ t, company, onClose }: { t: Thread; company: string; onClose: (
         </div>
 
         <div className={`verdict tone-border-${s.tone}`}>
-          <span className={`pill tone-${s.tone}`}>{s.label}</span>
+          <StatusPill t={t} shown={why} onToggle={() => setWhy(!why)} />
+          {why && <Meaning t={t} />}
           <p className="verdict-line">{verdictLine(t)}</p>
           {t.basis && <p className="footnote">{t.basis === "financials"
             ? "Checked against reported consolidated financials (screener.in)."

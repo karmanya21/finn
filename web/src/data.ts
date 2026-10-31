@@ -153,6 +153,25 @@ export const STATUS: { [s in Status]: { label: string; tone: Tone } } = {
   said: { label: "Said", tone: "muted" },
 };
 
+/** What each status label means, in one line, for when someone taps it. */
+export const MEANING: { [label: string]: string } = {
+  "Kept": "Reported numbers, or management's later word, met the promise.",
+  "Beat": "Came in better than promised.",
+  "Missed": "The period ended short of what was promised.",
+  "Tracking": "Still running; checked against reported numbers as results come in.",
+  "Ahead of pace": "Results so far are running ahead of what the guide needs.",
+  "On pace": "Results so far are running at about the rate the guide needs.",
+  "Behind pace": "Results so far are running below what the guide needs.",
+  "On track": "Management says it's on track; the numbers can't confirm it yet.",
+  "Behind": "Running behind what was promised.",
+  "Delayed": "Management says it will come later than promised.",
+  "Open": "Not due yet; nothing to check so far.",
+  "Can't verify": "Guided on a basis reported numbers don't show (such as constant currency), so it can't be checked.",
+  "Gone quiet": "Management stopped reporting on it: the period ended, or it went unmentioned for two calls.",
+  "Lapsed": "A loose remark whose period passed unmentioned; not scored.",
+  "Said": "An ambition, listed for context; never scored.",
+};
+
 export function statusOf(t: Thread): { label: string; tone: Tone } {
   if (t.status === "tracking" && t.pace) {
     const p = { ahead: "Ahead of pace", on_pace: "On pace", behind: "Behind pace" }[t.pace.status];

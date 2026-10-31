@@ -200,7 +200,7 @@ def build_ledger(sym: str, slug: str, meta: dict, calls: list[dict], progress: P
 
 def enrich(ledger: dict, slug: str, progress: Progress = _quiet) -> dict:
     """Add the numbers snapshot and the bull/bear case (both read the finished record)."""
-    progress("verdicts", "Reading the annual report, summing up the numbers and the case each way")
+    progress("case", "Reading the annual report, summing up the numbers and the case each way")
     try:
         ledger["business"] = business.build(ledger["name"], slug)
     except Exception:  # a missing or unreadable annual report shouldn't sink the record

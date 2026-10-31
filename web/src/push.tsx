@@ -57,7 +57,24 @@ export interface Update {
   change?: { subject: string; from: string; to: string };  // guidance moved: old → new
   target?: { subject: string; value: string };     // a promise's verdict: what was guided
   heading?: string;   // the tile's whole heading when "tag · date" won't fit ("Q2FY27 · 30 Oct", "Guidance cut")
+  promise?: { text: string; tone?: "up" | "down" };  // results: what they mean for a promise
+  urgent?: boolean;   // a guidance cut, a missed promise, a big move, bad regulatory news
   open: () => void;
+}
+
+/** What a results filing means for the promises it touches, most serious first:
+ *  "Missed FY26 net debt reduction", "Behind FY27 EBITDA margin guide". */
+function promiseImpact(ts: Thread[], quarter: string): Update["promise"] {
+  const settled = (t: Thread) => settledBy(t.period, quarter);
+  const pick = (test: (t: Thread) => boolean) => ts.find(test);
+  let t: Thread | undefined;
+  if ((t = pick((x) => x.status === "missed" && settled(x)))) return { text: `Missed ${t.title}`, tone: "down" };
+  if ((t = pick((x) => x.pace?.status === "behind"))) return { text: `Behind ${t.title} guide`, tone: "down" };
+  if ((t = pick((x) => x.pace?.status === "ahead"))) return { text: `Ahead of ${t.title} guide`, tone: "up" };
+  if ((t = pick((x) => (x.status === "delivered" || x.status === "beat") && settled(x))))
+    return { text: `${t.status === "beat" ? "Beat" : "Kept"} ${t.title}`, tone: "up" };
+  if ((t = pick((x) => x.pace?.status === "on_pace"))) return { text: `On pace for ${t.title} guide` };
+  return undefined;
 }
 
 const SEEN_KEY = "finn.seen.v3";
@@ -100,8 +117,9 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         ],
         line: m.reason ? `Same day: ${m.reason.type === "results" ? resultsHeadline(m.reason) : filingText(m.reason.summary, m.reason.subject)}`
           : `Closed ₹${m.close.toLocaleString("en-IN")}; no material filing that day`,
-        open: () => go(`/c/${m.symbol}`) });
+        urgent: m.byPrice, open: () => go(`/c/${m.symbol}`) });
     }
+    const threadById = new Map(ledgers.flatMap((l) => l.threads.map((t) => [t.id, t] as const)));
     for (const f of digest.items) {
       if (f.routine || !s.types.includes(f.type) || f.at.slice(0, 10) < cutoff) continue;
       if (f.type === "management_change" && !f.senior) continue;  // only CEO, CFO, MD, Chair
@@ -114,6 +132,8 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down")
           : f.tone === "positive" ? "up" : f.tone === "negative" ? "down" : undefined,
         line: f.people.length ? peopleLine(f) : undefined,
+        promise: f.numbers ? promiseImpact(f.promises.map((id) => threadById.get(id)).filter(Boolean) as Thread[], f.numbers.quarter) : undefined,
+        urgent: f.type === "regulatory" && f.tone === "negative",
         open: () => go(`/filings/${f.id}`) });
     }
     const bySym = new Map(ledgers.map((l) => [l.symbol, l]));
@@ -134,6 +154,8 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         heading: i.tag,  // the call or quarter is on the promise page; "Guidance cut · Oct 2026 call" wraps
         change: moved ? { subject: normText(i.thread.title), from: normText(lastEvent.from!), to: normText(lastEvent.to!) } : undefined,
         target: !moved ? { subject: normText(i.thread.title), value: i.thread.target ? normText(i.thread.target) : "" } : undefined,
+        // a cut or a pushed-out deadline; management merely saying "delayed" waits in the rows
+        urgent: i.tag === "Guidance cut" || i.tag === "Missed" || (!!moved && lastEvent.type === "deferred"),
         open: () => go(`/c/${i.symbol}/t/${i.thread.id}`) });
     }
     for (const list of out.values()) list.sort((a, b) => b.weight - a.weight);
@@ -162,6 +184,7 @@ function daysBetween(callLabel: string, isoDate: string): number {
 function TileBody({ u }: { u: Update }) {
   const verdict = !!(u.change || u.target);
   const tag = <span className={`tile-tag ${verdict ? u.tone ?? "" : ""}`}>{u.heading ?? `${u.tag} · ${u.date}`}</span>;
+  const impact = u.promise && <span className={`tile-impact ${u.promise.tone ?? ""}`}>{u.promise.text}</span>;
   if (u.figures?.length) return <>{tag}
     <span className="tile-figs">
       {u.figures.map((f) => (
@@ -171,7 +194,7 @@ function TileBody({ u }: { u: Update }) {
           <span className="tile-fig-u">{f.unit}</span>
         </span>
       ))}
-    </span></>;
+    </span>{impact}</>;
   if (u.change) return <>{tag}
     <span className="tile-subject">{u.change.subject}</span>
     <span className="tile-move">
@@ -188,39 +211,76 @@ function TileBody({ u }: { u: Update }) {
   return <>{tag}<span className={`tile-line ${u.tone ?? ""}`}>{title}</span></>;
 }
 
-/** The Today grid: one tile per company, those needing attention first. */
+/** "Updated 30 Oct, 7:25 pm": when the newest of the day's data was built. */
+function fmtUpdated(iso: string): string {
+  const [h, m] = iso.slice(11, 16).split(":").map(Number);
+  return `Updated ${fmtDate(iso)}, ${h % 12 || 12}:${String(m).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
+}
+
+/** Today: the few things that need a look as tiles (a guidance cut, a missed promise, a big
+ *  move, bad regulatory news), everything else new as compact rows, then the quiet ones. */
 export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSettings: () => void }) {
   const updates = useUpdates(index);
+  const prices = usePrices();
+  const digest = useData<Digest>(loadDigest);
   const s = useSettings();
   const allKeys = useMemo(() => [...(updates?.values() ?? [])].flat().map((u) => u.key), [updates]);
   const seen = useSeenKeys(allKeys);
   if (!updates) return <p className="empty">Loading…</p>;
 
-  const tiles = index.map((c) => {
+  const rows = index.map((c) => {
     const us = updates.get(c.symbol) ?? [];
     const fresh = seen.size > 0 ? us.filter((u) => !seen.has(u.key)).length : 0;
-    // The tile leads with the top update that carries a number ("+5.4%", "Revenue +22%"),
-    // falling back to the top one only if none does.
-    const lead = us.find((u) => /\d/.test(u.title)) ?? us[0];
+    // Lead with the most serious update; else the top one that carries a number.
+    const lead = us.find((u) => u.urgent) ?? us.find((u) => /\d/.test(u.title)) ?? us[0];
     return { c, us, lead, fresh, score: us.length ? us[0].weight + Math.min(us.length, 5) * 2 : -1 };
   }).sort((a, b) => b.score - a.score);
-  const active = tiles.filter((t) => t.us.length);
-  const quiet = tiles.filter((t) => !t.us.length);
+  const urgent = rows.filter((r) => r.lead?.urgent);
+  const rest = rows.filter((r) => r.us.length && !r.lead?.urgent);
+  const quiet = rows.filter((r) => !r.us.length);
+  const stamps = [prices?.built, digest?.built].filter(Boolean).map((x) => x!.slice(0, 19)).sort();
 
   return (
     <section>
-      <h2 className="section-title">Needs attention <span className="count">{active.length}</span></h2>
-      <div className="tiles">
-        {active.map(({ c, us, lead, fresh }) => (
-          <button key={c.symbol} className="tile" onClick={() => go(`/u/${c.symbol}`)}>
-            <span className="tile-top">
-              <span className="tile-name">{c.name}</span>
-              <span className="tile-count">{us.length}{fresh > 0 && <span className="new">{fresh} new</span>}</span>
-            </span>
-            <TileBody u={lead!} />
-          </button>
-        ))}
-      </div>
+      {stamps.length > 0 && <p className="updated">{fmtUpdated(stamps[stamps.length - 1])}</p>}
+      <h2 className="section-title">Needs attention <span className="count">{urgent.length}</span></h2>
+      {urgent.length === 0 ? <p className="quiet-note">No guidance cuts, missed promises or big moves.</p> : (
+        <div className="tiles">
+          {urgent.map(({ c, us, lead, fresh }) => (
+            <button key={c.symbol} className="tile" onClick={() => go(`/u/${c.symbol}`)}>
+              <span className="tile-top">
+                <span className="tile-name">{c.name}</span>
+                {fresh > 0 && <span className="new">{fresh} new</span>}
+              </span>
+              <TileBody u={lead!} />
+              {us.length > 1 && <span className="tile-more">+{us.length - 1} more update{us.length > 2 ? "s" : ""}</span>}
+            </button>
+          ))}
+        </div>
+      )}
+      {rest.length > 0 && (
+        <>
+          <h2 className="section-title quiet-title">Also new <span className="count">{rest.length}</span></h2>
+          <div className="feed">
+            {rest.map(({ c, us, lead, fresh }) => (
+              <button key={c.symbol} className="feed-row compact" onClick={() => go(`/u/${c.symbol}`)}>
+                <span className="feed-body">
+                  <span className="cr-top">
+                    <span className="cr-name">{c.name}</span>
+                    <span className="feed-tag">{lead!.heading?.includes("·") ? lead!.heading : `${lead!.tag} · ${lead!.date}`}</span>
+                  </span>
+                  <span className={`cr-line ${lead!.figures?.length && lead!.figures.length > 1 ? "" : lead!.tone ?? ""}`}>{compactLine(lead!)}</span>
+                  {lead!.promise && <span className={`cr-impact ${lead!.promise.tone ?? ""}`}>{lead!.promise.text}</span>}
+                </span>
+                <span className="cr-side">
+                  {fresh > 0 && <span className="new">{fresh} new</span>}
+                  {us.length > 1 && <span className="cr-more">+{us.length - 1}</span>}
+                </span>
+              </button>
+            ))}
+          </div>
+        </>
+      )}
       {quiet.length > 0 && (
         <>
           <h2 className="section-title quiet-title">Nothing new <span className="count">{quiet.length}</span></h2>
@@ -240,6 +300,17 @@ export function TodayGrid({ index, onSettings }: { index: CompanySummary[]; onSe
       </Footnote>
     </section>
   );
+}
+
+/** One line for a compact row: figures inline ("Revenue +27% · PAT +20% YoY"), else the title. */
+function compactLine(u: Update): string {
+  if (u.figures?.length) {
+    const yoy = u.figures.every((f) => f.unit === "YoY");
+    return u.figures.map((f) => `${f.label} ${f.change}${!yoy && f.unit ? ` ${f.unit}` : ""}`).join(" · ") + (yoy ? " YoY" : "");
+  }
+  if (u.change) return `${u.change.subject}: ${u.change.from} → ${u.change.to}`;
+  const q = u.heading?.split(" · ")[0];
+  return q && u.title.startsWith(`${q}: `) ? u.title.slice(q.length + 2).replace(/^./, (c) => c.toUpperCase()) : u.title;
 }
 
 /** One company's updates, most important first, with a way into its full record. */

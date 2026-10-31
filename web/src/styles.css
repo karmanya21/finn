@@ -416,9 +416,19 @@ main section { margin-top: 26px; }
 .case-bull h3 { color: var(--kept); } .case-bear h3 { color: var(--missed); }
 .case-side ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 8px; }
 .case-side li { font-size: 14px; }
+.case-side ul { list-style: none; padding-left: 0; gap: 2px; }
+.case-side li { border-top: 1px solid var(--line); padding: 6px 0; } .case-side li:first-child { border-top: 0; padding-top: 0; }
+.case-pt { display: flex; align-items: baseline; gap: 8px; width: 100%; line-height: 1.4; }
+.case-pt-l { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.case-side li.open .case-pt-l { white-space: normal; }
+.case-pt .chev { flex: none; font-size: 10px; }
+.case-pt-text { display: block; margin-top: 3px; font-size: 13px; color: var(--ink-2); line-height: 1.4; }
+.ref { background: transparent; line-height: 1.4; }
+.since { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line);
+  font-size: 14px; line-height: 1.4; color: var(--ink); }
+.since-h { display: block; margin-bottom: 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
 .refs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
 .ref { font-size: 11px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink-2); }
-.ref.num { border-style: dashed; }
 
 .snapshot { margin-top: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .snap-row { padding: 10px 14px; border-top: 1px solid var(--line); }
@@ -551,3 +561,28 @@ details.more > section { margin-top: 10px; }
 .row-note { grid-column: 1 / -1; margin-top: -2px; font-size: 11px; line-height: 1.4; color: var(--ink-3); }
 .pill.kind-regulatory { background: var(--live-bg); color: var(--live); }
 .filing-title.up { color: var(--kept); } .filing-title.down { color: var(--missed); }
+
+/* Today: priority tiles, compact rows */
+.updated { margin: 0 0 14px; font-size: 12px; color: var(--ink-3); }
+.tile-impact { font-size: 12px; line-height: 1.3; color: var(--ink-2); margin-top: 2px; }
+.tile-impact.up, .cr-impact.up { color: var(--kept); } .tile-impact.down, .cr-impact.down { color: var(--missed); }
+.tile-more { margin-top: auto; padding-top: 4px; font-size: 11px; color: var(--ink-3); }
+.feed-row.compact { align-items: center; padding: 10px 14px; }
+.feed-row.compact .feed-body { flex: 1; gap: 1px; }
+.cr-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.cr-name { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cr-top .feed-tag { flex: none; }
+.cr-line { font-size: 13px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.cr-line.up { color: var(--kept); } .cr-line.down { color: var(--missed); }
+.cr-impact { font-size: 12px; color: var(--ink-3); }
+.cr-side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; min-width: 22px; }
+.cr-more { font-size: 12px; color: var(--ink-3); }
+
+/* status pills explain themselves */
+.pill.tappable { cursor: help; display: inline-flex; align-items: center; gap: 4px; }
+.pill-i { display: inline-flex; align-items: center; justify-content: center; width: 12px; height: 12px; border-radius: 50%;
+  border: 1px solid currentColor; font-size: 8px; font-weight: 700; font-style: normal; opacity: 0.6; }
+.pill.tappable.on .pill-i { opacity: 1; }
+.meaning { display: block; margin: 4px 0 2px; font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.steps li:not(.done):not(.now) .step-mark { color: var(--ink-3); font-size: 11px; }
+.case-pt-l .figure { display: inline; margin: 0; font-weight: 600; }
