@@ -586,3 +586,18 @@ details.more > section { margin-top: 10px; }
 .meaning { display: block; margin: 4px 0 2px; font-size: 12px; line-height: 1.35; color: var(--ink-2); }
 .steps li:not(.done):not(.now) .step-mark { color: var(--ink-3); font-size: 11px; }
 .case-pt-l .figure { display: inline; margin: 0; font-weight: 600; }
+
+/* company names on filings open the company */
+.co-link { font: inherit; color: inherit; font-weight: 600; }
+.co-link:hover { color: var(--live); }
+.feed-row .filing-link { margin-top: 4px; }
+
+/* a filing in brief */
+.facts { display: flex; flex-wrap: wrap; gap: 6px; }
+.fact { display: inline-flex; align-items: baseline; gap: 5px; padding: 4px 9px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); font-size: 13px; }
+.fact-l { font-size: 11px; color: var(--ink-3); }
+.fact b { font-weight: 600; font-variant-numeric: tabular-nums; } .fact b.up { color: var(--kept); } .fact b.down { color: var(--missed); }
+.why { margin: 0; font-size: 13px; line-height: 1.4; color: var(--ink-2); }
+.why-h { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1px; }
+.fp-none { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
+.card.filing.compact .filing-title { font-size: 14px; font-weight: 500; }

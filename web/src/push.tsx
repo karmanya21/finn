@@ -7,6 +7,7 @@ import {
 } from "./data";
 import { cleanSubject, filingText, fmtChange, fmtDate, normText, priceWhen, tone } from "./format";
 import { Shell, go } from "./shell";
+import { brief } from "./brief";
 
 const SETTINGS_EVENT = "finn:settings";
 
@@ -29,15 +30,12 @@ function useData<T>(load: () => Promise<T>): T | null | undefined {
 
 const NO_FILINGS: Digest = { built: new Date().toISOString(), days: 30, items: [] };
 
-/** Every thread in the portfolio by id, so filings can name the promises they touch. */
-function useThreads(index: CompanySummary[]): Map<string, Thread> {
-  const [m, setM] = useState(new Map<string, Thread>());
+/** Every company's record, so filings can say which promises they touch. */
+function useLedgers(index: CompanySummary[]): Map<string, Ledger> {
+  const [m, setM] = useState(new Map<string, Ledger>());
   useEffect(() => {
-    Promise.all(index.map((c) => loadLedger(c.symbol).catch(() => null))).then((ls) => {
-      const next = new Map<string, Thread>();
-      ls.forEach((l: Ledger | null) => l?.threads.forEach((t) => next.set(t.id, t)));
-      setM(next);
-    });
+    Promise.all(index.map((c) => loadLedger(c.symbol).catch(() => null))).then((ls) =>
+      setM(new Map((ls.filter(Boolean) as Ledger[]).map((l) => [l.symbol, l]))));
   }, [index]);
   return m;
 }
@@ -60,6 +58,14 @@ export interface Update {
   promise?: { text: string; tone?: "up" | "down" };  // results: what they mean for a promise
   urgent?: boolean;   // a guidance cut, a missed promise, a big move, bad regulatory news
   open: () => void;
+}
+
+/** "Touches FY27 order inflow guide (open)" for a filing that bears on a promise. */
+function touchLine(f: Filing, l: Ledger | undefined): Update["promise"] {
+  if (f.type === "results" || f.type === "management_change") return undefined;
+  const t = brief(f, l).touches[0];
+  if (!t) return undefined;
+  return { text: `${f.type === "earnings_call" ? "Moved" : "Touches"}: ${t.title}`, tone: statusOf(t).tone === "missed" ? "down" : undefined };
 }
 
 /** What a results filing means for the promises it touches, most serious first:
@@ -120,6 +126,7 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         urgent: m.byPrice, open: () => go(`/c/${m.symbol}`) });
     }
     const threadById = new Map(ledgers.flatMap((l) => l.threads.map((t) => [t.id, t] as const)));
+    const bySym = new Map(ledgers.map((l) => [l.symbol, l]));
     for (const f of digest.items) {
       if (f.routine || !s.types.includes(f.type) || f.at.slice(0, 10) < cutoff) continue;
       if (f.type === "management_change" && !f.senior) continue;  // only CEO, CFO, MD, Chair
@@ -131,12 +138,12 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
         figures: f.numbers ? resultsFigures(f.numbers) : undefined, heading: resultsQuarter(f) && `${resultsQuarter(f)} · ${fmtDate(f.at)}`, title: f.type === "results" ? resultsHeadline(f) : filingText(f.summary, f.subject),
         tone: f.type === "results" && yoy != null ? (yoy >= 0 ? "up" : "down")
           : f.tone === "positive" ? "up" : f.tone === "negative" ? "down" : undefined,
-        line: f.people.length ? peopleLine(f) : undefined,
-        promise: f.numbers ? promiseImpact(f.promises.map((id) => threadById.get(id)).filter(Boolean) as Thread[], f.numbers.quarter) : undefined,
+        line: f.people.length ? peopleLine(f) : f.type !== "results" ? brief(f, bySym.get(f.symbol)).why ?? undefined : undefined,
+        promise: f.numbers ? promiseImpact(f.promises.map((id) => threadById.get(id)).filter(Boolean) as Thread[], f.numbers.quarter)
+          : touchLine(f, bySym.get(f.symbol)),
         urgent: f.type === "regulatory" && f.tone === "negative",
         open: () => go(`/filings/${f.id}`) });
     }
-    const bySym = new Map(ledgers.map((l) => [l.symbol, l]));
     const VERDICT = new Set(["Missed", "Kept", "Beat"]);
     for (const i of feed(ledgers)) {
       const l = bySym.get(i.symbol);
@@ -343,6 +350,7 @@ function UpdateRow({ u }: { u: Update }) {
         <span className="feed-tag">{u.tag} · {u.date}</span>
         <span className={`feed-head ${u.tone ?? ""}`}>{u.title}</span>
         {u.line && <span className="feed-line">{u.line}</span>}
+        {u.promise && <span className={`cr-impact ${u.promise.tone ?? ""}`}>{u.promise.text}</span>}
       </span>
     </button>
   );
@@ -503,7 +511,8 @@ const ATTENTION = 50; // full card; 30-49 is a one-line "worth a look"; below 30
 
 export function FilingsView({ index }: { index: CompanySummary[] }) {
   const digest = useData<Digest>(loadDigest);
-  const threads = useThreads(index);
+  const ledgers = useLedgers(index);
+  const threads = useMemo(() => new Map([...ledgers.values()].flatMap((l) => l.threads.map((t) => [t.id, t] as const))), [ledgers]);
   const [hours, setHours] = useState(24);
   const [showRoutine, setShowRoutine] = useState(false);
   const openId = window.location.hash.split("/")[2];
@@ -545,22 +554,15 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
         <p className="quiet-note">Nothing that needs your attention in this window.</p>
       ) : (
         <div className="cards filings">
-          {material.map((f) => <FilingCard key={f.id} f={f} threads={threads} open={f.id === openId} built={digest.built} />)}
+          {material.map((f) => <FilingCard key={f.id} f={f} threads={threads} ledger={ledgers.get(f.symbol)} open={f.id === openId} />)}
         </div>
       )}
 
       {notable.length > 0 && (
         <section>
           <h2 className="section-title">Worth a look <span className="count">{notable.length}</span></h2>
-          <div className="feed">
-            {notable.map((f) => (
-              <a key={f.id} id={`f-${f.id}`} className={`feed-row ${f.id === openId ? "focus" : ""}`} href={f.pdf ?? undefined} target="_blank" rel="noreferrer">
-                <span className="feed-body">
-                  <span className="feed-co">{f.name} · {f.label} · {fmtDate(f.at)}</span>
-                  <span className="feed-line strong">{filingText(f.summary, f.subject)}</span>
-                </span>
-              </a>
-            ))}
+          <div className="cards filings">
+            {notable.map((f) => <FilingCard key={f.id} f={f} threads={threads} ledger={ledgers.get(f.symbol)} open={f.id === openId} compact />)}
           </div>
         </section>
       )}
@@ -593,12 +595,16 @@ export function FilingsView({ index }: { index: CompanySummary[] }) {
   );
 }
 
-function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<string, Thread>; open: boolean; built: string }) {
+function FilingCard({ f, threads, ledger, open, compact }: {
+  f: Filing; threads: Map<string, Thread>; ledger?: Ledger; open: boolean; compact?: boolean;
+}) {
   const linked = f.promises.map((id) => threads.get(id)).filter(Boolean) as Thread[];
+  // Results and management changes have their own layouts; every other kind gets the brief.
+  const b = f.type !== "results" && f.type !== "management_change" ? brief(f, ledger) : null;
   return (
-    <article id={`f-${f.id}`} className={`card filing ${open ? "focus" : ""}`}>
+    <article id={`f-${f.id}`} className={`card filing ${open ? "focus" : ""} ${compact ? "compact" : ""}`}>
       <div className="card-top">
-        <span className="filing-co">{f.name}</span>
+        <button className="filing-co co-link" onClick={() => go(`/c/${f.symbol}`)}>{f.name} ›</button>
         <span className="filing-time">{fmtDate(f.at)}</span>
       </div>
       <div className="filing-head">
@@ -631,7 +637,19 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
         );
       })}
 
-      {linked.length > 0 && (
+      {b && b.facts.length > 0 && (
+        <div className="facts">
+          {b.facts.map((x) => <span key={x.label} className="fact"><span className="fact-l">{x.label}</span><b className={x.tone ?? ""}>{x.value}</b></span>)}
+        </div>
+      )}
+      {b?.why && <p className="why"><span className="why-h">Why it matters</span>{b.why}</p>}
+      {b && (b.touches.length ? (
+        <div className="filing-promises">
+          <span className="fp-label">{b.touchLabel}</span>
+          <PromiseRows ts={b.touches} />
+        </div>
+      ) : <p className="fp-none">{f.type === "earnings_call" ? "No tracked promise moved on this call." : "Touches none of the promises FINN tracks."}</p>)}
+      {!b && linked.length > 0 && (
         <div className="filing-promises">
           <span className="fp-label">{f.type === "results" ? "What these results mean for their promises" : "Relates to"}</span>
           <PromiseRows ts={linked} quarter={f.type === "results" ? f.numbers?.quarter ?? resultsQuarter(f) : undefined} />
@@ -639,6 +657,7 @@ function FilingCard({ f, threads, open, built }: { f: Filing; threads: Map<strin
       )}
 
       <div className="filing-links">
+        <button className="filing-link link" onClick={() => go(`/c/${f.symbol}`)}>Company record ›</button>
         {f.pdf && <a className="filing-link" href={f.pdf} target="_blank" rel="noreferrer">Open filing ↗</a>}
         {(f.also ?? []).map((a, i) => <a key={i} className="filing-link" href={a.pdf} target="_blank" rel="noreferrer">{a.label} ↗</a>)}
       </div>
