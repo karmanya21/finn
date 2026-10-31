@@ -187,12 +187,19 @@ main section { margin-top: 26px; }
 .co-head { margin-top: 18px; }
 .co-title { font-size: 28px; font-weight: 700; margin: 0; line-height: 1.12; letter-spacing: -0.025em; }
 .co-sub { color: var(--ink-3); font-size: 13px; margin: 6px 0 16px; }
-.record { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.record-box { padding: 12px 12px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.record-total { margin: 0 0 8px; font-size: 13px; color: var(--ink-2); }
+.record-total b { font-size: 15px; color: var(--ink); }
+.record-bar { display: flex; gap: 2px; height: 6px; border-radius: 3px; overflow: hidden; }
+.record-bar .seg { flex-basis: 0; }
+.tone-bg-kept { background: var(--kept); } .tone-bg-missed { background: var(--missed); }
+.tone-bg-quiet { background: var(--quiet); } .tone-bg-muted { background: var(--line-2); }
+.record { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 4px; }
 .stat { display: flex; flex-direction: column; align-items: center; padding: 12px 2px; border-left: 1px solid var(--line); }
 .stat:first-child { border-left: 0; }
 .stat-n { font-size: 22px; font-weight: 600; line-height: 1.1; }
 .stat-l { font-size: 11px; color: var(--ink-3); margin-top: 2px; text-align: center; }
-.record-note { font-size: 12px; color: var(--ink-3); margin: 8px 2px 0; }
+.record-note { font-size: 13px; color: var(--ink-2); margin: 6px 0 0; line-height: 1.4; }
 
 .chips { display: flex; gap: 6px; margin-top: 18px; overflow-x: auto; scrollbar-width: none; }
 .chip { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 13px; color: var(--ink-2); white-space: nowrap; }

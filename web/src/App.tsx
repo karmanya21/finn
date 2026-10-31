@@ -115,7 +115,7 @@ function Portfolio({ index }: { index: CompanySummary[] }) {
                 <span className="prow-main">
                   <span className="prow-name">{c.name}</span>
                   <span className="prow-rec">
-                    <span className={sort === "kept" ? "hl" : ""}>{r.resolved ? `${r.kept}/${r.resolved} kept` : "none settled"}</span>
+                    <span className={sort === "kept" ? "hl" : ""}>{r.kept} kept</span>
                     <span className={sort === "missed" ? "hl" : ""}>{r.missed} missed</span>
                     <span className={sort === "quiet" ? "hl" : ""}>{r.quiet} quiet</span>
                   </span>
@@ -445,6 +445,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
   const noCalls = l.calls.length === 0;
   const fromFiling = useNewerResults(l.symbol, l.headline);
   const results = fromFiling ?? l.headline;
+  const scored = r.kept + r.missed + r.quiet + r.open;
   const short_ = l.name.replace(/ (Ltd|Limited|India)\.?$/i, "");
 
   return (
@@ -465,24 +466,19 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
             <p>{l.name} doesn't publish earnings-call transcripts, so there are no management promises to track.</p>
           </div>
         ) : (
-          <div className="record">
-            <Stat n={r.resolved ? `${r.kept}/${r.resolved}` : "–"} label="kept" tone="kept" />
-            <Stat n={r.missed} label="missed" tone="missed" />
-            <Stat n={r.moved} label="moved" tone="moved" />
-            <Stat n={r.quiet} label="gone quiet" tone="quiet" />
-            <Stat n={r.open} label="open" tone="muted" />
-          </div>
+          <RecordBox r={r} />
         )}
         {l.case && (l.case.bull.length > 0 || l.case.bear.length > 0) && <CaseView l={l} base={base} />}
         <Footnote>
-          {noCalls ? "" : "Counts settled numbers and milestones only; directional remarks and ambitions are listed but not scored. "}
+          {noCalls ? "" : `Scores the ${scored} numbers and milestones among the ${l.threads.length} promises; the other ${l.threads.length - scored} are directional remarks and ambitions, listed below but not scored. Kept or missed is judged against reported results or management's own later word; gone quiet means management stopped reporting on it: the period ended, or a repeated promise went unmentioned for two calls. `}
           {l.case ? "The case each way uses only this record and reported numbers; every point cites its source." : ""}
         </Footnote>
       </section>
 
       {!noCalls && (
         <section>
-          <h2 className="section-title">Promises <span className="count">{l.threads.length}</span></h2>
+          <h2 className="section-title">Promises <span className="count">{l.threads.length}</span>
+            {scored < l.threads.length && <span className="count"> · {scored} scored</span>}</h2>
           {l.threads.length === 0 ? (
             <div className="notice"><b>No forward-looking promises found.</b><p>Management didn't commit to numbers, directions or milestones in the calls read.</p></div>
           ) : (
@@ -645,6 +641,32 @@ function ResultsBlock({ h, l, base }: { h: Headline; l: Ledger; base: string }) 
         quarter last year; margin is EBITDA ÷ revenue.
       </Footnote>
     </section>
+  );
+}
+
+/** The scored promises split four ways that add up to the total, and the share kept of
+ *  those that came due. "Moved" cuts across all four, so it's a sentence, not a column. */
+function RecordBox({ r }: { r: Ledger["record"] }) {
+  const parts: [number, string, Tone][] = [[r.kept, "kept", "kept"], [r.missed, "missed", "missed"],
+    [r.quiet, "gone quiet", "quiet"], [r.open, "still open", "muted"]];
+  const total = parts.reduce((a, [n]) => a + n, 0);
+  if (!total) return <p className="record-note">No numbers or milestones to score yet.</p>;
+  const pct = Math.round((r.kept / Math.max(r.resolved, 1)) * 100);
+  return (
+    <div className="record-box">
+      <p className="record-total"><b>{total}</b> numbers and milestones tracked</p>
+      <div className="record-bar" aria-hidden>
+        {parts.map(([n, , tone]) => n > 0 && <span key={tone} className={`seg tone-bg-${tone}`} style={{ flexGrow: n }} />)}
+      </div>
+      <div className="record">
+        {parts.map(([n, label, tone]) => <Stat key={label} n={n} label={label} tone={tone} />)}
+      </div>
+      <p className="record-note">
+        {r.resolved ? <>Of the {r.resolved} that came due and could be checked, <b>{r.kept} kept</b> ({pct}%).</>
+          : "None has come due and been checked yet."}
+        {r.moved > 0 && ` ${r.moved === 1 ? "One" : r.moved} had ${r.moved === 1 ? "its target" : "their targets"} moved along the way.`}
+      </p>
+    </div>
   );
 }
 
