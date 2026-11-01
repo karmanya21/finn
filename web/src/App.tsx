@@ -3,7 +3,7 @@ import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayG
 import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, closeTo, go } from "./shell";
 import { PriceChart } from "./chart";
-import { AskBox, PortfolioAsk } from "./ask";
+import { ChatBubble } from "./ask";
 import { WakingNote, useWaking } from "./waking";
 import { MAX_ADDED, addToPortfolio, isBuiltIn, loadAnyLedger, removeFromPortfolio, setBuiltIn, useAdded } from "./mine";
 import {
@@ -64,6 +64,11 @@ function Routes({ route }: { route: string[] }) {
 
   if (error) return <Shell><p className="empty">Couldn't load data: {error}</p></Shell>;
   if (!index) return <Shell><p className="empty">Loading…</p></Shell>;
+  // Ask FINN rides along on every screen and keeps its conversations across them.
+  return <>{page(route, index)}<ChatBubble index={index} route={route} /></>;
+}
+
+function page(route: string[], index: CompanySummary[]) {
   if (route[0] === "c" && route[1]) return <CompanyView symbol={route[1]} threadId={route[3]} />;
   if (route[0] === "r" && route[1]) {
     const sym = decodeURIComponent(route[1]).toUpperCase();
@@ -83,7 +88,6 @@ function Home({ index }: { index: CompanySummary[] }) {
     <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
       <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
       <SearchBar index={index} />
-      <PortfolioAsk symbols={index.map((c) => c.symbol)} />
       <TodayGrid index={index} onSettings={() => setSettings(true)} />
       {settings && <SettingsSheet onClose={() => setSettings(false)} />}
     </Shell>
@@ -586,7 +590,6 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
         {!noCalls && <SinceLastCall l={l} results={results} />}
       </section>
 
-      <AskBox l={l} base={base} />
 
       {results && results.rows.length > 0 && <ResultsBlock h={results} l={l} base={base} />}
 

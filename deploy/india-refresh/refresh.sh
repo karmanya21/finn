@@ -8,10 +8,15 @@ DIR="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$DIR"
 echo "== $(date -u +%FT%TZ)"
 
+# Everything this job writes is regenerated each run. Drop yesterday's leftovers first: an
+# uncommitted audit.json once blocked every pull from 31 Oct.
+git checkout -q -- web/public/data data/out/audit.json 2>/dev/null || true
 git pull -q --rebase origin main || { echo "git pull failed"; exit 1; }
 (cd backend && .venv/bin/python -m scripts.build_push filings) || { echo "build failed"; exit 1; }
 
-git add web/public/data/filings.json
+# The digest, any promise progress a new results filing moved (company records and the
+# index), and the audit of what was built.
+git add web/public/data/filings.json web/public/data/*.json data/out/audit.json
 if git diff --cached --quiet; then
   echo "No changes."
 else
