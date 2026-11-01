@@ -116,20 +116,15 @@ export function PriceChart({ symbol, rows }: { symbol: string; rows: Row[] }) {
 
   return (
     <div className="pchart">
-      <div className="pchart-top">
-        <div className="pchart-read" aria-live="polite">
-          {hover != null && <b>{rupees(row[1])}</b>}
-          <span className={row[1] >= first ? "up" : "down"}>{fmtChange((row[1] / first - 1) * 100, 1)}</span>
-          <span className="pchart-when">{hover == null ? `over ${range}` : fmtDate(row[0])}</span>
-          {hover != null && hasVol && <span className="pchart-when">· vol {fmtVolume(row[2]!)}</span>}
-        </div>
-        <div className="segmented small" role="group" aria-label="Chart range">
-          {usable.map(([k]) => (
-            <button key={k} className={k === range ? "on" : ""} onClick={() => { setRange(k); setHover(null); }}>{k}</button>
-          ))}
-        </div>
+      {/* Fixed-height lines that never wrap: if the readout grew while scrubbing, the plot
+          would move under the pointer and the hover would flicker. */}
+      <div className="pchart-read" aria-live="polite">
+        {hover != null && <b>{rupees(row[1])}</b>}
+        <span className={row[1] >= first ? "up" : "down"}>{fmtChange((row[1] / first - 1) * 100, 1)}</span>
+        <span className="pchart-when">{hover == null ? `over ${range}` : fmtDate(row[0])}</span>
+        {hover != null && hasVol && <span className="pchart-when">· vol {fmtVolume(row[2]!)}</span>}
       </div>
-      {ev && <p className="pchart-event">{fmtDate(ev.date)}: {ev.text}</p>}
+      <p className="pchart-event">{ev ? `${fmtDate(ev.date)}: ${ev.text}` : "\u00a0"}</p>
 
       <div ref={ref} className="pchart-plot" tabIndex={0} onKeyDown={key}
         onPointerMove={(e) => pick(e.clientX)} onPointerDown={(e) => pick(e.clientX)} onPointerLeave={() => setHover(null)}
@@ -167,6 +162,11 @@ export function PriceChart({ symbol, rows }: { symbol: string; rows: Row[] }) {
               x={i * step} y={H + PAD.bottom + GAP + VH - h} width={Math.max(1, step - 1)} height={h} />;
           })}
         </svg>
+      </div>
+      <div className="segmented small pchart-ranges" role="group" aria-label="Chart range">
+        {usable.map(([k]) => (
+          <button key={k} className={k === range ? "on" : ""} onClick={() => { setRange(k); setHover(null); }}>{k}</button>
+        ))}
       </div>
       <p className="pchart-foot">
         {range} high {rupees(hi)} · low {rupees(lo)}

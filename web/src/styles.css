@@ -604,14 +604,15 @@ details.more > section { margin-top: 10px; }
 
 /* company price chart */
 .pchart { margin-top: 10px; }
-.pchart-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
-.pchart-read { display: flex; align-items: baseline; gap: 6px; font-variant-numeric: tabular-nums; min-height: 22px; }
+.pchart-read { display: flex; align-items: baseline; gap: 6px; height: 22px; white-space: nowrap; overflow: hidden; font-variant-numeric: tabular-nums; }
 .pchart-read b { font-size: 15px; font-weight: 600; }
 .pchart-read .up { color: var(--kept); font-weight: 600; font-size: 13px; } .pchart-read .down { color: var(--missed); font-weight: 600; font-size: 13px; }
 .pchart-when { font-size: 12px; color: var(--ink-3); }
 .segmented.small { padding: 2px; border-radius: 8px; }
 .segmented.small button { padding: 3px 9px; font-size: 12px; border-radius: 6px; flex: none; }
-.pchart-event { margin: 4px 0 0; font-size: 12px; color: var(--ink-2); }
+.pchart-event { margin: 2px 0 0; height: 16px; font-size: 12px; line-height: 16px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pchart-ranges { margin-top: 8px; }
+.segmented.small.pchart-ranges button { flex: 1; }
 .pchart-plot { margin-top: 6px; touch-action: pan-y; cursor: crosshair; outline: none; border-radius: 6px; }
 .pchart-plot:focus-visible { box-shadow: 0 0 0 2px var(--line-2); }
 .pchart-svg { display: block; overflow: visible; }
