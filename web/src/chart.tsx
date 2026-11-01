@@ -54,7 +54,11 @@ function useResultEvents(symbol: string): Event[] {
 export function PriceChart({ symbol, rows }: { symbol: string; rows: Row[] }) {
   // a range is offered only when it shows clearly more than the one before it
   const usable = RANGES.filter((_, i) => i === 0 || rows.length >= RANGES[i - 1][1] * 1.3);
-  const [range, setRange] = useState(() => (usable.find(([k]) => k === "6M") ?? usable[usable.length - 1])[0]);
+  // The default follows the data until the reader picks a range: the record's 3-month
+  // fallback can draw first, before the year of prices has loaded.
+  const [picked, setRange] = useState<string | null>(null);
+  const range = picked && usable.some(([k]) => k === picked) ? picked
+    : (usable.find(([k]) => k === "6M") ?? usable[usable.length - 1])[0];
   const [hover, setHover] = useState<number | null>(null);
   const [ref, width] = useWidth();
   const events = useResultEvents(symbol);
