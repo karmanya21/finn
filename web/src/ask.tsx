@@ -54,6 +54,17 @@ function suggestions(l: Ledger): string[] {
 
 interface Turn { q: string; answer?: AskAnswer; error?: string }
 
+/** The free host sleeps when idle; a first question can take a minute while it wakes. */
+function Waiting({ short }: { short: string }) {
+  const [slow, setSlow] = useState(false);
+  useEffect(() => { const id = setTimeout(() => setSlow(true), 8000); return () => clearTimeout(id); }, []);
+  return (
+    <p className="ask-wait"><span className="spin" />
+      {slow ? "Waking FINN's server. Free hosting sleeps when idle; the first question takes up to a minute."
+        : `Reading ${short}'s record…`}</p>
+  );
+}
+
 const said = (a?: AskAnswer) => a?.sentences.map((s) => s.text).join(" ") ?? "";
 
 export function AskBox({ l, base }: { l: Ledger; base: string }) {
@@ -93,7 +104,7 @@ export function AskBox({ l, base }: { l: Ledger; base: string }) {
           {turns.map((t, k) => (
             <div key={k} className="ask-answer">
               <p className="ask-q">{t.q}</p>
-              {!t.answer && !t.error && <p className="ask-wait"><span className="spin" /> Reading {short}'s record…</p>}
+              {!t.answer && !t.error && <Waiting short={short} />}
               {t.error && <p className="ask-error">{t.error}</p>}
               {t.answer && (
                 <ul className="ask-sentences">

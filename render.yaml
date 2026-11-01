@@ -1,0 +1,44 @@
+# Render blueprint: the public prototype. Free plan, no card.
+#
+#   finn-karmanya21      the app (static, always on)        https://finn-karmanya21.onrender.com
+#   finn-api-karmanya21  Ask FINN + research of new companies (sleeps when idle; ~1 min to wake)
+#
+# Set up once: Render dashboard -> New -> Blueprint -> pick this repo -> paste GEMINI_API_KEY.
+# Every push to main redeploys both, so the daily price and filings refreshes reach the link.
+# If Render had to rename a service (name taken), update VITE_API_URL to the API's real address.
+
+services:
+  - type: web
+    name: finn-api-karmanya21
+    runtime: python
+    plan: free
+    region: singapore          # nearest to India: screener.in and BSE answer it
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: GEMINI_API_KEY
+        sync: false              # entered in the dashboard, never committed
+      - key: FINN_ASK_PER_HOUR   # per visitor
+        value: "30"
+      - key: FINN_RESEARCH_PER_DAY
+        value: "8"
+
+  - type: web
+    name: finn-karmanya21
+    runtime: static
+    buildCommand: cd web && npm ci && npm run build
+    staticPublishPath: web/dist
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /data/*            # refreshed daily; never serve yesterday's
+        name: Cache-Control
+        value: no-cache
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: VITE_API_URL
+        value: https://finn-api-karmanya21.onrender.com

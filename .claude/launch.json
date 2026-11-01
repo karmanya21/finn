@@ -4,14 +4,35 @@
     {
       "name": "finn-web",
       "runtimeExecutable": "web/node_modules/.bin/vite",
-      "runtimeArgs": ["web", "--host", "--port", "5173", "--strictPort"],
+      "runtimeArgs": [
+        "web",
+        "--host",
+        "--port",
+        "5173",
+        "--strictPort"
+      ],
       "port": 5173
     },
     {
       "name": "finn-api",
       "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "cd /Users/karmanyagoyal/Desktop/FINN/backend && exec .venv/bin/python server.py"],
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/karmanyagoyal/Desktop/FINN/backend && exec .venv/bin/python server.py"
+      ],
       "port": 8787
+    },
+    {
+      "name": "finn-prod",
+      "runtimeExecutable": "web/node_modules/.bin/vite",
+      "runtimeArgs": [
+        "preview",
+        "web",
+        "--port",
+        "4173",
+        "--strictPort"
+      ],
+      "port": 4173
     }
   ]
 }

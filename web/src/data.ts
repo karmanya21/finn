@@ -121,8 +121,14 @@ export interface ResearchStatus {
   ledger?: Ledger;
 }
 
+// Where the research/Ask server lives: same origin in development (Vite proxies /api), its
+// own address when the app is hosted (VITE_API_URL, set at build time).
+const API = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
+// Data files sit next to the app, wherever it's served from.
+const DATA = `${import.meta.env.BASE_URL}data/`;
+
 async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const r = await fetch(path, init);
+  const r = await fetch(`${API}${path}`, init);
   const body = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(body.error || `${r.status}`);
   return body as T;
@@ -224,18 +230,18 @@ function get<T>(path: string): Promise<T> {
   }));
   return cache.get(path)!;
 }
-export const loadIndex = () => get<CompanySummary[]>("/data/index.json");
-export const loadLedger = (sym: string) => get<Ledger>(`/data/${sym}.json`);
+export const loadIndex = () => get<CompanySummary[]>(`${DATA}index.json`);
+export const loadLedger = (sym: string) => get<Ledger>(`${DATA}${sym}.json`);
 
 /** Research-set companies that ship pre-built with the app (searchable offline). */
 export const loadResearchIndex = () =>
-  get<{ symbol: string; name: string }[]>("/data/research.json").catch(() => []);
+  get<{ symbol: string; name: string }[]>(`${DATA}research.json`).catch(() => []);
 
 /** A pre-built record if the app ships one, else null (the dev server answers unknown
  *  paths with the app's HTML, so anything that isn't JSON counts as "not shipped"). */
 export async function loadShipped(sym: string): Promise<Ledger | null> {
   try {
-    const r = await fetch(`/data/${encodeURIComponent(sym)}.json`);
+    const r = await fetch(`${DATA}${encodeURIComponent(sym)}.json`);
     if (!r.ok || !(r.headers.get("content-type") ?? "").includes("json")) return null;
     return await r.json();
   } catch { return null; }
@@ -327,7 +333,7 @@ export interface Filing {
 }
 
 export interface Digest { built: string; days: number; items: Filing[] }
-export const loadDigest = () => get<Digest>("/data/filings.json");
+export const loadDigest = () => get<Digest>(`${DATA}filings.json`);
 
 // ---- push: prices and alerts --------------------------------------------------------
 
@@ -336,7 +342,7 @@ export interface Prices {
   series: { [sym: string]: [string, number, number][] };
   asof?: { [sym: string]: number | null }; // Unix time of each stock's last trade
 }
-export const loadPrices = () => get<Prices>("/data/prices.json");
+export const loadPrices = () => get<Prices>(`${DATA}prices.json`);
 
 export interface AlertSettings {
   volume: number;   // alert when volume >= this multiple of its 20-day average

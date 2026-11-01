@@ -25,6 +25,10 @@ cd ../web && npm install && npm run dev                # http://localhost:5173
 
 Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction against the hand-labelled set in `eval/gold/`.
 
+## Public prototype
+
+`render.yaml` hosts both halves on Render's free plan: the app as a static site (always on) and the research/Ask API as a web service (it sleeps when idle, so the first question after a quiet spell takes up to a minute). Set up once from the Render dashboard: **New → Blueprint →** this repo, and paste `GEMINI_API_KEY` when asked. Each push to `main` redeploys, so the daily refreshes reach the link. The API caps use of the free model: 30 questions per visitor an hour and 8 new companies researched a day (`FINN_ASK_PER_HOUR`, `FINN_RESEARCH_PER_DAY`).
+
 ## Tests and audit
 
 ```bash

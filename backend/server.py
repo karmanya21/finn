@@ -2,6 +2,7 @@
 
     cd backend && .venv/bin/python server.py        # http://localhost:8787
 
+    GET  /api/health                 {ok: true}, for the host's health check
     GET  /api/search?q=polycab       companies matching a name or ticker
     GET  /api/research/POLYCAB       {state, steps, ledger?}   state: idle|queued|running|done|error
     POST /api/research/POLYCAB       start research (no-op if cached or already running)
@@ -12,6 +13,7 @@ throttles parallel calls, and a queue is honest about the wait.
 """
 
 import json
+import os
 import queue
 import re
 import threading
@@ -27,7 +29,37 @@ from finn.config import ROOT
 from finn.llm.client import LLMError
 from finn.sources import screener
 
-PORT = 8787
+PORT = int(os.getenv("PORT", "8787"))  # a host (Render) sets PORT
+ALLOWED_ORIGIN = os.getenv("FINN_ALLOWED_ORIGIN", "*")  # the web app's origin, when it's hosted apart
+
+# A public link spends the free model allowance, so cap it: questions per visitor per hour,
+# and new companies researched per day (a research run is dozens of model calls).
+ASK_PER_HOUR = int(os.getenv("FINN_ASK_PER_HOUR", "30"))
+RESEARCH_PER_DAY = int(os.getenv("FINN_RESEARCH_PER_DAY", "8"))
+_asks: dict[str, list[float]] = {}
+_research_days: dict[str, int] = {}
+
+
+def _allow_ask(who: str) -> bool:
+    now = time.time()
+    with lock:
+        recent = [t for t in _asks.get(who, []) if now - t < 3600]
+        if len(recent) >= ASK_PER_HOUR:
+            _asks[who] = recent
+            return False
+        _asks[who] = recent + [now]
+        return True
+
+
+def _allow_research() -> bool:
+    day = time.strftime("%Y-%m-%d")
+    with lock:
+        n = _research_days.get(day, 0)
+        if n >= RESEARCH_PER_DAY:
+            return False
+        _research_days.clear()  # only today's count matters
+        _research_days[day] = n + 1
+        return True
 PORTFOLIO_DATA = ROOT / "web" / "public" / "data"
 SYMBOL = re.compile(r"^[A-Z0-9&\-]{1,20}$")
 
@@ -88,6 +120,10 @@ def start(sym: str) -> dict:
             return {"symbol": sym, **jobs[sym]}
     if ledger_for(sym):
         return status(sym)
+    if not _allow_research():
+        return {"symbol": sym, "state": "error", "steps": [],
+                "error": f"This demo researches up to {RESEARCH_PER_DAY} new companies a day on a free model tier, "
+                         "and today's are used. Companies already researched still open instantly."}
     with lock:
         jobs[sym] = {"state": "queued", "steps": [], "position": work.qsize() + 1}
     work.put(sym)
@@ -98,15 +134,33 @@ class Handler(BaseHTTPRequestHandler):
     def _send(self, code: int, body: dict) -> None:
         data = json.dumps(body, ensure_ascii=False).encode()
         self.send_response(code)
+        self._cors()
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
         self.wfile.write(data)
 
+    def _cors(self) -> None:
+        self.send_header("Access-Control-Allow-Origin", ALLOWED_ORIGIN)
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Max-Age", "86400")
+
+    def do_OPTIONS(self):  # the browser's preflight before a cross-origin POST
+        self.send_response(204)
+        self._cors()
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
+    def _visitor(self) -> str:
+        return (self.headers.get("X-Forwarded-For") or self.client_address[0]).split(",")[0].strip()
+
     def _route(self, method: str) -> None:
         url = urlparse(self.path)
         parts = [p for p in url.path.split("/") if p]
         try:
+            if parts == ["api", "health"]:
+                return self._send(200, {"ok": True})
             if parts == ["api", "search"] and method == "GET":
                 q = (parse_qs(url.query).get("q") or [""])[0].strip()
                 if len(q) < 2:
@@ -126,6 +180,8 @@ class Handler(BaseHTTPRequestHandler):
                 ledger = ledger_for(sym)
                 if not ledger:
                     return self._send(404, {"error": f"No record for {sym} yet"})
+                if not _allow_ask(self._visitor()):
+                    return self._send(429, {"error": f"That's {ASK_PER_HOUR} questions this hour, the most this free demo allows. Try again later."})
                 try:
                     history = body.get("history") if isinstance(body.get("history"), list) else []
                     return self._send(200, ask.ask(sym, question, ledger, history))
