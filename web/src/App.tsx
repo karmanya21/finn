@@ -252,7 +252,9 @@ function ResearchView({ symbol, threadId, portfolio, index }: {
   const [shipped, setShipped] = useState<Ledger | null | undefined>(undefined);
   useEffect(() => { loadShipped(symbol).then(setShipped); }, [symbol]);
   useEffect(() => {
-    if (portfolio) { go(`/c/${symbol}`); return; }
+    // In the portfolio: its own page. Replace, don't push: a pushed entry would send Back to
+    // this address, which redirects forward again, and Back would seem to do nothing.
+    if (portfolio) { window.location.replace(`#/c/${symbol}`); return; }
     if (shipped !== null) return;  // still checking, or already have it: no API call
     let alive = true, timer = 0;
     const poll = async (first: boolean) => {
@@ -367,7 +369,8 @@ function PortfolioButton({ l }: { l: Ledger }) {
 function SearchBar({ index, onPick, placeholder }: {
   index: CompanySummary[]; onPick?: (r: SearchResult) => void; placeholder?: string;
 }) {
-  const pick = onPick ?? ((r: SearchResult) => go(`/r/${r.symbol}`));
+  // A company already in the portfolio opens its own page; anything else is researched.
+  const pick = onPick ?? ((r: SearchResult) => go(index.some((c) => c.symbol === r.symbol) ? `/c/${r.symbol}` : `/r/${r.symbol}`));
   const [q, setQ] = useState("");
   const [live, setLive] = useState<SearchResult[]>([]);
   const [liveFor, setLiveFor] = useState("");  // the query `live` answers
