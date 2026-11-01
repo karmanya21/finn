@@ -589,9 +589,41 @@ class AskAnswersOnlyFromTheRecord(unittest.TestCase):
                                        {"text": "Margins will improve.", "sources": []}]}, self.srcs)
         self.assertEqual(out, [])
 
+    def test_saying_what_the_record_lacks_needs_no_source(self):
+        out = ask.check({"sentences": [{"text": "The record doesn't give a reason for the fall.", "sources": []},
+                                       {"text": "The record doesn't show the 12% fall.", "sources": []}]}, self.srcs)
+        self.assertEqual([x["text"] for x in out], ["The record doesn't give a reason for the fall."])
+
     def test_advice_is_dropped(self):
         out = ask.check({"sentences": [{"text": "Given 26.5% growth, this is a good buy.", "sources": ["results"]}]}, self.srcs)
         self.assertEqual(out, [])
+
+
+    def test_finns_note_isnt_put_in_managements_mouth(self):  # Max Healthcare's tax-credit note
+        srcs = {"results": {"kind": "results", "label": "Q2FY27 results",
+                            "text": "PAT ₹414 cr, -15.6% YoY. FINN's note: year-ago quarter had a tax credit."},
+                "MAX-1": {"kind": "promise", "label": "Margin", "text": "Said: \"margins will hold\""}}
+        out = ask.check({"sentences": [{"text": "Management's explanation is that the year-ago quarter had a tax credit.",
+                                        "sources": ["results"]}]}, srcs)
+        self.assertEqual(out[0]["text"], "The record's explanation is that the year-ago quarter had a tax credit.")
+        out = ask.check({"sentences": [{"text": "Management believes growth will recover.", "sources": ["results"]}]}, srcs)
+        self.assertEqual(out, [])
+        out = ask.check({"sentences": [{"text": "Management said margins will hold.", "sources": ["MAX-1"]}]}, srcs)
+        self.assertEqual(len(out), 1)
+
+    def test_a_number_under_the_wrong_results_line_is_dropped(self):  # Max: "PBT was ₹414 cr" (414 is PAT)
+        lines = {"pbt": [541, 21.3, 24.0], "pat": [414, -15.6, 28.3], "revenue": [2569, 20.3, 8.6], "margin": [27.7, 26.9]}
+        self.assertTrue(ask.mislabelled("PBT was ₹414 cr, down 15.6% YoY", lines))
+        self.assertFalse(ask.mislabelled("PAT was ₹414 cr, down 15.6% YoY", lines))
+        self.assertFalse(ask.mislabelled("revenue of ₹2,569 cr, up 20.3% YoY, with an EBITDA margin of 27.7% vs 26.9%", lines))
+        self.assertFalse(ask.mislabelled("a year ago PAT was ₹491 cr above PBT of ₹446 cr", lines, [491, 446]))
+
+    def test_model_glyph_slips_are_tidied(self):  # Max Healthcare: "⁷2,569 cr"; Cipla: "down -2.4%"
+        self.assertEqual(ask.tidy("revenue of ⁷2,569 cr"), "revenue of ₹2,569 cr")
+        self.assertEqual(ask.tidy("revenue was down -2.4% YoY"), "revenue was down 2.4% YoY")
+        self.assertEqual(ask.tidy("growth of -2.4%"), "growth of -2.4%")
+        self.assertEqual(ask.tidy("which is -2.4% lower YoY"), "which is 2.4% lower YoY")
+        self.assertEqual(ask.tidy("revenue of \u20247,404 cr"), "revenue of ₹7,404 cr")
 
 
 class FiscalCalendar(unittest.TestCase):

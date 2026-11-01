@@ -640,7 +640,8 @@ details.more > section { margin-top: 10px; }
 @keyframes pulse { 50% { opacity: 0.55; } }
 .ask-sugg { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .ask-sugg .chip { font-size: 12px; padding: 5px 10px; }
-.ask-answer { margin-top: 10px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.ask-thread { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.ask-answer { margin-top: 0; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
 .ask-q { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .ask-wait { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 13px; color: var(--ink-3); }
 .ask-error { margin: 4px 0; font-size: 13px; color: var(--missed); }

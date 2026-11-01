@@ -52,43 +52,84 @@ function suggestions(l: Ledger): string[] {
   return out;
 }
 
+interface Turn { q: string; answer?: AskAnswer; error?: string }
+
+const said = (a?: AskAnswer) => a?.sentences.map((s) => s.text).join(" ") ?? "";
+
 export function AskBox({ l, base }: { l: Ledger; base: string }) {
   const [q, setQ] = useState("");
-  const [asked, setAsked] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [answer, setAnswer] = useState<AskAnswer | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [turns, setTurns] = useState<Turn[]>([]);
+  const busy = turns.length > 0 && !turns[turns.length - 1].answer && !turns[turns.length - 1].error;
   const short = l.name.replace(/ (Ltd|Limited|India)\.?$/i, "");
 
   const submit = async (text: string) => {
     const question = text.trim();
     if (question.length < 3 || busy) return;
-    setBusy(true); setError(null); setAsked(question); setAnswer(null);
+    // the last two answered exchanges go along, so a follow-up ("why?") has something to refer to
+    const history = turns.filter((t) => t.answer).slice(-2).map((t) => ({ q: t.q, a: said(t.answer) }));
+    setTurns((ts) => [...ts.slice(-3), { q: question }]);
+    setQ("");
+    const settle = (patch: Partial<Turn>) => setTurns((ts) => ts.map((t, i) => (i === ts.length - 1 ? { ...t, ...patch } : t)));
     try {
-      setAnswer(await askCompany(l.symbol, question));
-      setQ("");
+      settle({ answer: await askCompany(l.symbol, question, history) });
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
-      setError(/^(404|50[02]|Failed to fetch)/.test(msg) || /fetch/i.test(msg)
-        ? "Ask needs FINN's research server, and it isn't running right now." : msg);
-    } finally {
-      setBusy(false);
+      settle({ error: /^(404|50[02])$/.test(msg) || /fetch/i.test(msg)
+        ? "Ask needs FINN's research server, and it isn't running right now." : msg });
     }
   };
   const voice = useVoice((text, final) => { setQ(text); if (final) submit(text); });
-  const said = answer?.sentences.map((s) => s.text).join(" ") ?? "";
 
-  const openSource = (id: string) => {
-    const s = answer?.sources[id];
+  const openSource = (a: AskAnswer, id: string) => {
+    const s = a.sources[id];
     if (s?.kind === "promise" && s.ref) go(`${base}/t/${s.ref}`);
     else if (s?.kind === "filing" && s.ref) go(`/filings/${s.ref}`);
   };
 
   return (
     <section className="ask">
+      {turns.length > 0 && (
+        <div className="ask-thread" aria-live="polite">
+          {turns.map((t, k) => (
+            <div key={k} className="ask-answer">
+              <p className="ask-q">{t.q}</p>
+              {!t.answer && !t.error && <p className="ask-wait"><span className="spin" /> Reading {short}'s record…</p>}
+              {t.error && <p className="ask-error">{t.error}</p>}
+              {t.answer && (
+                <ul className="ask-sentences">
+                  {t.answer.sentences.map((s, i) => (
+                    <li key={i}>
+                      {s.text}
+                      {s.sources.length > 0 && (
+                        <span className="refs">
+                          {s.sources.map((id) => {
+                            const src = t.answer!.sources[id];
+                            const linked = src?.ref && (src.kind === "promise" || src.kind === "filing");
+                            return linked
+                              ? <button key={id} className="ref" onClick={() => openSource(t.answer!, id)}>{src.label} ›</button>
+                              : <span key={id} className="ref">{src?.label ?? id}</span>;
+                          })}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {t.answer && k === turns.length - 1 && (
+                <div className="ask-actions">
+                  {"speechSynthesis" in window && <button className="link small" onClick={() => speak(said(t.answer))}>Read aloud</button>}
+                  <button className="link small" onClick={() => setTurns([])}>Clear</button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
       <form className="ask-form" onSubmit={(e) => { e.preventDefault(); submit(q); }}>
         <input className="ask-input" value={q} onChange={(e) => setQ(e.target.value)} maxLength={300}
-          placeholder={voice?.listening ? "Listening…" : `Ask FINN about ${short}`} aria-label={`Ask FINN about ${short}`} />
+          placeholder={voice?.listening ? "Listening…" : turns.length ? "Ask a follow-up" : `Ask FINN about ${short}`}
+          aria-label={`Ask FINN about ${short}`} />
         {voice && (
           <button type="button" className={`ask-btn mic ${voice.listening ? "on" : ""}`} onClick={voice.toggle}
             aria-label={voice.listening ? "Stop listening" : "Ask by voice"} aria-pressed={voice.listening}>
@@ -100,43 +141,9 @@ export function AskBox({ l, base }: { l: Ledger; base: string }) {
         </button>
       </form>
 
-      {!asked && (
+      {turns.length === 0 && (
         <div className="ask-sugg">
           {suggestions(l).map((s) => <button key={s} className="chip" onClick={() => submit(s)}>{s}</button>)}
-        </div>
-      )}
-
-      {asked && (
-        <div className="ask-answer" aria-live="polite">
-          <p className="ask-q">{asked}</p>
-          {busy && <p className="ask-wait"><span className="spin" /> Reading {short}'s record…</p>}
-          {error && <p className="ask-error">{error}</p>}
-          {answer && (
-            <>
-              <ul className="ask-sentences">
-                {answer.sentences.map((s, i) => (
-                  <li key={i}>
-                    {s.text}
-                    {s.sources.length > 0 && (
-                      <span className="refs">
-                        {s.sources.map((id) => {
-                          const src = answer.sources[id];
-                          const linked = src?.ref && (src.kind === "promise" || src.kind === "filing");
-                          return linked
-                            ? <button key={id} className="ref" onClick={() => openSource(id)}>{src.label} ›</button>
-                            : <span key={id} className="ref">{src?.label ?? id}</span>;
-                        })}
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              <div className="ask-actions">
-                {"speechSynthesis" in window && <button className="link small" onClick={() => speak(said)}>Read aloud</button>}
-                <button className="link small" onClick={() => { setAsked(""); setAnswer(null); }}>Ask something else</button>
-              </div>
-            </>
-          )}
         </div>
       )}
       <p className="footnote">

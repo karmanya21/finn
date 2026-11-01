@@ -127,7 +127,8 @@ class Handler(BaseHTTPRequestHandler):
                 if not ledger:
                     return self._send(404, {"error": f"No record for {sym} yet"})
                 try:
-                    return self._send(200, ask.ask(sym, question, ledger))
+                    history = body.get("history") if isinstance(body.get("history"), list) else []
+                    return self._send(200, ask.ask(sym, question, ledger, history))
                 except LLMError as e:
                     return self._send(503, {"error": f"The language model is unavailable right now ({e}). Try again shortly."})
             if len(parts) == 3 and parts[:2] == ["api", "research"]:

@@ -137,9 +137,9 @@ export interface AskAnswer {
   dropped: number;
   sources: { [id: string]: { kind: string; label: string; ref?: string } };
 }
-export const askCompany = (sym: string, question: string) =>
+export const askCompany = (sym: string, question: string, history: { q: string; a: string }[] = []) =>
   api<AskAnswer>(`/api/ask/${encodeURIComponent(sym)}`, {
-    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question }),
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, history }),
   });
 
 export const startResearch = (sym: string) =>
