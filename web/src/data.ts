@@ -73,6 +73,7 @@ export interface CompanySummary {
   latest_call: string | null; // null: the company holds no earnings calls
   latest_results: string | null;
   record: Record;
+  added?: boolean;  // added by this reader, not one of the built-in companies
 }
 
 export interface Headline {
@@ -165,6 +166,11 @@ export interface AskAnswer {
 export const askCompany = (sym: string, question: string, history: { q: string; a: string }[] = []) =>
   api<AskAnswer>(`/api/ask/${encodeURIComponent(sym)}`, {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, history }),
+  });
+
+export const askPortfolio = (question: string, symbols: string[], history: { q: string; a: string }[] = []) =>
+  api<AskAnswer & { missing?: string[] }>(`/api/ask-portfolio`, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, symbols, history }),
   });
 
 export const startResearch = (sym: string) =>

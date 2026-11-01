@@ -3,11 +3,12 @@ import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayG
 import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, closeTo, go } from "./shell";
 import { PriceChart } from "./chart";
-import { AskBox } from "./ask";
+import { AskBox, PortfolioAsk } from "./ask";
 import { WakingNote, useWaking } from "./waking";
+import { MAX_ADDED, addToPortfolio, isBuiltIn, loadAnyLedger, removeFromPortfolio, setBuiltIn, useAdded } from "./mine";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
-  MEANING, loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
+  MEANING, loadIndex, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
 } from "./data";
 
 // ---- routing: #/  and  #/c/INFY  and  #/c/INFY/t/INFY-3 ------------------------
@@ -54,9 +55,12 @@ function StatusBar() {
 }
 
 function Routes({ route }: { route: string[] }) {
-  const [index, setIndex] = useState<CompanySummary[] | null>(null);
+  const [built, setBuilt] = useState<CompanySummary[] | null>(null);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => { loadIndex().then(setIndex).catch((e) => setError(String(e))); }, []);
+  const added = useAdded();
+  useEffect(() => { loadIndex().then((ix) => { setBuiltIn(ix.map((c) => c.symbol)); setBuilt(ix); }).catch((e) => setError(String(e))); }, []);
+  // The portfolio: the built-in companies, then the ones this reader added.
+  const index = useMemo(() => built && [...built, ...added.filter((a) => !built.some((b) => b.symbol === a.symbol))], [built, added]);
 
   if (error) return <Shell><p className="empty">Couldn't load data: {error}</p></Shell>;
   if (!index) return <Shell><p className="empty">Loading…</p></Shell>;
@@ -79,6 +83,7 @@ function Home({ index }: { index: CompanySummary[] }) {
     <Shell tab="today" action={<button className="icon-btn" onClick={() => setSettings(true)} aria-label="Alert settings">
       <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8M14 4v6M8 14v6" /></svg></button>}>
       <SearchBar index={index} />
+      <PortfolioAsk symbols={index.map((c) => c.symbol)} />
       <TodayGrid index={index} onSettings={() => setSettings(true)} />
       {settings && <SettingsSheet onClose={() => setSettings(false)} />}
     </Shell>
@@ -91,6 +96,14 @@ type Sort = "name" | "kept" | "missed" | "quiet";
 
 function Portfolio({ index }: { index: CompanySummary[] }) {
   const prices = usePrices();
+  const [note, setNote] = useState<string | null>(null);
+  // Already researched: add it here. Not yet: research it first; its page has "Add to portfolio".
+  const addPick = async (r: SearchResult) => {
+    if (index.some((c) => c.symbol === r.symbol)) { go(`/c/${r.symbol}`); return; }
+    const l = await loadAnyLedger(r.symbol);
+    if (!l) { go(`/r/${r.symbol}`); return; }
+    setNote(await addToPortfolio(l) ? `Added ${l.name}.` : `Your portfolio holds up to ${MAX_ADDED} added companies.`);
+  };
   const [sort, setSort] = useState<Sort>("name");
   const keptRate = (c: CompanySummary) => c.record.resolved ? c.record.kept / c.record.resolved : -1;
   const rows = [...index].sort((a, b) =>
@@ -102,6 +115,8 @@ function Portfolio({ index }: { index: CompanySummary[] }) {
     <Shell tab="portfolio">
       <section>
         <h2 className="section-title">Portfolio <span className="count">{index.length}</span></h2>
+        <SearchBar index={index} placeholder="Add a company: name or NSE ticker" onPick={addPick} />
+        {note && <p className="pf-note">{note}</p>}
         <nav className="chips tight">
           {(["name", "kept", "missed", "quiet"] as Sort[]).map((k) => (
             <button key={k} className={`chip ${sort === k ? "on" : ""}`} onClick={() => setSort(k)}>
@@ -118,6 +133,7 @@ function Portfolio({ index }: { index: CompanySummary[] }) {
                 <span className="prow-main">
                   <span className="prow-name">{c.name}</span>
                   <span className="prow-rec">
+                    {c.added && <span className="pf-tag">Added</span>}
                     <span className={sort === "kept" ? "hl" : ""}>{r.kept} kept</span>
                     <span className={sort === "missed" ? "hl" : ""}>{r.missed} missed</span>
                     <span className={sort === "quiet" ? "hl" : ""}>{r.quiet} quiet</span>
@@ -185,9 +201,10 @@ function rank(t: Thread): number {
 }
 
 function CompanyView({ symbol, threadId }: { symbol: string; threadId?: string }) {
-  const [l, setL] = useState<Ledger | null>(null);
-  useEffect(() => { loadLedger(symbol).then(setL); }, [symbol]);
-  if (!l) return <Shell back><p className="empty">Loading…</p></Shell>;
+  const [l, setL] = useState<Ledger | null | undefined>(undefined);
+  useEffect(() => { loadAnyLedger(symbol).then(setL); }, [symbol]);
+  if (l === undefined) return <Shell back><p className="empty">Loading…</p></Shell>;
+  if (l === null) return <ResearchView symbol={symbol} threadId={threadId} portfolio={false} index={[]} />;
   return <LedgerView l={l} threadId={threadId} base={`/c/${symbol}`} />;
 }
 
@@ -324,7 +341,29 @@ function useShipped(index: CompanySummary[]): Shipped[] {
           ...research.map((c) => ({ ...c, portfolio: false }))];
 }
 
-function SearchBar({ index }: { index: CompanySummary[] }) {
+/** "+ Add to portfolio" on a company outside it; "In your portfolio · Remove" on one the reader added. */
+function PortfolioButton({ l }: { l: Ledger }) {
+  const added = useAdded();
+  const [full, setFull] = useState(false);
+  if (isBuiltIn(l.symbol)) return null;
+  const mine = added.some((c) => c.symbol === l.symbol);
+  return (
+    <div className="pf-btn">
+      {mine ? (
+        <><span className="pf-in">✓ In your portfolio</span>
+          <button className="link small" onClick={() => removeFromPortfolio(l.symbol)}>Remove</button></>
+      ) : (
+        <button className="chip pf-add" onClick={async () => setFull(!(await addToPortfolio(l)))}>+ Add to portfolio</button>
+      )}
+      {full && <span className="pf-full">Your portfolio holds up to {MAX_ADDED} added companies.</span>}
+    </div>
+  );
+}
+
+function SearchBar({ index, onPick, placeholder }: {
+  index: CompanySummary[]; onPick?: (r: SearchResult) => void; placeholder?: string;
+}) {
+  const pick = onPick ?? ((r: SearchResult) => go(`/r/${r.symbol}`));
   const [q, setQ] = useState("");
   const [live, setLive] = useState<SearchResult[]>([]);
   const [liveFor, setLiveFor] = useState("");  // the query `live` answers
@@ -354,14 +393,14 @@ function SearchBar({ index }: { index: CompanySummary[] }) {
     <div className="search">
       <input
         className="search-input" value={q} onChange={(e) => setQ(e.target.value)}
-        placeholder="Research any company: name or NSE ticker" aria-label="Search companies"
+        placeholder={placeholder ?? "Research any company: name or NSE ticker"} aria-label="Search companies"
         autoComplete="off" autoCorrect="off" spellCheck={false}
-        onKeyDown={(e) => { if (e.key === "Enter" && results[0]) go(`/r/${results[0].symbol}`); }}
+        onKeyDown={(e) => { if (e.key === "Enter" && results[0]) pick(results[0]); }}
       />
       {key.length >= 2 && (
         <div className="search-results">
           {results.map((r) => (
-            <button key={r.symbol} className="search-row" onClick={() => go(`/r/${r.symbol}`)}>
+            <button key={r.symbol} className="search-row" onClick={() => pick(r)}>
               <span className="sr-name">{r.name}</span>
               <span className="sr-meta">{r.symbol}{r.ready ? " · record ready" : ""}</span>
             </button>
@@ -541,6 +580,7 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       <section className="co-head">
         <h1 className="co-title">{l.name}</h1>
         {l.sector && <p className="co-sub">{l.sector}</p>}
+        <PortfolioButton l={l} />
         <PriceLine symbol={l.symbol} fallback={l.price} fallbackAsof={l.price_asof} chart={!!chartRows} />
         {chartRows && <PriceChart symbol={l.symbol} rows={chartRows} />}
         {!noCalls && <SinceLastCall l={l} results={results} />}

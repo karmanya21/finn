@@ -654,3 +654,14 @@ details.more > section { margin-top: 10px; }
 .waking { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 14px; font-size: 13px; color: var(--ink-2); }
 .co-head .waking { padding: 10px 0 0; }
 .ask-answer .waking { padding: 4px 0; }
+
+/* the reader's own portfolio */
+.pf-btn { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; margin-top: 8px; }
+.pf-add { font-weight: 600; color: var(--ink); }
+.pf-in { font-size: 13px; font-weight: 600; color: var(--kept); }
+.pf-full, .pf-note { font-size: 12px; color: var(--ink-3); }
+.pf-note { margin: 6px 0 0; }
+.pf-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--live); }
+.ask-sugg.row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: -16px; padding-right: 16px; }
+.ask-sugg.row::-webkit-scrollbar { display: none; }
+.ask-sugg.row .chip { flex: none; }

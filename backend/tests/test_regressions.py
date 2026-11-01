@@ -618,6 +618,31 @@ class AskAnswersOnlyFromTheRecord(unittest.TestCase):
         self.assertFalse(ask.mislabelled("revenue of ₹2,569 cr, up 20.3% YoY, with an EBITDA margin of 27.7% vs 26.9%", lines))
         self.assertFalse(ask.mislabelled("a year ago PAT was ₹491 cr above PBT of ₹446 cr", lines, [491, 446]))
 
+    def test_portfolio_questions_find_the_companies_they_name(self):
+        ledgers = {"BEL": {"name": "Bharat Electronics Ltd"}, "TATASTEEL": {"name": "Tata Steel Limited"},
+                   "TATAPOWER": {"name": "Tata Power Company Ltd"}, "M&M": {"name": "Mahindra & Mahindra Ltd"}}
+        self.assertEqual(ask.named("How are Tata Steel and bel doing?", ledgers), ["BEL", "TATASTEEL"])
+        self.assertEqual(ask.named("what about M&M", ledgers), ["M&M"])
+        self.assertEqual(ask.named("which of my companies missed guidance?", ledgers), [])
+
+    def test_two_companies_results_dont_trip_the_line_check(self):
+        srcs = {"A": {"kind": "company", "label": "A", "text": "PAT ₹414 cr", "lines": {"pat": [414]}},
+                "B": {"kind": "company", "label": "B", "text": "PAT ₹852 cr", "lines": {"pat": [852]}}}
+        out = ask.check({"sentences": [{"text": "PAT was ₹414 cr at A and ₹852 cr at B.", "sources": ["A", "B"]}]}, srcs)
+        self.assertEqual(len(out), 1)
+
+    def test_a_verdict_must_be_in_the_named_companys_own_source(self):  # "Infosys … behind" when only BEL was
+        srcs = {"INFY": {"kind": "company", "label": "Infosys Ltd", "ref": "INFY", "text": "FY27 operating margin 20–22%, on pace."},
+                "BEL": {"kind": "company", "label": "Bharat Electronics Ltd", "ref": "BEL", "text": "FY27 EBITDA margin 28%, behind."}}
+        bad = {"text": "Infosys and Bharat Electronics are behind pace on FY27 margins.", "sources": ["INFY", "BEL"]}
+        good = {"text": "Bharat Electronics is behind pace on its FY27 EBITDA margin.", "sources": ["BEL"]}
+        self.assertEqual([x["text"] for x in ask.check({"sentences": [bad, good]}, srcs)], [good["text"]])
+
+    def test_guidance_figures_near_a_results_word_arent_mislabelled(self):  # Infosys guide 1.5–3% -> 1–2%
+        lines = {"revenue": [49244, 10.7, 3.1], "pat": [7838, 6.3]}
+        self.assertFalse(ask.mislabelled("Infosys lowered its FY27 revenue growth target from 1.5–3% to 1–2%", lines))
+        self.assertTrue(ask.mislabelled("revenue was ₹7,838 cr", lines))
+
     def test_model_glyph_slips_are_tidied(self):  # Max Healthcare: "⁷2,569 cr"; Cipla: "down -2.4%"
         self.assertEqual(ask.tidy("revenue of ⁷2,569 cr"), "revenue of ₹2,569 cr")
         self.assertEqual(ask.tidy("revenue was down -2.4% YoY"), "revenue was down 2.4% YoY")

@@ -21,7 +21,7 @@ WEB_DATA = ROOT / "web" / "public" / "data"
 SYSTEM = """You answer a question about one listed Indian company for an investor, using ONLY the
 sources given. Each source starts with its id in square brackets.
 
-Rules:
+""" + (RULES := """Rules:
 - Every sentence must cite the ids of the sources it relies on. Use only facts and numbers
   that appear in those sources, written the way they appear there.
 - Answer the question asked in the first sentence: a period or date for "when", a figure for
@@ -43,7 +43,22 @@ Rules:
   hold. Describe what management promised and what happened.
 - At most four short sentences. Plain English. Call the sources "the record", never "the
   provided sources". Write periods as the sources do (FY27, Q2FY27, H1FY27), money as ₹, and
-  falls as "down 2.4%", not "down -2.4%". Don't mention source ids in the text."""
+  falls as "down 2.4%", not "down -2.4%". Don't mention source ids in the text.""")
+
+PORTFOLIO_SYSTEM = """You answer an investor's question about their portfolio of listed Indian companies,
+using ONLY the sources given. Each source starts with its id in square brackets. There is one
+summary source per company (its id is the ticker); companies the question names also have their
+full record, with ids like "BEL:results" or promise ids like "BEL-3".
+
+- Name the companies you talk about. When the question asks which or how many, go through the
+  summaries and list every company that fits, not just the first.
+- Compare like with like: the same period, the same measure.
+- Give each company's verdict (behind, missed, kept, raised…) in its own clause, citing that
+  company, and only a verdict its summary states.
+
+""" + RULES + """
+
+At most five short sentences for a portfolio question."""
 
 COVERS = "It covers management's promises from the earnings calls, the latest results, recent filings and the share price."
 
@@ -85,18 +100,41 @@ LINE_WORDS = [("margin", r"\bmargin"), ("pbt", r"\bPBT\b|profit before tax"), ("
 def mislabelled(text: str, lines: dict[str, list[float]], noted: list[float] = ()) -> bool:
     """A clause that names one results line but carries another line's numbers ("PBT was ₹414 cr"
     when 414 is PAT): the numbers exist in the record, just not where the sentence puts them."""
+    results = [v for vs in lines.values() for v in vs]
     for clause in re.split(r",(?!\d{2})|;|\band\b|\bwhile\b|\bwith\b|\bbut\b", text):  # not "2,569"
         named = next((k for k, pat in LINE_WORDS if re.search(pat, clause, re.I)), None)
         # numbers from FINN's note (year-ago figures behind a one-off) may sit with any line
-        if named and named in lines and any(not near(v, lines[named]) and not near(v, list(noted)) for v in nums(clause)):
-            return True
+        if not named or named not in lines:
+            continue
+        # Only results figures can be misplaced: a guidance figure ("1.5–3%") in a clause that
+        # names revenue isn't a results number at all, and the source check has vouched for it.
+        for v in nums(clause):
+            if same(v, results) and not same(v, lines[named]) and not same(v, list(noted)):
+                return True
     return False
+
+
+def same(v: float, pool: list[float]) -> bool:
+    """v is one of these figures, to display rounding: tighter than `near`, whose ±0.5 slack
+    would read a 1.5% guide as the 1.9% QoQ it happens to sit beside."""
+    return any(abs(abs(v) - abs(p)) <= max(0.06, abs(p) * 0.002) for p in pool)
 
 
 ABSENT = re.compile(r"\b(?:record|it|they|management)\b[^.]{0,20}\b(?:does not|doesn't|did not|didn't|has not|hasn't|do not|don't)\b", re.I)
 MGMT = re.compile(r"\bmanagement\b", re.I)
+# A verdict a sentence pins on a company, and what its own source must say for it to stand.
+VERDICTS = [(r"\bbehind\b", r"\bbehind\b"), (r"\bahead\b", r"\bahead\b"), (r"\bmiss(?:ed|es)?\b", r"\bmissed\b"),
+            (r"\bkept\b|\bdelivered\b", r"\bkept\b|\bdelivered\b"), (r"\bbeat\b", r"\bbeat\b"),
+            (r"\bgone quiet\b|\bwent quiet\b", r"\bgone quiet\b"), (r"\bdelayed\b", r"\bdelayed\b"),
+            (r"\bcut\b|\blowered\b", r"\blowered\b|\bcut\b"), (r"\braised\b", r"\braised\b")]
 MGMT_SAID = re.compile(r"\bmanagement (?:has )?(?:explained|said|stated|noted|attributed this to)(?: that)?", re.I)
 MGMT_WHY = re.compile(r"\bmanagement(?:'s|’s) (?:own )?(?:explanation|reason)", re.I)
+
+
+def mentions(text: str, src: dict) -> bool:
+    """The sentence names this company, by ticker or by name."""
+    name = NAME_TAIL.sub("", src["label"]).strip()
+    return bool(re.search(rf"(?<![A-Za-z]){re.escape(src.get('ref', ''))}(?![A-Za-z])", text)) or name.lower() in text.lower()
 
 
 def _pct(a: float, b: float) -> str:
@@ -209,32 +247,42 @@ def check(raw: dict, srcs: dict[str, dict]) -> list[dict]:
         pool = nums(" ".join(srcs[i]["text"] for i in ids))
         if any(not near(v, pool) for v in nums(text)):
             continue  # a number the cited sources don't contain
-        if "results" in ids and mislabelled(text, srcs["results"].get("lines", {}), srcs["results"].get("noted", [])):
+        # A company named in the sentence must have, in its own source, any verdict the sentence
+        # gives it: "Infosys and BEL are behind pace" fails when only BEL is behind.
+        if any(re.search(said, text, re.I) and not re.search(proof, srcs[i]["text"], re.I)
+               for i in ids if srcs[i]["kind"] == "company" and mentions(text, srcs[i])
+               for said, proof in VERDICTS):
             continue
+        with_lines = [i for i in ids if srcs[i].get("lines")]
+        if len(with_lines) == 1 and mislabelled(text, srcs[with_lines[0]]["lines"], srcs[with_lines[0]].get("noted", [])):
+            continue  # one company's results: each number must sit under the line its clause names
         kept.append({"text": text, "sources": ids})
     return kept
 
 
-def ask(symbol: str, question: str, ledger: dict, history: list[dict] | None = None) -> dict:
-    """`history`: the last exchanges in this conversation, [{q, a}], so "why?" has a referent."""
-    filings = []
+def _digest() -> list[dict]:
     p = WEB_DATA / "filings.json"
-    if p.exists():
-        filings = [f for f in json.loads(p.read_text())["items"] if f["symbol"] == symbol]
-    prices = None
-    q = WEB_DATA / "prices.json"
-    if q.exists():
-        prices = json.loads(q.read_text())["series"].get(symbol)
-    if not prices and ledger.get("price"):
-        prices = ledger["price"]
+    return json.loads(p.read_text())["items"] if p.exists() else []
 
-    srcs = sources(ledger, filings, prices)
+
+def _prices() -> dict:
+    p = WEB_DATA / "prices.json"
+    return json.loads(p.read_text())["series"] if p.exists() else {}
+
+
+def _earlier(history: list[dict] | None) -> str:
+    return "".join(f"\nQ: {h['q'][:300]}\nA: {h['a'][:600]}" for h in (history or [])[-2:]
+                   if isinstance(h, dict) and h.get("q") and h.get("a"))
+
+
+def _answer(system: str, head: str, srcs: dict[str, dict], question: str, history: list[dict] | None,
+            covers: str = COVERS) -> dict:
+    """Ask the model with these sources, keep what code can stand behind, say the rest in code."""
     record = "\n".join(f"[{k}] {v['text']}" for k, v in srcs.items())
-    earlier = "".join(f"\nQ: {h['q'][:300]}\nA: {h['a'][:600]}" for h in (history or [])[-2:]
-                      if isinstance(h, dict) and h.get("q") and h.get("a"))
-    prompt = (f"Company: {ledger.get('name', symbol)} ({symbol}). Today is {date.today():%d %b %Y}.\n\nSources:\n{record}\n\n"
+    earlier = _earlier(history)
+    prompt = (f"{head} Today is {date.today():%d %b %Y}.\n\nSources:\n{record}\n\n"
               + (f"Earlier in this conversation:{earlier}\n\n" if earlier else "") + f"Question: {question.strip()}")
-    raw = complete_json(SYSTEM, prompt, SCHEMA)
+    raw = complete_json(system, prompt, SCHEMA)
     # Nothing in the record bears on it: say so in code, not with whatever the model padded with.
     sentences = check(raw, srcs) if raw.get("answerable", True) else []
     if sentences:
@@ -242,7 +290,7 @@ def ask(symbol: str, question: str, ledger: dict, history: list[dict] | None = N
     elif raw.get("answerable", True) and raw.get("sentences"):  # an answer came back but none of it checked out
         out = [{"text": "FINN couldn't check an answer to that against the record, so it won't guess. Try asking it another way.", "sources": []}]
     else:
-        out = [{"text": f"The record doesn't cover that. {COVERS}", "sources": []}]
+        out = [{"text": f"The record doesn't cover that. {covers}", "sources": []}]
     if ADVICE_Q.search(question):  # said by code, whatever the model wrote
         out = [{"text": "FINN doesn't say whether to buy or sell. It shows what management promised and what happened.",
                 "sources": []}] + sentences
@@ -254,3 +302,81 @@ def ask(symbol: str, question: str, ledger: dict, history: list[dict] | None = N
         "sources": {i: {k: srcs[i][k] for k in ("kind", "label") if k in srcs[i]} | ({"ref": srcs[i]["ref"]} if "ref" in srcs[i] else {})
                     for i in used},
     }
+
+
+def ask(symbol: str, question: str, ledger: dict, history: list[dict] | None = None) -> dict:
+    """`history`: the last exchanges in this conversation, [{q, a}], so "why?" has a referent."""
+    filings = [f for f in _digest() if f["symbol"] == symbol]
+    prices = _prices().get(symbol) or ledger.get("price")
+    srcs = sources(ledger, filings, prices)
+    return _answer(SYSTEM, f"Company: {ledger.get('name', symbol)} ({symbol}).", srcs, question, history)
+
+
+# ---- the whole portfolio ---------------------------------------------------------------
+
+LIVE = ("tracking", "on_track", "behind", "delayed", "open")
+NAME_TAIL = re.compile(r"\b(ltd|limited|industries|technologies|technology|company|corporation|india|enterprises)\b\.?", re.I)
+
+
+def brief(ledger: dict, filings: list[dict], prices: list[list] | None) -> dict:
+    """One company in a paragraph: enough to answer "which of my companies…" across a portfolio."""
+    full = sources(ledger, filings, prices)
+    r = ledger.get("record") or {}
+    bits = [f"{ledger['name']} ({ledger['symbol']}), {ledger.get('sector') or 'sector not given'}. "
+            f"Promise record: {r.get('kept', 0)} kept, {r.get('missed', 0)} missed, {r.get('quiet', 0)} gone quiet, "
+            f"{r.get('open', 0)} open; {r.get('moved', 0)} moved. Latest call: {ledger.get('latest_call') or 'none'}."]
+    res = full.get("results")
+    if res:
+        bits.append(res["text"])
+    if full.get("price"):
+        bits.append(full["price"]["text"].split(" Over the period:")[0].rstrip(".") + ".")
+    hard = [t for t in ledger.get("threads", []) if t["kind"] in ("hard", "milestone")]
+    live = sorted((t for t in hard if t["status"] in LIVE), key=lambda t: (t.get("pace") or {}).get("status") != "behind")[:6]
+    if live:
+        bits.append("Running promises: " + "; ".join(
+            f"'{t['title']}' due {t['period']}, target {t['target'] or 'none stated'}, {t['status'].replace('_', ' ')}"
+            + (f" ({t['pace']['so_far_label']} at {t['pace']['so_far']:.1f}%, {t['pace']['status'].replace('_', ' ')})" if t.get("pace") else "")
+            for t in live) + ".")
+    missed = [t for t in hard if t["status"] == "missed"][:3]
+    if missed:
+        bits.append("Missed: " + "; ".join(f"'{t['title']}' (target {t['target'] or 'none stated'}, {t.get('detail') or ''})".replace(", )", ")")
+                                           for t in missed) + ".")
+    call = ledger.get("latest_call")
+    moved = [(t, e) for t in hard for e in t["events"] if e["call"] == call and e["type"] != "reaffirmed"][:3]
+    if moved:
+        bits.append(f"Moved on the {call} call: " + "; ".join(f"'{t['title']}' {e['type']} from {e['from']} to {e['to']}" for t, e in moved) + ".")
+    recent = [f for f in filings if not f.get("routine")][:2]
+    if recent:
+        bits.append("Recent filings: " + "; ".join(f"{_day(f['at'])} {f['label']}: {f.get('summary') or f['subject']}" for f in recent))
+    out = {"kind": "company", "label": ledger["name"], "ref": ledger["symbol"], "text": " ".join(bits)}
+    if res:
+        out |= {"lines": res["lines"], "noted": res.get("noted", [])}
+    return out
+
+
+def named(question: str, ledgers: dict[str, dict]) -> list[str]:
+    """Companies the question names, by ticker or by name, at most three."""
+    q = question.lower()
+    found = []
+    for sym, l in ledgers.items():
+        name = NAME_TAIL.sub("", l["name"]).strip().lower()
+        if re.search(rf"(?<![a-z]){re.escape(sym.lower())}(?![a-z])", q) or (len(name) >= 3 and name in q):
+            found.append(sym)
+    return found[:3]
+
+
+def ask_portfolio(question: str, ledgers: dict[str, dict], history: list[dict] | None = None) -> dict:
+    """`ledgers`: symbol -> record, for every company in the reader's portfolio the server has."""
+    digest, prices = _digest(), _prices()
+    srcs: dict[str, dict] = {}
+    for sym, l in ledgers.items():
+        srcs[sym] = brief(l, [f for f in digest if f["symbol"] == sym], prices.get(sym) or l.get("price"))
+    # Companies the question (or the conversation so far) names get their full record too.
+    for sym in named(question + " " + _earlier(history), ledgers):
+        l = ledgers[sym]
+        short = NAME_TAIL.sub("", l["name"]).strip()
+        for k, v in sources(l, [f for f in digest if f["symbol"] == sym], prices.get(sym) or l.get("price")).items():
+            key = k if THREAD_ID.fullmatch(k) else f"{sym}:{k}"
+            srcs[key] = v | {"label": v["label"] if v["kind"] == "promise" else f"{short} · {v['label']}"}
+    return _answer(PORTFOLIO_SYSTEM, f"The investor's portfolio: {len(ledgers)} companies.", srcs, question, history,
+                   covers="It covers each company's promises, latest results, recent filings and share price.")

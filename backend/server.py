@@ -7,6 +7,7 @@
     GET  /api/research/POLYCAB       {state, steps, ledger?}   state: idle|queued|running|done|error
     POST /api/research/POLYCAB       start research (no-op if cached or already running)
     POST /api/ask/POLYCAB            {question} -> an answer from that company's record only, each sentence cited
+    POST /api/ask-portfolio          {question, symbols} -> the same, across the reader's whole portfolio
 
 Standard library only. Jobs run one at a time on a worker thread: the free LLM tier
 throttles parallel calls, and a queue is honest about the wait.
@@ -185,6 +186,23 @@ class Handler(BaseHTTPRequestHandler):
                 try:
                     history = body.get("history") if isinstance(body.get("history"), list) else []
                     return self._send(200, ask.ask(sym, question, ledger, history))
+                except LLMError as e:
+                    return self._send(503, {"error": f"The language model is unavailable right now ({e}). Try again shortly."})
+            if parts == ["api", "ask-portfolio"] and method == "POST":
+                body = json.loads(self.rfile.read(int(self.headers.get("Content-Length") or 0)) or b"{}")
+                question = str(body.get("question") or "").strip()[:300]
+                if len(question) < 3:
+                    return self._send(400, {"error": "Ask a question"})
+                syms = [s.upper() for s in body.get("symbols") or [] if isinstance(s, str) and SYMBOL.match(s.upper())][:40]
+                ledgers = {s: l for s in dict.fromkeys(syms) if (l := ledger_for(s))}
+                if not ledgers:
+                    return self._send(400, {"error": "No companies to answer about"})
+                if not _allow_ask(self._visitor()):
+                    return self._send(429, {"error": f"That's {ASK_PER_HOUR} questions this hour, the most this free demo allows. Try again later."})
+                try:
+                    history = body.get("history") if isinstance(body.get("history"), list) else []
+                    out = ask.ask_portfolio(question, ledgers, history)
+                    return self._send(200, out | {"missing": [s for s in syms if s not in ledgers]})
                 except LLMError as e:
                     return self._send(503, {"error": f"The language model is unavailable right now ({e}). Try again shortly."})
             if len(parts) == 3 and parts[:2] == ["api", "research"]:

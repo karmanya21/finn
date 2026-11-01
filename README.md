@@ -21,6 +21,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 cd ../web && npm install && npm run dev                # http://localhost:5173
 ```
 
+**Your portfolio** starts with the 18 built-in companies; add any other company from the Portfolio page or its record's "Add to portfolio" (kept in your browser, records of live-researched companies included). **Ask FINN** on the home page answers questions across your whole portfolio, and on each company page about that company alone, from the record only, each sentence cited and checked in code.
+
 **Push** is the home feed: what moved across the portfolio's promise records. **Pull** is the search bar: type any listed company and FINN builds its promise record live from its own transcripts and reported results (a minute or two the first time, cached after). Companies with no earnings calls get their headline numbers and an honest "no promise record".
 
 Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction against the hand-labelled set in `eval/gold/`.

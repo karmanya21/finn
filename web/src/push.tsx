@@ -3,11 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   ALERT_TYPES, AlertSettings, CompanySummary, Digest, Filing, Headline, Ledger, Prices, Thread,
-  feed, inWindow, loadDigest, loadLedger, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
+  feed, inWindow, loadDigest, loadPrices, moveAlerts, readSettings, saveSettings, statusOf,
 } from "./data";
 import { cleanSubject, filingText, fmtChange, fmtDate, normText, priceWhen, tone } from "./format";
 import { Shell, go } from "./shell";
 import { brief } from "./brief";
+import { loadAnyLedger } from "./mine";
 
 const SETTINGS_EVENT = "finn:settings";
 
@@ -34,7 +35,7 @@ const NO_FILINGS: Digest = { built: new Date().toISOString(), days: 30, items: [
 function useLedgers(index: CompanySummary[]): Map<string, Ledger> {
   const [m, setM] = useState(new Map<string, Ledger>());
   useEffect(() => {
-    Promise.all(index.map((c) => loadLedger(c.symbol).catch(() => null))).then((ls) =>
+    Promise.all(index.map((c) => loadAnyLedger(c.symbol).catch(() => null))).then((ls) =>
       setM(new Map((ls.filter(Boolean) as Ledger[]).map((l) => [l.symbol, l]))));
   }, [index]);
   return m;
@@ -94,7 +95,7 @@ export function useUpdates(index: CompanySummary[]): Map<string, Update[]> | nul
   const s = useSettings();
   const [ledgers, setLedgers] = useState<Ledger[] | null>(null);
   useEffect(() => {
-    Promise.all(index.map((c) => loadLedger(c.symbol).catch(() => null)))
+    Promise.all(index.map((c) => loadAnyLedger(c.symbol).catch(() => null)))
       .then((ls) => setLedgers(ls.filter(Boolean) as Ledger[]));
   }, [index]);
 
