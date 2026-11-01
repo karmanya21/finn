@@ -224,7 +224,29 @@ def eod(symbol: str, days: str = "6mo") -> tuple[list[list], int | None]:
         if close is None or vol is None:
             continue
         rows.append([datetime.fromtimestamp(ts, IST).strftime("%Y-%m-%d"), round(close, 2), int(vol)])
-    return rows, res.get("meta", {}).get("regularMarketTime")
+    return adjust_splits(rows), res.get("meta", {}).get("regularMarketTime")
+
+
+SPLIT_RATIOS = (1 / 2, 2 / 3, 1 / 3, 3 / 4, 1 / 4, 1 / 5, 4 / 5, 1 / 10)
+
+
+def adjust_splits(rows: list[list]) -> list[list]:
+    """Yahoo sometimes leaves an NSE split or bonus unadjusted: Trent fell from 4,279 to 2,865
+    (exactly 2/3, a 1:2 bonus) on 1 Jan 2026 on ordinary volume. A drop of 20%+ to a simple
+    split fraction, on volume under 3x its 20-day median, rescales everything before it."""
+    out = [list(r) for r in rows]
+    for i in range(1, len(out)):
+        r = out[i][1] / out[i - 1][1] if out[i - 1][1] else 1
+        if r > 0.8:
+            continue
+        vols = sorted(x[2] for x in out[max(0, i - 20):i])
+        if vols and out[i][2] > 3 * vols[len(vols) // 2]:
+            continue  # heavy volume: a real crash, not paperwork
+        f = next((f for f in SPLIT_RATIOS if abs(r / f - 1) < 0.01), None)
+        if f:
+            for row in out[:i]:
+                row[1], row[2] = round(row[1] * f, 2), int(row[2] / f)
+    return out
 
 
 def build_prices(previous: dict | None = None) -> dict:
@@ -234,7 +256,7 @@ def build_prices(previous: dict | None = None) -> dict:
     previous = previous or {}
     for c in PORTFOLIO:
         try:
-            out[c.symbol], asof[c.symbol] = eod(c.symbol)
+            out[c.symbol], asof[c.symbol] = eod(c.symbol, "1y")  # a year, for the company page chart
         except Exception as e:
             print(f"  prices {c.symbol:<11} FAILED {e}", flush=True)
             if c.symbol in previous.get("series", {}):

@@ -131,6 +131,17 @@ async function api<T>(path: string, init?: RequestInit): Promise<T> {
 export const searchCompanies = (q: string) =>
   api<{ results: SearchResult[] }>(`/api/search?q=${encodeURIComponent(q)}`).then((b) => b.results);
 export const researchStatus = (sym: string) => api<ResearchStatus>(`/api/research/${encodeURIComponent(sym)}`);
+export interface AskAnswer {
+  answerable: boolean;
+  sentences: { text: string; sources: string[] }[];
+  dropped: number;
+  sources: { [id: string]: { kind: string; label: string; ref?: string } };
+}
+export const askCompany = (sym: string, question: string) =>
+  api<AskAnswer>(`/api/ask/${encodeURIComponent(sym)}`, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question }),
+  });
+
 export const startResearch = (sym: string) =>
   api<ResearchStatus>(`/api/research/${encodeURIComponent(sym)}`, { method: "POST" });
 

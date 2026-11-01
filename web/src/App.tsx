@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { CompanyUpdates, FilingsView, Footnote, PriceLine, SettingsSheet, TodayGrid, priceStats, resultsLine, useNewerResults, usePrices } from "./push";
 import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, closeTo, go } from "./shell";
+import { PriceChart } from "./chart";
+import { AskBox } from "./ask";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
   MEANING, loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
@@ -521,6 +523,9 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
   const fromFiling = useNewerResults(l.symbol, l.headline);
   const results = fromFiling ?? l.headline;
   const scored = r.kept + r.missed + r.quiet + r.open;
+  const prices = usePrices();
+  const own = prices?.series[l.symbol];
+  const chartRows = (own ?? l.price ?? null) as [string, number, number?][] | null;
   const short_ = l.name.replace(/ (Ltd|Limited|India)\.?$/i, "");
 
   return (
@@ -528,9 +533,12 @@ function LedgerView({ l, threadId, base }: { l: Ledger; threadId?: string; base:
       <section className="co-head">
         <h1 className="co-title">{l.name}</h1>
         {l.sector && <p className="co-sub">{l.sector}</p>}
-        <PriceLine symbol={l.symbol} fallback={l.price} fallbackAsof={l.price_asof} />
+        <PriceLine symbol={l.symbol} fallback={l.price} fallbackAsof={l.price_asof} chart={!!chartRows} />
+        {chartRows && <PriceChart symbol={l.symbol} rows={chartRows} />}
         {!noCalls && <SinceLastCall l={l} results={results} />}
       </section>
+
+      <AskBox l={l} base={base} />
 
       {results && results.rows.length > 0 && <ResultsBlock h={results} l={l} base={base} />}
 

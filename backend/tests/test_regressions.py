@@ -8,7 +8,7 @@ calls: these exercise the deterministic code that sits around the model.
 
 import unittest
 
-from finn import fiscal
+from finn import ask, fiscal
 from finn.filings import STOP, regulatory_tone, related_promises, rule_category
 from finn.financials import Financials, oneoff_notes
 from finn.promises import prefilter, resolve
@@ -553,6 +553,45 @@ class ProgressCountsFiledResults(unittest.TestCase):
         fin = self.fin().with_filing(self.filing)
         self.assertNotEqual(resolve.verdict(s, [], fin, 3, None, heard_through=(27, 1))["status"], "gone_quiet")
         self.assertEqual(resolve.verdict(s, [], fin, 3, None, heard_through=(27, 2))["status"], "gone_quiet")
+
+
+class PricesAdjustForSplits(unittest.TestCase):
+    def test_unadjusted_bonus_is_rescaled(self):  # Trent, 1 Jan 2026: 4,279 -> 2,865 on normal volume
+        rows = [["2025-12-%02d" % d, 4279.0, 500000] for d in range(1, 22)] + [["2026-01-01", 2864.93, 560000]]
+        out = push.adjust_splits(rows)
+        self.assertAlmostEqual(out[0][1], 2852.67, places=1)
+        self.assertEqual(out[-1][1], 2864.93)
+
+    def test_real_crash_on_heavy_volume_stays(self):
+        rows = [["2025-12-%02d" % d, 100.0, 1000] for d in range(1, 22)] + [["2026-01-01", 50.0, 9000]]
+        self.assertEqual(push.adjust_splits(rows)[0][1], 100.0)
+
+    def test_drop_that_isnt_a_split_fraction_stays(self):
+        rows = [["2025-12-%02d" % d, 100.0, 1000] for d in range(1, 22)] + [["2026-01-01", 72.0, 1000]]
+        self.assertEqual(push.adjust_splits(rows)[0][1], 100.0)
+
+
+class AskAnswersOnlyFromTheRecord(unittest.TestCase):
+    srcs = {"BEL-3": {"kind": "promise", "label": "FY26 R&D investment", "ref": "BEL-3",
+                      "text": "Promise 'FY26 R&D investment': target >=₹1,600 cr; status gone quiet."},
+            "results": {"kind": "results", "label": "Q2FY27 results", "text": "Revenue ₹7,328 cr, +26.5% YoY"}}
+
+    def test_cited_and_backed_sentence_stays(self):
+        out = ask.check({"sentences": [{"text": "They promised R&D of ₹1,600 cr and then went quiet.", "sources": ["BEL-3"]}]}, self.srcs)
+        self.assertEqual(len(out), 1)
+
+    def test_number_not_in_cited_source_is_dropped(self):
+        out = ask.check({"sentences": [{"text": "Revenue grew 31% YoY.", "sources": ["results"]}]}, self.srcs)
+        self.assertEqual(out, [])
+
+    def test_unknown_source_or_no_source_is_dropped(self):
+        out = ask.check({"sentences": [{"text": "Margins will improve.", "sources": ["X-9"]},
+                                       {"text": "Margins will improve.", "sources": []}]}, self.srcs)
+        self.assertEqual(out, [])
+
+    def test_advice_is_dropped(self):
+        out = ask.check({"sentences": [{"text": "Given 26.5% growth, this is a good buy.", "sources": ["results"]}]}, self.srcs)
+        self.assertEqual(out, [])
 
 
 class FiscalCalendar(unittest.TestCase):

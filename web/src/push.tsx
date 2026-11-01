@@ -391,8 +391,8 @@ export function priceStats(rows: [string, number][] | undefined | null) {
 }
 
 /** "₹3,017.30  +5.4%" with a 3-month sparkline. */
-export function PriceLine({ symbol, fallback, fallbackAsof }: {
-  symbol: string; fallback?: [string, number][] | null; fallbackAsof?: number | null;
+export function PriceLine({ symbol, fallback, fallbackAsof, chart }: {
+  symbol: string; fallback?: [string, number][] | null; fallbackAsof?: number | null; chart?: boolean;
 }) {
   const prices = usePrices();
   const own = prices?.series[symbol];
@@ -405,8 +405,8 @@ export function PriceLine({ symbol, fallback, fallbackAsof }: {
     <div className="price-line">
       <span className="price">₹{st.close.toLocaleString("en-IN", { maximumFractionDigits: 2 })}</span>
       <span className={st.change >= 0 ? "up" : "down"}>{fmtChange(st.change, 1)}</span>
-      <Sparkline ys={last3m.map(([, c]) => c)} />
-      <span className="price-date">{priceWhen(st.date, asof)} · chart: 3 months</span>
+      {!chart && <Sparkline ys={last3m.map(([, c]) => c)} />}
+      <span className="price-date">{priceWhen(st.date, asof)}{chart ? "" : " · chart: 3 months"}</span>
     </div>
   );
 }

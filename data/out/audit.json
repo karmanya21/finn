@@ -35,6 +35,27 @@
   "message": "Solar rooftop business growth: statements for ['FY26', 'FY27']"
  },
  {
+  "level": "info",
+  "check": "filing-now-on-screener",
+  "symbol": "BEL",
+  "ref": null,
+  "message": "Q2FY27 is now on screener and agrees; the filing read can retire"
+ },
+ {
+  "level": "info",
+  "check": "filing-now-on-screener",
+  "symbol": "DIXON",
+  "ref": null,
+  "message": "Q2FY27 is now on screener and agrees; the filing read can retire"
+ },
+ {
+  "level": "info",
+  "check": "filing-now-on-screener",
+  "symbol": "MAXHEALTH",
+  "ref": null,
+  "message": "Q2FY27 is now on screener and agrees; the filing read can retire"
+ },
+ {
   "level": "warning",
   "check": "filings-fetch-failed",
   "symbol": "TRENT",

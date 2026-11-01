@@ -601,3 +601,49 @@ details.more > section { margin-top: 10px; }
 .why-h { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1px; }
 .fp-none { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
 .card.filing.compact .filing-title { font-size: 14px; font-weight: 500; }
+
+/* company price chart */
+.pchart { margin-top: 10px; }
+.pchart-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pchart-read { display: flex; align-items: baseline; gap: 6px; font-variant-numeric: tabular-nums; min-height: 22px; }
+.pchart-read b { font-size: 15px; font-weight: 600; }
+.pchart-read .up { color: var(--kept); font-weight: 600; font-size: 13px; } .pchart-read .down { color: var(--missed); font-weight: 600; font-size: 13px; }
+.pchart-when { font-size: 12px; color: var(--ink-3); }
+.segmented.small { padding: 2px; border-radius: 8px; }
+.segmented.small button { padding: 3px 9px; font-size: 12px; border-radius: 6px; flex: none; }
+.pchart-event { margin: 4px 0 0; font-size: 12px; color: var(--ink-2); }
+.pchart-plot { margin-top: 6px; touch-action: pan-y; cursor: crosshair; outline: none; border-radius: 6px; }
+.pchart-plot:focus-visible { box-shadow: 0 0 0 2px var(--line-2); }
+.pchart-svg { display: block; overflow: visible; }
+.pchart-grid { stroke: var(--line); stroke-width: 1; }
+.pchart-axis { font-size: 10px; fill: var(--ink-3); font-variant-numeric: tabular-nums; }
+.pchart-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.pchart-svg.up .pchart-line { stroke: var(--kept); } .pchart-svg.down .pchart-line { stroke: var(--missed); }
+.pchart-svg.up .pchart-fill-top { stop-color: var(--kept); stop-opacity: 0.16; } .pchart-svg.down .pchart-fill-top { stop-color: var(--missed); stop-opacity: 0.16; }
+.pchart-fill-bottom { stop-color: var(--bg); stop-opacity: 0; }
+.pchart-cross { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 2 3; }
+.pchart-dot { fill: var(--ink); stroke: var(--bg); stroke-width: 2; }
+.pchart-event-dot { fill: var(--ink); stroke: var(--bg); stroke-width: 2; }
+.pchart-vol { fill: var(--line-2); } .pchart-vol.on { fill: var(--ink-3); }
+.pchart-foot { margin: 4px 0 0; font-size: 11px; color: var(--ink-3); }
+
+/* Ask FINN */
+.ask { margin-top: 14px; }
+.ask-form { display: flex; align-items: center; gap: 6px; padding: 4px 4px 4px 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line-2); }
+.ask-form:focus-within { border-color: var(--ink-3); }
+.ask-input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink); font: inherit; font-size: 15px; padding: 8px 0; }
+.ask-input::placeholder { color: var(--ink-3); }
+.ask-btn { flex: none; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; color: var(--ink-2); }
+.ask-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ask-btn.go { background: var(--ink); color: var(--bg); } .ask-btn.go:disabled { background: var(--muted-bg); color: var(--ink-3); }
+.ask-btn.mic.on { color: var(--missed); background: var(--missed-bg, var(--muted-bg)); animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.55; } }
+.ask-sugg { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ask-sugg .chip { font-size: 12px; padding: 5px 10px; }
+.ask-answer { margin-top: 10px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.ask-q { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+.ask-wait { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 13px; color: var(--ink-3); }
+.ask-error { margin: 4px 0; font-size: 13px; color: var(--missed); }
+.ask-sentences { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.45; }
+.ask-sentences .refs { margin-top: 3px; }
+.ask-actions { display: flex; gap: 14px; margin-top: 8px; }

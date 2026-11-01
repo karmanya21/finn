@@ -5,6 +5,7 @@
     GET  /api/search?q=polycab       companies matching a name or ticker
     GET  /api/research/POLYCAB       {state, steps, ledger?}   state: idle|queued|running|done|error
     POST /api/research/POLYCAB       start research (no-op if cached or already running)
+    POST /api/ask/POLYCAB            {question} -> an answer from that company's record only, each sentence cited
 
 Standard library only. Jobs run one at a time on a worker thread: the free LLM tier
 throttles parallel calls, and a queue is honest about the wait.
@@ -21,7 +22,7 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 
-from finn import research
+from finn import ask, research
 from finn.config import ROOT
 from finn.llm.client import LLMError
 from finn.sources import screener
@@ -114,6 +115,21 @@ class Handler(BaseHTTPRequestHandler):
                 for r in results:
                     r["ready"] = ledger_for(r["symbol"].upper()) is not None
                 return self._send(200, {"results": results})
+            if len(parts) == 3 and parts[:2] == ["api", "ask"] and method == "POST":
+                sym = parts[2].upper()
+                if not SYMBOL.match(sym):
+                    return self._send(400, {"error": "Not a ticker symbol"})
+                body = json.loads(self.rfile.read(int(self.headers.get("Content-Length") or 0)) or b"{}")
+                question = str(body.get("question") or "").strip()[:300]
+                if len(question) < 3:
+                    return self._send(400, {"error": "Ask a question"})
+                ledger = ledger_for(sym)
+                if not ledger:
+                    return self._send(404, {"error": f"No record for {sym} yet"})
+                try:
+                    return self._send(200, ask.ask(sym, question, ledger))
+                except LLMError as e:
+                    return self._send(503, {"error": f"The language model is unavailable right now ({e}). Try again shortly."})
             if len(parts) == 3 and parts[:2] == ["api", "research"]:
                 sym = parts[2].upper()
                 if not SYMBOL.match(sym):
