@@ -2,8 +2,9 @@
 // company's own record. Every sentence shows what it's from; tap a source to open it.
 
 import { useEffect, useRef, useState } from "react";
-import { AskAnswer, Ledger, askCompany } from "./data";
+import { ApiTimeout, AskAnswer, Ledger, askCompany } from "./data";
 import { go } from "./shell";
+import { WakingNote, useWaking } from "./waking";
 
 // The browser's speech recognition, where it has one (Chrome, Edge, Safari).
 type Recognition = {
@@ -54,15 +55,9 @@ function suggestions(l: Ledger): string[] {
 
 interface Turn { q: string; answer?: AskAnswer; error?: string }
 
-/** The free host sleeps when idle; a first question can take a minute while it wakes. */
 function Waiting({ short }: { short: string }) {
-  const [slow, setSlow] = useState(false);
-  useEffect(() => { const id = setTimeout(() => setSlow(true), 8000); return () => clearTimeout(id); }, []);
-  return (
-    <p className="ask-wait"><span className="spin" />
-      {slow ? "Waking FINN's server. Free hosting sleeps when idle; the first question takes up to a minute."
-        : `Reading ${short}'s record…`}</p>
-  );
+  const waking = useWaking(true);
+  return waking ? <WakingNote what="question" /> : <p className="ask-wait"><span className="spin" /> Reading {short}'s record…</p>;
 }
 
 const said = (a?: AskAnswer) => a?.sentences.map((s) => s.text).join(" ") ?? "";
@@ -85,8 +80,8 @@ export function AskBox({ l, base }: { l: Ledger; base: string }) {
       settle({ answer: await askCompany(l.symbol, question, history) });
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
-      settle({ error: /^(404|50[02])$/.test(msg) || /fetch/i.test(msg)
-        ? "Ask needs FINN's research server, and it isn't running right now." : msg });
+      settle({ error: e instanceof ApiTimeout ? "Live research didn't wake up in time. Try again in a minute."
+        : /^(404|50[0234])$/.test(msg) || /fetch/i.test(msg) ? "Ask needs FINN's research server, and it isn't reachable right now." : msg });
     }
   };
   const voice = useVoice((text, final) => { setQ(text); if (final) submit(text); });

@@ -649,3 +649,8 @@ details.more > section { margin-top: 10px; }
 .ask-sentences { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.45; }
 .ask-sentences .refs { margin-top: 3px; }
 .ask-actions { display: flex; gap: 14px; margin-top: 8px; }
+
+/* the sleeping free server, waking */
+.waking { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 14px; font-size: 13px; color: var(--ink-2); }
+.co-head .waking { padding: 10px 0 0; }
+.ask-answer .waking { padding: 4px 0; }

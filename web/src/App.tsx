@@ -4,6 +4,7 @@ import { fmtChange, normText, priceWhen, tone as toneOf } from "./format";
 import { Shell, closeTo, go } from "./shell";
 import { PriceChart } from "./chart";
 import { AskBox } from "./ask";
+import { WakingNote, useWaking } from "./waking";
 import {
   Business, CasePoint, CompanySummary, Headline, KIND_LABEL, Ledger, MOVE_VERB, Metric, ResearchStatus, SearchResult, Thread, Tone,
   MEANING, loadIndex, loadLedger, loadResearchIndex, loadShipped, researchStatus, searchCompanies, startResearch, statusOf,
@@ -246,6 +247,7 @@ function ResearchView({ symbol, threadId, portfolio, index }: {
   }, [symbol, portfolio, shipped]);
 
   const elapsed = useElapsed(!err && s?.state !== "done" && s?.state !== "error");
+  const waking = useWaking(shipped === null && !s && !err);
   if (shipped) return <LedgerView l={shipped} threadId={threadId} base={`/r/${symbol}`} />;
   if (s?.state === "done" && s.ledger) return <LedgerView l={s.ledger} threadId={threadId} base={`/r/${symbol}`} />;
   if (err) return <Offline symbol={symbol} index={index} />;
@@ -263,6 +265,7 @@ function ResearchView({ symbol, threadId, portfolio, index }: {
           <div className="notice tone-border-missed"><b>Couldn't research {symbol}.</b><p>{failed}</p></div>
         ) : (
           <>
+            {waking && <WakingNote what="research" />}
             <p className="co-sub">
               {s?.state === "queued" ? "Queued behind another company's research. The free model tier runs one at a time."
                 : "Reading primary sources only: the company's own transcripts and reported results. The first run takes a minute or two; after that it's instant."}
@@ -323,26 +326,30 @@ function useShipped(index: CompanySummary[]): Shipped[] {
 
 function SearchBar({ index }: { index: CompanySummary[] }) {
   const [q, setQ] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [doneFor, setDoneFor] = useState("");  // the query `results` answer
+  const [live, setLive] = useState<SearchResult[]>([]);
+  const [liveFor, setLiveFor] = useState("");  // the query `live` answers
   const [offline, setOffline] = useState(false);
   const shipped = useShipped(index);
-  useEffect(() => {
-    if (q.trim().length < 2) { setResults([]); return; }
-    let live = true;  // a slower, older search mustn't overwrite a newer one
-    const id = setTimeout(() => {
-      searchCompanies(q.trim()).then((r) => { if (live) { setResults(r); setOffline(false); } })
-        .catch(() => {  // API down: match what's already built
-          if (!live) return;
-          const k = q.trim().toLowerCase();
-          setOffline(true);
-          setResults(shipped.filter((c) => c.name.toLowerCase().includes(k) || c.symbol.toLowerCase().includes(k))
-            .map((c) => ({ symbol: c.symbol, name: c.name, ready: true })));
-        }).finally(() => { if (live) setDoneFor(q.trim()); });
-    }, 250);
-    return () => { live = false; clearTimeout(id); };
-  }, [q, shipped.length]);
+  const key = q.trim().toLowerCase();
+  // Companies already built match instantly, without the server.
+  const local: SearchResult[] = key.length < 2 ? [] : shipped
+    .filter((c) => c.name.toLowerCase().includes(key) || c.symbol.toLowerCase().includes(key))
+    .map((c) => ({ symbol: c.symbol, name: c.name, ready: true }));
+  const pending = key.length >= 2 && liveFor !== key;
+  const waking = useWaking(pending);
 
+  useEffect(() => {
+    if (key.length < 2) { setLive([]); setLiveFor(""); return; }
+    let alive = true;  // a slower, older search mustn't overwrite a newer one
+    const id = setTimeout(() => {
+      searchCompanies(q.trim()).then((r) => { if (alive) { setLive(r); setOffline(false); } })
+        .catch(() => { if (alive) { setLive([]); setOffline(true); } })  // down or asleep past 90 s
+        .finally(() => { if (alive) setLiveFor(key); });
+    }, 250);
+    return () => { alive = false; clearTimeout(id); };
+  }, [key]);
+
+  const results = [...local, ...live.filter((r) => !local.some((x) => x.symbol === r.symbol))];
   return (
     <div className="search">
       <input
@@ -351,7 +358,7 @@ function SearchBar({ index }: { index: CompanySummary[] }) {
         autoComplete="off" autoCorrect="off" spellCheck={false}
         onKeyDown={(e) => { if (e.key === "Enter" && results[0]) go(`/r/${results[0].symbol}`); }}
       />
-      {q.trim().length >= 2 && (
+      {key.length >= 2 && (
         <div className="search-results">
           {results.map((r) => (
             <button key={r.symbol} className="search-row" onClick={() => go(`/r/${r.symbol}`)}>
@@ -359,8 +366,9 @@ function SearchBar({ index }: { index: CompanySummary[] }) {
               <span className="sr-meta">{r.symbol}{r.ready ? " · record ready" : ""}</span>
             </button>
           ))}
-          {offline && <p className="sr-empty">Live research is offline; showing companies FINN has already built.</p>}
-          {doneFor === q.trim() && !results.length && <p className="sr-empty">{offline ? `None of them match “${q.trim()}”.` : `No listed company matches “${q.trim()}”.`}</p>}
+          {waking && <WakingNote what="search" />}
+          {offline && !pending && <p className="sr-empty">Live research is offline; showing companies FINN has already built.</p>}
+          {!pending && !results.length && <p className="sr-empty">{offline ? `None of them match “${q.trim()}”.` : `No listed company matches “${q.trim()}”.`}</p>}
         </div>
       )}
     </div>

@@ -29,6 +29,10 @@ Quality check: `.venv/bin/python -m scripts.eval_extraction` scores extraction a
 
 `render.yaml` hosts both halves on Render's free plan: the app as a static site (always on) and the research/Ask API as a web service (it sleeps when idle, so the first question after a quiet spell takes up to a minute). Set up once from the Render dashboard: **New → Blueprint →** this repo, and paste `GEMINI_API_KEY` when asked. Each push to `main` redeploys, so the daily refreshes reach the link. The API caps use of the free model: 30 questions per visitor an hour and 8 new companies researched a day (`FINN_ASK_PER_HOUR`, `FINN_RESEARCH_PER_DAY`).
 
+While the API sleeps, the app still works: search matches the companies already built at once, says "Waking up live research" after two seconds, and adds live results when they arrive; Ask FINN and research say the same. Every API call gives up after 90 seconds and falls back to the built companies.
+
+**Keeping it awake during a review.** A free uptime pinger stops the API from sleeping: on [cron-job.org](https://cron-job.org) or [UptimeRobot](https://uptimerobot.com) (both free, no card), add an HTTP monitor for `https://finn-api-karmanya21.onrender.com/api/health` every 10 minutes. One always-on service fits inside Render's 750 free hours a month; pause the monitor after the review.
+
 ## Tests and audit
 
 ```bash

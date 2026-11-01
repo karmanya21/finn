@@ -127,11 +127,30 @@ const API = (import.meta.env.VITE_API_URL ?? "").replace(/\/$/, "");
 // Data files sit next to the app, wherever it's served from.
 const DATA = `${import.meta.env.BASE_URL}data/`;
 
+// The hosted server sleeps when idle (Render's free plan) and takes up to a minute to wake.
+// Calls give up after 90 s so nothing hangs; once anything answers, the app knows it's awake
+// and stops saying it's waking.
+const API_TIMEOUT_MS = 90_000;
+export const WAKE_AFTER_MS = 2_000;  // no answer by then: say it's waking
+let awake = false;
+export const apiAwake = () => awake;
+export class ApiTimeout extends Error { constructor() { super("timeout"); } }
+
 async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const r = await fetch(`${API}${path}`, init);
-  const body = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(body.error || `${r.status}`);
-  return body as T;
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), API_TIMEOUT_MS);
+  try {
+    const r = await fetch(`${API}${path}`, { ...init, signal: ctl.signal });
+    const body = await r.json().catch(() => ({}));
+    if (r.status < 500) awake = true;  // a 5xx can be the host's own "starting up" page
+    if (!r.ok) throw new Error(body.error || `${r.status}`);
+    return body as T;
+  } catch (e) {
+    if (ctl.signal.aborted) throw new ApiTimeout();
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 export const searchCompanies = (q: string) =>
