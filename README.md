@@ -1,8 +1,12 @@
 # FINN
 
+**Try it on your phone: https://finn-karmanya21.onrender.com**
+
 FINN remembers what management promised, watches whether they deliver, and stays quiet until something matters.
 
 It reads earnings-call transcripts, pulls out management's forward-looking promises (growth, margins, capex, milestones), follows each one across later calls, and checks it against reported results: **kept, missed, moved, gone quiet**, or honestly **can't verify**.
+
+**AI build history:** the Claude Code session FINN was built in, as readable pages: [`ai-build-history/`](ai-build-history/README.md).
 
 ## Run it
 
