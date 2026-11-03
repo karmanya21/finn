@@ -217,14 +217,26 @@ def eod(symbol: str, days: str = "6mo") -> tuple[list[list], int | None]:
                      params={"range": days, "interval": "1d"}, timeout=30,
                      headers={"User-Agent": "Mozilla/5.0"})
     r.raise_for_status()
-    res = r.json()["chart"]["result"][0]
-    q = res["indicators"]["quote"][0]
+    return parse_chart(r.json()["chart"]["result"][0])
+
+
+def parse_chart(res: dict) -> tuple[list[list], int | None]:
+    """Rows from one Yahoo chart result. Yahoo sometimes leaves the latest day's close empty
+    for a day or more after the session (3 Nov 2026 had none the next morning) while its
+    meta already carries that session's last price and volume; use those for that one day
+    rather than dropping it, or every alert window ends a session early."""
+    q, meta = res["indicators"]["quote"][0], res.get("meta", {})
+    last_time = meta.get("regularMarketTime")
     rows = []
-    for ts, close, vol in zip(res["timestamp"], q["close"], q["volume"]):
+    for i, (ts, close, vol) in enumerate(zip(res["timestamp"], q["close"], q["volume"])):
+        day = datetime.fromtimestamp(ts, IST).strftime("%Y-%m-%d")
+        if close is None and i == len(res["timestamp"]) - 1 and last_time \
+                and datetime.fromtimestamp(last_time, IST).strftime("%Y-%m-%d") == day:
+            close, vol = meta.get("regularMarketPrice"), vol if vol is not None else meta.get("regularMarketVolume")
         if close is None or vol is None:
             continue
-        rows.append([datetime.fromtimestamp(ts, IST).strftime("%Y-%m-%d"), round(close, 2), int(vol)])
-    return adjust_splits(rows), res.get("meta", {}).get("regularMarketTime")
+        rows.append([day, round(close, 2), int(vol)])
+    return adjust_splits(rows), last_time
 
 
 SPLIT_RATIOS = (1 / 2, 2 / 3, 1 / 3, 3 / 4, 1 / 4, 1 / 5, 4 / 5, 1 / 10)

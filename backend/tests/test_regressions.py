@@ -571,6 +571,27 @@ class PricesAdjustForSplits(unittest.TestCase):
         self.assertEqual(push.adjust_splits(rows)[0][1], 100.0)
 
 
+class LatestSessionIsNotDropped(unittest.TestCase):
+    # Yahoo, 4 Nov 2026: INFY's 3 Nov row had no close, but meta had that session's price and volume
+    def chart(self, closes, vols, last_day_ts, price=1148.1, volume=10494010):
+        days = [1793331900, 1793591100, 1793677500]  # 30 Oct, 2 Nov, 3 Nov, 09:15 IST
+        return {"timestamp": days, "indicators": {"quote": [{"close": closes, "volume": vols}]},
+                "meta": {"regularMarketPrice": price, "regularMarketVolume": volume, "regularMarketTime": last_day_ts}}
+
+    def test_empty_latest_close_uses_the_sessions_last_price(self):
+        rows, _ = push.parse_chart(self.chart([1185.0, 1161.0, None], [9e6, 8e6, None], 1793699979))  # 3 Nov 15:29
+        self.assertEqual(rows[-1], ["2026-11-03", 1148.1, 10494010])
+        self.assertEqual(len(rows), 3)
+
+    def test_meta_from_another_day_is_not_used(self):
+        rows, _ = push.parse_chart(self.chart([1185.0, 1161.0, None], [9e6, 8e6, None], 1793613579))  # 2 Nov 15:29
+        self.assertEqual(rows[-1][0], "2026-11-02")
+
+    def test_only_the_latest_day_is_filled(self):
+        rows, _ = push.parse_chart(self.chart([1185.0, None, 1148.1], [9e6, None, 1e7], 1793699979))
+        self.assertEqual([r[0] for r in rows], ["2026-10-30", "2026-11-03"])
+
+
 class AskAnswersOnlyFromTheRecord(unittest.TestCase):
     srcs = {"BEL-3": {"kind": "promise", "label": "FY26 R&D investment", "ref": "BEL-3",
                       "text": "Promise 'FY26 R&D investment': target >=₹1,600 cr; status gone quiet."},

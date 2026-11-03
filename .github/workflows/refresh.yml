@@ -9,6 +9,7 @@ name: Refresh prices
 on:
   schedule:
     - cron: "30 13 * * *"   # 19:00 IST daily
+    - cron: "30 17 * * *"   # 23:00 IST again, in case Yahoo hadn't settled the day's close yet
   workflow_dispatch:
 
 permissions:
