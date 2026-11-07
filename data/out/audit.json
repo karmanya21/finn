@@ -56,46 +56,18 @@
   "message": "Q2FY27 is now on screener and agrees; the filing read can retire"
  },
  {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "DIXON",
-  "ref": null,
-  "message": "this run's fetch failed; showing 14 filings from the last good build"
- },
- {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "TATAPOWER",
-  "ref": null,
-  "message": "this run's fetch failed; showing 10 filings from the last good build"
- },
- {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "BEL",
-  "ref": null,
-  "message": "this run's fetch failed; showing 8 filings from the last good build"
- },
- {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "KAYNES",
-  "ref": null,
-  "message": "this run's fetch failed; showing 1 filings from the last good build"
- },
- {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "PRAJIND",
-  "ref": null,
-  "message": "this run's fetch failed; showing 9 filings from the last good build"
+  "level": "info",
+  "check": "results-without-figures",
+  "symbol": "TATASTEEL",
+  "ref": "TATASTEEL-4f4ea23c-0c48-4420-a9bc-7e963dd8cefe",
+  "message": "Results - Financial Results For Quarter And Half Year Ended  (0d old)"
  },
  {
   "level": "info",
   "check": "results-without-figures",
   "symbol": "M&M",
   "ref": "M&M-6ae4d2cf-d54b-4a21-8968-650c79503b76",
-  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (1d old)"
+  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (2d old)"
  },
  {
   "level": "warning",
