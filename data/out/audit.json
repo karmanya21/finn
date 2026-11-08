@@ -60,21 +60,21 @@
   "check": "results-without-figures",
   "symbol": "TATASTEEL",
   "ref": "TATASTEEL-4f4ea23c-0c48-4420-a9bc-7e963dd8cefe",
-  "message": "Results - Financial Results For Quarter And Half Year Ended  (0d old)"
+  "message": "Results - Financial Results For Quarter And Half Year Ended  (1d old)"
  },
  {
-  "level": "info",
+  "level": "warning",
   "check": "results-without-figures",
   "symbol": "M&M",
   "ref": "M&M-6ae4d2cf-d54b-4a21-8968-650c79503b76",
-  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (2d old)"
+  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (3d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "AARTIIND",
   "ref": "AARTIIND-1d92760b-605c-4dbc-9930-602c74351f1c",
-  "message": "Financial Results For The Quarter And Half Year Ended Septem (7d old)"
+  "message": "Financial Results For The Quarter And Half Year Ended Septem (8d old)"
  },
  {
   "level": "info",
