@@ -57,24 +57,38 @@
  },
  {
   "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "AARTIIND",
+  "ref": null,
+  "message": "this run's fetch failed; showing 11 filings from the last good build"
+ },
+ {
+  "level": "info",
+  "check": "results-without-figures",
+  "symbol": "TATAPOWER",
+  "ref": "TATAPOWER-3de57b54-efa3-4790-9b4c-020b2887de9b",
+  "message": "Outcome Of The Financial Results For The Quarter And Half Ye (0d old)"
+ },
+ {
+  "level": "warning",
   "check": "results-without-figures",
   "symbol": "TATASTEEL",
   "ref": "TATASTEEL-4f4ea23c-0c48-4420-a9bc-7e963dd8cefe",
-  "message": "Results - Financial Results For Quarter And Half Year Ended  (3d old)"
+  "message": "Results - Financial Results For Quarter And Half Year Ended  (4d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "M&M",
   "ref": "M&M-6ae4d2cf-d54b-4a21-8968-650c79503b76",
-  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (5d old)"
+  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (6d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "AARTIIND",
   "ref": "AARTIIND-1d92760b-605c-4dbc-9930-602c74351f1c",
-  "message": "Financial Results For The Quarter And Half Year Ended Septem (10d old)"
+  "message": "Financial Results For The Quarter And Half Year Ended Septem (11d old)"
  },
  {
   "level": "info",
