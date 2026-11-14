@@ -58,44 +58,65 @@
  {
   "level": "warning",
   "check": "filings-fetch-failed",
-  "symbol": "M&M",
-  "ref": null,
-  "message": "this run's fetch failed; showing 23 filings from the last good build"
- },
- {
-  "level": "warning",
-  "check": "filings-fetch-failed",
-  "symbol": "MAXHEALTH",
+  "symbol": "BAJFINANCE",
   "ref": null,
   "message": "this run's fetch failed; showing 18 filings from the last good build"
  },
  {
-  "level": "info",
+  "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "ETERNAL",
+  "ref": null,
+  "message": "this run's fetch failed; showing 6 filings from the last good build"
+ },
+ {
+  "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "DIXON",
+  "ref": null,
+  "message": "this run's fetch failed; showing 11 filings from the last good build"
+ },
+ {
+  "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "CIPLA",
+  "ref": null,
+  "message": "this run's fetch failed; showing 12 filings from the last good build"
+ },
+ {
+  "level": "warning",
+  "check": "filings-fetch-failed",
+  "symbol": "HINDUNILVR",
+  "ref": null,
+  "message": "this run's fetch failed; showing 13 filings from the last good build"
+ },
+ {
+  "level": "warning",
   "check": "results-without-figures",
   "symbol": "TATAPOWER",
   "ref": "TATAPOWER-3de57b54-efa3-4790-9b4c-020b2887de9b",
-  "message": "Outcome Of The Financial Results For The Quarter And Half Ye (2d old)"
+  "message": "Outcome Of The Financial Results For The Quarter And Half Ye (3d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "TATASTEEL",
   "ref": "TATASTEEL-4f4ea23c-0c48-4420-a9bc-7e963dd8cefe",
-  "message": "Results - Financial Results For Quarter And Half Year Ended  (6d old)"
+  "message": "Results - Financial Results For Quarter And Half Year Ended  (7d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "M&M",
   "ref": "M&M-6ae4d2cf-d54b-4a21-8968-650c79503b76",
-  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (8d old)"
+  "message": "Un-Audited Standalone And Consolidated Financial Results Of  (9d old)"
  },
  {
   "level": "warning",
   "check": "results-without-figures",
   "symbol": "AARTIIND",
   "ref": "AARTIIND-1d92760b-605c-4dbc-9930-602c74351f1c",
-  "message": "Financial Results For The Quarter And Half Year Ended Septem (13d old)"
+  "message": "Financial Results For The Quarter And Half Year Ended Septem (15d old)"
  },
  {
   "level": "info",

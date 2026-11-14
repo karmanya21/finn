@@ -1,7 +1,45 @@
 {
- "built": "2026-11-13T19:17:56",
+ "built": "2026-11-14T20:06:40",
  "days": 30,
  "items": [
+  {
+   "id": "MAXHEALTH-4b79f742-dcdf-4e94-a23f-33f42a1720c8",
+   "symbol": "MAXHEALTH",
+   "name": "Max Healthcare",
+   "at": "2026-11-13T22:26:20",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "headline": "Presentation for Investor Conference",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1bcb67a8-1355-458c-b5b1-f4aeede30ec3.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
+   "id": "M&M-1680118c-7a3c-4e8d-91a7-e8076e2f7863",
+   "symbol": "M&M",
+   "name": "Mahindra & Mahindra",
+   "at": "2026-11-13T21:49:24",
+   "type": "insider_trading",
+   "label": "Insider trade",
+   "subject": "Transfer Of Equity Shares By Mahindra & Mahindra Employees' Stock Option Trust To The Stock Option Grantees",
+   "headline": "Please refer enclosed file",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7b64388f-ceed-4662-bbb9-91683984d6d1.pdf",
+   "summary": "Mahindra & Mahindra Employees' Stock Option Trust transferred equity shares to 211 stock option grantees on November 13, 2026.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 55,
+   "routine": false
+  },
   {
    "id": "BEL-e923bb1e-f614-4b77-a2c4-b2dfb2238a9b",
    "symbol": "BEL",
@@ -1346,25 +1384,6 @@
    "routine": false
   },
   {
-   "id": "M&M-3ad7041b-2281-426d-b345-e455e9ebfe2f",
-   "symbol": "M&M",
-   "name": "Mahindra & Mahindra",
-   "at": "2026-11-05T13:03:38",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Board Meeting Outcome for Outcome Of Board Meeting Of Mahindra & Mahindra Limited Held On 5Th November 2026",
-   "headline": "Please refer enclosed file",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1dfff710-e1bc-4656-8596-5496087e5475.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
    "id": "M&M-6ae4d2cf-d54b-4a21-8968-650c79503b76",
    "symbol": "M&M",
    "name": "Mahindra & Mahindra",
@@ -1384,6 +1403,10 @@
    "importance": 95,
    "routine": false,
    "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1dfff710-e1bc-4656-8596-5496087e5475.pdf"
+    },
     {
      "label": "Press release",
      "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b6772646-f9b8-40b7-924c-acb5801ee464.pdf"
@@ -5505,25 +5528,6 @@
    "routine": true
   },
   {
-   "id": "CIPLA-780b6a25-a67a-4f67-a45c-071aa6d7208e",
-   "symbol": "CIPLA",
-   "name": "Cipla",
-   "at": "2026-10-15T18:34:55",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
-   "headline": "Certificate under Regulation 74 (5) of SEBI (DP) Regulations, 2018",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc77b5e8-b6e0-436f-96bf-9575b1a20e6b.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
    "id": "TATASTEEL-136b74fa-266d-40d1-aed5-f8fc47ef91aa",
    "symbol": "TATASTEEL",
    "name": "Tata Steel",
@@ -5541,48 +5545,13 @@
    "tone": null,
    "importance": 10,
    "routine": true
-  },
-  {
-   "id": "DIXON-b04397d4-c23b-4d3c-8d03-f1b4f5aad25a",
-   "symbol": "DIXON",
-   "name": "Dixon Technologies",
-   "at": "2026-10-14T18:25:28",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Announcement Under Regulation 30 Of SEBI LODR- ESG Rating By Crisil ESG Ratings & Analytics Ltd",
-   "headline": "Announcement under Regulation 30 of SEBI LODR- ESG Rating by Crisil ESG Ratings & Analytics Ltd.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9f64aac8-d0af-437a-ad7d-bfda96989bc9.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "TATAPOWER-4db1b0f9-a847-4e64-aa9e-892a00327d60",
-   "symbol": "TATAPOWER",
-   "name": "Tata Power",
-   "at": "2026-10-14T10:00:26",
-   "type": "press_release",
-   "label": "Update",
-   "subject": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "headline": "Press Release titled \" Tata Power Advances 2.8GW+ Data Centre Opportunity Pipeline Across 18 Leading Blue Chip Data Centre Players, Supporting India''s AI and Digital Growth.\"",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/08084342-de1f-448a-90bd-964006876f78.pdf",
-   "summary": "Tata Power is developing a 2.8 GW+ energy infrastructure pipeline to support 18 data centre operators across India.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 40,
-   "routine": false
   }
  ],
  "failed": [
-  "M&M",
-  "MAXHEALTH"
+  "BAJFINANCE",
+  "ETERNAL",
+  "DIXON",
+  "CIPLA",
+  "HINDUNILVR"
  ]
 }
