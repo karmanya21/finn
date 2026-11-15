@@ -1,7 +1,95 @@
 {
- "built": "2026-11-14T20:06:40",
+ "built": "2026-11-15T19:16:10",
  "days": 30,
  "items": [
+  {
+   "id": "KAYNES-0601a5f4-8b64-4c51-ba0e-f6e3d7c9cc3d",
+   "symbol": "KAYNES",
+   "name": "Kaynes Technology",
+   "at": "2026-11-15T00:21:18",
+   "type": "M&A",
+   "label": "M&A",
+   "subject": "Announcement under Regulation 30 (LODR)-Joint Venture",
+   "headline": "Execution of Joint Venture",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/466e734f-36ce-44a2-a268-9ea59d11d99f.pdf",
+   "summary": "Kaynes Technology approved financial results for the quarter ended September 30, 2026, a joint venture, and subsidiary strike-off.",
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 90,
+   "routine": false
+  },
+  {
+   "id": "KAYNES-b0847910-ddd5-48fc-8f2c-7f15b2038d45",
+   "symbol": "KAYNES",
+   "name": "Kaynes Technology",
+   "at": "2026-11-14T23:54:06",
+   "type": "results",
+   "label": "Results",
+   "subject": "Financial Results For The Second Quarter And Half Year Ended 30 September 2026",
+   "headline": "Financial results for the second quarter and half year ended 30 September 2026",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/83b2c93d-de1c-4006-853e-eeb50eec49ef.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [
+    "KAYNES-3"
+   ],
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 952.515,
+      "qoq": 0.6661297890958817,
+      "yoy": 4.4281211456763,
+      "prev_yoy": null
+     },
+     {
+      "label": "EBITDA",
+      "value": 119.57499999999999,
+      "qoq": -13.407295295063337,
+      "yoy": -18.764776216745027,
+      "prev_yoy": null
+     },
+     {
+      "label": "PBT",
+      "value": 64.731,
+      "qoq": -16.174356716437256,
+      "yoy": -56.297976626901345,
+      "prev_yoy": null
+     },
+     {
+      "label": "PAT",
+      "value": 39.800000000000004,
+      "qoq": -12.359896945808469,
+      "yoy": -65.60396159397118,
+      "prev_yoy": null
+     }
+    ],
+    "notes": [],
+    "margin": {
+     "label": "EBITDA margin",
+     "now": 12.553608079662787,
+     "year_ago": 16.137700424832122,
+     "prev": 14.593875368310695
+    },
+    "unit": "₹ cr",
+    "source": "the company's results filing (statutory consolidated); screener hasn't tabulated this quarter yet"
+   },
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false,
+   "also": [
+    {
+     "label": "Board outcome",
+     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f8bed009-725a-42d7-98a8-e27518aa2bc6.pdf"
+    }
+   ]
+  },
   {
    "id": "MAXHEALTH-4b79f742-dcdf-4e94-a23f-33f42a1720c8",
    "symbol": "MAXHEALTH",
@@ -39,6 +127,25 @@
    "tone": null,
    "importance": 55,
    "routine": false
+  },
+  {
+   "id": "HINDUNILVR-0fb9b104-30c3-4052-86df-51854480c7d1",
+   "symbol": "HINDUNILVR",
+   "name": "Hindustan Unilever",
+   "at": "2026-11-13T20:33:04",
+   "type": "postal_ballot",
+   "label": "Postal ballot",
+   "subject": "Shareholder Meeting / Postal Ballot-Notice of Postal Ballot",
+   "headline": "Notice of Postal Ballot for revision in overall limits of commission payable to Non-Executive Directors",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3317b3c1-9d82-4bdb-9a77-80f005c92da7.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 20,
+   "routine": true
   },
   {
    "id": "BEL-e923bb1e-f614-4b77-a2c4-b2dfb2238a9b",
@@ -5482,76 +5589,7 @@
    "tone": null,
    "importance": 10,
    "routine": true
-  },
-  {
-   "id": "TATASTEEL-a6f4cedd-b93b-432b-ade8-bfca19b19d22",
-   "symbol": "TATASTEEL",
-   "name": "Tata Steel",
-   "at": "2026-10-15T19:10:15",
-   "type": "M&A",
-   "label": "M&A",
-   "subject": "Receipt Of Certified True Copy Of The Order Of The Hon'Ble National Company Law Tribunal, Mumbai Bench In The Matter Of The Scheme Of Amalgamation Of Rujuvalika Investments Limited And Tata Steel Limited And Their Respective Shareholder",
-   "headline": "Receipt of certified true copy of the Order of Hon''ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited into and ....",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ed58c27c-5a50-4923-b54c-652a6e715f3c.pdf",
-   "summary": "Tata Steel received the NCLT Mumbai bench order copy approving the amalgamation of its wholly owned subsidiary Rujuvalika Investments Limited.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 90,
-   "routine": false,
-   "also": [
-    {
-     "label": "Also filed",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c83c3dd-87e9-48c8-97fe-e7ad20f62800.pdf"
-    }
-   ]
-  },
-  {
-   "id": "M&M-74fdb820-6898-4ac7-9bbe-a3ed87c75745",
-   "symbol": "M&M",
-   "name": "Mahindra & Mahindra",
-   "at": "2026-10-15T18:43:10",
-   "type": "investor_meetings",
-   "label": "Investor meet",
-   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "headline": "Please refer enclosed file.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/06d7ee7d-54f0-4212-a569-d8a00d986150.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 15,
-   "routine": true
-  },
-  {
-   "id": "TATASTEEL-136b74fa-266d-40d1-aed5-f8fc47ef91aa",
-   "symbol": "TATASTEEL",
-   "name": "Tata Steel",
-   "at": "2026-10-15T18:16:59",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "headline": "Newspaper Advertisement - Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0bc93472-468d-4573-b2fc-e754a3e88491.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
   }
  ],
- "failed": [
-  "BAJFINANCE",
-  "ETERNAL",
-  "DIXON",
-  "CIPLA",
-  "HINDUNILVR"
- ]
+ "failed": []
 }
