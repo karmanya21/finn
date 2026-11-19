@@ -1,7 +1,64 @@
 {
- "built": "2026-11-18T19:16:34",
+ "built": "2026-11-19T19:16:20",
  "days": 30,
  "items": [
+  {
+   "id": "KAYNES-fbabdc11-35ad-4afb-a072-d8e4b5399573",
+   "symbol": "KAYNES",
+   "name": "Kaynes Technology",
+   "at": "2026-11-19T18:08:45",
+   "type": "investor_meetings",
+   "label": "Investor meet",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "headline": "Institutional Investor meet",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c387b35-0943-456d-a0f1-6e86ce380292.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 15,
+   "routine": true
+  },
+  {
+   "id": "INFY-d217974e-39cf-46df-9616-364069bbf51f",
+   "symbol": "INFY",
+   "name": "Infosys",
+   "at": "2026-11-18T22:11:58",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Change In Corporate Office Address Of The Company'S Registrar And Share Transfer Agent",
+   "headline": "Enclosed",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c3935047-69f0-40a6-9b78-b17afcc7b1a3.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
+  {
+   "id": "INFY-27469cda-abe0-44fb-9d28-dc7a6a09bc6b",
+   "symbol": "INFY",
+   "name": "Infosys",
+   "at": "2026-11-18T22:08:01",
+   "type": "unclassified",
+   "label": "Routine",
+   "subject": "Disclosure Under Regulation 30 Of SEBI LODR Regulations",
+   "headline": "Enclosed",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8629dba6-9d8f-487c-8f05-cc95e1588d94.pdf",
+   "summary": null,
+   "people": [],
+   "promises": [],
+   "numbers": null,
+   "senior": false,
+   "tone": null,
+   "importance": 10,
+   "routine": true
+  },
   {
    "id": "M&M-596c3954-936b-489e-bc53-a357927e2939",
    "symbol": "M&M",
@@ -4502,13 +4559,13 @@
    "subject": "Corporate Dossier Of Ultratech Cement Limited",
    "headline": "Corporate Dossier of UltraTech Cement Limited",
    "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3508aa22-42c9-4ecf-85ab-d81352c06cb1.pdf",
-   "summary": null,
+   "summary": "UltraTech Cement submitted its Corporate Dossier for Q2 FY27 to the stock exchanges.",
    "people": [],
    "promises": [],
    "numbers": null,
    "senior": false,
    "tone": null,
-   "importance": 10,
+   "importance": 5,
    "routine": true
   },
   {
@@ -4881,6 +4938,55 @@
    "tone": null,
    "importance": 10,
    "routine": true
+  },
+  {
+   "id": "BAJFINANCE-3edbe0c3-f3ed-4804-92a8-a4bc45e22fb6",
+   "symbol": "BAJFINANCE",
+   "name": "Bajaj Finance",
+   "at": "2026-10-23T14:45:33",
+   "type": "results",
+   "label": "Results",
+   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "headline": "Transcript of conference call held in respect of Financial Results for the Quarter and Half Year ended 30 September 2026.",
+   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7873abcb-7f97-487d-a474-028b0a26feea.pdf",
+   "summary": "Q2FY27 results",
+   "people": [],
+   "promises": [],
+   "numbers": {
+    "quarter": "Q2FY27",
+    "rows": [
+     {
+      "label": "Revenue",
+      "value": 24546.0,
+      "qoq": 5.961579969781994,
+      "yoy": 22.791395697848916,
+      "prev_yoy": 18.64884245031755
+     },
+     {
+      "label": "PBT",
+      "value": 8537.0,
+      "qoq": 4.761320407411951,
+      "yoy": 29.191888619854712,
+      "prev_yoy": 27.967964824120607
+     },
+     {
+      "label": "PAT",
+      "value": 6367.0,
+      "qoq": 4.703173820095374,
+      "yoy": 28.67825383993532,
+      "prev_yoy": 27.618048268625394
+     }
+    ],
+    "notes": [],
+    "margin": null,
+    "unit": "₹ cr",
+    "source": "screener.in, consolidated where published"
+   },
+   "senior": false,
+   "tone": null,
+   "quarter": "Q2FY27",
+   "importance": 95,
+   "routine": false
   },
   {
    "id": "PRAJIND-6c309059-9ba1-4274-961b-d9c2738b4429",
@@ -5288,535 +5394,9 @@
    "tone": null,
    "importance": 10,
    "routine": true
-  },
-  {
-   "id": "MAXHEALTH-ba4f872c-f8d1-41ce-b214-77852984c1c5",
-   "symbol": "MAXHEALTH",
-   "name": "Max Healthcare",
-   "at": "2026-10-19T21:57:13",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Disclosure Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015",
-   "headline": "Disclosure under regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a1728ec8-e555-45e5-966a-74bc10557f35.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "MAXHEALTH-d396a359-63d0-4fb4-9f46-40aaa74daa3b",
-   "symbol": "MAXHEALTH",
-   "name": "Max Healthcare",
-   "at": "2026-10-19T21:45:25",
-   "type": "postal_ballot",
-   "label": "Postal ballot",
-   "subject": "Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "headline": "Voting Results and Scrutinizer''s Report on Postal Ballot",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/520d2242-a6a2-43f8-863f-19a1e7e69d02.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 20,
-   "routine": true
-  },
-  {
-   "id": "MAXHEALTH-55d6c67d-128d-4bf3-b723-bea857a821c8",
-   "symbol": "MAXHEALTH",
-   "name": "Max Healthcare",
-   "at": "2026-10-19T21:42:20",
-   "type": "postal_ballot",
-   "label": "Postal ballot",
-   "subject": "Shareholder Meeting / Postal Ballot-Outcome of Postal_Ballot",
-   "headline": "Voting Results and Scrutinizer''s Report on Postal Ballot",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5bd0590b-fbf5-4dd8-9dba-f2c245312fa9.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 20,
-   "routine": true
-  },
-  {
-   "id": "BAJFINANCE-38bd2591-6085-4377-8935-62a6fffdd756",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-19T21:05:09",
-   "type": "earnings_call",
-   "label": "Earnings call",
-   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
-   "headline": "The audio recording of the conference call has been hosted on the website of the Company and is available at 'QUARTERLY EARNINGS CALL' drop down https://www.aboutbajajfinserv.com/finan ....",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/adefbbb0-caa9-46a5-91aa-41c5359a7271.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 25,
-   "routine": true
-  },
-  {
-   "id": "ULTRACEMCO-3080e646-17c1-4869-9148-df59d885ca88",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T18:39:05",
-   "type": "earnings_call",
-   "label": "Earnings call",
-   "subject": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
-   "headline": "Audio recording - Earnings Call",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c09c313d-8e45-40e3-aec3-c84052908538.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 25,
-   "routine": true
-  },
-  {
-   "id": "ULTRACEMCO-110ecc5b-4943-4d59-b882-1bd59373731c",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T18:38:42",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
-   "headline": "Grant of Stock Options - UltraTech Cement Limited Employee Stock Option Scheme 2022",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aea4ff0b-6660-431c-b0e2-b50f50b5d3d2.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "BAJFINANCE-9817a9b7-6de3-4bfa-8e80-ac4cf87d1d6a",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-19T18:18:41",
-   "type": "management_change",
-   "label": "Management",
-   "subject": "Announcement under Regulation 30 (LODR)-Change in Management",
-   "headline": "The Board of Directors at their meeting held today, i.e., 19 October 2026, approved the re-appointment of Prashant Verma as Chief Information Security Officer (CISO) as per RBI Guidelines, ....",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/eb4bfa8c-5285-4b6f-86c3-852bf82c8015.pdf",
-   "summary": "Bajaj Finance re-appointed Prashant Verma as Chief Information Security Officer for a three-year term effective 1 February 2027.",
-   "people": [
-    {
-     "name": "Prashant Verma",
-     "role": "Chief Information Security Officer",
-     "change": "appointed",
-     "effective": "1 February 2027",
-     "profile": "Prashant Verma has 21 years of experience in the security domain. He joined as head of Cyber Risk Unit 7 years ago, previously worked as a security auditor and consultant for banks and insurance companies, and is CISSP certified.",
-     "promises": []
-    }
-   ],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 60,
-   "routine": false
-  },
-  {
-   "id": "BAJFINANCE-913014a6-a273-4cfc-8a62-a2fccb69a061",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-19T18:03:33",
-   "type": "fund_raise",
-   "label": "Fund raise",
-   "subject": "Announcement under Regulation 30 (LODR)-Issue of Securities",
-   "headline": "The Board of Directors of the Company, at their meeting held today, i.e., 19 October 2026, approved, inter alia, issue of 49,00,737 equity shares of face value of Re. 1 at the respective ....",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fda5e9e1-3aa9-4ccc-837a-d45817ef7360.pdf",
-   "summary": "Bajaj Finance approved the issuance of 4,900,737 equity shares to the BFL Employee Welfare Trust under its stock option scheme.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 75,
-   "routine": false
-  },
-  {
-   "id": "ULTRACEMCO-f1acb882-e39d-4800-900c-ace9b7af432e",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T17:40:26",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Rumour verification - Regulation 30(11)",
-   "headline": "Regulation 30(11) of the SEBI (LODR) Regulations, 2015.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a68c935-685f-40b6-af4a-b28570baf371.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "BAJFINANCE-35bf242b-58db-4820-9ded-2d759a71d9f8",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-19T17:39:55",
-   "type": "results",
-   "label": "Results",
-   "subject": "Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026",
-   "headline": "Unaudited standalone and consolidated financial results for the quarter and half year ended 30 September 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/229c460f-9cda-4732-972f-847519b40426.pdf",
-   "summary": "Q2FY27 results",
-   "people": [],
-   "promises": [],
-   "numbers": {
-    "quarter": "Q2FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 24546.0,
-      "qoq": 5.961579969781994,
-      "yoy": 22.791395697848916,
-      "prev_yoy": 18.64884245031755
-     },
-     {
-      "label": "PBT",
-      "value": 8537.0,
-      "qoq": 4.761320407411951,
-      "yoy": 29.191888619854712,
-      "prev_yoy": 27.967964824120607
-     },
-     {
-      "label": "PAT",
-      "value": 6367.0,
-      "qoq": 4.703173820095374,
-      "yoy": 28.67825383993532,
-      "prev_yoy": 27.618048268625394
-     }
-    ],
-    "notes": [],
-    "margin": null,
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
-   "senior": false,
-   "tone": null,
-   "quarter": "Q2FY27",
-   "importance": 95,
-   "routine": false,
-   "also": [
-    {
-     "label": "Board outcome",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0477f65f-4dea-40cf-a6bf-67088c43b679.pdf"
-    },
-    {
-     "label": "Board outcome",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7873abcb-7f97-487d-a474-028b0a26feea.pdf"
-    }
-   ]
-  },
-  {
-   "id": "BAJFINANCE-c862464b-817a-43bb-b588-6fc0f0f78eb5",
-   "symbol": "BAJFINANCE",
-   "name": "Bajaj Finance",
-   "at": "2026-10-19T17:27:30",
-   "type": "investor_meetings",
-   "label": "Investor meet",
-   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "headline": "Investor Presentation for the quarter ended 30 September 2026.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e7c0f169-e396-4a7d-a57d-b1f7c47f6290.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 15,
-   "routine": true
-  },
-  {
-   "id": "INFY-f1dae341-aa3e-4bf7-970c-fd9bedfff67c",
-   "symbol": "INFY",
-   "name": "Infosys",
-   "at": "2026-10-19T15:41:22",
-   "type": "results",
-   "label": "Results",
-   "subject": "Infosys To Announce Second Quarter Results On October 23, 2026",
-   "headline": "Enclosed",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4a39bee0-4f0d-4b6e-9383-284a0ca26e0f.pdf",
-   "summary": "Q2FY27 results",
-   "people": [],
-   "promises": [
-    "INFY-1",
-    "INFY-11",
-    "INFY-14"
-   ],
-   "numbers": {
-    "quarter": "Q2FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 49244.0,
-      "qoq": 2.1426645371388275,
-      "yoy": 10.685547314003152,
-      "prev_yoy": 14.030606211121356
-     },
-     {
-      "label": "EBITDA",
-      "value": 11689.0,
-      "qoq": 2.45420282233324,
-      "yoy": 10.953962980541053,
-      "prev_yoy": 14.744041033893197
-     },
-     {
-      "label": "PBT",
-      "value": 11063.0,
-      "qoq": 0.3173739571998624,
-      "yoy": 8.15328966663409,
-      "prev_yoy": 13.223819301848039
-     },
-     {
-      "label": "PAT",
-      "value": 7838.0,
-      "qoq": 0.8102893890675311,
-      "yoy": 6.2779661016949095,
-      "prev_yoy": 12.290583477758531
-     }
-    ],
-    "notes": [],
-    "margin": {
-     "label": "EBITDA margin",
-     "now": 23.736901957598896,
-     "year_ago": 23.679478534502135,
-     "prev": 23.664723818215762
-    },
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
-   "senior": false,
-   "tone": null,
-   "quarter": "Q2FY27",
-   "importance": 95,
-   "routine": false,
-   "also": []
-  },
-  {
-   "id": "INFY-af966210-08cc-49da-b19e-b90e2e4b58f9",
-   "symbol": "INFY",
-   "name": "Infosys",
-   "at": "2026-10-19T15:32:46",
-   "type": "press_release",
-   "label": "Update",
-   "subject": "Infosys And Truist Strengthen Strategic Collaboration To Build A Global Capability Center In India",
-   "headline": "Enclosed",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0fa9a84b-8686-4831-8cee-de8486f1c6c1.pdf",
-   "summary": "Infosys and Truist expanded their collaboration to build an AI-first Global Capability Center in Hyderabad, onboarding over 1,000 colleagues.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 40,
-   "routine": false
-  },
-  {
-   "id": "ULTRACEMCO-b2010fea-3a72-45f1-8dd9-666f51b29f0e",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T14:07:14",
-   "type": "investor_meetings",
-   "label": "Investor meet",
-   "subject": "Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "headline": "Investor Presentation for the quarter and half year ended 30th September, 2026.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/abada049-22e4-4ac0-8c18-1ff1787555a7.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 15,
-   "routine": true
-  },
-  {
-   "id": "ULTRACEMCO-f993b851-e8a4-42c2-b791-341bb576eebc",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T13:57:39",
-   "type": "management_change",
-   "label": "Management",
-   "subject": "Announcement under Regulation 30 (LODR)-Resignation of Director",
-   "headline": "Relinquishment of position ad Non-Executive Vice Chairman of the company by Mr. K. K. Maheshwari.",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a564754c-992e-4cb5-9e28-a5ae413e5654.pdf",
-   "summary": "K. K. Maheshwari will resign as Non-Executive Vice Chairman, while K. C. Jhanwar will be redesignated to that role effective January 1, 2027.",
-   "people": [
-    {
-     "name": "K. K. Maheshwari",
-     "role": "Non-Executive Vice Chairman",
-     "change": "resigned",
-     "effective": "2027-01-01",
-     "profile": null,
-     "promises": []
-    },
-    {
-     "name": "Kailash Chandra Jhanwar",
-     "role": "Non-Executive Vice Chairman",
-     "change": "redesignated",
-     "effective": "2027-01-01",
-     "profile": "Chartered Accountant who joined Aditya Birla Group in 1981. Served as Managing Director since 2020 with extensive experience in finance, operations, project execution, and M&A across cement and chemicals sectors.",
-     "promises": []
-    }
-   ],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 60,
-   "routine": false,
-   "also": [
-    {
-     "label": "Also filed",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9e27e1c6-ecc1-4d9b-9c89-a91c58b61c03.pdf"
-    }
-   ]
-  },
-  {
-   "id": "ULTRACEMCO-f1181090-8611-4544-a923-f26b96b08c7f",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T13:52:11",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Issuance Of Corporate Guarantee",
-   "headline": "Issuance of Corporate Guarantee",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/46ea80db-1a49-466a-9731-fafed9a90d23.pdf",
-   "summary": "UltraTech Cement approved a corporate guarantee of up to USD 55 million for its associate company, UHG Holdings IFSC Private Limited.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 5,
-   "routine": true
-  },
-  {
-   "id": "ULTRACEMCO-ec29d900-b6b1-4b6f-8f25-91b061275d31",
-   "symbol": "ULTRACEMCO",
-   "name": "UltraTech Cement",
-   "at": "2026-10-19T13:47:54",
-   "type": "results",
-   "label": "Results",
-   "subject": "Unaudited Financial Results For The Quarter And Half Year Ended 30Th September, 2026",
-   "headline": "Unaudited Financial Results for the quarter and half year ended 30th September, 2026",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/59654d86-af0c-4fe5-bfb9-1a148f65fd6c.pdf",
-   "summary": "Q2FY27 results",
-   "people": [],
-   "promises": [],
-   "numbers": {
-    "quarter": "Q2FY27",
-    "rows": [
-     {
-      "label": "Revenue",
-      "value": 23295.0,
-      "qoq": -5.489289191820834,
-      "yoy": 18.80960881317897,
-      "prev_yoy": 15.854289071680384
-     },
-     {
-      "label": "EBITDA",
-      "value": 3719.0,
-      "qoq": -25.84247258225324,
-      "yoy": 20.39494982194885,
-      "prev_yoy": 13.822060826146165
-     },
-     {
-      "label": "PBT",
-      "value": 2059.0,
-      "qoq": -40.833333333333336,
-      "yoy": 24.33574879227054,
-      "prev_yoy": 15.691489361702127
-     },
-     {
-      "label": "PAT",
-      "value": 1501.0,
-      "qoq": -42.357910906298,
-      "yoy": 21.243941841680126,
-      "prev_yoy": 17.244484466456544
-     }
-    ],
-    "notes": [],
-    "margin": {
-     "label": "EBITDA margin",
-     "now": 15.964799313157329,
-     "year_ago": 15.754577446830215,
-     "prev": 20.34647841609867
-    },
-    "unit": "₹ cr",
-    "source": "screener.in, consolidated where published"
-   },
-   "senior": false,
-   "tone": null,
-   "quarter": "Q2FY27",
-   "importance": 95,
-   "routine": false,
-   "also": [
-    {
-     "label": "Board outcome",
-     "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fcb67e56-9163-4653-ac79-5b9d36238d60.pdf"
-    }
-   ]
-  },
-  {
-   "id": "TRENT-4831d1f0-2bfb-48ac-84dc-0651e3e483ce",
-   "symbol": "TRENT",
-   "name": "Trent",
-   "at": "2026-10-19T11:07:58",
-   "type": "unclassified",
-   "label": "Routine",
-   "subject": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "headline": "Notice of Special Window for re-lodgement of transfer requests of physical shares",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/096b4491-68dc-4163-8b20-3621448309db.pdf",
-   "summary": null,
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 10,
-   "routine": true
-  },
-  {
-   "id": "LT-8a57b0a9-8570-41ad-90a3-970cbc391c7b",
-   "symbol": "LT",
-   "name": "Larsen & Toubro",
-   "at": "2026-10-19T10:13:18",
-   "type": "press_release",
-   "label": "Update",
-   "subject": "Announcement under Regulation 30 (LODR)-Award_of_Order_Receipt_of_Order",
-   "headline": "L&T Commences Initial Activities for New Tashkent International Airport (Ultra-mega*) Project",
-   "pdf": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3f057a04-479c-4785-9250-f18c7d1ad88a.pdf",
-   "summary": "Larsen & Toubro's PAH business vertical commenced initial activities for the ultra-mega New Tashkent International Airport project in Uzbekistan.",
-   "people": [],
-   "promises": [],
-   "numbers": null,
-   "senior": false,
-   "tone": null,
-   "importance": 40,
-   "routine": false
   }
  ],
- "failed": []
+ "failed": [
+  "M&M"
+ ]
 }
